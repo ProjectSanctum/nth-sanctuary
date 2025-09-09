@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="35">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="36">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -7,6 +7,7 @@
   <property name="music" value="homebase"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="583" source="../../tilesets/castle.tsx"/>
  <layer id="3" name="Tile Layer 2" width="26" height="18" opacity="0.4" parallaxx="1.1" parallaxy="0.6">
   <data encoding="csv">
 136,137,0,136,137,0,136,137,0,136,137,0,136,137,0,136,137,0,136,137,0,136,137,0,136,137,
@@ -73,7 +74,29 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup color="#ff00ff" id="8" name="collision">
+ <layer id="9" name="roomglow_dark" width="26" height="18" locked="1">
+  <data encoding="csv">
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,593,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,593,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,0,0,0,593,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,0,0,0,593,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,0,0,0,593,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,0,0,0,593,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,0,0,0,593,
+593,593,593,593,0,0,0,593,593,593,593,593,0,0,0,0,0,0,0,0,0,0,0,0,0,593,
+593,593,593,593,0,0,0,593,593,593,593,593,0,0,0,0,0,0,0,0,0,0,0,0,0,593,
+593,593,593,593,0,0,0,593,593,593,593,593,0,0,0,0,0,0,0,0,0,0,0,0,0,593,
+593,593,593,593,0,0,0,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,
+593,593,593,593,0,0,0,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,
+593,593,593,593,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+593,593,593,593,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593,593
+</data>
+ </layer>
+ <objectgroup color="#ff00ff" id="8" name="collision" locked="1">
   <object id="14" x="0" y="80" width="1040" height="40"/>
   <object id="15" x="0" y="200" width="880" height="80"/>
   <object id="16" x="1000" y="120" width="40" height="480"/>
@@ -113,9 +136,15 @@
   </object>
   <object id="26" name="prophecy" x="600" y="380" width="280" height="120">
    <properties>
-    <property name="text">    THE HEROES FIND THE DEOXYNN.
+    <property name="offx" type="float" value="-40"/>
+    <property name="offy" type="float" value="-170"/>
+    <property name="spr_offx" type="float" value="18"/>
+    <property name="spr_offy" type="float" value="0"/>
+    <property name="text">THE HEROES FIND THE DEOXYNN.
 THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
-    <property name="texture" value="prophecies/jamm"/>
+    <property name="texture" value="jamm"/>
+    <property name="txt_offx" type="float" value="-80"/>
+    <property name="txt_offy" type="float" value="30"/>
    </properties>
   </object>
   <object id="27" name="transition" x="-40" y="120" width="40" height="80">
@@ -137,6 +166,12 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
     <property name="map" value="verydarkplace"/>
     <property name="marker" value="entry"/>
    </properties>
+  </object>
+  <object id="35" name="roomglow" x="40" y="40">
+   <properties>
+    <property name="prophecy" type="bool" value="true"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="7" name="objects_overlay">

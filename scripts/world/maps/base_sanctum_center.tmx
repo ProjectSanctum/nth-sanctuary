@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="32">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="33">
  <editorsettings>
   <export target="base_sanctum_center.lua" format="lua"/>
  </editorsettings>
@@ -94,6 +94,34 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <layer id="9" name="roomglow_dark" width="30" height="24">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,59,59,59,59,0,0,0,0,0,0,0,0,0,0,0,0,0,59,59,59,59,59,59,59,59,59,
+0,0,0,0,59,59,59,59,0,0,0,0,0,0,0,0,0,0,0,0,0,59,59,59,59,59,59,59,59,59,
+0,0,0,0,0,0,0,0,59,59,0,0,59,59,0,59,59,59,59,59,59,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,59,59,0,0,59,59,0,59,59,59,59,59,59,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,59,59,59,59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,59,59,59,59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
  <objectgroup id="7" name="collision">
   <object id="6" x="160" y="240" width="160" height="120"/>
   <object id="8" x="320" y="0" width="240" height="280"/>
@@ -144,9 +172,15 @@
   </object>
   <object id="20" name="prophecy" x="160" y="360" width="160" height="80">
    <properties>
+    <property name="offx" type="float" value="-140"/>
+    <property name="offy" type="float" value="-180"/>
+    <property name="spr_offx" type="float" value="14"/>
+    <property name="spr_offy" type="float" value="0"/>
     <property name="text">WORLDS ENTER COLLISION.
 THE KNIGHT IS TO NO FAULT.</property>
-    <property name="texture" value="prophecies/collide"/>
+    <property name="texture" value="collide"/>
+    <property name="txt_offx" type="float" value="0"/>
+    <property name="txt_offy" type="float" value="20"/>
    </properties>
   </object>
   <object id="21" name="npc" x="200" y="720">
@@ -169,6 +203,12 @@ THE KNIGHT IS TO NO FAULT.</property>
    </properties>
   </object>
   <object id="24" name="transition" x="560" y="-40" width="40" height="40"/>
+  <object id="32" name="roomglow" x="40" y="40">
+   <properties>
+    <property name="prophecy" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="6" name="objects_overlay">
   <object id="3" name="texturescroller" x="-52" y="50.6667">
