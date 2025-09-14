@@ -3,8 +3,7 @@ local Aiming, super = Class(Wave)
 function Aiming:init()
     super.init(self)
 
-    -- self:setArenaSize(100, 200
-    self.time = 90/30
+    self.time = 200/30
     self.enemies = self:getAttackers()
 	self.sameattack = 0
 	self.sameattacker = 0
