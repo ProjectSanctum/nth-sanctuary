@@ -4,7 +4,7 @@ function Basic:init()
     super.init(self)
 
     -- self:setArenaSize(100, 200)
-    self.time = 15
+    self.time = 90/30
     self.enemies = self:getAttackers()
 	self.sameattack = 0
 	self.sameattacker = 0
