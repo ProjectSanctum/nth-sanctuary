@@ -1,13 +1,13 @@
-local Dummy, super = Class(EnemyBattler)
+local Guei, super = Class(EnemyBattler)
 
-function Dummy:init()
+function Guei:init()
     super.init(self)
 
     -- Enemy name
     self.name = "Guei"
     -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/dummy.lua)
     self:setActor("guei")
-    self.exercism_used = false
+	self:setAnimation("idle")
 
     
     -- Enemy health
@@ -30,21 +30,11 @@ function Dummy:init()
         "clawdrop"
     }
 
-    self.dialogue_bubble = "round2"
+	self.dialogue = { "..." }
+    self.dialogue_offset = { 0, -48 }
 
-    self.dialogue_offset = {40, 0}
-
-    -- Dialogue randomly displayed in the enemy's speech bubble
-    self.dialogue = {
-        "[image:dialogueimg/1, 0,0,1,1]",
-        "[image:dialogueimg/2, 0,0,1,1]",
-        "[image:dialogueimg/3, 0,0,1,1]",
-        "[image:dialogueimg/4, 0,0,1,1]",
-        "[image:dialogueimg/5, 0,0,1,1]",
-        "[image:dialogueimg/6, 0,0,1,1]",
-        "[image:dialogueimg/7, 0,0,1,1]",
-        
-    }
+    self.excerism = false
+    self.balloon_type = 0
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
     self.check = "A strange spirit said to appear when the moon waxes."
@@ -54,8 +44,7 @@ function Dummy:init()
         "* Guei turns its head like a bird.",
         "* Guei rattles its claws.",
         "* Guei wags its tail.",
-        "* Guei howls hauntingly.",
-        "* Smells like teens.\n[wait:15]* Smells like spirits."
+        "* Guei howls hauntingly."
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
     self.low_health_text = "* Guei's flames flicker weakly."
@@ -68,28 +57,14 @@ function Dummy:init()
     self:registerAct("Xercism", "60% &\nDelayed\nTIRED", {"ralsei"})
 end
 
-function Dummy:selectWave()
-    local waves = self:getNextWaves()
-
-    if waves and #waves > 0 then
-        local wave = Utils.pick(waves)
-        if #Game.battle.enemies > 1 and wave == "clawdrop" then
-            wave = "holyfire"
-        end
-        self.selected_wave = wave
-        return wave
-    end
-end
-
-
-function Dummy:onAct(battler, name)
+function Guei:onAct(battler, name)
     if name == "Exercism" then
         -- Give the enemy 100% mercy
         self:addMercy(20)
         -- Change this enemy's dialogue for 1 turn
         --self.dialogue_override = "... ^^"
         -- Act text (since it's a list, multiple textboxes)
-        self.exercism_used = true
+        self.excerism = true
         return {
             "* You started the exercism!\nYou encouraged Guei to exercise!"
         }
@@ -100,7 +75,7 @@ function Dummy:onAct(battler, name)
         --    -- Make the enemy tired
         --    enemy:setTired(true)
         --end
-        self.exercism_used = true
+        self.excerism = true
         self:addMercy(60)
         return "* Everyone encouraged Guei to exercise!"
 
@@ -143,4 +118,61 @@ function Dummy:onAct(battler, name)
     return super.onAct(self, battler, name)
 end
 
-return Dummy
+function Guei:getEncounterText()
+    for _,v in ipairs(Game.battle.enemies) do
+		if v.tired then
+			if Game.tension >= 16 then
+				if Game:hasPartyMember("jamm") then
+					return "* Guei looks [color:blue]TIRED[color:reset]. Try using Ralsei's [color:blue]PACIFY[color:reset] or Jamm's [color:blue]NUMBSHOT[color:reset]!"
+				else
+					return "* Guei looks [color:blue]TIRED[color:reset]. Perhaps Ralsei's MAGIC, [color:blue]PACIFY[color:reset] would be effective..."
+				end
+			else
+				if Game:hasPartyMember("jamm") then
+					return "* Guei looks [color:blue]TIRED[color:reset]. [color:yellow]DEFEND[color:reset] to gain [color:yellow]TP[color:reset], then try Ralsei's [color:blue]PACIFY[color:reset] or Jamm's [color:blue]NUMBSHOT[color:reset]!"
+				else
+					return "* Guei looks [color:blue]TIRED[color:reset]. [color:yellow]DEFEND[color:reset] to gain [color:yellow]TP[color:reset], then try Ralsei's MAGIC, [color:blue]PACIFY[color:reset]...!"
+				end
+			end
+		end
+	end
+    if self.low_health_text and self.health <= (self.max_health * self.low_health_percentage) then
+        return self.low_health_text
+
+    elseif self.tired_text and self.tired then
+        return self.tired_text
+
+    elseif self.spareable_text and self:canSpare() then
+        return self.spareable_text
+    end
+	if love.math.random(0, 100) < 3 then
+		return "* Smells like teens.\n* Smells like spirits."
+	else
+		local text = super.getEncounterText(self)
+		return text
+	end
+end
+
+function Guei:spawnSpeechBubble(...)
+    if self.excerism then
+        self.balloon_type = 7
+    else
+        self.balloon_type = Utils.pick{1, 2, 3, 4, 5, 6}
+    end
+
+    local x, y = self.sprite:getRelativePos(0, self.sprite.height/2, Game.battle)
+    if self.dialogue_offset then
+        x, y = x + self.dialogue_offset[1], y + self.dialogue_offset[2]
+    end
+    local textbox = GueiTextbox(x, y, self.balloon_type)
+    Game.battle:addChild(textbox)
+    return textbox
+end
+
+function Guei:onTurnEnd()
+    if self.excerism then
+		self:setTired(true)
+    end
+end
+
+return Guei

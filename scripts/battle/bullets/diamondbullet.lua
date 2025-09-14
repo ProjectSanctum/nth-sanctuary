@@ -10,18 +10,13 @@ function SmallBullet:init(x, y, dir, speed, rot)
     self.physics.speed = speed
     self.physics.friction = -1
     self:setScale(1)
-    self:setOrigin(0, 0.5)
-    self:setHitbox(0, 5, 33, 7)
+    self:setOrigin(0.5, 0.5)
+    self:setHitbox(8, 6, 24-8, 18-12)
     self.g = 0
 end
 
 function SmallBullet:update()
     -- For more complicated bullet behaviours, code here gets called every update
-    self.g = self.g + DTMULT/10
-    local a = 1 + 1 * math.sin(self.g)
-    self.physics.friction = -1 + 0.5 * math.sin(self.g)
-    self:setScale(a, 1)
-
     super.update(self)
 end
 
