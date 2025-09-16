@@ -21,15 +21,15 @@ function Guei:init()
         ["hurt"]        = {"hurt", 0, false},
     }
 
-    self.offsets = {}
-
     self.parts = {
-        ["arm_back"]  = {"arm_back"},
-        ["body"]      = {"body"},
-        ["head"]      = {"head"},
-        ["arm_front"] = {"arm_front"},
-        ["wisp1"]     = {"wisp1"},
-        ["wisp2"]     = {"wisp2"}
+        ["arm_back"]    = {"arm_back"},
+        ["body"]        = {"body"},
+        ["head"]        = {"head"},
+        ["arm_front"]   = {"arm_front"},
+        ["wisp1"]       = {"wisp1"},
+        ["wisp2"]       = {"wisp2"},
+        ["chase"]       = {"chase"},
+        ["idle_nowisp"] = {"idle_nowisp"}
     }
 end
 

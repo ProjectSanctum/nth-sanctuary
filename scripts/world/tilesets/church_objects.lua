@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 5,
+  tilecount = 6,
   tiles = {
     {
       id = 0,
@@ -54,6 +54,12 @@ return {
       image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire.png",
       width = 320,
       height = 800
+    },
+    {
+      id = 6,
+      image = "../../../assets/sprites/world/objects/spr_dw_church_stairs_legendmarker.png",
+      width = 20,
+      height = 80
     }
   }
 }
