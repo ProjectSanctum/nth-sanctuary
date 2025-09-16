@@ -23,6 +23,7 @@ function ChurchPiano:init(data)
 	self.siner = 0
 	self.dontdrawmenu = false
 	self.drawalpha = 0
+	self.memvolume = -1
 	progress = ""
 	solution = "777335"
 	self.arrowspr = "ui/arrow_10x10"
@@ -74,6 +75,10 @@ function ChurchPiano:onInteract(player, dir)
 	if self.con == 0 then
 		if Game.stage:getObjects(PianoTutorialText)[1] then
 			Game.stage:getObjects(PianoTutorialText)[1].target = self
+		end
+		if Game.world.music then
+			self.memvolume = Game.world.music:getVolume()
+			Game.world.music:fade(self.memvolume * 0.125, 15/30)
 		end
 		local cutscene = self.world:startCutscene(function(cutscene)
 			cutscene:detachCamera()
@@ -176,11 +181,17 @@ function ChurchPiano:update()
 				skipcamreset = 2
 			end]]
 			if skipcamreset == 0 then
+				if Game.world.music and self.memvolume ~= -1 then
+					Game.world.music:fade(self.memvolume, 15/30)
+				end
 				local tx, ty = Game.world.camera:getTargetPosition()
 				Game.world.camera:panTo(tx, ty, 4/30, "linear", function() Game.world:setCameraAttached(true) end)
 				Game.world.timer:after(8/30, function() self.con = 4 end)
 			else
 				if skipcamreset == 2 then
+					if Game.world.music and self.memvolume ~= -1 then
+						Game.world.music:fade(self.memvolume, 5/30)
+					end
 					local tx, ty = Game.world.camera:getTargetPosition()
 					Game.world:setCameraAttached(true)
 					Game.world.camera:setPosition(tx, ty)

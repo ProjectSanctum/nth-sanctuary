@@ -3,6 +3,9 @@
  <editorsettings>
   <export target="painotest.lua" format="lua"/>
  </editorsettings>
+ <properties>
+  <property name="music" value="smallpiano_room"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/church_objects.tsx"/>
  <tileset firstgid="9" source="../tilesets/bg_dw_church_2_tileset.tsx"/>
  <layer id="5" name="tiles" width="16" height="12">
