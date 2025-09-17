@@ -77,7 +77,7 @@ function ChurchPiano:onInteract(player, dir)
 			Game.stage:getObjects(PianoTutorialText)[1].target = self
 		end
 		if Game.world.music then
-			self.memvolume = Game.world.music:getVolume()
+			self.memvolume = Game.world.music.volume
 			Game.world.music:fade(self.memvolume * 0.125, 15/30)
 		end
 		local cutscene = self.world:startCutscene(function(cutscene)
