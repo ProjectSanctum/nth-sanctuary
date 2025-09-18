@@ -9,6 +9,7 @@ function ChurchLightBeamFX:init(data)
 	self.particles = {}
 	self.part_timer = 0
 	for i = 1, 60 do
+		self.part_timer = 1
 		self:updateParticles()
 	end
 	self.part_tex = Assets.getTexture("effects/spr_dw_church_dust")
@@ -39,7 +40,7 @@ function ChurchLightBeamFX:updateParticles()
 		rd = rd - 1
 		local rs = ((part.age+4+love.math.random(100000)) % 20) / 4
 		if rs > 2 then
-			rs = 4 - rd
+			rs = 4 - rs
 		end
 		rs = rs - 1
 		local xspd = math.cos(-(part.basedir+rd * part.dwiggle)) * (part.basespd+rd * part.swiggle)
