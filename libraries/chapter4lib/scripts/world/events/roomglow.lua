@@ -23,6 +23,11 @@ function RoomGlow:postLoad()
 		self.tile_dark:addFX(ColorMaskFX({0,0,0}), "colormask")
 		self.tile_dark:addFX(AlphaFX(0), "shadow")
 	end
+	self.tile_dark_bg = Game.world.map:getTileLayer("roomglow_dark_bg")
+	if self.tile_dark_bg then
+		self.tile_dark_bg:addFX(ColorMaskFX({0,0,0}), "colormask")
+		self.tile_dark_bg:addFX(AlphaFX(0), "shadow")
+	end
 	for _, event in ipairs(Game.world.map.events) do
 		if event.layer == Game.world.map.layers["objects_roomglow_dark"] then
 			event:addFX(ColorMaskFX({0,0,0}), "colormask")
@@ -53,6 +58,9 @@ function RoomGlow:update()
 	end
 	if self.tile_dark and self.tile_dark:getFX("shadow") then
 		self.tile_dark:getFX("shadow").alpha = self.actind
+	end
+	if self.tile_dark_bg and self.tile_dark_bg:getFX("shadow") then
+		self.tile_dark_bg:getFX("shadow").alpha = self.actind
 	end
 	for _, event in ipairs(Game.world.map.events) do
 		if event.layer == Game.world.map.layers["objects_roomglow_dark"] and event:getFX("alphafx") then
