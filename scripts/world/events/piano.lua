@@ -35,6 +35,8 @@ function ChurchPiano:init(data)
 	self.circlespr = "ui/circle_7x7"
 	self.drawunits = {}
 	self.cutscene = properties["cutscene"] or nil
+	self.clear_darkness = properties["cleardark"] ~= false
+	self.destroy_hints = properties["destroyhints"] ~= false
 	local space = 28
 	table.insert(self.drawunits, {sound = 3, x = 0, y = space, offx = 5, offy = 5, rot = math.rad(0), tex = self.arrowspr})
 	table.insert(self.drawunits, {sound = 5, x = space, y = 0, offx = 5, offy = 5, rot = math.rad(-90), tex = self.arrowspr})
@@ -45,8 +47,8 @@ end
 
 function ChurchPiano:onAdd(parent)
     super.onAdd(self,parent)
-    if not Game.stage:getObjects(PianoTutorialText)[1] then
-		local tuttext = PianoTutorialText(1, self)
+    if not Game.stage:getObjects(TutorialText)[1] then
+		local tuttext = TutorialText(1, self)
 		Game.world:addChild(tuttext)
 	end
     local i = 1
@@ -85,8 +87,11 @@ end
 
 function ChurchPiano:onInteract(player, dir)
 	if self.con == 0 and self.buffer <= 0 then
-		if Game.stage:getObjects(PianoTutorialText)[1] then
-			Game.stage:getObjects(PianoTutorialText)[1].target = self
+		if not self.solved then
+			self.progress = {}
+		end
+		if Game.stage:getObjects(TutorialText)[1] then
+			Game.stage:getObjects(TutorialText)[1].target = self
 		end
 		if Game.world.music then
 			self.memvolume = Game.world.music.volume
@@ -272,7 +277,7 @@ function ChurchPiano:update()
 			self.buffer = 0
 		end
 		
-		if soundplayed then
+		if soundplayed and not self.solved then
 			table.insert(self.progress, self.soundtoplay)
 			if #self.progress > #self.solution_nums then
 				table.remove(self.progress, 1)
@@ -296,11 +301,23 @@ function ChurchPiano:update()
 						wait(10/30)
 						self.solved = true
 						self.con = 1
-						Game.world:startCutscene(function(cutscene)
+						Game.world:startCutscene(function(cutscene, event)
 							if self.prop then
-								cutscene:gotoCutscene(self.prop)
+								cutscene:gotoCutscene(self.prop, self)
 							else
-								Assets.playSound("bell")
+								Assets.playSound("sparkle_gem")
+								self.forceend = true
+								self.timer = 0
+								if self.clear_darkness then
+									--for _, hint in ipairs(Game.world.map:getEvents("pianohint")) do
+									--	Game.world.timer:tween(20/30, hint, {hintalpha = 0}, 'out-quad', function() hint:remove() end)
+									--end
+								end
+								if self.destroy_hints then
+									for _, hint in ipairs(Game.world.map:getEvents("pianohint")) do
+										Game.world.timer:tween(20/30, hint, {hintalpha = 0}, 'out-quad', function() hint:remove() end)
+									end
+								end
 							end
 						end)
 					end)

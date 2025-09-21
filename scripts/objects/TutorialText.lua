@@ -1,7 +1,7 @@
----@class PianoTutorialText : Object
-local PianoTutorialText, super = Class(Object)
+---@class TutorialText : Object
+local TutorialText, super = Class(Object)
 
-function PianoTutorialText:init(type, target)
+function TutorialText:init(type, target)
     super.init(self)
 	self.instruction_type = type or 0
 	self.target = target or nil
@@ -14,20 +14,34 @@ function PianoTutorialText:init(type, target)
 	self.line_count = 0
 	self.canceltimer = 0
 	self.canceltime = 0
+	self.holdvalue = 0
+	self.holdvaluelimit = 0
 	self.timer_tex = Assets.getFrames("ui/timer/timer")
 	if self.instruction_type == 1 then
 		self.line_count = 2
 		table.insert(self.instruction_lines, {line = "Play Piano", but = "confirm"})
 		table.insert(self.instruction_lines, {line = "Exit", but = "cancel", hold = true, cancel = true})
 	end
+	if self.instruction_type == 2 then
+		self.line_count = 3
+		table.insert(self.instruction_lines, {line = "Play", but = "confirm"})
+		table.insert(self.instruction_lines, {line = "Shift Octave", but = "menu"})
+		table.insert(self.instruction_lines, {line = "Exit", but = "cancel", hold = true, cancel = true})
+	end
+	if self.instruction_type == 3 then
+		self.line_count = 3
+		table.insert(self.instruction_lines, {line = "Play Piano", but = "confirm"})
+		table.insert(self.instruction_lines, {line = "Reset", but = "menu", hold = true})
+		table.insert(self.instruction_lines, {line = "Exit", but = "cancel", hold = true, cancel = true})
+	end
 end
 
-function PianoTutorialText:onAdd(parent)
+function TutorialText:onAdd(parent)
     super.onAdd(self, parent)
     self:setLayer(WORLD_LAYERS["ui"])
 end
 
-function PianoTutorialText:update()
+function TutorialText:update()
     super.update(self)
 	if self.target then
 		self.instruction_active = false
@@ -39,7 +53,7 @@ function PianoTutorialText:update()
 	end
 end
 
-function PianoTutorialText:draw()
+function TutorialText:draw()
     super.draw(self)
     love.graphics.push()
     love.graphics.setFont(self.font)
@@ -131,4 +145,4 @@ function PianoTutorialText:draw()
     love.graphics.pop()
 end
 
-return PianoTutorialText
+return TutorialText
