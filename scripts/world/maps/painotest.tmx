@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="26">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="28">
  <editorsettings>
   <export target="painotest.lua" format="lua"/>
  </editorsettings>
@@ -7,16 +7,16 @@
   <property name="music" value="smallpiano_room"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/church_objects.tsx"/>
- <tileset firstgid="10" source="../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="11" source="../tilesets/bg_dw_church_2_tileset.tsx"/>
  <layer id="5" name="tiles" width="16" height="12">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,
-0,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,
-0,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,
-0,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,
+0,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+0,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+0,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+0,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -75,7 +75,7 @@
   <object id="8" x="250" y="120" width="30" height="30"/>
  </objectgroup>
  <objectgroup id="4" name="markers">
-  <object id="3" name="spawn" x="280" y="320">
+  <object id="3" name="spawn" x="280" y="280">
    <point/>
   </object>
  </objectgroup>

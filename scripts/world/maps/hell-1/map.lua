@@ -6,6 +6,13 @@ function map:init(world, data)
 	self.riptimer = 119
 end
 
+function map:onEnter()
+	self.world.color = COLORS.red
+end
+
+function map:onExit()
+	self.world.color = COLORS.white
+end
 function map:update(world, data)
 	for _,enemy in ipairs(Game.stage:getObjects(ChaserEnemy)) do
 		for _,ripplefloor in ipairs(Game.world.map:getEvents("ripplefloor")) do

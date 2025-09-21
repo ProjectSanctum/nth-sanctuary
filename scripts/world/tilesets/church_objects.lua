@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 8,
+  tilecount = 9,
   tiles = {
     {
       id = 0,
@@ -72,6 +72,12 @@ return {
       image = "../../../assets/sprites/world/parallax/spr_dw_castle_gradient.png",
       width = 900,
       height = 20
+    },
+    {
+      id = 9,
+      image = "../../../assets/sprites/world/objects/spr_dw_church_organ_large.png",
+      width = 161,
+      height = 191
     }
   }
 }

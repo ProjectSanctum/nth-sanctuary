@@ -84,6 +84,7 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
+      tintcolor = { 255, 120, 120 },
       properties = {},
       encoding = "lua",
       data = {
@@ -409,7 +410,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 520,
+          x = 510,
           y = 560,
           width = 80,
           height = 40,
@@ -422,7 +423,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 640,
+          x = 650,
           y = 560,
           width = 80,
           height = 40,
@@ -513,7 +514,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 560,
+          x = 550,
           y = 600,
           width = 40,
           height = 160,
@@ -526,7 +527,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 640,
+          x = 650,
           y = 600,
           width = 40,
           height = 360,
@@ -565,7 +566,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 560,
+          x = 550,
           y = 800,
           width = 40,
           height = 160,
@@ -628,21 +629,6 @@ return {
           visible = true,
           properties = {
             ["type"] = "hsv"
-          }
-        },
-        {
-          id = 2,
-          name = "filter",
-          type = "",
-          shape = "point",
-          x = -120,
-          y = 280,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["type"] = "hsv3"
           }
         },
         {
