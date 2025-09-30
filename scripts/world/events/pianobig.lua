@@ -305,12 +305,17 @@ function BigChurchPiano:update()
 					Assets.playSound("bell")
 					self.endlessplaylog = ""
 					break
+				elseif Utils.sub(self.endlessplaylog, i, utf8.len(self.endlessplaylog)) == "nnfc" then
+					self.endlessplaylog = ""
+					Game.world:startCutscene("events.tobykillsyou")
+					break
 				end
 				i = i + 1
 			end
 			if Utils.len(self.endlessplaylog) >= 200 then
 				self.endlessplaylog = Utils.sub(self.endlessplaylog, 1, Utils.len(self.endlessplaylog) - 1)
 			end
+			print(self.endlessplaylog)
 		end
 	end
 	

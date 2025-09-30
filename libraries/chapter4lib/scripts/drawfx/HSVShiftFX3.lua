@@ -5,16 +5,16 @@ local HSVShiftFX3, super = Class(ShaderFX)
 function HSVShiftFX3:init(heartbeat, priority)
     super.init(self, "hsv_transform", {}, nil, priority)
 
-    self.hue_start = -150;
+    self.hue_start = -100;
     self.sat_start = 0.6;
-    self.val_start = 0.5;
-    self.hue_target = -150;
+    self.val_start = 1;
+    self.hue_target = -140;
     self.sat_target = 0.6;
-    self.val_target = 0.5;
+    self.val_target = 1.5;
     self.hue = self.hue_start;
     self.sat = self.sat_start;
     self.val = self.val_start;
-    self.wave_time = 1;
+    self.wave_time = 2;
     self.heartbeat_mode = heartbeat or false
 
     -- Unused?
