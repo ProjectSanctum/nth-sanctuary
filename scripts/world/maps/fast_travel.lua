@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 40,
+  nextobjectid = 41,
   properties = {
     ["music"] = "fast-travel"
   },
@@ -552,7 +552,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["alpha"] = 0.23
+            ["alpha"] = 0.23,
+            ["highlight"] = true
           }
         }
       }

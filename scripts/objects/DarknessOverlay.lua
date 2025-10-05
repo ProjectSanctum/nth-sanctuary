@@ -14,6 +14,7 @@ function Darkness:init(alpha)
     self.alpha = alpha or 1
     self.overlap = true
 	self.highlightalpha = 1
+	self.draw_highlight = false
 end
 
 function Darkness:draw()
@@ -36,7 +37,7 @@ function Darkness:draw()
 	local mask_canvas = Draw.pushCanvas(SCREEN_WIDTH, SCREEN_HEIGHT, { keep_transform = true })
     love.graphics.clear()
     for _, obj in ipairs(Game.world.children) do
-        if obj:includes(Character) then
+        if obj:includes(Character) and self.draw_highlight then
             self:drawCharacter(obj)
         end
     end

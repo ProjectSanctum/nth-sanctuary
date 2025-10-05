@@ -2,7 +2,9 @@ local Darkness, super = Class(Event)
 
 function Darkness:init(data)
     super:init(self, data)
+    local properties = data and data.properties or {}
     self.darkness = Game.world:spawnObject(DarknessOverlay(data.properties["alpha"] or 1), WORLD_LAYERS["below_ui"])
+	self.darkness.draw_highlight = properties["highlight"] ~= false
 end
 
 function Darkness:postLoad()

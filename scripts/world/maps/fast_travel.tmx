@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="40">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="41">
  <editorsettings>
   <export target="fast_travel.lua" format="lua"/>
  </editorsettings>
@@ -234,6 +234,7 @@
   <object id="38" name="darkness" x="0" y="0">
    <properties>
     <property name="alpha" type="float" value="0.23"/>
+    <property name="highlight" type="bool" value="true"/>
    </properties>
    <point/>
   </object>
