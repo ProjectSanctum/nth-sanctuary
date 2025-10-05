@@ -699,7 +699,7 @@ return {
       objects = {
         {
           id = 19,
-          name = "outline",
+          name = "highlight",
           type = "",
           shape = "rectangle",
           x = 320,

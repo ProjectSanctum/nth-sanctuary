@@ -260,7 +260,7 @@ KNOW NO END.</property>
 </data>
  </layer>
  <objectgroup id="12" name="objects_over_party_but_not_top">
-  <object id="19" name="outline" x="320" y="680" width="160" height="160"/>
+  <object id="19" name="highlight" x="320" y="680" width="160" height="160"/>
   <object id="20" name="silhouette" x="320" y="680" width="160" height="160"/>
  </objectgroup>
  <objectgroup id="9" name="objects_lightarea" visible="0" locked="1">
