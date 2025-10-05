@@ -77,6 +77,10 @@ function character:init()
     self.attack_box_color = {1, 1, 0}
     -- X-Action color (for the color of X-Action menu items) (defaults to the main color)
     self.xact_color = {1, 1, 0.5}
+	-- highlight color A
+    self.highlight_color = Utils.hexToRgb("#ECFFBB")
+		-- highlight color B
+    self.highlight_color_alt = Utils.hexToRgb("#5259C2")
 
     -- Head icon in the equip / power menu
     self.menu_icon = "party/noelle/head"

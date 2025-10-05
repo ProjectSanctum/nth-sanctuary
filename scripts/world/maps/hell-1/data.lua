@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 57,
+  nextobjectid = 58,
   properties = {
     ["border"] = "hell",
     ["music"] = "hellworld",

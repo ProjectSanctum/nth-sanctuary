@@ -9,8 +9,8 @@ return {
   height = 48,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 28,
+  nextlayerid = 8,
+  nextobjectid = 40,
   properties = {
     ["music"] = "fast-travel"
   },
@@ -25,6 +25,11 @@ return {
       firstgid = 261,
       filename = "../tilesets/church_objects.tsx",
       exportfilename = "../tilesets/church_objects.lua"
+    },
+    {
+      name = "light_areas",
+      firstgid = 273,
+      filename = "../tilesets/light_areas.tsx"
     }
   },
   layers = {
@@ -89,11 +94,11 @@ return {
         0, 211, 173, 173, 173, 173, 173, 173, 173, 173, 173, 173, 173, 163, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 211, 173, 173, 173, 173, 173, 173, 173, 173, 173, 173, 173, 163, 212, 212, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 221, 222, 222, 222, 222, 222, 222, 222, 222, 222, 222, 223, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 231, 232, 232, 232, 232, 232, 232, 232, 232, 232, 232, 233, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 241, 242, 242, 242, 242, 242, 242, 242, 242, 242, 242, 243, 211, 182, 162, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 241, 242, 242, 242, 242, 242, 242, 242, 242, 242, 242, 243, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 241, 242, 242, 242, 242, 242, 242, 242, 242, 242, 242, 243, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 251, 252, 252, 252, 252, 252, 252, 252, 252, 252, 252, 253, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        0, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 12, 23, 23, 23, 23, 23, 23, 23, 23, 23, 13, 14, 211, 182, 162, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 12, 13, 13, 23, 23, 23, 23, 23, 23, 23, 23, 14, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 12, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 14, 211, 173, 173, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
       }
     },
     {
@@ -225,7 +230,7 @@ return {
           x = 0,
           y = 160,
           width = 520,
-          height = 1360,
+          height = 1400,
           rotation = 0,
           visible = true,
           properties = {}
@@ -460,6 +465,94 @@ return {
           properties = {
             ["req"] = "15",
             ["solid"] = true
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects_lightarea",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 28,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 2040,
+          width = 160,
+          height = 1980,
+          rotation = 0,
+          gid = 275,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 31,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 2040,
+          width = 160,
+          height = 1980,
+          rotation = 0,
+          gid = 275,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 32,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 2040,
+          width = 160,
+          height = 1980,
+          rotation = 0,
+          gid = 2147483923,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 38,
+          name = "darkness",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["alpha"] = 0.23
           }
         }
       }

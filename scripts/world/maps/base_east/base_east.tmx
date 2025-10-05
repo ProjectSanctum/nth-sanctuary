@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="74">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="82">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -408,6 +408,7 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
   </object>
   <object id="70" name="filter" x="-130" y="40.001">
    <properties>
+    <property name="force_above" type="bool" value="true"/>
     <property name="type" value="hsv2"/>
    </properties>
    <point/>

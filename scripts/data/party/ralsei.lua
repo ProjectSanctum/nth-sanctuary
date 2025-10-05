@@ -129,6 +129,10 @@ function character:init()
     self.attack_box_color = {0, 0.5, 0}
     -- X-Action color (for the color of X-Action menu items) (defaults to the main color)
     self.xact_color = {0.5, 1, 0.5}
+	-- highlight color A
+    self.highlight_color = Utils.hexToRgb("#B5E61D")
+		-- highlight color B
+    self.highlight_color_alt = Utils.hexToRgb("#4A6ACA")
 
     -- Head icon in the equip / power menu
     if ralsei_style == 1 then

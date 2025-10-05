@@ -9,8 +9,8 @@ return {
   height = 21,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 19,
-  nextobjectid = 74,
+  nextlayerid = 20,
+  nextobjectid = 82,
   properties = {
     ["border"] = "base_sanctum",
     ["music"] = "homebase"
@@ -30,8 +30,7 @@ return {
     {
       name = "light_areas",
       firstgid = 623,
-      filename = "../../tilesets/light_areas.tsx",
-      exportfilename = "../../tilesets/light_areas.lua"
+      filename = "../../tilesets/light_areas.tsx"
     },
     {
       name = "church_objects",
@@ -1105,6 +1104,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["force_above"] = true,
             ["type"] = "hsv2"
           }
         },

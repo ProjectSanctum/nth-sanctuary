@@ -40,7 +40,8 @@ function TileObject:drawLightA()
 			local last_shader = love.graphics.getShader()
 			love.graphics.setShader(Ch4Lib.invert_alpha)
 			love.graphics.setBlendMode("multiply", "premultiplied")
-			Draw.draw(mask_canvas, self.width/2, self.height/2, 0, sx, sy, tile_width/2, tile_height/2)
+			local xx, yy = self:localToScreenPos(0,0)
+			Draw.draw(mask_canvas, xx+self.width/2, yy+self.height/2, 0, sx, sy, tile_width/2, tile_height/2)
 			love.graphics.setShader(last_shader)
 		end
 	end
@@ -57,7 +58,8 @@ function TileObject:drawLightB()
 		end
 		if self.light_type == 1 then
 			love.graphics.setColor(1,1,1,1)
-			self.tileset:drawTile(self.tile, self.width/2, self.height/2, 0, sx, sy, tile_width/2, tile_height/2)
+			local xx, yy = self:localToScreenPos(0,0)
+			self.tileset:drawTile(self.tile, xx+self.width/2, yy+self.height/2, 0, sx, sy, tile_width/2, tile_height/2)
 		end
 	end
 end
