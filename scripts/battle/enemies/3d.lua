@@ -23,7 +23,7 @@ function ThreeDPrism:init()
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
-        "cubes-1"
+        "3d/cubes-2"
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble

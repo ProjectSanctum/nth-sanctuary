@@ -25,6 +25,7 @@ function ThreeDPrism:init()
 	self.shape_timer = 0
     self.particles = {}
 	self.particle_tex = Assets.getFramesOrTexture("bullets/cube/cube")
+	self.particle_dtmult = 0
     self.overclock = false
 end
 
@@ -81,12 +82,14 @@ function ThreeDPrism:update()
 			end
 		end
         particle.y = particle.y - particle.speed * DTMULT
-		for i = 30, 2, -1 do
-			particle.x_last[i] = particle.x_last[i - 1]
-			particle.y_last[i] = particle.y_last[i - 1]
+		if self.particle_dtmult >= 1 then
+			for i = 30, 2, -1 do
+				particle.x_last[i] = particle.x_last[i - 1]
+				particle.y_last[i] = particle.y_last[i - 1]
+			end
+			particle.x_last[1] = particle.x
+			particle.y_last[1] = particle.y
 		end
-		particle.x_last[1] = particle.x
-		particle.y_last[1] = particle.y
         if particle.y <= -SCREEN_HEIGHT then
             table.insert(particle_to_remove, particle)
         end
@@ -94,6 +97,10 @@ function ThreeDPrism:update()
     for _,particle in ipairs(particle_to_remove) do
         Utils.removeFromTable(self.particles, particle)
     end
+	if self.particle_dtmult >= 1 then
+		self.particle_dtmult = 0
+	end
+	self.particle_dtmult = self.particle_dtmult + DTMULT
 end
 
 function ThreeDPrism:canSwoon(target)
