@@ -226,9 +226,9 @@ function Lib:init()
             table.insert(self.attack_boxes, attack_box)
 
             if i < #attack_order and last_offset ~= 0 then
-                last_offset = TableUtils.pick{{0, 10, 15}}
+                last_offset = TableUtils.pick{0, 10, 15}
             else
-                last_offset = TableUtils.pick{{10, 15}}
+                last_offset = TableUtils.pick{10, 15}
             end
         end
         self.attacking = true
