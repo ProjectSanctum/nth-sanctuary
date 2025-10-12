@@ -231,6 +231,7 @@ function Player:processClimbInputs()
 			end
 			Object.endCache()
 		end
+		return
 	end
 	if self.graboncon > 0 then
 		if self.graboncon == 1 then	
@@ -295,6 +296,7 @@ function Player:processClimbInputs()
 				self.neutralcon = 1
 			end
 		end
+		return
 	end
     if self.slip_delay > 0 then
 		if self.slip_delay > 2/30 and not cancelled_slip and (used_input ~= nil and lastdir ~= used_input) or (Input.down("confirm") or Input.down("cancel")) then
