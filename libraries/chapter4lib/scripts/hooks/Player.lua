@@ -246,7 +246,7 @@ function Player:processClimbInputs()
 				dust:play(1 / 15, false, function () dust:remove() end)
 				dust:setOrigin(0.5, 0.5)
 				dust:setScale(2, 2)
-				dust:setPosition(self.x, self.y)
+				dust:setPosition(self.x, self.y - 17)
 				dust.layer = self.layer - 0.01
 				dust.physics.speed_y = -3
 				dust.physics.speed_x = MathUtils.random(-1, 1)
