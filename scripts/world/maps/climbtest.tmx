@@ -26,6 +26,7 @@
  <objectgroup id="4" name="objects_buckets">
   <object id="24" name="climbwaterbucket" x="240" y="80" width="40" height="40">
    <properties>
+    <property name="activetime" type="float" value="15"/>
     <property name="generate" type="bool" value="true"/>
    </properties>
   </object>

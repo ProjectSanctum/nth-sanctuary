@@ -80,6 +80,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["activetime"] = 15,
             ["generate"] = true
           }
         },

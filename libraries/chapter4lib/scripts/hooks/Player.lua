@@ -343,6 +343,7 @@ function Player:processClimbInputs()
     if self.jumpchargecon >= 1 then
         if Input.released("confirm") then
 			self.jumpchargecon = 0
+            self.color = COLORS.white;
             self:doClimbJump(self.facing, self.jumpchargeamount)
         else
             if self.currentdir == "left" then
@@ -398,7 +399,7 @@ function Player:processJumpCharge()
         self.jumpchargecon = 2;
         self:setSprite("climb/charge/up")
         -- sprite_index = spr_kris_climb_new_charge;
-        -- image_index = 0;
+        -- image_index = 0;s
     end
 
     if (self.jumpchargecon == 2) then
@@ -459,11 +460,11 @@ function Player:processJumpCharge()
 
         if (docharge == 0) then
             self.jumpchargecon = 0;
+            self.jumpchargetimer = 0;
             self.climb_jumping = 1;
             self.climbcon = 1;
-            self.color = COLORS.white
+            self.color = COLORS.white;
             self.jumpchargesfx:stop()
-            self.climb_speedboost = 0
         end
 
         if (docharge == 2) then
