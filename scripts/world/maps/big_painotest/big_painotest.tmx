@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="44" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="44">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="bell_ambience"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="16" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="598" source="../../tilesets/light_areas.tsx"/>
+ <objectgroup id="12" name="objects_parallax"/>
+ <layer id="10" name="tiles_bg" width="44" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,434,434,434,434,434,434,434,434,434,434,434,434,454,434,434,434,434,434,434,434,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,394,395,396,394,395,396,394,395,396,394,395,396,454,434,454,434,434,454,434,454,394,395,396,394,395,396,394,395,396,394,395,396,394,395,396,394,395,396
+</data>
+ </layer>
+ <layer id="9" name="tiles" width="44" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,428,428,428,0,0,0,0,0,0,428,428,428,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,428,428,428,428,428,428,428,428,428,428,428,428,368,392,392,95,95,95,95,95,95,392,392,393,428,428,428,428,428,428,428,428,428,428,428,428,428,428,428,428,
+0,0,0,0,89,95,95,95,95,492,493,95,393,493,492,95,392,490,392,95,95,95,95,95,95,392,490,392,95,492,95,95,493,493,393,95,95,95,95,95,493,492,95,493,
+0,0,0,0,492,95,466,466,466,466,466,466,466,466,466,466,466,466,393,392,491,490,392,392,392,492,466,466,466,466,466,466,466,466,466,466,466,466,466,466,466,466,466,466,
+0,0,0,0,95,393,0,0,0,0,0,0,0,0,0,0,0,405,466,466,466,466,466,466,466,466,403,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="2" name="objects">
+  <object id="14" gid="10" x="720" y="402" width="322" height="382"/>
+ </objectgroup>
+ <objectgroup id="7" name="objects_piano">
+  <object id="15" name="pianobig" x="780" y="320" width="200" height="20">
+   <properties>
+    <property name="resetmus" type="bool" value="true"/>
+    <property name="solution" value="aaa"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="objects_lightarea">
+  <object id="23" gid="600" x="640" y="800" width="120" height="720">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="27" gid="600" x="760" y="720" width="240" height="720">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="28" gid="600" x="1000" y="800" width="120" height="720">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="39" name="darkness" x="0" y="0">
+   <properties>
+    <property name="alpha" type="float" value="0.5"/>
+    <property name="highlight" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="markers">
+  <object id="43" name="spawn" x="200" y="440">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="collision">
+  <object id="31" x="120" y="360" width="40" height="120"/>
+  <object id="32" x="160" y="320" width="480" height="40"/>
+  <object id="34" x="640" y="280" width="480" height="40"/>
+  <object id="35" x="1120" y="320" width="640" height="40"/>
+  <object id="36" x="1040" y="400" width="720" height="80"/>
+  <object id="37" x="720" y="440" width="320" height="40"/>
+  <object id="38" x="240" y="400" width="480" height="80"/>
+ </objectgroup>
+</map>
