@@ -77,19 +77,19 @@ function ThreeDPrism:onAct(battler, name)
         battler:setAnimation("pirouette")
 		return "* Kris spun around three-dimensionally!"
     elseif name == "Standard" then --X-Action
-        -- Give the enemy 50% mercy
-        self:addMercy(50)
         if battler.chara.id == "ralsei" then
-            -- R-Action text
-            return "* Ralsei bowed politely.\n* The dummy spiritually bowed\nin return."
+			self:addMercy(3)
+			return "* Ralsei demonstrates 3D rotation!"
         elseif battler.chara.id == "susie" then
-            -- S-Action: start a cutscene (see scripts/battle/cutscenes/dummy.lua)
-            Game.battle:startActCutscene("dummy", "susie_punch")
-            return
-        else
-            -- Text for any other character (like Noelle)
-            return "* "..battler.chara:getName().." straightened the\ndummy's hat."
-        end
+			self:addMercy(2)
+			return "* Susie spun around like a turntable!"
+		elseif battler.chara.id == "jamm" then
+			self:addMercy(2)
+			return "* Jamm revolved around the Z-axis!"
+		else
+			self:addMercy(2)
+			return "* "..battler.chara:getName().." spun around in 3D!"
+		end
     end
 
     -- If the act is none of the above, run the base onAct function
