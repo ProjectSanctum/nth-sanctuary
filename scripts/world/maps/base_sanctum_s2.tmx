@@ -137,7 +137,7 @@
   </object>
   <object id="14" name="transition" x="120" y="880" width="120" height="40">
    <properties>
-    <property name="map" value="secsanctuary/postripple"/>
+    <property name="map" value="secsanctuary/ripplepost"/>
    </properties>
   </object>
   <object id="17" name="transition" x="640" y="80" width="40" height="80">
