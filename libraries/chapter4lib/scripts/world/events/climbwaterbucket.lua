@@ -31,7 +31,7 @@ function event:update()
     super.update(self)
 	if self.generator then
 		self.drawwater = self.drawwater - DTMULT
-		if not Game.lock_movement then
+		if Game.world.player and Game.world.player:isMovementEnabled() then
 			self.timer = self.timer + DTMULT
 			local waterspawntype = 1
 			if self.remote then
