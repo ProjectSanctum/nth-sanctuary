@@ -10,7 +10,6 @@ function Mod:c4lCreateFilterFX(type, properties)
     if fxtype == "hsv" then
         return HSVShiftFX()
     elseif fxtype == "hsv2" then
-		self.hsv = true
 		local hsv = HSVShiftFX()
 		hsv.hue_start = 60;
 		hsv.sat_start = 0.4;
@@ -24,7 +23,6 @@ function Mod:c4lCreateFilterFX(type, properties)
 		hsv.wave_time = 1;
         return hsv
     elseif fxtype == "hsv3" then
-		self.hsv = true
 		local hsv = HSVShiftFX()
 		hsv.hue_start = -100;
 		hsv.sat_start = 0.6;

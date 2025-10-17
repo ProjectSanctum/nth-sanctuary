@@ -63,9 +63,7 @@ function ProphecyPanel:draw()
     --TODO: figure out the scrolling masked texture effect
 	local hsv = nil
 	for _,filter in ipairs(Game.world.map:getEvents("filter")) do
-		if filter and filter.hsv then
-			hsv = filter
-		end
+		hsv = filter
 	end
 		
 	self.siner = self.siner + DTMULT
@@ -135,7 +133,7 @@ function ProphecyPanel:draw()
 	Draw.popCanvas()
 	local hsv_shader = Assets.getShader("hsv_transform")
 	local last_shader = love.graphics.getShader()
-	if hsv and hsv.fx then
+	if hsv and hsv.fx and hsv.fx.hue then
 		love.graphics.setShader(hsv_shader)
 		hsv_shader:send("_hsv", {360-hsv.fx.hue, 1, 1})
 	end
@@ -146,7 +144,7 @@ function ProphecyPanel:draw()
 	Draw.setColor(1,1,1,self.panel_alpha*0.7)
 	Draw.draw(back_canvas, (self.sprite.x - self.x) + xsin, (self.sprite.y - self.y) + ysin, 0, 2, 2)
 	love.graphics.setShader(last_shader)
-	if hsv and hsv.fx then
+	if hsv and hsv.fx and hsv.fx.hue then
 		love.graphics.stencil(function()
 			local last_shader = love.graphics.getShader()
 			love.graphics.setShader(Kristal.Shaders["Mask"])
