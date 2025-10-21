@@ -13,7 +13,7 @@
  <tileset firstgid="589" source="../../tilesets/church_objects.tsx"/>
  <tileset firstgid="603" source="../../tilesets/tiles_moss.tsx"/>
  <tileset firstgid="605" source="../../tilesets/bg_dw_church_2_tileset.tsx"/>
- <objectgroup id="22" name="objects_parallax3" visible="0" parallaxx="0.3" parallaxy="0.82">
+ <objectgroup id="22" name="objects_parallax3" locked="1" parallaxx="0.3" parallaxy="0.82">
   <object id="133" gid="601" x="-280" y="1190" width="416" height="130" rotation="315">
    <properties>
     <property name="color" type="color" value="#ff00007f"/>
@@ -65,7 +65,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="23" name="objects_parallax2" visible="0" parallaxx="0.4" parallaxy="0.85">
+ <objectgroup id="23" name="objects_parallax2" locked="1" parallaxx="0.4" parallaxy="0.85">
   <object id="144" gid="601" x="-90" y="0" width="480" height="150" rotation="45">
    <properties>
     <property name="color" type="color" value="#ff2525ba"/>
@@ -87,7 +87,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="objects_parallax" visible="0" tintcolor="#9d9d9d" parallaxx="0.5" parallaxy="0.9">
+ <objectgroup id="11" name="objects_parallax" locked="1" tintcolor="#9d9d9d" parallaxx="0.5" parallaxy="0.9">
   <object id="127" gid="1073742417" x="30" y="900" width="640" height="1600"/>
   <object id="130" gid="1073742413" x="-200" y="390" width="400" height="578"/>
   <object id="152" gid="593" x="-360" y="1840" width="640" height="1600"/>
@@ -202,7 +202,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,606,607,614,614,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,736,737,756,748,614,614,614,608,614,614,614,615,616,614,614,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,756,648,746,766,614,614,614,614,611,612,773,774,612,775,614,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,746,764,766,614,614,614,614,614,620,621,621,621,621,791,617,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,746,764,766,614,614,614,614,614,620,621,621,621,621,791,617,778,778,778,778,778,778,778,778,778,778,0,
 0,0,0,0,614,614,614,614,614,614,614,614,614,783,621,621,621,621,784,614,656,657,658,638,639,640,614,627,624,625,
 0,0,0,0,614,614,614,614,614,614,614,614,772,792,621,621,621,621,793,614,614,736,737,648,648,755,738,640,633,634,
 0,0,0,0,617,614,614,614,614,614,614,614,792,621,621,621,782,630,614,614,614,745,648,628,648,648,637,755,614,617,

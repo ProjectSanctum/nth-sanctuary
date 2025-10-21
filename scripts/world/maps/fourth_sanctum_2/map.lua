@@ -16,6 +16,10 @@ function map:onEnter()
 			 event.parallax_x = 0.4
 			 event.parallax_y = 0.85
 		end
+		if event.layer == self.layers["objects_parallax3"] then
+			 event.parallax_x = 0.3
+			 event.parallax_y = 0.82
+		end
 	end
 end
 
