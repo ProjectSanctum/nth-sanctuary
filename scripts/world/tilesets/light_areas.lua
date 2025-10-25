@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 6,
+  tilecount = 10,
   tiles = {
     {
       id = 0,
@@ -60,6 +60,48 @@ return {
       image = "../../../assets/sprites/world/lightarea/spr_windowtest.png",
       width = 80,
       height = 180
+    },
+    {
+      id = 6,
+      image = "../../../assets/sprites/world/lightarea/torch_glow_1.png",
+      width = 31,
+      height = 40,
+      animation = {
+        {
+          tileid = 6,
+          duration = 100
+        },
+        {
+          tileid = 7,
+          duration = 100
+        },
+        {
+          tileid = 8,
+          duration = 100
+        },
+        {
+          tileid = 9,
+          duration = 100
+        }
+      }
+    },
+    {
+      id = 7,
+      image = "../../../assets/sprites/world/lightarea/torch_glow_2.png",
+      width = 31,
+      height = 40
+    },
+    {
+      id = 8,
+      image = "../../../assets/sprites/world/lightarea/torch_glow_3.png",
+      width = 31,
+      height = 40
+    },
+    {
+      id = 9,
+      image = "../../../assets/sprites/world/lightarea/torch_glow_4.png",
+      width = 31,
+      height = 40
     }
   }
 }

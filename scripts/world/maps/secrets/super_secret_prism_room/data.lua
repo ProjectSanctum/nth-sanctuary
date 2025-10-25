@@ -9,8 +9,8 @@ return {
   height = 32,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 16,
+  nextlayerid = 8,
+  nextobjectid = 38,
   properties = {
     ["music"] = "darkchurch_intro"
   },
@@ -19,6 +19,18 @@ return {
       name = "bg_dw_church_tileset_new",
       firstgid = 1,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx"
+    },
+    {
+      name = "church_objects",
+      firstgid = 583,
+      filename = "../../../tilesets/church_objects.tsx",
+      exportfilename = "../../../tilesets/church_objects.lua"
+    },
+    {
+      name = "light_areas",
+      firstgid = 602,
+      filename = "../../../tilesets/light_areas.tsx",
+      exportfilename = "../../../tilesets/light_areas.lua"
     }
   },
   layers = {
@@ -135,7 +147,7 @@ return {
           x = 120,
           y = 840,
           width = 120,
-          height = 400,
+          height = 280,
           rotation = 0,
           visible = true,
           properties = {}
@@ -145,9 +157,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 240,
+          x = 0,
           y = 1200,
-          width = 160,
+          width = 400,
           height = 80,
           rotation = 0,
           visible = true,
@@ -165,6 +177,162 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 17,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 1080,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "objects_glass",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 16,
+          name = "churchmagicglass",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 1120,
+          width = 240,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 60,
+          y = 800,
+          width = 36,
+          height = 120,
+          rotation = 0,
+          gid = 3221226070,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 540,
+          y = 800,
+          width = 36,
+          height = 120,
+          rotation = 0,
+          gid = 1073742422,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 23,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 60,
+          y = 560,
+          width = 36,
+          height = 120,
+          rotation = 0,
+          gid = 3221226070,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 24,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 540,
+          y = 560,
+          width = 36,
+          height = 120,
+          rotation = 0,
+          gid = 1073742422,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 25,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 60,
+          y = 320,
+          width = 36,
+          height = 120,
+          rotation = 0,
+          gid = 3221226070,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 26,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 540,
+          y = 320,
+          width = 36,
+          height = 120,
+          rotation = 0,
+          gid = 1073742422,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
         }
       }
     },
@@ -194,6 +362,203 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 18,
+          name = "entry",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 1160,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects_lightarea",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 27,
+          name = "darkness",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["alpha"] = 0.5,
+            ["highlight"] = true
+          }
+        },
+        {
+          id = 28,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 230,
+          y = 230,
+          width = 184,
+          height = 262,
+          rotation = 0,
+          gid = 605,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 29,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 260,
+          y = 210,
+          width = 120,
+          height = 262,
+          rotation = 0,
+          gid = 605,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.2,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 30,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 320,
+          width = 62,
+          height = 80,
+          rotation = 0,
+          gid = 608,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 31,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 460,
+          y = 320,
+          width = 62,
+          height = 80,
+          rotation = 0,
+          gid = 2147484256,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 32,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 560,
+          width = 62,
+          height = 80,
+          rotation = 0,
+          gid = 608,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 33,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 460,
+          y = 560,
+          width = 62,
+          height = 80,
+          rotation = 0,
+          gid = 2147484256,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 34,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 800,
+          width = 62,
+          height = 80,
+          rotation = 0,
+          gid = 608,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 35,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 460,
+          y = 800,
+          width = 62,
+          height = 80,
+          rotation = 0,
+          gid = 2147484256,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
         }
       }
     },

@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 13,
+  tilecount = 17,
   tiles = {
     {
       id = 0,
@@ -102,6 +102,48 @@ return {
       image = "../../../assets/sprites/world/events/window_glow/church_window_huge.png",
       width = 160,
       height = 360
+    },
+    {
+      id = 15,
+      image = "../../../assets/sprites/world/objects/church_torch_1.png",
+      width = 18,
+      height = 60,
+      animation = {
+        {
+          tileid = 15,
+          duration = 100
+        },
+        {
+          tileid = 16,
+          duration = 100
+        },
+        {
+          tileid = 17,
+          duration = 100
+        },
+        {
+          tileid = 18,
+          duration = 100
+        }
+      }
+    },
+    {
+      id = 16,
+      image = "../../../assets/sprites/world/objects/church_torch_2.png",
+      width = 18,
+      height = 60
+    },
+    {
+      id = 17,
+      image = "../../../assets/sprites/world/objects/church_torch_3.png",
+      width = 18,
+      height = 60
+    },
+    {
+      id = 18,
+      image = "../../../assets/sprites/world/objects/church_torch_4.png",
+      width = 18,
+      height = 60
     }
   }
 }
