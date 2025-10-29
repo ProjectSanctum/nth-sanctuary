@@ -67,7 +67,7 @@ function Darkness:draw()
 				col = Game:getPartyMember(object.party).highlight_color or COLORS["gray"]
 			end
             Kristal.Shaders["AddColor"]:sendColor("inputcolor", col)
-            Kristal.Shaders["AddColor"]:send("amount", self.alpha)
+            Kristal.Shaders["AddColor"]:send("amount", 1)
 
             self:drawCharacter(object)
 
@@ -94,7 +94,7 @@ function Darkness:draw()
 			glowalpha = 1-roomglow.actind
 		end
 	end
-	Draw.setColor(1,1,1,glowalpha)
+	Draw.setColor(1,1,1,glowalpha*self.alpha)
     Draw.draw(highlight_canvas)
 	Draw.setColor(1,1,1,1)
     love.graphics.setStencilTest()
