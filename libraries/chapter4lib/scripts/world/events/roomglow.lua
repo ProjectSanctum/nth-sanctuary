@@ -11,8 +11,8 @@ function RoomGlow:init(data)
     self.tint = TiledUtils.parseColorProperty(properties["tint"]) or ColorUtils.hexToRGB("#2A39FFFF")
     self.highlight = TiledUtils.parseColorProperty(properties["highlight"]) or ColorUtils.hexToRGB("#42D0FFFF")
     self.darkcol = TiledUtils.parseColorProperty(properties["darkness"]) or ColorUtils.hexToRGB("#404040FF")
-	self.glowactive = false
-	self.actind = 0
+	self.glowactive = properties["active"] or false
+	self.actind = properties["alpha"] or 0
 	self.lerpstrength = 0.125
 	self.init = true
 end

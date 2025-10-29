@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 58,
+  nextobjectid = 60,
   properties = {
     ["border"] = "hell",
     ["music"] = "hellworld",
@@ -336,6 +336,25 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 59,
+          name = "roomglow",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["active"] = true,
+            ["alpha"] = 1.05,
+            ["darkness"] = "#ff800000",
+            ["highlight"] = "#ffff7400",
+            ["tint"] = "#ffff0000"
+          }
         }
       }
     },

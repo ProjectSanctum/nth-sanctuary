@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="58">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="60">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -107,6 +107,16 @@ This is your home now.</property>
   <object id="54" name="ripplefloor" x="600" y="560" width="40" height="400"/>
   <object id="55" name="ripplefloor" x="600" y="0" width="40" height="360"/>
   <object id="56" name="ripplefloor" x="0" y="760" width="600" height="40"/>
+  <object id="59" name="roomglow" x="0" y="0">
+   <properties>
+    <property name="active" type="bool" value="true"/>
+    <property name="alpha" type="float" value="1.05"/>
+    <property name="darkness" type="color" value="#ff800000"/>
+    <property name="highlight" type="color" value="#ffff7400"/>
+    <property name="tint" type="color" value="#ffff0000"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="5" name="collision">
   <object id="15" x="520" y="320" width="80" height="40"/>
