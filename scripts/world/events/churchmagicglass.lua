@@ -40,7 +40,7 @@ function ChurchMagicGlass:update()
 		local targalpha = self.idlealpha
         if any_collided then
             self.tile_alphas[i] = Utils.lerp(self.tile_alphas[i], 0.8, 0.125 * DTMULT)
-			if self.starthidden and self.tile_alphas[i] >= 0.8 then
+			if self.starthidden and self.tile_alphas[i] >= 0.79 then
 				self.tile_idlealphas[i] = 0.2
 			end
         else

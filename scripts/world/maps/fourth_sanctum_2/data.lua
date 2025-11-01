@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 20,
-  nextobjectid = 105,
+  nextobjectid = 111,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -1033,6 +1033,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 110,
+          name = "entry_priism",
+          type = "",
+          shape = "point",
+          x = 1880,
+          y = 1080,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -1109,8 +1122,8 @@ return {
           shape = "rectangle",
           x = 1600,
           y = 1000,
-          width = 40,
-          height = 160,
+          width = 320,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}
@@ -1122,7 +1135,7 @@ return {
           shape = "rectangle",
           x = 840,
           y = 1120,
-          width = 760,
+          width = 1080,
           height = 40,
           rotation = 0,
           visible = true,
@@ -1340,6 +1353,38 @@ return {
           visible = true,
           properties = {
             ["value"] = 1
+          }
+        },
+        {
+          id = 107,
+          name = "churchmagicglass",
+          type = "",
+          shape = "rectangle",
+          x = 1600,
+          y = 1040,
+          width = 320,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["idlealpha"] = 0,
+            ["starthidden"] = true
+          }
+        },
+        {
+          id = 108,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1920,
+          y = 1040,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "secrets/super_secret_prism_room",
+            ["marker"] = "entry"
           }
         }
       }

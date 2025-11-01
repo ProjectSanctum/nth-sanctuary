@@ -9,8 +9,8 @@ return {
   height = 18,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 15,
-  nextobjectid = 55,
+  nextlayerid = 18,
+  nextobjectid = 91,
   properties = {
     ["border"] = "church_b",
     ["music"] = "none"
@@ -81,6 +81,166 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 15,
+      name = "objects_parallax3",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.3,
+      parallaxy = 0.82,
+      properties = {},
+      objects = {
+        {
+          id = 75,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -80,
+          y = 210,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 76,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 336,
+          y = 210,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 77,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 752,
+          y = 210,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 78,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -80,
+          y = 410,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 79,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 336,
+          y = 410,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 80,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 752,
+          y = 410,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 81,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -80,
+          y = 610,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 82,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 336,
+          y = 610,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 83,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 752,
+          y = 610,
+          width = 416,
+          height = 130,
+          rotation = 0,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 14,
       name = "objects_parallax2",
       class = "",
@@ -88,66 +248,10 @@ return {
       opacity = 1,
       offsetx = 0,
       offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
+      parallaxx = 0.4,
+      parallaxy = 0.85,
       properties = {},
       objects = {
-        {
-          id = 49,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 920,
-          y = 1080,
-          width = 394.4,
-          height = 986,
-          rotation = -35,
-          gid = 833,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 50,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1120,
-          y = 960,
-          width = 394.4,
-          height = 986,
-          rotation = -59,
-          gid = 833,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 51,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 280,
-          y = 840,
-          width = 394.4,
-          height = 986,
-          rotation = -35,
-          gid = 3221226305,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 52,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 480,
-          y = 720,
-          width = 394.4,
-          height = 986,
-          rotation = -59,
-          gid = 3221226305,
-          visible = true,
-          properties = {}
-        },
         {
           id = 53,
           name = "",
@@ -160,6 +264,134 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 59,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 270,
+          y = 720,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 60,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 270,
+          y = 240,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 61,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 630,
+          y = 720,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 62,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 630,
+          y = 240,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 63,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 850,
+          y = 720,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 64,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 850,
+          y = 240,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 65,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1190,
+          y = 720,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 66,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1190,
+          y = 240,
+          width = 480,
+          height = 150,
+          rotation = -90,
+          gid = 841,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
         }
       }
     },
@@ -173,17 +405,17 @@ return {
       opacity = 1,
       offsetx = 0,
       offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
+      parallaxx = 0.5,
+      parallaxy = 0.9,
       properties = {},
       objects = {
         {
-          id = 42,
+          id = 57,
           name = "",
           type = "",
           shape = "rectangle",
-          x = -640,
-          y = 790,
+          x = -720,
+          y = 760,
           width = 640,
           height = 1600,
           rotation = -315,
@@ -192,12 +424,12 @@ return {
           properties = {}
         },
         {
-          id = 43,
+          id = 58,
           name = "",
           type = "",
           shape = "rectangle",
-          x = 200,
-          y = 760,
+          x = 120,
+          y = 730,
           width = 640,
           height = 1600,
           rotation = -315,
@@ -208,13 +440,96 @@ return {
       }
     },
     {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 16,
+      name = "objects_tile_oscillate",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 84,
+          name = "tile_oscillate",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 80,
+          width = 880,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 85,
+          name = "tile_oscillate",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 320,
+          width = 800,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 86,
+          name = "tile_oscillate",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 400,
+          width = 120,
+          height = 320,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 87,
+          name = "tile_oscillate",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 200,
+          width = 120,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 88,
+          name = "texturescroller",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = "hsv"
+          }
+        }
+      }
+    },
+    {
       type = "tilelayer",
       x = 0,
       y = 0,
       width = 26,
       height = 18,
       id = 12,
-      name = "Tile Layer 2",
+      name = "tiles",
       class = "",
       visible = true,
       opacity = 1,
@@ -505,7 +820,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 5,
-      name = "objects_overlay",
+      name = "objects_fog",
       class = "",
       visible = true,
       opacity = 1,
@@ -527,9 +842,25 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        },
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 17,
+      name = "objects_overlay",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
         {
-          id = 54,
+          id = 90,
           name = "filter",
           type = "",
           shape = "point",

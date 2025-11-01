@@ -253,7 +253,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "secsanctuary/ripplepost"
+            ["map"] = "secsanctuary/ripple1"
           }
         },
         {

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 38,
+  nextobjectid = 39,
   properties = {
     ["music"] = "darkchurch_intro"
   },
@@ -363,6 +363,22 @@ return {
           properties = {
             ["actor"] = "ddelta",
             ["cutscene"] = "events.prism"
+          }
+        },
+        {
+          id = 38,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 1120,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "fourth_sanctum_2",
+            ["marker"] = "entry_prism"
           }
         }
       }

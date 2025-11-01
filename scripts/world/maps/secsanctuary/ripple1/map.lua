@@ -14,22 +14,34 @@ end
 
 function map:onEnter()
     self.world.color = COLORS.black
-	self.tiles = Game.world.map:getTileLayer("Tile Layer 2")
+	self.tiles = Game.world.map:getTileLayer("tiles")
 	self.tiles.alpha = 0
-		for _, event in ipairs(self.events) do
+	for _, event in ipairs(self.events) do
+		if event.layer == self.layers["objects_tile_oscillate"] then
+			 event.visible = false
+		end
 		if event.layer == self.layers["objects_parallax"] then
 			 event.parallax_x = 0.5
 			 event.parallax_y = 0.9
-			 event.alpha = 0
-		elseif event.layer == self.layers["objects_parallax2"] then
-			event.parallax_x = 0.2
-			event.parallax_y = 0.7
-			event.alpha = 0
+			 event.visible = false
+		end
+		if event.layer == self.layers["objects_parallax2"] then
+			 event.parallax_x = 0.4
+			 event.parallax_y = 0.85
+			 event.visible = false
+		end
+		if event.layer == self.layers["objects_parallax3"] then
+			 event.parallax_x = 0.3
+			 event.parallax_y = 0.82
+			 event.visible = false
 		end
 	end
 	Game.world.timer:after(10/30, function()
 		self.con = 1
 	end)
+	for _, filter in ipairs(Game.world.map:getEvents("filter")) do
+		filter.visible = false
+	end
 	for _, window in ipairs(Game.world.map:getEvents("window_glow")) do
 		window.alpha = 0
 		window.sprite.alpha = 0
@@ -104,10 +116,17 @@ function map:update()
 				self.con = 2
 				for _, event in ipairs(self.events) do
 					if event.layer == self.layers["objects_parallax"] then
-						 event.alpha = 1
+						event.visible = true
 					elseif event.layer == self.layers["objects_parallax2"] then
-						event.alpha = 1
+						event.visible = true
+					elseif event.layer == self.layers["objects_parallax3"] then
+						event.visible = true
+					elseif event.layer == self.layers["objects_tile_oscillate"] then
+						event.visible = true
 					end
+				end
+				for _, filter in ipairs(Game.world.map:getEvents("filter")) do
+					filter.visible = true
 				end
 			end
 		end

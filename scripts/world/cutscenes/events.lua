@@ -58,7 +58,6 @@ return {
     prism = function (cutscene)
         local dd = cutscene:getCharacter("ddelta")
 		local dd_y = dd.y
-		dd.visible = true
         cutscene:setSpeaker(dd)
         cutscene:text("* delta warriors...[wait:5]\n* you finally arrived")
         cutscene:text("* this is the one and only \"Your Sanctuary\" location")
@@ -107,6 +106,12 @@ return {
         cutscene:startEncounter("3d")
 		prism_sprite:remove()
 		dd.y = dd_y
+		dd.visible = true
+        cutscene:text("* ok you win this is unfinished so have the item")
+		Assets.playSound("eb_keyitem")
+        cutscene:text("* You got the [color:blue]Sound Stone[color:reset]!")
+		Assets.stopSound("eb_keyitem")
+        Game.inventory:addItem("sound_stone")
         Game.world.music:play()
     end
 }
