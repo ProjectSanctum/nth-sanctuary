@@ -19,7 +19,7 @@ function TrailCubeBullet:init(x, y, dir, speed, trails)
 		table.insert(self.x_last, self.x)
 		table.insert(self.y_last, self.y)
 	end
-	for i = 1, self.trails-4 do
+	for i = 1, self.trails-7 do
         local hitbox = Hitbox(self, 10, 10, 15, 15)
 		table.insert(self.trail_colliders, hitbox)
 	end
@@ -69,13 +69,8 @@ function TrailCubeBullet:update()
 			self.x_last[i] = self.x_last[i - 1]
 			self.y_last[i] = self.y_last[i - 1]
 		end
-		for i = self.trails-4, 2, -1 do
-			if i >= self.trails-math.floor(self.trails/2) then
-				local shrink = 0.5
-				self.trail_colliders[i] = Hitbox(self, self.x_last[i]-self.x+12.5, self.y_last[i]-self.y+12.5, 10, 10)
-			else
-				self.trail_colliders[i] = Hitbox(self, self.x_last[i]-self.x+10, self.y_last[i]-self.y+10, 15, 15)
-			end
+		for i = self.trails-7, 2, -1 do
+			self.trail_colliders[i] = Hitbox(self, self.x_last[i]-self.x+10, self.y_last[i]-self.y+10, 15, 15)
 		end
 		self.x_last[1] = self.x
 		self.y_last[1] = self.y
@@ -98,24 +93,29 @@ function TrailCubeBullet:update()
 end
 
 function TrailCubeBullet:shouldSwoon(damage, target, soul)
-    return true
+    return Game.battle.encounter.raged
 end
 
 function TrailCubeBullet:draw()
 	local rr, rg, rb = ColorUtils.HSVToRGB((Game.battle.encounter.rainbow_timer / 255) % 1, 233 / 255, 200 / 255)
-    love.graphics.setBlendMode("add")
+	local br, bb, bg = ColorUtils.HSVToRGB((Game.battle.encounter.rainbow_timer / 255) % 1, 60 / 255, 1)
 	for i = self.trails, 1, -1 do
-		local ar, ag, ab = ColorUtils.mergeColor(COLORS["white"], {rr, rg, rb}, i/self.trails)
+		love.graphics.setBlendMode("alpha")
 		if i >= self.trails-5 then
-			love.graphics.setColor(ColorUtils.mergeColor(COLORS["black"], unpack({ar, ag, ab}), ((self.trails-i)/5)*self.alpha))
+			love.graphics.setBlendMode("add")
+			love.graphics.setColor(ColorUtils.mergeColor(COLORS["black"], {rr, rg, rb}, ((self.trails-i)/5)*self.alpha*0.5))
 		else
-			love.graphics.setColor(ColorUtils.mergeColor(COLORS["black"], unpack({ar, ag, ab}), self.alpha))
+			if i > 1 then
+				love.graphics.setColor(br,bb,bg,self.alpha)
+			else
+				love.graphics.setColor(1,1,1,self.alpha)
+			end
 		end
 		if self.con == 1 then
 			love.graphics.draw(self.sprite.texture, self.x_last[i]-self.x, self.y_last[i]-self.y, 0, 1, 1, 0, 0)
 		end
+		love.graphics.setBlendMode("alpha")
 	end
-	love.graphics.setBlendMode("alpha")
     super.draw(self)
 end
 

@@ -39,7 +39,7 @@ function CubeBullet:update()
 end
 
 function CubeBullet:shouldSwoon(damage, target, soul)
-    return true
+    return Game.battle.encounter.raged
 end
 
 function CubeBullet:draw()
