@@ -12,7 +12,7 @@ function ThreeDPrism:init()
     self.max_health = 1
     self.health = 999999
     -- Enemy attack (determines bullet damage)
-    self.attack = 30
+    self.attack = 20
     -- Enemy defense (usually 0)
     self.defense = -100
     -- Enemy reward
@@ -159,7 +159,7 @@ function ThreeDPrism:onAct(battler, name)
 			else
 				self.name = "3D Spinning Prism"
 			end
-			self.attack = 30
+			self.attack = 20
 			self:removeAct("BegForMercy")
 			self:registerAct("Challenge", "Still a\nterrible\nidea", "susie")
 		end)
