@@ -69,6 +69,7 @@ function GueiChaser:init(data)
         self.sprite.aura = properties["aura"]
     end
 	self:setHitbox(20+5, 34+10, 20, 20)
+	self.no_shadow = true
 end
 
 function GueiChaser:update()
