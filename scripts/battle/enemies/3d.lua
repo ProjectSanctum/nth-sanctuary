@@ -12,7 +12,7 @@ function ThreeDPrism:init()
     self.max_health = 1
     self.health = 999999
     -- Enemy attack (determines bullet damage)
-    self.attack = 40
+    self.attack = 30
     -- Enemy defense (usually 0)
     self.defense = -100
     -- Enemy reward
@@ -125,6 +125,7 @@ function ThreeDPrism:onAct(battler, name)
 			self.last_comment = self.comment
 			self.name = "3D Prism"
 			self.comment = "(Furious)"
+			self.attack = 40
 			self:removeAct("Challenge")
 			self:registerAct("BegForMercy", "Revert\ndifficulty", "all", 8)
 			Game.battle.encounter.raged = true
@@ -158,6 +159,7 @@ function ThreeDPrism:onAct(battler, name)
 			else
 				self.name = "3D Spinning Prism"
 			end
+			self.attack = 30
 			self:removeAct("BegForMercy")
 			self:registerAct("Challenge", "Still a\nterrible\nidea", "susie")
 		end)
