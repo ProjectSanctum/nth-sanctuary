@@ -82,7 +82,7 @@
   <object id="5" gid="2147483932" x="580" y="1030" width="120" height="510">
    <properties>
     <property name="light" type="bool" value="true"/>
-    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_alpha" type="float" value="0.05"/>
     <property name="light_color" type="color" value="#ffffffff"/>
     <property name="light_type" type="int" value="1"/>
    </properties>
@@ -90,7 +90,7 @@
   <object id="22" gid="2147483932" x="400" y="1040" width="160" height="680">
    <properties>
     <property name="light" type="bool" value="true"/>
-    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_alpha" type="float" value="0.05"/>
     <property name="light_color" type="color" value="#ffffffff"/>
     <property name="light_type" type="int" value="1"/>
    </properties>
@@ -98,7 +98,7 @@
   <object id="23" gid="2147483932" x="80" y="1040" width="160" height="680">
    <properties>
     <property name="light" type="bool" value="true"/>
-    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_alpha" type="float" value="0.05"/>
     <property name="light_color" type="color" value="#ffffffff"/>
     <property name="light_type" type="int" value="1"/>
    </properties>
@@ -106,7 +106,7 @@
   <object id="24" gid="2147483932" x="-60" y="1030" width="120" height="510">
    <properties>
     <property name="light" type="bool" value="true"/>
-    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_alpha" type="float" value="0.05"/>
     <property name="light_color" type="color" value="#ffffffff"/>
     <property name="light_type" type="int" value="1"/>
    </properties>

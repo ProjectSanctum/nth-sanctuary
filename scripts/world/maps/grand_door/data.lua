@@ -278,7 +278,7 @@ return {
           visible = true,
           properties = {
             ["light"] = true,
-            ["light_alpha"] = 0.1,
+            ["light_alpha"] = 0.05,
             ["light_color"] = "#ffffffff",
             ["light_type"] = 1
           }
@@ -297,7 +297,7 @@ return {
           visible = true,
           properties = {
             ["light"] = true,
-            ["light_alpha"] = 0.1,
+            ["light_alpha"] = 0.05,
             ["light_color"] = "#ffffffff",
             ["light_type"] = 1
           }
@@ -316,7 +316,7 @@ return {
           visible = true,
           properties = {
             ["light"] = true,
-            ["light_alpha"] = 0.1,
+            ["light_alpha"] = 0.05,
             ["light_color"] = "#ffffffff",
             ["light_type"] = 1
           }
@@ -335,7 +335,7 @@ return {
           visible = true,
           properties = {
             ["light"] = true,
-            ["light_alpha"] = 0.1,
+            ["light_alpha"] = 0.05,
             ["light_color"] = "#ffffffff",
             ["light_type"] = 1
           }
