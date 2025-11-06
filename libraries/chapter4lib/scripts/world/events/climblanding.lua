@@ -18,8 +18,6 @@ function event:climbFallLanding(player)
             Assets.stopAndPlaySound("noise")
             player.sprite:set("landed")
 			player:shake()
-            cutscene:interpolateFollowers()
-            cutscene:attachFollowers()
             cutscene:wait(16/30)
             local id = "climb_fade"
             for i,follower in ipairs(self.world.followers) do
@@ -33,6 +31,8 @@ function event:climbFallLanding(player)
                 follower:setPosition(tx + (i == 1 and -30 or 30), ty + (self.up and 10 or -10))
                 follower:setFacing(player.facing)
             end
+            cutscene:interpolateFollowers()
+            cutscene:attachFollowers()
             player:resetSprite()
         end)
     end
