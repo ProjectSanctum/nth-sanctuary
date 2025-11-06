@@ -253,8 +253,8 @@ function Player:processClimbInputs()
 				dust.physics.speed_x = MathUtils.random(-1, 1)
 				self.world:addChild(dust)
 			end
-			if self.fallingspeed > 7 then
-				self.fallingspeed = 7
+			if self.fallingspeed > 7 * DTMULT then
+				self.fallingspeed = 7 * DTMULT
 			end
 			self.fallingspeed = self.fallingspeed - DTMULT
 			if self.falldir == "down" then
