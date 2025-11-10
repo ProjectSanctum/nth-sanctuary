@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 53,
+  nextobjectid = 54,
   properties = {
     ["music"] = "climb"
   },
@@ -475,6 +475,22 @@ return {
           properties = {
             ["actor"] = "ddelta",
             ["text"] = "* that switch up there looks a hell of a lot like me"
+          }
+        },
+        {
+          id = 53,
+          name = "wandernpc",
+          type = "",
+          shape = "point",
+          x = 1060,
+          y = 360,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "ddelta",
+            ["text"] = "* i move around so cooool"
           }
         }
       }

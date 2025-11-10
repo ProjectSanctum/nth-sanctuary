@@ -22,7 +22,7 @@ function actor:init()
     -- Path to this actor's sprites (defaults to "")
     self.path = "npcs/ddelta"
     -- This actor's default sprite or animation, relative to the path (defaults to "")
-    self.default = "idle"
+    self.default = "walk"
 
     -- Sound to play when this actor speaks (optional)
     self.voice = "ddelta"
@@ -43,7 +43,12 @@ function actor:init()
     self.animations = {}
 
     -- Table of sprite offsets (indexed by sprite name)
-    self.offsets = {}
+    self.offsets = {
+        ["walk/left"] = {0, 0},
+        ["walk/right"] = {0, 0},
+        ["walk/up"] = {0, 0},
+        ["walk/down"] = {0, 0},
+	}
 end
 
 return actor

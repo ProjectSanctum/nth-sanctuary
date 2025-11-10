@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="53">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="54">
  <editorsettings>
   <export target="climbtest.lua" format="lua"/>
  </editorsettings>
@@ -132,6 +132,13 @@
    <properties>
     <property name="actor" value="ddelta"/>
     <property name="text" value="* that switch up there looks a hell of a lot like me"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="53" name="wandernpc" x="1060" y="360">
+   <properties>
+    <property name="actor" value="ddelta"/>
+    <property name="text" value="* i move around so cooool"/>
    </properties>
    <point/>
   </object>
