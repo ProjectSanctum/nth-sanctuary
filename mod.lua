@@ -3,7 +3,22 @@ function Mod:init()
     TableUtils.copyInto(MUSIC_VOLUMES, {
         second_church = 0.8
     })
+    self.DT_MULT = 1
+    Utils.hook(love.timer, "step", function (orig, ...)
+        local dt = orig(...)
+        return dt * math.max(0.05, self.DT_MULT)
+    end)
 end
+
+function Mod:afmGetMusic()
+    local data = Kristal.getSaveFile(1)
+    return "afm/preview"
+end
+
+function Mod:afmGetStyle()
+    return "normal"
+end
+
 function Mod:c4lCreateFilterFX(type, properties)
     local fxtype = (type or "hsv"):lower()
     if fxtype == "hsv" then
@@ -52,7 +67,7 @@ function Mod:c4lCreateFilterFX(type, properties)
     end
 end
 
-function Mod:postInit(new_file)
+function Mod:afmPostInit(new_file)
     if new_file then
         Game:setFlag("fun", love.math.random(1, 170))
         Game:setFlag("shards", 1)
@@ -70,6 +85,7 @@ function Mod:postInit(new_file)
     }
  ]]
 end
+
 function Mod:updateLightBeams(alpha)
 	for index, value in ipairs(Game.world.stage:getObjects(TileObject)) do
 		if value.light_area then

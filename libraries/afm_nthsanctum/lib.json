@@ -1,0 +1,9 @@
+{
+    "id": "afm_nthsanctuary",
+    "authors": [
+        "Hyperboid", // Programming
+    ],
+    "dependencies": [
+        "afilemenu"
+    ]
+}
