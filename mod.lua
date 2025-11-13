@@ -12,7 +12,21 @@ end
 
 function Mod:afmGetMusic()
     local data = Kristal.getSaveFile(1)
-    return "afm/preview"
+	local flags = {}
+	for i=1,3 do
+		local path = "saves/nth_sanctum/file_"..i..".json"
+		if love.filesystem.getInfo(path) then
+			local data = JSON.decode(love.filesystem.read(path))
+			table.insert(flags, data.flags["prog"])
+		end
+	end
+	table.sort(flags)
+	local flag = flags[#flags]
+    if flag == 0 or not flag then
+		return "afm/preview"
+	else
+		return "afm/prev2"
+	end
 end
 
 function Mod:afmGetStyle()
