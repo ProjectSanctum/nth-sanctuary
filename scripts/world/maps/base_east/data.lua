@@ -1119,7 +1119,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["alpha"] = 0.1,
+            ["alpha"] = 0.2,
             ["highlight"] = true
           }
         }

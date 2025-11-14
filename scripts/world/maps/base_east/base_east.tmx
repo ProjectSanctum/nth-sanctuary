@@ -414,7 +414,7 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
   </object>
   <object id="101" name="darkness" x="30" y="0">
    <properties>
-    <property name="alpha" type="float" value="0.1"/>
+    <property name="alpha" type="float" value="0.2"/>
     <property name="highlight" type="bool" value="true"/>
    </properties>
    <point/>
