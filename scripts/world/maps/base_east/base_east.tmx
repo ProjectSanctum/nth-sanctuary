@@ -10,7 +10,7 @@
  <tileset firstgid="1" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="583" source="../../tilesets/castle.tsx"/>
  <tileset firstgid="623" source="../../tilesets/light_areas.tsx"/>
- <tileset firstgid="629" source="../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="633" source="../../tilesets/church_objects.tsx"/>
  <layer id="14" name="tiles_parallax" width="26" height="21" parallaxx="0.6">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -37,12 +37,12 @@
 </data>
  </layer>
  <objectgroup id="12" name="objects_parallax" parallaxx="0.8">
-  <object id="53" gid="629" x="0" y="960" width="400" height="578"/>
-  <object id="55" gid="633" x="230" y="1320" width="640" height="1600"/>
-  <object id="58" gid="629" x="600" y="970" width="400" height="578"/>
+  <object id="53" gid="633" x="0" y="960" width="400" height="578"/>
+  <object id="55" gid="637" x="230" y="1320" width="640" height="1600"/>
+  <object id="58" gid="633" x="600" y="970" width="400" height="578"/>
  </objectgroup>
  <objectgroup id="13" name="objects_parallax_fade">
-  <object id="59" gid="637" x="1200" y="1020" width="900" height="1200" rotation="270"/>
+  <object id="59" gid="641" x="1200" y="1020" width="900" height="1200" rotation="270"/>
  </objectgroup>
  <layer id="11" name="roomglow_dark_bg" width="26" height="21">
   <data encoding="csv">

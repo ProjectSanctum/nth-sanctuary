@@ -32,18 +32,10 @@ function TileObject:drawLightA()
 			sx = MathUtils.absMin(sx, sy)
 			sy = sx
 		end
-		if self.light_type == 1 then
+		if self.light_type == 1 then -- Deltarune does something different here but I have no idea how to make it work
 			love.graphics.setColor(1,1,1,1)
-			local mask_canvas = Draw.pushCanvas(self.width, self.height)
-			self.tileset:drawTile(self.tile, 0, 0, 0, 1, 1)
-			love.graphics.setBlendMode("alpha")
-			Draw.popCanvas()
-			local last_shader = love.graphics.getShader()
-			love.graphics.setShader(Ch4Lib.invert_alpha)
-			love.graphics.setBlendMode("multiply", "premultiplied")
 			local xx, yy = self:localToScreenPos(0,0)
-			Draw.draw(mask_canvas, xx+self.width/2, yy+self.height/2, 0, sx, sy, tile_width/2, tile_height/2)
-			love.graphics.setShader(last_shader)
+			self.tileset:drawTile(self.tile, xx+self.width/2, yy+self.height/2, 0, sx, sy, tile_width/2, tile_height/2)
 		end
 		if self.light_type == 3 or self.light_type == 5 then
 			love.graphics.setColor(1,1,1,self.light_alpha)

@@ -34,7 +34,7 @@ return {
     },
     {
       name = "church_objects",
-      firstgid = 629,
+      firstgid = 633,
       filename = "../../tilesets/church_objects.tsx",
       exportfilename = "../../tilesets/church_objects.lua"
     }
@@ -105,7 +105,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
-          gid = 629,
+          gid = 633,
           visible = true,
           properties = {}
         },
@@ -119,7 +119,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
-          gid = 633,
+          gid = 637,
           visible = true,
           properties = {}
         },
@@ -133,7 +133,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
-          gid = 629,
+          gid = 633,
           visible = true,
           properties = {}
         }
@@ -163,7 +163,7 @@ return {
           width = 900,
           height = 1200,
           rotation = 270,
-          gid = 637,
+          gid = 641,
           visible = true,
           properties = {}
         }
