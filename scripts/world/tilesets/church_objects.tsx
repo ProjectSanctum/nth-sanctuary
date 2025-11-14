@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="church_objects" tilewidth="900" tileheight="800" tilecount="19" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="church_objects" tilewidth="900" tileheight="800" tilecount="23" columns="0">
  <editorsettings>
   <export target="church_objects.lua" format="lua"/>
  </editorsettings>
@@ -66,5 +66,17 @@
  </tile>
  <tile id="20">
   <image width="360" height="310" source="../../../assets/sprites/world/objects/darkdoor_open.png"/>
+ </tile>
+ <tile id="21">
+  <image width="62" height="63" source="../../../assets/sprites/world/objects/bell_single_1.png"/>
+ </tile>
+ <tile id="22">
+  <image width="62" height="63" source="../../../assets/sprites/world/objects/bell_single_2.png"/>
+ </tile>
+ <tile id="23">
+  <image width="14" height="6" source="../../../assets/sprites/world/objects/bell_single_drum.png"/>
+ </tile>
+ <tile id="24">
+  <image width="42" height="60" source="../../../assets/sprites/world/objects/bell_enemy.png"/>
  </tile>
 </tileset>

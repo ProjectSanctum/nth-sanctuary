@@ -72,7 +72,7 @@ function Darkness:draw()
     love.graphics.translate(-Game.world.camera.x+SCREEN_WIDTH/2, -Game.world.camera.y+SCREEN_HEIGHT/2)
 
     for _, object in ipairs(Game.world.children) do
-        if object:includes(Character) then
+        if object:includes(Character) and not object.no_highlight then
             love.graphics.stencil((function ()
 				love.graphics.translate(0, 2)
 				love.graphics.setShader(Kristal.Shaders["Mask"])

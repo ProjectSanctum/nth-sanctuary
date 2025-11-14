@@ -29,6 +29,26 @@ function map:onEnter()
     Game.world:addChild(bells_3)
     bells_3:setLayer(Game.world:parseLayer("objects_parallax"))
 
+	for _, event in ipairs(self.events) do
+		if event.layer == self.layers["objects_bell_btm"]
+		or event.layer == self.layers["objects_bell"]
+		or event.layer == self.layers["objects_bell_top"] then
+			event.parallax_x = 0.9
+			event:setColor(COLORS.gray)
+		end
+		if event.tileset then
+			local draw_id = event.tileset:getDrawTile(event.tile)
+			local info = event.tileset.tile_info[draw_id]
+			if info then
+				if info.path == "world/objects/bell_single_drum" then
+					event:setColor(ColorUtils.hexToRGB("#679CBCFF"))
+				elseif info.path == "world/objects/bell_enemy" then
+					event:setColor(COLORS.white)
+					event.visible = false
+				end
+			end
+		end
+	end
 end
 
 return map

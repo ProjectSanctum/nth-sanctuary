@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 19,
+  tilecount = 23,
   tiles = {
     {
       id = 0,
@@ -156,6 +156,30 @@ return {
       image = "../../../assets/sprites/world/objects/darkdoor_open.png",
       width = 360,
       height = 310
+    },
+    {
+      id = 21,
+      image = "../../../assets/sprites/world/objects/bell_single_1.png",
+      width = 62,
+      height = 63
+    },
+    {
+      id = 22,
+      image = "../../../assets/sprites/world/objects/bell_single_2.png",
+      width = 62,
+      height = 63
+    },
+    {
+      id = 23,
+      image = "../../../assets/sprites/world/objects/bell_single_drum.png",
+      width = 14,
+      height = 6
+    },
+    {
+      id = 24,
+      image = "../../../assets/sprites/world/objects/bell_enemy.png",
+      width = 42,
+      height = 60
     }
   }
 }
