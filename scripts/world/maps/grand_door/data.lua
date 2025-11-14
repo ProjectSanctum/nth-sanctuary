@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 53,
+  nextobjectid = 54,
   properties = {
     ["border"] = "",
     ["music"] = "grand_bells",
@@ -314,77 +314,20 @@ return {
           }
         },
         {
-          id = 49,
+          id = 53,
           name = "",
           type = "",
           shape = "rectangle",
-          x = 80,
-          y = 1040,
-          width = 160,
-          height = 680,
+          x = 210,
+          y = 1050,
+          width = 220,
+          height = 860,
           rotation = 0,
-          gid = 283,
+          gid = 284,
           visible = true,
           properties = {
             ["light"] = true,
-            ["light_alpha"] = 0.05,
-            ["light_color"] = "#ffffffff",
-            ["light_type"] = 1
-          }
-        },
-        {
-          id = 50,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 1040,
-          width = 160,
-          height = 680,
-          rotation = 0,
-          gid = 283,
-          visible = true,
-          properties = {
-            ["light"] = true,
-            ["light_alpha"] = 0.05,
-            ["light_color"] = "#ffffffff",
-            ["light_type"] = 1
-          }
-        },
-        {
-          id = 51,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = -60,
-          y = 1030,
-          width = 120,
-          height = 510,
-          rotation = 0,
-          gid = 283,
-          visible = true,
-          properties = {
-            ["light"] = true,
-            ["light_alpha"] = 0.05,
-            ["light_color"] = "#ffffffff",
-            ["light_type"] = 1
-          }
-        },
-        {
-          id = 52,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 580,
-          y = 1030,
-          width = 120,
-          height = 510,
-          rotation = 0,
-          gid = 283,
-          visible = true,
-          properties = {
-            ["light"] = true,
-            ["light_alpha"] = 0.05,
+            ["light_alpha"] = 0,
             ["light_color"] = "#ffffffff",
             ["light_type"] = 1
           }

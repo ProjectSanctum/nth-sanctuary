@@ -33,9 +33,6 @@ function TileObject:drawLightA()
 			sy = sx
 		end
 		if self.light_type == 1 then -- Deltarune does something different here but I have no idea how to make it work
-			love.graphics.setColor(1,1,1,1)
-			local xx, yy = self:localToScreenPos(0,0)
-			self.tileset:drawTile(self.tile, xx+self.width/2, yy+self.height/2, 0, sx, sy, tile_width/2, tile_height/2)
 		end
 		if self.light_type == 3 or self.light_type == 5 then
 			love.graphics.setColor(1,1,1,self.light_alpha)
