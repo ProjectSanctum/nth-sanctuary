@@ -1,4 +1,5 @@
-return function()
+return function(script)
+	script:remove()
 	local bell_drum = nil
 	local bell_enemy = nil
 	local bell_x, bell_y = 0, 0
