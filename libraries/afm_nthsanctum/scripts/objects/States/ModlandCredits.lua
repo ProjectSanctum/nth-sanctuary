@@ -39,8 +39,11 @@ end
 
 function ModlandCredits:onKeyPressed(key)
     if Input.isCancel(key) or Input.isConfirm(key) then
-        Assets.stopAndPlaySound("ui_cancel")
-        Kristal.saveConfig()
+		if Input.isConfirm(key) then
+			Assets.stopAndPlaySound("ui_select")
+		else		
+			Assets.stopAndPlaySound("ui_cancel")
+		end
         self.menu:popState()
         return
     end
