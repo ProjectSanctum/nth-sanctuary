@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 23,
+  tilecount = 24,
   tiles = {
     {
       id = 0,
@@ -102,6 +102,12 @@ return {
       image = "../../../assets/sprites/world/events/window_glow/church_window_huge.png",
       width = 160,
       height = 360
+    },
+    {
+      id = 25,
+      image = "../../../assets/sprites/world/objects/tallwindow.png",
+      width = 31,
+      height = 112
     },
     {
       id = 15,

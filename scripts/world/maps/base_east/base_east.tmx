@@ -340,7 +340,7 @@
   </object>
   <object id="32" name="transition" x="1040" y="720" width="40" height="80">
    <properties>
-    <property name="map" value="base_east2"/>
+    <property name="map" value="base_east_transition1"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
