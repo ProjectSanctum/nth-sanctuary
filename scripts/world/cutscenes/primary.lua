@@ -47,7 +47,7 @@ return {
             letter.y = SCREEN_HEIGHT/2
             Assets.playSound("noise")
             cutscene:wait(1/15)
-            sum = sum + (letter.width*2) + 10
+            sum = sum + (letter.width*2) + 12
             table.insert(remove, letter)
         end 
 		local heart = Sprite("logo_heart")
@@ -57,15 +57,26 @@ return {
 		heart.layer = 1000 + 1
 		heart.noprop = true
         Game.world:addChild(heart)
-        heart.x = 85 + 216
+        heart.x = 85 + 224
         heart.y = SCREEN_HEIGHT/2 - 34
         table.insert(remove, heart)
+		local grad = Sprite("logo_gradient")
+        grad:setScale(2)
+		grad:setParallax(0)
+		grad:setOrigin(0.5, 0.5)
+		grad.layer = 1000 + 1
+		grad.noprop = true
+        Game.world:addChild(grad)
+        grad.x = 85 + 224
+        grad.y = SCREEN_HEIGHT/2 - 34
+        table.insert(remove, grad)
         cutscene:wait(1)
         local a = Text("#th Sanctuary")
         a.layer = 1000
         a:setOrigin(0, 0)
         a:setScale(2)
-                a.x, a.y = 130, 244
+                a.x, a.y = 140, 244
+				a:addFX(ProphecyScrollFXAlt(), "prop")
         Game.stage:addChild(a)
         Assets.playSound("bell_bounce_short")
         for _, sprite in ipairs(remove) do
@@ -140,7 +151,7 @@ return {
 			letter.physics.speed = 4
             letter.layer = 1000
             Game.world:addChild(letter)
-            letter.x = 85 + 216
+            letter.x = 85 + 224
             letter.y = SCREEN_HEIGHT/2 - 34
             table.insert(remove, letter)
         end
