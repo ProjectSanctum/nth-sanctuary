@@ -17,6 +17,12 @@ function RoomGlow:init(data)
 	self.init = true
 end
 
+function RoomGlow:onAdd(parent)
+    super.onAdd(self, parent)
+	-- Gotta love Kristal updates
+    self:setParallax(0, 0)
+end
+
 function RoomGlow:postLoad()
 	self.tile_dark = Game.world.map:getTileLayer("roomglow_dark")
 	if self.tile_dark then

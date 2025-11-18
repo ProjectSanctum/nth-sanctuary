@@ -15,6 +15,11 @@ function ChurchLightBeamFX:init(data)
 	self.part_tex = Assets.getTexture("effects/spr_dw_church_dust")
 end
 
+function ChurchLightBeamFX:onAdd(parent)
+    super.onAdd(self, parent)
+	-- Gotta love Kristal updates
+    self:setParallax(0, 0)
+end
 
 function ChurchLightBeamFX:update()
 	super.update(self)

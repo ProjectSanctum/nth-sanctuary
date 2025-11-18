@@ -24,6 +24,12 @@ function Darkness:init(data)
 	self.draw_highlight = properties["highlight"] ~= false
 end
 
+function Darkness:onAdd(parent)
+    super.onAdd(self, parent)
+	-- Gotta love Kristal updates
+    self:setParallax(0, 0)
+end
+
 function Darkness:drawCharacter(object)
     love.graphics.push()
     object:preDraw()
