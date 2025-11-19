@@ -75,7 +75,7 @@ function event:onInteract(player, dir)
         if dir == "down" then
             ty = ty + 80
         else
-            ty = ty - 40
+            ty = ty
         end
         
         Assets.playSound("wing")
