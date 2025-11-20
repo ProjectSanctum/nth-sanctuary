@@ -27,7 +27,7 @@
     // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
         "items": ["scarlixir","scarlixir","scarlixir","rhapsotea","rhapsotea","rhapsotea","ancientsweet"],
-        "key_items": ["cell_phone", "shadowcrystal", "claimbclaws"]
+        "key_items": ["cell_phone", "shadowcrystal", "claimbclaws", "sheetmusic"]
     },
 
     // Equipment for your party. Not specifying equipment defaults to the following.
