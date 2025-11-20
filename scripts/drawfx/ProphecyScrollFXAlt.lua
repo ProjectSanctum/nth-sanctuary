@@ -39,8 +39,7 @@ local function draw_set_alpha(a)
 end
 
 function ProphecyScrollFXAlt:draw(texture)
-    self:drawPart(texture, 0, 0.5, Ch4Lib.scr_wave(0, 0.4, 4, 0))
-    self:drawPart(texture, 0.5, 1.0, 1 or Ch4Lib.scr_wave(0.4, 0.4, 4, 0))
+    self:drawPart(texture, 1 or Ch4Lib.scr_wave(0.4, 0.4, 4, 0))
 end
 
 local function oldHexToRgb(hex, value)
@@ -53,7 +52,7 @@ local function oldHexToRgb(hex, value)
     }
 end
 
-function ProphecyScrollFXAlt:drawPart(texture, min, max, alpha)
+function ProphecyScrollFXAlt:drawPart(texture, alpha)
 
     local parent = self.parent
     for i = 1, 4 do
@@ -68,19 +67,18 @@ function ProphecyScrollFXAlt:drawPart(texture, min, max, alpha)
     _cx, _cy = -_cx, -_cy
 
     local surf_textured = Draw.pushCanvas(640, 480);
-    love.graphics.clear(oldHexToRgb("#42D0FF", 1), 0);
-    love.graphics.setColorMask(true, true, true, false);
+	love.graphics.clear(oldHexToRgb("#42D0FF", 1), 0);
+	love.graphics.setColorMask(true, true, true, false);
     local pnl_tex = Assets.getTexture("backgrounds/perlin_noise_looping")
-    local pnl_canvas = Draw.pushCanvas(pnl_tex:getDimensions())
-    draw_sprite_tiled_ext(pnl_tex, 0, 0, 0, 1, 1, oldHexToRgb("#42D0FF", alpha))
-    Draw.popCanvas(true)
-    self.tick = self.tick + (((1/15) * self.scroll_speed) * DTMULT);
+	local pnl_canvas = Draw.pushCanvas(pnl_tex:getDimensions())
+	draw_sprite_tiled_ext(pnl_tex, 0, 0, 0, 1, 1, oldHexToRgb("#42D0FF", alpha))
+	Draw.popCanvas(true)
     local x, y = -((_cx * 2) + (self.tick * 15)) * 0.5, -((_cy * 2) + (self.tick * 15)) * 0.5
-    draw_sprite_tiled_ext(Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_SEAMLESS"), 0, x, y, 2, 2, oldHexToRgb("#FFFFFF", 0.6));
-    local orig_bm, orig_am = love.graphics.getBlendMode()
-    love.graphics.setBlendMode("add", "premultiplied");
-    draw_sprite_tiled_ext(pnl_canvas, 0, x, y, 2, 2, oldHexToRgb("#42D0FF", alpha));
-    love.graphics.setBlendMode(orig_bm, orig_am);
+	draw_sprite_tiled_ext(Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_SEAMLESS"), 0, x, y, 2, 2, oldHexToRgb("#FFFFFF", 0.6));
+	local orig_bm, orig_am = love.graphics.getBlendMode()
+	love.graphics.setBlendMode("add", "premultiplied");
+	draw_sprite_tiled_ext(pnl_canvas, 0, x, y, 2, 2, oldHexToRgb("#42D0FF", alpha));
+	love.graphics.setBlendMode(orig_bm, orig_am);
     love.graphics.setColorMask(true, true, true, true);
     love.graphics.setColorMask(false, false, false, true);
 
@@ -99,13 +97,10 @@ function ProphecyScrollFXAlt:drawPart(texture, min, max, alpha)
     love.graphics.setColorMask(true, true, true, true);
     Draw.popCanvas()
 
-
 	if self.outline then
 		love.graphics.stencil(function()
 			local last_shader = love.graphics.getShader()
-			local shader = Assets.getShader("limitedmask")
-			shader:send("min", min)
-			shader:send("max", max)
+			local shader = Kristal.Shaders["Mask"]
 			love.graphics.setShader(shader)
 			Draw.draw(texture, -self.outline, -self.outline)
 			Draw.draw(texture, self.outline, self.outline)
@@ -121,9 +116,7 @@ function ProphecyScrollFXAlt:drawPart(texture, min, max, alpha)
 		love.graphics.setStencilTest()
 		love.graphics.stencil(function()
 			local last_shader = love.graphics.getShader()
-			local shader = Assets.getShader("limitedmask")
-			shader:send("min", min)
-			shader:send("max", max)
+			local shader = Kristal.Shaders["Mask"]
 			love.graphics.setShader(shader)
 			Draw.draw(texture, -self.outline, 0)
 			Draw.draw(texture, self.outline, 0)
@@ -141,15 +134,15 @@ function ProphecyScrollFXAlt:drawPart(texture, min, max, alpha)
 	end
     love.graphics.stencil(function()
         local last_shader = love.graphics.getShader()
-        local shader = Assets.getShader("limitedmask")
-        shader:send("min", min)
-        shader:send("max", max)
+		local shader = Kristal.Shaders["Mask"]
         love.graphics.setShader(shader)
         Draw.draw(texture)
         love.graphics.setShader(last_shader)
     end, "replace", 1)
     love.graphics.setStencilTest("greater", 0)
+	love.graphics.setBlendMode("add");
     Draw.drawCanvas(surf_textured);
+	love.graphics.setBlendMode("alpha");
     love.graphics.setStencilTest()
 end
 
