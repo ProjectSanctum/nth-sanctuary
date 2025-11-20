@@ -156,6 +156,7 @@ return {
             table.insert(remove, letter)
         end
 		a.physics.gravity = 0.5
+		a.graphics.spin = math.rad(Utils.randomSign()/5)
         local shards_remove = {}
         for i = 1,15 do
             local groundshard = ProphecyGroundShard((SCREEN_WIDTH/2-199)+(i*399)/15+MathUtils.random(-30, 30), SCREEN_HEIGHT/2-34+MathUtils.random(60))
