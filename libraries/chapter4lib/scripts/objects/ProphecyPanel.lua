@@ -162,21 +162,29 @@ function ProphecyPanel:draw()
 		else
 			Draw.setColor(self.panel_alpha*0.7,self.panel_alpha*0.7,self.panel_alpha*0.7)
 		end
-		if self.fade_edges then
-			Draw.draw(sprite_canvas, 0, 0, 0, 1, 1)
-		end
 		love.graphics.setBlendMode("add", "alphamultiply")
+		if self.fade_edges then
+			 -- Deltarune doesn't do this.
+			 -- But, if I didn't put this code here, the sprite would
+			 -- be faded by the edges, which shouldn't happen. Argh.
+			love.graphics.setBlendMode("alpha")
+			Draw.draw(sprite_canvas, 0, 0, 0, 1, 1)
+			love.graphics.setBlendMode("add")
+		end
 		Draw.draw(sprite_canvas, 0, 0, 0, 1, 1)
 		Draw.draw(sprite_canvas, 0, 0, 0, 1, 1)
 		Draw.draw(sprite_canvas, 0, 0, 0, 1, 1)
+		if Ch4Lib.accurate_blending then
+			love.graphics.setBlendMode("alpha", "alphamultiply")
+		end
 		love.graphics.setBlendMode("alpha")
 		love.graphics.pop()
 		Draw.popCanvas(true)
 		for i = 1, 2 do	
 			if Ch4Lib.accurate_blending then
-				Draw.setColor(1,1,1,(self.panel_alpha * 0.7)/4)
-			else		
 				Draw.setColor(1,1,1,self.panel_alpha/4)
+			else		
+				Draw.setColor(1,1,1,(self.panel_alpha * 0.7)/4)
 			end
 			Draw.draw(back_canvas, -self.width + ysin * (2 * i), -self.height + ysin * (2 * i), 0, 2, 2)
 		end
