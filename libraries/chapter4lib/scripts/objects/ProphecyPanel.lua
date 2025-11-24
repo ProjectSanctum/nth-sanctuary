@@ -30,6 +30,10 @@ function ProphecyPanel:init(sprite, text, width, height)
     self.gradient20 = Assets.getTexture("backgrounds/gradient20")
     self.propblue = ColorUtils.hexToRGB("#42D0FFFF")
     self.liteblue = ColorUtils.hexToRGB("#FFFFFFFF")
+	self.ogbg = ColorUtils.hexToRGB("#A3F8FFFF")
+	self.linecol1 = ColorUtils.hexToRGB("#8BE9EFFF")
+    self.linecol2 = ColorUtils.hexToRGB("#17EDFFFF")
+    self.text_color = {0, 1, 1, 1}
 	
 	self.panel_alpha = 0
 end
@@ -109,8 +113,8 @@ function ProphecyPanel:draw()
 		Draw.popCanvas(true)
 		local back_canvas = Draw.pushCanvas(self.width, self.height)
 		love.graphics.push()
-		local ogbg = ColorUtils.hexToRGB("#A3F8FFFF")
-		local linecol = ColorUtils.mergeColor(ColorUtils.hexToRGB("#8BE9EFFF"), ColorUtils.hexToRGB("#17EDFFFF"), 0.5 + (math.sin(self.siner / 120) * 0.5))
+		local ogbg = self.ogbg
+		local linecol = ColorUtils.mergeColor(self.linecol1, self.linecol2, 0.5 + (math.sin(self.siner / 120) * 0.5))
 		local gradalpha = 1
 		love.graphics.setBlendMode("alpha")
 		if Ch4Lib.accurate_blending then
@@ -195,7 +199,7 @@ function ProphecyPanel:draw()
 		if Ch4Lib.accurate_blending then
 			love.graphics.push()
 			Ch4Lib.setBlendState("add", "srcalpha", "oneminussrcalpha")
-			Draw.setColor(0, 1, 1, 1)
+			Draw.setColor(self.text_color)
 			Draw.rectangle("fill", 0, 0, 320, 240)
 			draw_sprite_tiled_ext(self.tiletex, 0, math.ceil(self.siner / 2), math.ceil(self.siner / 2), 1, 1, COLORS["white"], 0.6)
 			Draw.setColor(1, 1, 1, 1)
@@ -212,7 +216,7 @@ function ProphecyPanel:draw()
 				love.graphics.setShader(last_shader)
 			end, "replace", 1)
 			love.graphics.setStencilTest("greater", 0)
-			Draw.setColor(0, 1, 1, 1)
+			Draw.setColor(self.text_color)
 			Draw.rectangle("fill", 0, 0, 320, 240)
 			draw_sprite_tiled_ext(self.tiletex, 0, math.ceil(self.siner / 2), math.ceil(self.siner / 2), 1, 1, COLORS["white"], 0.6)
 			Draw.setColor(1, 1, 1, 1)

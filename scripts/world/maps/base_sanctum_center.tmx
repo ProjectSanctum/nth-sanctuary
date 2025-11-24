@@ -243,7 +243,7 @@
   </object>
   <object id="20" name="prophecy" x="80" y="360" width="240" height="80">
    <properties>
-    <property name="fade" type="bool" value="true"/>
+    <property name="fade_edges" type="bool" value="true"/>
     <property name="no_back" type="bool" value="true"/>
     <property name="offx" type="float" value="90"/>
     <property name="offy" type="float" value="-90"/>

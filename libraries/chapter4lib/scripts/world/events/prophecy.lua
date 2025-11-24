@@ -7,36 +7,36 @@ function Prophecy:init(data)
 
 	self.always_visible = properties["alwaysvisible"] or false
 	
-    self.container_offset_x       = properties["offx"] or 0                  -- x offset of the sprite
-    self.container_offset_y       = properties["offy"] or 0                  -- y offset of the sprite
+    self.texture = properties["texture"] or "initial1" -- the sprite to display (gets sprite from "world/events/prophecy/")
+	local tex = Assets.getTexture("world/events/prophecy/"..self.texture or "") or nil
+	if tex then
+		self.panel_width = properties["panel_w"] or 150
+		self.panel_height = properties["panel_h"] or 90
+	else	
+		self.panel_width = properties["panel_w"] or 150
+		self.panel_height = properties["panel_h"] or 90
+	end
+	
+    self.sprite_offset_x = properties["spr_offx"] or (tex and tex:getWidth()/2) or 0 -- x offset of the sprite
+    self.sprite_offset_y = properties["spr_offy"] or (tex and tex:getHeight()) or 0 -- y offset of the sprite
+
+    self.container_offset_x = properties["offx"] or self.width/2 -- x offset of the sprite
+    self.container_offset_y = properties["offy"] or ((self.panel_height * -1)) or 0 -- y offset of the sprite
 	
     self.container = Object(self.container_offset_x,self.container_offset_y)
     self:addChild(self.container)
 
-    self.texture               = properties["texture"] or "initial1"          -- the sprite to display (gets sprite from "world/events/prophecy/")
-    self.sprite_offset_x       = properties["spr_offx"] or 0                  -- x offset of the sprite
-    self.sprite_offset_y       = properties["spr_offy"] or 0                  -- y offset of the sprite
+    self.text = properties["text"] -- the text to display
+    self.text_offset_x   = properties["txt_offx"] or -160 -- x offset of the text
+    self.text_offset_y   = properties["txt_offy"] or -16 -- y offset of the text
 
-    self.text                  = properties["text"]                           -- the text to display
-    self.text_offset_x         = properties["txt_offx"] or -160               -- x offset of the text
-    self.text_offset_y         = properties["txt_offy"] or -16                -- y offset of the text
+    self.can_break = properties["can_break"] -- if true, then allows the player to break panel when interacted with
+    self.break_type = properties["break_type"] -- if enabled, sets the delay time for when the panel should break apart to a specific interval
+    self.break_delay = properties["break_delay"] -- if "break_type" is not defined, sets the delay time for when the panel should break apart
 
-	local tex = Assets.getTexture("world/events/prophecy/"..self.texture or "") or nil
-	if tex then
-		self.panel_width       = properties["panel_w"] or 150
-		self.panel_height      = properties["panel_h"] or 90
-	else	
-		self.panel_width       = properties["panel_w"] or 150
-		self.panel_height      = properties["panel_h"] or 90
-	end
-	
-    self.can_break             = properties["can_break"]                      -- if true, then allows the player to break panel when interacted with
-    self.break_type            = properties["break_type"]                     -- if enabled, sets the delay time for when the panel should break apart to a specific interval
-    self.break_delay           = properties["break_delay"]                    -- if "break_type" is not defined, sets the delay time for when the panel should break apart
+	self.no_back = properties["no_back"] or false
 
-	self.no_back               = properties["no_back"] or false
-
-	self.fade_edges            = properties["no_back"] or false
+	self.fade_edges = properties["fade_edges"] or false
 
     self.panel                 = ProphecyPanel(self.texture, self.text, self.panel_width, self.panel_height)
     self.panel.sprite_offset_x = self.sprite_offset_x

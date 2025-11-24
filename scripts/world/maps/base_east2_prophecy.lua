@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 12,
+  nextobjectid = 13,
   properties = {
     ["border"] = "base_sanctum",
     ["music"] = "homebase"
@@ -250,7 +250,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["fade"] = true,
+            ["fade_edges"] = true,
             ["no_back"] = true,
             ["offx"] = 160,
             ["offy"] = -130,

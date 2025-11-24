@@ -955,7 +955,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["fade"] = true,
+            ["fade_edges"] = true,
             ["no_back"] = true,
             ["offx"] = 150,
             ["offy"] = -100,
