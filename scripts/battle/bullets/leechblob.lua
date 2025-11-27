@@ -72,6 +72,9 @@ function LeechBlob:update()
     if MathUtils.dist(self.x, self.y, self.target_x, self.target_y) <= 40 then
 		local damage = self:getDamage()
 		if damage > 0 then
+			if self.attacker.hit_count >= 4 then
+				self.attacker.hit_count = 0
+			end
 			self.attacker:heal(damage)
 			Assets.stopSound("power")
 			Assets.stopAndPlaySound("titan_cure", 1, 2)
@@ -89,6 +92,9 @@ function LeechBlob:onCollide()
     if damage > 0 then 
 		local party = Game.battle:getPartyFromTarget(self:getTarget())
         for _, target in pairs (party) do
+			if target.hit_count >= 4 then
+				target.hit_count = 0
+			end
 			target:heal(damage)
         end
     end

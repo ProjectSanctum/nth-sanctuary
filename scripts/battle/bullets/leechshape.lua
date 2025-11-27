@@ -47,6 +47,20 @@ function LeechShape:onDamage(soul)
 		local tp_blob = self.wave:spawnBullet("leechblob", self.x, self.y)
 		tp_blob:setLayer(self.layer - 1)
 		tp_blob.attacker = self.attacker
+        local enemy_average_hp = 1
+		local total_hp = 0
+		local total_mhp = 0
+		for _,enemy in ipairs(Game.battle:getActiveEnemies()) do
+			total_hp = total_hp + enemy.health
+			total_mhp = total_mhp + enemy.max_health
+		end
+		if total_hp > 0 then
+			for _,enemy in ipairs(Game.battle:getActiveEnemies()) do
+				if enemy.health / enemy.max_health < enemy_average_hp/2 then
+					tp_blob.attacker = enemy
+				end
+			end
+		end
 		tp_blob.damage = self:getDamage()
 		tp_blob.tension_amt = tension_loss
 		tp_blob.spin_amt = spin_amt
