@@ -302,7 +302,13 @@ function BigChurchPiano:update()
 					self.endlessplaylog = ""
 					Game.world:startCutscene("bigpiano.megalovania")
 					break
-
+					
+                --Penumbra Phantasm
+                elseif StringUtils.sub(self.endlessplaylog, i, utf8.len(self.endlessplaylog)) == "dceccd" then
+                    self.endlessplaylog = ""
+                    Game.world:startCutscene("bigpiano.megalovania")
+                    break
+					
                 --You've Got A Friend in Me/Chopsticks/Heart & Soul
 				elseif StringUtils.sub(self.endlessplaylog, i, utf8.len(self.endlessplaylog)) == "cecfeafhfhe" then
 					self.endlessplaylog = ""
