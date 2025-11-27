@@ -214,7 +214,7 @@ return {
           visible = true,
           properties = {
             ["actor"] = "leech",
-            ["encounter"] = "leech"
+            ["encounter"] = "leech_spawn"
           }
         },
         {

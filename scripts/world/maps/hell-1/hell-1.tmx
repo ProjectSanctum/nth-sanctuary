@@ -89,7 +89,7 @@ This is your home now.</property>
   <object id="38" name="enemy" x="620" y="890">
    <properties>
     <property name="actor" value="leech"/>
-    <property name="encounter" value="leech"/>
+    <property name="encounter" value="leech_spawn"/>
    </properties>
    <point/>
   </object>

@@ -1,5 +1,72 @@
-local LeechTest, super = Class(Wave)
-function LeechTest:init()
+local LeechShapes, super = Class(Wave)
+
+function LeechShapes:init()
+    super.init(self)
+
+    self.time = -1
+    self.difficulty = Game.battle.encounter.difficulty or 3
+    --self:setArenaSize(200)
+    self.siner = 0
+    self.arenaShape = {}
+    for i = 1,360, 60 do
+        local x, y = 100*math.sin(math.rad(i)), 100* math.cos(math.rad(i))
+        if x < 0.001 and x > -0.001 then
+            x=0
+        end
+        if y < 0.001 and y > -0.001 then
+            y=0
+        end
+        
+        table.insert(self.arenaShape, {x, y})
+    end
+    self:setArenaShape(unpack(self.arenaShape))
+    self.spinfactor = 4
+end
+
+function LeechShapes:onStart()
+    Game.battle:swapSoul(FlashlightSoul())
+	self.spawn_attack_loop = Assets.newSound("spawn_attack")
+    self.spawn_attack_loop:setLooping(true)
+	self.spawn_attack_loop:play()
+
+    self.timer:everyInstant(15/30, function()
+        local arena = Game.battle.arena
+        local tempdist = 100 + MathUtils.random(40)
+        local tempdir = math.rad(30 + MathUtils.random(360))
+
+        self:spawnBullet("leechshape", arena.x + MathUtils.lengthDirX(tempdist, tempdir), arena.y + MathUtils.lengthDirY(tempdist, tempdir))
+    end)
+	
+	if self.difficulty >= 3 then
+		self.timer:everyInstant(240/30, function()
+			local arena = Game.battle.arena
+			local tempdist = 100 + MathUtils.random(40)
+			local tempdir = math.rad(30 + MathUtils.random(360))
+
+			self:spawnBullet("titan/redshape", arena.x + MathUtils.lengthDirX(tempdist, tempdir), arena.y + MathUtils.lengthDirY(tempdist, tempdir))
+		end)
+	end
+end
+
+function LeechShapes:onEnd()
+    if Game.battle.soul.ominous_loop then
+		Game.battle.soul.ominous_loop:stop()
+	end
+	self.spawn_attack_loop:stop()
+end
+
+function LeechShapes:update()
+    -- Code here gets called every frame
+    self.siner = self.siner + DTMULT
+    Game.battle.arena.rotation = Game.battle.arena.rotation + math.rad(math.sin(self.siner/100)*self.spinfactor)
+    if self.spinfactor < 0 then
+        self.time = 0
+    end
+    super.update(self)
+end
+
+return LeechShapes
+--[[function LeechTest:init()
     super.init(self)
     self.time = 9999999
     self.difficulty = Game.battle.encounter.difficulty or 3
@@ -97,3 +164,4 @@ function LeechTest:onEnd()
 end
 
 return LeechTest
+]]
