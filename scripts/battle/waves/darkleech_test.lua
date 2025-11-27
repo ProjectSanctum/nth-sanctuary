@@ -29,7 +29,7 @@ function LeechShapes:onStart()
     self.spawn_attack_loop:setLooping(true)
 	self.spawn_attack_loop:play()
 
-    self.timer:everyInstant(15/30, function()
+    self.timer:everyInstant(10/30, function()
         local arena = Game.battle.arena
         local tempdist = 100 + MathUtils.random(40)
         local tempdir = math.rad(30 + MathUtils.random(360))

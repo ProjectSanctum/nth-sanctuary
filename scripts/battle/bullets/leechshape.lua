@@ -14,7 +14,7 @@ function LeechShape:update()
 end
 
 function LeechShape:destroy()
-    self.wave.spinfactor =  self.wave.spinfactor - 0.25
+    self.wave.spinfactor =  self.wave.spinfactor - 0.2
 	super.destroy(self)
 end
 
@@ -27,7 +27,7 @@ function LeechShape:onDamage(soul)
         local battlers = Game.battle:hurt(damage, false, target, self:shouldSwoon(damage, target, soul))
         soul.inv_timer = self.inv_timer
         soul:onDamage(self, damage)
-		local spin_amt = (Game:getTension()/Game:getMaxTension())*0.25
+		local spin_amt = 0.1+(Game:getTension()/Game:getMaxTension())*0.1
 		self.wave.spinfactor = self.wave.spinfactor + spin_amt*math.min((1-self.light)+0.25, 1)
 		local tension_loss = math.floor(4*math.min((1-self.light)+0.25, 1) + (12 * (Game:getTension()/Game:getMaxTension())*math.min((1-self.light)+0.25, 1)))
 		tension_loss = Game:removeTension(tension_loss)
