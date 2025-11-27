@@ -1,5 +1,5 @@
 ---@class TitanSpawnPurifySoul : Object
-local TitanSpawnPurifySoul, super = Class("TitanSpawnPurifySoul", true)
+local TitanSpawnPurifySoul, super = Class(Object, "TitanSpawnPurifySoul")
 
 function TitanSpawnPurifySoul:draw()
     super.super.draw(self)

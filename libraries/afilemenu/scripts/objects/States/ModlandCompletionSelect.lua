@@ -295,11 +295,37 @@ function ModlandCompletionSelect:setResultText(text)
     self.result_timer = 3
 end
 
+-- Safe completion file loader: never passes a boolean as the mod id,
+-- and always returns either a table or nil.
 function ModlandCompletionSelect:getCompletionFile(slot)
-    return Kristal.loadData("completion_"..slot, self.menu.file_select.previous_chapter)
+    -- the value from config may be a boolean or a string; we must ensure a string mod id
+    local raw = self.menu.file_select.previous_chapter
+
+    -- Choose a safe mod id:
+    -- if previous_chapter is a string, use it (this allows loading from another mod)
+    -- otherwise fall back to the current mod id (Mod.info.id)
+    local safe_mod_id = type(raw) == "string" and raw or Mod.info.id
+
+    -- Load the data
+    local data = Kristal.loadData("completion_" .. tostring(slot), safe_mod_id)
+
+    -- Kristal.loadData might return non-table values; guard against that.
+    if type(data) ~= "table" then
+        return nil
+    end
+
+    -- Ensure the returned table has an id field that's a string (some code expects .id)
+    if type(data.id) ~= "string" then
+        data.id = tostring(slot)
+    end
+
+    return data
 end
+
 function ModlandCompletionSelect:loadCompletionFile(slot)
-    Game:load(self:getCompletionFile(slot), slot)
+    local data = self:getCompletionFile(slot)
+    -- If no file data, call Game:load with nil so engine creates a new file properly
+    Game:load(data, slot)
 end
 
 function ModlandCompletionSelect:getHeartPos()

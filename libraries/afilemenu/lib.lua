@@ -93,6 +93,8 @@ function lib:getPaletteColor(key)
     end
     MUSIC_PITCHES.menu = 0.95
     MUSIC_PITCHES.mod_menu = 0.95
+    -- Default color to avoid returning nil, which breaks Kristal's ID handling
+    return {1, 1, 1}
 end
 
 return lib
