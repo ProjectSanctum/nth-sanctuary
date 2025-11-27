@@ -40,11 +40,17 @@ function LeechShape:onDamage(soul)
         local battlers = Game.battle:hurt(damage, false, target, self:shouldSwoon(damage, target, soul))
         soul.inv_timer = self.inv_timer
         soul:onDamage(self, damage)
+		local spin_amt = (Game:getTension()/Game:getMaxTension())*0.25
+		self.wave.spinfactor = self.wave.spinfactor + spin_amt
+		local tension_loss = math.floor(4 + (8 * (Game:getTension()/Game:getMaxTension())))
+		tension_loss = Game:removeTension(tension_loss)
 		local tp_blob = self.wave:spawnBullet("leechblob", self.x, self.y)
 		tp_blob:setLayer(self.layer - 1)
 		tp_blob.attacker = self.attacker
 		tp_blob.damage = self:getDamage()
-		tp_blob:prime() 
+		tp_blob.tension_amt = tension_loss
+		tp_blob.spin_amt = spin_amt
+		tp_blob:prime()
 		local boom = Sprite("effects/titan/finisher_explosion", self.x, self.y)
 		boom.rotation = math.rad(0)
 		boom:setOrigin(0.5, 0.5)

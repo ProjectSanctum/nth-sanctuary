@@ -12,6 +12,7 @@ function LeechBlob:init(x, y)
     self.grazed = true
     self.size = 2
     self.damage = 90
+	self.tension_amt = 0
 
     self.prime_speed = 12
     self.max_speed = 40
@@ -91,6 +92,15 @@ function LeechBlob:onCollide()
 			target:heal(damage)
         end
     end
+	if self.tension_amt > 0 then
+		Assets.stopAndPlaySound("swallow", 0.5+((self.tension_amt/Game:getMaxTension()) * 1.5))
+		Assets.stopAndPlaySound("eye_telegraph", 0.5+((self.tension_amt/Game:getMaxTension()) * 1.5), 2)
+		Game.battle.tension_bar:flash()
+		Game:giveTension(self.tension_amt)
+	end
+	if self.spin_amt > 0 then
+	    self.wave.spinfactor =  self.wave.spinfactor - math.floor(self.spin_amt/2)
+	end
     self:finisherExplosion()
     self:remove()
 end

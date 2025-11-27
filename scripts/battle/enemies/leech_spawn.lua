@@ -43,7 +43,8 @@ function LeechSpawn:init()
 
     self.dualhealcount = 0
 
-    self.banish_act_index = 3
+	self.t_siner = 0
+    self.banish_act_index = 4
 end
 
 function LeechSpawn:getGrazeTension()
@@ -52,14 +53,11 @@ end
 
 function LeechSpawn:update()
     super.update(self)
-    if (Game.battle.state == "MENUSELECT") and (Game.tension >= self.banish_amt) then
+    if Game.battle.state == "MENUSELECT" and Game.tension >= 64 then
         self.t_siner = self.t_siner + (1 * DTMULT)
         if Game.battle.menu_items[self.banish_act_index] then
-            if Game.battle.menu_items[self.banish_act_index].name == "Banish" then
-                Game.battle.menu_items[self.banish_act_index].color =
-                    function()
-                        return (ColorUtils.mergeColor(COLORS.yellow, COLORS.white, 0.5 + (math.sin(self.t_siner / 4) * 0.5)))
-                    end
+            Game.battle.menu_items[self.banish_act_index].color = function()
+                 return (ColorUtils.mergeColor(COLORS.yellow, COLORS.white, 0.5 + (math.sin(self.t_siner / 4) * 0.5)))
             end
         end
     end
@@ -208,10 +206,6 @@ end
 
 function LeechSpawn:getEnemyDialogue()
     return false
-end
-
-function LeechSpawn:update()
-    super.update(self)
 end
 
 function LeechSpawn:onSpared()
