@@ -250,8 +250,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["fade_edges"] = true,
-            ["no_back"] = true,
+            ["fade_edges"] = false,
+            ["no_back"] = false,
             ["offx"] = 160,
             ["offy"] = -130,
             ["panel_h"] = "120",
