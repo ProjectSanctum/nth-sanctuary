@@ -14,7 +14,7 @@ function LeechSpawn:init()
     self.reduced_tension = true
 	self.light_radius = 48
 	self.difficulty = 1
-	self.unleash_threshold = 64
+	self.unleash_threshold = 50
 end
 
 function LeechSpawn:onTurnEnd()
