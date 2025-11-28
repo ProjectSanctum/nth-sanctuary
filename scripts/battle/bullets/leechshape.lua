@@ -3,6 +3,8 @@ local LeechShape, super = Class(DarkShapeBullet)
 function LeechShape:init(x, y)
     super.init(self, x, y, "bullets/titan/leech/idle", "bullets/titan/leech/shrink")
 	
+    self.light_rate = self.light_rate * 2
+    self.speed_max = self.speed_max * 1.5
     self.can_do_pushback = false	
 	self.updateimageangle = true
 end

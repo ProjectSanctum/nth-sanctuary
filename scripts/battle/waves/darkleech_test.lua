@@ -31,7 +31,7 @@ function LeechShapes:onStart()
 	if self.difficulty >= 3 then
 		self.timer:everyInstant(12/30, function()
 			local arena = Game.battle.arena
-			local tempdist = 100 + MathUtils.random(40)
+			local tempdist = 100 + MathUtils.random(80)
 			local tempdir = math.rad(30 + MathUtils.random(360))
 
 			self:spawnBullet("leechshape", arena.x + MathUtils.lengthDirX(tempdist, tempdir), arena.y + MathUtils.lengthDirY(tempdist, tempdir))
@@ -47,7 +47,7 @@ function LeechShapes:onStart()
 	elseif self.difficulty >= 2 then
 		self.timer:everyInstant(8/30, function()
 			local arena = Game.battle.arena
-			local tempdist = 100 + MathUtils.random(40)
+			local tempdist = 100 + MathUtils.random(60)
 			local tempdir = math.rad(30 + MathUtils.random(360))
 
 			self:spawnBullet("leechshape", arena.x + MathUtils.lengthDirX(tempdist, tempdir), arena.y + MathUtils.lengthDirY(tempdist, tempdir))
@@ -55,7 +55,7 @@ function LeechShapes:onStart()
 	else
 		self.timer:everyInstant(12/30, function()
 			local arena = Game.battle.arena
-			local tempdist = 100 + MathUtils.random(40)
+			local tempdist = 100 + MathUtils.random(80)
 			local tempdir = math.rad(30 + MathUtils.random(360))
 
 			self:spawnBullet("leechshape", arena.x + MathUtils.lengthDirX(tempdist, tempdir), arena.y + MathUtils.lengthDirY(tempdist, tempdir))
