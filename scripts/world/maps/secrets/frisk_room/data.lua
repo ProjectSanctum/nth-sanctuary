@@ -447,8 +447,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["fade"] = false,
-            ["no_back"] = false,
+            ["fade_edges"] = true,
+            ["no_back"] = true,
             ["offx"] = 130,
             ["offy"] = -110,
             ["spr_offx"] = 32,

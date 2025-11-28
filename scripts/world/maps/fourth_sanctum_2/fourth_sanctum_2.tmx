@@ -388,6 +388,8 @@
   </object>
   <object id="95" name="prophecy" x="240" y="360" width="280" height="120">
    <properties>
+    <property name="fade_edges" type="bool" value="true"/>
+    <property name="no_back" type="bool" value="true"/>
     <property name="offx" type="float" value="150"/>
     <property name="offy" type="float" value="-140"/>
     <property name="panel_h" value="120"/>

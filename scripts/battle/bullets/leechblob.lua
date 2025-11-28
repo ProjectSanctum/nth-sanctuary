@@ -106,7 +106,7 @@ function LeechBlob:onCollide()
 		Game:giveTension(self.tension_amt)
 	end
 	if self.spin_amt > 0 then
-	    self.wave.spinfactor =  self.wave.spinfactor - math.floor(self.spin_amt/2)
+	    self.wave.spinfactor =  self.wave.spinfactor - self.spin_amt/2
 	end
     self:finisherExplosion()
     self:remove()

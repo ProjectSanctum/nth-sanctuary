@@ -75,10 +75,10 @@
   </object>
  </objectgroup>
  <objectgroup id="2" name="objects_party">
-  <object id="1" name="prophecy" x="160" y="320" width="320" height="80">
+  <object id="1" name="prophecy" x="160" y="320" width="400" height="80">
    <properties>
-    <property name="fade_edges" type="bool" value="true"/>
-    <property name="no_back" type="bool" value="true"/>
+    <property name="fade_edges" type="bool" value="false"/>
+    <property name="no_back" type="bool" value="false"/>
     <property name="offx" type="float" value="160"/>
     <property name="offy" type="float" value="-130"/>
     <property name="panel_h" value="120"/>
