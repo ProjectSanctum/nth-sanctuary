@@ -38,7 +38,10 @@ function Prophecy:init(data)
 
 	self.fade_edges = properties["fade_edges"] or false
 
-    self.panel                 = ProphecyPanel(self.texture, self.text, self.panel_width, self.panel_height)
+	self.base_tex = properties["base_tex"] or "backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS"
+	self.faded_tex = properties["faded_tex"] or "backgrounds/IMAGE_DEPTH_EXTEND_SEAMLESS"
+
+    self.panel                 = ProphecyPanel(self.base_tex, self.faded_tex, self.texture, self.text, self.panel_width, self.panel_height)
     self.panel.sprite_offset_x = self.sprite_offset_x
     self.panel.sprite_offset_y = self.sprite_offset_y
     self.panel.text_offset_x   = self.text_offset_x

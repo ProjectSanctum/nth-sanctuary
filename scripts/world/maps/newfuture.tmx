@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="4" nextobjectid="7">
+ <editorsettings>
+  <export target="newfuture.lua" format="lua"/>
+ </editorsettings>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="2" name="objects">
+  <object id="1" name="prophecy" x="320" y="240">
+   <properties>
+    <property name="alwaysvisible" type="bool" value="true"/>
+    <property name="base_tex" value="backgrounds/IMAGE_well_its_certainly_not_depths_EXTEND_MONO_BRIGHTER"/>
+    <property name="faded_tex" value="backgrounds/IMAGE_well_its_certainly_not_depths_EXTEND_SEAMLESS"/>
+    <property name="offx" type="float" value="0"/>
+    <property name="offy" type="float" value="0"/>
+    <property name="text">THE FINAL TRAGEDY UNVEILS.
+&lt;NEW FUTURE!&gt; IS CANCELLED.</property>
+    <property name="texture" value="newfuture"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="objects_filter">
+  <object id="6" name="filter" x="0" y="0">
+   <properties>
+    <property name="hue_start" value="290"/>
+    <property name="hue_target" value="230"/>
+    <property name="sat_start" value="0.8"/>
+    <property name="sat_target" value="0.9"/>
+    <property name="speed" type="int" value="3"/>
+    <property name="type" value="custom"/>
+    <property name="val_start" value="1"/>
+    <property name="val_target" value="1"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>
