@@ -38,20 +38,28 @@ function Dummy:init()
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* jellycruel.",
+        "* Jellycruel jellies, [wait:5]cruelly.",
+        "* I'm quaking in my boots rn bruh :sob:",
+        "* What have you done to earn this fate?"
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The dummy looks like it's\nabout to fall over."
+    self.low_health_text = "* The jellycruel has been outcruelled."
 
     -- Register act called "Smile"
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
+    self:registerAct("BegForMercy", "beg", "all")
 end
 
 function Dummy:onAct(battler, name)
     if name == "Standard" then --X-Action
         self:addMercy(0.1)
         return "* jellycruel."
+    elseif name == "BegForMercy" then
+        for _, party in ipairs(Game.battle.party) do
+            party:statusMessage("msg", "miss")
+        end
+        return {"* You tried to beg for mercy...", "* But your name wasn't [color:yellow]YELLOW[color:white]..."}
     end
 
     -- If the act is none of the above, run the base onAct function
