@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -74,6 +74,7 @@ return {
           properties = {
             ["alwaysvisible"] = true,
             ["base_tex"] = "backgrounds/IMAGE_well_its_certainly_not_depths_EXTEND_MONO_BRIGHTER",
+            ["fade_edges"] = true,
             ["faded_tex"] = "backgrounds/IMAGE_well_its_certainly_not_depths_EXTEND_SEAMLESS",
             ["offx"] = 0,
             ["offy"] = 0,

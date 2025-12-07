@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 34,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 12,
-  nextobjectid = 48,
+  nextlayerid = 16,
+  nextobjectid = 77,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -26,9 +26,311 @@ return {
       name = "bg_dw_church_tileset_new",
       firstgid = 199,
       filename = "../../tilesets/bg_dw_church_tileset_new.tsx"
+    },
+    {
+      name = "church_objects",
+      firstgid = 781,
+      filename = "../../tilesets/church_objects.tsx",
+      exportfilename = "../../tilesets/church_objects.lua"
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 15,
+      name = "objects_parallax3",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.3,
+      parallaxy = 0.82,
+      properties = {},
+      objects = {
+        {
+          id = 70,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -246.933,
+          y = 1038.27,
+          width = 416,
+          height = 130,
+          rotation = -315,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 71,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -184.4,
+          y = -60.18,
+          width = 416,
+          height = 130,
+          rotation = -315,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 72,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 200,
+          width = 416,
+          height = 130,
+          rotation = -315,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 73,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 320,
+          width = 416,
+          height = 130,
+          rotation = -315,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        },
+        {
+          id = 74,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 600,
+          width = 416,
+          height = 130,
+          rotation = -315,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff00007f"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 14,
+      name = "objects_parallax2",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.4,
+      parallaxy = 0.85,
+      properties = {},
+      objects = {
+        {
+          id = 61,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -200,
+          y = 720,
+          width = 480,
+          height = 150,
+          rotation = 45,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 62,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 1040,
+          width = 480,
+          height = 150,
+          rotation = 45,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 63,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 1360,
+          width = 480,
+          height = 150,
+          rotation = 45,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 64,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 520,
+          y = 200,
+          width = 480,
+          height = 150,
+          rotation = -45,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 65,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 520,
+          width = 480,
+          height = 150,
+          rotation = -45,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        },
+        {
+          id = 66,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -80,
+          y = 800,
+          width = 480,
+          height = 150,
+          rotation = -45,
+          gid = 793,
+          visible = true,
+          properties = {
+            ["color"] = "#ff2525ba"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 13,
+      name = "objects_parallax",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.5,
+      parallaxy = 0.9,
+      properties = {},
+      objects = {
+        {
+          id = 59,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 1200,
+          width = 400,
+          height = 1600,
+          rotation = 0,
+          gid = 1073742608,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 68,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 1000,
+          width = 640,
+          height = 1600,
+          rotation = 0,
+          gid = 1073742609,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 69,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -651,
+          y = 1685.5,
+          width = 640,
+          height = 1600,
+          rotation = 45,
+          gid = 785,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 12,
+      name = "objects_parallax_fade",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 57,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 800,
+          y = 1360,
+          width = 311.141,
+          height = 800,
+          rotation = 270,
+          gid = 789,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
     {
       type = "objectgroup",
       draworder = "topdown",
@@ -106,25 +408,25 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 128, 129, 130, 128, 129, 130, 128, 129, 130, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 137, 138, 139, 137, 138, 139, 137, 138, 139, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 146, 147, 148, 146, 147, 148, 146, 147, 148, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 155, 156, 157, 155, 156, 157, 155, 156, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 164, 165, 166, 164, 165, 166, 164, 165, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 164, 165, 166, 0, 165, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 128, 129, 130, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 137, 138, 139, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 146, 147, 148, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 155, 156, 157, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 164, 165, 166, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 164, 165, 166, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 164, 165, 166, 164, 165, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 166, 0, 0, 0, 0, 0, 0, 0,
-        0, 164, 165, 166, 0, 0, 166, 0, 0, 166, 164, 0, 166, 0, 0, 0, 0, 0, 0, 0
+        0, 0, 0, 0, 128, 129, 130, 128, 129, 130, 128, 129, 130, 128, 129, 130, 128, 129, 130, 128,
+        0, 0, 0, 0, 137, 138, 139, 137, 138, 139, 137, 138, 139, 137, 138, 139, 137, 138, 139, 137,
+        0, 0, 0, 0, 146, 147, 148, 146, 147, 148, 146, 147, 148, 146, 147, 148, 146, 147, 148, 146,
+        0, 0, 0, 0, 155, 156, 157, 155, 156, 157, 155, 156, 166, 0, 0, 0, 0, 0, 166, 155,
+        0, 0, 0, 0, 164, 165, 166, 164, 165, 166, 164, 165, 166, 0, 0, 0, 0, 0, 166, 155,
+        0, 0, 0, 0, 164, 165, 166, 0, 165, 166, 164, 0, 166, 0, 0, 0, 0, 0, 166, 155,
+        0, 0, 0, 0, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 0, 0, 0, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 128, 129, 130, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 137, 138, 139, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 146, 147, 148, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 155, 156, 157, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 164, 165, 166, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 164, 165, 166, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 164, 165, 166, 164, 165, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 166, 164, 0, 0, 0, 0, 166, 155,
+        0, 164, 165, 166, 0, 0, 166, 0, 0, 166, 164, 0, 166, 164, 0, 0, 0, 0, 166, 155
       }
     },
     {
@@ -208,13 +510,13 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 0, 0, 0, 0, 0, 0, 0,
-        0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0,
-        0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0,
-        0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0,
-        0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0,
-        0, 10, 10, 10, 28, 28, 28, 28, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 0, 0,
-        0, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174, 174,
+        0, 10, 10, 10, 10, 10, 10, 10, 10, 37, 38, 39, 40, 39, 39, 40, 41, 10, 10, 10,
+        0, 10, 10, 10, 10, 10, 10, 10, 10, 46, 47, 48, 49, 48, 48, 49, 50, 10, 10, 10,
+        0, 10, 10, 10, 10, 10, 10, 10, 10, 46, 47, 48, 49, 48, 48, 49, 50, 10, 10, 10,
+        0, 10, 10, 10, 10, 10, 10, 10, 10, 55, 56, 57, 58, 57, 57, 58, 59, 10, 10, 10,
+        0, 10, 10, 10, 28, 28, 28, 28, 28, 64, 65, 68, 66, 67, 69, 70, 71, 28, 28, 28,
+        0, 10, 10, 10, 0, 0, 0, 0, 0, 73, 74, 77, 75, 76, 78, 79, 80, 0, 0, 0,
         0, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -445,7 +747,7 @@ return {
           shape = "rectangle",
           x = 280,
           y = 560,
-          width = 240,
+          width = 520,
           height = 40,
           rotation = 0,
           visible = true,
@@ -471,7 +773,7 @@ return {
           shape = "rectangle",
           x = 40,
           y = 360,
-          width = 480,
+          width = 760,
           height = 40,
           rotation = 0,
           visible = true,
@@ -563,8 +865,34 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 360,
-          y = 1240,
+          x = 240,
+          y = 480,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 53,
+          name = "targ",
+          type = "",
+          shape = "point",
+          x = 520,
+          y = 360,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 76,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 760,
+          y = 480,
           width = 0,
           height = 0,
           rotation = 0,
@@ -723,6 +1051,79 @@ return {
           properties = {
             ["area"] = { id = 45 }
           }
+        },
+        {
+          id = 49,
+          name = "prophecy",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 400,
+          width = 320,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["fade_edges"] = true,
+            ["no_back"] = true,
+            ["offx"] = 160,
+            ["offy"] = -140,
+            ["panel_h"] = "107",
+            ["spr_offx"] = 55,
+            ["spr_offy"] = 50,
+            ["text"] = "FOUNTAINS ARE GIFTED \nTHROUGH HER HEART.",
+            ["texture"] = "endlessnight",
+            ["txt_offy"] = 20
+          }
+        },
+        {
+          id = 50,
+          name = "roomglow",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["prophecy"] = true
+          }
+        },
+        {
+          id = 51,
+          name = "cameratarget",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 400,
+          width = 320,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["lockx"] = true,
+            ["locky"] = true,
+            ["marker"] = "targ",
+            ["time"] = 1
+          }
+        },
+        {
+          id = 54,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 800,
+          y = 400,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "fourth_sanctum_4",
+            ["marker"] = "entry"
+          }
         }
       }
     },
@@ -740,21 +1141,6 @@ return {
       parallaxy = 1,
       properties = {},
       objects = {
-        {
-          id = 2,
-          name = "roomglow",
-          type = "",
-          shape = "point",
-          x = 15.6667,
-          y = -172,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["prophecy"] = true
-          }
-        },
         {
           id = 3,
           name = "churchfog",
