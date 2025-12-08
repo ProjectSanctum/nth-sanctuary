@@ -9,8 +9,8 @@ return {
   height = 25,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 12,
-  nextobjectid = 54,
+  nextlayerid = 13,
+  nextobjectid = 57,
   properties = {
     ["border"] = "",
     ["music"] = "grand_bells",
@@ -30,12 +30,12 @@ return {
     },
     {
       name = "light_areas",
-      firstgid = 282,
+      firstgid = 292,
       filename = "../../tilesets/light_areas.tsx"
     },
     {
       name = "bg_dw_church_tileset_new",
-      firstgid = 292,
+      firstgid = 302,
       filename = "../../tilesets/bg_dw_church_tileset_new.tsx"
     }
   },
@@ -78,14 +78,14 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        841, 841, 841, 841, 841, 841, 841, 841, 841, 841, 841, 841, 841, 841, 841, 841,
-        424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424,
-        424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424,
-        424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424,
-        424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424,
-        424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424,
-        424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424,
-        424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424, 424,
+        851, 851, 851, 851, 851, 851, 851, 851, 851, 851, 851, 851, 851, 851, 851, 851,
+        434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434,
+        434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434,
+        434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434,
+        434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434,
+        434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434,
+        434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434,
+        434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434, 434,
         0, 0, 0, 0, 0, 0, 171, 163, 162, 174, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 171, 172, 173, 184, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 171, 173, 173, 174, 0, 0, 0, 0, 0, 0,
@@ -124,7 +124,7 @@ return {
           width = 140,
           height = 40,
           rotation = 0,
-          gid = 424,
+          gid = 434,
           visible = true,
           properties = {}
         },
@@ -138,7 +138,7 @@ return {
           width = 150,
           height = 40,
           rotation = 0,
-          gid = 424,
+          gid = 434,
           visible = true,
           properties = {}
         }
@@ -280,6 +280,22 @@ return {
             ["solid"] = true,
             ["text"] = "* (It's locked...)[wait:5]\n* (Seems like you need a lot of [color:9999ff]Dark Shards[color:reset]...)"
           }
+        },
+        {
+          id = 54,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 440,
+          width = 160,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "finale.entry",
+            ["once"] = false
+          }
         }
       }
     },
@@ -289,7 +305,7 @@ return {
       id = 3,
       name = "objects_lightareas",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -323,7 +339,7 @@ return {
           width = 220,
           height = 860,
           rotation = 0,
-          gid = 284,
+          gid = 294,
           visible = true,
           properties = {
             ["light"] = true,
@@ -428,26 +444,13 @@ return {
           properties = {}
         },
         {
-          id = 35,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 250,
-          y = 210,
-          width = 40,
-          height = 270,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 36,
           name = "",
           type = "",
           shape = "rectangle",
-          x = 350,
-          y = 210,
-          width = 40,
+          x = 240,
+          y = 200,
+          width = 160,
           height = 270,
           rotation = 0,
           visible = true,
@@ -574,6 +577,21 @@ return {
           properties = {}
         }
       }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 12,
+      name = "controllers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {}
     }
   }
 }

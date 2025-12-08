@@ -18,4 +18,13 @@ return {
         cutscene:wait(1)
         man:remove()
     end,
+	gate = function (cutscene, event)
+		Assets.playSound("sparkle_gem")
+		event.timer = 0
+		event.forceend = true
+		local g = Game.world:getEvent(61)
+		Game.world.timer:tween(1, g, {y = g.y - 130, alpha = 0}, 'out-expo', function () g:remove()end)
+		Game:setFlag("piano_solve_1", true)
+		
+	end
 }

@@ -6,7 +6,7 @@ function map:init(world, data)
 end
 
 function map:onEnter()
-	local finished = false
+	local finished = Game:getFlag("finished")
 	for _, event in ipairs(self.events) do
 		if event.layer == self.layers["objects_opendoor"] then
 			 event.visible = finished
