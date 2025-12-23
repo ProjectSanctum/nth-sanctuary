@@ -75,13 +75,14 @@ return {
         a.layer = 1000
         a:setOrigin(0, 0)
         a:setScale(2)
-                a.x, a.y = 140, 244
-				a:addFX(ProphecyScrollFXAlt(3), "prop")
+        a.x, a.y = 140, 244
+		a:addFX(ProphecyScrollFXAlt(3), "prop")
         Game.stage:addChild(a)
         Assets.playSound("bell_bounce_short")
         for _, sprite in ipairs(remove) do
 			if not sprite.noprop then
-				sprite:addFX(ProphecyScrollFX(), "prop")
+				sprite:addFX(ProphecyScrollFX(nil, 2), "prop")
+				sprite:addFX(AlphaFX(0.7, 1), "alpha")
 			end
         end
         cutscene:wait(2)

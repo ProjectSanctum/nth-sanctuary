@@ -80,14 +80,18 @@ return {
         proph:setParallax(0)
         proph:setScale(2)
         proph:setOrigin(0.5, 0.5)
-        proph.alpha = 0
         proph.x, proph.y = SCREEN_WIDTH/2, SCREEN_HEIGHT/2
+		proph.fx = proph:addFX(ProphecyScrollFX(nil, 3), "prop")
+		proph.efx = proph:addFX(ProphecyEchoFXAlt(0, 2), "echo")
+		proph.afx = proph:addFX(AlphaFX(0, 1), "alpha")
         Game.stage:addChild(proph)
+		Game.world.timer:tween(30/30, proph.efx, {scroll_speed = 2})
+		Game.world.timer:tween(10/30, proph.afx, {alpha = 1})
         cutscene:during(function ()
-            proph.alpha = proph.alpha + DTMULT/10
             a = a+DTMULT/30
             print(math.abs(math.sin(a)))
-            proph:setColor(0,math.abs(math.sin(a)),1)
+			local col = ColorUtils.mergeColor(COLORS.blue, ColorUtils.hexToRGB("#42D0FF"), math.abs(math.sin(a)))
+            proph.fx:setProphecyColor(col[1], col[2], col[3], 1)
         end)
         cutscene:wait(8.43)
         local rect = Rectangle(0,0,999,999)
