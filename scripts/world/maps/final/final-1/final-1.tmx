@@ -4,6 +4,7 @@
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="border" value="church_grand"/>
   <property name="music" value="final"/>
  </properties>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
