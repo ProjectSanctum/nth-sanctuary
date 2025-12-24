@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.10.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 60,
+  nextobjectid = 62,
   properties = {
     ["border"] = "hell",
     ["music"] = "hellworld",
@@ -153,6 +153,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 60,
+          name = "north_exit",
+          type = "",
+          shape = "point",
+          x = 620,
+          y = 80,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -226,19 +239,6 @@ return {
           y = 400,
           width = 40,
           height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 40,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 560,
-          y = -40,
-          width = 120,
-          height = 40,
           rotation = 0,
           visible = true,
           properties = {}
@@ -355,6 +355,22 @@ return {
             ["highlight"] = "#ffff7400",
             ["tint"] = "#ffff0000"
           }
+        },
+        {
+          id = 61,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = -40,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "floodedsanctuary/hellentrance",
+            ["marker"] = "spawn"
+          }
         }
       }
     },
@@ -377,7 +393,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 520,
+          x = 510,
           y = 320,
           width = 80,
           height = 40,
@@ -390,7 +406,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 640,
+          x = 650,
           y = 320,
           width = 80,
           height = 40,
@@ -481,7 +497,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 560,
+          x = 550,
           y = 0,
           width = 40,
           height = 320,
@@ -494,7 +510,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 640,
+          x = 650,
           y = 0,
           width = 40,
           height = 320,
