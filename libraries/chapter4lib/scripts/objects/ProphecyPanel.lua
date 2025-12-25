@@ -1,6 +1,6 @@
 local ProphecyPanel, super = Class(Object)
 
-function ProphecyPanel:init(base_tex, faded_tex, sprite, text, width, height)
+function ProphecyPanel:init(sprite, text, width, height)
     super.init(self)
 	self:setOrigin(0,0)
     self.debug_select = true
@@ -25,8 +25,8 @@ function ProphecyPanel:init(base_tex, faded_tex, sprite, text, width, height)
     self.siner = 0
 
     -- the scrolling DEPTHS images used by the panels.
-    self.tilespr = Assets.getTexture(base_tex)
-    self.tiletex = Assets.getTexture(faded_tex)
+    self.tilespr = Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS")
+    self.tiletex = Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_SEAMLESS")
     self.gradient20 = Assets.getTexture("backgrounds/gradient20")
     self.propblue = ColorUtils.hexToRGB("#42D0FFFF")
     self.liteblue = ColorUtils.hexToRGB("#FFFFFFFF")

@@ -76,6 +76,7 @@ function RoomGlow:update()
 			local sfx = chara:getFX("shadow")
 			if hfx then
 				hfx.alpha = self.actind
+                hfx.color = self.highlight
 			else
 				chara:addFX(ChurchHighlightFX(0, self.highlight, {darkcol = self.darkcol}, 1), "highlight")
 			end
