@@ -34,6 +34,12 @@ return {
             "The Dark, [wait:5]Second, [wait:5]and Third Sanctuaries are not recreations of\nDELTARUNE Chapter 4's maps. [wait:5]\n\nI do not want to get sued.[wait:10]\n\n" ..
             "#th Sanctuary is meant to be enjoyed at your own pace.[wait:10]\nPlease, [wait:5]enjoy yourself.")
         cutscene:wait(1)
+        cutscene:text("* Which route do you desire?")
+        local ch = cutscene:choicer({"Pacifist", "Violent", "Weird"})
+        
+        Game:setFlag("route", ch)
+        Assets.playSound("ui_spooky_action")
+        cutscene:wait(2)
         local remove = {}
         local sum = 85
         for i = 1,9 do

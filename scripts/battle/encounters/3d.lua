@@ -4,7 +4,11 @@ function ThreeDPrism:init()
     super.init(self)
 
     -- Text displayed at the bottom of the screen at the start of the encounter
-    self.text = "* Holy fuck\n* ([color:yellow]TP Gain[color:reset] reduced because [color:red]FUCK YOU[color:reset])"
+    if #Game.party == 1 and Game.party[1].name == "Jamm" then
+		self.text = "* Wait, this isn't a Porta Potty."
+	else
+		self.text = "* Holy fuck\n* ([color:yellow]TP Gain[color:reset] reduced because [color:red]FUCK YOU[color:reset])"
+	end
 
     -- Battle music ("battle" is rude buster)
     self.music = "3d_boss"
