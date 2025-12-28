@@ -17,6 +17,7 @@ function ProphecyScrollFX:init(texture, priority)
     self.tick = 0;
     self.intro_mode = false;
 
+	self.prophecy_color = ColorUtils.hexToRGB("#42D0FF")
 end
 
 function ProphecyScrollFX:update()
@@ -41,8 +42,15 @@ function ProphecyScrollFX:draw(texture)
     self:drawPart(texture, Ch4Lib.scr_wave(0, 0.4, 4, 0))
 end
 
-local function oldHexToRgb(hex, value)
-    local color = ColorUtils.hexToRGB(hex)
+function ProphecyScrollFX:setProphecyColor(r, g, b, a)
+    if type(r) == "table" then
+        r, g, b, a = unpack(r)
+    end
+    self.prophecy_color = { r, g, b, a or 1}
+end
+
+local function returnAlphaColor(color, value)
+    local color = color
     return {
         color[1],
         color[2],
@@ -69,11 +77,11 @@ function ProphecyScrollFX:drawPart(texture, alpha)
     love.graphics.clear(COLORS.white, 0);
     local pnl_tex = Assets.getTexture("backgrounds/perlin_noise_looping")
     local pnl_canvas = Draw.pushCanvas(pnl_tex:getDimensions())
-    draw_sprite_tiled_ext(pnl_tex, 0, 0, 0, 1, 1, oldHexToRgb("#42D0FF", alpha))
+    draw_sprite_tiled_ext(pnl_tex, 0, 0, 0, 1, 1, returnAlphaColor(self.prophecy_color, alpha))
     Draw.popCanvas(true)
     love.graphics.setColorMask(true, true, true, false);
     local x, y = -((_cx * 2) + (self.tick * 15)) * 0.5, -((_cy * 2) + (self.tick * 15)) * 0.5
-    draw_sprite_tiled_ext(Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS_BRIGHTER"), 0, x, y, 2, 2, oldHexToRgb("#42D0FF", 1));
+    draw_sprite_tiled_ext(Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS_BRIGHTER"), 0, x, y, 2, 2, returnAlphaColor(self.prophecy_color, 1));
     local orig_bm, orig_am = love.graphics.getBlendMode()
     love.graphics.setBlendMode("add", "premultiplied");
     draw_sprite_tiled_ext(pnl_canvas, 0, x, y, 2, 2, COLORS.white);
@@ -90,9 +98,8 @@ function ProphecyScrollFX:drawPart(texture, alpha)
         love.graphics.setShader(last_shader)
     end, "replace", 1)
     love.graphics.setStencilTest("greater", 0)
-	Draw.setColor(1,1,1,0.7)
-    Draw.drawCanvas(surf_textured);
 	Draw.setColor(1,1,1,1)
+    Draw.drawCanvas(surf_textured);
     love.graphics.setStencilTest()
 end
 
