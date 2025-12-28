@@ -11,6 +11,8 @@ end
 function FileSelectMenu:initStates()
 	super.initStates(self)
     self.state_manager:addState("CREDITS", self.credits)
+    Kristal.hideBorder(0)
+	Game:setBorder("church_grand")
 end
 
 return FileSelectMenu
