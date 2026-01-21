@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="318">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="318">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -473,7 +473,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="4" name="objects_top" locked="1" offsetx="-1200" offsety="520">
+ <objectgroup id="4" name="objects_top" offsetx="-1200" offsety="520">
   <object id="120" name="churchfog" x="1093.94" y="-192.364">
    <point/>
   </object>
