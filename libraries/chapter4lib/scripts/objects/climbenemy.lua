@@ -85,7 +85,7 @@ function ClimbEnemy:snapToPath()
 
                     self.x = x
 					self.y = y
-					self.sprite.rotation = MathUtils.angle(self.x, self.y, x, y)
+					self.sprite.rotation = MathUtils.angle(path.points[i].x, path.points[i].y, path.points[i + 1].x, path.points[i + 1].y) - math.rad(90)
                     break
                 else
                     current_dist = current_dist + next_dist
