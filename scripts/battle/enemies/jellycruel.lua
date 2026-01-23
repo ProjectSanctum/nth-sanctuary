@@ -1,6 +1,6 @@
-local Dummy, super = Class(EnemyBattler)
+local Jellycruel, super = Class(EnemyBattler)
 
-function Dummy:init()
+function Jellycruel:init()
     super.init(self)
 
     -- Enemy name
@@ -23,9 +23,7 @@ function Dummy:init()
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
-        "basic",
-        "aiming",
-        "movingarena"
+        "jellycruel/jellies",
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
@@ -34,7 +32,7 @@ function Dummy:init()
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 99 DF 99\n* jellycruel"
+    self.check = {"AT[image:enemies/jellycruel/idle, 6,0,0.6,0.6] DF[image:enemies/jellycruel/idle, 6,0,0.6,0.6]\n* The cruellest jelly.\n* Beware its poisonous attacks."}
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
@@ -49,9 +47,24 @@ function Dummy:init()
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     self:registerAct("BegForMercy", "beg", "all")
+	self.siner = 0
 end
 
-function Dummy:onAct(battler, name)
+function Jellycruel:update()
+    super.update(self)
+
+    if Game.battle.state ~= "TRANSITION" and Game.battle.state ~= "INTRO" then
+        self.siner = self.siner + (1 / 6) * DTMULT
+        self.sprite.y = (math.sin(self.siner * 0.5)) * (5 * (self.health / self.max_health))
+		if self.bubble then
+			local spr = self.sprite or self
+			local x, y = spr:getRelativePos(0, spr.height/2, Game.battle)
+			self.bubble.y = y
+		end
+    end
+end
+
+function Jellycruel:onAct(battler, name)
     if name == "Standard" then --X-Action
         self:addMercy(0.1)
         return "* jellycruel."
@@ -67,4 +80,4 @@ function Dummy:onAct(battler, name)
     return super.onAct(self, battler, name)
 end
 
-return Dummy
+return Jellycruel

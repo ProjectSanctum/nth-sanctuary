@@ -1,6 +1,6 @@
-local Dummy, super = Class(Encounter)
+local Jellycruel, super = Class(Encounter)
 
-function Dummy:init()
+function Jellycruel:init()
     super.init(self)
 
     -- Text displayed at the bottom of the screen at the start of the encounter
@@ -11,13 +11,8 @@ function Dummy:init()
     -- Enables the purple grid battle background
     self.background = true
 
-    self.reduced_tp = true
-
     -- Add the dummy enemy to the encounter
     self:addEnemy("jellycruel")
-
-    --- Uncomment this line to add another!
-    --self:addEnemy("dummy")
 end
 
-return Dummy
+return Jellycruel
