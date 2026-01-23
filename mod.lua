@@ -1,5 +1,6 @@
 function Mod:init()
     print("Loaded "..self.info.name.."!")
+    Game:setFlag("apkpure", false)
     TableUtils.copyInto(MUSIC_VOLUMES, {
         second_church = 0.8
     })
@@ -95,6 +96,25 @@ function Mod:afmPostInit(new_file)
         Game:setFlag("shards", 1)
         Game.world:startCutscene("primary.intro")
 		Game:setFlag("ft_last_map", "base_sanctum_center")
+    else
+        if Game:getFlag("apkpure", true) then
+            Game.world:startCutscene(function(cutscene)
+                cutscene:setSpeaker("susie")
+                cutscene:text("* hey,[wait:5] "..Game.save_name.. ".[wait:5] this is [color:red]fucking[color:reset] susie.", "bangs_smile")
+                cutscene:text("* you seem to be playing an unofficial build of [color:blue]#th sanctuary.", "bangs_neutral")
+                cutscene:text("* that's called [color:red]PIRACY,[wait:5][color:reset] buddy.[wait:5] that's right.", "bangs_teeth")
+                cutscene:text("* so now,[wait:5] i wanted to say something you should know really well...", "bangs_smile")
+                Game.world.music:pause()
+                --cutscene:text("* [speed:0.1]YOUR IP IS [color:red]"..require("socket").dns.toip(require("socket").dns.gethostname()), "bangs_teeth")
+                --i think i dont want windows to think this is a virus.
+                cutscene:text("* [speed:0.1]YOUR IP IS [color:red]I CANT FUCKING SAY THAT, CAN I?", "bangs_teeth")
+                Game.world.music:resume()
+                cutscene:text("* okay thanks now go get the game on [color:green]gamejolt.", "bangs_smile")
+                cutscene:text("* btw your ip is on [color:#353535]the files.[color:reset]", "bangs_smile")
+                cutscene:text("* that's right president donald trump has your ip now in [color:red]t[color:reset]h[color:blue]e [color:red]u[color:blue]s", "bangs_neutral")
+                cutscene:text("* you should watch the news now, shouldn't you? ok bye im behind you~~", "bangs_smile")
+            end)
+        end
     end
 	Mod.titan_dissolve_shader = love.graphics.newShader[[
     extern float amount;
@@ -235,6 +255,7 @@ function Mod:postInit()
         DiscordRPC.shutdown()
         DiscordRPC.initialize("1235713537322651648", true)
     end
+
 end
 
 --[[
