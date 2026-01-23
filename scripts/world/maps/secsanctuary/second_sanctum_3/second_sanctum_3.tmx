@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="320">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="321">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -246,6 +246,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="75"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="24"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -258,6 +259,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="20"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="24"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -270,6 +272,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="65"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="24"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -282,6 +285,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="10"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="24"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -294,6 +298,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="55"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="24"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -323,7 +328,7 @@
     <property name="generate" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="267" name="climbwaterbucket" x="1400" y="560" width="40" height="40">
+  <object id="267" name="climbwaterbucket" x="1400" y="570" width="40" height="40">
    <properties>
     <property name="generate" type="bool" value="false"/>
    </properties>
@@ -351,6 +356,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="75"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="34"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -363,6 +369,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="20"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="24"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -375,6 +382,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="65"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="34"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -387,6 +395,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="10"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="34"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -399,6 +408,7 @@
     <property name="timelimit" type="float" value="5"/>
     <property name="timer" type="float" value="55"/>
     <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="24"/>
     <property name="watermoverate" type="float" value="6"/>
     <property name="watertilelimit" type="int" value="32"/>
    </properties>
@@ -425,6 +435,7 @@
     <property name="generate" type="bool" value="false"/>
    </properties>
   </object>
+  <object id="320" name="climblanding" x="1480" y="820" width="200" height="40"/>
  </objectgroup>
  <objectgroup id="3" name="objects_party">
   <object id="17" name="transition" x="1680" y="800" width="40" height="120">

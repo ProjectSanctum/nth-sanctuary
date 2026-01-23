@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 27,
-  nextobjectid = 320,
+  nextobjectid = 321,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -35,8 +35,7 @@ return {
     {
       name = "ExtraClimbableBrickTiles",
       firstgid = 814,
-      filename = "../../../tilesets/ExtraClimbableBrickTiles.tsx",
-      exportfilename = "../../../tilesets/ExtraClimbableBrickTiles.tsx"
+      filename = "../../../tilesets/ExtraClimbableBrickTiles.tsx"
     }
   },
   layers = {
@@ -1636,6 +1635,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 75,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 24,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1658,6 +1658,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 20,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 24,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1680,6 +1681,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 65,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 24,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1702,6 +1704,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 10,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 24,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1724,6 +1727,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 55,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 24,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1809,7 +1813,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 1400,
-          y = 560,
+          y = 570,
           width = 40,
           height = 40,
           rotation = 0,
@@ -1881,6 +1885,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 75,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 34,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1903,6 +1908,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 20,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 24,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1925,6 +1931,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 65,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 34,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1947,6 +1954,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 10,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 34,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -1969,6 +1977,7 @@ return {
             ["timelimit"] = 5,
             ["timer"] = 55,
             ["waittime"] = 30,
+            ["waterfallingtimer"] = 24,
             ["watermoverate"] = 6,
             ["watertilelimit"] = 32
           }
@@ -2024,6 +2033,19 @@ return {
           properties = {
             ["generate"] = false
           }
+        },
+        {
+          id = 320,
+          name = "climblanding",
+          type = "",
+          shape = "rectangle",
+          x = 1480,
+          y = 820,
+          width = 200,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
