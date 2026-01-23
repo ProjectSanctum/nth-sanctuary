@@ -33,9 +33,9 @@ return {
       exportfilename = "../../../tilesets/church_objects.lua"
     },
     {
-      name = "ExtraClimbableBrickTiles",
+      name = "ExtraClimbingTiles",
       firstgid = 814,
-      filename = "../../../tilesets/ExtraClimbableBrickTiles.tsx"
+      filename = "../../../tilesets/ExtraClimbingTiles.tsx"
     }
   },
   layers = {
