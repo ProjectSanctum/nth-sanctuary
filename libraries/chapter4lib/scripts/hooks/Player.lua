@@ -321,12 +321,18 @@ function Player:processClimbInputs()
 						end
 						self.climb_collider.parent = self.parent
 						self.climb_collider.x, self.climb_collider.y = x, y
-						if water:collidesWith(self.climb_collider) then
+						local topy = MathUtils.clamp(water.drawy, water.starty - water.y, water.endy - water.y)
+						local boty = MathUtils.clamp(-40 + (water.scaley * 40) + water.drawy, water.starty - water.y, water.endy - water.y)
+						local width = 40
+						local yoff = 8
+						local adjustment = 0
+						water_collider = Hitbox(water, adjustment + 8, topy + yoff, adjustment + width - 16, boty - topy - 8)
+						if water_collider:collidesWith(self.climb_collider) then
 							climbwater = true
 						end
 					end
-					local allowed, obj = self:canClimb(0, 0) and not climbwater
-					if allowed and obj and self.y >= obj.y + 30 then
+					local allowed, obj = self:canClimb(0, 0)
+					if allowed and obj and self.y >= obj.y + 30 and not climbwater then
 						local grabx = self.x
 						local graby = self.y
 						self.grabx = (MathUtils.round(grabx / 40) * 40) - 20
