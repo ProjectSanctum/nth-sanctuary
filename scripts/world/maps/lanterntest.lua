@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 17,
+  nextobjectid = 18,
   properties = {},
   tilesets = {},
   layers = {
@@ -207,7 +207,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["alpha"] = 1
+            ["alpha"] = 1,
+            ["highlight"] = false
           }
         }
       }

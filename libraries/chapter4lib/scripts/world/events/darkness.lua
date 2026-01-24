@@ -9,7 +9,7 @@ function Darkness:init(data)
     -- don't allow debug selecting
     self.debug_select = false
 
-    self.alpha = data.properties["alpha"] or 1
+    self.alpha = properties["alpha"] or 1
     self.overlap = true
 	self.highlightalpha = 1
 	self.draw_highlight = properties["highlight"] ~= false
@@ -65,8 +65,9 @@ function Darkness:draw()
 		for _, object in ipairs(Game.world.children) do
 			if object.darkness_unlit then
 				self:drawCharacter(object)
+				Draw.setColor(1, 1, 1, 1)
 			end
-			if object:includes(Character) and not object.no_highlight and self.highlight then
+			if object:includes(Character) and not object.no_highlight and self.draw_highlight then
 				love.graphics.stencil((function ()
 					love.graphics.translate(0, 2)
 					love.graphics.setShader(Kristal.Shaders["Mask"])
@@ -159,7 +160,7 @@ function Darkness:draw()
 			if object.darkness_unlit then
 				self:drawCharacter(object)
 			end
-			if object:includes(Character) and not object.no_highlight and self.highlight then
+			if object:includes(Character) and not object.no_highlight and self.draw_highlight then
 				love.graphics.stencil((function ()
 					love.graphics.translate(0, 2)
 					love.graphics.setShader(Kristal.Shaders["Mask"])

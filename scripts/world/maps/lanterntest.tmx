@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="17">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="18">
  <editorsettings>
   <export target="lanterntest.lua" format="lua"/>
  </editorsettings>
@@ -63,6 +63,7 @@
   <object id="9" name="darkness" x="0" y="0">
    <properties>
     <property name="alpha" type="float" value="1"/>
+    <property name="highlight" type="bool" value="false"/>
    </properties>
    <point/>
   </object>

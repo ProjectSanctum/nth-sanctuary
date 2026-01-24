@@ -32,7 +32,8 @@ function ChurchTileButton:update()
 	if self.glow and onscreen then
 		self.glow_timer = self.glow_timer + DTMULT
 		if self.glow_timer >= 1 then
-			local glowspr = Sprite(self.sprite_path, self.x, self.y)
+			local glowspr = Sprite(self.sprite.texture_path, self.x + self.width/2, self.y + self.height/2)
+			glowspr:setOrigin(0.5)
 			glowspr:stop()
 			local scale = 2 + math.abs(math.sin(self.siner / 30) * 0.2)
 			glowspr:setScale(2)
@@ -43,13 +44,7 @@ function ChurchTileButton:update()
 			Game.world.timer:lerpVar(glowspr, "alpha", MathUtils.clamp((0.35 + (math.sin(self.siner / 20) * 0.125)) - pressed, 0.05, 0.5), 0, lifetime)
 			glowspr.color = self.glow_color
 			glowspr.physics.direction = math.rad(self.siner * 12)
-			for _,darkness in ipairs(Game.world.map:getEvents("darkness")) do
-				if darkness then
-					glowspr.layer = darkness.layer + 1
-				else
-					glowspr.layer = self.layer + 1
-				end
-			end
+			glowspr.layer = self.layer + 0.01
 			glowspr.physics.gravity = -0.7
 			glowspr.physics.speed_y = 1.5
 			Game.world.timer:after(lifetime/30, function()
