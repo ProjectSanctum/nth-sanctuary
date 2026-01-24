@@ -1,8 +1,8 @@
 local map, super = Class(Map)
 
-function map:load() --When the map loads....
+function map:load()
     super.load(self)
-    self.siner = 0 --[i] Required setup variable. 
+    self.siner = 0
 end
 
 function map:onEnter()
@@ -15,16 +15,11 @@ function map:onEnter()
 			 event.parallax_x = 0.4
 			 event.parallax_y = 0.85
 		end
-		if event.layer == self.layers["objects_parallax3"] then
-			 event.parallax_x = 0.3
-			 event.parallax_y = 0.82
-		end
 	end
 end
 
 function map:update() --Every time the game updates...
     super.update(self)
-   -- self.world.color = {ColorUtils.HSLToRGB(Kristal.getTime()/5 %1, 1, 1)}
 end
 
 

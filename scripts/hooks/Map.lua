@@ -21,6 +21,26 @@ function Map:load()
         presence.details = "Shards: "..tostring(Game:getFlag("shards") or 0)
         Kristal.setPresence(presence)
     end
+	if Kristal.Config["simplifyVFX"] then
+		for _, value in ipairs(Game.world.stage:getObjects(TileObject)) do
+			if value.light_area and value.light_dust then
+				value.light_dust = false
+			end
+		end
+		for e, value in ipairs(self.events_by_name.window_glow or {}) do
+			value:remove()
+		end
+	end
+	if Kristal.Config["nthSanctuary/removeHSV"] then
+		for _, h in ipairs(TableUtils.mergeMany(
+			self.events_by_name.filter or {},
+			self.events_by_name.tile_oscillate or {},
+			self.events_by_name.texturescroller or {},
+			self.events_by_name.churchfog or {}
+		) or {}) do
+			h:remove()
+		end
+	end
 end
 
 return Map
