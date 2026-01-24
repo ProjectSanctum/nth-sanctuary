@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 11,
-  nextobjectid = 9,
+  nextobjectid = 15,
   properties = {},
   tilesets = {
     {
@@ -21,8 +21,7 @@ return {
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 199,
-      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
-      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx"
     },
     {
       name = "bg_dw_church_watertileset",
@@ -271,6 +270,70 @@ return {
           visible = true,
           properties = {
             ["type"] = "hsv"
+          }
+        },
+        {
+          id = 9,
+          name = "parallax_waterfall",
+          type = "",
+          shape = "point",
+          x = 180,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["parallax_x"] = 1.5,
+            ["parallax_y"] = 1.1
+          }
+        },
+        {
+          id = 11,
+          name = "parallax_waterfall",
+          type = "",
+          shape = "point",
+          x = 2080,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["parallax_x"] = 1.5,
+            ["parallax_y"] = 1.1
+          }
+        },
+        {
+          id = 13,
+          name = "parallax_waterfall",
+          type = "",
+          shape = "point",
+          x = 440,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["parallax_x"] = 1.5,
+            ["parallax_y"] = 1.1
+          }
+        },
+        {
+          id = 14,
+          name = "parallax_waterfall",
+          type = "",
+          shape = "point",
+          x = 1820,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["parallax_x"] = 1.5,
+            ["parallax_y"] = 1.1
           }
         }
       }

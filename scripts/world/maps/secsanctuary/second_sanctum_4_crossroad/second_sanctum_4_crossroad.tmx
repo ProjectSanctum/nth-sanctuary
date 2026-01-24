@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="35" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="9">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="43" height="35" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="15">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -108,6 +108,34 @@
   <object id="2" name="filter" x="-248" y="360">
    <properties>
     <property name="type" value="hsv"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="9" name="parallax_waterfall" x="180" y="0">
+   <properties>
+    <property name="parallax_x" type="float" value="1.5"/>
+    <property name="parallax_y" type="float" value="1.1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="11" name="parallax_waterfall" x="2080" y="0">
+   <properties>
+    <property name="parallax_x" type="float" value="1.5"/>
+    <property name="parallax_y" type="float" value="1.1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="13" name="parallax_waterfall" x="440" y="0">
+   <properties>
+    <property name="parallax_x" type="float" value="1.5"/>
+    <property name="parallax_y" type="float" value="1.1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="14" name="parallax_waterfall" x="1820" y="0">
+   <properties>
+    <property name="parallax_x" type="float" value="1.5"/>
+    <property name="parallax_y" type="float" value="1.1"/>
    </properties>
    <point/>
   </object>
