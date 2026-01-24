@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -24,7 +24,8 @@ return {
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 199,
-      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx"
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "church_objects",
@@ -33,9 +34,9 @@ return {
       exportfilename = "../../../tilesets/church_objects.lua"
     },
     {
-      name = "ExtraClimbableBrickTiles",
+      name = "ExtraClimbingTiles",
       firstgid = 814,
-      filename = "../../../tilesets/ExtraClimbableBrickTiles.tsx"
+      filename = "../../../tilesets/ExtraClimbingTiles.tsx"
     }
   },
   layers = {
