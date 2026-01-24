@@ -1,9 +1,9 @@
 [submodule "libraries/chapter4lib"]
 	path = libraries/chapter4lib
 	url = https://github.com/Hyperboid/kristal-chapter4-lib.git
-[submodule "libraries/CH4EnemyRecreations"]
-	path = libraries/CH4EnemyRecreations
-	url = https://github.com/DIAMONDDELTAHEDRON/CH4EnemyRecreations-NthSanctum
+[submodule "libraries/CH4EnemyRecreations-Kristal"]
+	path = libraries/CH4EnemyRecreations-Kristal
+	url = https://github.com/JustAnotherRandomGithubUser/CH4EnemyRecreations-Kristal
 [submodule "libraries/EvenMoreParty"]
 	path = libraries/EvenMoreParty
 	url = https://github.com/Ralszor/EvenMoreParty.git
