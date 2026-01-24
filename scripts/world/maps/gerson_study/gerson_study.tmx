@@ -202,7 +202,7 @@
   <object id="93" x="400" y="640" width="160" height="40"/>
   <object id="97" x="430" y="240" width="110" height="40"/>
   <object id="118" x="404" y="788" width="160" height="61"/>
-  <object id="136" x="444" y="756" width="80" height="32"/>
+  <object id="136" x="451" y="760" width="58" height="28"/>
  </objectgroup>
  <objectgroup color="#aa00ff" id="6" name="markers">
   <object id="104" name="entry_left" x="40" y="960">
