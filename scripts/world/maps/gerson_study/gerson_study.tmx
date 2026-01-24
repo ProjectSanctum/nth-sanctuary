@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="121">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="136">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -58,7 +58,7 @@
  </objectgroup>
  <objectgroup color="#ff00ff" id="4" name="objects_party">
   <object id="54" gid="618" x="154" y="910" width="116" height="152"/>
-  <object id="55" gid="619" x="334" y="1055" width="266" height="95"/>
+  <object id="55" gid="619" x="334" y="1055" width="266" height="96"/>
   <object id="60" gid="621" x="604" y="1072" width="36" height="50"/>
   <object id="61" gid="620" x="334" y="1076" width="44" height="26"/>
   <object id="64" gid="622" x="624" y="1014" width="28" height="28"/>
@@ -89,8 +89,26 @@
     <property name="cutscene" value="study.fountain"/>
    </properties>
   </object>
+  <object id="123" name="interactable" x="360" y="988" width="240" height="67">
+   <properties>
+    <property name="cutscene" value="study.table"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup color="#0000ff" id="3" name="collision">
+ <objectgroup color="#ffffff" id="7" name="objects_tableitems">
+  <object id="127" name="sprite" x="480" y="990">
+   <properties>
+    <property name="speed" type="float" value="0.333333333"/>
+    <property name="texture" value="effects/shine_white"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="128" gid="664" x="388" y="1017" width="40" height="26"/>
+  <object id="133" gid="661" x="446" y="1021" width="26" height="32"/>
+  <object id="134" gid="662" x="492" y="1021" width="26" height="18"/>
+  <object id="135" gid="663" x="524" y="1043" width="56" height="50"/>
+ </objectgroup>
+ <objectgroup color="#0000ff" id="3" name="collision" locked="1">
   <object id="2" x="0" y="1000" width="160" height="40"/>
   <object id="4" x="138" y="1000">
    <polygon points="0,0 40,40 0,40"/>

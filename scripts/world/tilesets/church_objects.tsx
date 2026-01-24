@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="church_objects" tilewidth="960" tileheight="800" tilecount="73" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="church_objects" tilewidth="960" tileheight="800" tilecount="77" columns="0">
  <editorsettings>
   <export target="church_objects.lua" format="lua"/>
  </editorsettings>
@@ -123,6 +123,18 @@
  </tile>
  <tile id="57">
   <image width="54" height="52" source="../../../assets/sprites/world/objects/gerson_chair.png"/>
+ </tile>
+ <tile id="78">
+  <image width="13" height="16" source="../../../assets/sprites/world/objects/dw_item_elixir.png"/>
+ </tile>
+ <tile id="79">
+  <image width="13" height="9" source="../../../assets/sprites/world/objects/dw_item_guard.png"/>
+ </tile>
+ <tile id="80">
+  <image width="28" height="25" source="../../../assets/sprites/world/objects/dw_item_scarf.png"/>
+ </tile>
+ <tile id="81">
+  <image width="20" height="13" source="../../../assets/sprites/world/objects/dw_item_tea.png"/>
  </tile>
  <tile id="40">
   <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/1.png"/>

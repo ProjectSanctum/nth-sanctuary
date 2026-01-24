@@ -9,8 +9,8 @@ return {
   height = 30,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 121,
+  nextlayerid = 8,
+  nextobjectid = 136,
   properties = {
     ["border"] = "church_a",
     ["music"] = "church_study_slower"
@@ -259,7 +259,7 @@ return {
           x = 334,
           y = 1055,
           width = 266,
-          height = 95,
+          height = 96,
           rotation = 0,
           gid = 619,
           visible = true,
@@ -425,6 +425,109 @@ return {
           properties = {
             ["cutscene"] = "study.fountain"
           }
+        },
+        {
+          id = 123,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 988,
+          width = 240,
+          height = 67,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "study.table"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects_tableitems",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 127,
+          name = "sprite",
+          type = "",
+          shape = "point",
+          x = 480,
+          y = 990,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["speed"] = 0.333333333,
+            ["texture"] = "effects/shine_white"
+          }
+        },
+        {
+          id = 128,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 388,
+          y = 1017,
+          width = 40,
+          height = 26,
+          rotation = 0,
+          gid = 664,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 133,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 446,
+          y = 1021,
+          width = 26,
+          height = 32,
+          rotation = 0,
+          gid = 661,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 134,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 492,
+          y = 1021,
+          width = 26,
+          height = 18,
+          rotation = 0,
+          gid = 662,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 135,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 524,
+          y = 1043,
+          width = 56,
+          height = 50,
+          rotation = 0,
+          gid = 663,
+          visible = true,
+          properties = {}
         }
       }
     },

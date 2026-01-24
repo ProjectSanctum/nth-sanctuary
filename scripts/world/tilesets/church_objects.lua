@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 73,
+  tilecount = 77,
   tiles = {
     {
       id = 0,
@@ -270,6 +270,30 @@ return {
       image = "../../../assets/sprites/world/objects/gerson_chair.png",
       width = 54,
       height = 52
+    },
+    {
+      id = 78,
+      image = "../../../assets/sprites/world/objects/dw_item_elixir.png",
+      width = 13,
+      height = 16
+    },
+    {
+      id = 79,
+      image = "../../../assets/sprites/world/objects/dw_item_guard.png",
+      width = 13,
+      height = 9
+    },
+    {
+      id = 80,
+      image = "../../../assets/sprites/world/objects/dw_item_scarf.png",
+      width = 28,
+      height = 25
+    },
+    {
+      id = 81,
+      image = "../../../assets/sprites/world/objects/dw_item_tea.png",
+      width = 20,
+      height = 13
     },
     {
       id = 40,
