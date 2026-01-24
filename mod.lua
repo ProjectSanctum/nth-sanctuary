@@ -153,6 +153,8 @@ end
 function Mod:onMapMusic(map, music)
 	if music == "grand_bells" then
 		return {"bell_ambience", 0.5, 0.5}
+	elseif music == "church_study_slower" then
+		return {"church_dark_study", 1, 0.75}
 	end
 end
 
