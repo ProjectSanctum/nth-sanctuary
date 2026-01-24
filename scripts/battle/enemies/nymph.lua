@@ -162,8 +162,7 @@ function NymphSpawn:onAct(battler, name)
             cutscene:playSound("snd_great_shine", 1, 0.8)
 
             local bx, by = Game.battle:getSoulLocation()
-
-            local soul = Game.battle:addChild(purifyevent(bx + 20, by + 10))
+            local soul = Game.battle:addChild(TitanSpawnPurifySoul(bx+20, by+20))
             soul.color = Game:getPartyMember(Game.party[1].id).soul_color or { 1, 0, 0 }
             soul.layer = 501
             --  soul.graphics.fade = 0.20
