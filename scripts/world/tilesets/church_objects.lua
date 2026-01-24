@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   name = "church_objects",
   class = "",
   tilewidth = 960,
@@ -23,13 +23,47 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 29,
+  tilecount = 73,
   tiles = {
     {
       id = 0,
       image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches.png",
       width = 200,
-      height = 289
+      height = 289,
+      animation = {
+        {
+          tileid = 40,
+          duration = 125
+        },
+        {
+          tileid = 41,
+          duration = 125
+        },
+        {
+          tileid = 42,
+          duration = 125
+        },
+        {
+          tileid = 43,
+          duration = 125
+        },
+        {
+          tileid = 44,
+          duration = 125
+        },
+        {
+          tileid = 45,
+          duration = 125
+        },
+        {
+          tileid = 46,
+          duration = 125
+        },
+        {
+          tileid = 47,
+          duration = 125
+        }
+      }
     },
     {
       id = 1,
@@ -216,6 +250,410 @@ return {
       image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_distant_tower_longer.png",
       width = 960,
       height = 100
+    },
+    {
+      id = 33,
+      image = "../../../assets/sprites/world/objects/gerson_books_left.png",
+      width = 38,
+      height = 19
+    },
+    {
+      id = 34,
+      image = "../../../assets/sprites/world/objects/gerson_books_right.png",
+      width = 34,
+      height = 25
+    },
+    {
+      id = 35,
+      image = "../../../assets/sprites/world/objects/gerson_statue_left.png",
+      width = 58,
+      height = 76
+    },
+    {
+      id = 36,
+      image = "../../../assets/sprites/world/objects/gerson_table.png",
+      width = 133,
+      height = 48
+    },
+    {
+      id = 37,
+      image = "../../../assets/sprites/world/objects/gerson_table_book1.png",
+      width = 22,
+      height = 13
+    },
+    {
+      id = 38,
+      image = "../../../assets/sprites/world/objects/gerson_table_book2.png",
+      width = 18,
+      height = 25
+    },
+    {
+      id = 39,
+      image = "../../../assets/sprites/world/objects/gerson_table_book3.png",
+      width = 14,
+      height = 14
+    },
+    {
+      id = 77,
+      image = "../../../assets/sprites/world/objects/gerson_desk.png",
+      width = 111,
+      height = 51
+    },
+    {
+      id = 57,
+      image = "../../../assets/sprites/world/objects/gerson_chair.png",
+      width = 54,
+      height = 52
+    },
+    {
+      id = 40,
+      image = "../../../assets/sprites/world/objects/study_fireplace/1.png",
+      width = 70,
+      height = 34,
+      animation = {
+        {
+          tileid = 40,
+          duration = 150
+        },
+        {
+          tileid = 41,
+          duration = 150
+        },
+        {
+          tileid = 42,
+          duration = 150
+        },
+        {
+          tileid = 43,
+          duration = 150
+        },
+        {
+          tileid = 44,
+          duration = 150
+        },
+        {
+          tileid = 45,
+          duration = 150
+        },
+        {
+          tileid = 46,
+          duration = 150
+        },
+        {
+          tileid = 47,
+          duration = 150
+        }
+      }
+    },
+    {
+      id = 41,
+      image = "../../../assets/sprites/world/objects/study_fireplace/2.png",
+      width = 70,
+      height = 34
+    },
+    {
+      id = 42,
+      image = "../../../assets/sprites/world/objects/study_fireplace/3.png",
+      width = 70,
+      height = 34
+    },
+    {
+      id = 43,
+      image = "../../../assets/sprites/world/objects/study_fireplace/4.png",
+      width = 70,
+      height = 34
+    },
+    {
+      id = 44,
+      image = "../../../assets/sprites/world/objects/study_fireplace/5.png",
+      width = 70,
+      height = 34
+    },
+    {
+      id = 45,
+      image = "../../../assets/sprites/world/objects/study_fireplace/6.png",
+      width = 70,
+      height = 34
+    },
+    {
+      id = 46,
+      image = "../../../assets/sprites/world/objects/study_fireplace/7.png",
+      width = 70,
+      height = 34
+    },
+    {
+      id = 47,
+      image = "../../../assets/sprites/world/objects/study_fireplace/8.png",
+      width = 70,
+      height = 34
+    },
+    {
+      id = 48,
+      image = "../../../assets/sprites/world/objects/study_fountain/1.png",
+      width = 48,
+      height = 44,
+      animation = {
+        {
+          tileid = 48,
+          duration = 125
+        },
+        {
+          tileid = 49,
+          duration = 150
+        },
+        {
+          tileid = 50,
+          duration = 150
+        },
+        {
+          tileid = 51,
+          duration = 150
+        },
+        {
+          tileid = 52,
+          duration = 150
+        },
+        {
+          tileid = 53,
+          duration = 150
+        },
+        {
+          tileid = 54,
+          duration = 150
+        },
+        {
+          tileid = 55,
+          duration = 150
+        },
+        {
+          tileid = 56,
+          duration = 150
+        }
+      }
+    },
+    {
+      id = 49,
+      image = "../../../assets/sprites/world/objects/study_fountain/2.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 50,
+      image = "../../../assets/sprites/world/objects/study_fountain/3.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 51,
+      image = "../../../assets/sprites/world/objects/study_fountain/4.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 52,
+      image = "../../../assets/sprites/world/objects/study_fountain/5.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 53,
+      image = "../../../assets/sprites/world/objects/study_fountain/6.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 54,
+      image = "../../../assets/sprites/world/objects/study_fountain/7.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 55,
+      image = "../../../assets/sprites/world/objects/study_fountain/8.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 56,
+      image = "../../../assets/sprites/world/objects/study_fountain/9.png",
+      width = 48,
+      height = 44
+    },
+    {
+      id = 59,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_1.png",
+      width = 30,
+      height = 70,
+      animation = {
+        {
+          tileid = 59,
+          duration = 300
+        },
+        {
+          tileid = 60,
+          duration = 300
+        },
+        {
+          tileid = 61,
+          duration = 300
+        },
+        {
+          tileid = 62,
+          duration = 300
+        },
+        {
+          tileid = 63,
+          duration = 300
+        },
+        {
+          tileid = 64,
+          duration = 300
+        },
+        {
+          tileid = 65,
+          duration = 300
+        },
+        {
+          tileid = 66,
+          duration = 300
+        }
+      }
+    },
+    {
+      id = 60,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_2.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 61,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_3.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 62,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_4.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 63,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_5.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 64,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_6.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 65,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_7.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 66,
+      image = "../../../assets/sprites/world/objects/study_lighting/main_8.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 67,
+      image = "../../../assets/sprites/world/objects/study_lighting/main.png",
+      width = 30,
+      height = 70
+    },
+    {
+      id = 68,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_1.png",
+      width = 132,
+      height = 54,
+      animation = {
+        {
+          tileid = 68,
+          duration = 300
+        },
+        {
+          tileid = 69,
+          duration = 300
+        },
+        {
+          tileid = 70,
+          duration = 300
+        },
+        {
+          tileid = 71,
+          duration = 300
+        },
+        {
+          tileid = 72,
+          duration = 300
+        },
+        {
+          tileid = 73,
+          duration = 300
+        },
+        {
+          tileid = 74,
+          duration = 300
+        },
+        {
+          tileid = 75,
+          duration = 300
+        }
+      }
+    },
+    {
+      id = 69,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_2.png",
+      width = 132,
+      height = 54
+    },
+    {
+      id = 70,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_3.png",
+      width = 132,
+      height = 54
+    },
+    {
+      id = 71,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_4.png",
+      width = 132,
+      height = 54
+    },
+    {
+      id = 72,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_5.png",
+      width = 132,
+      height = 54
+    },
+    {
+      id = 73,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_6.png",
+      width = 132,
+      height = 54
+    },
+    {
+      id = 74,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_7.png",
+      width = 132,
+      height = 54
+    },
+    {
+      id = 75,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner_8.png",
+      width = 132,
+      height = 54
+    },
+    {
+      id = 76,
+      image = "../../../assets/sprites/world/objects/study_lighting/corner.png",
+      width = 132,
+      height = 54
     }
   }
 }
