@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 97,
+  nextobjectid = 98,
   properties = {
     ["music"] = "fast-travel"
   },
@@ -28,12 +28,12 @@ return {
     },
     {
       name = "light_areas",
-      firstgid = 287,
+      firstgid = 294,
       filename = "../tilesets/light_areas.tsx"
     },
     {
       name = "tiles_moss",
-      firstgid = 297,
+      firstgid = 304,
       filename = "../tilesets/tiles_moss.tsx"
     }
   },
@@ -234,7 +234,7 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3221225769, 1073742121, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3221225776, 1073742128, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -583,6 +583,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["map"] = "fifth_sanctum/fifth_sanctum_1",
+            ["map_name"] = "Fifth Sanctuary",
+            ["marker"] = "entry",
             ["req"] = "3",
             ["solid"] = true
           }
@@ -873,7 +876,7 @@ return {
           width = 160,
           height = 1980,
           rotation = 0,
-          gid = 289,
+          gid = 296,
           visible = true,
           properties = {
             ["light"] = true,
@@ -892,7 +895,7 @@ return {
           width = 160,
           height = 1980,
           rotation = 0,
-          gid = 289,
+          gid = 296,
           visible = true,
           properties = {
             ["light"] = true,
@@ -911,7 +914,7 @@ return {
           width = 160,
           height = 1980,
           rotation = 0,
-          gid = 2147483937,
+          gid = 2147483944,
           visible = true,
           properties = {
             ["light"] = true,
@@ -946,7 +949,7 @@ return {
           width = 160,
           height = 1980,
           rotation = 0,
-          gid = 289,
+          gid = 296,
           visible = true,
           properties = {
             ["light"] = true,
@@ -965,7 +968,7 @@ return {
           width = 160,
           height = 1980,
           rotation = 0,
-          gid = 2147483937,
+          gid = 2147483944,
           visible = true,
           properties = {
             ["light"] = true,
@@ -1036,6 +1039,19 @@ return {
           shape = "point",
           x = 120,
           y = 1320,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 97,
+          name = "entry_fifth",
+          type = "",
+          shape = "point",
+          x = 280,
+          y = 1640,
           width = 0,
           height = 0,
           rotation = 0,

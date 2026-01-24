@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="97">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="98">
  <editorsettings>
   <export target="fast_travel.lua" format="lua"/>
  </editorsettings>
@@ -8,8 +8,8 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/bg_dw_church_library_2_tileset.tsx"/>
  <tileset firstgid="261" source="../tilesets/church_objects.tsx"/>
- <tileset firstgid="287" source="../tilesets/light_areas.tsx"/>
- <tileset firstgid="297" source="../tilesets/tiles_moss.tsx"/>
+ <tileset firstgid="294" source="../tilesets/light_areas.tsx"/>
+ <tileset firstgid="304" source="../tilesets/tiles_moss.tsx"/>
  <layer id="1" name="Tile Layer 1" width="27" height="48">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,171,173,163,174,0,0,0,0,0,0,0,0,0,0,
@@ -157,7 +157,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3221225769,1073742121,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3221225776,1073742128,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -248,6 +248,9 @@
   </object>
   <object id="26" name="shard_door" x="220" y="1570" width="120" height="30">
    <properties>
+    <property name="map" value="fifth_sanctum/fifth_sanctum_1"/>
+    <property name="map_name" value="Fifth Sanctuary"/>
+    <property name="marker" value="entry"/>
     <property name="req" value="3"/>
     <property name="solid" type="bool" value="true"/>
    </properties>
@@ -323,7 +326,7 @@
   </object>
  </objectgroup>
  <objectgroup id="7" name="objects_lightarea" visible="0">
-  <object id="28" gid="289" x="40" y="2040" width="160" height="1980">
+  <object id="28" gid="296" x="40" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -331,7 +334,7 @@
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
-  <object id="31" gid="289" x="200" y="2040" width="160" height="1980">
+  <object id="31" gid="296" x="200" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -339,7 +342,7 @@
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
-  <object id="32" gid="2147483937" x="360" y="2040" width="160" height="1980">
+  <object id="32" gid="2147483944" x="360" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -354,7 +357,7 @@
    </properties>
    <point/>
   </object>
-  <object id="62" gid="289" x="680" y="2040" width="160" height="1980">
+  <object id="62" gid="296" x="680" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -362,7 +365,7 @@
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
-  <object id="63" gid="2147483937" x="880" y="2040" width="160" height="1980">
+  <object id="63" gid="2147483944" x="880" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -382,6 +385,9 @@
    <point/>
   </object>
   <object id="90" name="entry_citadel" x="120" y="1320">
+   <point/>
+  </object>
+  <object id="97" name="entry_fifth" x="280" y="1640">
    <point/>
   </object>
  </objectgroup>

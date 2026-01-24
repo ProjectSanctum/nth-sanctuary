@@ -10,6 +10,7 @@ function ShardDoor:init(data)
     self.display.y = -130
     self.siner = 0
     self.mapname = self.properties.map_name or "Placeholder"
+    self.marker = self.properties.marker or "spawn"
 end
 
 function ShardDoor:update()
@@ -34,7 +35,7 @@ function ShardDoor:onInteract(player, dir)
                 })
                 Assets.playSound("locker")
                 cutscene:wait(1)
-                cutscene:loadMap(self.properties.map)
+                cutscene:loadMap(self.properties.map, self.marker)
                 Game.world.fader:fadeIn(nil, {
                     speed = 0.25,
                 })
