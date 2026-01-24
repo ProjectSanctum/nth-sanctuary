@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 120,
+  nextobjectid = 121,
   properties = {
     ["border"] = "church_a",
     ["music"] = "church_study_slower"
@@ -410,6 +410,21 @@ return {
           gid = 660,
           visible = true,
           properties = {}
+        },
+        {
+          id = 120,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 730,
+          y = 240,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "study.fountain"
+          }
         }
       }
     },

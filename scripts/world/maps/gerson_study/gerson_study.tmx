@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="120">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="121">
  <editorsettings>
-  <export target="data.lua" format="lua"/>
+  <export format="lua"/>
  </editorsettings>
  <properties>
   <property name="border" value="church_a"/>
@@ -84,6 +84,11 @@
    </properties>
   </object>
   <object id="119" gid="660" x="366" y="872" width="222" height="102"/>
+  <object id="120" name="interactable" x="730" y="240" width="80" height="40">
+   <properties>
+    <property name="cutscene" value="study.fountain"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup color="#0000ff" id="3" name="collision">
   <object id="2" x="0" y="1000" width="160" height="40"/>
