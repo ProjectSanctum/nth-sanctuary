@@ -13,6 +13,8 @@ function Jellycruel:init()
 
     -- Add the dummy enemy to the encounter
     self:addEnemy("jellycruel")
+	
+	self.poison_chance = 0
 end
 
 return Jellycruel

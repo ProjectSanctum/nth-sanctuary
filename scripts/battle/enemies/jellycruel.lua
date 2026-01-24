@@ -55,10 +55,13 @@ function Jellycruel:update()
 
     if Game.battle.state ~= "TRANSITION" and Game.battle.state ~= "INTRO" then
         self.siner = self.siner + (1 / 6) * DTMULT
-        self.sprite.y = (math.sin(self.siner * 0.5)) * (5 * (self.health / self.max_health))
+        self.sprite.x = MathUtils.lerp(0, (math.sin(self.siner * 1)) * (3 * (self.health / self.max_health)), math.min(self.siner/2, 1))
+        self.sprite.y = MathUtils.lerp(0, (math.sin(self.siner * 0.5)) * (8 * (self.health / self.max_health)), math.min(self.siner/2, 1))
 		if self.bubble then
 			local spr = self.sprite or self
 			local x, y = spr:getRelativePos(0, spr.height/2, Game.battle)
+			self.bubble.color = ColorUtils.hexToRGB("#FB0E1C")
+			self.bubble.x = x
 			self.bubble.y = y
 		end
     end

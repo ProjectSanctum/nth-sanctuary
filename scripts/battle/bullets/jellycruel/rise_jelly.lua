@@ -11,6 +11,7 @@ function SmallBullet:init(x, y)
 	self.alpha = 0
 	self.siner = MathUtils.random(0, math.pi*2)
 	self.start_x = self.x
+	self:setHitbox(10, 25, 28, 14)
 	self.removing = false
 end
 
@@ -32,6 +33,21 @@ function SmallBullet:update()
 		self.removing = true
 		self.collider.collidable = false
 		self:fadeOutSpeedAndRemove(0.1)
+	end
+end
+
+
+function SmallBullet:onDamage(soul)
+	super.onDamage(self, soul)
+	local target = self:getTarget()
+    if isClass(target) and target:includes(PartyBattler) then
+		if MathUtils.randomInt(0, 3) <= Game.battle.encounter.poison_chance and not target:hasStatus("poison") then
+			Game.battle.encounter.poison_chance = 0
+			Assets.stopAndPlaySound("statuseffect")
+			target:inflictStatus("poison")
+		else
+			Game.battle.encounter.poison_chance = Game.battle.encounter.poison_chance + 1
+		end
 	end
 end
 
