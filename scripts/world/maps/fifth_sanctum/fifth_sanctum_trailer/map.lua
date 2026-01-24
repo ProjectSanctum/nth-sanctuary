@@ -3,7 +3,7 @@ local map, super = Class(Map, "trailer/fifth_sanctum")
 function map:init(world, data)
     super.init(self, world, data)
     print("a")
-    self.timer:every(1, function()
+    self.timer:every(3.7, function()
         if self.world:inBattle() then
             local marker1 = self.markers["left_shoot"]
             local marker2 = self.markers["right_shoot"]
@@ -11,9 +11,6 @@ function map:init(world, data)
             local marker4 = self.markers["top_down_shoot2"]
             local marker5 = self.markers["top_down_shoot3"]
             local marker6 = self.markers["top_down_shoot4"]
-            self.world:spawnBullet("smallbullet", marker1.center_x,marker1.center_y, false)
-            self.world:spawnBullet("smallbullet", marker2.center_x, marker2.center_y, true)
-            self.world:spawnBullet("smallbullet", marker2.center_x, marker2.center_y, true)
             self.world:spawnBullet("smallbullet", marker3.center_x,marker3.center_y, false, true)
             self.world:spawnBullet("smallbullet", marker4.center_x,marker4.center_y, false, true)
             self.world:spawnBullet("smallbullet", marker5.center_x,marker5.center_y, false, true)

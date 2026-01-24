@@ -9,11 +9,12 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 17,
-  nextobjectid = 102,
+  nextlayerid = 19,
+  nextobjectid = 111,
   properties = {
+    ["border"] = "simple",
     ["music"] = "negative_Sanctum_wip",
-    ["name"] = "Fifth Sanctuary - ?"
+    ["name"] = "Fifth Sanctuary - Climbing Room"
   },
   tilesets = {
     {
@@ -29,7 +30,7 @@ return {
     },
     {
       name = "bg_dw_church_2_tileset",
-      firstgid = 616,
+      firstgid = 665,
       filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
     }
   },
@@ -190,7 +191,7 @@ return {
         74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 0, 0, 0, 541, 542, 542, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74,
         74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 0, 0, 0, 0, 0, 0, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74,
         80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 0, 0, 0, 0, 0, 0, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80,
-        643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 0, 0, 0, 0, 0, 0, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643, 643,
+        692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 0, 0, 0, 0, 0, 0, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692, 692,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
       }
     },
@@ -253,7 +254,7 @@ return {
           visible = true,
           properties = {
             ["path"] = "enemy_1",
-            ["speed"] = 3
+            ["speed"] = 3.5
           }
         },
         {
@@ -269,7 +270,7 @@ return {
           visible = true,
           properties = {
             ["path"] = "enemy_2",
-            ["progress"] = 0.5,
+            ["progress"] = 2.5,
             ["speed"] = 3
           }
         },
@@ -577,6 +578,51 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 110,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1920,
+          y = 280,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 18,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 109,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 280,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "fifth_sanctum/fifth_sanctum_1",
+            ["marker"] = "entry2"
+          }
         }
       }
     },
@@ -608,20 +654,56 @@ return {
           properties = {}
         },
         {
-          id = 101,
-          name = "transition",
+          id = 103,
+          name = "top_down_shoot1",
           type = "",
-          shape = "rectangle",
-          x = -40,
-          y = 280,
-          width = 40,
-          height = 120,
+          shape = "point",
+          x = 740,
+          y = 80,
+          width = 0,
+          height = 0,
           rotation = 0,
           visible = true,
-          properties = {
-            ["map"] = "fifth_sanctum_1",
-            ["marker"] = "entry2"
-          }
+          properties = {}
+        },
+        {
+          id = 104,
+          name = "top_down_shoot2",
+          type = "",
+          shape = "point",
+          x = 820,
+          y = 80,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 105,
+          name = "top_down_shoot3",
+          type = "",
+          shape = "point",
+          x = 900,
+          y = 80,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 106,
+          name = "top_down_shoot4",
+          type = "",
+          shape = "point",
+          x = 980,
+          y = 80,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -660,6 +742,35 @@ return {
             ["val_start"] = "1.5",
             ["val_target"] = "2"
           }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 17,
+      name = "battleareas",
+      class = "",
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 102,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 0,
+          width = 480,
+          height = 480,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     }
