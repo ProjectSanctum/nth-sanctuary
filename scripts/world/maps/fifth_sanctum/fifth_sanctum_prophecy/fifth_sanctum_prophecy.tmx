@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="31">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="31">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -39,7 +39,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="3" name="Tile Layer 2" width="16" height="12" visible="0">
+ <layer id="3" name="Tile Layer 2" width="16" height="12">
   <properties>
    <property name="border" value="base_sanctum"/>
    <property name="music" value="homebase"/>
@@ -57,6 +57,22 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,463,453,466,454,455,453,464,453,0,0,0,0,
 0,0,0,0,469,459,472,460,461,459,470,459,0,0,0,0
+</data>
+ </layer>
+ <layer id="10" name="roomglow_dark" width="16" height="12">
+  <data encoding="csv">
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+0,0,0,0,0,0,0,0,0,0,0,0,133,133,133,0,
+0,0,0,0,0,0,0,0,0,0,0,0,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0,
+133,133,133,133,133,133,133,133,133,133,133,133,133,133,133,0
 </data>
  </layer>
  <objectgroup id="5" name="collision">
