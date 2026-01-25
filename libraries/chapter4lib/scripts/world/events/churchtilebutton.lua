@@ -37,7 +37,14 @@ function ChurchTileButton:update()
 				self.simplify_glowspr:stop()
 				self.simplify_glowspr:setScale(2)
 				self.simplify_glowspr.color = self.glow_color
-				self.simplify_glowspr.layer = self.layer + 0.01
+				for _,darkness in ipairs(Game.world.map:getEvents("darkness")) do
+					if darkness then
+						self.simplify_glowspr.visible = false
+						self.simplify_glowspr.layer = darkness.layer + 0.01
+					else
+						self.simplify_glowspr.layer = self.layer + 0.01
+					end
+				end
 				self.simplify_glowspr.darkness_unlit = true
 				self.simplify_glowspr.debug_select = false
 				Game.world:addChild(self.simplify_glowspr)
@@ -69,12 +76,11 @@ function ChurchTileButton:update()
 			for _,darkness in ipairs(Game.world.map:getEvents("darkness")) do
 				if darkness then
 					glowspr.visible = false
-					glowspr.layer = darkness.layer + 1
+					glowspr.layer = darkness.layer + 0.01
 				else
-					glowspr.layer = self.layer + 1
+					glowspr.layer = self.layer + 0.01
 				end
 			end
-			glowspr.layer = self.layer + 0.01
 			glowspr.physics.gravity = -0.7
 			glowspr.physics.speed_y = 1.5
 			Game.world.timer:after(lifetime/30, function()
