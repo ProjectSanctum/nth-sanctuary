@@ -211,7 +211,7 @@
   </object>
  </objectgroup>
  <objectgroup id="4" name="objects_party">
-  <object id="6" name="transition" x="162.667" y="1200" width="160" height="40">
+  <object id="6" name="transition" x="120" y="1200" width="160" height="40">
    <properties>
     <property name="map" value="fast_travel"/>
     <property name="marker" value="entry_fifth"/>
@@ -244,7 +244,7 @@
   </object>
  </objectgroup>
  <objectgroup id="3" name="markers">
-  <object id="4" name="entry" x="240" y="1160">
+  <object id="4" name="entry" x="200" y="1160">
    <point/>
   </object>
   <object id="25" name="spawn" x="220" y="865">
