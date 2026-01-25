@@ -194,6 +194,64 @@ function LeechSpawn:onAct(battler, name)
             end)
         end)
         return
+	elseif name == "WakeKris" then
+        Game.battle:startActCutscene(function(cutscene)
+            local kris = Game.battle:getPartyBattler("kris")
+			self.wake_kris_count = self.wake_kris_count + 1
+            cutscene:text("* "..battler.chara:getName().." used Wake Up!")
+			if self.wake_kris_count == 1 then
+				cutscene:text("* Hey, dumbass! Get up!")
+			end
+			battler:setAnimation("attack_unarmed")
+			Assets.playSound("ui_cancel_small")
+			Assets.playSound("damage",0.94)
+            local dmg_sprite = Sprite("effects/attack/slap_s")
+            dmg_sprite:setOrigin(0.5, 0.5)
+            dmg_sprite:setScale(1, 1)
+            local bx, by = kris:getRelativePos(kris.width / 2, kris.height / 2)
+            dmg_sprite:setPosition(bx, by)
+            dmg_sprite.layer = kris.layer + 0.01
+            dmg_sprite:play(1 / 15, false, function(s) s:remove() end)
+            kris.parent:addChild(dmg_sprite)
+			kris:shake()
+			cutscene:wait(0.5)
+			battler:setAnimation("battle/idle")
+			if kris then
+				local kris_member = Game:getPartyMember("kris")
+				if kris_member.health <= 0 then
+					local reviveamt = math.abs(kris_member.health) + 1
+					kris:heal(reviveamt)
+				else
+					cutscene:text("* (But, Kris wasn't DOWNed...)")
+				end
+			end
+        end)
+        return
+	elseif name == "ReviveKris" then
+        Game.battle:startActCutscene(function(cutscene)
+            local kris = Game.battle:getPartyBattler("kris")
+			local kris_member = Game:getPartyMember("kris")
+            cutscene:text("* "..battler.chara:getName().." used Reviver!")
+			battler:setAnimation("battle/spell")
+            local bx, by = kris:getRelativePos(0, 0)
+            local cherub = Game.battle:addChild(RalseiCherub(kris, bx+20, by+10))
+			if kris_member.health > 0 then
+				cherub.xoff = cherub.xoff - 6
+				cherub.yoff = cherub.yoff - 20
+			end
+            cherub.layer = kris.layer
+			cutscene:wait(58/30)
+			battler:setAnimation("battle/idle")
+			if kris then
+				local starthp = kris_member.health
+				if starthp <= 0 then
+					kris:heal(math.abs(starthp) + math.ceil(kris_member:getStat("health") / 3))
+				else
+					kris:heal(math.ceil(kris_member:getStat("health") * 0.5))					
+				end
+			end
+        end)
+        return
     elseif name == "Standard" then
         Game.battle:startActCutscene(function(cutscene)
             cutscene:text("* "..battler.chara:getName().." tried to \"[color:yellow]ACT[color:reset]\"...\n* But, the enemy couldn't understand!")
