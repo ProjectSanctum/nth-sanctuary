@@ -28,6 +28,9 @@ end
 function PathingEnemyGenerator:update()
     super.update(self)
 	
+	if not Game.world.player:isMovementEnabled() then
+		return
+	end
 	self.timer = self.timer + DTMULT
 	if self.timer >= self.rate then
 		local bullet = self.world:spawnBullet("pathingenemy", self.x, self.y, {
