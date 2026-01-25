@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="74">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="75">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -11,8 +11,8 @@
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="583" source="../../../tilesets/castle.tsx"/>
  <tileset firstgid="623" source="../../../tilesets/church_objects.tsx"/>
- <tileset firstgid="706" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
- <tileset firstgid="904" source="../../../tilesets/bg_dw_dither_overlay_tileset.tsx"/>
+ <tileset firstgid="705" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="903" source="../../../tilesets/bg_dw_dither_overlay_tileset.tsx"/>
  <objectgroup id="14" name="objects_parallax3" parallaxx="0.5">
   <object id="43" gid="623" x="-200" y="1020" width="400" height="578"/>
   <object id="50" gid="623" x="600" y="1020" width="400" height="578"/>
@@ -88,18 +88,18 @@
 0,0,0,0,367,576,576,576,367,576,576,576,367,576,576,576,367,367,403,404,405,367,367,576,576,576,367,0,0,0,
 0,0,0,0,74,74,74,74,378,74,74,74,74,353,354,74,74,74,74,74,74,378,74,74,74,475,476,0,0,0,
 0,0,0,0,74,74,74,74,74,74,74,74,74,359,360,74,74,74,74,74,74,74,74,74,74,477,377,0,0,0,
-0,0,0,0,79,79,79,79,79,79,79,79,79,79,79,79,79,79,74,74,476,733,733,733,733,733,733,0,0,0,
+0,0,0,0,79,79,79,79,79,79,79,79,79,79,79,79,79,79,74,74,476,732,732,732,732,732,732,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,74,74,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,475,74,74,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,135,74,74,74,353,354,74,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,135,141,74,74,74,359,360,74,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,135,141,147,733,733,733,733,733,733,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,135,141,147,732,732,732,732,732,732,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,135,141,147,158,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,135,141,147,158,159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,135,141,147,158,159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 74,74,74,74,74,378,74,74,74,141,147,158,159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 74,477,74,74,74,74,74,74,74,147,158,159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-733,733,733,733,733,733,733,733,733,158,159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+732,732,732,732,732,732,732,732,732,158,159,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="6" name="markers">
@@ -120,18 +120,17 @@
     <property name="marker" value="entry2"/>
    </properties>
   </object>
-  <object id="30" name="gueienemy" x="760" y="500" width="40" height="40">
+  <object id="30" name="tspawnenemy" x="760" y="500" width="40" height="40">
    <properties>
     <property name="actor" value="nymph"/>
     <property name="animation" value="ball"/>
     <property name="chase" type="bool" value="true"/>
-    <property name="chase_once" type="bool" value="true"/>
     <property name="chaseaccel" type="float" value="1.05"/>
     <property name="chasemax" type="float" value="100"/>
     <property name="chasespeed" type="float" value="1"/>
     <property name="chasetype" value="multiplier"/>
     <property name="encounter" value="nymph"/>
-    <property name="once" type="bool" value="true"/>
+    <property name="once" type="bool" value="false"/>
     <property name="pacetype" value="horizontalswing"/>
     <property name="swinglength" type="float" value="80"/>
    </properties>
@@ -184,6 +183,15 @@
     <property name="type" value="custom"/>
     <property name="val_start" value="1.5"/>
     <property name="val_target" value="2"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="18" name="objects_tspawn_darkness">
+  <object id="74" name="darkness" x="0" y="0">
+   <properties>
+    <property name="alpha" type="float" value="0"/>
+    <property name="highlight" type="bool" value="false"/>
    </properties>
    <point/>
   </object>

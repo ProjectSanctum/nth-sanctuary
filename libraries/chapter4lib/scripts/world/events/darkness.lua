@@ -34,6 +34,11 @@ function Darkness:drawLightsA()
 		if light.light_source and light.light_active then
 			light:drawLightA()
 		end
+		if light:includes(Character) and light.tspawn_circle_light then
+			local x, y = light:getScreenPos()
+			Draw.setColor(1, 1, 1, 1)
+			love.graphics.circle("fill", x, y - light.height/2, 110 + math.sin(self.world.map.tspawn_circle_siner / 12))
+		end
     end
     for _,light in ipairs(Game.stage:getObjects(TileObject)) do
 		if light.light_area then
