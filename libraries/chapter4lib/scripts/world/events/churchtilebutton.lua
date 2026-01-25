@@ -14,7 +14,6 @@ function ChurchTileButton:init(data)
     self.do_ripple = properties["ripple"] or false
     self.glow_color = TiledUtils.parseColorProperty(properties["glow_color"]) or ColorUtils.hexToRGB("#4EADFF")
 	self.siner = MathUtils.random(360) * math.pi
-	self.glow_timer = 0
     self.npc_activated = properties["npcpress"]
 	self.simplify_glowspr = nil
 end
@@ -53,39 +52,35 @@ function ChurchTileButton:update()
 				self.simplify_glowspr:fadeOutSpeedAndRemove(12/30)
 				self.simplify_glowspr = nil
 			end
-			self.glow_timer = self.glow_timer + DTMULT
-			if self.glow_timer >= 1 then
-				local glowspr = Sprite(self.sprite.texture_path, self.x + self.width/2, self.y + self.height/2)
-				glowspr:setOrigin(0.5)
-				glowspr:stop()
-				local scale = 2 + math.abs(math.sin(self.siner / 30) * 0.2)
-				glowspr:setScale(2)
-				local pressed = (self.pressed and 1 or 0)
-				local lifetime = 12 - pressed
-				Game.world.timer:lerpVar(glowspr, "scale_x", scale, (scale / 2) + (math.sin(self.siner / 6) * 0.1), lifetime, 2, "in")
-				Game.world.timer:lerpVar(glowspr, "scale_y", scale, (scale / 2) + (math.sin(self.siner / 8) * 0.1), lifetime, 2, "in")
-				Game.world.timer:tween(lifetime/30, glowspr, {alpha = MathUtils.clamp((0.35 + (math.sin(self.siner / 20) * 0.125)) - pressed, 0.05, 0.5)})
-				glowspr.color = self.glow_color
-				glowspr.physics.direction = math.rad(self.siner * 12)
-				for _,darkness in ipairs(Game.world.map:getEvents("darkness")) do
-					if darkness then
-						glowspr.visible = false
-						glowspr.layer = darkness.layer + 1
-					else
-						glowspr.layer = self.layer + 1
-					end
+			local glowspr = Sprite(self.sprite.texture_path, self.x + self.width/2, self.y + self.height/2)
+			glowspr:setOrigin(0.5)
+			glowspr:stop()
+			local scale = 2 + math.abs(math.sin(self.siner / 30) * 0.2)
+			glowspr:setScale(2)
+			local pressed = (self.pressed and 1 or 0)
+			local lifetime = 12 - pressed
+			Game.world.timer:lerpVar(glowspr, "scale_x", scale, (scale / 2) + (math.sin(self.siner / 6) * 0.1), lifetime, 2, "in")
+			Game.world.timer:lerpVar(glowspr, "scale_y", scale, (scale / 2) + (math.sin(self.siner / 8) * 0.1), lifetime, 2, "in")
+			Game.world.timer:lerpVar(glowspr, "alpha", MathUtils.clamp((0.35 + (math.sin(self.siner / 20) * 0.125)) - pressed, 0.05, 0.5), 0, lifetime)
+			glowspr.physics.direction = math.rad(self.siner * 12)
+			glowspr.color = self.glow_color
+			for _,darkness in ipairs(Game.world.map:getEvents("darkness")) do
+				if darkness then
+					glowspr.visible = false
+					glowspr.layer = darkness.layer + 1
+				else
+					glowspr.layer = self.layer + 1
 				end
-				glowspr.layer = self.layer + 0.01
-				glowspr.physics.gravity = -0.7
-				glowspr.physics.speed_y = 1.5
-				Game.world.timer:after(lifetime/30, function()
-					glowspr:remove()
-				end)
-				glowspr.darkness_unlit = true
-				glowspr.debug_select = false
-				Game.world:addChild(glowspr)
-				self.glow_timer = 0
 			end
+			glowspr.layer = self.layer + 0.01
+			glowspr.physics.gravity = -0.7
+			glowspr.physics.speed_y = 1.5
+			Game.world.timer:after(lifetime/30, function()
+				glowspr:remove()
+			end)
+			glowspr.darkness_unlit = true
+			glowspr.debug_select = false
+			Game.world:addChild(glowspr)
 		end
 	end
     self.sprite.alpha = self.do_ripple and 0 or 1
