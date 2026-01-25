@@ -38,22 +38,21 @@ function LeechSpawn:init()
 
     self:getAct("Check").description = "Consider\nstrategy"
     self:registerAct("Brighten", "Powerup\nlight", "all", 4)
-    self:registerAct("DualHeal", "Heal\nparty", {"susie", "ralsei"}, 16)
     self:registerAct("Banish",   "Defeat\nenemy",  nil, 50)
 
     self.dualhealcount = 0
 
 	self.t_siner = 0
-    self.banish_act_index = 4
-end
-
-function LeechSpawn:getGrazeTension()
-    return 0
+    self.banish_act_index = 3
+    self.phaseturn = 1
+    self.difficulty = 0
+	
+	self.wake_kris_count = 0
 end
 
 function LeechSpawn:update()
     super.update(self)
-    if Game.battle.state == "MENUSELECT" and Game.tension >= 50 then
+    if Game.battle.state == "MENUSELECT" and Game.battle.state_reason == "ACT" and Game.tension >= 50 then
         self.t_siner = self.t_siner + (1 * DTMULT)
         if Game.battle.menu_items[self.banish_act_index] then
             Game.battle.menu_items[self.banish_act_index].color = function()

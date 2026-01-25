@@ -434,7 +434,7 @@ return {
             ["chasemax"] = 100,
             ["chasespeed"] = 2,
             ["chasetype"] = "multiplier",
-            ["encounter"] = "nymph",
+            ["encounter"] = "nymph_spawn",
             ["once"] = true,
             ["pacetype"] = "horizontalswing",
             ["swinglength"] = 80

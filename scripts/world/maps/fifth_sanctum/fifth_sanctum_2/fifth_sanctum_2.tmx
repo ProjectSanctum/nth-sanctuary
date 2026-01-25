@@ -129,7 +129,7 @@
     <property name="chasemax" type="float" value="100"/>
     <property name="chasespeed" type="float" value="2"/>
     <property name="chasetype" value="multiplier"/>
-    <property name="encounter" value="nymph"/>
+    <property name="encounter" value="nymph_spawn"/>
     <property name="once" type="bool" value="true"/>
     <property name="pacetype" value="horizontalswing"/>
     <property name="swinglength" type="float" value="80"/>
