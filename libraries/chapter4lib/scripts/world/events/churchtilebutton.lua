@@ -43,7 +43,7 @@ function ChurchTileButton:update()
 				Game.world:addChild(self.simplify_glowspr)
 			else
 				self.simplify_glowspr:setSprite(self.sprite.texture_path)
-				self.simplify_glowspr.alpha = (0.65 + (math.sin(self.siner / 20) * 0.125))
+				self.simplify_glowspr.alpha = (0.75 + (math.sin(self.siner / 20) * 0.125))
 				self.simplify_glowspr:setScale(2 + math.abs(math.sin(self.siner / 30) * 0.1))
 			end
 			self.glow_timer = 0
