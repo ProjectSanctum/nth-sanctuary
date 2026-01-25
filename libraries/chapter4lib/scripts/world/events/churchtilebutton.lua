@@ -64,7 +64,7 @@ function ChurchTileButton:update()
 				local lifetime = 12 - pressed
 				Game.world.timer:lerpVar(glowspr, "scale_x", scale, (scale / 2) + (math.sin(self.siner / 6) * 0.1), lifetime, 2, "in")
 				Game.world.timer:lerpVar(glowspr, "scale_y", scale, (scale / 2) + (math.sin(self.siner / 8) * 0.1), lifetime, 2, "in")
-				Game.world.timer:lerpVar(glowspr, "alpha", MathUtils.clamp((0.35 + (math.sin(self.siner / 20) * 0.125)) - pressed, 0.05, 0.5), 0, lifetime)
+				Game.world.timer:tween(lifetime/30, glowspr, {alpha = MathUtils.clamp((0.35 + (math.sin(self.siner / 20) * 0.125)) - pressed, 0.05, 0.5)})
 				glowspr.color = self.glow_color
 				glowspr.physics.direction = math.rad(self.siner * 12)
 				for _,darkness in ipairs(Game.world.map:getEvents("darkness")) do
