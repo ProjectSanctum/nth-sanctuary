@@ -130,7 +130,7 @@
     <property name="chasespeed" type="float" value="1"/>
     <property name="chasetype" value="multiplier"/>
     <property name="encounter" value="nymph"/>
-    <property name="once" type="bool" value="false"/>
+    <property name="once" type="bool" value="true"/>
     <property name="pacetype" value="horizontalswing"/>
     <property name="swinglength" type="float" value="80"/>
    </properties>

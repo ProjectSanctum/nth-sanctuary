@@ -435,7 +435,7 @@ return {
             ["chasespeed"] = 1,
             ["chasetype"] = "multiplier",
             ["encounter"] = "nymph",
-            ["once"] = false,
+            ["once"] = true,
             ["pacetype"] = "horizontalswing",
             ["swinglength"] = 80
           }
