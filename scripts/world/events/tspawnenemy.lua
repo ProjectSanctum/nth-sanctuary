@@ -166,6 +166,7 @@ function TitanSpawnChaser:onCollide(player)
         if encounter then
             self.world.encountering_enemy = true
 			self.sprite:setAnimation("encounter")
+			TableUtils.clear(self.world.map.ripple_fx.ripples)
 			local ripcount = 3
 			for i = 0, ripcount do
 				local hhsp = MathUtils.lengthDirX(2, -math.rad((360 / ripcount) * i))
