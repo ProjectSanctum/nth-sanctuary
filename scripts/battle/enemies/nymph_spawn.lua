@@ -37,7 +37,7 @@ function NymphSpawn:init()
     self:getAct("Check").description = "Consider\nstrategy"
     self:registerAct("Brighten", "Powerup\nlight", "all", 4)
     self:registerAct("DualHeal", "Heal\nparty", {"susie", "ralsei"}, 16)
-    self:registerAct("Unleash", "Weaken\nenemy", nil, 72)
+    self:registerAct("Unleash", "Weaken\nenemy", nil, 64)
 
     self.dualhealcount = 0
 
@@ -59,7 +59,7 @@ end
 
 function NymphSpawn:update()
     super.update(self)
-    if Game.battle.state == "MENUSELECT" and Game.battle.state_reason == "ACT" and Game.tension >= 72 then
+    if Game.battle.state == "MENUSELECT" and Game.battle.state_reason == "ACT" and Game.tension >= 64 then
         self.t_siner = self.t_siner + (1 * DTMULT)
         if Game.battle.menu_items[self.banish_act_index] then
             Game.battle.menu_items[self.banish_act_index].color = function()
@@ -118,7 +118,7 @@ end
 
 function NymphSpawn:onAct(battler, name)
 	if name == "Check" then
-        if Game:getTension() >= 72 then
+        if Game:getTension() >= 64 then
             return {"* NYMPH SPAWN - AT 33 DF 210\n* The Spawn that grew before it could be stopped.", "* The atmosphere feels tense...\n* (You can use [color:yellow]UNLEASH[color:reset]!)"}
         else
             return {"* NYMPH SPAWN - AT 33 DF 210\n* The Spawn that grew before it could be stopped.", "* Expose it to LIGHT... and gather COURAGE to gain TP.", "* Then, use \"[color:yellow]UNLEASH[color:reset]\" to weaken it!" }
@@ -354,9 +354,9 @@ function NymphSpawn:freeze()
 end
 
 function NymphSpawn:getEncounterText()
-	if Game:getTension() < 72 and MathUtils.randomInt(100) < 4 then
+	if Game:getTension() < 64 and MathUtils.randomInt(100) < 4 then
 		return "* Smells like adrenaline."
-    elseif Game:getTension() >= 72 then 
+    elseif Game:getTension() >= 64 then 
 		return "* The atmosphere feels tense...\n* (You can use [color:yellow]UNLEASH[color:reset]!)"
 	else
 		return super.getEncounterText(self)
