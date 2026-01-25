@@ -103,7 +103,7 @@ function map:update()
 				table.insert(loc, {x = cx + SCREEN_WIDTH/2 - border, y = cy + SCREEN_HEIGHT/2})
 				local masterdir = 0
 				if Game.world.player then
-					masterdir = Utils.angle(Game.world.player.x, Game.world.player.y, Game.world.player.x + Game.world.player.moving_x, Game.world.player.y + Game.world.player.moving_y)
+					masterdir = MathUtils.angle(Game.world.player.x, Game.world.player.y, Game.world.player.x + Game.world.player.moving_x, Game.world.player.y + Game.world.player.moving_y)
 				end
 				local hhsp = -math.cos(masterdir) * 2
 				local vvsp = -math.sin(masterdir) * 2
