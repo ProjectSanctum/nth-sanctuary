@@ -125,9 +125,9 @@
     <property name="actor" value="nymph"/>
     <property name="animation" value="ball"/>
     <property name="chase" type="bool" value="true"/>
-    <property name="chaseaccel" type="float" value="1.05"/>
+    <property name="chaseaccel" type="float" value="1.075"/>
     <property name="chasemax" type="float" value="100"/>
-    <property name="chasespeed" type="float" value="1"/>
+    <property name="chasespeed" type="float" value="2"/>
     <property name="chasetype" value="multiplier"/>
     <property name="encounter" value="nymph"/>
     <property name="once" type="bool" value="true"/>
