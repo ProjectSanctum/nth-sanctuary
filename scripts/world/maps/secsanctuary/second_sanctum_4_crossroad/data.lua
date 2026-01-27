@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 19,
-  nextobjectid = 141,
+  nextobjectid = 144,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -895,6 +895,32 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 141,
+          name = "entry4",
+          type = "",
+          shape = "point",
+          x = 1680,
+          y = 900,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 142,
+          name = "entry3",
+          type = "",
+          shape = "point",
+          x = 240,
+          y = 1680,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -1104,6 +1130,22 @@ return {
           properties = {
             ["map"] = "floodedsanctuary/between",
             ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 143,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 840,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "floodedsanctuary/between",
+            ["marker"] = "entry3"
           }
         }
       }

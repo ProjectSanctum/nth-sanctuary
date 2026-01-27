@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="92">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="42" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="99">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -12,8 +12,18 @@
  <tileset firstgid="942" source="../../../tilesets/libraryexcerpt.tsx"/>
  <tileset firstgid="990" source="../../../tilesets/bg_dw_church_watertileset_drained.tsx"/>
  <tileset firstgid="1008" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
- <layer id="13" name="tiles4" width="34" height="32" tintcolor="#535353">
+ <layer id="13" name="tiles4" width="34" height="42" tintcolor="#535353">
   <data encoding="csv">
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
@@ -48,8 +58,18 @@
 1007,1007,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="14" name="tiles5" width="34" height="32" tintcolor="#535353">
+ <layer id="14" name="tiles5" width="34" height="42" tintcolor="#535353">
   <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -84,10 +104,20 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="1" name="tiles" width="34" height="32">
+ <layer id="1" name="tiles" width="34" height="42">
   <data encoding="csv">
+935,935,935,935,935,935,935,935,935,935,935,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+432,432,432,432,432,432,432,432,432,432,432,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+432,432,432,432,432,432,432,432,432,432,432,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+432,432,432,432,432,432,432,432,432,432,432,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+444,444,444,444,444,444,444,444,432,432,432,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,432,432,432,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,444,444,444,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,
+432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,
 432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,
 432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,432,
 444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,
@@ -120,8 +150,18 @@
 0,0,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444
 </data>
  </layer>
- <layer id="2" name="tiles2" width="34" height="32">
+ <layer id="2" name="tiles2" width="34" height="42">
   <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -156,8 +196,18 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="4" name="tiles3" width="34" height="32">
+ <layer id="4" name="tiles3" width="34" height="42">
   <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -194,107 +244,123 @@
  </layer>
  <objectgroup id="15" name="climbareas"/>
  <objectgroup id="6" name="collision">
-  <object id="22" x="160" y="1120" width="1200" height="40"/>
-  <object id="33" name="rippleblock" x="-40" y="1040" width="40" height="80">
+  <object id="22" x="160" y="1520" width="1200" height="40"/>
+  <object id="33" name="rippleblock" x="-40" y="1440" width="40" height="80">
    <properties>
     <property name="map" value="floodedsanctuary/between"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="40" x="0" y="1000" width="160" height="40"/>
-  <object id="41" name="rippleblock2" x="1240" y="1160" width="40" height="80">
+  <object id="40" x="0" y="1400" width="160" height="40"/>
+  <object id="41" name="rippleblock2" x="1240" y="1560" width="40" height="80">
    <properties>
     <property name="map" value="floodedsanctuary/between"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="42" x="40" y="1240" width="1320" height="40"/>
-  <object id="43" x="1360" y="1160" width="40" height="80"/>
-  <object id="44" x="40" y="1120" width="40" height="120"/>
-  <object id="45" x="160" y="1040">
+  <object id="42" x="40" y="1640" width="1320" height="40"/>
+  <object id="43" x="1360" y="1560" width="40" height="80"/>
+  <object id="44" x="40" y="1520" width="40" height="120"/>
+  <object id="45" x="160" y="1440">
    <polygon points="0,0 160,-160 0,-160 0,0"/>
   </object>
-  <object id="46" x="160" y="1120">
+  <object id="46" x="160" y="1520">
    <polygon points="0,0 160,-160 160,0"/>
   </object>
-  <object id="47" x="320" y="960" width="600" height="40"/>
-  <object id="48" x="320" y="840" width="600" height="40"/>
-  <object id="49" x="920" y="880" width="40" height="80"/>
-  <object id="56" name="rippleblock3" x="560" y="880" width="40" height="80">
+  <object id="47" x="320" y="1360" width="600" height="40"/>
+  <object id="48" x="320" y="1240" width="600" height="40"/>
+  <object id="49" x="920" y="1280" width="40" height="80"/>
+  <object id="56" name="rippleblock3" x="560" y="1280" width="40" height="80">
    <properties>
     <property name="map" value="floodedsanctuary/between"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="66" x="920" y="680" width="40" height="80"/>
-  <object id="67" x="640" y="760" width="280" height="40"/>
-  <object id="68" x="320" y="760" width="280" height="40"/>
-  <object id="69" x="600" y="680" width="40" height="80"/>
-  <object id="70" x="320" y="640" width="240" height="40"/>
-  <object id="71" x="560" y="640" width="360" height="40"/>
-  <object id="72" x="280" y="680" width="40" height="80"/>
-  <object id="76" x="0" y="1120" width="40" height="40"/>
-  <object id="90" x="0" y="160" width="1360" height="40"/>
-  <object id="91" x="0" y="40" width="1360" height="40"/>
+  <object id="66" x="920" y="1080" width="40" height="80"/>
+  <object id="67" x="640" y="1160" width="280" height="40"/>
+  <object id="68" x="320" y="1160" width="280" height="40"/>
+  <object id="69" x="600" y="1080" width="40" height="80"/>
+  <object id="70" x="320" y="1040" width="240" height="40"/>
+  <object id="71" x="560" y="1040" width="360" height="40"/>
+  <object id="72" x="280" y="1080" width="40" height="80"/>
+  <object id="76" x="0" y="1520" width="40" height="40"/>
+  <object id="90" x="0" y="560" width="1360" height="40"/>
+  <object id="91" x="0" y="410" width="1360" height="40"/>
+  <object id="95" x="0" y="160" width="320" height="80"/>
+  <object id="96" x="320" y="240" width="120" height="40"/>
+  <object id="97" x="440" y="40" width="40" height="200"/>
+  <object id="98" x="0" y="0" width="440" height="40"/>
  </objectgroup>
  <objectgroup id="8" name="markers">
-  <object id="11" name="spawn" x="40" y="1080">
+  <object id="11" name="spawn" x="40" y="1480">
    <point/>
   </object>
-  <object id="29" name="entry" x="40" y="120">
+  <object id="29" name="entry" x="40" y="500">
    <point/>
   </object>
-  <object id="75" name="entry2" x="1320" y="120">
+  <object id="75" name="entry2" x="1320" y="500">
+   <point/>
+  </object>
+  <object id="92" name="entry4" x="40" y="100">
+   <point/>
+  </object>
+  <object id="93" name="entry3" x="40" y="1480">
    <point/>
   </object>
  </objectgroup>
  <objectgroup color="#0000ff" id="11" name="objects">
-  <object id="28" name="transition" x="-40" y="1040" width="40" height="80">
+  <object id="28" name="transition" x="-40" y="1440" width="40" height="80">
    <properties>
     <property name="map" value="floodedsanctuary/hellentrance"/>
     <property name="marker" value="entry2"/>
    </properties>
   </object>
+  <object id="94" name="transition" x="-40" y="40" width="40" height="120">
+   <properties>
+    <property name="map" value="floodedsanctuary/hellentrance"/>
+    <property name="marker" value="entry4"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup color="#ff02ff" id="7" name="objects_party">
-  <object id="8" name="climbarea" x="1280" y="920" width="40" height="200"/>
-  <object id="10" name="climbentry" x="1280" y="1120" width="40" height="40">
+  <object id="8" name="climbarea" x="1280" y="1320" width="40" height="200"/>
+  <object id="10" name="climbentry" x="1280" y="1520" width="40" height="40">
    <properties>
     <property name="area" type="object" value="8"/>
     <property name="up" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="34" name="climbarea" x="1280" y="760" width="40" height="80"/>
-  <object id="36" name="climbarea" x="1240" y="760" width="40" height="40"/>
-  <object id="38" name="climbarea" x="1120" y="760" width="40" height="40"/>
-  <object id="39" name="climbarea" x="1120" y="680" width="40" height="80"/>
-  <object id="50" name="climbarea" x="600" y="680" width="40" height="160"/>
-  <object id="53" name="climbentry" x="600" y="840" width="40" height="40">
+  <object id="34" name="climbarea" x="1280" y="1160" width="40" height="80"/>
+  <object id="36" name="climbarea" x="1240" y="1160" width="40" height="40"/>
+  <object id="38" name="climbarea" x="1120" y="1160" width="40" height="40"/>
+  <object id="39" name="climbarea" x="1120" y="1080" width="40" height="80"/>
+  <object id="50" name="climbarea" x="600" y="1080" width="40" height="160"/>
+  <object id="53" name="climbentry" x="600" y="1240" width="40" height="40">
    <properties>
     <property name="area" type="object" value="50"/>
     <property name="up" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="57" name="climbarea" x="600" y="600" width="40" height="80"/>
-  <object id="73" name="climbarea" x="1080" y="560" width="80" height="40"/>
-  <object id="74" name="climbarea" x="1000" y="560" width="40" height="40"/>
-  <object id="81" name="climbarea" x="520" y="600" width="40" height="40"/>
-  <object id="82" name="climbarea" x="680" y="600" width="40" height="40"/>
-  <object id="83" name="climbentry" x="520" y="640" width="40" height="40">
+  <object id="57" name="climbarea" x="600" y="1000" width="40" height="80"/>
+  <object id="73" name="climbarea" x="1080" y="960" width="80" height="40"/>
+  <object id="74" name="climbarea" x="1000" y="960" width="40" height="40"/>
+  <object id="81" name="climbarea" x="520" y="1000" width="40" height="40"/>
+  <object id="82" name="climbarea" x="680" y="1000" width="40" height="40"/>
+  <object id="83" name="climbentry" x="520" y="1040" width="40" height="40">
    <properties>
     <property name="area" type="object" value="81"/>
     <property name="up" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="84" name="climbentry" x="680" y="640" width="40" height="40">
+  <object id="84" name="climbentry" x="680" y="1040" width="40" height="40">
    <properties>
     <property name="area" type="object" value="82"/>
     <property name="up" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="85" name="climbarea" x="1000" y="480" width="80" height="40"/>
-  <object id="87" name="climbarea" x="1000" y="200" width="80" height="240"/>
-  <object id="88" name="climbentry" x="1000" y="160" width="80" height="40">
+  <object id="85" name="climbarea" x="1000" y="880" width="80" height="40"/>
+  <object id="87" name="climbarea" x="1000" y="600" width="80" height="240"/>
+  <object id="88" name="climbentry" x="1000" y="560" width="80" height="40">
    <properties>
     <property name="area" type="object" value="87"/>
     <property name="up" type="bool" value="true"/>
@@ -302,13 +368,13 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="objects_overlay">
-  <object id="17" name="texturescroller" x="40" y="40">
+  <object id="17" name="texturescroller" x="40" y="440">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
    <point/>
   </object>
-  <object id="18" name="churchfog" x="40" y="160">
+  <object id="18" name="churchfog" x="40" y="560">
    <point/>
   </object>
  </objectgroup>

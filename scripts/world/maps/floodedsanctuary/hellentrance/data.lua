@@ -29,7 +29,8 @@ return {
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 360,
-      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx"
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "libraryexcerpt",
