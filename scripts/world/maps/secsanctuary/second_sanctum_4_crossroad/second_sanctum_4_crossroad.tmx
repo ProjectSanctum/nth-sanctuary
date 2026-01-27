@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="144">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="153">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -220,7 +220,7 @@
   <object id="7" name="entry" x="40" y="920">
    <point/>
   </object>
-  <object id="8" name="spawn" x="860" y="740">
+  <object id="8" name="spawn" x="860" y="500">
    <point/>
   </object>
   <object id="136" name="entry2" x="1680" y="1240">
@@ -230,6 +230,9 @@
    <point/>
   </object>
   <object id="142" name="entry3" x="240" y="1680">
+   <point/>
+  </object>
+  <object id="148" name="targ" x="860" y="320">
    <point/>
   </object>
  </objectgroup>
@@ -296,6 +299,35 @@
     <property name="map" value="floodedsanctuary/between"/>
     <property name="marker" value="entry3"/>
    </properties>
+  </object>
+  <object id="149" name="cameratarget" x="720" y="400" width="280" height="120">
+   <properties>
+    <property name="lockx" type="bool" value="true"/>
+    <property name="locky" type="bool" value="true"/>
+    <property name="marker" value="targ"/>
+    <property name="time" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="150" name="prophecy" x="720" y="400" width="280" height="120">
+   <properties>
+    <property name="fade_edges" type="bool" value="true"/>
+    <property name="no_back" type="bool" value="true"/>
+    <property name="offx" type="float" value="144"/>
+    <property name="offy" type="float" value="-120"/>
+    <property name="panel_h" type="int" value="96"/>
+    <property name="spr_offx" type="float" value="64"/>
+    <property name="spr_offy" type="float" value="104"/>
+    <property name="text">SUNKEN IN THE DEEP,
+YET BURNING WITH PROMISE.</property>
+    <property name="texture" value="hotandcold"/>
+    <property name="txt_offy" type="float" value="-64"/>
+   </properties>
+  </object>
+  <object id="151" name="roomglow" x="0" y="0">
+   <properties>
+    <property name="prophecy" type="bool" value="true"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="4" name="objects_top">

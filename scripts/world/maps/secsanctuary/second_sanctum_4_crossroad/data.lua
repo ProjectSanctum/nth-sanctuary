@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 19,
-  nextobjectid = 144,
+  nextobjectid = 153,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -876,7 +876,7 @@ return {
           type = "",
           shape = "point",
           x = 860,
-          y = 740,
+          y = 500,
           width = 0,
           height = 0,
           rotation = 0,
@@ -916,6 +916,19 @@ return {
           shape = "point",
           x = 240,
           y = 1680,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 148,
+          name = "targ",
+          type = "",
+          shape = "point",
+          x = 860,
+          y = 320,
           width = 0,
           height = 0,
           rotation = 0,
@@ -1146,6 +1159,63 @@ return {
           properties = {
             ["map"] = "floodedsanctuary/between",
             ["marker"] = "entry3"
+          }
+        },
+        {
+          id = 149,
+          name = "cameratarget",
+          type = "",
+          shape = "rectangle",
+          x = 720,
+          y = 400,
+          width = 280,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["lockx"] = true,
+            ["locky"] = true,
+            ["marker"] = "targ",
+            ["time"] = 1
+          }
+        },
+        {
+          id = 150,
+          name = "prophecy",
+          type = "",
+          shape = "rectangle",
+          x = 720,
+          y = 400,
+          width = 280,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["fade_edges"] = true,
+            ["no_back"] = true,
+            ["offx"] = 144,
+            ["offy"] = -120,
+            ["panel_h"] = 96,
+            ["spr_offx"] = 64,
+            ["spr_offy"] = 104,
+            ["text"] = "SUNKEN IN THE DEEP,\nYET BURNING WITH PROMISE.",
+            ["texture"] = "hotandcold",
+            ["txt_offy"] = -64
+          }
+        },
+        {
+          id = 151,
+          name = "roomglow",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["prophecy"] = true
           }
         }
       }
