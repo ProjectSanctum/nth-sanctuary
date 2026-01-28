@@ -9,8 +9,8 @@ return {
   height = 24,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 19,
-  nextobjectid = 43,
+  nextlayerid = 20,
+  nextobjectid = 47,
   properties = {
     ["border"] = "church_flooded_dynamic",
     ["music"] = "waves",
@@ -668,6 +668,48 @@ return {
           y = 320,
           width = 640,
           height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 19,
+      name = "objects_silhouette",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 45,
+          name = "watersilhouette",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 0,
+          width = 80,
+          height = 800,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "watersilhouette",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 0,
+          width = 80,
+          height = 800,
           rotation = 0,
           visible = true,
           properties = {}
