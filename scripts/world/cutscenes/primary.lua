@@ -339,6 +339,7 @@ return {
         cutscene:text("* You, [wait:5]uh... [wait:10]Feel better?", "nervous")
         cutscene:text("* Good. [wait:10]Let's see what Ralsei's so spooked about.", "nervous_side")
         kris.flip_x = false
+        Game.world.camera.keep_in_bounds = true
         cutscene:attachCamera()
         susie:resetSprite()
         kris:resetSprite()
