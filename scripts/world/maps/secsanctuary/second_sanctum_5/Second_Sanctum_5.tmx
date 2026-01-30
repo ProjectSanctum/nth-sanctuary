@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="22">
  <editorsettings>
-  <export target="Second_Sanctum_5.lua" format="lua"/>
+  <export target="second_sanctum_5.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="../../../tilesets/church_objects.tsx"/>
  <tileset firstgid="85" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
