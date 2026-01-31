@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="77">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="78">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -316,6 +316,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,155,156,157,0,0
 </data>
  </layer>
+ <objectgroup id="20" name="objects_eyeglow">
+  <object id="77" name="eye_glow" x="520" y="596">
+   <point/>
+  </object>
+ </objectgroup>
  <layer id="17" name="roomglow_dark" width="20" height="34">
   <data encoding="csv">
 331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,

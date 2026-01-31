@@ -30,6 +30,9 @@ function Map:load()
 		for e, value in ipairs(self.events_by_name.window_glow or {}) do
 			value.glows = 1
 		end
+		for e, value in ipairs(self.events_by_name.eye_glow or {}) do
+			value.glows = 1
+		end
 		for e, value in ipairs(self.events_by_name.darkness or {}) do
 			if value.alpha <= 0.2 then
 				value:remove()

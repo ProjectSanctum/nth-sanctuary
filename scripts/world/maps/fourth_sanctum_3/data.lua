@@ -9,8 +9,8 @@ return {
   height = 34,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 20,
-  nextobjectid = 77,
+  nextlayerid = 21,
+  nextobjectid = 78,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -698,6 +698,35 @@ return {
         10, 10, 132, 44, 44, 44, 142, 10, 10, 10, 10, 10, 106, 115, 0, 137, 138, 139, 0, 0,
         28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 115, 0, 0, 146, 147, 148, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 156, 157, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 20,
+      name = "objects_eyeglow",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 77,
+          name = "eye_glow",
+          type = "",
+          shape = "point",
+          x = 520,
+          y = 596,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
