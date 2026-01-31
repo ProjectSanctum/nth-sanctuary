@@ -87,7 +87,7 @@ function Winglade:onShortAct(battler, name)
         Assets.stopAndPlaySound("pirouette", 0.7, 1.1)
         battler:setAnimation('pirouette')
         self:addMercy(40)
-        return "* Susie twirls like a ballerina!"
+        return "* Jamm twirls like a ballerina!"
     end
 
     return super.onShortAct(self, battler, name)
