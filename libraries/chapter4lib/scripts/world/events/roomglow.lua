@@ -12,6 +12,7 @@ function RoomGlow:init(data)
     self.highlight = TiledUtils.parseColorProperty(properties["highlight"]) or ColorUtils.hexToRGB("#42D0FFFF")
     self.darkcol = TiledUtils.parseColorProperty(properties["darkness"]) or ColorUtils.hexToRGB("#404040FF")
 	self.glowactive = properties["active"] or false
+	self.shadow = properties["shadow"] ~= false
 	self.actind = properties["alpha"] or 0
 	self.lerpstrength = 0.125
 end
@@ -80,11 +81,13 @@ function RoomGlow:update()
 			else
 				chara:addFX(ChurchHighlightFX(0, self.highlight, {darkcol = self.darkcol}, 1), "highlight")
 			end
-			if sfx then
-				sfx.scale = self.actind*2
-				sfx.alpha = self.actind
-			else
-				chara:addFX(ChurchShadowFX(), "shadow")
+			if self.shadow then
+				if sfx then
+					sfx.scale = self.actind*2
+					sfx.alpha = self.actind
+				else
+					chara:addFX(ChurchShadowFX(), "shadow")
+				end
 			end
         end
     end

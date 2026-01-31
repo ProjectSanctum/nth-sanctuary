@@ -308,6 +308,7 @@
     <property name="alpha" type="float" value="0.5"/>
     <property name="darkness" type="color" value="#ffc04040"/>
     <property name="highlight" type="color" value="#40ffffff"/>
+    <property name="shadow" type="bool" value="false"/>
     <property name="tint" type="color" value="#ffff8080"/>
    </properties>
    <point/>

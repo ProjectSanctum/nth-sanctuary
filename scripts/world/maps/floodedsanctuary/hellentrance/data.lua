@@ -652,6 +652,7 @@ return {
             ["alpha"] = 0.5,
             ["darkness"] = "#ffc04040",
             ["highlight"] = "#40ffffff",
+            ["shadow"] = false,
             ["tint"] = "#ffff8080"
           }
         },
