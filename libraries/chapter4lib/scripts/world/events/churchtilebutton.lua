@@ -30,7 +30,7 @@ function ChurchTileButton:update()
 		onscreen = false
     end
 	if self.glow and onscreen then
-		if Kristal.Config["simplifyVFX"] then
+		if Kristal.Config["simplifyVFX"] or FRAMERATE >= 120 then
 			if not self.simplify_glowspr then
 				self.simplify_glowspr = Sprite(self.sprite.texture_path, self.x + self.width/2, self.y + self.height/2)
 				self.simplify_glowspr:setOrigin(0.5)
