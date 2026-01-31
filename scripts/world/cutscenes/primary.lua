@@ -475,6 +475,10 @@ return {
 			Game.world.timer:during(60/30, function()
 				kris.sprite.frame = (math.floor(cutscene.fall_hurt_frame % 4) + 1)
 			end)
+			Game.world.timer:during(120/30, function()
+				local highlight_color = ColorUtils.mergeColor(ColorUtils.hexToRGB("#42D0FFFF"), ColorUtils.hexToRGB("#96CD6EFF"), fakehsv.amount)
+				highlight:setColor(highlight_color[1], highlight_color[2], highlight_color[3], 1)
+			end)
 			cutscene:wait(60/30)
 			kris.sprite.frame = 1
 			kris:setAnimation("fall_hurt_wind")
