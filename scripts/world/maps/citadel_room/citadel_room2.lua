@@ -18,18 +18,18 @@ return {
     {
       name = "bg_ch3_dw_teevie_land_tileset",
       firstgid = 1,
-      filename = "../tilesets/teevie_land.tsx"
+      filename = "../../tilesets/teevie_land.tsx"
     },
     {
       name = "church_objects",
       firstgid = 157,
-      filename = "../tilesets/church_objects.tsx",
-      exportfilename = "../tilesets/church_objects.lua"
+      filename = "../../tilesets/church_objects.tsx",
+      exportfilename = "../../tilesets/church_objects.lua"
     },
     {
       name = "tiles_moss",
-      firstgid = 187,
-      filename = "../tilesets/tiles_moss.tsx"
+      firstgid = 242,
+      filename = "../../tilesets/tiles_moss.tsx"
     }
   },
   layers = {
@@ -89,7 +89,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          gid = 187,
+          gid = 242,
           visible = true,
           properties = {
             ["cutscene"] = "konverge.untroll",

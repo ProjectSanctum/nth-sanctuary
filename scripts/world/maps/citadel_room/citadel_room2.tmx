@@ -6,9 +6,9 @@
  <properties>
   <property name="music" value="greenroom_detune"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/teevie_land.tsx"/>
- <tileset firstgid="157" source="../tilesets/church_objects.tsx"/>
- <tileset firstgid="187" source="../tilesets/tiles_moss.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/teevie_land.tsx"/>
+ <tileset firstgid="157" source="../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="242" source="../../tilesets/tiles_moss.tsx"/>
  <layer id="1" name="Tile Layer 1" width="25" height="12">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -26,7 +26,7 @@
 </data>
  </layer>
  <objectgroup id="6" name="objects_moss">
-  <object id="18" name="interactable" gid="187" x="120" y="240" width="40" height="40">
+  <object id="18" name="interactable" gid="242" x="120" y="240" width="40" height="40">
    <properties>
     <property name="cutscene" value="konverge.untroll"/>
     <property name="usetile" value="true"/>

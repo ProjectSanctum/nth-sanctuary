@@ -89,6 +89,60 @@ return {
         cutscene:startEncounter("jellycruel")
         cr:remove()
         event:setSprite("world/objects/treasure_chest_1")
+    end,
+    scammed = function (cutscene)
+        local sp = cutscene:getCharacter("spamton")
+        local function emote(who, anim, sound, shakex, shakey, fric)
+            who:setAnimation(anim)
+            cutscene:shakeCharacter(who, shakex or 4, shakey or 0, fric or 1)
+            if sound then
+                Assets.playSound(sound)
+            end
+        end
+        cutscene:setSpeaker(sp)
+        cutscene:text("* KRIS!!! [wait:10]MY FAVORITE [[Esteemed Customer]]")
+        cutscene:text("* MAY I INTEREST YOU IN A [[Distinct Healing Item]]?")
+        emote(sp, "grab", "wing")
+        cutscene:text("* A [[Deal]] SO GOOD, [wait:10][func:em][[Even I don't want it!]]", {
+            functions = {
+                em = function()
+                    emote(sp, "armsup_laugh", "wing")
+                end
+            }
+        })
+        cutscene:text("* ONLY FOR THE PRICE OF 500 KROMER.")
+        emote(sp, "grab", "wing")
+        cutscene:text("* WHADDYA SAY, [wait:5][Friend]?")
+        local ch = cutscene:choicer({"Deal", "No Deal"})
+        if ch == 2 then
+            cutscene:wait(2)
+            sp:setAnimation("dark")
+            cutscene:text("* Oh. [wait:10]Ok.")
+        elseif ch == 1 then
+            sp:setSprite("laugh_left")
+            sp.sprite:play(1/15)
+            cutscene:slideTo(sp, sp.x+20, sp.y, 0.5, 'out-expo')
+            cutscene:text("* THANK YOU [[Little Sponge]] FOR THE [[Bits!]]")
+            cutscene:text("* ENJOY THIS [[Toxic Gift]] THAT YOU WILL")
+            sp.sprite:stop()
+            sp.sprite:setFrame(2)
+            cutscene:wait(1)
+            sp:setAnimation("dark")
+            cutscene:text("* [Hyperlink Blocked].")
+            sp:setSprite("glitch_laugh/glitch_laugh")
+            sp.sprite:play(0.1)
+            cutscene:text("* EAHAHAHAHAH!")
+            sp.sprite:stop()
+            sp.sprite:setFrame(20)
+            cutscene:wait(1)
+            cutscene:slideTo(sp, sp.x-20, sp.y, 0.5, 'out-expo')
+            emote(sp, "arms", "wing")
+            cutscene:text("* No Refunds (TM)")
+            cutscene:setSpeaker()
+            Assets.playSound("item")
+            cutscene:text("* (You got the S.POISON.)")
+        end
+        sp:resetSprite()
     end
 
 }
