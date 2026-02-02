@@ -100,6 +100,10 @@ return {
             end
         end
         cutscene:setSpeaker(sp)
+        if Game:getFlag("scammed") then
+            cutscene:text("* No Refunds (TM)")
+            return true
+        end
         cutscene:text("* KRIS!!! [wait:10]MY FAVORITE [[Esteemed Customer]]")
         cutscene:text("* MAY I INTEREST YOU IN A [[Distinct Healing Item]]?")
         emote(sp, "grab", "wing")
@@ -119,6 +123,22 @@ return {
             sp:setAnimation("dark")
             cutscene:text("* Oh. [wait:10]Ok.")
         elseif ch == 1 then
+            if Game.money < 500 then
+                cutscene:text("* WHAT??!?! [wait:10]YOU DON'T HAVE ENOUGH [[Wacky Stacks]]?!?")
+                cutscene:text("* [[Outrageous]], [wait:10]YOU HEAR ME?")
+                if cutscene:getCharacter("jamm") then
+                    cutscene:text("* SORRY [[Friend]], [wait:5][[I don't give credit!]][react:1]",{
+                        reactions = {
+                            {"Do you take \nMonopoly Money?", "right", "bottommid", "troll", "jamm"}
+                        }
+                    })
+                else
+                    cutscene:text("* SORRY [[Friend]], [wait:5][[I don't give credit!]]")
+                end
+                cutscene:text("* COME BACK [[When you're a little, [wait:5]mmmm, [wait:5]RICHER!]]")
+                goto endcut
+            end
+            Game.money = Game.money - 500
             sp:setSprite("laugh_left")
             sp.sprite:play(1/15)
             cutscene:slideTo(sp, sp.x+20, sp.y, 0.5, 'out-expo')
@@ -141,7 +161,9 @@ return {
             cutscene:setSpeaker()
             Assets.playSound("item")
             cutscene:text("* (You got the S.POISON.)")
+            Game:setFlag("scammed", true)
         end
+        ::endcut::
         sp:resetSprite()
     end
 
