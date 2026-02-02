@@ -64,7 +64,7 @@
   <object id="100" gid="1145" x="-40" y="0" width="400" height="578" rotation="-180"/>
  </objectgroup>
  <objectgroup id="23" name="objects_parallax_fade">
-  <object id="161" gid="1153" x="1680" y="1720" width="760" height="1680" rotation="270"/>
+  <object id="161" gid="1153" x="1720" y="2120" width="1280" height="1720" rotation="270"/>
  </objectgroup>
  <layer id="21" name="roomglow_dark_bg" width="43" height="43" visible="0">
   <data encoding="csv">
