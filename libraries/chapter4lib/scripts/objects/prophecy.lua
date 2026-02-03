@@ -42,13 +42,34 @@ function Prophecy:init(data)
 
 	self.fade_edges = properties["fade_edges"] or false
 
-    self.panel                 = ProphecyPanel(self.texture, self.text, self.panel_width, self.panel_height)
+	self.base_tex = properties["base_tex"] or "backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS"
+	self.faded_tex = properties["faded_tex"] or "backgrounds/IMAGE_DEPTH_EXTEND_SEAMLESS"
+
+    self.panel                 = ProphecyPanel(self.base_tex, self.faded_tex, self.texture, self.text, self.panel_width, self.panel_height)
     self.panel.sprite_offset_x = self.sprite_offset_x
     self.panel.sprite_offset_y = self.sprite_offset_y
     self.panel.text_offset_x   = self.text_offset_x
     self.panel.text_offset_y   = self.text_offset_y
 	self.panel.no_back		   = self.no_back
 	self.panel.fade_edges	   = self.fade_edges
+	if properties["propbluecol"] then
+		self.panel.propblue = properties["propbluecol"] and TiledUtils.parseColorProperty(properties["propbluecol"])
+	end
+	if properties["litebluecol"] then
+		self.panel.liteblue = properties["litebluecol"] and TiledUtils.parseColorProperty(properties["litebluecol"])
+	end
+	if properties["ogbgcol"] then
+		self.panel.ogbg = TiledUtils.parseColorProperty(properties["ogbgcol"])
+	end
+	if properties["linecol1"] then
+		self.panel.linecol1 = properties["linecol1"] and TiledUtils.parseColorProperty(properties["linecol1"])
+	end
+	if properties["linecol2"] then
+		self.panel.linecol2 = properties["linecol2"] and TiledUtils.parseColorProperty(properties["linecol2"])
+	end
+	if properties["textcol"] then
+		self.panel.text_color = properties["textcol"] and TiledUtils.parseColorProperty(properties["textcol"])
+	end
 
     self.container:addChild(self.panel)
 
