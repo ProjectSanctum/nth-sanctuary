@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="28" tilewidth="40" tileheight="40" infinite="0" parallaxoriginx="-320" parallaxoriginy="-240" nextlayerid="14" nextobjectid="94">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="church_b"/>
+  <property name="music" value="second_church"/>
+  <property name="name" value="Second Sanctuary"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="583" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="781" source="../../../tilesets/church_objects.tsx"/>
+ <objectgroup id="12" name="objects_parallax3" visible="0" parallaxx="0.3" parallaxy="0.82">
+  <object id="77" gid="793" x="80" y="0" width="416" height="130" rotation="90">
+   <properties>
+    <property name="color" type="color" value="#ff00007f"/>
+   </properties>
+  </object>
+  <object id="79" gid="793" x="80" y="410" width="416" height="130" rotation="90">
+   <properties>
+    <property name="color" type="color" value="#ff00007f"/>
+   </properties>
+  </object>
+  <object id="80" gid="793" x="80" y="820" width="416" height="130" rotation="90">
+   <properties>
+    <property name="color" type="color" value="#ff00007f"/>
+   </properties>
+  </object>
+  <object id="81" gid="793" x="590" y="0" width="416" height="130" rotation="90">
+   <properties>
+    <property name="color" type="color" value="#ff00007f"/>
+   </properties>
+  </object>
+  <object id="82" gid="793" x="590" y="410" width="416" height="130" rotation="90">
+   <properties>
+    <property name="color" type="color" value="#ff00007f"/>
+   </properties>
+  </object>
+  <object id="83" gid="793" x="590" y="820" width="416" height="130" rotation="90">
+   <properties>
+    <property name="color" type="color" value="#ff00007f"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="objects_parallax2" visible="0" parallaxx="0.4" parallaxy="0.85">
+  <object id="33" gid="793" x="-280" y="240" width="640" height="200">
+   <properties>
+    <property name="color" type="color" value="#ff2525ba"/>
+   </properties>
+  </object>
+  <object id="34" gid="793" x="360" y="240" width="640" height="200">
+   <properties>
+    <property name="color" type="color" value="#ff2525ba"/>
+   </properties>
+  </object>
+  <object id="35" gid="793" x="-280" y="760" width="640" height="200">
+   <properties>
+    <property name="color" type="color" value="#ff2525ba"/>
+   </properties>
+  </object>
+  <object id="36" gid="793" x="360" y="760" width="640" height="200">
+   <properties>
+    <property name="color" type="color" value="#ff2525ba"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="objects_parallax" visible="0" parallaxx="0.5" parallaxy="0.9">
+  <object id="29" gid="785" x="-320" y="1120" width="640" height="1600" rotation="-315"/>
+  <object id="65" gid="785" x="800" y="1080" width="640" height="1600" rotation="-45"/>
+ </objectgroup>
+ <objectgroup id="9" name="objects_shadow" visible="0" locked="1">
+  <object id="37" gid="789" x="800" y="1120" width="900" height="800" rotation="270"/>
+ </objectgroup>
+ <layer id="11" name="tiles_osc_optimize" width="20" height="28">
+  <data encoding="csv">
+0,0,776,776,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,776,776,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,776,776,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,776,776,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,
+0,0,776,776,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,
+0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="10" name="objects_osc">
+  <object id="41" name="tile_oscillate" x="80" y="120" width="320" height="80"/>
+  <object id="42" name="texturescroller" x="20" y="0">
+   <properties>
+    <property name="type" value="hsv"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="54" name="tile_oscillate" x="520" y="240" width="240" height="320"/>
+  <object id="55" name="tile_oscillate" x="120" y="640" width="240" height="240"/>
+  <object id="56" name="tile_oscillate" x="520" y="920" width="280" height="120"/>
+ </objectgroup>
+ <layer id="1" name="Tile Layer 1" width="20" height="28">
+  <data encoding="csv">
+0,0,80,80,0,0,0,0,0,0,0,0,0,0,718,737,738,739,718,0,
+0,0,80,80,0,0,0,0,0,0,0,0,0,0,754,746,747,748,754,0,
+0,0,80,80,756,756,756,756,756,756,0,0,0,0,718,746,747,748,718,0,
+0,0,80,752,751,770,599,599,769,593,669,0,0,0,727,746,747,748,727,0,
+0,0,770,599,599,760,778,761,599,769,678,669,0,0,736,746,747,748,736,0,
+0,0,610,610,610,610,610,610,610,610,687,678,669,756,745,755,756,757,745,0,
+0,0,0,709,710,711,712,709,0,0,696,687,678,616,617,618,80,80,80,0,
+0,0,0,718,719,720,721,718,0,0,0,696,687,625,626,627,80,80,80,0,
+0,0,0,718,728,729,730,718,0,0,0,0,696,634,635,636,80,80,80,0,
+0,0,0,718,737,738,739,718,0,0,0,0,0,80,80,80,584,585,586,0,
+0,0,0,754,746,747,748,754,0,0,0,0,0,80,80,80,593,594,595,0,
+0,0,0,718,746,747,748,718,0,0,0,0,670,80,80,80,80,80,599,0,
+0,0,0,727,746,747,748,727,0,0,0,670,679,80,80,80,752,751,770,0,
+0,0,0,736,746,747,748,736,0,0,670,679,679,80,80,770,599,599,760,0,
+0,0,0,745,755,756,757,745,756,670,679,679,688,610,610,610,610,610,610,0,
+0,0,0,602,603,605,584,585,613,679,679,688,697,0,709,710,711,712,709,0,
+0,0,0,611,612,80,593,594,595,679,688,697,0,0,718,719,720,721,718,0,
+0,0,0,80,80,80,80,80,80,688,697,0,0,0,718,728,729,730,718,0,
+0,0,0,80,714,715,587,717,80,697,0,0,0,0,718,737,738,739,718,0,
+0,0,0,80,723,724,725,726,80,669,0,0,0,0,754,746,747,748,754,0,
+0,0,0,80,732,733,734,735,80,678,669,0,0,0,727,746,747,748,727,0,
+0,0,0,80,741,742,743,744,80,678,678,669,0,0,736,746,747,748,736,0,
+0,0,0,610,610,610,610,610,610,687,678,678,669,756,745,755,756,757,745,756,
+0,0,0,0,0,0,0,0,0,696,687,678,678,80,80,751,752,80,80,750,
+0,0,0,0,0,0,0,0,0,0,696,687,678,80,80,778,761,599,769,770,
+0,0,0,0,0,0,0,0,0,0,0,696,687,80,80,601,80,608,761,599,
+0,0,0,0,0,0,0,0,0,0,0,0,696,610,610,610,610,610,610,610,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#ff0000" id="2" name="collision">
+  <object id="1" x="40" y="0" width="40" height="240"/>
+  <object id="2" x="160" y="0" width="280" height="120"/>
+  <object id="3" x="520" y="200" width="280" height="40"/>
+  <object id="4" x="760" y="240" width="40" height="360"/>
+  <object id="5" x="520" y="560" width="240" height="40"/>
+  <object id="6" x="80" y="560" width="280" height="40"/>
+  <object id="7" x="80" y="600" width="40" height="280"/>
+  <object id="11" x="480" y="320" width="40" height="120"/>
+  <object id="12" x="520" y="440">
+   <polygon points="0,0 -160,160 -160,0"/>
+  </object>
+  <object id="68" x="520" y="880" width="280" height="40"/>
+  <object id="70" x="80" y="880" width="280" height="40"/>
+  <object id="71" x="480" y="1040" width="320" height="40"/>
+  <object id="84" x="360" y="760">
+   <polygon points="0,0 160,160 160,0"/>
+  </object>
+  <object id="88" x="80" y="200" width="320" height="40"/>
+  <object id="89" x="400" y="120">
+   <polygon points="0,0 120,120 120,0"/>
+  </object>
+  <object id="90" x="400" y="200">
+   <polygon points="0,0 120,120 0,120"/>
+  </object>
+  <object id="91" x="360" y="720" width="40" height="40"/>
+  <object id="92" x="360" y="720">
+   <polygon points="0,0 160,-160 160,0"/>
+  </object>
+  <object id="93" x="360" y="880">
+   <polygon points="0,0 160,160 0,160"/>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="markers">
+  <object id="18" name="entry" x="120" y="60">
+   <point/>
+  </object>
+  <object id="62" name="entry2" x="760" y="1000">
+   <point/>
+  </object>
+  <object id="86" name="spawn" x="640" y="320">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="objects_party">
+  <object id="19" name="transition" x="80" y="-40" width="80" height="40">
+   <properties>
+    <property name="map" value="secsanctuary/ripplepost"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="38" name="window_glow" x="660" y="160">
+   <point/>
+  </object>
+  <object id="39" name="window_glow" x="660" y="840">
+   <point/>
+  </object>
+  <object id="58" name="enemy" x="200" y="800">
+   <properties>
+    <property name="actor" value="winglade"/>
+    <property name="chase" value="true"/>
+    <property name="encounter" value="winglade"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="61" name="transition" x="800" y="920" width="40" height="120">
+   <properties>
+    <property name="map" value="secsanctuary/second_sanctum_2"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="66" name="window_glow" x="220" y="520">
+   <point/>
+  </object>
+  <object id="74" name="savepoint" x="640" y="260">
+   <properties>
+    <property name="text1" value="* (You find yourself in a familiar sanctuary...)"/>
+    <property name="text2" value="* (You're filled with the power of liminal nostalgia.)"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="objects_overlay">
+  <object id="22" name="churchfog" x="0" y="0">
+   <point/>
+  </object>
+  <object id="23" name="filter" x="10" y="0">
+   <properties>
+    <property name="type" value="hsv"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>
