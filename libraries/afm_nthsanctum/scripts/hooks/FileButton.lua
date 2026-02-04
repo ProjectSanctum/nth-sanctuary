@@ -8,7 +8,15 @@ end
 
 function FileButton:setData(data)
     super.setData(self, data)
-	self.shards = data and data.flags["shards"] or 0
+    self.shards = 0
+    if not data then
+        -- Do nothing
+    elseif data.dark_shards then
+        self.shards = Mod:getDarkShardCount(data.dark_shards)
+    -- Display legacy shards counter
+    elseif data.flags["shards"] then
+        self.shards = data.flags["shards"]
+    end
 end
 
 function FileButton:draw()

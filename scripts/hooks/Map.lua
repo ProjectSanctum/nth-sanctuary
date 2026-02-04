@@ -18,7 +18,7 @@ function Map:load()
         local presence = Kristal.getPresence()
 		print(Game.world.map.name)
         presence.state = "Map: "..(Game.world.map.name or "???")
-        presence.details = "Shards: "..tostring(Game:getFlag("shards") or 0)
+        presence.details = "Shards: "..tostring(Mod:getDarkShardCount() or 0)
         Kristal.setPresence(presence)
     end
 	if Kristal.Config["simplifyVFX"] then

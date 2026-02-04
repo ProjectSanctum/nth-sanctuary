@@ -1,3 +1,4 @@
+---@class Event.shard_door : Event
 local ShardDoor, super = Class(Event, "shard_door")
 
 function ShardDoor:init(data)
@@ -25,7 +26,7 @@ function ShardDoor:onInteract(player, dir)
         else
             cutscene:text(self.properties.text)
         end
-        if Game:getFlag("shards") >= tonumber(self.properties.req) then
+        if Mod:getDarkShardCount() >= tonumber(self.properties.req) then
             cutscene:text("* You can actually open this![wait:10] It leads to [color:yellow]"..self.mapname.."[color:white]!")
             local choicer = cutscene:choicer({"Open", "Do not"})
             if choicer ==1 then
