@@ -233,13 +233,13 @@
  <objectgroup color="#0000ff" id="11" name="objects">
   <object id="31" name="transition" x="640" y="600" width="40" height="160">
    <properties>
-    <property name="map" value="floodedsanctuary/hellentrance"/>
+    <property name="map" value="flooded_sanctuary/flooded_1"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
   <object id="32" name="transition" x="-40" y="600" width="40" height="160">
    <properties>
-    <property name="map" value="secsanctuary/second_sanctum_4_crossroad"/>
+    <property name="map" value="second_sanctuary/second_sanctum_4_crossroad"/>
     <property name="marker" value="entry2"/>
    </properties>
   </object>
@@ -251,13 +251,13 @@
   </object>
   <object id="38" name="transition" x="-40" y="200" width="40" height="120">
    <properties>
-    <property name="map" value="secsanctuary/second_sanctum_4_crossroad"/>
+    <property name="map" value="second_sanctuary/second_sanctum_4_crossroad"/>
     <property name="marker" value="entry4"/>
    </properties>
   </object>
   <object id="40" name="transition" x="640" y="200" width="40" height="120">
    <properties>
-    <property name="map" value="floodedsanctuary/flooded_1"/>
+    <property name="map" value="flooded_sanctuary/flooded_1"/>
     <property name="marker" value="entry4"/>
    </properties>
   </object>

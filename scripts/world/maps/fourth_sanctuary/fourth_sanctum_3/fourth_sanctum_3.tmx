@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="78">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="78">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -9,10 +9,10 @@
   <property name="name">4th Sanctuary - Room 2
 </property>
  </properties>
- <tileset firstgid="1" source="../../tilesets/bg_dw_church_2_tileset.tsx"/>
- <tileset firstgid="199" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
- <tileset firstgid="781" source="../../tilesets/church_objects.tsx"/>
- <objectgroup id="15" name="objects_parallax3" parallaxx="0.3" parallaxy="0.82">
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="199" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="781" source="../../../tilesets/church_objects.tsx"/>
+ <objectgroup id="15" name="objects_parallax3" visible="0" parallaxx="0.3" parallaxy="0.82">
   <object id="70" gid="793" x="-246.933" y="1038.27" width="416" height="130" rotation="-315">
    <properties>
     <property name="color" type="color" value="#ff00007f"/>
@@ -39,7 +39,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="14" name="objects_parallax2" parallaxx="0.4" parallaxy="0.85">
+ <objectgroup id="14" name="objects_parallax2" visible="0" parallaxx="0.4" parallaxy="0.85">
   <object id="61" gid="793" x="-200" y="720" width="480" height="150" rotation="45">
    <properties>
     <property name="color" type="color" value="#ff2525ba"/>
@@ -71,12 +71,12 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="13" name="objects_parallax" parallaxx="0.5" parallaxy="0.9">
+ <objectgroup id="13" name="objects_parallax" visible="0" parallaxx="0.5" parallaxy="0.9">
   <object id="59" gid="1073742608" x="0" y="1200" width="400" height="1600"/>
   <object id="68" gid="1073742609" x="440" y="1000" width="640" height="1600"/>
   <object id="69" gid="785" x="-651" y="1685.5" width="640" height="1600" rotation="45"/>
  </objectgroup>
- <objectgroup id="12" name="objects_parallax_fade">
+ <objectgroup id="12" name="objects_parallax_fade" visible="0">
   <object id="57" gid="789" x="800" y="1360" width="311.141" height="800" rotation="270"/>
  </objectgroup>
  <layer id="16" name="tiles_osc_optimize" width="20" height="34">
@@ -406,7 +406,7 @@
  <objectgroup id="7" name="objects_party">
   <object id="8" name="transition" x="-40" y="1200" width="40" height="80">
    <properties>
-    <property name="map" value="fourth_sanctum_2"/>
+    <property name="map" value="fourth_sanctuary/fourth_sanctum_2"/>
     <property name="marker" value="entry2"/>
    </properties>
   </object>
@@ -458,7 +458,7 @@ THROUGH HER HEART.</property>
   </object>
   <object id="54" name="transition" x="800" y="400" width="40" height="160">
    <properties>
-    <property name="map" value="fourth_sanctum_4"/>
+    <property name="map" value="fourth_sanctuary/fourth_sanctum_4"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>

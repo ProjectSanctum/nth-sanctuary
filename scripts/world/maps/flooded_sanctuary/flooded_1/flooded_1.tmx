@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="42" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="111">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="42" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="112">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -126,8 +126,8 @@
 1271,1272,432,1277,1278,432,432,432,432,432,432,432,432,432,1277,1270,1271,1272,432,432,432,1283,432,432,432,432,432,432,1277,1278,432,432,1273,1282,
 1280,1278,432,432,432,432,432,1273,432,432,432,432,432,432,432,1279,1280,432,432,432,432,432,432,1283,432,432,432,432,432,432,432,1268,1270,1271,
 432,432,432,432,432,1274,1272,1281,1282,1269,432,432,432,432,432,432,1268,1269,432,432,1274,432,432,432,1273,432,432,1281,1272,432,432,1277,1279,1280,
+1271,1272,432,1277,1278,432,432,432,432,432,432,432,432,432,1277,1270,1271,1272,432,432,432,1283,432,432,432,432,432,432,1277,1278,432,432,1273,1282,
 444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,444,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -234,8 +234,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,405,405,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,411,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,411,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,411,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,411,0,0,0,0,0,0,0,
@@ -265,7 +265,7 @@
 </data>
  </layer>
  <objectgroup id="15" name="climbareas"/>
- <objectgroup id="6" name="collision" locked="1">
+ <objectgroup id="6" name="collision">
   <object id="22" x="160" y="1520" width="1200" height="40"/>
   <object id="33" name="rippleblock" x="-40" y="1440" width="40" height="80">
    <properties>
@@ -306,7 +306,7 @@
   <object id="71" x="560" y="1040" width="360" height="40"/>
   <object id="72" x="280" y="1080" width="40" height="80"/>
   <object id="76" x="0" y="1520" width="40" height="40"/>
-  <object id="90" x="0" y="560" width="1360" height="40"/>
+  <object id="90" x="0" y="600" width="1360" height="40"/>
   <object id="91" x="0" y="410" width="1360" height="40"/>
   <object id="95" x="0" y="160" width="320" height="80"/>
   <object id="96" x="320" y="240" width="120" height="40"/>
@@ -320,7 +320,7 @@
   <object id="29" name="entry" x="40" y="500">
    <point/>
   </object>
-  <object id="75" name="entry2" x="1320" y="500">
+  <object id="75" name="entry2" x="1320" y="180">
    <point/>
   </object>
   <object id="92" name="entry4" x="40" y="100">
@@ -341,6 +341,12 @@
    <properties>
     <property name="map" value="floodedsanctuary/between"/>
     <property name="marker" value="entry4"/>
+   </properties>
+  </object>
+  <object id="111" name="transition Copy" x="-40" y="440" width="40" height="160">
+   <properties>
+    <property name="map" value="floodedsanctuary/between"/>
+    <property name="marker" value="entry"/>
    </properties>
   </object>
  </objectgroup>
@@ -381,8 +387,8 @@
    </properties>
   </object>
   <object id="85" name="climbarea" x="1000" y="880" width="80" height="40"/>
-  <object id="87" name="climbarea" x="1000" y="600" width="80" height="240"/>
-  <object id="88" name="climbentry" x="1000" y="560" width="80" height="40">
+  <object id="87" name="climbarea" x="1000" y="640" width="80" height="200"/>
+  <object id="88" name="climbentry" x="1000" y="600" width="80" height="40">
    <properties>
     <property name="area" type="object" value="87"/>
     <property name="up" type="bool" value="true"/>

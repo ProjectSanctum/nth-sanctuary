@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -23,23 +23,24 @@ return {
     {
       name = "bg_dw_church_2_tileset",
       firstgid = 1,
-      filename = "../../tilesets/bg_dw_church_2_tileset.tsx"
+      filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
     },
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 199,
-      filename = "../../tilesets/bg_dw_church_tileset_new.tsx"
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "light_areas",
       firstgid = 781,
-      filename = "../../tilesets/light_areas.tsx"
+      filename = "../../../tilesets/light_areas.tsx"
     },
     {
       name = "church_objects",
       firstgid = 791,
-      filename = "../../tilesets/church_objects.tsx",
-      exportfilename = "../../tilesets/church_objects.lua"
+      filename = "../../../tilesets/church_objects.tsx",
+      exportfilename = "../../../tilesets/church_objects.lua"
     }
   },
   layers = {
@@ -383,7 +384,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fourth_sanctum_4",
+            ["map"] = "fourth_sanctuary/fourth_sanctum_4",
             ["marker"] = "entry2"
           }
         },

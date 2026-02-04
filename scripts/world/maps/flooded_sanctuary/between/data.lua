@@ -488,7 +488,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "floodedsanctuary/hellentrance",
+            ["map"] = "flooded_sanctuary/flooded_1",
             ["marker"] = "entry"
           }
         },
@@ -504,7 +504,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "secsanctuary/second_sanctum_4_crossroad",
+            ["map"] = "second_sanctuary/second_sanctum_4_crossroad",
             ["marker"] = "entry2"
           }
         },
@@ -536,7 +536,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "secsanctuary/second_sanctum_4_crossroad",
+            ["map"] = "second_sanctuary/second_sanctum_4_crossroad",
             ["marker"] = "entry4"
           }
         },
@@ -552,7 +552,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "floodedsanctuary/flooded_1",
+            ["map"] = "flooded_sanctuary/flooded_1",
             ["marker"] = "entry4"
           }
         }
