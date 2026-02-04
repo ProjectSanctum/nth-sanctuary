@@ -243,6 +243,8 @@ function Mod:getDarkShardCount(dark_shard_bits)
     return count
 end
 
+---@param id DarkShardID
+---@param collected boolean
 function Mod:setDarkShard(id, collected)
     local word = bit.rshift(id, 5) + 1
     local subid = bit.band(id, 0b00011111)
@@ -255,6 +257,8 @@ function Mod:setDarkShard(id, collected)
 end
 
 
+---@param id DarkShardID
+---@return boolean
 function Mod:getDarkShard(id)
     local word = bit.rshift(id, 5) + 1
     local subid = bit.band(id, 0b00011111)
