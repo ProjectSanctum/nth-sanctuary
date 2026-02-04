@@ -7,6 +7,7 @@ function Map:onExit()
 	Game.world.map.id ~= "grand_door" and 
 	Game.world.map.id ~= "citadel_room" and
 	Game.world.map.id ~= "citadel_room2" and
+	Game.world.map.id ~= "citadel_room3" and
 	Game.world.map.id ~= "Map" then
 		Game:setFlag("ft_last_map", Game.world.map.id)
 	end
@@ -16,7 +17,7 @@ function Map:load()
 	super.load(self)
 	if DISCORD_RPC_AVAILABLE and Kristal.Config["discordRPC"] then
         local presence = Kristal.getPresence()
-		print(Game.world.map.name)
+		print(Game.world.map.name or "???")
         presence.state = "Map: "..(Game.world.map.name or "???")
         presence.details = "Shards: "..tostring(Game:getFlag("shards") or 0)
         Kristal.setPresence(presence)
