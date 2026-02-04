@@ -16,7 +16,7 @@ function DarkMenu:draw()
 		Draw.setColor(COLORS.white)
         love.graphics.print(Game:getConfig("darkCurrencyShort") .. " " .. Game.money, 520, 10)
         Draw.draw(self.shard_sprite, 520, 46, 0, 2, 2)
-	    local shards = Game:getFlag("shards") or 0
+	    local shards = tostring(Mod:getDarkShardCount())
         love.graphics.print(shards, 554, 41)
     end
 

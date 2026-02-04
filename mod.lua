@@ -1,3 +1,22 @@
+---@enum DarkShardID
+Mod.DarkShardID = {
+    TEST_SHARD_1 = 0,
+    TEST_SHARD_2 = 1,
+    TEST_SHARD_3_MORE_LIKE_TEST_SHART = 2,
+}
+
+---@param plugin TypeGenPlugin.MainScript
+function Mod:onTiledTypegen(plugin)
+    plugin:addEnumType({
+        values = TableUtils.getKeys(self.DarkShardID),
+        type = "enum",
+        id = 0,
+        valuesAsFlags = false,
+        name = "DarkShardID",
+        storageType = "int",
+    })
+end
+
 function Mod:init()
     print("Loaded "..self.info.name.."!")
     TableUtils.copyInto(MUSIC_VOLUMES, {
@@ -191,6 +210,55 @@ function Mod:onShadowCrystal(item, light)
         end)
         return true
     end
+end
+
+function Mod:load(data)
+    ---@type [int, int, int, int, int, int, int]
+    self.dark_shards = {
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+    } -- 8 words * 32 bits per word = 256 bits
+    if data.dark_shards then
+        for i = 1, #data.dark_shards do
+            Mod.dark_shards[i] = data.dark_shards[i]
+        end
+    end
+end
+
+function Mod:save(data)
+    data.dark_shards = TableUtils.copy(self.dark_shards)
+end
+
+---@return int
+function Mod:getDarkShardCount(dark_shard_bits)
+    dark_shard_bits = dark_shard_bits or self.dark_shards
+    local count = 1 -- (Because of the starting dark shard)
+    for id = 0, #dark_shard_bits * 32 do
+        local word = bit.rshift(id, 5) + 1
+        local subid = bit.band(id, 0b00011111)
+        if bit.band(dark_shard_bits[word] or 0, bit.lshift(1, subid)) ~= 0 then
+            count = count + 1
+        end
+    end
+    return count
+end
+
+function Mod:setDarkShard(id, collected)
+    local word = bit.rshift(id, 5) + 1
+    local subid = bit.band(id, 0b00011111)
+    assert(self.dark_shards[word], "ID out of range")
+    if collected then
+        self.dark_shards[word] = bit.bor(self.dark_shards[word], bit.lshift(1, subid))
+    else
+        self.dark_shards[word] = bit.band(self.dark_shards[word], bit.bnot(bit.lshift(1, subid)))
+    end
+end
+
+
+function Mod:getDarkShard(id)
+    local word = bit.rshift(id, 5) + 1
+    local subid = bit.band(id, 0b00011111)
+    return bit.band(self.dark_shards[word] or 0, bit.lshift(1, subid)) ~= 0
 end
 --[==[
 function Mod:preInit()
