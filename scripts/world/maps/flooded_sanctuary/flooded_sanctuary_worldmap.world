@@ -1,0 +1,27 @@
+{
+    "maps": [
+        {
+            "fileName": "between/between.tmx",
+            "height": 960,
+            "width": 640,
+            "x": -80,
+            "y": -520
+        },
+        {
+            "fileName": "hell_entrance/hellentrance.tmx",
+            "height": 840,
+            "width": 640,
+            "x": 640,
+            "y": 0
+        },
+        {
+            "fileName": "flooded_1/flooded_1.tmx",
+            "height": 1680,
+            "width": 1360,
+            "x": 1360,
+            "y": -880
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

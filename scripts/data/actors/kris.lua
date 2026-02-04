@@ -6,7 +6,7 @@ function actor:init()
     TableUtils.merge(self.animations, {
         ["pirouette"] = {"battle/pirouette", 3/30, true},
         ["fall_hurt"] = {"fall_hurt", 0, true},
-        ["fall_hurt_wind"] = {"fall_hurt_wind", 1/5, true}
+        ["fall_hurt_wind"] = {"fall_hurt_wind", 1/5, true},
     })
     TableUtils.merge(self.offsets, {
         -- TODO: Accuracy.
@@ -20,6 +20,7 @@ function actor:init()
         ["climb/jump_up"] = {-5, 4},
         ["climb/jump_left"] = {-5, 4},
         ["climb/jump_right"] = {-5, 4},
+        ["slide"] = {-5, -2},
     })
 end
 

@@ -26,7 +26,9 @@ function WorldItem:onInteract(player, dir)
     if self.shard then
         Game.world:startCutscene(function (cutscene)
             cutscene:text("* You found a [color:9999ff]Dark Shard[color:white].")
-            Game:addFlag("shards", 1)
+            Mod:setDarkShard(0, true)
+            cutscene:text("* ...but WorldItem doesn't have a way to specify the dark shard ID.")
+            cutscene:text("* Maybe dark shards on the ground should be a different object entirely.")
         end)
     end
     if self.once then

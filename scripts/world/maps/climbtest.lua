@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 58,
+  nextobjectid = 59,
   properties = {
     ["music"] = "climb"
   },
@@ -18,7 +18,8 @@ return {
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 1,
-      filename = "../tilesets/bg_dw_church_tileset_new.tsx"
+      filename = "../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../tilesets/bg_dw_church_tileset_new.lua"
     }
   },
   layers = {
@@ -541,6 +542,19 @@ return {
           y = 200,
           width = 40,
           height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 58,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 1520,
+          y = 240,
+          width = 0,
+          height = 0,
           rotation = 0,
           visible = true,
           properties = {}
