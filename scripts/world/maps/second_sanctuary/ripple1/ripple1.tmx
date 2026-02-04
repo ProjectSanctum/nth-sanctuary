@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="94">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="94">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -199,7 +199,7 @@
   </object>
   <object id="92" name="transition" x="480" y="720" width="120" height="40">
    <properties>
-    <property name="map" value="secsanctuary/ripplepost"/>
+    <property name="map" value="second_sanctuary/ripplepost"/>
    </properties>
   </object>
  </objectgroup>

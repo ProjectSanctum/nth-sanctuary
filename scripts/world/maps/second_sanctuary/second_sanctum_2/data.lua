@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -585,7 +585,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "secsanctuary/second_sanctum_1",
+            ["map"] = "second_sanctuary/second_sanctum_1",
             ["marker"] = "entry2"
           }
         },
@@ -601,7 +601,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "secsanctuary/second_sanctum_3",
+            ["map"] = "second_sanctuary/second_sanctum_3",
             ["marker"] = "entry"
           }
         }

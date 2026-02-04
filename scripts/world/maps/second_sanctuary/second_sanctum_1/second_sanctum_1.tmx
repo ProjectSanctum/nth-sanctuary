@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="28" tilewidth="40" tileheight="40" infinite="0" parallaxoriginx="-320" parallaxoriginy="-240" nextlayerid="14" nextobjectid="94">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="28" tilewidth="40" tileheight="40" infinite="0" parallaxoriginx="-320" parallaxoriginy="-240" nextlayerid="14" nextobjectid="94">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -195,7 +195,7 @@
  <objectgroup id="5" name="objects_party">
   <object id="19" name="transition" x="80" y="-40" width="80" height="40">
    <properties>
-    <property name="map" value="secsanctuary/ripplepost"/>
+    <property name="map" value="second_sanctuary/ripplepost"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
@@ -215,7 +215,7 @@
   </object>
   <object id="61" name="transition" x="800" y="920" width="40" height="120">
    <properties>
-    <property name="map" value="secsanctuary/second_sanctum_2"/>
+    <property name="map" value="second_sanctuary/second_sanctum_2"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
