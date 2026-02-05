@@ -15,6 +15,7 @@ function FileSelectMenu:initStates()
 	Game:setBorder("church_grand")
 	Assets.stopSound("ch4_first_intro", true)
 	Assets.stopSound("strongwind_loop", true)
+	Assets.stopSound("dtrans_drone", true)
 end
 
 return FileSelectMenu

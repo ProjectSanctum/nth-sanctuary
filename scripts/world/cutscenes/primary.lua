@@ -107,6 +107,7 @@ return {
 				heart.y = 240+60+8
 			end
 			if Input.pressed("confirm") then
+				Assets.playSound("ui_select")
 				if menu.index < 3 then
 					Assets.playSound("ui_spooky_action")
 				else
@@ -127,7 +128,7 @@ return {
 		menu.scale_x = 1
 		menu.scale_y = 1
 		menu.x = 0
-		menu.y = 0
+		menu.alpha = 0
 		menu.index = 0
 		menu.y = 0
 		local skip_title = false
@@ -151,7 +152,7 @@ return {
 		heart.color = COLORS.red
 		menu:addChild(heart)
 
-		Game.world.timer:tween(1, menu, {alpha = 1}, 'out-sine')
+		Game.world.timer:tween(0.25, menu, {alpha = 1}, 'out-sine')
 		cutscene:wait(function()
 			if Input.pressed("left") and menu.index ~= 1 then
 				Assets.playSound("ui_move")
@@ -349,17 +350,24 @@ return {
 			Game.world:addChild(heartburst)
 			heart:remove()
 			cutscene.windvol = 0
-			cutscene.windpitch = 0
+			cutscene.windpitch = 0.01
+			cutscene.dronevol = 0
+			cutscene.dronepitch = 0.01
 			local windsfx = Assets.playSound("strongwind_loop", 0, 1)
 			windsfx:setLooping(true)
 			windsfx:play()
+			local dronesfx = Assets.playSound("dtrans_drone", 0, 1)
+			dronesfx:setLooping(true)
+			dronesfx:play()
 			cutscene:during(function()
 				windsfx:setVolume(cutscene.windvol)
 				windsfx:setPitch(cutscene.windpitch)
+				dronesfx:setVolume(cutscene.dronevol)
+				dronesfx:setPitch(cutscene.dronepitch)
 			end)
 			kris:setAnimation("jump_fall")
 			susie:setAnimation("jump_fall")
-			Game.world.timer:tween(15/30, cutscene, {windvol = 0.6, windpitch = 1}, "linear")
+			Game.world.timer:tween(15/30, cutscene, {windvol = 0.5, windpitch = 1}, "linear")
 			Game.world.timer:after(2/30, function() Assets.playSound("glassbreak", 0.4, 0.6) end)
 			Assets.playSound("punchmed", 0.95, 0.7)
 			Assets.playSound("ch4_first_intro_breaking", 0.5, 0.5)
@@ -385,11 +393,13 @@ return {
 			cutscene:wait(70/30)
 			Game.world.timer:tween(15/30, windows, {darken = 1}, "in-cubic")
 			Game.world.timer:tween(15/30, highlight, {alpha = 1.05}, "in-cubic")
+			Game.world.timer:tween(15/30, cutscene, {dronevol = 0.4, dronepitch = 0.8}, "linear")
 			local prophecies = IntroGigaProphecies()
 			prophecies.layer = 997
 			prophecies:addFX(fakehsv, "fakehsv")
 			Game.world:addChild(prophecies)
 			cutscene:wait(2)
+			Game.world.timer:tween(10/30, cutscene, {dronevol = 0.6, dronepitch = 1}, "linear")
 			a:remove()
 			for _, sprite in ipairs(remove) do
 				sprite:remove()
@@ -418,6 +428,7 @@ return {
 			Game.world.timer:tween(10/30, panel_container, {y = 250}, "linear")
 			cutscene:wait(10/30)
 			cutscene.windvol = 0
+			cutscene.dronevol = 0
 			windows.delta = 0.05
 			prophecies.delta = 0.05
 			panel.panel_alpha = -99
@@ -480,7 +491,10 @@ return {
 			Assets.playSound("punchmed", 0.95, 0.7)
 			windows.delta = 1
 			prophecies.delta = 1
-			cutscene.windvol = 0.6
+			cutscene.windvol = 0.5
+			cutscene.dronevol = 0.4
+			Game.world.timer:tween(60/30, cutscene, {windpitch = 1.25}, "linear")
+			Game.world.timer:tween(120/30, cutscene, {dronepitch = 1.5}, "linear")
 			susie:setAnimation("jump_fall")
 			kris:setAnimation("fall_hurt")
 			cutscene.fall_hurt_frame = 0
@@ -510,11 +524,14 @@ return {
 			arch:setColor(COLORS.black)
 			Game.world:addChild(arch)
 			Game.world.timer:tween(4/30, arch, {y = 0}, "linear")
-			cutscene:wait(8/30)
-			windsfx:stop()
+			Game.world.timer:tween(32/30, cutscene, {windvol = 0, windpitch = 0.5, dronevol = 0, dronepitch = 0.5}, "linear")
+			cutscene:wait(16/30)
+			do_ripple = true
 			windows:remove()
 			prophecies:remove()
 			broken_container:remove()
+			windsfx:stop()
+			dronesfx:stop()
 			Assets.playSound("snd_closet_impact")
 			kris:setParallax(1)
 			susie:setParallax(1)
@@ -534,7 +551,6 @@ return {
 				trans.collider.collidable = true
 			end
 			arch:remove()
-			do_ripple = true
 		end	
 		kris.x = kris_x
 		kris.y = kris_y
