@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 43,
+  nextobjectid = 45,
   properties = {},
   tilesets = {
     {
@@ -444,23 +444,6 @@ return {
           properties = {
             ["size"] = 160
           }
-        },
-        {
-          id = 42,
-          name = "darkness",
-          type = "",
-          shape = "point",
-          x = 0,
-          y = 0,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["alpha"] = 1,
-            ["flagcheck"] = "!pianotest",
-            ["highlight"] = false
-          }
         }
       }
     },
@@ -477,7 +460,25 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 44,
+          name = "darkness",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["alpha"] = 1,
+            ["flagcheck"] = "!pianotest",
+            ["highlight"] = false
+          }
+        }
+      }
     }
   }
 }

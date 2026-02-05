@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="43">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="45">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -122,7 +122,9 @@
    </properties>
    <point/>
   </object>
-  <object id="42" name="darkness" x="0" y="0">
+ </objectgroup>
+ <objectgroup id="6" name="objects_overlay">
+  <object id="44" name="darkness" x="0" y="0">
    <properties>
     <property name="alpha" type="float" value="1"/>
     <property name="flagcheck" value="!pianotest"/>
@@ -131,5 +133,4 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="6" name="objects_overlay"/>
 </map>
