@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 62,
+  nextobjectid = 63,
   properties = {
     ["music"] = "darkchurch_intro"
   },
@@ -128,7 +128,7 @@ return {
         },
         {
           id = 11,
-          name = "light1",
+          name = "light2",
           type = "",
           shape = "point",
           x = 540,
@@ -141,7 +141,7 @@ return {
         },
         {
           id = 18,
-          name = "light2",
+          name = "light3",
           type = "",
           shape = "point",
           x = 698,
@@ -154,7 +154,7 @@ return {
         },
         {
           id = 19,
-          name = "light3",
+          name = "light4",
           type = "",
           shape = "point",
           x = 940,
@@ -167,7 +167,7 @@ return {
         },
         {
           id = 47,
-          name = "light4",
+          name = "light5",
           type = "",
           shape = "point",
           x = 1100,
@@ -342,7 +342,7 @@ return {
       objects = {
         {
           id = 1,
-          name = "staticlight",
+          name = "light1",
           type = "",
           shape = "point",
           x = 380,
@@ -383,7 +383,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["marker"] = "light1"
+            ["marker"] = "light2"
           }
         },
         {
@@ -414,7 +414,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["marker"] = "light2"
+            ["marker"] = "light3"
           }
         },
         {
@@ -443,8 +443,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["marker1"] = "light3",
-            ["marker2"] = "light4"
+            ["marker1"] = "light4",
+            ["marker2"] = "light5"
           }
         },
         {
@@ -589,6 +589,21 @@ return {
           gid = 86,
           visible = true,
           properties = {}
+        },
+        {
+          id = 62,
+          name = "lighttrigger",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 200,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["marker"] = "light1"
+          }
         }
       }
     },

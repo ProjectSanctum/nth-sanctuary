@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="62">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="63">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -45,16 +45,16 @@
   <object id="10" name="spawn" x="100" y="280">
    <point/>
   </object>
-  <object id="11" name="light1" x="540" y="122">
+  <object id="11" name="light2" x="540" y="122">
    <point/>
   </object>
-  <object id="18" name="light2" x="698" y="122">
+  <object id="18" name="light3" x="698" y="122">
    <point/>
   </object>
-  <object id="19" name="light3" x="940" y="122">
+  <object id="19" name="light4" x="940" y="122">
    <point/>
   </object>
-  <object id="47" name="light4" x="1100" y="122">
+  <object id="47" name="light5" x="1100" y="122">
    <point/>
   </object>
  </objectgroup>
@@ -85,7 +85,7 @@
   </object>
  </objectgroup>
  <objectgroup id="2" name="objects_party">
-  <object id="1" name="staticlight" x="380" y="122">
+  <object id="1" name="light1" x="380" y="122">
    <properties>
     <property name="size" type="float" value="96"/>
    </properties>
@@ -98,7 +98,7 @@
   </object>
   <object id="5" name="lighttrigger" x="440" y="200" width="40" height="120">
    <properties>
-    <property name="marker" value="light1"/>
+    <property name="marker" value="light2"/>
    </properties>
   </object>
   <object id="6" gid="86" x="528" y="146" width="26" height="36">
@@ -108,14 +108,14 @@
   </object>
   <object id="13" name="lighttrigger" x="600" y="200" width="40" height="120">
    <properties>
-    <property name="marker" value="light2"/>
+    <property name="marker" value="light3"/>
    </properties>
   </object>
   <object id="14" gid="86" x="686" y="146" width="26" height="36"/>
   <object id="16" name="lighttrigger" x="760" y="200" width="40" height="120">
    <properties>
-    <property name="marker1" value="light3"/>
-    <property name="marker2" value="light4"/>
+    <property name="marker1" value="light4"/>
+    <property name="marker2" value="light5"/>
    </properties>
   </object>
   <object id="17" gid="86" x="928" y="146" width="26" height="36"/>
@@ -161,6 +161,11 @@
    <point/>
   </object>
   <object id="46" gid="86" x="1088" y="146" width="26" height="36"/>
+  <object id="62" name="lighttrigger" x="280" y="200" width="40" height="120">
+   <properties>
+    <property name="marker" value="light1"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="6" name="objects_overlay">
   <object id="44" name="darkness" x="0" y="0">
