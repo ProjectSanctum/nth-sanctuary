@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 63,
+  nextobjectid = 64,
   properties = {
     ["music"] = "darkchurch_intro"
   },
@@ -177,6 +177,21 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 63,
+          name = "light1",
+          type = "",
+          shape = "point",
+          x = 380,
+          y = 122,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["size"] = 96
+          }
         }
       }
     },
@@ -340,21 +355,6 @@ return {
       parallaxy = 1,
       properties = {},
       objects = {
-        {
-          id = 1,
-          name = "light1",
-          type = "",
-          shape = "point",
-          x = 380,
-          y = 122,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["size"] = 96
-          }
-        },
         {
           id = 2,
           name = "",
