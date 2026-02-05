@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -369,7 +369,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "floodedsanctuary/hellentrance",
+            ["map"] = "flooded_sanctuary/hell_entrance",
             ["marker"] = "spawn"
           }
         }

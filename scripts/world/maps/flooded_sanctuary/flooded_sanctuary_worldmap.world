@@ -1,6 +1,13 @@
 {
     "maps": [
         {
+            "fileName": "map_water/map_water.tmx",
+            "height": 5120,
+            "width": 5120,
+            "x": -520,
+            "y": -5120
+        },
+        {
             "fileName": "between/between.tmx",
             "height": 960,
             "width": 640,
@@ -19,7 +26,7 @@
             "height": 840,
             "width": 640,
             "x": 2800,
-            "y": -880
+            "y": 560
         }
     ],
     "onlyShowAdjacentMaps": false,
