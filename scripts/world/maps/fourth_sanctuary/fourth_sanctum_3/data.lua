@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -20,19 +20,19 @@ return {
     {
       name = "bg_dw_church_2_tileset",
       firstgid = 1,
-      filename = "../../tilesets/bg_dw_church_2_tileset.tsx"
+      filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
     },
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 199,
-      filename = "../../tilesets/bg_dw_church_tileset_new.tsx",
-      exportfilename = "../../tilesets/bg_dw_church_tileset_new.lua"
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "church_objects",
       firstgid = 781,
-      filename = "../../tilesets/church_objects.tsx",
-      exportfilename = "../../tilesets/church_objects.lua"
+      filename = "../../../tilesets/church_objects.tsx",
+      exportfilename = "../../../tilesets/church_objects.lua"
     }
   },
   layers = {
@@ -42,7 +42,7 @@ return {
       id = 15,
       name = "objects_parallax3",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -138,7 +138,7 @@ return {
       id = 14,
       name = "objects_parallax2",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -250,7 +250,7 @@ return {
       id = 13,
       name = "objects_parallax",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -308,7 +308,7 @@ return {
       id = 12,
       name = "objects_parallax_fade",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -1173,7 +1173,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fourth_sanctum_2",
+            ["map"] = "fourth_sanctuary/fourth_sanctum_2",
             ["marker"] = "entry2"
           }
         },
@@ -1367,7 +1367,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fourth_sanctum_4",
+            ["map"] = "fourth_sanctuary/fourth_sanctum_4",
             ["marker"] = "entry"
           }
         }

@@ -1,18 +1,18 @@
 {
     "maps": [
         {
+            "fileName": "map_water/map_water.tmx",
+            "height": 5120,
+            "width": 5120,
+            "x": -520,
+            "y": -5120
+        },
+        {
             "fileName": "between/between.tmx",
             "height": 960,
             "width": 640,
-            "x": -80,
-            "y": -520
-        },
-        {
-            "fileName": "hell_entrance/hellentrance.tmx",
-            "height": 840,
-            "width": 640,
             "x": 640,
-            "y": 0
+            "y": -1040
         },
         {
             "fileName": "flooded_1/flooded_1.tmx",
@@ -20,6 +20,13 @@
             "width": 1360,
             "x": 1360,
             "y": -880
+        },
+        {
+            "fileName": "hell_entrance/hell_entrance.tmx",
+            "height": 840,
+            "width": 640,
+            "x": 2800,
+            "y": 560
         }
     ],
     "onlyShowAdjacentMaps": false,

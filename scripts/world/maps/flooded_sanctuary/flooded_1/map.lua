@@ -33,12 +33,7 @@ function map:onEnter()
 		Game.world.timer:after(10/30, function()
 			self.con = 1
 		end)
-		self.stupid_hitbox = self:getHitbox("rippleblock") ---@type Hitbox
-		self.stupid_hitbox2 = self:getHitbox("rippleblock2") ---@type Hitbox
-		self.stupid_hitbox3 = self:getHitbox("rippleblock3") ---@type Hitbox
-		self.stupid_hitbox.collidable = true
-		self.stupid_hitbox2.collidable = true
-		self.stupid_hitbox3.collidable = true
+		
 		self.ripple_fx = RippleEffect()
 		self.ripple_fx.layer = WORLD_LAYERS["bottom"]
 		Game.world:addChild(self.ripple_fx)
@@ -50,13 +45,6 @@ function map:onEnter()
 		end)
 		Game:setFlag("shownfloodedmusic", true)
 		Kristal.hideBorder()
-	else
-		self.stupid_hitbox = self:getHitbox("rippleblock") ---@type Hitbox
-		self.stupid_hitbox2 = self:getHitbox("rippleblock2") ---@type Hitbox
-		self.stupid_hitbox3 = self:getHitbox("rippleblock3") ---@type Hitbox
-		self.stupid_hitbox.collidable = false
-		self.stupid_hitbox2.collidable = false
-		self.stupid_hitbox3.collidable = false
 	end
 	self.hell_border_alpha = MathUtils.clamp((Game.world.camera.y - SCREEN_HEIGHT/2) / ((self.height * self.tile_height)) * 2, 0, 1)
 end
@@ -115,9 +103,6 @@ function map:update(world, data)
 					self.tiles4.alpha = 1
 					self.tiles5.alpha = 1
 					self.con = 2
-					self.stupid_hitbox.collidable = false
-					self.stupid_hitbox2.collidable = false
-					self.stupid_hitbox3.collidable = false
 					Game:setFlag("ripplestop", true)
 				end
 			end

@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -19,7 +19,8 @@ return {
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 1,
-      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx"
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "church_objects",
@@ -29,7 +30,7 @@ return {
     },
     {
       name = "light_areas",
-      firstgid = 616,
+      firstgid = 668,
       filename = "../../../tilesets/light_areas.tsx"
     }
   },
@@ -378,7 +379,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fourth_sanctum_2",
+            ["map"] = "fourth_sanctuary/fourth_sanctum_2",
             ["marker"] = "entry_prism"
           }
         }
@@ -466,7 +467,7 @@ return {
           width = 184,
           height = 262,
           rotation = 0,
-          gid = 619,
+          gid = 671,
           visible = true,
           properties = {
             ["light"] = true,
@@ -485,7 +486,7 @@ return {
           width = 120,
           height = 262,
           rotation = 0,
-          gid = 619,
+          gid = 671,
           visible = true,
           properties = {
             ["light"] = true,
@@ -504,7 +505,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 622,
+          gid = 674,
           visible = true,
           properties = {
             ["light"] = true,
@@ -523,7 +524,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 2147484270,
+          gid = 2147484322,
           visible = true,
           properties = {
             ["light"] = true,
@@ -542,7 +543,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 622,
+          gid = 674,
           visible = true,
           properties = {
             ["light"] = true,
@@ -561,7 +562,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 2147484270,
+          gid = 2147484322,
           visible = true,
           properties = {
             ["light"] = true,
@@ -580,7 +581,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 622,
+          gid = 674,
           visible = true,
           properties = {
             ["light"] = true,
@@ -599,7 +600,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 2147484270,
+          gid = 2147484322,
           visible = true,
           properties = {
             ["light"] = true,

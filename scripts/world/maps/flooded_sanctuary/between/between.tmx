@@ -233,7 +233,7 @@
  <objectgroup color="#0000ff" id="11" name="objects">
   <object id="31" name="transition" x="640" y="600" width="40" height="160">
    <properties>
-    <property name="map" value="flooded_sanctuary/hell_entrance"/>
+    <property name="map" value="flooded_sanctuary/flooded_1"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>

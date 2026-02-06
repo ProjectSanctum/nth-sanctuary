@@ -55,6 +55,13 @@
             "width": 640,
             "x": 5640,
             "y": 240
+        },
+        {
+            "fileName": "second_sanctuary.tmx",
+            "height": 720,
+            "width": 1040,
+            "x": 200,
+            "y": -2360
         }
     ],
     "onlyShowAdjacentMaps": false,
