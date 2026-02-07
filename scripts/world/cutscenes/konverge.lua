@@ -1,4 +1,19 @@
 return {
+    boid = function (cutscene)
+        local boid = cutscene:getCharacter("boid")
+        if Kristal.PluginLoader and next(Kristal.PluginLoader.plugin_scripts) ~= nil then
+            cutscene:text("* Hi.[wait:5] I'm so sorry for what I've done.")
+            if Game:getFlag("fun") == 66 then
+                Assets.playSound("snd_mysterygo")
+                boid:remove()
+                Game:setFlag("hyperboid_dies_real_2027", true)
+            end
+        else
+            cutscene:text([[
+* Hey.[wait:5] I'm supposed to say[wait:5] "I need some generic NPC dialogue," but that's not really my thing."
+]])
+        end
+    end,
     sans = function(cutscene)
         local sans = cutscene:getCharacter("sans")
         local flag = Game:getFlag("got_rake")
@@ -116,7 +131,7 @@ return {
         })
         cutscene:text("* ONLY FOR THE PRICE OF 500 KROMER.")
         emote(sp, "grab", "wing")
-        cutscene:text("* WHADDYA SAY, [wait:5][Friend]?")
+        cutscene:text("* WHADDYA SAY, [wait:5][friend][shake:0][Friend][friend:unfriend]?")
         local ch = cutscene:choicer({"Deal", "No Deal"})
         if ch == 2 then
             cutscene:wait(2)
@@ -127,13 +142,13 @@ return {
                 cutscene:text("* WHAT??!?! [wait:10]YOU DON'T HAVE ENOUGH [[Wacky Stacks]]?!?")
                 cutscene:text("* [[Outrageous]], [wait:10]YOU HEAR ME?")
                 if cutscene:getCharacter("jamm") then
-                    cutscene:text("* SORRY [[Friend]], [wait:5][[I don't give credit!]][react:1]",{
+                    cutscene:text("* SORRY [friend][[Friend]][friend:unfriend], [wait:5][[I don't give credit!]][react:1]",{
                         reactions = {
                             {"Do you take \nMonopoly Money?", "right", "bottommid", "troll", "jamm"}
                         }
                     })
                 else
-                    cutscene:text("* SORRY [[Friend]], [wait:5][[I don't give credit!]]")
+                    cutscene:text("* SORRY [friend][[Friend]][friend:unfriend], [wait:5][[I don't give credit!]]")
                 end
                 cutscene:text("* COME BACK [[When you're a little, [wait:5]mmmm, [wait:5]RICHER!]]")
                 goto endcut

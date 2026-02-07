@@ -61,6 +61,48 @@ function Mod:unload()
     end
 end
 
+function Mod:registerTextCommands(text)
+    text:registerCommand("friend", function(self, node, dry)
+        self.state.friendly = (node.arguments[1] ~= "unfriend")
+    end, {dry = true})
+    text:registerCommand("dualcol", function(self, node, dry)
+        self.state.dualcol = (node.arguments[1] ~= "stop")
+        if node.arguments[1] == "stop" then return end
+        self.state.col1 = ColorUtils.hexToRGB(node.arguments[1])
+        self.state.col2 = ColorUtils.hexToRGB(node.arguments[2])
+    end, {dry = true})
+end
+
+function Mod:onDrawText(text, node, state, x, y, scale, font, use_color)
+    if state.friendly then
+        local shader = Kristal.Shaders["GradientV"]
+        local last_shader = love.graphics.getShader()
+        local w, h = text:getNodeSize(node, state)
+        local canvas = Draw.pushCanvas(w, h, { stencil = false })
+        love.graphics.print(node.character, 0, 0, 0, scale, scale)
+        Draw.popCanvas()
+        love.graphics.setShader(shader)
+        shader:sendColor("from", {1, 0.4, 1, 1})
+        shader:sendColor("to", {1,1,0,1})
+        Draw.draw(canvas, x, y)
+        love.graphics.setShader(last_shader)
+        return true
+    elseif state.dualcol then
+        local shader = Kristal.Shaders["GradientV"]
+        local last_shader = love.graphics.getShader()
+        local w, h = text:getNodeSize(node, state)
+        local canvas = Draw.pushCanvas(w, h, { stencil = false })
+        love.graphics.print(node.character, 0, 0, 0, scale, scale)
+        Draw.popCanvas()
+        love.graphics.setShader(shader)
+        shader:sendColor("from", state.col1)
+        shader:sendColor("to", state.col2)
+        Draw.draw(canvas, x, y)
+        love.graphics.setShader(last_shader)
+        return true
+    end
+end
+
 function Mod:c4lCreateFilterFX(type, properties)
     local fxtype = (type or "hsv"):lower()
     if fxtype == "hsv" then

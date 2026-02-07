@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 28,
+  nextobjectid = 29,
   properties = {
     ["music"] = "greenroom_detune",
     ["name"] = "??? - Kristal Konverge"
@@ -488,6 +488,23 @@ return {
           properties = {
             ["map"] = "citadel_room/citadel_room3",
             ["marker"] = "entry"
+          }
+        },
+        {
+          id = 28,
+          name = "wandernpc",
+          type = "",
+          shape = "point",
+          x = 880,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "boid",
+            ["cutscene"] = "konverge.boid",
+            ["flagcheck"] = "!hyperboid_dies_real_2027"
           }
         }
       }

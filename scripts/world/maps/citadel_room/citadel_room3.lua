@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 10,
+  nextobjectid = 11,
   properties = {
     ["music"] = "greenroom_detune"
   },
@@ -172,7 +172,7 @@ return {
           name = "npc",
           type = "",
           shape = "rectangle",
-          x = 800,
+          x = 760,
           y = 200,
           width = 40,
           height = 40,
@@ -197,6 +197,24 @@ return {
           properties = {
             ["map"] = "citadel_room",
             ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 10,
+          name = "npc",
+          type = "",
+          shape = "rectangle",
+          x = 580,
+          y = 180,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "ral",
+            ["text1_1"] = "* I have no connection to Ralsei whatsoever I am Ralszor",
+            ["text1_2"] = "* Dont drag me into it",
+            ["text2_1"] = "* stop it youre dragging me into it"
           }
         }
       }

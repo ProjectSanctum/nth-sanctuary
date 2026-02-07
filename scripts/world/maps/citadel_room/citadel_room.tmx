@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="28">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="29">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -184,6 +184,14 @@ am right now.</property>
     <property name="map" value="citadel_room/citadel_room3"/>
     <property name="marker" value="entry"/>
    </properties>
+  </object>
+  <object id="28" name="wandernpc" x="880" y="400">
+   <properties>
+    <property name="actor" value="boid"/>
+    <property name="cutscene" value="konverge.boid"/>
+    <property name="flagcheck" value="!hyperboid_dies_real_2027"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
 </map>
