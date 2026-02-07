@@ -116,7 +116,7 @@ return {
         end
         cutscene:setSpeaker(sp)
         if Game:getFlag("scammed") then
-            cutscene:text("* No Refunds (TM)")
+            cutscene:text("* No Refunds[wait:10][font:main, 16]TM")
             return true
         end
         cutscene:text("* KRIS!!! [wait:10]MY FAVORITE [[Esteemed Customer]]")
@@ -172,7 +172,7 @@ return {
             cutscene:wait(1)
             cutscene:slideTo(sp, sp.x-20, sp.y, 0.5, 'out-expo')
             emote(sp, "arms", "wing")
-            cutscene:text("* No Refunds (TM)")
+            cutscene:text("* No Refunds[wait:10][font:main, 16]TM")
             cutscene:setSpeaker()
             Assets.playSound("item")
             cutscene:text("* (You got the S.POISON.)")
