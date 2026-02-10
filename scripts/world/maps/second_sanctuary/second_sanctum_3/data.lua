@@ -9,8 +9,8 @@ return {
   height = 32,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 30,
-  nextobjectid = 334,
+  nextlayerid = 31,
+  nextobjectid = 345,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church",
@@ -575,9 +575,9 @@ return {
         0, 0, 0, 0, 0, 733, 875, 735, 0, 0, 0, 727, 728, 728, 728, 729, 0, 0, 0, 0, 0, 0, 733, 876, 0, 0, 0, 727, 875, 734, 734, 735, 0, 0, 733, 478, 735, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 733, 875, 734, 729, 0, 727, 734, 734, 734, 734, 734, 728, 735, 0, 0, 0, 0, 733, 876, 0, 727, 729, 733, 875, 734, 734, 735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 733, 875, 734, 734, 728, 734, 734, 734, 734, 734, 734, 734, 734, 0, 0, 0, 0, 733, 875, 872, 875, 734, 734, 875, 875, 875, 735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 727, 734, 875, 875, 875, 875, 734, 734, 734, 734, 734, 734, 734, 734, 729, 0, 0, 0, 739, 734, 875, 734, 740, 734, 734, 734, 734, 735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 739, 734, 734, 740, 734, 875, 875, 875, 875, 875, 875, 875, 875, 875, 741, 0, 0, 0, 0, 739, 740, 741, 0, 733, 734, 734, 734, 735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 739, 741, 0, 739, 734, 734, 734, 734, 734, 734, 740, 740, 741, 0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 734, 734, 875, 735, 0, 0, 733, 875, 735, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 727, 734, 875, 734, 734, 734, 734, 734, 734, 734, 734, 734, 734, 734, 729, 0, 0, 0, 739, 734, 875, 734, 740, 734, 734, 734, 734, 735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 739, 734, 875, 878, 875, 875, 875, 875, 875, 875, 875, 875, 875, 734, 741, 0, 0, 0, 0, 739, 740, 741, 0, 733, 734, 734, 734, 735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 739, 741, 0, 739, 734, 734, 734, 875, 875, 875, 878, 878, 741, 0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 734, 734, 875, 735, 0, 0, 733, 875, 735, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 739, 740, 740, 740, 740, 741, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 875, 875, 875, 735, 727, 728, 734, 875, 735, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 739, 734, 734, 734, 741, 733, 875, 875, 875, 735, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 734, 735, 0, 739, 740, 740, 740, 741, 0, 0, 0, 0, 0,
@@ -926,7 +926,7 @@ return {
           x = 240,
           y = 600,
           width = 40,
-          height = 280,
+          height = 320,
           rotation = 0,
           visible = true,
           properties = {}
@@ -937,8 +937,8 @@ return {
           type = "",
           shape = "rectangle",
           x = 240,
-          y = 880,
-          width = 160,
+          y = 920,
+          width = 240,
           height = 40,
           rotation = 0,
           visible = true,
@@ -949,10 +949,10 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 360,
+          x = 480,
           y = 920,
-          width = 360,
-          height = 40,
+          width = 200,
+          height = 80,
           rotation = 0,
           visible = true,
           properties = {}
@@ -1733,9 +1733,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 320,
-          y = 360,
+          y = 400,
           width = 40,
-          height = 200,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {}
@@ -1746,9 +1746,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 640,
-          y = 560,
+          y = 600,
           width = 40,
-          height = 200,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {}
@@ -1759,9 +1759,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 1000,
-          y = 560,
+          y = 600,
           width = 40,
-          height = 200,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {}
@@ -1772,9 +1772,87 @@ return {
           type = "",
           shape = "rectangle",
           x = 1320,
-          y = 760,
+          y = 800,
           width = 40,
-          height = 200,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 338,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 1000,
+          width = 400,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 339,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 680,
+          y = 1040,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 340,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 1120,
+          width = 320,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 341,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 1040,
+          width = 40,
+          height = 240,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 342,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 1160,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 344,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 1280,
+          width = 80,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}
@@ -1813,8 +1891,8 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 400,
-          y = 840,
+          x = 260,
+          y = 460,
           width = 0,
           height = 0,
           rotation = 0,
@@ -2273,6 +2351,54 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 30,
+      name = "objects_below",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 334,
+          name = "churchmagicglass",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 1040,
+          width = 400,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["idlealpha"] = 0,
+            ["starthidden"] = true
+          }
+        },
+        {
+          id = 335,
+          name = "churchmagicglass",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 1120,
+          width = 80,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["idlealpha"] = 0,
+            ["starthidden"] = true
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 3,
       name = "objects_party",
       class = "",
@@ -2420,6 +2546,36 @@ return {
           visible = true,
           properties = {
             ["up"] = true
+          }
+        },
+        {
+          id = 336,
+          name = "climbentry",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 1000,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["up"] = false
+          }
+        },
+        {
+          id = 343,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 1280,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "Fuck you,[wait:5] there ain't anything here yet![wait:15]\n		  [font:main,48][color:red][shake:3]SCRAM!!!"
           }
         }
       }
