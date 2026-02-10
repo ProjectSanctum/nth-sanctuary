@@ -15,6 +15,9 @@ function map:init(world, data)
     self.lava_alpha = 0.5 + (math.sin((Kristal.getTime() * 30) / 12) * 0.3)
     self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)
     self.hell_border_alpha = 0
+    self.font = nil
+    self.debug = false
+
 end
 
 function map:onEnter()
@@ -54,31 +57,24 @@ end
 function map:update(world, data)
     if Game:getFlag("shownfloodedmusic") then
         super.update(self)
-
         local kris = Game.world.player
         if kris then
             local room_center = (self.height * self.tile_height) / 2
             local dist = kris.y - room_center
-
             local top_px = self.fade_top_tiles * -40
             local bottom_px = self.fade_bottom_tiles * 40
-
             self.hell_border_alpha = MathUtils.clamp(
                 1 - (dist - bottom_px) / (top_px - bottom_px),
                 0, 1
             )
         end
-
         self.lava_alpha = (math.sin((Kristal.getTime() * 30) / 12) * 0.2)
         self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)
-
         if self.con == 1 then
             self.dtmult_timer = self.dtmult_timer + DTMULT
             if self.dtmult_timer >= 1 then
                 self.dtmult_timer = 0
-
                 self.frame_timer = self.frame_timer + 1
-
                 if self.make_rip then
                     self.make_rip = false
                     local cx,cy = Game.world.camera.x-SCREEN_WIDTH/2, Game.world.camera.y-SCREEN_HEIGHT/2
@@ -130,7 +126,6 @@ end
 function map:onFootstep(char, num)
     if not char.is_player then return end
     if Game:getFlag("ripplestop") then return end
-
     local x, y = char:getRelativePos(18/2, 72/2)
     local sizemod = 1
     if self.frame_timer < 445 then
@@ -141,16 +136,29 @@ end
 
 function map:draw()
     super.draw(self)
-
     local alpha = Game:getFlag("floodedChurchBorderLastAlpha", 0)
-
     if Game.world.player then
-        local px = Game.world.player.x + 20
-        local py = Game.world.player.y - 40
-
-        love.graphics.setColor(1, 1, 1, 1)
-        love.graphics.print(string.format("%.3f", alpha), px, py)
-        love.graphics.setColor(1, 1, 1, 1)
+        local px = Game.world.player.x - 22
+        local py = Game.world.player.y - 100
+        if not self.font then
+            local ok, f = pcall(Assets.getFont, "8bitoperator_jve", 32)
+            if ok and f then
+                self.font = f
+            else
+                local ok2, f2 = pcall(Assets.getFont, "sans", 20)
+                if ok2 and f2 then
+                    self.font = f2
+                end
+            end
+        end
+        if self.font and self.debug then
+            local prev_font = love.graphics.getFont()
+            love.graphics.setFont(self.font)
+            local text = string.format("%.2f", alpha)
+            love.graphics.setColor(0, 1, 0, 1)
+            love.graphics.print(text, px, py)
+            love.graphics.setFont(prev_font)
+        end
     end
 end
 

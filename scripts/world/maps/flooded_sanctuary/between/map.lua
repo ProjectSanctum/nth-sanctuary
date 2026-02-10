@@ -3,13 +3,13 @@ local map, super = Class(Map, "between")
 
 function map:init(world, data)
     super.init(self, world, data)
-	self.hell_border_alpha_alt = nil
+    self.hell_border_alpha_alt = nil
+    self.debug = false
 end
 
 function map:onEnter()
 	self.fade_left_tiles = 4
     self.fade_right_tiles = 6
-	local border = Game.border
 end
 
 function map:update()
@@ -30,18 +30,30 @@ end
 
 function map:draw()
     super.draw(self)
-
     local alpha = Game:getFlag("floodedChurchBorderLastAlphaAlt", 0)
-
     if Game.world.player then
-        local px = Game.world.player.x + 20
-        local py = Game.world.player.y - 40
-        love.graphics.setColor(1, 1, 1, 1)
-        love.graphics.print(string.format("%.3f", alpha), px, py)
-        love.graphics.setColor(1, 1, 1, 1)
+        local px = Game.world.player.x - 22
+        local py = Game.world.player.y - 100
+        if not self.font then
+            local ok, f = pcall(Assets.getFont, "8bitoperator_jve", 32)
+            if ok and f then
+                self.font = f
+            else
+                local ok2, f2 = pcall(Assets.getFont, "sans", 20)
+                if ok2 and f2 then
+                    self.font = f2
+                end
+            end
+        end
+
+        if self.font and self.debug then
+            local prev_font = love.graphics.getFont()
+            love.graphics.setFont(self.font)
+            love.graphics.setColor(1, 1, 0, 1)
+            love.graphics.print(string.format("%.2f", alpha), px, py)
+            love.graphics.setFont(prev_font)
+        end
     end
 end
-
-
 
 return map
