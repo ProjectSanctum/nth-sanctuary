@@ -125,4 +125,19 @@ function map:onFootstep(char, num)
 	end
 end
 
+function map:draw()
+    super.draw(self)
+
+    local alpha = Game:getFlag("floodedChurchBorderLastAlpha", 0)
+
+    if Game.world.player then
+        local px = Game.world.player.x
+        local py = Game.world.player.y - 40
+
+        love.graphics.setColor(1, 1, 1, 1)
+        love.graphics.print("alpha: " .. string.format("%.3f", alpha), px, py)
+        love.graphics.setColor(1, 1, 1, 1)
+    end
+end
+
 return map
