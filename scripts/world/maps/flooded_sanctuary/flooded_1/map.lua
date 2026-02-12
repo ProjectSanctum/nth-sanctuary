@@ -125,7 +125,7 @@ end
 
 ---@param char Player
 function map:onFootstep(char, num)
-    if not char.is_player or num ~= 1 then return end
+    if not char.is_player or num ~= 1 or Game:getFlag("shownfloodedmusic") then return end
     local x, y = char:getRelativePos(18/2, 72/2)
 	local sizemod = 1
     local running = (Input.down("cancel") or self.force_run) and not self.force_walk
