@@ -123,15 +123,22 @@ function map:update(world, data)
     end
 end
 
+---@param char Player
 function map:onFootstep(char, num)
-    if not char.is_player then return end
-    if Game:getFlag("ripplestop") then return end
+    if not char.is_player or num ~= 1 then return end
     local x, y = char:getRelativePos(18/2, 72/2)
-    local sizemod = 1
-    if self.frame_timer < 445 then
-        self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 220 * sizemod, 1, 18 * sizemod, 1999000, Game.world.player.moving_x * 1.05, Game.world.player.moving_y * 1.05)
-        self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 140 * sizemod, 1, 15 * sizemod, 1999000, Game.world.player.moving_x * 1.05, Game.world.player.moving_y * 1.05)
+	local sizemod = 1
+    local running = (Input.down("cancel") or self.force_run) and not self.force_walk
+    if Kristal.Config["autoRun"] and not self.force_run and not self.force_walk then
+        running = not running
     end
+
+	if self.frame_timer < 445 then
+		local px = Game.world.player.moving_x * Game.world.player:getCurrentSpeed(running)
+		local py = Game.world.player.moving_y * Game.world.player:getCurrentSpeed(running)
+		self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 220 * sizemod, 1, 18 * sizemod, 1999000, px * 1.05, py * 1.05)
+		self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 140 * sizemod, 1, 15 * sizemod, 1999000, px * 1.05, py * 1.05)
+	end
 end
 
 function map:draw()

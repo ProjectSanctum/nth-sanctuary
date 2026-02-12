@@ -18,14 +18,19 @@ end
 
 ---@param char Player
 function map:onFootstep(char, num)
-    if not char.is_player then return end
+    if not char.is_player or num ~= 1 then return end
 	Assets.playSound("step1", 1, 0.8)
-    ---@type RippleEffect
     local x, y = char:getRelativePos(18/2, 72/2)
-    -- TODO: I couldn't find the right numbers
 	local sizemod = 1
-    self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 220 * sizemod, 1, 18 * sizemod, 1999000, Game.world.player.moving_x * 1.05, Game.world.player.moving_y * 1.05)
-	self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 140 * sizemod, 1, 15 * sizemod, 1999000, Game.world.player.moving_x * 1.05, Game.world.player.moving_y * 1.05)
+    local running = (Input.down("cancel") or self.force_run) and not self.force_walk
+    if Kristal.Config["autoRun"] and not self.force_run and not self.force_walk then
+        running = not running
+    end
+
+	local px = Game.world.player.moving_x * Game.world.player:getCurrentSpeed(running)
+	local py = Game.world.player.moving_y * Game.world.player:getCurrentSpeed(running)
+    self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 220 * sizemod, 1, 18 * sizemod, 1999000, px * 1.05, py * 1.05)
+	self.ripple_fx:makeRipple(x, y, 60, ColorUtils.hexToRGB("#4A91F6"), 140 * sizemod, 1, 15 * sizemod, 1999000, px * 1.05, py * 1.05)
 end
 
 return map

@@ -27,20 +27,20 @@ Ch4Lib.BLEND_FACTORS = {
 }
 
 function lib:computeBezier(curve, iteration)
-	local numpoints = math.max(#curve.x, #curve.value)
+	local numpoints = math.max(#curve.x, #curve.y)
 	if numpoints < 2 then return nil end
 	local points = {}
 	local iterations = iteration * 2
 	local iter = 1 / iterations
 	for i = 1, numpoints do
 		local p0x = curve.x[i]
-		local p0y = curve.value[i]
+		local p0y = curve.y[i]
 		local p1x = curve.x[i] + curve.tx1[i]
-		local p1y = curve.value[i] + curve.ty1[i]
-		local p2x = curve.x[math.min(i + 1, numpoints)] + curve.tx0[i]
-		local p2y = curve.value[math.min(i + 1, numpoints)] + curve.ty0[i]
+		local p1y = curve.y[i] + curve.ty1[i]
+		local p2x = curve.x[math.min(i + 1, numpoints)] + curve.tx0[math.min(i + 1, numpoints)]
+		local p2y = curve.y[math.min(i + 1, numpoints)] + curve.ty0[math.min(i + 1, numpoints)]
 		local p3x = curve.x[math.min(i + 1, numpoints)]
-		local p3y = curve.value[math.min(i + 1, numpoints)]
+		local p3y = curve.y[math.min(i + 1, numpoints)]
 		for j = 0, iterations do
 			local t = j * iter
 			local t2 = t * t
@@ -62,23 +62,23 @@ function lib:init()
     })
 	self.invert_alpha = Assets.getShader("invert_alpha")
 	self.accurate_blending = false
-	-- I had to guesstimaate a lot of this. x and value should be accurate though.
+	-- Values from Deltarune's "ac_ripples" anim curve. Don't ask how I got these lol
 	self.ripple_curve = {
 		norm = self:computeBezier({
-			x = {0, 0.05, 1},
-			value = {0, 0.21, 1},
-			tx0 = {0.01, -0.848, 0},
-			tx1 = {-0.01, 0, 0},
-			ty0 = {0, 0, 0},
-			ty1 = {0, 0, 0},
+			x = {0, 0.051526718, 1},
+			y = {0, 0.20855069, 1},
+			tx0 = {-0.1, -0.007633588, -0.62404585},
+			tx1 = {0, 0.014325198, 0.1},
+			ty0 = {0, -0.06856331, -0.0013129711},
+			ty1 = {0, 0.12866598, 0},
 		}, 16),
 		slow = self:computeBezier({
-			x = {0, 0.01, 1},
-			value = {0, 0.10, 1},
-			tx0 = {0.01, -0.82, 0},
-			tx1 = {0, 0, 0},
-			ty0 = {0, -0.48, 0},
-			ty1 = {0, 0, 0},
+			x = {0, 0.013358779, 1},
+			y = {0, 0.10375321, 1},
+			tx0 = {-0.1, -0.010598192, -0.69488364},
+			tx1 = {0.0000000002337616, 0.06633949, 0.1},
+			ty0 = {0, -0.046568524, -0.37333333},
+			ty1 = {0, 0.2914962, 0},
 		}, 16),
 	}
     if Kristal.getLibConfig("chapter4lib", "use_bm_subtract_blending") then
