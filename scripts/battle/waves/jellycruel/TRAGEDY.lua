@@ -54,8 +54,8 @@ function Basic:update()
     -- Code here gets called every frame
     super.update(self)
     if self.stay then
-        self.stay.x = self.stx + math.random(-20, 20)/10
-        self.stay.y = self.sty + math.random(-20, 20)/10
+        self.stay.x = self.stx + math.sin(Kristal.getTime()*100)
+        self.stay.y = self.sty - math.cos(Kristal.getTime()*100)
     end
 end
 
