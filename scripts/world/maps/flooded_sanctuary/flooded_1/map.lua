@@ -22,6 +22,7 @@ end
 
 function map:onEnter()
     if not Game:getFlag("shownfloodedmusic") then
+        Game:setFlag("ripplestop", false)
         self.world.color = COLORS.black
         self.tiles = Game.world.map:getTileLayer("tiles1")
         self.tiles2 = Game.world.map:getTileLayer("tiles2")
@@ -125,7 +126,8 @@ end
 
 ---@param char Player
 function map:onFootstep(char, num)
-    if not char.is_player or num ~= 1 or Game:getFlag("shownfloodedmusic", false) then return end
+    if not char.is_player or num ~= 1 then return end
+    if Game:getFlag("ripplestop", false) then return end
     local x, y = char:getRelativePos(18/2, 72/2)
 	local sizemod = 1
     local running = (Input.down("cancel") or self.force_run) and not self.force_walk
