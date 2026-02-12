@@ -4,7 +4,7 @@ local FracturedHSVFX, super = Class(ShaderFX)
 
 function FracturedHSVFX:init(heartbeat, priority)
     super.init(self, "hsv_transform", {}, nil, priority)
-
+    
     self.hue_start = love.math.random(-255, 255);
     self.sat_start = love.math.random(5, 15)/10;
     self.val_start = love.math.random(5, 15)/10;
@@ -40,7 +40,6 @@ function FracturedHSVFX:update()
         self.sat = MathUtils.lerp(self.sat_start, self.sat_target, math.abs(math.sin(_percent * math.pi)));
         self.val = MathUtils.lerp(self.val_start, self.val_target, math.abs(math.sin(_percent * math.pi)));
     end
-
 end
 
 function FracturedHSVFX:isActive()

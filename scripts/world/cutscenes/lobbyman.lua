@@ -87,6 +87,50 @@ return {
         choicebox()
         kris:setFacing("down")
     end,
+    frac = function(cutscene)
+        local man = cutscene:getCharacter("lobbyman")
+        local susie, ralsei, kris = cutscene:getCharacter("susie"),cutscene:getCharacter("ralsei"),cutscene:getCharacter("kris")
+        local tick = 0
+        local tick2 = 0
+        cutscene:setSpeaker(man)
+        cutscene:text("Assets.getScript(\"lobbyman\") returns nil")
+        local opts = {" ", "?", "."}
+        local function choicebox()
+            if tick == 1 then opts[2] = "...?" end
+            if tick2 == 1 then opts[1] = "<^>" end
+            local choice = cutscene:choicer(opts)
+            if choice == 1 then
+                if tick2 ~= 1 then
+                    cutscene:text("* ")
+                    tick2 = 1
+                else
+                    cutscene:text("* ")
+                    cutscene:text("* .")
+                    cutscene:text("* !!?")
+                    
+                end
+                choicebox()
+            elseif choice == 2 then
+                if tick ~= 1 then
+                    cutscene:text("* ")
+                    tick = 1
+                else
+                    cutscene:text("* There is      .")
+                end
+
+                choicebox()
+            elseif choice == 3 then
+                cutscene:text("eyb *")
+                Assets.playSound("snd_mysterygo")
+                Game.world.timer:tween(1, man, {alpha = 0, scale_x = 1, scale_y = 3, x = man.x + 70}, 'out-cubic')
+                cutscene:wait(1)
+                man:remove()
+            end
+        end
+
+        choicebox()
+        kris:setFacing("down")
+    end,
     proph = function (cutscene)
         local man = cutscene:getCharacter("lobbyman")
         cutscene:setSpeaker(man)
