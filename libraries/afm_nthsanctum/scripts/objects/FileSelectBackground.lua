@@ -122,7 +122,7 @@ end
 function FileSelectBackground:drawPart(texture, xx, yy)
 	local _xx, _yy = xx or 0, yy or 0
     local _cx, _cy = 0, 0
-	
+    
 	local last_color = love.graphics.getColor()
 	
     local surf_textured = Draw.pushCanvas(640, 480);
@@ -147,7 +147,7 @@ function FileSelectBackground:drawPart(texture, xx, yy)
         love.graphics.setShader(shader)
         local rune = self.rune
         local runeox, runeoy = rune:getWidth()/2, rune:getHeight()/2
-        love.graphics.draw(rune, SCREEN_WIDTH/2+_xx, SCREEN_HEIGHT/2+math.sin(self.siner/30)*10+_yy, 0, 2, 2, runeox, runeoy)
+        love.graphics.draw(rune, SCREEN_WIDTH/2+_xx, SCREEN_HEIGHT/2+30+math.sin(self.siner/30)*10+_yy, 0, 2, 2, runeox, runeoy)
         love.graphics.setShader(last_shader)
     end, "replace", 1)
     love.graphics.setStencilTest("greater", 0)

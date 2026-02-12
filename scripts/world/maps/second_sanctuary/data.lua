@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -20,7 +20,8 @@ return {
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 1,
-      filename = "../../tilesets/bg_dw_church_tileset_new.tsx"
+      filename = "../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../tilesets/bg_dw_church_tileset_new.lua"
     }
   },
   layers = {

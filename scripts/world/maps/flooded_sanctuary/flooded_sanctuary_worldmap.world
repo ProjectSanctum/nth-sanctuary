@@ -27,6 +27,13 @@
             "width": 640,
             "x": 2800,
             "y": 560
+        },
+        {
+            "fileName": "flooded_2/flooded_2.tmx",
+            "height": 1280,
+            "width": 2560,
+            "x": 2800,
+            "y": -1280
         }
     ],
     "onlyShowAdjacentMaps": false,

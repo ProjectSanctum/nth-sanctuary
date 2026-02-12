@@ -4,7 +4,7 @@ local map, super = Class(Map, "hellentrance")
 function map:init(world, data)
     super.init(self, world, data)
     self.hell_border_alpha = 0
-    self.debug = false
+    self.debug = true
 end
 
 function map:onEnter()
