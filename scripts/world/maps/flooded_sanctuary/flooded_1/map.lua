@@ -49,10 +49,16 @@ function map:onEnter()
         end)
         Game:setFlag("shownfloodedmusic", true)
         Kristal.hideBorder()
-    end
+    else
+		Game:setFlag("ripplestop", true)
+	end
 
     self.fade_top_tiles = 6
     self.fade_bottom_tiles = 8
+end
+
+function map:onExit()
+    self.world.color = COLORS.white
 end
 
 function map:update(world, data)
@@ -107,7 +113,7 @@ function map:update(world, data)
                     Game.stage:addChild(self.fakefader)
                     Game.world.timer:tween(0.85, self.fakefader, {alpha = 1})
                 end
-                if self.frame_timer == 445 then
+                if self.frame_timer >= 445 then
                     Kristal.showBorder()
                     Game.world.color = COLORS.white
                     self.fakefader:fadeOutAndRemove(0.5)
