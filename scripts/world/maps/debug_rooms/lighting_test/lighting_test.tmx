@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="18">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="583" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="781" source="../../../tilesets/light_areas.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+529,530,531,529,530,531,529,530,530,531,529,530,531,529,530,531,
+535,536,537,535,536,537,535,536,536,537,535,536,537,535,536,537,
+541,542,543,541,542,543,541,542,542,543,541,542,543,541,542,543,
+0,0,0,0,0,0,175,176,177,0,0,0,0,0,0,0,
+0,0,91,92,93,0,181,182,183,0,0,0,0,0,0,0,
+0,0,97,98,99,0,187,188,189,211,212,213,214,0,0,0,
+0,0,103,104,105,0,193,194,195,217,218,219,220,0,0,0,
+0,0,109,110,111,0,199,200,201,223,224,225,226,0,0,0,
+0,0,115,116,117,0,0,0,0,0,0,0,0,0,0,0,
+601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,
+601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,
+610,610,610,610,610,610,610,610,610,610,610,610,610,610,610,610
+</data>
+ </layer>
+ <objectgroup id="4" name="objects_party">
+  <object id="4" name="npc" x="520" y="400">
+   <properties>
+    <property name="actor" value="ddelta"/>
+    <property name="text1" value="* testing the lighting system here"/>
+    <property name="text2" value="* light type 2/4 is always full-bright"/>
+    <property name="text3">* light type 3/5 acts kinda like darkness but is brighter
+than the actual darkness</property>
+    <property name="text4" value="* use light types 4 and 5 if you don't want it to draw additively as well"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="markers">
+  <object id="1" name="spawn" x="320" y="400">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="objects_lightareas" opacity="0.5">
+  <object id="6" name="darkness" x="0" y="0">
+   <properties>
+    <property name="alpha" type="float" value="1"/>
+    <property name="highlight" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="7" gid="785" x="80" y="480" width="80" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="8" gid="785" x="160" y="480" width="40" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.5"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="9" gid="785" x="200" y="480" width="80" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="10" gid="785" x="40" y="480" width="40" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.5"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="14" gid="785" x="360" y="480" width="80" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="15" gid="785" x="440" y="480" width="40" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.5"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="16" gid="785" x="480" y="480" width="80" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="17" gid="785" x="560" y="480" width="40" height="480">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.5"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="5"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="objects_overlay"/>
+</map>

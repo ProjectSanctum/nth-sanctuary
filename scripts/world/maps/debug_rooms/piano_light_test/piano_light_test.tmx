@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="64">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="darkchurch_intro"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="91" source="../../../tilesets/libraryexcerpt.tsx"/>
+ <tileset firstgid="139" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <layer id="8" name="Tile Layer 2" width="32" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,0,0,0,271,271,271,271,271,
+271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,
+271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271,271
+</data>
+ </layer>
+ <layer id="1" name="Tile Layer 1" width="32" height="12">
+  <data encoding="csv">
+410,410,410,410,410,481,517,518,519,553,517,518,519,553,517,518,519,481,410,410,410,410,410,481,411,411,411,481,410,410,410,410,
+410,410,403,410,410,487,523,524,525,559,523,524,525,559,523,524,525,487,410,410,403,410,410,487,411,411,411,487,410,410,403,410,
+410,410,409,410,410,493,529,530,531,565,529,530,531,565,529,530,531,493,410,410,409,410,410,493,411,411,411,493,410,410,409,410,
+410,410,415,410,410,511,535,536,537,577,535,536,537,577,535,536,537,511,410,410,415,410,410,511,411,411,411,511,410,410,415,410,
+416,416,416,416,416,505,547,548,549,583,547,548,549,583,547,548,549,505,416,416,416,416,416,505,212,212,212,505,416,416,416,416,
+212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,
+212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,
+212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,212,
+589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,589,212,212,212,589,589,589,589,589,
+619,620,621,622,0,0,0,619,620,621,622,0,0,0,619,620,621,622,0,0,619,620,621,622,589,589,589,619,620,621,622,0,
+625,626,627,628,0,0,0,625,626,627,628,0,0,0,625,626,627,628,0,0,625,626,627,628,574,0,574,625,626,627,628,0,
+631,632,633,634,0,0,0,631,632,633,634,0,0,0,631,632,633,634,0,0,631,632,633,634,580,0,580,631,632,633,634,0
+</data>
+ </layer>
+ <objectgroup id="4" name="markers">
+  <object id="10" name="spawn" x="100" y="280">
+   <point/>
+  </object>
+  <object id="11" name="light2" x="540" y="122">
+   <point/>
+  </object>
+  <object id="18" name="light3" x="698" y="122">
+   <point/>
+  </object>
+  <object id="19" name="light4" x="940" y="122">
+   <point/>
+  </object>
+  <object id="47" name="light5" x="1100" y="122">
+   <point/>
+  </object>
+  <object id="63" name="light1" x="380" y="122">
+   <properties>
+    <property name="size" type="float" value="96"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="collision">
+  <object id="54" x="1080" y="160" width="200" height="40"/>
+  <object id="56" x="960" y="120" width="120" height="40"/>
+  <object id="58" x="0" y="160" width="960" height="40"/>
+  <object id="59" x="0" y="320" width="960" height="40"/>
+  <object id="60" x="1080" y="320" width="200" height="40"/>
+  <object id="61" x="960" y="360" width="120" height="40"/>
+ </objectgroup>
+ <objectgroup id="5" name="objects_switch">
+  <object id="32" name="churchtilebutton" x="1000" y="320" width="40" height="40">
+   <properties>
+    <property name="downonce" type="bool" value="true"/>
+    <property name="flagcheck" value="!pianotest"/>
+    <property name="group" value="hint"/>
+    <property name="keepdown" type="bool" value="true"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="33" name="steelcage" x="1200" y="74" width="58" height="246">
+   <properties>
+    <property name="flagcheck" value="!pianotest"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="objects_party">
+  <object id="2" gid="86" x="368" y="146" width="26" height="36">
+   <properties>
+    <property name="color" type="color" value="#ff808080"/>
+   </properties>
+  </object>
+  <object id="5" name="lighttrigger" x="440" y="200" width="40" height="120">
+   <properties>
+    <property name="marker" value="light2"/>
+   </properties>
+  </object>
+  <object id="6" gid="86" x="528" y="146" width="26" height="36">
+   <properties>
+    <property name="color" type="color" value="#ff808080"/>
+   </properties>
+  </object>
+  <object id="13" name="lighttrigger" x="600" y="200" width="40" height="120">
+   <properties>
+    <property name="marker" value="light3"/>
+   </properties>
+  </object>
+  <object id="14" gid="86" x="686" y="146" width="26" height="36"/>
+  <object id="16" name="lighttrigger" x="760" y="200" width="40" height="120">
+   <properties>
+    <property name="marker1" value="light4"/>
+    <property name="marker2" value="light5"/>
+   </properties>
+  </object>
+  <object id="17" gid="86" x="928" y="146" width="26" height="36"/>
+  <object id="20" name="piano" x="980" y="160" width="90" height="30">
+   <properties>
+    <property name="flag" value="pianotest"/>
+    <property name="solution" value="131315"/>
+   </properties>
+  </object>
+  <object id="21" name="pianohint" x="880" y="400" width="120" height="40">
+   <properties>
+    <property name="flagcheck" value="!pianotest"/>
+    <property name="group" value="hint"/>
+    <property name="hint" value="131"/>
+    <property name="light" type="bool" value="true"/>
+    <property name="once" type="bool" value="true"/>
+    <property name="staff" value="start"/>
+   </properties>
+  </object>
+  <object id="22" name="pianohint" x="1040" y="400" width="120" height="40">
+   <properties>
+    <property name="flagcheck" value="!pianotest"/>
+    <property name="group" value="hint"/>
+    <property name="hint" value="315"/>
+    <property name="light" type="bool" value="true"/>
+    <property name="once" type="bool" value="true"/>
+    <property name="silent" type="bool" value="true"/>
+    <property name="staff" value="end"/>
+   </properties>
+  </object>
+  <object id="23" gid="8" x="980" y="200" width="90" height="66"/>
+  <object id="34" name="staticlight" x="220" y="122">
+   <properties>
+    <property name="size" type="float" value="96"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="35" gid="86" x="208" y="146" width="26" height="36"/>
+  <object id="40" name="staticlight" x="1320" y="240">
+   <properties>
+    <property name="size" type="float" value="160"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="46" gid="86" x="1088" y="146" width="26" height="36"/>
+  <object id="62" name="lighttrigger" x="280" y="200" width="40" height="120">
+   <properties>
+    <property name="marker" value="light1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="objects_overlay">
+  <object id="44" name="darkness" x="0" y="0">
+   <properties>
+    <property name="alpha" type="float" value="1"/>
+    <property name="flagcheck" value="!pianotest"/>
+    <property name="highlight" type="bool" value="false"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>

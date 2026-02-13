@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="18">
+ <editorsettings>
+  <export target="filtertest.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="583" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="781" source="../../../tilesets/light_areas.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+529,530,531,529,530,531,529,530,530,531,529,530,531,529,530,531,
+535,536,537,535,536,537,535,536,536,537,535,536,537,535,536,537,
+541,542,543,541,542,543,541,542,542,543,541,542,543,541,542,543,
+0,0,0,0,0,0,175,176,177,0,0,0,0,0,0,0,
+0,0,91,92,93,0,181,182,183,0,0,0,0,0,0,0,
+0,0,97,98,99,0,187,188,189,211,212,213,214,0,0,0,
+0,0,103,104,105,0,193,194,195,217,218,219,220,0,0,0,
+0,0,109,110,111,0,199,200,201,223,224,225,226,0,0,0,
+0,0,115,116,117,0,0,0,0,0,0,0,0,0,0,0,
+601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,
+601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,601,
+610,610,610,610,610,610,610,610,610,610,610,610,610,610,610,610
+</data>
+ </layer>
+ <objectgroup id="4" name="objects_party">
+  <object id="4" name="npc" x="520" y="400">
+   <properties>
+    <property name="actor" value="ddelta"/>
+    <property name="text1" value="* hi, gen edited the filter effect so no more dupes"/>
+    <property name="text2">* hue_start, sat_start, val_start
+</property>
+    <property name="text3">* hue_target, hue_target, hue_target
+</property>
+    <property name="text4">* and speed
+* (only speed is int, the rest is string)</property>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="markers">
+  <object id="1" name="spawn" x="320" y="400">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="objects_overlay">
+  <object id="5" name="filter" x="240" y="400">
+   <properties>
+    <property name="hue_start" value="200"/>
+    <property name="hue_target" value="240"/>
+    <property name="sat_start" value="1"/>
+    <property name="sat_target" value="0"/>
+    <property name="speed" type="int" value="3"/>
+    <property name="type" value="custom"/>
+    <property name="val_start" value="1"/>
+    <property name="val_target" value="1"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>

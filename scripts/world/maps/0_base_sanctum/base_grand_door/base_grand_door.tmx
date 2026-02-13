@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="25" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="57">
+ <editorsettings>
+  <export format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value=""/>
+  <property name="music" value="grand_bells"/>
+  <property name="name" value="Entrance to Grand Sanctum"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
+ <tileset firstgid="261" source="../../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="351" source="../../../tilesets/light_areas.tsx"/>
+ <tileset firstgid="361" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <objectgroup id="6" name="objects_parallax"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="25">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+910,910,910,910,910,910,910,910,910,910,910,910,910,910,910,910,
+493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,
+493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,
+493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,
+493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,
+493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,
+493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,
+493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,493,
+0,0,0,0,0,0,171,163,162,174,0,0,0,0,0,0,
+0,0,0,0,0,0,171,172,173,184,0,0,0,0,0,0,
+0,0,0,0,0,0,171,173,173,174,0,0,0,0,0,0,
+0,0,0,0,0,0,191,173,193,174,0,0,0,0,0,0,
+0,0,0,0,201,202,171,173,173,194,202,203,0,0,0,0,
+0,0,0,0,171,173,173,173,173,173,173,174,0,0,0,0,
+0,0,0,0,171,173,184,0,0,181,162,184,0,0,0,0,
+0,0,0,0,181,172,173,173,173,173,183,194,0,0,0,0,
+0,0,0,0,191,173,183,173,173,173,193,174,0,0,0,0,
+0,0,0,0,221,222,191,173,172,194,222,223,0,0,0,0,
+0,0,0,0,0,0,181,172,162,184,0,0,0,0,0,0,
+0,0,0,0,0,0,171,173,173,174,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="11" name="objects_tile">
+  <object id="47" gid="493" x="0" y="250" width="140" height="40"/>
+  <object id="48" gid="493" x="490" y="250" width="150" height="40"/>
+ </objectgroup>
+ <objectgroup id="2" name="objects_closeddoor">
+  <object id="1" gid="280" x="134" y="520" width="360" height="310"/>
+ </objectgroup>
+ <objectgroup id="9" name="objects_opendoor">
+  <object id="27" gid="281" x="134" y="520" width="360" height="310"/>
+ </objectgroup>
+ <objectgroup id="7" name="objects_party">
+  <object id="30" name="transition" x="240" y="1000" width="160" height="40">
+   <properties>
+    <property name="map" value="0_base_sanctum/base_grand_door"/>
+    <property name="marker" value="entry_grand"/>
+   </properties>
+  </object>
+  <object id="31" name="cameratarget" x="240" y="440" width="160" height="120">
+   <properties>
+    <property name="lockx" type="bool" value="true"/>
+    <property name="locky" type="bool" value="true"/>
+    <property name="marker" value="targ"/>
+    <property name="time" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="32" name="savepoint" x="300" y="760" width="40" height="40"/>
+  <object id="37" name="interactable" x="240" y="480" width="160" height="40">
+   <properties>
+    <property name="solid" type="bool" value="true"/>
+    <property name="text">* (It's locked...)[wait:5]
+* (Seems like you need a lot of [color:9999ff]Dark Shards[color:reset]...)</property>
+   </properties>
+  </object>
+  <object id="54" name="script" x="240" y="440" width="160" height="40">
+   <properties>
+    <property name="cutscene" value="finale.entry"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="objects_lightareas" visible="0">
+  <object id="2" name="darkness" x="0" y="240">
+   <properties>
+    <property name="alpha" type="float" value="0.5"/>
+    <property name="highlight" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="53" gid="353" x="210" y="1050" width="220" height="860">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="objects_top"/>
+ <objectgroup id="4" name="collision">
+  <object id="9" x="160" y="520" width="80" height="200"/>
+  <object id="12" x="400" y="520" width="80" height="200"/>
+  <object id="33" x="240" y="520">
+   <polygon points="0,0 50,-20 50,-40 0,-40"/>
+  </object>
+  <object id="34" x="400" y="520">
+   <polygon points="0,0 0,-40 -50,-40 -50,-20"/>
+  </object>
+  <object id="36" x="240" y="200" width="160" height="270"/>
+  <object id="39" x="120" y="720" width="40" height="160"/>
+  <object id="40" x="160" y="880" width="80" height="120"/>
+  <object id="41" x="400" y="880" width="80" height="120"/>
+  <object id="42" x="480" y="720" width="40" height="160"/>
+  <object id="43" x="280" y="760" width="80" height="40"/>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="13" name="spawn" x="320" y="840">
+   <point/>
+  </object>
+  <object id="16" name="entry_ft" x="320" y="960">
+   <point/>
+  </object>
+  <object id="21" name="targ" x="320" y="320">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="12" name="controllers"/>
+</map>

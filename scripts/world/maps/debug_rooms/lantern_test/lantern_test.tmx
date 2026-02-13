@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="46">
+ <editorsettings>
+  <export target="lanterntest.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../../../tilesets/church_objects.tsx"/>
+ <objectgroup id="2" name="objects_bg" visible="0">
+  <object id="1" name="darkroombg" x="40" y="0">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="1" name="Tile Layer 1" width="32" height="24">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="6" name="objects_switch">
+  <object id="16" name="churchtilebutton" x="140" y="320" width="40" height="40">
+   <properties>
+    <property name="group" value="lantern"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="36" name="churchtilebutton" x="500" y="320" width="40" height="40">
+   <properties>
+    <property name="group" value="lantern"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="5" name="objects_party">
+  <object id="7" name="lanternshrinking" x="160" y="240">
+   <properties>
+    <property name="group" value="lantern"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="18" name="pathenemygen" x="480" y="640">
+   <properties>
+    <property name="dir" type="int" value="2"/>
+    <property name="movetype" type="int" value="3"/>
+    <property name="rate" type="float" value="40"/>
+    <property name="timer" type="float" value="19"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="19" name="pathenemyender" x="480" y="400">
+   <point/>
+  </object>
+  <object id="24" name="pathenemyturner" x="480" y="520">
+   <properties>
+    <property name="dir" type="int" value="3"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="25" name="pathenemyturner" x="200" y="520">
+   <properties>
+    <property name="dir" type="int" value="2"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="26" name="pathenemyturner" x="200" y="400">
+   <properties>
+    <property name="dir" type="int" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="30" name="lanternshrinking" x="280" y="440">
+   <properties>
+    <property name="group" value="lantern"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="32" name="lanternshrinking" x="520" y="240">
+   <properties>
+    <property name="group" value="lantern"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="34" name="lanternshrinking" x="400" y="440">
+   <properties>
+    <property name="group" value="lantern"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="markers">
+  <object id="2" name="spawn" x="320" y="240">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="objects_overlay">
+  <object id="9" name="darkness" x="0" y="0">
+   <properties>
+    <property name="alpha" type="float" value="1"/>
+    <property name="highlight" type="bool" value="false"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="battleareas" locked="1">
+  <object id="35" x="120" y="360" width="440" height="280"/>
+ </objectgroup>
+</map>

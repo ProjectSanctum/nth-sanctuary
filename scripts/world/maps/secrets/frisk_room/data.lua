@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -51,7 +51,7 @@ return {
       id = 8,
       name = "tiles_parallax",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -80,7 +80,7 @@ return {
       id = 7,
       name = "objects_parallax",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -160,7 +160,7 @@ return {
       id = 9,
       name = "objects_rain",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -416,7 +416,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "hell_1",
+            ["map"] = "sanctum_hell/hell_1",
             ["marker"] = "frisk_room_exit"
           }
         },

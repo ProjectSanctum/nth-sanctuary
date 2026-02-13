@@ -1,0 +1,426 @@
+{
+    "maps": [
+        {
+            "fileName": "0_base_sanctum/base_sanctum_center/base_sanctum_center.tmx",
+            "height": 960,
+            "width": 1200,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "0_base_sanctum/base_east_1/base_east_1.tmx",
+            "height": 840,
+            "width": 1040,
+            "x": 1280,
+            "y": 120
+        },
+        {
+            "fileName": "0_base_sanctum/base_east_2/base_east_2.tmx",
+            "height": 480,
+            "width": 1280,
+            "x": 2400,
+            "y": 480
+        },
+        {
+            "fileName": "0_base_sanctum/base_east_3/base_east_3.tmx",
+            "height": 800,
+            "width": 1200,
+            "x": 3760,
+            "y": 160
+        },
+        {
+            "fileName": "0_base_sanctum/base_east_3_prophecy/base_east_3_prophecy.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 5040,
+            "y": 440
+        },
+        {
+            "fileName": "0_base_sanctum/base_south_1/base_south_1.tmx",
+            "height": 1200,
+            "width": 1200,
+            "x": 480,
+            "y": 1040
+        },
+        {
+            "fileName": "0_base_sanctum/base_south_2/base_south_2.tmx",
+            "height": 1040,
+            "width": 640,
+            "x": -240,
+            "y": 2000
+        },
+        {
+            "fileName": "0_base_sanctum/base_fast_travel/base_fast_travel.tmx",
+            "height": 1920,
+            "width": 1080,
+            "x": 0,
+            "y": -2000
+        },
+        {
+            "fileName": "2_2nd_sanctuary/ripple1/ripple1.tmx",
+            "height": 720,
+            "width": 1040,
+            "x": -600,
+            "y": 3040
+        },
+        {
+            "fileName": "2_2nd_sanctuary/ripplepost/ripplepost.tmx",
+            "height": 720,
+            "width": 1040,
+            "x": -600,
+            "y": 3800
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_1/second_sanctum_1.tmx",
+            "height": 1120,
+            "width": 800,
+            "x": -520,
+            "y": 4600
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_2/second_sanctum_2.tmx",
+            "height": 1120,
+            "width": 1200,
+            "x": 360,
+            "y": 4640
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_3/second_sanctum_3.tmx",
+            "height": 1280,
+            "width": 1680,
+            "x": 1640,
+            "y": 4280
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_4_crossroad/second_sanctum_4_crossroad.tmx",
+            "height": 1720,
+            "width": 1720,
+            "x": 3400,
+            "y": 4320
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_5/second_sanctum_5.tmx",
+            "height": 2400,
+            "width": 1200,
+            "x": 2720,
+            "y": 6120
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_6/second_sanctum_6.tmx",
+            "height": 1280,
+            "width": 1920,
+            "x": 720,
+            "y": 8240
+        },
+        {
+            "fileName": "3_flooded_sanctuary/between/between.tmx",
+            "height": 960,
+            "width": 640,
+            "x": 5800,
+            "y": 4440
+        },
+        {
+            "fileName": "3_flooded_sanctuary/flooded_between/flooded_between.tmx",
+            "height": 960,
+            "width": 640,
+            "x": 5200,
+            "y": 4880
+        },
+        {
+            "fileName": "3_flooded_sanctuary/flooded_1/flooded_1.tmx",
+            "height": 1680,
+            "width": 1360,
+            "x": 5920,
+            "y": 5040
+        },
+        {
+            "fileName": "3_flooded_sanctuary/flooded_2/flooded_2.tmx",
+            "height": 1280,
+            "width": 2560,
+            "x": 7360,
+            "y": 4640
+        },
+        {
+            "fileName": "3_flooded_sanctuary/flooded_hell_entrance/flooded_hell_entrance.tmx",
+            "height": 680,
+            "width": 640,
+            "x": 7360,
+            "y": 6040
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_0_ripple/second_sanctum_0_ripple.tmx",
+            "height": 720,
+            "width": 1040,
+            "x": -600,
+            "y": 3040
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_0_ripple_post/second_sanctum_0_ripple_post.tmx",
+            "height": 720,
+            "width": 1040,
+            "x": -600,
+            "y": 3800
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_1/fourth_sanctum_1.tmx",
+            "height": 1200,
+            "width": 1200,
+            "x": 4360,
+            "y": -1120
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_2/fourth_sanctum_2.tmx",
+            "height": 1280,
+            "width": 1920,
+            "x": 5640,
+            "y": -1360
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_3/fourth_sanctum_3.tmx",
+            "height": 1360,
+            "width": 800,
+            "x": 7640,
+            "y": -2200
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_4/fourth_sanctum_4.tmx",
+            "height": 3200,
+            "width": 3480,
+            "x": 8520,
+            "y": -4600
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_5/fourth_sanctum_5.tmx",
+            "height": 720,
+            "width": 1920,
+            "x": 12080,
+            "y": -4280
+        },
+        {
+            "fileName": "secrets/super_secret_prism_room/super_secret_prism_room.tmx",
+            "height": 1280,
+            "width": 640,
+            "x": 8520,
+            "y": -1440
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_1/fifth_sanctum_1.tmx",
+            "height": 1200,
+            "width": 1200,
+            "x": 1200,
+            "y": -1880
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_1_prophecy/fifth_sanctum_1_prophecy.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 2480,
+            "y": -2240
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_2/fifth_sanctum_2.tmx",
+            "height": 840,
+            "width": 1200,
+            "x": 2480,
+            "y": -1760
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_darkarea_1/fifth_sanctum_darkarea_1.tmx",
+            "height": 1920,
+            "width": 1280,
+            "x": 3080,
+            "y": -2840
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_trailer/fifth_sanctum_trailer.tmx",
+            "height": 480,
+            "width": 1920,
+            "x": 3200,
+            "y": -2320
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_3_darkarea/fifth_sanctum_darkarea_1.tmx",
+            "height": 1920,
+            "width": 1280,
+            "x": 2400,
+            "y": -4280
+        },
+        {
+            "fileName": "fractured_sanctuary/fractured_1.tmx",
+            "height": 800,
+            "width": 1040,
+            "x": 5440,
+            "y": -6840
+        },
+        {
+            "fileName": "sactum_hell/hell_1/hell_1.tmx",
+            "height": 960,
+            "width": 1200,
+            "x": 7080,
+            "y": 6800
+        },
+        {
+            "fileName": "0_base_sanctum/base_grand_door/base_grand_door.tmx",
+            "height": 1000,
+            "width": 640,
+            "x": 280,
+            "y": -3080
+        },
+        {
+            "fileName": "wip_rooms/final/final_1/final_1.tmx",
+            "height": 1360,
+            "width": 800,
+            "x": 200,
+            "y": -4320
+        },
+        {
+            "fileName": "secrets/citadel_room/citadel_room_1/citadel_room_1.tmx",
+            "height": 1280,
+            "width": 1280,
+            "x": -2520,
+            "y": -1880
+        },
+        {
+            "fileName": "secrets/citadel_room/citadel_room_2/citadel_room_2.tmx",
+            "height": 480,
+            "width": 1000,
+            "x": -3600,
+            "y": -1320
+        },
+        {
+            "fileName": "secrets/citadel_room/citadel_room_3/citadel_room_3.tmx",
+            "height": 560,
+            "width": 880,
+            "x": -1160,
+            "y": -1520
+        },
+        {
+            "fileName": "secrets/frisk_room/frisk_room.tmx",
+            "height": 480,
+            "width": 1080,
+            "x": 5920,
+            "y": 7240
+        },
+        {
+            "fileName": "secrets/new_future/new_future.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 4960,
+            "y": 8360
+        },
+        {
+            "fileName": "secrets/prophecy_test/prophecy_test.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 5600,
+            "y": 8360
+        },
+        {
+            "fileName": "wip_rooms/gerson_study/gerson_study.tmx",
+            "height": 1200,
+            "width": 960,
+            "x": -1120,
+            "y": -2880
+        },
+        {
+            "fileName": "wip_rooms/final_sanctuary/final_1/final_1.tmx",
+            "height": 1360,
+            "width": 800,
+            "x": -680,
+            "y": -4440
+        },
+        {
+            "fileName": "wip_rooms/final_sanctuary/final_intro/final_intro.tmx",
+            "height": 1360,
+            "width": 800,
+            "x": 120,
+            "y": -4440
+        },
+        {
+            "fileName": "wip_rooms/dark_place/dark_place.tmx",
+            "height": 960,
+            "width": 1280,
+            "x": 8360,
+            "y": 6800
+        },
+        {
+            "fileName": "debug_rooms/climb_test/climb_test.tmx",
+            "height": 1280,
+            "width": 2560,
+            "x": -10200,
+            "y": -4720
+        },
+        {
+            "fileName": "debug_rooms/filter_test/filter_test.tmx",
+            "height": 480,
+            "width": 640,
+            "x": -7640,
+            "y": -4720
+        },
+        {
+            "fileName": "debug_rooms/lantern_test/lantern_test.tmx",
+            "height": 960,
+            "width": 1280,
+            "x": -7000,
+            "y": -4720
+        },
+        {
+            "fileName": "debug_rooms/lighting_test/lighting_test.tmx",
+            "height": 480,
+            "width": 640,
+            "x": -7640,
+            "y": -4240
+        },
+        {
+            "fileName": "debug_rooms/piano_big_test/piano_big_test.tmx",
+            "height": 480,
+            "width": 1760,
+            "x": -9400,
+            "y": -3440
+        },
+        {
+            "fileName": "debug_rooms/piano_light_test/piano_light_test.tmx",
+            "height": 480,
+            "width": 1280,
+            "x": -7000,
+            "y": -3760
+        },
+        {
+            "fileName": "debug_rooms/piano_test/piano_test.tmx",
+            "height": 480,
+            "width": 640,
+            "x": -7640,
+            "y": -3720
+        },
+        {
+            "fileName": "debug_rooms/room_1/room_1.tmx",
+            "height": 1480,
+            "width": 1560,
+            "x": -9200,
+            "y": -6200
+        },
+        {
+            "fileName": "debug_rooms/room_2/room_2.tmx",
+            "height": 600,
+            "width": 880,
+            "x": -8800,
+            "y": -6800
+        },
+        {
+            "fileName": "debug_rooms/tower_1/tower_1.tmx",
+            "height": 600,
+            "width": 880,
+            "x": -8800,
+            "y": -7480
+        },
+        {
+            "fileName": "debug_rooms/tower_2/tower_2.tmx",
+            "height": 600,
+            "width": 400,
+            "x": -8560,
+            "y": -8160
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}
