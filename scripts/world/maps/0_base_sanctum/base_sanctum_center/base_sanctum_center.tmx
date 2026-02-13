@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="51">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="52">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -239,6 +239,9 @@
    <point/>
   </object>
   <object id="41" name="entry_north" x="600" y="40">
+   <point/>
+  </object>
+  <object id="51" name="entry_fast_travel" x="600" y="40">
    <point/>
   </object>
  </objectgroup>

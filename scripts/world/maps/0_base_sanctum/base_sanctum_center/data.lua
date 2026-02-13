@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 51,
+  nextobjectid = 52,
   properties = {
     ["border"] = "base_sanctum",
     ["ft_whitelist"] = true,
@@ -721,6 +721,19 @@ return {
         {
           id = 41,
           name = "entry_north",
+          type = "",
+          shape = "point",
+          x = 600,
+          y = 40,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 51,
+          name = "entry_fast_travel",
           type = "",
           shape = "point",
           x = 600,
