@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 13,
-  nextobjectid = 56,
+  nextobjectid = 57,
   properties = {
     ["border"] = "church_frac",
     ["music"] = "fractured",
@@ -743,6 +743,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 56,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 200,
+          width = 160,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -837,10 +850,10 @@ return {
             ["panel_h"] = "120",
             ["spr_offx"] = 70,
             ["spr_offy"] = 70,
-            ["text"] = "RUNE_RUNE_RUNE_RUNE_RUNE",
+            ["text"] = " \nTHE LEGEND OF THIS WORLD,\n<DELTA RUNE_RUNE_RUNE_RUNE_RUNE\nRUNE_RUNE_RUNE_RUNE_R",
             ["texture"] = "fractured_prophecies/set_2",
             ["txt_offx"] = -175,
-            ["txt_offy"] = 10
+            ["txt_offy"] = 0
           }
         },
         {

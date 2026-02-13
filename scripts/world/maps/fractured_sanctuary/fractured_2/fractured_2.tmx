@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="56">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="57">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -169,6 +169,7 @@
   <object id="51" x="200" y="0" width="160" height="80"/>
   <object id="52" x="360" y="-40" width="160" height="40"/>
   <object id="53" x="160" y="80" width="40" height="160"/>
+  <object id="56" x="200" y="200" width="160" height="40"/>
  </objectgroup>
  <objectgroup id="5" name="markers">
   <object id="16" name="entry" x="40" y="640">
@@ -194,10 +195,13 @@
     <property name="panel_h" value="120"/>
     <property name="spr_offx" type="float" value="70"/>
     <property name="spr_offy" type="float" value="70"/>
-    <property name="text" value="RUNE_RUNE_RUNE_RUNE_RUNE"/>
+    <property name="text"> 
+THE LEGEND OF THIS WORLD,
+&lt;DELTA RUNE_RUNE_RUNE_RUNE_RUNE
+RUNE_RUNE_RUNE_RUNE_R</property>
     <property name="texture" value="fractured_prophecies/set_2"/>
     <property name="txt_offx" type="int" value="-175"/>
-    <property name="txt_offy" type="float" value="10"/>
+    <property name="txt_offy" type="float" value="0"/>
    </properties>
   </object>
   <object id="36" name="slidearea" x="920" y="520" width="80" height="200"/>
