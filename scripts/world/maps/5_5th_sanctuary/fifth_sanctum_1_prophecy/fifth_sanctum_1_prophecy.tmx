@@ -5,7 +5,6 @@
  </editorsettings>
  <properties>
   <property name="border" value="simple"/>
-  <property name="ft_blacklist" type="bool" value="true"/>
   <property name="music" value="negative_Sanctum_wip"/>
   <property name="name" value="Fifth Sanctuary - Prophecy"/>
  </properties>

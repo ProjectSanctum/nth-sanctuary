@@ -13,7 +13,6 @@ return {
   nextobjectid = 197,
   properties = {
     ["border"] = "simple",
-    ["ft_blacklist"] = true,
     ["music"] = "negative_Sanctum_wip",
     ["name"] = "Fifth Sanctuary - Entry"
   },
