@@ -814,7 +814,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fractured/fractured_1",
+            ["map"] = "fractured_sanctuary/fractured_1",
             ["marker"] = "entry"
           }
         },
@@ -868,7 +868,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fractured/fractured_1",
+            ["map"] = "fractured_sanctuary/fractured_1",
             ["marker"] = "entry"
           }
         },

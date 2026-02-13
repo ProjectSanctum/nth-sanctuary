@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 15,
-  nextobjectid = 50,
+  nextlayerid = 16,
+  nextobjectid = 53,
   properties = {
     ["border"] = "church_frac",
     ["music"] = "fractured",
@@ -20,24 +20,24 @@ return {
     {
       name = "bg_dw_church_2_tileset",
       firstgid = 1,
-      filename = "../../tilesets/bg_dw_church_2_tileset.tsx"
+      filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
     },
     {
       name = "bg_dw_church_tileset_new",
       firstgid = 199,
-      filename = "../../tilesets/bg_dw_church_tileset_new.tsx",
-      exportfilename = "../../tilesets/bg_dw_church_tileset_new.lua"
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "bg_dw_church_library_2_tileset",
       firstgid = 781,
-      filename = "../../tilesets/bg_dw_church_library_2_tileset.tsx"
+      filename = "../../../tilesets/bg_dw_church_library_2_tileset.tsx"
     },
     {
       name = "church_objects",
       firstgid = 1041,
-      filename = "../../tilesets/church_objects.tsx",
-      exportfilename = "../../tilesets/church_objects.lua"
+      filename = "../../../tilesets/church_objects.tsx",
+      exportfilename = "../../../tilesets/church_objects.lua"
     }
   },
   layers = {
@@ -658,6 +658,64 @@ return {
             ["txt_offx"] = -200,
             ["txt_offy"] = 10
           }
+        },
+        {
+          id = 50,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1040,
+          y = 600,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "fractured_sanctuary/fractured_2",
+            ["marker"] = "entry"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 15,
+      name = "markers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 51,
+          name = "entry",
+          type = "",
+          shape = "point",
+          x = 1000,
+          y = 640,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 52,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 520,
+          y = 600,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

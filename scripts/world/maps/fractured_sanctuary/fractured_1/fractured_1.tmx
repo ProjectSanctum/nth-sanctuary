@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="50">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="53">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -8,10 +8,10 @@
   <property name="music" value="fractured"/>
   <property name="name" value="Fractured Sanctuary - ?1"/>
  </properties>
- <tileset firstgid="1" source="../../tilesets/bg_dw_church_2_tileset.tsx"/>
- <tileset firstgid="199" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
- <tileset firstgid="781" source="../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
- <tileset firstgid="1041" source="../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="199" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="781" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
+ <tileset firstgid="1041" source="../../../tilesets/church_objects.tsx"/>
  <objectgroup id="12" name="objects_towers" visible="0" locked="1" parallaxy="0.7">
   <object id="38" gid="1073742865" x="440" y="200" width="316.955" height="458" rotation="270">
    <properties>
@@ -182,6 +182,20 @@
     <property name="txt_offx" type="int" value="-200"/>
     <property name="txt_offy" type="float" value="10"/>
    </properties>
+  </object>
+  <object id="50" name="transition" x="1040" y="600" width="40" height="80">
+   <properties>
+    <property name="map" value="fractured_sanctuary/fractured_2"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="15" name="markers">
+  <object id="51" name="entry" x="1000" y="640">
+   <point/>
+  </object>
+  <object id="52" name="spawn" x="520" y="600">
+   <point/>
   </object>
  </objectgroup>
  <layer id="14" name="Tile Layer 6" width="26" height="20">

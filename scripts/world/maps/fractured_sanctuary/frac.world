@@ -1,0 +1,27 @@
+{
+    "maps": [
+        {
+            "fileName": "fractured_1.tmx",
+            "height": 800,
+            "width": 1040,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "fractured_2/fractured_2.tmx",
+            "height": 800,
+            "width": 1040,
+            "x": 2902,
+            "y": -118
+        },
+        {
+            "fileName": "fractured_1/fractured_1.tmx",
+            "height": 800,
+            "width": 1040,
+            "x": 1862,
+            "y": -118
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

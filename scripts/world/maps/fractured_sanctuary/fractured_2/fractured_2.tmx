@@ -181,7 +181,7 @@
  <objectgroup id="3" name="objects_party">
   <object id="17" name="transition" x="-40" y="600" width="40" height="80">
    <properties>
-    <property name="map" value="fractured/fractured_1"/>
+    <property name="map" value="fractured_sanctuary/fractured_1"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
@@ -203,7 +203,7 @@
   <object id="36" name="slidearea" x="920" y="520" width="80" height="200"/>
   <object id="54" name="transition" x="440" y="800" width="80" height="80">
    <properties>
-    <property name="map" value="fractured/fractured_1"/>
+    <property name="map" value="fractured_sanctuary/fractured_1"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
