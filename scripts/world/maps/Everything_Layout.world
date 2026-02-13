@@ -419,6 +419,13 @@
             "width": 400,
             "x": -8560,
             "y": -8160
+        },
+        {
+            "fileName": "secrets/prism_room/prism_room.tmx",
+            "height": 1280,
+            "width": 640,
+            "x": 8520,
+            "y": -1440
         }
     ],
     "onlyShowAdjacentMaps": false,

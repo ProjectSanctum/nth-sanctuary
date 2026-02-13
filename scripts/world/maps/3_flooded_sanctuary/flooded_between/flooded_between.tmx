@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="48">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="48">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -233,7 +233,7 @@
  <objectgroup color="#0000ff" id="11" name="objects">
   <object id="31" name="transition" x="640" y="600" width="40" height="160">
    <properties>
-    <property name="map" value="3_flooded_sanctuary/flooded_2"/>
+    <property name="map" value="3_flooded_sanctuary/flooded_1"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
@@ -257,7 +257,7 @@
   </object>
   <object id="40" name="transition" x="640" y="200" width="40" height="120">
    <properties>
-    <property name="map" value="3_flooded_sanctuary/flooded_2"/>
+    <property name="map" value="3_flooded_sanctuary/flooded_1"/>
     <property name="marker" value="entry4"/>
    </properties>
   </object>
