@@ -391,7 +391,7 @@
   <object id="93" name=" " gid="272" x="360" y="1280" width="160" height="160"/>
   <object id="94" name="shard_door" x="60" y="1250" width="120" height="30">
    <properties>
-    <property name="map" value="secrets/citadel_room_1"/>
+    <property name="map" value="secrets/citadel_room/citadel_room_1"/>
     <property name="map_name" value="a special place"/>
     <property name="req" value="0"/>
     <property name="solid" type="bool" value="true"/>

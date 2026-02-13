@@ -950,7 +950,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "secrets/citadel_room_1",
+            ["map"] = "secrets/citadel_room/citadel_room_1",
             ["map_name"] = "a special place",
             ["req"] = "0",
             ["solid"] = true,

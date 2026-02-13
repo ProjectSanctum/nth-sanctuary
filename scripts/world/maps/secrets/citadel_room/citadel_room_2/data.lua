@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,8 +10,9 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 23,
+  nextobjectid = 24,
   properties = {
+    ["ft_blacklist"] = true,
     ["music"] = "greenroom_detune"
   },
   tilesets = {
@@ -260,7 +261,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "citadel_room/citadel_room_1",
+            ["map"] = "secrets/citadel_room/citadel_room_1",
             ["marker"] = "entry"
           }
         },
