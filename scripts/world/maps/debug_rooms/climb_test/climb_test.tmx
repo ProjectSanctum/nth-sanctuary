@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="59">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="climb"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="64" height="32">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,577,577,577,577,577,577,577,577,577,577,577,577,0,0,577,577,577,577,577,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,577,0,0,0,0,577,0,577,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,577,0,0,0,0,577,0,577,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,577,0,577,577,0,0,0,577,0,0,0,0,0,0,0,577,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,577,0,0,0,0,0,0,577,0,0,0,577,0,0,0,577,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="objects_buckets">
+  <object id="24" name="climbwaterbucket" x="240" y="80" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="15"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="3"/>
+    <property name="waittime" type="float" value="60"/>
+    <property name="watermoverate" type="float" value="3"/>
+   </properties>
+  </object>
+  <object id="25" name="climbwaterbucket" x="240" y="240" width="40" height="40">
+   <properties>
+    <property name="generate" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="26" name="climbwaterbucket" x="360" y="80" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="15"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="3"/>
+    <property name="waittime" type="float" value="68"/>
+    <property name="watermoverate" type="float" value="3"/>
+   </properties>
+  </object>
+  <object id="27" name="climbwaterbucket" x="360" y="240" width="40" height="40">
+   <properties>
+    <property name="generate" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="43" name="climbcoin" x="660" y="160" width="40" height="40">
+   <properties>
+    <property name="value" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="44" name="climbcoin" x="760" y="220" width="40" height="40">
+   <properties>
+    <property name="value" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="45" name="destructableclimbarea" x="480" y="240" width="40" height="40"/>
+  <object id="46" name="destructableclimbarea" x="520" y="240" width="40" height="40"/>
+  <object id="47" name="destructableclimbarea" x="560" y="240" width="40" height="40"/>
+  <object id="48" name="destructableclimbarea" x="600" y="240" width="40" height="80"/>
+  <object id="49" name="climbswitch" x="840" y="160" width="40" height="40">
+   <properties>
+    <property name="timed" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="objects_party">
+  <object id="6" name="climbentry" x="160" y="360" width="40" height="40">
+   <properties>
+    <property name="area" type="object" value="9"/>
+   </properties>
+  </object>
+  <object id="7" name="climblanding" x="240" y="360" width="160" height="40"/>
+  <object id="8" name="climbentry" x="440" y="360" width="40" height="40">
+   <properties>
+    <property name="area" type="object" value="11"/>
+   </properties>
+  </object>
+  <object id="9" name="climbarea" x="160" y="160" width="40" height="200"/>
+  <object id="10" name="climbarea" x="200" y="160" width="240" height="40"/>
+  <object id="11" name="climbarea" x="440" y="160" width="40" height="200"/>
+  <object id="12" name="climbarea" x="240" y="280" width="80" height="40"/>
+  <object id="32" name="proxycandle" x="40" y="200">
+   <properties>
+    <property name="trigger_horz" type="float" value="200"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="33" name="climbarea" x="480" y="160" width="160" height="40"/>
+  <object id="34" name="climbarea" x="720" y="160" width="200" height="40"/>
+  <object id="36" name="climbentry" x="600" y="360" width="40" height="40">
+   <properties>
+    <property name="area" type="object" value="37"/>
+   </properties>
+  </object>
+  <object id="37" name="climbarea" x="600" y="320" width="40" height="40"/>
+  <object id="41" name="climbarea" x="760" y="280" width="40" height="80"/>
+  <object id="42" name="climbentry" x="760" y="360" width="40" height="40">
+   <properties>
+    <property name="area" type="object" value="41"/>
+   </properties>
+  </object>
+  <object id="52" name="npc" x="940" y="360">
+   <properties>
+    <property name="actor" value="ddelta"/>
+    <property name="text" value="* that switch up there looks a hell of a lot like me"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="53" name="wandernpc" x="1060" y="360">
+   <properties>
+    <property name="actor" value="ddelta"/>
+    <property name="text" value="* i move around so cooool"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="54" name="window_parallax" x="1040" y="240">
+   <point/>
+  </object>
+  <object id="55" name="window_parallax" x="1200" y="240">
+   <point/>
+  </object>
+  <object id="56" name="window_parallax" x="1360" y="240">
+   <point/>
+  </object>
+  <object id="57" name="climbarea" x="360" y="200" width="40" height="80"/>
+  <object id="58" name="window_oscillate" x="1520" y="240">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="markers">
+  <object id="3" name="spawn" x="320" y="440">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

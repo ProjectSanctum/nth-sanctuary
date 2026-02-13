@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="32">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="smallpiano_room"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="91" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <layer id="5" name="tiles" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,
+0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,
+0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,
+0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="7" name="objects_switches">
+  <object id="30" name="churchtilebutton" x="180" y="240" width="40" height="40">
+   <properties>
+    <property name="downonce" type="bool" value="true"/>
+    <property name="group" value="hint2"/>
+    <property name="keepdown" type="bool" value="true"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="31" name="churchtilebutton" x="560" y="120" width="40" height="40">
+   <properties>
+    <property name="downonce" type="bool" value="true"/>
+    <property name="group" value="hint"/>
+    <property name="keepdown" type="bool" value="true"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="objects_party">
+  <object id="2" gid="8" x="160" y="160" width="90" height="66"/>
+  <object id="4" name="piano" x="160" y="120" width="90" height="30">
+   <properties>
+    <property name="cutscene" value="piano.door"/>
+    <property name="destroyhints" type="bool" value="false"/>
+    <property name="solution" value="000111333111"/>
+   </properties>
+  </object>
+  <object id="9" name="pianohint" x="40" y="0" width="120" height="40">
+   <properties>
+    <property name="group" value="hint2"/>
+    <property name="hint" value="000111"/>
+    <property name="staff" value="start"/>
+   </properties>
+  </object>
+  <object id="10" name="pianohint" x="220" y="0" width="120" height="40">
+   <properties>
+    <property name="group" value="hint2"/>
+    <property name="hint" value="333111"/>
+    <property name="silent" type="bool" value="true"/>
+    <property name="staff" value="end"/>
+   </properties>
+  </object>
+  <object id="21" name="piano" x="440" y="120" width="90" height="30">
+   <properties>
+    <property name="destroyhints" type="bool" value="false"/>
+    <property name="destroyswitches" type="bool" value="false"/>
+    <property name="solution" value="131315"/>
+   </properties>
+  </object>
+  <object id="22" name="pianohint" x="340" y="280" width="120" height="40">
+   <properties>
+    <property name="group" value="hint"/>
+    <property name="hint" value="131"/>
+    <property name="staff" value="start"/>
+   </properties>
+  </object>
+  <object id="23" name="pianohint" x="500" y="280" width="120" height="40">
+   <properties>
+    <property name="group" value="hint"/>
+    <property name="hint" value="315"/>
+    <property name="silent" type="bool" value="true"/>
+    <property name="staff" value="end"/>
+   </properties>
+  </object>
+  <object id="24" gid="8" x="440" y="160" width="90" height="66"/>
+  <object id="25" name="npc" x="80" y="240">
+   <properties>
+    <property name="actor" value="lobbyman"/>
+    <property name="text" value="* Fuck you i wont leave unless i hear some MUSIC"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="collision">
+  <object id="7" x="120" y="120" width="40" height="30"/>
+  <object id="8" x="250" y="120" width="30" height="30"/>
+ </objectgroup>
+ <objectgroup id="4" name="markers">
+  <object id="3" name="spawn" x="280" y="280">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

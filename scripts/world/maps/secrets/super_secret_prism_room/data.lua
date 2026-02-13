@@ -30,7 +30,7 @@ return {
     },
     {
       name = "light_areas",
-      firstgid = 668,
+      firstgid = 673,
       filename = "../../../tilesets/light_areas.tsx"
     }
   },
@@ -379,7 +379,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fourth_sanctuary/fourth_sanctum_2",
+            ["map"] = "4_4th_sanctuary/fourth_sanctum_2",
             ["marker"] = "entry_prism"
           }
         }
@@ -467,7 +467,7 @@ return {
           width = 184,
           height = 262,
           rotation = 0,
-          gid = 671,
+          gid = 676,
           visible = true,
           properties = {
             ["light"] = true,
@@ -486,7 +486,7 @@ return {
           width = 120,
           height = 262,
           rotation = 0,
-          gid = 671,
+          gid = 676,
           visible = true,
           properties = {
             ["light"] = true,
@@ -505,7 +505,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 674,
+          gid = 679,
           visible = true,
           properties = {
             ["light"] = true,
@@ -524,7 +524,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 2147484322,
+          gid = 2147484327,
           visible = true,
           properties = {
             ["light"] = true,
@@ -543,7 +543,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 674,
+          gid = 679,
           visible = true,
           properties = {
             ["light"] = true,
@@ -562,7 +562,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 2147484322,
+          gid = 2147484327,
           visible = true,
           properties = {
             ["light"] = true,
@@ -581,7 +581,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 674,
+          gid = 679,
           visible = true,
           properties = {
             ["light"] = true,
@@ -600,7 +600,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
-          gid = 2147484322,
+          gid = 2147484327,
           visible = true,
           properties = {
             ["light"] = true,

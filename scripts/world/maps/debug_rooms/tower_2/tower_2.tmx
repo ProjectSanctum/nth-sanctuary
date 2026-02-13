@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="17">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="name" value="Test Map - Room 2"/>
+  <property name="playerstate" value="CLIMB"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/castle.tsx"/>
+ <tileset firstgid="41" source="../../../tilesets/fountain_climb.tsx"/>
+ <tileset firstgid="184" source="../../../tilesets/libraryexcerpt.tsx"/>
+ <layer id="7" name="BG" width="10" height="15">
+  <data encoding="csv">
+204,185,0,0,0,0,0,0,0,185,
+210,184,0,0,0,0,0,0,0,184,
+210,185,184,0,0,0,0,0,0,185,
+210,184,185,0,0,0,0,0,185,184,
+210,185,184,185,0,0,0,0,184,185,
+210,184,185,184,0,0,0,0,185,184,
+210,185,184,185,0,0,0,185,184,185,
+210,184,185,184,0,0,185,184,185,184,
+210,185,184,185,184,0,184,185,184,185,
+210,184,185,184,185,184,185,184,185,184,
+210,185,184,185,184,185,184,185,184,185,
+210,184,185,184,185,184,185,184,185,184,
+210,185,184,185,184,185,184,185,184,185,
+210,184,185,184,185,184,185,184,185,184,
+216,185,184,185,184,185,184,185,184,185
+</data>
+ </layer>
+ <objectgroup id="8" name="objects_bg"/>
+ <layer id="1" name="cyltower_tiles" width="10" height="15">
+  <data encoding="csv">
+41,54,55,55,55,41,41,42,55,54,
+41,54,41,42,41,42,54,41,55,54,
+55,41,41,55,41,42,42,54,42,54,
+55,55,54,41,42,41,41,41,42,42,
+55,54,54,54,55,41,41,54,41,54,
+42,41,41,55,55,55,42,42,55,42,
+55,54,54,54,41,54,41,54,41,55,
+54,42,41,54,42,42,42,41,42,54,
+54,41,55,42,41,41,54,55,55,55,
+55,42,41,55,54,54,42,42,54,55,
+55,55,55,41,54,54,42,55,42,54,
+42,54,55,54,41,42,41,54,54,42,
+42,42,54,55,41,54,42,42,41,41,
+55,55,54,42,55,54,42,41,42,42,
+55,41,42,41,54,55,54,41,42,55
+</data>
+ </layer>
+ <layer id="2" name="cyltower_decal" width="10" height="15">
+  <data encoding="csv">
+137,0,0,0,0,0,0,0,0,0,
+137,0,0,0,0,0,0,0,0,0,
+137,0,0,0,0,0,0,0,0,0,
+137,0,0,0,0,0,0,0,82,83,
+150,0,0,0,0,0,0,0,95,82,
+150,0,0,0,0,0,0,0,108,109,
+150,0,0,0,0,0,0,0,121,122,
+150,0,0,0,0,0,0,0,134,135,
+163,0,0,0,0,0,0,0,147,148,
+163,0,0,0,0,0,0,0,0,0,
+163,0,0,0,0,0,0,0,0,0,
+163,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5"/>
+ <objectgroup color="#7f00ff" id="4" name="markers">
+  <object id="8" name="spawn" x="100" y="560">
+   <point/>
+  </object>
+  <object id="16" name="top" x="100" y="40">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="5" name="objects">
+  <object id="9" name="transition" x="0" y="600" width="400" height="40">
+   <properties>
+    <property name="map" value="debug_rooms/room_1"/>
+    <property name="marker" value="top"/>
+   </properties>
+  </object>
+  <object id="12" name="climbarea" x="0" y="0" width="400" height="600"/>
+  <object id="15" name="transition" x="0" y="-40" width="400" height="40">
+   <properties>
+    <property name="map" value="debug_rooms/room_1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
