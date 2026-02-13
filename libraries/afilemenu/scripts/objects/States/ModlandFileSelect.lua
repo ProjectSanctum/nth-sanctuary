@@ -43,7 +43,7 @@ function ModlandFileSelect:onEnter()
     self.menu:addChild(self.container)
     for i = 1, 3 do
         local data = Kristal.loadData("file_" .. i)
-        local button = FileButton(self, i, data, 110, 110 + 90 * (i - 1), 422, 82)
+        local button = FileButton(self, i, data, 110, 110 + 94 * (i - 1), 422, 82)
         if i == 1 then
             button.selected = true
         end
