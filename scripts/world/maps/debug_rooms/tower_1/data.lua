@@ -94,7 +94,7 @@ return {
       id = 10,
       name = "secondtower",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = -20,
       offsety = 0,

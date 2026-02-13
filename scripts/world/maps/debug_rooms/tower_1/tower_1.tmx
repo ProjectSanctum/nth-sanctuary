@@ -30,7 +30,7 @@
 </data>
  </layer>
  <objectgroup id="8" name="objects_bg" visible="0"/>
- <layer id="10" name="secondtower" width="22" height="15" offsetx="-20" offsety="0" parallaxx="0">
+ <layer id="10" name="secondtower" width="22" height="15" visible="0" offsetx="-20" offsety="0" parallaxx="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,54,54,42,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,41,41,55,0,0,0,0,0,0,0,0,0,0,0,0,
