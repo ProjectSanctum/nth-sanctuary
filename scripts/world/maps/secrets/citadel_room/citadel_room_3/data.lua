@@ -12,7 +12,6 @@ return {
   nextlayerid = 5,
   nextobjectid = 11,
   properties = {
-    ["ft_blacklist"] = true,
     ["music"] = "greenroom_detune"
   },
   tilesets = {

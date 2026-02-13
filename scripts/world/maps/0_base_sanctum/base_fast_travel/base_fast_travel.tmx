@@ -5,7 +5,6 @@
  </editorsettings>
  <properties>
   <property name="border" value="blank"/>
-  <property name="ft_blacklist" type="bool" value="true"/>
   <property name="music" value="fast-travel"/>
  </properties>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
@@ -410,7 +409,7 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="105" name="transition" x="520" y="1920" width="160" height="40">
+  <object id="105" name="ft_transition" x="520" y="1920" width="160" height="40">
    <properties>
     <property name="map" value="0_base_sanctum/base_sanctum_center"/>
     <property name="marker" value="entry_north"/>

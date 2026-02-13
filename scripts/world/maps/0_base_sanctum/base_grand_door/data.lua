@@ -13,7 +13,6 @@ return {
   nextobjectid = 57,
   properties = {
     ["border"] = "",
-    ["ft_blacklist"] = true,
     ["music"] = "grand_bells",
     ["name"] = "Entrance to Grand Sanctum"
   },

@@ -13,7 +13,6 @@ return {
   nextobjectid = 106,
   properties = {
     ["border"] = "blank",
-    ["ft_blacklist"] = true,
     ["music"] = "fast-travel"
   },
   tilesets = {
@@ -991,7 +990,7 @@ return {
         },
         {
           id = 105,
-          name = "transition",
+          name = "ft_transition",
           type = "",
           shape = "rectangle",
           x = 520,

@@ -5,7 +5,6 @@
  </editorsettings>
  <properties>
   <property name="border" value=""/>
-  <property name="ft_blacklist" type="bool" value="true"/>
   <property name="music" value="grand_bells"/>
   <property name="name" value="Entrance to Grand Sanctum"/>
  </properties>

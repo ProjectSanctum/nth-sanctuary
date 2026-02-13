@@ -5,6 +5,7 @@
  </editorsettings>
  <properties>
   <property name="border" value="base_sanctum"/>
+  <property name="ft_whitelist" type="bool" value="true"/>
   <property name="music" value="homebase"/>
   <property name="name" value="Base Sanctum - Center"/>
  </properties>

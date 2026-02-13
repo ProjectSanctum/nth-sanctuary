@@ -27,7 +27,7 @@ function FastTravelTransition:onEnter(chara)
             Game.world.door_delay = self.exit_delay
         end
 
-        self.world:mapTransition(Game:getFlag("ft_last_map", "base_sanctum_center"), "entry_fast_travel", chara.facing, callback)
+        self.world:mapTransition(Game:getFlag("ft_last_map", "0_base_sanctum/base_sanctum_center"), "entry_fast_travel", chara.facing, callback)
     end
 end
 

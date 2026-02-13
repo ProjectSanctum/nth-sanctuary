@@ -12,7 +12,6 @@ return {
   nextlayerid = 7,
   nextobjectid = 29,
   properties = {
-    ["ft_blacklist"] = true,
     ["music"] = "greenroom_detune",
     ["name"] = "??? - Kristal Konverge"
   },

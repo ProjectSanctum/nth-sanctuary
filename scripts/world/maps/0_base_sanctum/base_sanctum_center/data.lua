@@ -13,6 +13,7 @@ return {
   nextobjectid = 51,
   properties = {
     ["border"] = "base_sanctum",
+    ["ft_whitelist"] = true,
     ["music"] = "homebase",
     ["name"] = "Base Sanctum - Center"
   },
