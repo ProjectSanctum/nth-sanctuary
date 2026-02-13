@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -19,19 +19,19 @@ return {
     {
       name = "castle",
       firstgid = 1,
-      filename = "../tilesets/castle.tsx",
-      exportfilename = "../tilesets/castle.lua"
+      filename = "../../tilesets/castle.tsx",
+      exportfilename = "../../tilesets/castle.lua"
     },
     {
       name = "libraryexcerpt",
       firstgid = 41,
-      filename = "../tilesets/libraryexcerpt.tsx",
-      exportfilename = "../tilesets/libraryexcerpt.lua"
+      filename = "../../tilesets/libraryexcerpt.tsx",
+      exportfilename = "../../tilesets/libraryexcerpt.lua"
     },
     {
       name = "bg_dw_church_2_tileset",
       firstgid = 89,
-      filename = "../tilesets/bg_dw_church_2_tileset.tsx"
+      filename = "../../tilesets/bg_dw_church_2_tileset.tsx"
     }
   },
   layers = {
@@ -898,7 +898,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "base_sanctum_center"
+            ["map"] = "0_base_sanctum/base_sanctum_center"
           }
         }
       }

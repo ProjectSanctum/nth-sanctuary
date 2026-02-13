@@ -230,7 +230,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fast_travel",
+            ["map"] = "0_base_sanctum/base_fast_travel",
             ["marker"] = "entry_grand"
           }
         },

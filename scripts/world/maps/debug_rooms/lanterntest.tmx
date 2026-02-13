@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="46">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="46">
  <editorsettings>
   <export target="lanterntest.lua" format="lua"/>
  </editorsettings>
- <tileset firstgid="1" source="../tilesets/church_objects.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/church_objects.tsx"/>
  <objectgroup id="2" name="objects_bg" visible="0">
   <object id="1" name="darkroombg" x="40" y="0">
    <point/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="24">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="22" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="24">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
@@ -7,9 +7,9 @@
   <property name="name" value="Test Map - Room 2"/>
   <property name="playerstate" value="CLIMB"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/castle.tsx"/>
- <tileset firstgid="41" source="../tilesets/fountain_climb.tsx"/>
- <tileset firstgid="184" source="../tilesets/libraryexcerpt.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/castle.tsx"/>
+ <tileset firstgid="41" source="../../tilesets/fountain_climb.tsx"/>
+ <tileset firstgid="184" source="../../tilesets/libraryexcerpt.tsx"/>
  <layer id="7" name="BG" width="22" height="15">
   <data encoding="csv">
 204,185,0,0,0,0,0,0,0,185,184,0,0,0,0,0,0,0,0,184,185,0,

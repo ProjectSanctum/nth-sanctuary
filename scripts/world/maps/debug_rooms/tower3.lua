@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -19,19 +19,19 @@ return {
     {
       name = "castle",
       firstgid = 1,
-      filename = "../tilesets/castle.tsx",
-      exportfilename = "../tilesets/castle.lua"
+      filename = "../../tilesets/castle.tsx",
+      exportfilename = "../../tilesets/castle.lua"
     },
     {
       name = "fountain_climb",
       firstgid = 41,
-      filename = "../tilesets/fountain_climb.tsx"
+      filename = "../../tilesets/fountain_climb.tsx"
     },
     {
       name = "libraryexcerpt",
       firstgid = 184,
-      filename = "../tilesets/libraryexcerpt.tsx",
-      exportfilename = "../tilesets/libraryexcerpt.lua"
+      filename = "../../tilesets/libraryexcerpt.tsx",
+      exportfilename = "../../tilesets/libraryexcerpt.lua"
     }
   },
   layers = {

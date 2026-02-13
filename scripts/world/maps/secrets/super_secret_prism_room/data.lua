@@ -379,7 +379,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fourth_sanctuary/fourth_sanctum_2",
+            ["map"] = "4_4th_sanctuary/fourth_sanctum_2",
             ["marker"] = "entry_prism"
           }
         }

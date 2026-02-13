@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="15">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="15">
  <editorsettings>
   <export target="verydarkplace.lua" format="lua"/>
  </editorsettings>
- <tileset firstgid="1" source="../tilesets/bg_dw_church_library_2_tileset.tsx"/>
- <tileset firstgid="261" source="../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
+ <tileset firstgid="261" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <layer id="3" name="Tile Layer 3" width="30" height="16" parallaxx="1.3">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,792,793,794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -90,7 +90,7 @@
   </object>
   <object id="14" name="transition" x="-40" y="240" width="40" height="120">
    <properties>
-    <property name="map" value="base_east"/>
+    <property name="map" value="0_base_sanctum/base_east"/>
     <property name="marker" value="entry2"/>
    </properties>
   </object>

@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -16,8 +16,8 @@ return {
     {
       name = "church_objects",
       firstgid = 1,
-      filename = "../tilesets/church_objects.tsx",
-      exportfilename = "../tilesets/church_objects.lua"
+      filename = "../../tilesets/church_objects.tsx",
+      exportfilename = "../../tilesets/church_objects.lua"
     }
   },
   layers = {

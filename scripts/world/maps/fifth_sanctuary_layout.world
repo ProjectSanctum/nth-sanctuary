@@ -1,0 +1,27 @@
+{
+    "maps": [
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_1/fifth_sanctum_1.tmx",
+            "height": 1200,
+            "width": 1200,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_2/fifth_sanctum_2.tmx",
+            "height": 840,
+            "width": 1200,
+            "x": 1280,
+            "y": 120
+        },
+        {
+            "fileName": "5_5th_sanctuary/fifth_sanctum_prophecy/fifth_sanctum_prophecy.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 1280,
+            "y": -200
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

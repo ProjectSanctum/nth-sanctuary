@@ -55,7 +55,7 @@
  <objectgroup id="7" name="objects_party">
   <object id="30" name="transition" x="240" y="1000" width="160" height="40">
    <properties>
-    <property name="map" value="fast_travel"/>
+    <property name="map" value="0_base_sanctum/base_fast_travel"/>
     <property name="marker" value="entry_grand"/>
    </properties>
   </object>

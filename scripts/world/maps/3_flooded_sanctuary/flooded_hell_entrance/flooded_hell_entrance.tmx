@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="17" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="43">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="church_flooded_hell_dim"/>
+  <property name="music" value="waves"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_watertileset.tsx"/>
+ <tileset firstgid="81" source="../../../tilesets/bg_dw_church_c_tileset.tsx"/>
+ <tileset firstgid="360" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="942" source="../../../tilesets/libraryexcerpt.tsx"/>
+ <tileset firstgid="990" source="../../../tilesets/bg_dw_church_watertileset_drained.tsx"/>
+ <tileset firstgid="1008" source="../../../tilesets/flooded_sanctuary_extra.tsx"/>
+ <tileset firstgid="1071" source="../../../tilesets/WatersourceAnimated.tsx"/>
+ <objectgroup id="15" name="objects_bg">
+  <object id="37" name="lavawavercropped" x="0" y="0" width="40" height="40"/>
+  <object id="38" name="lavagradient" x="150" y="-80" width="40" height="40"/>
+ </objectgroup>
+ <layer id="2" name="Tile Layer 2" width="16" height="17">
+  <data encoding="csv">
+1035,1035,1035,714,898,898,898,898,898,898,898,898,898,714,1035,1035,
+0,0,0,714,898,898,898,898,898,898,898,898,898,714,0,0,
+0,0,0,714,898,898,898,898,898,898,898,898,898,714,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,631,631,631,631,631,631,631,631,631,631,631,0,0,
+0,0,0,631,631,631,624,631,631,631,624,631,631,631,631,624,
+0,0,0,631,631,631,630,631,631,631,630,631,631,631,631,630,
+0,0,0,631,631,631,636,631,631,631,636,631,631,631,631,636,
+0,0,0,637,637,637,637,637,637,637,637,637,637,637,637,637,
+0,0,0,0,0,0,0,0,0,0,0,991,992,992,993,0,
+0,0,0,0,0,0,0,0,0,0,0,997,998,998,999,0,
+0,0,0,0,0,0,0,0,0,0,0,1003,1004,1004,1005,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,492,492,492,492,492,0,492,492,492,492,492,492,492
+</data>
+ </layer>
+ <layer id="1" name="Tile Layer 1" width="16" height="17">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,935,935,935,935,935,935,935,935,935,935,935,935,935,935,935,
+0,1022,432,432,1023,432,432,432,432,1008,1009,432,432,1014,432,432,
+0,1012,432,1013,432,432,432,432,1010,1011,1018,432,432,432,432,432,
+0,432,1009,432,432,432,432,1023,1019,1020,1021,432,432,1008,432,1012,
+0,432,1018,444,444,444,444,444,444,444,444,444,444,444,444,444,
+0,1008,1023,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,1017,432,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,1023,1012,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,432,1009,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,432,1018,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,432,432,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,1014,1012,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1021,1010,1011,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1022,1019,1020,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1026,1026,1026,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Ladder" width="16" height="17">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,405,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,411,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,411,0,0,1071,1072,1072,1073,0,
+0,0,0,0,0,0,0,0,411,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,417,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="10" name="BasinBottom" width="16" height="17" visible="0">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,16,11,11,11,11,18,0,0,0,0,0,
+0,0,0,0,0,21,22,22,22,22,23,0,0,0,0,0,
+0,0,0,0,0,26,27,27,27,27,28,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="8" name="markers">
+  <object id="11" name="spawn" x="340" y="620">
+   <point/>
+  </object>
+  <object id="29" name="entry" x="40" y="600">
+   <point/>
+  </object>
+  <object id="31" name="entry2" x="600" y="180">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="14" name="objects_tile">
+  <object id="34" name="lavagradient" x="0" y="640" width="120" height="40">
+   <properties>
+    <property name="additive" type="bool" value="true"/>
+    <property name="color" type="color" value="#ffffa040"/>
+    <property name="scale" type="float" value="0.75"/>
+   </properties>
+  </object>
+  <object id="39" name="lavagradient" x="0" y="0" width="120" height="40">
+   <properties>
+    <property name="additive" type="bool" value="true"/>
+    <property name="color" type="color" value="#ffffa040"/>
+    <property name="scale" type="float" value="0.75"/>
+   </properties>
+  </object>
+  <object id="40" name="lavagradient" x="560" y="0" width="80" height="40">
+   <properties>
+    <property name="additive" type="bool" value="true"/>
+    <property name="color" type="color" value="#ffffa040"/>
+    <property name="scale" type="float" value="0.75"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff02ff" id="7" name="objects_party">
+  <object id="8" name="climbarea" x="320" y="280" width="40" height="120"/>
+  <object id="9" name="climbentry" x="320" y="400" width="40" height="40">
+   <properties>
+    <property name="area" type="object" value="8"/>
+   </properties>
+  </object>
+  <object id="10" name="climbentry" x="320" y="240" width="40" height="40">
+   <properties>
+    <property name="area" type="object" value="8"/>
+    <property name="up" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="12" name="ripplefloor" x="120" y="440" width="520" height="240"/>
+  <object id="21" name="transition" x="320" y="640" width="40" height="40">
+   <properties>
+    <property name="map" value="hell_1"/>
+    <property name="marker" value="north_exit"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="Basin" width="16" height="17" visible="0">
+  <data encoding="csv">
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,6,6,6,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#0000ff" id="11" name="objects">
+  <object id="24" name="interactable" x="440" y="440" width="160" height="120">
+   <properties>
+    <property name="text1" value="* (It's an empty basin.)"/>
+   </properties>
+  </object>
+  <object id="30" name="transition" x="-40" y="560" width="40" height="80">
+   <properties>
+    <property name="map" value="3_flooded_sanctuary/flooded_1"/>
+    <property name="marker" value="entry3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="collision">
+  <object id="1" x="40" y="80" width="600" height="40"/>
+  <object id="2" x="0" y="120" width="40" height="440"/>
+  <object id="3" x="120" y="440" height="200"/>
+  <object id="4" x="120" y="240" width="520" height="200"/>
+  <object id="6" x="640" y="440" width="40" height="160"/>
+  <object id="7" x="440" y="440" width="160" height="120"/>
+  <object id="19" x="370" y="640" width="270" height="40"/>
+  <object id="20" x="120" y="640" width="190" height="40"/>
+  <object id="22" x="0" y="640" width="40" height="40"/>
+  <object id="32" x="640" y="120" width="40" height="120"/>
+ </objectgroup>
+ <objectgroup id="9" name="objects_overlay">
+  <object id="16" name="roomglow" x="-40" y="-40">
+   <properties>
+    <property name="active" type="bool" value="true"/>
+    <property name="alpha" type="float" value="0.5"/>
+    <property name="darkness" type="color" value="#ffc04040"/>
+    <property name="highlight" type="color" value="#40ffffff"/>
+    <property name="shadow" type="bool" value="false"/>
+    <property name="tint" type="color" value="#ffff8080"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="17" name="texturescroller" x="-40" y="40">
+   <properties>
+    <property name="type" value="hsv"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="18" name="churchfog" x="-40" y="160">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

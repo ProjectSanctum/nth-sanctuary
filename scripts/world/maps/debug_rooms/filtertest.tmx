@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="18">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="18">
  <editorsettings>
   <export target="filtertest.lua" format="lua"/>
  </editorsettings>
- <tileset firstgid="1" source="../tilesets/bg_dw_church_tileset_new.tsx"/>
- <tileset firstgid="583" source="../tilesets/bg_dw_church_2_tileset.tsx"/>
- <tileset firstgid="781" source="../tilesets/light_areas.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="583" source="../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="781" source="../../tilesets/light_areas.tsx"/>
  <layer id="1" name="Tile Layer 1" width="16" height="12">
   <data encoding="csv">
 529,530,531,529,530,531,529,530,530,531,529,530,531,529,530,531,
