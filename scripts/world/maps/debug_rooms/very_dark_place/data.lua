@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,8 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 15,
+  nextobjectid = 16,
+  backgroundcolor = { 13, 14, 24 },
   properties = {},
   tilesets = {
     {
@@ -262,7 +263,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "0_base_sanctum/base_east",
+            ["map"] = "0_base_sanctum/base_east_1",
             ["marker"] = "entry2"
           }
         }

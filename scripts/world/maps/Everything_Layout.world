@@ -381,16 +381,16 @@
         {
             "fileName": "debug_rooms/piano_light_test/piano_light_test.tmx",
             "height": 480,
-            "width": 1280,
-            "x": -7000,
-            "y": -3760
+            "width": 1360,
+            "x": -6640,
+            "y": -3480
         },
         {
             "fileName": "debug_rooms/piano_test/piano_test.tmx",
             "height": 480,
-            "width": 640,
-            "x": -7640,
-            "y": -3720
+            "width": 680,
+            "x": -7400,
+            "y": -3480
         },
         {
             "fileName": "debug_rooms/room_1/room_1.tmx",
@@ -426,6 +426,13 @@
             "width": 640,
             "x": 8520,
             "y": -1440
+        },
+        {
+            "fileName": "debug_rooms/very_dark_place/very_dark_place.tmx",
+            "height": 640,
+            "width": 1200,
+            "x": -5640,
+            "y": -3800
         }
     ],
     "onlyShowAdjacentMaps": false,

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="15">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#0d0e18" nextlayerid="8" nextobjectid="16">
  <editorsettings>
-  <export target="verydarkplace.lua" format="lua"/>
+  <export target="data.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
  <tileset firstgid="261" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
@@ -90,7 +90,7 @@
   </object>
   <object id="14" name="transition" x="-40" y="240" width="40" height="120">
    <properties>
-    <property name="map" value="0_base_sanctum/base_east"/>
+    <property name="map" value="0_base_sanctum/base_east_1"/>
     <property name="marker" value="entry2"/>
    </properties>
   </object>
