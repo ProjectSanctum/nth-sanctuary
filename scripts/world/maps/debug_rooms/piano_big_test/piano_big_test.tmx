@@ -117,7 +117,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="3" name="collision" visible="0">
+ <objectgroup id="3" name="collision">
   <object id="32" x="0" y="320" width="640" height="40"/>
   <object id="34" x="640" y="280" width="480" height="40"/>
   <object id="35" x="1120" y="320" width="640" height="40"/>
