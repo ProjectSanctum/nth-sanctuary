@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 18,
+  nextlayerid = 7,
+  nextobjectid = 25,
   properties = {},
   tilesets = {
     {
@@ -95,6 +95,80 @@ return {
             ["text3"] = "* light type 3/5 acts kinda like darkness but is brighter\nthan the actual darkness",
             ["text4"] = "* use light types 4 and 5 if you don't want it to draw additively as well"
           }
+        },
+        {
+          id = 19,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/piano_big_test",
+            ["marker"] = "entry"
+          }
+        },
+        {
+          id = 23,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/filter_test",
+            ["marker"] = "entry2"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "collision",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 440,
+          width = 640,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 320,
+          width = 640,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -118,6 +192,32 @@ return {
           type = "",
           shape = "point",
           x = 320,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 20,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 600,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "entry",
+          type = "",
+          shape = "point",
+          x = 40,
           y = 400,
           width = 0,
           height = 0,

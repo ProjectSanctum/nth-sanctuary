@@ -28,7 +28,7 @@ function Mod:init()
         local dt = orig(...)
         return dt * math.max(0.05, self.DT_MULT)
     end)
-    -- in Mod:init()
+    self.legacy_base_music = Kristal.Config["nthSanctuary/legacyBaseMusic"] or false
 end
 
 function Mod:afmGetMusic()
@@ -215,7 +215,9 @@ function Mod:onTextSound(sound, node)
 end
 
 function Mod:onMapMusic(map, music)
-	if music == "grand_bells" then
+	if music == "homebase" and self.legacy_base_music then
+		return "homebase_old"
+	elseif music == "grand_bells" then
 		return {"bell_ambience", 0.5, 0.5}
 	elseif music == "church_study_slower" then
 		return {"church_dark_study", 1, 0.75}

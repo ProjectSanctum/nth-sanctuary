@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 59,
+  nextobjectid = 62,
   properties = {
     ["music"] = "bell_ambience"
   },
@@ -217,6 +217,22 @@ return {
           properties = {
             ["map"] = "debug_rooms/piano_test",
             ["marker"] = "entry"
+          }
+        },
+        {
+          id = 59,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 360,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/lighting_test",
+            ["marker"] = "entry2"
           }
         }
       }
@@ -447,6 +463,19 @@ return {
           type = "",
           shape = "point",
           x = 1720,
+          y = 390,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 60,
+          name = "entry",
+          type = "",
+          shape = "point",
+          x = 40,
           y = 390,
           width = 0,
           height = 0,

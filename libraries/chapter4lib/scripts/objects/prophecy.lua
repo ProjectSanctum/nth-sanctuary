@@ -11,8 +11,8 @@ function Prophecy:init(data)
     self.texture = properties["texture"] or "initial1" -- the sprite to display (gets sprite from "world/events/prophecy/")
 	local tex = Assets.getTexture("world/events/prophecy/"..self.texture or "") or nil
 	if tex then
-		self.panel_width = properties["panel_w"] or 150
-		self.panel_height = properties["panel_h"] or 90
+		self.panel_width = properties["panel_w"] or math.max(150, tex:getWidth())
+		self.panel_height = properties["panel_h"] or math.max(90, tex:getHeight())
 	else
 		self.panel_width = properties["panel_w"] or 150
 		self.panel_height = properties["panel_h"] or 90
@@ -21,8 +21,8 @@ function Prophecy:init(data)
     self.sprite_offset_x = properties["spr_offx"] or (tex and tex:getWidth()/2) or 0 -- x offset of the sprite
     self.sprite_offset_y = properties["spr_offy"] or (tex and tex:getHeight()) or 0 -- y offset of the sprite
 
-    self.container_offset_x = properties["offx"] or self.width/2 -- x offset of the sprite
-    self.container_offset_y = properties["offy"] or ((self.panel_height * -1)) or 0 -- y offset of the sprite
+    self.container_offset_x = properties["offx"] or self.panel_width/2 -- x offset of the sprite
+    self.container_offset_y = properties["offy"] or self.panel_height/2 -- y offset of the sprite
 	
     self.container = Object(self.container_offset_x,self.container_offset_y)
     self:addChild(self.container)

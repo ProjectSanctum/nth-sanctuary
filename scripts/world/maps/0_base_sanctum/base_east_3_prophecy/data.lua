@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -256,10 +256,11 @@ return {
             ["offx"] = 160,
             ["offy"] = -130,
             ["panel_h"] = "120",
-            ["spr_offx"] = 72,
-            ["spr_offy"] = 90,
+            ["spr_offx"] = 85,
+            ["spr_offy"] = 94,
             ["text"] = "AND THEIR JOURNEY WILL \nKNOW NO END.",
             ["texture"] = "rune",
+            ["txt_offx"] = -140,
             ["txt_offy"] = -32
           }
         },

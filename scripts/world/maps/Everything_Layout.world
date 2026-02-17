@@ -354,43 +354,43 @@
             "fileName": "debug_rooms/filter_test/filter_test.tmx",
             "height": 480,
             "width": 640,
-            "x": -7640,
-            "y": -4720
+            "x": -9720,
+            "y": -3120
         },
         {
             "fileName": "debug_rooms/lantern_test/lantern_test.tmx",
             "height": 960,
             "width": 1280,
-            "x": -7000,
-            "y": -4720
+            "x": -7640,
+            "y": -5680
         },
         {
             "fileName": "debug_rooms/lighting_test/lighting_test.tmx",
             "height": 480,
             "width": 640,
-            "x": -7640,
-            "y": -4240
+            "x": -9000,
+            "y": -3120
         },
         {
             "fileName": "debug_rooms/piano_big_test/piano_big_test.tmx",
             "height": 480,
             "width": 1760,
-            "x": -9400,
-            "y": -3440
+            "x": -8280,
+            "y": -3080
         },
         {
             "fileName": "debug_rooms/piano_light_test/piano_light_test.tmx",
             "height": 480,
-            "width": 1360,
-            "x": -6640,
-            "y": -3480
+            "width": 1320,
+            "x": -5760,
+            "y": -2920
         },
         {
             "fileName": "debug_rooms/piano_test/piano_test.tmx",
             "height": 480,
-            "width": 680,
-            "x": -7400,
-            "y": -3480
+            "width": 600,
+            "x": -6440,
+            "y": -2920
         },
         {
             "fileName": "debug_rooms/room_1/room_1.tmx",
@@ -431,8 +431,8 @@
             "fileName": "debug_rooms/very_dark_place/very_dark_place.tmx",
             "height": 640,
             "width": 1200,
-            "x": -5640,
-            "y": -3800
+            "x": -4360,
+            "y": -2960
         }
     ],
     "onlyShowAdjacentMaps": false,
