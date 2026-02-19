@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 13,
-  nextobjectid = 57,
+  nextlayerid = 14,
+  nextobjectid = 63,
   properties = {
     ["border"] = "church_frac",
     ["music"] = "fractured",
@@ -732,19 +732,6 @@ return {
           properties = {}
         },
         {
-          id = 53,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 160,
-          y = 80,
-          width = 40,
-          height = 160,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 56,
           name = "",
           type = "",
@@ -753,6 +740,19 @@ return {
           y = 200,
           width = 160,
           height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 62,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 80,
+          width = 40,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {}
@@ -800,6 +800,21 @@ return {
           properties = {}
         }
       }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 13,
+      name = "objects_below",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {}
     },
     {
       type = "objectgroup",
@@ -900,6 +915,22 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
+        },
+        {
+          id = 57,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 230,
+          y = 190,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "randomGuy",
+            ["cutscene"] = "events.seenThisMan"
+          }
         }
       }
     },

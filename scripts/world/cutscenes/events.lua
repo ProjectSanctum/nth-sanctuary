@@ -156,5 +156,36 @@ return {
 		Assets.stopSound("eb_keyitem")
         Game.inventory:addItem("sound_stone")
         Game.world.music:play()
-    end
+    end,
+	seenThisMan = function (cutscene, event)
+		local flag = Game:getFlag("interacted_with_random_guy")
+		if flag==1 then
+			cutscene:text("* The man... [wait:10]He told me...")
+			cutscene:text("* He told me he wants to speak with you...")
+			cutscene:text("* Have you [style:none][color:yellow][sound:creepyJingle]looked between the rooms?")
+			Game:setFlag("interacted_with_random_guy", 2)
+			return
+		elseif flag == 2 then
+			cutscene:text("* Heed my advice.")
+			return
+		elseif flag == 5 then
+			cutscene:text("* Guess I'm just crazy.")
+			return
+		end
+
+		cutscene:text({"* Have you seen this man?",
+		"* The others swear I'm crazy, [wait:5]but I know I've seen him!",
+		"* (The man gives you a flyer.)",
+		"* (The man in the flyer looks all the familiar, [wait:5]yet forgettable.)",
+		"* Have you seen him?"})
+		local ch = cutscene:choicer({"Yes", "No"})
+		if ch == 1 then
+			cutscene:text("* You've seen him!? [wait:10]Alas, [wait:5]I speak the truth!")
+			Game:setFlag("interacted_with_random_guy", 1)
+		else
+			cutscene:text("* No? [wait:10]Oh, [wait:5]well, [wait:5]that's a shame.")
+			cutscene:text("* If you see him, [wait:5]please let me know.")
+			Game:setFlag("interacted_with_random_guy", 5)
+		end
+	end
 }
