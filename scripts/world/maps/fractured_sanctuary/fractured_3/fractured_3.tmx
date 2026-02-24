@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="68">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="church_frac"/>
+  <property name="music" value="fractured"/>
+  <property name="name" value="Fractured Sanctuary - ?1"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
+ <tileset firstgid="261" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="459" source="../../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="549" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="1131" source="../../../tilesets/longslides.tsx"/>
+ <objectgroup id="8" name="objects_towers2" locked="1" parallaxx="0.7" parallaxy="0.9"/>
+ <objectgroup id="7" name="objects_towers" locked="1" parallaxx="0.8" parallaxy="0.9"/>
+ <objectgroup id="6" name="objects_bg">
+  <object id="18" name="fractured_bg" x="40" y="40" visible="0">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="1" name="Tile Layer 1" width="26" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,70,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,70,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,70,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,60,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,74,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,74,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,74,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="12" name="Tile Layer 4" width="26" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#ff0000" id="4" name="collision">
+  <object id="65" x="760" y="0" width="40" height="160"/>
+  <object id="66" x="880" y="0" width="40" height="160"/>
+  <object id="67" x="800" y="160" width="80" height="40"/>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="16" name="entry" x="40" y="640">
+   <point/>
+  </object>
+  <object id="19" name="spawn" x="840" y="120">
+   <point/>
+  </object>
+  <object id="64" name="entry" x="840" y="40">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="13" name="objects_below"/>
+ <objectgroup id="3" name="objects_party">
+  <object id="17" name="transition" x="-40" y="600" width="40" height="80">
+   <properties>
+    <property name="map" value="fractured_sanctuary/fractured_1"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="54" name="transition" x="440" y="800" width="80" height="80">
+   <properties>
+    <property name="map" value="fractured_sanctuary/fractured_1"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="55" x="436.5" y="859" width="168.5" height="17">
+   <text wrap="1" color="#ffffff">Add maps....</text>
+  </object>
+  <object id="63" name="transition" x="800" y="-40" width="80" height="40">
+   <properties>
+    <property name="map" value="fractured_sanctuary/fractured_2"/>
+    <property name="marker" value="entry2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="11" name="objects_over_party" parallaxx="0.9"/>
+ <objectgroup id="2" name="objects_overlay">
+  <object id="1" name="churchfog" x="-78" y="-28">
+   <point/>
+  </object>
+  <object id="2" name="filter" x="-160" y="-40">
+   <properties>
+    <property name="type" value="fractured"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>
