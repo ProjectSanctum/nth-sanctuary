@@ -21,6 +21,7 @@ function actor:init()
         ["climb/jump_left"] = {-5, 4},
         ["climb/jump_right"] = {-5, 4},
         ["slide"] = {-5, -2},
+        ["piano"] = {-6, -1},
     })
 end
 
