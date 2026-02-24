@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="bg_dw_church_watertileset" tilewidth="40" tileheight="40" tilecount="80" columns="10">
+<tileset version="1.11" tiledversion="1.11.2" name="bg_dw_church_watertileset" tilewidth="40" tileheight="40" tilecount="75" columns="5">
  <editorsettings>
   <export target="bg_dw_church_watertileset.lua" format="lua"/>
  </editorsettings>
- <image source="../../../assets/sprites/tilesets/dr ch3-4 fixed tilesets/bg_dw_church_watertileset.png" width="400" height="320"/>
+ <image source="../../../assets/sprites/tilesets/dr ch3-4 fixed tilesets/bg_dw_church_watertileset.png" width="200" height="600"/>
  <tile id="5">
   <animation>
    <frame tileid="5" duration="125"/>
