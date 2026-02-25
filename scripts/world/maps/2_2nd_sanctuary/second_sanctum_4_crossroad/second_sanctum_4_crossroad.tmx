@@ -327,7 +327,7 @@
  </layer>
  <objectgroup id="14" name="climbareas"/>
  <objectgroup id="15" name="objects_buckets"/>
- <objectgroup id="7" name="collision" visible="0">
+ <objectgroup id="7" name="collision">
   <object id="23" x="160" y="520" width="1400" height="240"/>
   <object id="26" x="0" y="880" width="596" height="280"/>
   <object id="164" x="1360" y="360" width="200" height="160"/>

@@ -812,7 +812,7 @@ return {
       id = 7,
       name = "collision",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
