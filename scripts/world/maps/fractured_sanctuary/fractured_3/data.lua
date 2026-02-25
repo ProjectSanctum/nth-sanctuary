@@ -256,19 +256,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 16,
-          name = "entry",
-          type = "",
-          shape = "point",
-          x = 40,
-          y = 640,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 19,
           name = "spawn",
           type = "",
@@ -325,54 +312,6 @@ return {
       parallaxy = 1,
       properties = {},
       objects = {
-        {
-          id = 17,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = -40,
-          y = 600,
-          width = 40,
-          height = 80,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "fractured_sanctuary/fractured_1",
-            ["marker"] = "entry"
-          }
-        },
-        {
-          id = 54,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = 440,
-          y = 800,
-          width = 80,
-          height = 80,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "fractured_sanctuary/fractured_1",
-            ["marker"] = "entry"
-          }
-        },
-        {
-          id = 55,
-          name = "",
-          type = "",
-          shape = "text",
-          x = 436.5,
-          y = 859,
-          width = 168.5,
-          height = 17,
-          rotation = 0,
-          visible = true,
-          text = "Add maps....",
-          wrap = true,
-          color = { 255, 255, 255 },
-          properties = {}
-        },
         {
           id = 63,
           name = "transition",

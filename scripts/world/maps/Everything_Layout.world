@@ -73,43 +73,43 @@
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_1/second_sanctum_1.tmx",
             "height": 1120,
-            "width": 880,
-            "x": -560,
+            "width": 800,
+            "x": -520,
             "y": 4600
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_2/second_sanctum_2.tmx",
             "height": 1120,
             "width": 1200,
-            "x": 400,
+            "x": 440,
             "y": 4640
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_3/second_sanctum_3.tmx",
             "height": 1280,
             "width": 1680,
-            "x": 1680,
+            "x": 1720,
             "y": 4280
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_4_crossroad/second_sanctum_4_crossroad.tmx",
             "height": 1720,
             "width": 1720,
-            "x": 3440,
+            "x": 3480,
             "y": 4320
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_5/second_sanctum_5.tmx",
             "height": 2400,
             "width": 1200,
-            "x": 2760,
+            "x": 2800,
             "y": 6120
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_6/second_sanctum_6.tmx",
             "height": 1280,
             "width": 1920,
-            "x": 760,
+            "x": 800,
             "y": 8240
         },
         {
@@ -123,28 +123,28 @@
             "fileName": "3_flooded_sanctuary/flooded_between/flooded_between.tmx",
             "height": 960,
             "width": 640,
-            "x": 5240,
+            "x": 5280,
             "y": 4880
         },
         {
             "fileName": "3_flooded_sanctuary/flooded_1/flooded_1.tmx",
             "height": 1680,
             "width": 1360,
-            "x": 5960,
+            "x": 6000,
             "y": 5040
         },
         {
             "fileName": "3_flooded_sanctuary/flooded_2/flooded_2.tmx",
             "height": 1280,
             "width": 2560,
-            "x": 7400,
+            "x": 7440,
             "y": 4640
         },
         {
             "fileName": "3_flooded_sanctuary/flooded_hell_entrance/flooded_hell_entrance.tmx",
             "height": 680,
             "width": 640,
-            "x": 7400,
+            "x": 7440,
             "y": 6040
         },
         {
@@ -298,7 +298,7 @@
             "fileName": "secrets/frisk_room/frisk_room.tmx",
             "height": 480,
             "width": 1080,
-            "x": 5960,
+            "x": 6000,
             "y": 7240
         },
         {
@@ -340,7 +340,7 @@
             "fileName": "wip_rooms/dark_place/dark_place.tmx",
             "height": 960,
             "width": 1280,
-            "x": 8400,
+            "x": 8440,
             "y": 6760
         },
         {
@@ -438,29 +438,29 @@
             "fileName": "fractured_sanctuary/fractured_1/fractured_1.tmx",
             "height": 800,
             "width": 1040,
-            "x": 6160,
-            "y": 1080
+            "x": 3800,
+            "y": 1480
         },
         {
             "fileName": "fractured_sanctuary/fractured_2/fractured_2.tmx",
             "height": 880,
             "width": 1040,
-            "x": 7280,
-            "y": 1080
+            "x": 4920,
+            "y": 1480
+        },
+        {
+            "fileName": "fractured_sanctuary/fractured_3/fractured_3.tmx",
+            "height": 800,
+            "width": 1040,
+            "x": 4560,
+            "y": 2440
         },
         {
             "fileName": "sanctum_hell/hell_1/hell_1.tmx",
             "height": 960,
             "width": 1200,
-            "x": 7120,
+            "x": 7160,
             "y": 6800
-        },
-        {
-            "fileName": "2_2nd_sanctuary/second_sanctum_proskit/second_sanctum_proskit.tmx",
-            "height": 1920,
-            "width": 1720,
-            "x": 3440,
-            "y": 2320
         }
     ],
     "onlyShowAdjacentMaps": false,

@@ -74,9 +74,6 @@
   <object id="67" x="800" y="160" width="80" height="40"/>
  </objectgroup>
  <objectgroup id="5" name="markers">
-  <object id="16" name="entry" x="40" y="640">
-   <point/>
-  </object>
   <object id="19" name="spawn" x="840" y="120">
    <point/>
   </object>
@@ -86,21 +83,6 @@
  </objectgroup>
  <objectgroup id="13" name="objects_below"/>
  <objectgroup id="3" name="objects_party">
-  <object id="17" name="transition" x="-40" y="600" width="40" height="80">
-   <properties>
-    <property name="map" value="fractured_sanctuary/fractured_1"/>
-    <property name="marker" value="entry"/>
-   </properties>
-  </object>
-  <object id="54" name="transition" x="440" y="800" width="80" height="80">
-   <properties>
-    <property name="map" value="fractured_sanctuary/fractured_1"/>
-    <property name="marker" value="entry"/>
-   </properties>
-  </object>
-  <object id="55" x="436.5" y="859" width="168.5" height="17">
-   <text wrap="1" color="#ffffff">Add maps....</text>
-  </object>
   <object id="63" name="transition" x="800" y="-40" width="80" height="40">
    <properties>
     <property name="map" value="fractured_sanctuary/fractured_2"/>
