@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="63">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="64">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -73,6 +73,9 @@
    <point/>
   </object>
   <object id="60" name="north_exit" x="620" y="80">
+   <point/>
+  </object>
+  <object id="63" name="frisk_room_exit" x="1160" y="470">
    <point/>
   </object>
  </objectgroup>

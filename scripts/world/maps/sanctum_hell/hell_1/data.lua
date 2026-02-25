@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 63,
+  nextobjectid = 64,
   properties = {
     ["border"] = "hell",
     ["music"] = "hellworld",
@@ -161,6 +161,19 @@ return {
           shape = "point",
           x = 620,
           y = 80,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 63,
+          name = "frisk_room_exit",
+          type = "",
+          shape = "point",
+          x = 1160,
+          y = 470,
           width = 0,
           height = 0,
           rotation = 0,
