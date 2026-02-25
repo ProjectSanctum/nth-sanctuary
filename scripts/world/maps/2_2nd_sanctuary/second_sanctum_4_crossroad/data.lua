@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 27,
-  nextobjectid = 176,
+  nextobjectid = 183,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -873,23 +873,6 @@ return {
           properties = {}
         },
         {
-          id = 40,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 520,
-          y = 400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = -160, y = -160 }
-          },
-          properties = {}
-        },
-        {
           id = 41,
           name = "",
           type = "",
@@ -900,57 +883,6 @@ return {
           height = 240,
           rotation = 0,
           visible = true,
-          properties = {}
-        },
-        {
-          id = 43,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 360,
-          y = 320,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 160, y = 160 }
-          },
-          properties = {}
-        },
-        {
-          id = 44,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 1200,
-          y = 480,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 160, y = -160 }
-          },
-          properties = {}
-        },
-        {
-          id = 45,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 1360,
-          y = 240,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = -160, y = 160 }
-          },
           properties = {}
         },
         {
@@ -1094,6 +1026,80 @@ return {
           height = 240,
           rotation = 0,
           visible = true,
+          properties = {}
+        },
+        {
+          id = 179,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 520,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = -160, y = -160 },
+            { x = 0, y = -160 }
+          },
+          properties = {}
+        },
+        {
+          id = 180,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 520,
+          y = 480,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = -160, y = -160 },
+            { x = -160, y = 40 },
+            { x = 0, y = 40 }
+          },
+          properties = {}
+        },
+        {
+          id = 181,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 1200,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 160, y = -160 },
+            { x = 0, y = -160 }
+          },
+          properties = {}
+        },
+        {
+          id = 182,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 1200,
+          y = 480,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 160, y = -160 },
+            { x = 160, y = 40 },
+            { x = 0, y = 40 }
+          },
           properties = {}
         }
       }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="176">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="183">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -332,19 +332,7 @@
   <object id="26" x="0" y="880" width="596" height="280"/>
   <object id="164" x="1360" y="360" width="200" height="160"/>
   <object id="39" x="520" y="360" width="680" height="40"/>
-  <object id="40" x="520" y="400">
-   <polyline points="0,0 -160,-160"/>
-  </object>
   <object id="41" x="300" y="0" width="1120" height="240"/>
-  <object id="43" x="360" y="320">
-   <polyline points="0,0 160,160"/>
-  </object>
-  <object id="44" x="1200" y="480">
-   <polyline points="0,0 160,-160"/>
-  </object>
-  <object id="45" x="1360" y="240">
-   <polyline points="0,0 -160,160"/>
-  </object>
   <object id="76" x="644" y="880" width="432" height="280"/>
   <object id="79" x="1124" y="880" width="596" height="280"/>
   <object id="85" x="760" y="1160" width="200" height="160"/>
@@ -356,6 +344,18 @@
   <object id="170" x="160" y="0" width="60" height="240"/>
   <object id="171" x="-340" y="350"/>
   <object id="175" x="1500" y="0" width="60" height="240"/>
+  <object id="179" x="520" y="400">
+   <polygon points="0,0 -160,-160 0,-160"/>
+  </object>
+  <object id="180" x="520" y="480">
+   <polygon points="0,0 -160,-160 -160,40 0,40"/>
+  </object>
+  <object id="181" x="1200" y="400">
+   <polygon points="0,0 160,-160 0,-160"/>
+  </object>
+  <object id="182" x="1200" y="480">
+   <polygon points="0,0 160,-160 160,40 0,40"/>
+  </object>
  </objectgroup>
  <objectgroup id="6" name="markers">
   <object id="7" name="entry" x="40" y="820">
