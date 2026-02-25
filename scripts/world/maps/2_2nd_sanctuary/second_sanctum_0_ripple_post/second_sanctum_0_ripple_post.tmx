@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="64">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="64">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -206,7 +206,7 @@
    <properties>
     <property name="cutscene" value="primary.fall"/>
     <property name="flagcheck" value="!noellefall"/>
-    <property name="once" type="bool" value="false"/>
+    <property name="once" type="bool" value="true"/>
    </properties>
   </object>
   <object id="57" name="window_glow" x="840" y="80">
