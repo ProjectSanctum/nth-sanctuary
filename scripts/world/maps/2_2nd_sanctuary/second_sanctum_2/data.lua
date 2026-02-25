@@ -629,15 +629,15 @@ return {
           type = "",
           shape = "point",
           x = 740,
-          y = 760,
+          y = 940,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           properties = {
-            ["actor"] = "organik",
+            ["actor"] = "organikk",
             ["chase"] = "true",
-            ["encounter"] = "organik"
+            ["encounter"] = "organikk"
           }
         }
       }

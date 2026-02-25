@@ -73,43 +73,43 @@
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_1/second_sanctum_1.tmx",
             "height": 1120,
-            "width": 800,
-            "x": -520,
+            "width": 880,
+            "x": -560,
             "y": 4600
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_2/second_sanctum_2.tmx",
             "height": 1120,
             "width": 1200,
-            "x": 360,
+            "x": 400,
             "y": 4640
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_3/second_sanctum_3.tmx",
             "height": 1280,
             "width": 1680,
-            "x": 1640,
+            "x": 1680,
             "y": 4280
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_4_crossroad/second_sanctum_4_crossroad.tmx",
             "height": 1720,
             "width": 1720,
-            "x": 3400,
+            "x": 3440,
             "y": 4320
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_5/second_sanctum_5.tmx",
             "height": 2400,
             "width": 1200,
-            "x": 2720,
+            "x": 2760,
             "y": 6120
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_6/second_sanctum_6.tmx",
             "height": 1280,
             "width": 1920,
-            "x": 720,
+            "x": 760,
             "y": 8240
         },
         {
@@ -123,7 +123,7 @@
             "fileName": "3_flooded_sanctuary/flooded_between/flooded_between.tmx",
             "height": 960,
             "width": 640,
-            "x": 5200,
+            "x": 5240,
             "y": 4880
         },
         {
@@ -438,15 +438,15 @@
             "fileName": "fractured_sanctuary/fractured_1/fractured_1.tmx",
             "height": 800,
             "width": 1040,
-            "x": 3800,
-            "y": 1480
+            "x": 6160,
+            "y": 1080
         },
         {
             "fileName": "fractured_sanctuary/fractured_2/fractured_2.tmx",
-            "height": 800,
+            "height": 880,
             "width": 1040,
-            "x": 4920,
-            "y": 1480
+            "x": 7280,
+            "y": 1080
         },
         {
             "fileName": "sanctum_hell/hell_1/hell_1.tmx",
@@ -454,6 +454,13 @@
             "width": 1200,
             "x": 7120,
             "y": 6800
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_proskit/second_sanctum_proskit.tmx",
+            "height": 1920,
+            "width": 1720,
+            "x": 3440,
+            "y": 2320
         }
     ],
     "onlyShowAdjacentMaps": false,

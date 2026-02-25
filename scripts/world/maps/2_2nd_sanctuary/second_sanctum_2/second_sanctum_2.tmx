@@ -200,11 +200,11 @@
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="34" name="enemy" x="740" y="760">
+  <object id="34" name="enemy" x="740" y="940">
    <properties>
-    <property name="actor" value="organik"/>
+    <property name="actor" value="organikk"/>
     <property name="chase" value="true"/>
-    <property name="encounter" value="organik"/>
+    <property name="encounter" value="organikk"/>
    </properties>
    <point/>
   </object>

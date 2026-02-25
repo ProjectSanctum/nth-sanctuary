@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -765,10 +765,10 @@ return {
           name = "savepoint",
           type = "",
           shape = "rectangle",
-          x = 680,
-          y = 400,
-          width = 40,
-          height = 40,
+          x = 740,
+          y = 280,
+          width = 0,
+          height = 0,
           rotation = 0,
           visible = true,
           properties = {
