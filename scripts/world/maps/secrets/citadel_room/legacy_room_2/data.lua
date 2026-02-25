@@ -275,7 +275,7 @@ return {
           visible = true,
           properties = {
             ["solid"] = "true",
-            ["text1"] = "\"THE BATTLE SCENE\"",
+            ["text1"] = "* \"THE BATTLE SCENE\"",
             ["usetile"] = true
           }
         }
