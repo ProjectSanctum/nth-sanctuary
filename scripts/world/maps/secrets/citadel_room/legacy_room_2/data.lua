@@ -242,7 +242,7 @@ return {
           visible = true,
           properties = {
             ["actor"] = "dummy",
-            ["encounter"] = "dummy"
+            ["encounter"] = "mad_dummy"
           }
         },
         {
