@@ -108,7 +108,10 @@ function Dummy:onAct(battler, name)
         end
     end
 
-    Game.battle:startActCutscene("dummy", "the_true_fight", self)
+    if not self.the_true_fight then
+        Game.battle:startActCutscene("dummy", "the_true_fight", self)
+    end
+    return super.onAct(self, battler, name)
 end
 
 function Dummy:update()

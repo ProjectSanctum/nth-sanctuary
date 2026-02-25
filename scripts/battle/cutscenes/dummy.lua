@@ -14,7 +14,6 @@ return {
     end,
     the_true_fight = function(cutscene, battler, enemy)
         local dummy = Game.battle.enemies[1]
-
         Game.battle.timer:tween(2, Game.battle.music, {volume = 0.01, pitch = 0.01})
         cutscene:wait(2.5)
     
@@ -59,6 +58,7 @@ return {
         dummy:triggerTrueBattle(true)
         cutscene:battlerText(dummy, "Fools.\nFools!\nFOOLS!!")
         
-        -- Game.battle:setState("ACTIONSDONE")
+        Game.battle.current_selecting = 0
+        Game.battle:setState("ACTIONSDONE")
     end,
 }
