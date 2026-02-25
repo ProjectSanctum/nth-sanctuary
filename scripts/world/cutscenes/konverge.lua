@@ -181,6 +181,32 @@ return {
         end
         ::endcut::
         sp:resetSprite()
+    end,
+    ---@param cutscene WorldCutscene
+    ---@param event NPC
+    starwalker = function (cutscene, event)
+        cutscene:text("* These design choices              [color:yellow]suck")
+        cutscene:text("* I'm the original [shake:4][image:ui/funnytext_star][func:funny_text][shake:0]                               walker...", nil, nil, {
+            functions = {
+                funny_text = function ()
+                    for _, sprite in ipairs(cutscene.textbox.text.children) do
+                        if sprite:includes(Sprite) and sprite.texture_path == 'ui/funnytext_star' then
+                            sprite:setScale(1.3)
+                            sprite:setScaleOrigin(.5)
+                            sprite.timer = Timer()
+                            sprite:addChild(sprite.timer)
+                            Assets.playSound("mercyadd")
+                            sprite.timer:approach(10/30, 1.5, 1, function (value)
+                                sprite:setScale(value)
+                            end, "out-elastic")
+                            sprite.timer:every(1/30, function ()
+                                sprite.x = sprite.init_x + MathUtils.random(1, 3)
+                                sprite.y = sprite.init_y + MathUtils.random(1, 3)
+                            end)
+                        end
+                    end
+                end
+            }
+        })
     end
-
 }

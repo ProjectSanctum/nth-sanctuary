@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 52,
+  nextobjectid = 54,
   properties = {
     ["border"] = "base_sanctum",
     ["ft_whitelist"] = true,
@@ -894,6 +894,21 @@ return {
             ["locky"] = true,
             ["marker"] = "targ",
             ["time"] = 0.25
+          }
+        },
+        {
+          id = 53,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 520,
+          y = 380,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* (Quite a fall, eh?)"
           }
         }
       }
