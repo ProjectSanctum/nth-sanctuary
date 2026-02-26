@@ -319,8 +319,8 @@
             "fileName": "wip_rooms/gerson_study/gerson_study.tmx",
             "height": 1200,
             "width": 960,
-            "x": -1120,
-            "y": -2880
+            "x": -1160,
+            "y": -760
         },
         {
             "fileName": "wip_rooms/final_sanctuary/final_1/final_1.tmx",
@@ -461,6 +461,20 @@
             "width": 1200,
             "x": 7160,
             "y": 6800
+        },
+        {
+            "fileName": "secrets/citadel_room/legacy_room_1/legacy_room_1.tmx",
+            "height": 960,
+            "width": 1040,
+            "x": -2400,
+            "y": -2920
+        },
+        {
+            "fileName": "secrets/citadel_room/legacy_room_2/legacy_room_2.tmx",
+            "height": 480,
+            "width": 800,
+            "x": -1280,
+            "y": -3040
         }
     ],
     "onlyShowAdjacentMaps": false,

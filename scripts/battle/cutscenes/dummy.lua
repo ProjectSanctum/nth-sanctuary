@@ -49,16 +49,36 @@ return {
         end)
     
         cutscene:wait(1.5)
+
+        dummy:flash()
+        local afterimage1 = AfterImage(dummy, 0.5)
+        local afterimage2 = AfterImage(dummy, 0.6)
+        afterimage1.physics.speed_x = -2.5
+        afterimage2.physics.speed_x = -5
+        afterimage1:setLayer(dummy.layer + 1)
+        afterimage2:setLayer(dummy.layer + 2)
+        Game.battle:addChild(afterimage1)
+        Game.battle:addChild(afterimage2)
+        Assets.playSound("bell_bounce_short")
+        Assets.playSound("bell_bounce_short",.35,.7)
+        Assets.playSound("bell_bounce_short",.2,.4)
     
         shaking = false
+        dummy.siner_active = true
     
         Game.battle.music:stop()
         Game.battle.music:play("mad_battle", 1, 1)
 
         dummy:triggerTrueBattle(true)
-        cutscene:battlerText(dummy, "Fools.\nFools!\nFOOLS!!")
-        
-        Game.battle.current_selecting = 0
+        if Game.battle.state ~= "ATTACKING" or Game.battle.state ~= "ACTIONSDONE" then
+            cutscene:text("* Suddenly, the dummy began to float!\n* Regaular ACTs won't work anymore!")
+        end
+
+        Game.battle:finishAllActions()
         Game.battle:setState("ACTIONSDONE")
+        -- Game.battle:updateActionsDone()
+        
+        -- Game.battle.current_selecting = 0
+        -- Game.battle:setState("ACTIONSDONE")
     end,
 }
