@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="24">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="24">
  <editorsettings>
   <export target="filtertest.lua" format="lua"/>
  </editorsettings>
@@ -49,7 +49,7 @@
   </object>
  </objectgroup>
  <objectgroup id="3" name="markers">
-  <object id="1" name="spawn" x="320" y="400">
+  <object id="1" name="spawn" x="40" y="400">
    <point/>
   </object>
   <object id="22" name="entry2" x="600" y="400">

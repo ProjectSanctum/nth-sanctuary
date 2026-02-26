@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 11,
+  nextobjectid = 12,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune"
@@ -278,6 +278,21 @@ return {
             ["solid"] = "true",
             ["text1"] = "* \"THE BATTLE SCENE\"",
             ["usetile"] = true
+          }
+        },
+        {
+          id = 11,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 120,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* (No seriously stop looking at it.)"
           }
         }
       }

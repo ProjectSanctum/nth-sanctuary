@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 18,
+  nextlayerid = 7,
+  nextobjectid = 24,
   properties = {},
   tilesets = {
     {
@@ -66,6 +66,61 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 6,
+      name = "collision",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 19,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 320,
+          width = 640,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 20,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 440,
+          width = 640,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 23,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 4,
       name = "objects_party",
       class = "",
@@ -95,6 +150,22 @@ return {
             ["text3"] = "* hue_target, hue_target, hue_target\n",
             ["text4"] = "* and speed\n* (only speed is int, the rest is string)"
           }
+        },
+        {
+          id = 21,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/lighting_test",
+            ["marker"] = "entry"
+          }
         }
       }
     },
@@ -117,7 +188,20 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 320,
+          x = 40,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 600,
           y = 400,
           width = 0,
           height = 0,
