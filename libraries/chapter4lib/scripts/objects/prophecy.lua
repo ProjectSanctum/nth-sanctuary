@@ -21,7 +21,7 @@ function Prophecy:init(data)
     self.sprite_offset_x = properties["spr_offx"] or (tex and tex:getWidth()/2) or 0 -- x offset of the sprite
     self.sprite_offset_y = properties["spr_offy"] or (tex and tex:getHeight()) or 0 -- y offset of the sprite
 
-    self.container_offset_x = properties["offx"] or self.panel_width/2 -- x offset of the sprite
+    self.container_offset_x 	= properties["offx"] or self.panel_width/2 -- x offset of the sprite
     self.container_offset_y = properties["offy"] or self.panel_height/2 -- y offset of the sprite
 	
     self.container = Object(self.container_offset_x,self.container_offset_y)
