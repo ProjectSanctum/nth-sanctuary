@@ -21,7 +21,7 @@ return {
         local normal_x, normal_y = cam.x, cam.y
     
         local cam_done = false
-        Game.battle.timer:tween(1, cam, {zoom_x = 4, zoom_y = 4})
+        Game.battle.timer:tween(1, cam, {zoom_x = 2.5, zoom_y = 2.5})
         Game.battle.timer:tween(1, cam, {x = 550, y = 155}, nil, function()
             cam_done = true
         end)
@@ -70,7 +70,7 @@ return {
         Game.battle.music:play("mad_battle", 1, 1)
 
         dummy:triggerTrueBattle(true)
-        if Game.battle.state ~= "ATTACKING" or Game.battle.state ~= "ACTIONSDONE" then
+        if Game.battle.state ~= "ATTACKING" or Game.battle.state ~= "ACTIONSDONE" or dummy.trigger_cause ~= "fight" then
             cutscene:text("* Suddenly, the dummy began to float!\n* Regaular ACTs won't work anymore!")
         end
 
