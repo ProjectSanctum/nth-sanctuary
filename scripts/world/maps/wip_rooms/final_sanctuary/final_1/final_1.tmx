@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="47">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="47">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
-  <property name="border" value="church_grand"/>
+  <property name="border" value="church_grand_grey"/>
   <property name="music" value="final"/>
  </properties>
  <tileset firstgid="1" source="../../../../tilesets/bg_dw_church_2_tileset.tsx"/>
@@ -54,7 +54,7 @@
 </data>
  </layer>
  <objectgroup id="3" name="objects_shadow">
-  <object id="1" gid="515" x="800" y="1362" width="1040" height="800" rotation="270"/>
+  <object id="1" gid="515" x="1280" y="1362" width="1040" height="1280" rotation="270"/>
  </objectgroup>
  <layer id="1" name="tiles" width="20" height="34">
   <data encoding="csv">

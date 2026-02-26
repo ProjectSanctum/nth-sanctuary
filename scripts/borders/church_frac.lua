@@ -7,10 +7,10 @@ function ChurchFracBorder:init()
     
     self.hue_start = love.math.random(-255, 255)
     self.sat_start = love.math.random(5, 15)/10
-    self.val_start = 1.0
+    self.val_start = 1.25
     self.hue_target = love.math.random(-255, 255)
     self.sat_target = love.math.random(5, 15)/10
-    self.val_target = 1.0
+    self.val_target = 1.25
     self.hue = self.hue_start
     self.sat = self.sat_start
     self.val = self.val_start

@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -12,7 +12,7 @@ return {
   nextlayerid = 12,
   nextobjectid = 47,
   properties = {
-    ["border"] = "church_grand",
+    ["border"] = "church_grand_grey",
     ["music"] = "final"
   },
   tilesets = {
@@ -157,10 +157,10 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 800,
+          x = 1280,
           y = 1362,
           width = 1040,
-          height = 800,
+          height = 1280,
           rotation = 270,
           gid = 515,
           visible = true,
