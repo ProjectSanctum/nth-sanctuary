@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 13,
-  nextobjectid = 57,
+  nextobjectid = 59,
   properties = {
     ["border"] = "",
     ["music"] = "grand_bells",
@@ -294,7 +294,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "finale.entry",
+            ["cutscene"] = "finale_test.entry",
             ["once"] = false
           }
         }
@@ -544,7 +544,7 @@ return {
           type = "",
           shape = "point",
           x = 320,
-          y = 840,
+          y = 720,
           width = 0,
           height = 0,
           rotation = 0,
@@ -571,6 +571,19 @@ return {
           shape = "point",
           x = 320,
           y = 320,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 58,
+          name = "entry_grand2",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 590,
           width = 0,
           height = 0,
           rotation = 0,

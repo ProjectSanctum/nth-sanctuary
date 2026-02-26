@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="47">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="51">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -53,7 +53,7 @@
 0,0,0,0,0,0,487,488,489,0,0,0,497,498,499,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="3" name="objects_shadow">
+ <objectgroup id="3" name="objects_shadow" visible="0">
   <object id="1" gid="515" x="1280" y="1362" width="1040" height="1280" rotation="270"/>
  </objectgroup>
  <layer id="1" name="tiles" width="20" height="34">
@@ -102,7 +102,7 @@
  <objectgroup color="#55aa00" id="8" name="collision">
   <object id="15" x="280" y="1120" width="40" height="200"/>
   <object id="16" x="320" y="1280" width="200" height="40"/>
-  <object id="17" x="520" y="1120" width="40" height="160"/>
+  <object id="17" x="520" y="1120" width="40" height="200"/>
   <object id="18" x="280" y="840" width="40" height="280"/>
   <object id="19" x="520" y="840" width="40" height="280"/>
   <object id="20" x="240" y="520" width="120" height="320"/>
@@ -124,7 +124,14 @@
   <object id="36" x="160" y="40" width="40" height="160"/>
   <object id="37" x="200" y="200" width="40" height="40"/>
  </objectgroup>
- <objectgroup id="7" name="objects_party" locked="1"/>
+ <objectgroup id="7" name="objects_party">
+  <object id="50" name="transition" x="340" y="1260" width="160" height="40">
+   <properties>
+    <property name="map" value="0_base_sanctum/base_grand_door"/>
+    <property name="marker" value="entry_grand2"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="5" name="objects_over_party" locked="1">
   <object id="11" name="highlight" x="0" y="0" width="800" height="1360"/>
  </objectgroup>
