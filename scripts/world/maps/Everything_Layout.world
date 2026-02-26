@@ -475,6 +475,13 @@
             "width": 800,
             "x": -1280,
             "y": -3040
+        },
+        {
+            "fileName": "secrets/prophecy_test_tree/prophecy_test_tree.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 6240,
+            "y": 8360
         }
     ],
     "onlyShowAdjacentMaps": false,
