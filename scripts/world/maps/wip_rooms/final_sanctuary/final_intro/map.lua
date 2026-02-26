@@ -8,6 +8,7 @@ end
 
 function Map:onEnter()
     self.world.color = COLORS.black
+    Game.world:startCutscene("finale_test.intro")
 end
 
 function Map:onExit()

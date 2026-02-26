@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 47,
+  nextobjectid = 51,
   properties = {
     ["border"] = "church_grand_grey",
     ["music"] = "final"
@@ -144,7 +144,7 @@ return {
       id = 3,
       name = "objects_shadow",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -299,7 +299,7 @@ return {
           x = 520,
           y = 1120,
           width = 40,
-          height = 160,
+          height = 200,
           rotation = 0,
           visible = true,
           properties = {}
@@ -579,7 +579,24 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 50,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 340,
+          y = 1260,
+          width = 160,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "0_base_sanctum/base_grand_door",
+            ["marker"] = "entry_grand2"
+          }
+        }
+      }
     },
     {
       type = "objectgroup",

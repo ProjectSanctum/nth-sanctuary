@@ -5,11 +5,12 @@ return {
         local ch = cutscene:choicer({"Enter", "Not Yet"})
 
         if ch == 1 then
-            cutscene:fadeOut(0, {music = true})
+            cutscene:fadeOut(0, {music = true}) 
             Assets.playSound("locker", 1, 0.5)
             cutscene:wait(1)
             Game.world:loadMap("wip_rooms/final_sanctuary/final_intro")
-            --cutscene:gotoCutscene("finale", "intro")
+            --cutscene:gotoCutscene("finale_test.intro")
+            return
         else
             cutscene:text("* (Get ready.)")
             cutscene:walkTo(Game.world.player, Game.world.player.x, Game.world.player.y+80, 1)
@@ -19,7 +20,10 @@ return {
         cutscene:fadeIn(0, {music = true})
         local g = Game.world.music
         g:pause()
-        cutscene:wait(1)
+        cutscene:wait(function() return Game.world.music:tell() >= (60/172) end)
+        cutscene:during(function()
+            print(Game.world.music:tell())
+        end)
         print("in")
         g:play()
         local a = Sprite("player/heart")
@@ -51,7 +55,7 @@ return {
         r.x, r.y = SCREEN_WIDTH/2+k.width*3, SCREEN_HEIGHT/2
         r:setScale(2)
         r:addFX(ColorMaskFX({0,1,0}))
-        Game.stage:addChild(s)
+        Game.stage:addChild(s)  
         Game.stage:addChild(r)
         cutscene:wait(1.8)
         local n = Sprite("party/noelle/dark/walk/down_1")

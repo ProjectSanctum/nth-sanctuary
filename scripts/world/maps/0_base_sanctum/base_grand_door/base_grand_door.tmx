@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="25" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="57">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="25" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="59">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -77,7 +77,7 @@
   </object>
   <object id="54" name="script" x="240" y="440" width="160" height="40">
    <properties>
-    <property name="cutscene" value="finale.entry"/>
+    <property name="cutscene" value="finale_test.entry"/>
     <property name="once" type="bool" value="false"/>
    </properties>
   </object>
@@ -117,13 +117,16 @@
   <object id="43" x="280" y="760" width="80" height="40"/>
  </objectgroup>
  <objectgroup id="5" name="markers">
-  <object id="13" name="spawn" x="320" y="840">
+  <object id="13" name="spawn" x="320" y="720">
    <point/>
   </object>
   <object id="16" name="entry_ft" x="320" y="960">
    <point/>
   </object>
   <object id="21" name="targ" x="320" y="320">
+   <point/>
+  </object>
+  <object id="58" name="entry_grand2" x="320" y="590">
    <point/>
   </object>
  </objectgroup>
