@@ -12,6 +12,7 @@ return {
   nextlayerid = 7,
   nextobjectid = 35,
   properties = {
+    ["border"] = "tvworld",
     ["music"] = "greenroom_detune",
     ["name"] = "??? - Kristal Konverge"
   },
