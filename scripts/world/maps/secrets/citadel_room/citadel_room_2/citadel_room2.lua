@@ -12,6 +12,7 @@ return {
   nextlayerid = 7,
   nextobjectid = 24,
   properties = {
+    ["border"] = "tvworld",
     ["music"] = "greenroom_detune"
   },
   tilesets = {
