@@ -293,7 +293,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (No seriously stop looking at it.)"
+            ["text1"] = "* (Stop looking at it.)"
           }
         },
         {
@@ -308,7 +308,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* \"Do not the test dummy\""
+            ["text1"] = "* \"Do not test the dummy\""
           }
         }
       }
