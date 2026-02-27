@@ -163,7 +163,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "debug_rooms/lighting_test",
+            ["map"] = "debug_rooms/lighting",
             ["marker"] = "entry"
           }
         }

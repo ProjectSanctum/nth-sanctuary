@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="24">
  <editorsettings>
-  <export target="filtertest.lua" format="lua"/>
+  <export target="data.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="583" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
@@ -43,7 +43,7 @@
   </object>
   <object id="21" name="transition" x="640" y="360" width="40" height="80">
    <properties>
-    <property name="map" value="debug_rooms/lighting_test"/>
+    <property name="map" value="debug_rooms/lighting"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
