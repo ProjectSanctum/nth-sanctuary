@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 12,
+  nextobjectid = 14,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune"
@@ -294,6 +294,21 @@ return {
           visible = true,
           properties = {
             ["text1"] = "* (No seriously stop looking at it.)"
+          }
+        },
+        {
+          id = 13,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 320,
+          y = 200,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* \"Do not the test dummy\""
           }
         }
       }
