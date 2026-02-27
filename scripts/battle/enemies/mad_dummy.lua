@@ -163,6 +163,7 @@ function Dummy:triggerTrueBattle(cause, noact)
     }
 
     self:setTired(false)
+    self.boss = true
     self.tired_percentage = 0.25
     self.spare_points = 0
     self.disable_mercy = true

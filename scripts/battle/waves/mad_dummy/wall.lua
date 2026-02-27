@@ -8,7 +8,7 @@ function Wall:onStart()
         attacker.enemy_hitbox = Hitbox(attacker, 0, 0, attacker.width, attacker.height)
     end
 
-    self.timer:every(1.25, function()
+    self.timer:everyInstant(1.25, function()
         for y = 0, SCREEN_HEIGHT, Utils.random(12, 24) do
             local bullet = self:spawnBullet("smallbullet", SCREEN_WIDTH + 20, y, math.rad(180), 4)
             bullet.remove_offscreen = false
