@@ -46,7 +46,7 @@ function Aiming:onStart()
             local x, y = attacker:getRelativePos(attacker.width/2, attacker.height/2)
             local angle = MathUtils.angle(x, y, Game.battle.soul.x, Game.battle.soul.y)
 
-            local bullet = self:spawnBullet("smallbullet", x, y, angle, 9)
+            local bullet = self:spawnBullet("smallbullet", x, y, angle, 8.75)
             bullet.destroy_on_hit = false
             bullet.remove_offscreen = false 
             bullet.physics.match_rotation = true
@@ -59,7 +59,7 @@ function Aiming:onStart()
             bullet.prev_line = nil
             
             self.timer:every(0.1, function()
-                if bullet.active then
+                if bullet then
                     bullet:addChild(AfterImage(bullet, 0.5))
                 end
             end)
@@ -72,7 +72,7 @@ function Aiming:onStart()
                 if b.bounce_state == 2 then
                     for _, enemy in ipairs(self:getAttackers()) do
                         if enemy.enemy_hitbox and b:collidesWith(enemy.enemy_hitbox) then
-                            local dmg = math.floor(enemy.max_health / 50) + math.random(-6, 6)
+                            local dmg = math.floor(enemy.max_health / 50) + math.random(-6, 12)
                             
                             enemy:hurt(math.max(1, dmg), Game.battle.party[1])
                             Assets.stopAndPlaySound("damage")

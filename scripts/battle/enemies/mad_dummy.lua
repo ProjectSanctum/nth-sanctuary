@@ -42,8 +42,8 @@ function Dummy:init()
 
     self.low_health_text = "* The dummy looks like it's\nabout to fall over."
 
-    self:registerAct("Smile")
-    self:registerAct("Tell Story", "", {"ralsei"})
+    self:registerAct("Smile", "Induce\nMERCY")
+    self:registerAct("Tell Story", "Induce\nTIRED", {"ralsei"})
 
     Game.battle.timer:every(0.5, function()
         if self.siner_active then
@@ -119,14 +119,15 @@ function Dummy:triggerTrueBattle(cause, noact)
         Game.battle:startActCutscene("dummy", "the_true_fight", self)
     end
 
-    self.health = self.max_health
+    self.max_health = 900
+    self.health = 900
     self.mercy = 0
     self.spare_points = 0
 
     self.name = "Mad Dummy"
-    self.attack = 12
+    self.attack = 15
     self.defense = 100
-    self.waves = {"mad_dummy/aiming"}
+    self.waves = {"mad_dummy/aiming", "mad_dummy/basic"}
     self.wave_override = "mad_dummy/aiming"
 
     local first_line = {"[wave]YOU!!  ", "[wave]You think you   \ncan just stand   \nthere and smile?!", "[wave]Perhaps you   \nshould've   \nASKED for it   \nfirst! "}
@@ -162,11 +163,14 @@ function Dummy:triggerTrueBattle(cause, noact)
     }
 
     self:setTired(false)
-    self.tired_percentage = 0.1
+    self.tired_percentage = 0.25
     self.spare_points = 0
     self.disable_mercy = true
-    self.check = {"AT 12 DF -60\n* Its cotton burns with fury.\n* It rejects your ACTions.", "... Unless they're [color:blue]MAGICAL.[color:reset]"}
+    self.check = {"AT 15 DF -60\n* Its cotton burns with fury.\n* It rejects your ACTions.", "... Unless they're [color:blue]MAGICAL.[color:reset]"}
     self.text = {"* The air crackles with rage.", "* The dummy trembles violently.", "* This is no longer pretend."}
+
+    self:getAct("Smile").description = "Useless\naction"
+    self:getAct("Tell Story").description = "Useless\naction"
 end
 
 function Dummy:getHealthDisplay()

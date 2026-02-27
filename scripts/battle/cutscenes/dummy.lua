@@ -21,7 +21,7 @@ return {
         local normal_x, normal_y = cam.x, cam.y
     
         local cam_done = false
-        Game.battle.timer:tween(1, cam, {zoom_x = 2.5, zoom_y = 2.5})
+        Game.battle.timer:tween(1, cam, {zoom_x = 3, zoom_y = 3})
         Game.battle.timer:tween(1, cam, {x = 550, y = 155}, nil, function()
             cam_done = true
         end)
