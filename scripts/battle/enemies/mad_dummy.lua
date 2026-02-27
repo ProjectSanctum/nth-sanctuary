@@ -47,7 +47,7 @@ function Dummy:init()
     self:registerAct("Tell Story", "Induce\nTIRED", {"ralsei"})
 
     Game.battle.timer:every(0.5, function()
-        if self.siner_active then
+        if self and self.siner_active then
             local afterimage = AfterImage(self, 0.5)
             afterimage.physics.speed_x = 2.5
             afterimage:setLayer(self.layer + 1)
