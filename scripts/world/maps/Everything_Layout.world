@@ -477,10 +477,17 @@
             "y": -3040
         },
         {
-            "fileName": "secrets/prophecy_test_tree/prophecy_test_tree.tmx",
+            "fileName": "secrets/prophecy_test_fizz/prophecy_test_fizz.tmx",
             "height": 480,
             "width": 640,
             "x": 6240,
+            "y": 8360
+        },
+        {
+            "fileName": "secrets/prophecy_test_tree/prophecy_test_tree.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 6880,
             "y": 8360
         }
     ],
