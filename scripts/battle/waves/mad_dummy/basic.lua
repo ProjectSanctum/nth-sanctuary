@@ -15,7 +15,7 @@ function Basic:onStart()
 
     self.timer:every(.75, function()
         local side = math.random(1, 5)
-        for i = 1, math.random(2, 3) do
+        for i = 1, math.random(2, 5) do
             local x, y, angle
 
             if side == 1 then
@@ -60,7 +60,7 @@ function Basic:onStart()
 
                 for _, enemy in ipairs(self:getAttackers()) do
                     if enemy.enemy_hitbox and b:collidesWith(enemy.enemy_hitbox) then
-                        local dmg = math.floor(enemy.max_health / 200) + math.random(-3, 6)
+                        local dmg = math.floor(enemy.max_health / 200) + math.random(-3, 7)
 
                         enemy:hurt(math.max(1, dmg), Game.battle.party[1])
                         Assets.stopAndPlaySound("damage")

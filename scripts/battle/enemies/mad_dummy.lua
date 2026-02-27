@@ -127,7 +127,7 @@ function Dummy:triggerTrueBattle(cause, noact)
     self.name = "Mad Dummy"
     self.attack = 15
     self.defense = 100
-    self.waves = {"mad_dummy/aiming", "mad_dummy/basic"}
+    self.waves = {"mad_dummy/aiming", "mad_dummy/basic", "mad_dummy/wall"}
     self.wave_override = "mad_dummy/aiming"
 
     local first_line = {"[wave]YOU!!  ", "[wave]You think you   \ncan just stand   \nthere and smile?!", "[wave]Perhaps you   \nshould've   \nASKED for it   \nfirst! "}
