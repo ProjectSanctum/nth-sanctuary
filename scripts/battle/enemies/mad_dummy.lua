@@ -14,6 +14,7 @@ function Dummy:init()
     self.spare_points = 0
 
     self.the_true_fight = false
+    self.the_true_end = false
     self.trigger_cause = ""
     
     self.dialogue_index = 1
@@ -180,11 +181,26 @@ function Dummy:getHealthDisplay()
 end
 
 function Dummy:onDefeat(damage, battler)
+    if self.the_true_end == true then return super.onDefeat(self, damage, battler) end
+    if Game.battle.battle_ui.attacking then
+        Game.battle.battle_ui:endAttack()
+    end
     if not self.the_true_fight then
         self:triggerTrueBattle("fight")
         return false
     end
-    return super.onDefeat(self, damage, battler)
+    Game.battle:setState("CUTSCENE")
+    Game.battle:resetAttackers() 
+    Game.battle.processing_action = false
+
+    Game.battle.should_finish_action = false
+    Game.battle.on_finish_keep_animation = nil
+    Game.battle.on_finish_action = nil
+    self.siner_active = false
+
+    Game.battle:startCutscene("dummy", "the_true_end")
+    return
+    -- return super.onDefeat(self, damage, battler)
 end
 
 function Dummy:onAct(battler, name)
@@ -234,12 +250,12 @@ function Dummy:update()
             local lerp_x = Utils.lerp(self.x, self.old_x + x_offset, 0.1 * DTMULT)
             local lerp_y = Utils.lerp(self.y, self.old_y + y_offset, 0.1 * DTMULT)
             self:setPosition(lerp_x, lerp_y)
-            if self.bubble then
-                local spr = self.sprite or self
-                local x, y = spr:getRelativePos(0, spr.height/2, Game.battle)
-                self.bubble.x = x
-                self.bubble.y = y
-            end
+        end
+        if self.bubble then
+            local spr = self.sprite or self
+            local x, y = spr:getRelativePos(0, spr.height/2, Game.battle)
+            self.bubble.x = x
+            self.bubble.y = y
         end
     end
 end

@@ -13,6 +13,16 @@ return {
         end
     end,
     the_true_fight = function(cutscene, battler, enemy)
+        Game.battle:setState("CUTSCENE")
+        Game.battle:resetAttackers() 
+        Game.battle.processing_action = false
+    
+        Game.battle.should_finish_action = false
+        Game.battle.on_finish_keep_animation = nil
+        Game.battle.on_finish_action = nil
+        Game.battle.attack_done = true
+        Game.battle.spell_finished = true
+
         local dummy = Game.battle.enemies[1]
         Game.battle.timer:tween(2, Game.battle.music, {volume = 0.01, pitch = 0.01})
         cutscene:wait(2.5)
@@ -81,4 +91,51 @@ return {
         -- Game.battle.current_selecting = 0
         -- Game.battle:setState("ACTIONSDONE")
     end,
+    the_true_end = function(cutscene, battler, enemy)
+        Game.battle:setState("CUTSCENE")
+        Game.battle:resetAttackers() 
+        Game.battle.processing_action = false
+    
+        Game.battle.should_finish_action = false
+        Game.battle.on_finish_keep_animation = nil
+        Game.battle.on_finish_action = nil
+        Game.battle.attack_done = true
+        Game.battle.spell_finished = true
+
+        local dummy = Game.battle.enemies[1]
+        dummy.the_true_end = true
+        cutscene:slideTo(dummy, dummy.old_x, dummy.old_y, 1, "out-quad")
+        cutscene:battlerText(dummy, "OW!!!")
+        cutscene:battlerText(dummy, "Alright,\nyou know\nwhat?")
+        cutscene:battlerText(dummy, "SCREW YOU!")
+        cutscene:battlerText(dummy, "You guys\nare BORING!")
+        cutscene:battlerText(dummy, "Last time\nI fought\nsomeone\nlike you...")
+        cutscene:battlerText(dummy, "... Let's say,\nthey WERE fun\nenough.")
+        local shaking = true
+        Game.battle.timer:every(0.1, function()
+            if shaking then
+                dummy.sprite:shake(2, 0, 0.5, 0.05)
+            end
+        end)
+        cutscene:battlerText(dummy, "But you are just LAME!")
+        cutscene:battlerText(dummy, "Lame.\nLame!\nSO LAME!!")
+        shaking = false
+        cutscene:slideTo(dummy, SCREEN_WIDTH + 30, dummy.y, 2)
+        cutscene:wait(2)
+        dummy:remove()
+
+        -- dummy:defeat("SPARED", false)
+        
+
+        --[[local win_text = string.format("* You won!\n* Got 0 EXP and %s %s.", dummy.money, Game:getConfig("darkCurrencyShort"))
+        Game.battle:battleText(win_text, function()
+            Game.battle:setState("TRANSITIONOUT")
+            Game.battle.encounter:onBattleEnd()
+        end)]]
+
+        cutscene:after(function() 
+            dummy:defeat("SPARED", false)
+            Game.battle:onVictory()
+        end)
+    end
 }

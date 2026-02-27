@@ -243,7 +243,8 @@ return {
           visible = true,
           properties = {
             ["actor"] = "dummy",
-            ["encounter"] = "mad_dummy"
+            ["encounter"] = "mad_dummy",
+            ["once"] = true
           }
         },
         {
