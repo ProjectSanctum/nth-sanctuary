@@ -30,7 +30,7 @@ function Dummy:init()
     self.x_speed = 0
     self.radius = self.y_speed * 400
 
-    self.waves = {"basic", "aiming", "movingarena"}
+    self.waves = {"basic", "aiming"}
     self.dialogue = {"..."}
     self.check = "AT 4 DF 0\n* Cotton heart and button eye\n* Looks just like a fluffy guy."
 
@@ -126,6 +126,8 @@ function Dummy:triggerTrueBattle(cause, noact)
     self.name = "Mad Dummy"
     self.attack = 12
     self.defense = 100
+    self.waves = {"mad_dummy/aiming"}
+    self.wave_override = "mad_dummy/aiming"
 
     local first_line = {"[wave]YOU!!  ", "[wave]You think you   \ncan just stand   \nthere and smile?!", "[wave]Perhaps you   \nshould've   \nASKED for it   \nfirst! "}
     local middle_line_1 = {"[wave]And then   \nYOU show up.  ", "[wave]With your   \nfluffy   \nfriends!  ", "[wave]And your   \n\"storytelling\"!  "}
