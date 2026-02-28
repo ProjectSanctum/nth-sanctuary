@@ -75,7 +75,7 @@
   <object id="60" name="north_exit" x="620" y="80">
    <point/>
   </object>
-  <object id="63" name="frisk_room_exit" x="1160" y="470">
+  <object id="63" name="dark_exit" x="1160" y="470">
    <point/>
   </object>
  </objectgroup>

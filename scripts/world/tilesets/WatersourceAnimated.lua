@@ -29,56 +29,6 @@ return {
   tilecount = 15,
   tiles = {
     {
-      id = 3,
-      animation = {
-        {
-          tileid = 5,
-          duration = 125
-        },
-        {
-          tileid = 6,
-          duration = 125
-        },
-        {
-          tileid = 7,
-          duration = 125
-        },
-        {
-          tileid = 8,
-          duration = 125
-        },
-        {
-          tileid = 9,
-          duration = 125
-        }
-      }
-    },
-    {
-      id = 4,
-      animation = {
-        {
-          tileid = 10,
-          duration = 125
-        },
-        {
-          tileid = 11,
-          duration = 125
-        },
-        {
-          tileid = 12,
-          duration = 125
-        },
-        {
-          tileid = 13,
-          duration = 125
-        },
-        {
-          tileid = 14,
-          duration = 125
-        }
-      }
-    },
-    {
       id = 5,
       animation = {
         {
@@ -164,6 +114,31 @@ return {
       }
     },
     {
+      id = 6,
+      animation = {
+        {
+          tileid = 5,
+          duration = 125
+        },
+        {
+          tileid = 6,
+          duration = 125
+        },
+        {
+          tileid = 7,
+          duration = 125
+        },
+        {
+          tileid = 8,
+          duration = 125
+        },
+        {
+          tileid = 9,
+          duration = 125
+        }
+      }
+    },
+    {
       id = 10,
       animation = {
         {
@@ -244,6 +219,31 @@ return {
         },
         {
           tileid = 9,
+          duration = 125
+        }
+      }
+    },
+    {
+      id = 11,
+      animation = {
+        {
+          tileid = 10,
+          duration = 125
+        },
+        {
+          tileid = 11,
+          duration = 125
+        },
+        {
+          tileid = 12,
+          duration = 125
+        },
+        {
+          tileid = 13,
+          duration = 125
+        },
+        {
+          tileid = 14,
           duration = 125
         }
       }

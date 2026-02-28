@@ -169,7 +169,7 @@ return {
         },
         {
           id = 63,
-          name = "frisk_room_exit",
+          name = "dark_exit",
           type = "",
           shape = "point",
           x = 1160,

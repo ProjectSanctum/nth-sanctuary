@@ -58,9 +58,8 @@
   </object>
  </objectgroup>
  <objectgroup id="4" name="objects_fg"/>
- <objectgroup color="#0000ff" id="5" name="collision" visible="0">
+ <objectgroup color="#0000ff" id="5" name="collision">
   <object id="2" x="0" y="0" width="40" height="440"/>
-  <object id="3" x="-40" y="40" width="40" height="880"/>
   <object id="4" x="0" y="520" width="80" height="440"/>
   <object id="5" x="80" y="520" width="80" height="40"/>
   <object id="6" x="160" y="920" width="280" height="40"/>

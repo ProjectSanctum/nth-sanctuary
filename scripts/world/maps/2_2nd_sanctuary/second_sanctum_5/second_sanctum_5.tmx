@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="37">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="37">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -239,7 +239,7 @@
   </object>
  </objectgroup>
  <objectgroup id="3" name="objects_party">
-  <object id="18" name="transition" x="840" y="-40" width="160" height="300">
+  <object id="18" name="transition" x="880" y="-40" width="80" height="300">
    <properties>
     <property name="map" value="2_2nd_sanctuary/second_sanctum_4_crossroad"/>
     <property name="marker" value="entry3"/>

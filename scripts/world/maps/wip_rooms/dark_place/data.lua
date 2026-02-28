@@ -158,7 +158,7 @@ return {
       id = 5,
       name = "collision",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -175,19 +175,6 @@ return {
           y = 0,
           width = 40,
           height = 440,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 3,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = -40,
-          y = 40,
-          width = 40,
-          height = 880,
           rotation = 0,
           visible = true,
           properties = {}

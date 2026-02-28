@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="87" height="80" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="164">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="87" height="80" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="167">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -720,59 +720,11 @@
   <object id="15" x="0" y="2920" width="560" height="40"/>
   <object id="27" x="2960" y="360" width="560" height="40"/>
   <object id="28" x="2960" y="520" width="560" height="40"/>
-  <object id="30" x="2120" y="1240">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
+  <object id="165" x="560" y="2800">
+   <polygon points="0,0 2400,-2400 2400,-2440 0,-40"/>
   </object>
-  <object id="31" x="2120" y="1400">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="113" x="2400" y="960">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="114" x="2680" y="680">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="115" x="2400" y="1120">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="116" x="2680" y="840">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="121" x="1840" y="1680">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="122" x="1840" y="1520">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="123" x="1560" y="1800">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="124" x="1280" y="2080">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="125" x="1000" y="2360">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="126" x="720" y="2640">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="127" x="560" y="2800">
-   <polygon points="0,0 280,-280 280,-320 0,-320"/>
-  </object>
-  <object id="128" x="1560" y="1960">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="129" x="1280" y="2240">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="130" x="1000" y="2520">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="131" x="720" y="2800">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
-  </object>
-  <object id="132" x="560" y="2960">
-   <polygon points="0,0 0,-40 280,-320 280,0"/>
+  <object id="166" x="560" y="2920">
+   <polygon points="0,0 2400,-2400 2400,-2440 -40,0"/>
   </object>
  </objectgroup>
  <objectgroup id="10" name="objects_below"/>

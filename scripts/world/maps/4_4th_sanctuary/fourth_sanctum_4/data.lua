@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 22,
-  nextobjectid = 164,
+  nextobjectid = 167,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -1680,235 +1680,7 @@ return {
           properties = {}
         },
         {
-          id = 30,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 2120,
-          y = 1240,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 31,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 2120,
-          y = 1400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 113,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 2400,
-          y = 960,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 114,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 2680,
-          y = 680,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 115,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 2400,
-          y = 1120,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 116,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 2680,
-          y = 840,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 121,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1840,
-          y = 1680,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 122,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1840,
-          y = 1520,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 123,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1560,
-          y = 1800,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 124,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1280,
-          y = 2080,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 125,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1000,
-          y = 2360,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 126,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 720,
-          y = 2640,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
-          },
-          properties = {}
-        },
-        {
-          id = 127,
+          id = 165,
           name = "",
           type = "",
           shape = "polygon",
@@ -1920,104 +1692,28 @@ return {
           visible = true,
           polygon = {
             { x = 0, y = 0 },
-            { x = 280, y = -280 },
-            { x = 280, y = -320 },
-            { x = 0, y = -320 }
+            { x = 2400, y = -2400 },
+            { x = 2400, y = -2440 },
+            { x = 0, y = -40 }
           },
           properties = {}
         },
         {
-          id = 128,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1560,
-          y = 1960,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 129,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1280,
-          y = 2240,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 130,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 1000,
-          y = 2520,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 131,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 720,
-          y = 2800,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
-          },
-          properties = {}
-        },
-        {
-          id = 132,
+          id = 166,
           name = "",
           type = "",
           shape = "polygon",
           x = 560,
-          y = 2960,
+          y = 2920,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = 280, y = -320 },
-            { x = 280, y = 0 }
+            { x = 2400, y = -2400 },
+            { x = 2400, y = -2440 },
+            { x = -40, y = 0 }
           },
           properties = {}
         }
