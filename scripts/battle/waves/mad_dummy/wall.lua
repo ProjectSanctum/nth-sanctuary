@@ -9,7 +9,7 @@ function Wall:onStart()
     end
 
     self.timer:everyInstant(1.25, function()
-        for y = 0, SCREEN_HEIGHT, Utils.random(6, 24) do
+        for y = 0, SCREEN_HEIGHT, Utils.random(12, 36) do
             local bullet = self:spawnBullet("smallbullet", SCREEN_WIDTH + 20, y, math.rad(180), 4)
             bullet.remove_offscreen = false
             bullet.ignore = false
