@@ -124,7 +124,7 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      tintcolor = { 83, 83, 83 },
+      tintcolor = { 83, 90, 132 },
       properties = {},
       encoding = "lua",
       data = {

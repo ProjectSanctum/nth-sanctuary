@@ -20,7 +20,7 @@
   <object id="99" name="lavawaverbg" x="0" y="0" width="40" height="40"/>
   <object id="100" name="lavagradient" x="150" y="-80" width="40" height="40"/>
  </objectgroup>
- <layer id="13" name="tiles5" width="34" height="42" tintcolor="#535353">
+ <layer id="13" name="tiles5" width="34" height="42" tintcolor="#535a84">
   <data encoding="csv">
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
