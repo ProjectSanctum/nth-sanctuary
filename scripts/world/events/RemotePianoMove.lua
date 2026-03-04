@@ -91,9 +91,28 @@ function RemotePianoMove:init(data)
     
     print("Properties loaded successfully")
     
-    -- Basic setup - skip sprite loading for now to avoid Assets issues
-    print("Skipping sprite loading - using fallback drawing")
+    -- Store carpet texture for manual drawing
+    self.carpet_texture = Assets.getTexture("world/objects/spr_dw_churchb_movingpianocarpet")
+    self.piano_texture = Assets.getTexture("world/objects/spr_dw_churchb_movingpiano")
+    
+    if self.carpet_texture then
+        print("Carpet texture loaded successfully")
+    else
+        print("WARNING: Carpet texture not found, using fallback")
+    end
+    
+    if self.piano_texture then
+        print("Piano texture loaded successfully")
+    else
+        print("WARNING: Piano texture not found, using fallback")
+    end
+    
+    -- Basic setup
     self:setOrigin(0.5, 0.5)
+    self:setSprite("world/objects/spr_dw_churchb_movingpiano")
+    -- Offset the sprite position by 1 tile (40 pixels)
+    self.sprite_offset_x = 40
+    self.sprite_offset_y = 40
     self:setHitbox(0, 0, self.width, self.height)
     
     print("Sprite and hitbox set")
@@ -111,25 +130,44 @@ function RemotePianoMove:update()
     if self.debug_mode then
         print("RemotePianoMove update called at:", self.x, self.y)
     end
+    -- Always print position for debugging
+    if math.random() < 0.02 then -- 2% chance per frame
+        print("Piano at:", self.x, self.y, "Visible:", self.visible)
+    end
 end
 
 function RemotePianoMove:draw()
+    -- Calculate center of the 2x2 tile area (80x80 pixels) + offset by 1 tile (40 pixels)
+    local center_x = 40 + 40  -- Half of 80 + 1 tile right
+    local center_y = 40 + 40  -- Half of 80 + 1 tile down
+    
+    -- Adjust carpet position: up 2px, right 8px
+    local carpet_x = center_x + 8
+    local carpet_y = center_y - 2
+    
+    -- Draw carpet sprite first (underneath)
+    if self.carpet_texture then
+        Draw.setColor(1, 1, 1, 1)
+        Draw.draw(self.carpet_texture, carpet_x, carpet_y, 0, 1, 1, self.carpet_texture:getWidth()/2, self.carpet_texture:getHeight()/2)
+    else
+        -- Fallback if carpet sprite not found
+        love.graphics.setColor(0.5, 0.3, 0.2, 1)
+        love.graphics.rectangle("fill", carpet_x - 40, carpet_y - 40, 80, 80)
+    end
+    
+    -- Draw piano sprite using the sprite system (proper scaling)
+    love.graphics.push()
+    love.graphics.translate(self.sprite_offset_x, self.sprite_offset_y)
     super.draw(self)
+    love.graphics.pop()
     
-    -- Draw carpet sprite first (underneath) - using fallback for now
-    love.graphics.setColor(0.5, 0.3, 0.2, 0.8)
-    love.graphics.rectangle("fill", self.x - 40, self.y - 40, 80, 80)
-    
-    -- Draw piano sprite (on top) - using fallback for now
-    love.graphics.setColor(0.2, 0.2, 0.2, 0.9)
-    love.graphics.rectangle("fill", self.x - 30, self.y - 30, 60, 60)
     love.graphics.setColor(1, 1, 1, 1)
     
     -- Debug info
     if self.debug_mode then
         love.graphics.setColor(1, 1, 0, 1)
-        love.graphics.print("RemotePianoMove", self.x - 40, self.y - 60)
-        love.graphics.print("X: "..math.floor(self.x).." Y: "..math.floor(self.y), self.x - 40, self.y - 45)
+        love.graphics.print("REMOTE PIANO", center_x - 40, center_y - 60)
+        love.graphics.print("X: "..math.floor(self.x).." Y: "..math.floor(self.y), center_x - 40, center_y - 45)
         love.graphics.setColor(1, 1, 1, 1)
     end
 end
