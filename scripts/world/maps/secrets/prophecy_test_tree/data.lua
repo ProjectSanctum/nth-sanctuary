@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -87,8 +87,8 @@ return {
           visible = true,
           properties = {
             ["alwaysvisible"] = true,
-            ["fade_edges"] = false,
-            ["no_back"] = false,
+            ["fade_edges"] = true,
+            ["no_back"] = true,
             ["panel_h"] = 86,
             ["panel_w"] = 101,
             ["text"] = "HOLIDAY",

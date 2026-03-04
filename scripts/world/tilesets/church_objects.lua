@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   name = "church_objects",
   class = "",
   tilewidth = 2880,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 88,
+  tilecount = 89,
   tiles = {
     {
       id = 0,
@@ -728,6 +728,12 @@ return {
       image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_fade.png",
       width = 200,
       height = 289
+    },
+    {
+      id = 95,
+      image = "../../../assets/sprites/world/objects/tree_stem.png",
+      width = 71,
+      height = 63
     }
   }
 }

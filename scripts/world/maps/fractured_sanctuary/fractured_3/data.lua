@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 14,
-  nextobjectid = 68,
+  nextobjectid = 69,
   properties = {
     ["border"] = "church_frac",
     ["music"] = "fractured",
@@ -35,13 +35,13 @@ return {
     },
     {
       name = "bg_dw_church_tileset_new",
-      firstgid = 549,
+      firstgid = 553,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
       exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "longslides",
-      firstgid = 1131,
+      firstgid = 1135,
       filename = "../../../tilesets/longslides.tsx",
       exportfilename = "../../../tilesets/longslides.lua"
     }
@@ -274,7 +274,7 @@ return {
           type = "",
           shape = "point",
           x = 840,
-          y = 40,
+          y = 30,
           width = 0,
           height = 0,
           rotation = 0,
@@ -313,8 +313,8 @@ return {
       properties = {},
       objects = {
         {
-          id = 63,
-          name = "transition",
+          id = 68,
+          name = "script",
           type = "",
           shape = "rectangle",
           x = 800,
@@ -324,8 +324,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "fractured_sanctuary/fractured_2",
-            ["marker"] = "entry2"
+            ["cutscene"] = "events.egg",
+            ["map"] = "fractured_sanctuary/fractured_3",
+            ["once"] = false
           }
         }
       }

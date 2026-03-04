@@ -1,4 +1,38 @@
 return {
+	egg = function (cutscene)
+		--local get = Game:getFlag("egg")
+		local rand = love.math.random(1,50)
+		print(rand)
+		if rand == 50 then
+			Game.world:mapTransition("fractured_sanctuary/egg_room", "spawn")
+		else
+			if Game.world.map.id == "fractured_sanctuary/fractured_2" then
+				Game.world:mapTransition("fractured_sanctuary/fractured_3", "entry")
+			elseif Game.world.map.id == "fractured_sanctuary/fractured_3" then
+				Game.world:mapTransition("fractured_sanctuary/fractured_2", "entry2")
+			end
+		end
+	end,
+	egg_tree = function(cutscene)
+		if not Game:getFlag("egg") then
+			cutscene:text("* (He's behind.)")
+		else
+			cutscene:text("* (He's gone.)")
+		end
+	end,
+	egggive = function (cutscene)
+		if not Game:getFlag("egg") then
+			Game:setFlag("egg", true)
+			--Game.inventory:addItem("egg")
+			cutscene:text("* (Well, [wait:10]there is a man here.)")
+			cutscene:text("* (He has been waiting for you.)")
+			cutscene:text("* (He whispers something to your ear,)")
+			Assets.playSound("item")
+			cutscene:text("* (And gives you an egg.)")
+		else
+			cutscene:text("* (Well, [wait:10]there is no more man here.)")
+		end
+	end,
     moss1 = function (cutscene)
         local get = Game:getFlag("moss1")
         if not get then
