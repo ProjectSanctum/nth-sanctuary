@@ -13,7 +13,7 @@ function ProphecyShaderFX:init(opacity, color, priority)
 end
 
 function ProphecyShaderFX:draw(texture)
-    Draw.drawCanvas(texture)
+    --Draw.drawCanvas(texture)
     self.shader:send("time", Kristal.getTime() * 15)
     self.shader:send("opacity", self.opacity)
     self.shader:sendColor("col", self.col)
