@@ -72,9 +72,9 @@ function event:onInteract(player, dir)
         -- TODO: Accurate camera movement
         self.world:setCameraAttached(false)
         self.world.camera:panTo(self.x + (self:getScaledWidth()/2), self.y+(self.up and 38 or -32), .5)
-        local tx = Utils.round(player.x-(self.x+20), 40)+(self.x+20)
-        tx = Utils.clamp(tx, self.x+20, self.x+self.width-20)
-        local ty = Utils.round(self.y, 40)
+        local tx = MathUtils.round(player.x-(self.x+20), 40)+(self.x+20)
+        tx = MathUtils.clamp(tx, self.x+20, self.x+self.width-20)
+        local ty = MathUtils.round(self.y, 40)
         if dir == "down" then
             ty = ty + 80
         else
@@ -101,6 +101,9 @@ function event:preClimbEnter(player)
             self.world.camera:setAttached(true)
         end)
         local tx, ty = player.x, self.y
+		if player.onrotatingtower then
+			tx = self.world.map.cyltower.tower_x
+		end
         ty = ty + self.yoffset
         self:startScript(function (scr)
             Assets.stopAndPlaySound("wing")

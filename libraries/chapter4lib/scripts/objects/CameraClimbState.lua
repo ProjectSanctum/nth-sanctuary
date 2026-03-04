@@ -18,10 +18,14 @@ function CameraClimbState:update()
     local tx, ty = self.camera:getTargetPosition()
     local cx, cy = self.camera:getPosition()
 
-    self.camera:setPosition(
-        MathUtils.roundToMultiple(MathUtils.lerp(cx, tx, cameralerpspeed), 2),
-        MathUtils.roundToMultiple(MathUtils.lerp(cy, ty, cameralerpspeed), 2)
-    )
+	if Game.world.player.onrotatingtower then
+		self.camera.y = MathUtils.roundToMultiple(MathUtils.lerp(cy, ty, cameralerpspeed * DTMULT), 2)
+	else
+		self.camera:setPosition(
+			MathUtils.roundToMultiple(MathUtils.lerp(cx, tx, cameralerpspeed * DTMULT), 2),
+			MathUtils.roundToMultiple(MathUtils.lerp(cy, ty, cameralerpspeed * DTMULT), 2)
+		)
+	end
 end
 
 return CameraClimbState
