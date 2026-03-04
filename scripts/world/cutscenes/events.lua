@@ -4,7 +4,7 @@ return {
 		local rand = love.math.random(1,50)
 		print(rand)
 		if rand == 50 then
-			Game.world:mapTransition("fractured_sanctuary/egg_room", "spawn")
+			Game.world:mapTransition("fractured_sanctuary/fractured_egg_room", "spawn")
 		else
 			if Game.world.map.id == "fractured_sanctuary/fractured_2" then
 				Game.world:mapTransition("fractured_sanctuary/fractured_3", "entry")

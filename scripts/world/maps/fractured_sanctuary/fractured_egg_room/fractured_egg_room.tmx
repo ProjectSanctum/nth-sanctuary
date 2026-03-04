@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="45">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="none"/>
+  <property name="music" value="raining_in_church2"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="199" source="../../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="295" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="877" source="../../../tilesets/bg_dw_library_tileset_new.tsx"/>
+ <tileset firstgid="1707" source="../../../tilesets/ExtraCarpetTiles.tsx"/>
+ <objectgroup id="12" name="objects_parallax">
+  <object id="43" gid="203" x="-160" y="1560" width="640" height="1600">
+   <properties>
+    <property name="color" type="color" value="#ff4b61a3"/>
+   </properties>
+  </object>
+  <object id="44" gid="3221225675" x="160" y="480" width="640" height="1600">
+   <properties>
+    <property name="color" type="color" value="#ff4b61a3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="collision">
+  <object id="30" x="240" y="320" width="40" height="160"/>
+  <object id="31" x="200" y="280" width="40" height="40"/>
+  <object id="32" x="160" y="160" width="40" height="120"/>
+  <object id="33" x="200" y="120" width="40" height="40"/>
+  <object id="34" x="240" y="80" width="160" height="40"/>
+  <object id="35" x="400" y="120" width="40" height="40"/>
+  <object id="36" x="440" y="160" width="40" height="120"/>
+  <object id="37" x="400" y="280" width="40" height="40"/>
+  <object id="38" x="360" y="320" width="40" height="160"/>
+ </objectgroup>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,37,38,39,41,0,0,0,0,0,0,
+0,0,0,0,0,37,1710,48,48,1709,41,0,0,0,0,0,
+0,0,0,0,0,46,48,47,48,48,50,0,0,0,0,0,
+0,0,0,0,0,55,1708,47,48,1707,59,0,0,0,0,0,
+0,0,0,0,0,64,55,56,57,59,64,0,0,0,0,0,
+0,0,0,0,0,73,65,66,67,68,73,0,0,0,0,0,
+0,0,0,0,0,0,74,75,76,77,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="5" name="markers">
+  <object id="7" name="spawn" x="320" y="400">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="objects_below">
+  <object id="16" name="churchmagicglass" x="280" y="320" width="80" height="160">
+   <properties>
+    <property name="idlealpha" type="float" value="0"/>
+    <property name="starthidden" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="objects_party">
+  <object id="2" gid="294" x="260" y="220" width="142" height="126"/>
+  <object id="14" name="transition" x="280" y="480" width="80" height="40">
+   <properties>
+    <property name="map" value="fractured_sanctuary/fractured_2"/>
+    <property name="marker" value="entry2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="11" name="objects_rain">
+  <object id="40" name="undertale_rain_spawner" x="160" y="40">
+   <properties>
+    <property name="spawn_rate" type="float" value="0.25"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="objects_top">
+  <object id="3" name="prophecy" x="280" y="40">
+   <properties>
+    <property name="alwaysvisible" type="bool" value="true"/>
+    <property name="fade_edges" type="bool" value="true"/>
+    <property name="no_back" type="bool" value="true"/>
+    <property name="panel_h" type="float" value="86"/>
+    <property name="panel_w" type="float" value="101"/>
+    <property name="texture" value="tree_top"/>
+    <property name="txt_offx" type="float" value="-157"/>
+    <property name="txt_offy" type="float" value="-30"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="5" name="interactable" x="290" y="190" width="50" height="30">
+   <properties>
+    <property name="cutscene" value="events.egg_tree"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" name="interactable" x="320" y="160" width="20" height="20">
+   <properties>
+    <property name="cutscene" value="events.egggive"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

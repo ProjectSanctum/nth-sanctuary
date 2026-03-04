@@ -482,6 +482,13 @@
             "width": 640,
             "x": 6240,
             "y": 8360
+        },
+        {
+            "fileName": "fractured_sanctuary/fractured_egg_room/fractured_egg_room.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 6000,
+            "y": 1960
         }
     ],
     "onlyShowAdjacentMaps": false,
