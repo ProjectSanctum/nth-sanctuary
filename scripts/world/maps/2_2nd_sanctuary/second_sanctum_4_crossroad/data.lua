@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.10.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 30,
-  nextobjectid = 184,
+  nextobjectid = 185,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -1267,8 +1267,8 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 860,
-          y = 820,
+          x = 300,
+          y = 825,
           width = 0,
           height = 0,
           rotation = 0,
@@ -1607,6 +1607,22 @@ return {
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_5",
             ["marker"] = "entry"
+          }
+        },
+        {
+          id = 184,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 760,
+          width = 80,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "primary.splitpath",
+            ["once"] = false
           }
         }
       }

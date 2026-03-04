@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="48">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="49">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -191,11 +191,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-930,930,930,930,930,930,930,930,930,930,930,930,930,930,930,930,
-1229,427,427,427,1240,427,427,427,1234,1238,1239,1227,1228,427,427,1225,
-427,427,427,1227,1228,427,427,1230,427,427,427,1236,1237,427,427,1234,
-427,1231,427,1236,1237,1239,427,427,427,427,1225,1226,427,427,1231,427,
-439,439,439,439,439,439,439,439,439,439,439,439,439,439,439,439,
+930,930,930,930,930,930,930,0,0,930,930,930,930,930,930,930,
+1229,427,427,427,1240,427,427,0,0,1238,1239,1227,1228,427,427,1225,
+427,427,427,1227,1228,427,427,0,0,427,427,1236,1237,427,427,1234,
+427,1231,427,1236,1237,1239,427,0,0,427,1225,1226,427,427,1231,427,
+439,439,439,439,439,439,439,0,0,439,439,439,439,439,439,439,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -226,9 +226,6 @@
   <object id="36" name="entry3" x="40" y="260">
    <point/>
   </object>
-  <object id="37" name="entry4" x="600" y="260">
-   <point/>
-  </object>
  </objectgroup>
  <objectgroup color="#0000ff" id="11" name="objects">
   <object id="31" name="transition" x="640" y="600" width="40" height="120">
@@ -255,15 +252,15 @@
     <property name="marker" value="entry4"/>
    </properties>
   </object>
-  <object id="40" name="transition" x="640" y="200" width="40" height="120">
+  <object id="48" name="chest" x="220" y="270">
    <properties>
-    <property name="map" value="3_flooded_sanctuary/flooded_1"/>
-    <property name="marker" value="entry4"/>
+    <property name="item" value="revivemint"/>
    </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup color="#ff02ff" id="7" name="objects_party"/>
- <layer id="14" name="waterfall" width="16" height="24">
+ <layer id="14" name="waterfall" width="16" height="24" opacity="0.9">
   <data encoding="csv">
 0,0,6,6,0,0,0,0,0,0,0,0,6,6,0,0,
 0,0,6,6,0,0,0,0,0,0,0,0,6,6,0,0,

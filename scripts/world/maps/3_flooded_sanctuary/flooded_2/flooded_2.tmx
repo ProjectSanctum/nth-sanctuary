@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="107">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="113">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -34,7 +34,7 @@
 30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
 30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
 30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
-17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,
@@ -73,10 +73,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,806,807,0,0,0,0,0,0,0,0,811,812,812,812,812,812,813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,805,806,806,806,0,0,0,812,813,0,805,806,807,0,0,0,0,817,818,818,818,818,818,819,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,811,812,812,812,0,0,0,812,813,0,811,812,813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,811,812,819,805,806,806,0,818,819,0,811,812,813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,811,812,819,811,812,812,0,0,0,0,817,818,819,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,811,812,0,811,812,819,0,0,805,806,807,0,0,0,0,0,0,0,0,0,0,0,0,0,805,806,807,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,811,812,0,0,0,0,0,0,811,812,813,0,0,0,0,0,0,0,0,0,811,812,813,0,811,812,813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,811,812,819,805,806,806,0,818,819,0,811,812,813,0,0,0,805,806,807,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,811,812,819,811,812,812,0,0,0,0,817,818,819,0,0,0,811,812,813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,811,812,0,811,812,819,0,0,805,806,807,0,0,0,0,0,817,818,819,0,0,0,0,0,805,806,807,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,811,812,0,0,0,0,0,0,811,812,813,0,0,0,0,0,0,0,0,0,812,812,812,0,811,812,813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,817,818,805,806,807,0,0,0,0,0,0,0,811,812,813,0,0,0,806,807,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,811,812,813,0,0,0,0,805,806,807,811,812,812,812,0,812,818,819,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,817,818,819,0,0,0,0,811,812,805,811,812,812,812,0,818,819,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -108,9 +108,9 @@
 0,0,0,0,0,0,0,0,0,0,808,923,809,920,920,921,0,808,923,923,923,810,925,926,926,926,923,923,923,923,810,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,808,803,809,809,809,809,809,810,0,814,815,815,815,816,0,0,0,0,814,815,815,815,816,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,808,923,809,923,809,923,809,810,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,808,803,809,809,809,809,810,809,809,809,804,802,803,803,803,804,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,808,923,809,923,809,923,810,803,923,923,810,808,923,923,923,810,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,808,809,809,815,815,815,816,0,808,923,810,814,815,815,815,816,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,808,803,809,809,809,809,810,809,809,809,804,802,803,803,803,804,802,803,803,803,803,803,803,804,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,808,923,809,923,809,923,810,803,923,923,810,808,923,923,923,810,808,923,923,923,923,923,923,810,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,808,809,809,815,815,815,816,0,808,923,810,814,815,815,815,816,814,815,815,815,815,815,815,816,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,808,923,810,0,0,0,0,0,808,809,810,0,0,0,0,0,0,0,0,805,806,807,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,808,553,810,0,0,0,0,0,808,809,810,0,0,0,0,0,0,0,802,803,803,803,803,803,803,804,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,808,923,810,0,0,0,0,0,0,0,808,809,809,923,923,923,923,924,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -229,6 +229,7 @@
   <object id="103" x="880" y="440" width="200" height="40"/>
   <object id="105" x="1000" y="200" width="80" height="40"/>
   <object id="106" x="1120" y="200" width="40" height="40"/>
+  <object id="107" x="920" y="760" width="240" height="40"/>
  </objectgroup>
  <objectgroup color="#0000ff" id="2" name="collision">
   <object id="15" x="0" y="880" width="360" height="40"/>
@@ -298,71 +299,6 @@
     <property name="watertilelimit" type="int" value="24"/>
    </properties>
   </object>
-  <object id="66" name="climbwaterbucket" x="920" y="120" width="40" height="40">
-   <properties>
-    <property name="activetime" type="float" value="45"/>
-    <property name="generate" type="bool" value="true"/>
-    <property name="spawnrate" type="float" value="8"/>
-    <property name="timelimit" type="float" value="15"/>
-    <property name="timer" type="float" value="75"/>
-    <property name="waittime" type="float" value="15"/>
-    <property name="waterfallingtimer" type="int" value="12"/>
-    <property name="watermoverate" type="float" value="6"/>
-    <property name="watertilelimit" type="int" value="32"/>
-   </properties>
-  </object>
-  <object id="99" name="climbwaterbucket" x="960" y="400" width="40" height="40">
-   <properties>
-    <property name="activetime" type="float" value="45"/>
-    <property name="generate" type="bool" value="true"/>
-    <property name="spawnrate" type="float" value="24"/>
-    <property name="timelimit" type="float" value="10"/>
-    <property name="timer" type="float" value="75"/>
-    <property name="waittime" type="float" value="15"/>
-    <property name="waterfallingtimer" type="int" value="12"/>
-    <property name="watermoverate" type="float" value="6"/>
-    <property name="watertilelimit" type="int" value="16"/>
-   </properties>
-  </object>
-  <object id="68" name="climbwaterbucket" x="1000" y="120" width="40" height="40">
-   <properties>
-    <property name="activetime" type="float" value="45"/>
-    <property name="generate" type="bool" value="true"/>
-    <property name="spawnrate" type="float" value="8"/>
-    <property name="timelimit" type="float" value="15"/>
-    <property name="timer" type="float" value="50"/>
-    <property name="waittime" type="float" value="15"/>
-    <property name="waterfallingtimer" type="int" value="12"/>
-    <property name="watermoverate" type="float" value="6"/>
-    <property name="watertilelimit" type="int" value="32"/>
-   </properties>
-  </object>
-  <object id="70" name="climbwaterbucket" x="1080" y="120" width="40" height="40">
-   <properties>
-    <property name="activetime" type="float" value="45"/>
-    <property name="generate" type="bool" value="true"/>
-    <property name="spawnrate" type="float" value="8"/>
-    <property name="timelimit" type="float" value="15"/>
-    <property name="timer" type="float" value="25"/>
-    <property name="waittime" type="float" value="15"/>
-    <property name="waterfallingtimer" type="int" value="12"/>
-    <property name="watermoverate" type="float" value="6"/>
-    <property name="watertilelimit" type="int" value="32"/>
-   </properties>
-  </object>
-  <object id="100" name="climbwaterbucket" x="1040" y="400" width="40" height="40">
-   <properties>
-    <property name="activetime" type="float" value="45"/>
-    <property name="generate" type="bool" value="true"/>
-    <property name="spawnrate" type="float" value="24"/>
-    <property name="timelimit" type="float" value="10"/>
-    <property name="timer" type="float" value="37"/>
-    <property name="waittime" type="float" value="15"/>
-    <property name="waterfallingtimer" type="int" value="12"/>
-    <property name="watermoverate" type="float" value="6"/>
-    <property name="watertilelimit" type="int" value="16"/>
-   </properties>
-  </object>
   <object id="72" name="climbwaterbucket" x="920" y="640" width="40" height="40">
    <properties>
     <property name="generate" type="bool" value="false"/>
@@ -406,12 +342,77 @@
     <property name="generate" type="bool" value="false"/>
    </properties>
   </object>
+  <object id="108" name="climbwaterbucket" x="920" y="120" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="12.5"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="75"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="109" name="climbwaterbucket" x="1000" y="120" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="12.5"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="65"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="110" name="climbwaterbucket" x="1080" y="120" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="12.5"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="55"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="111" name="climbwaterbucket" x="960" y="360" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="25"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="20"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="112" name="climbwaterbucket" x="1040" y="360" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="25"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="10"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup color="#7f00ff" id="6" name="markers">
   <object id="3" name="entry" x="40" y="980">
    <point/>
   </object>
-  <object id="6" name="spawn" x="80" y="980">
+  <object id="6" name="spawn" x="1160" y="360">
    <point/>
   </object>
  </objectgroup>

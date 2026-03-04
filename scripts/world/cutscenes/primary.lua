@@ -1013,5 +1013,28 @@ return {
         Game:setFlag("jamm_join", true)
         Game:addPartyMember("jamm", #Game.party+1)
         Game.world.music:play()
+    end,
+    splitpath = function(cutscene)
+        local susie, ralsei, kris = cutscene:getCharacter("susie"),cutscene:getCharacter("ralsei"),cutscene:getCharacter("kris")
+        
+        cutscene:setSpeaker(susie)
+        cutscene:text("* This is a new cutscene!")
+        cutscene:wait(1)
+        
+        cutscene:setSpeaker(ralsei)
+        cutscene:text("* It's great to have new adventures!")
+        cutscene:wait(1)
+        
+        cutscene:setSpeaker(kris)
+        cutscene:text("* ...test dialogue.")
+        
+        -- Add your cutscene logic here
+        -- You can use functions like:
+        -- cutscene:text("dialogue")
+        -- cutscene:wait(time)
+        -- cutscene:walkTo(character, x, y, speed)
+        -- cutscene:fadeIn(time)
+        -- cutscene:fadeOut(time)
+        -- And many more functions
     end
 }
