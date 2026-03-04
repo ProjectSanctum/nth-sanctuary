@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 91,
+  tilecount = 92,
   tiles = {
     {
       id = 0,
@@ -728,6 +728,12 @@ return {
       image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_fade.png",
       width = 200,
       height = 289
+    },
+    {
+      id = 97,
+      image = "../../../assets/sprites/world/objects/tree_stem.png",
+      width = 71,
+      height = 63
     },
     {
       id = 94,

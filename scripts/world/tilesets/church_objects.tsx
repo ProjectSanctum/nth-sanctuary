@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="church_objects" tilewidth="2880" tileheight="800" tilecount="91" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="church_objects" tilewidth="2880" tileheight="800" tilecount="92" columns="0">
  <editorsettings>
   <export target="church_objects.lua" format="lua"/>
  </editorsettings>
@@ -320,6 +320,9 @@
  </tile>
  <tile id="93">
   <image width="200" height="289" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_fade.png"/>
+ </tile>
+ <tile id="97">
+  <image width="71" height="63" source="../../../assets/sprites/world/objects/tree_stem.png"/>
  </tile>
  <tile id="94">
   <image width="200" height="500" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arch_proph.png"/>

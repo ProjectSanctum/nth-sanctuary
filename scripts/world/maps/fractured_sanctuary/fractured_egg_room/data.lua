@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 13,
-  nextobjectid = 46,
+  nextobjectid = 47,
   properties = {
     ["border"] = "none",
     ["music"] = "alt_church_lobby"
@@ -29,18 +29,18 @@ return {
     },
     {
       name = "bg_dw_church_tileset_new",
-      firstgid = 295,
+      firstgid = 297,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
       exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "bg_dw_library_tileset_new",
-      firstgid = 877,
+      firstgid = 879,
       filename = "../../../tilesets/bg_dw_library_tileset_new.tsx"
     },
     {
       name = "ExtraCarpetTiles",
-      firstgid = 1707,
+      firstgid = 1709,
       filename = "../../../tilesets/ExtraCarpetTiles.tsx",
       exportfilename = "../../../tilesets/ExtraCarpetTiles.lua"
     }
@@ -267,11 +267,11 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 37, 38, 39, 41, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 37, 1710, 48, 48, 1709, 41, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 37, 1712, 48, 48, 1711, 41, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 46, 48, 47, 48, 48, 50, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 55, 1708, 47, 48, 1707, 59, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 55, 1710, 47, 48, 1709, 59, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 64, 55, 56, 57, 59, 64, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 73, 65, 66, 637, 68, 73, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 73, 65, 66, 639, 68, 73, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 74, 75, 76, 77, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -353,20 +353,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 2,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 260,
-          y = 220,
-          width = 142,
-          height = 126,
-          rotation = 0,
-          gid = 294,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 14,
           name = "transition",
           type = "",
@@ -381,6 +367,20 @@ return {
             ["map"] = "fractured_sanctuary/fractured_2",
             ["marker"] = "entry2"
           }
+        },
+        {
+          id = 46,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 260,
+          y = 220,
+          width = 142,
+          height = 126,
+          rotation = 0,
+          gid = 296,
+          visible = true,
+          properties = {}
         }
       }
     },
