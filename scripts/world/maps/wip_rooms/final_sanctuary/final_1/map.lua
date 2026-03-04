@@ -13,8 +13,10 @@ function Map:onEnter()
 		if event.layer == self.layers["objects_towers"] then
 			 event.parallax_x = 0.5
 			 event.parallax_y = 0.9 
+			 event:addFX(ProphecyShaderFX(0.19), "prop")
 		end
 	end
+	self:getTileLayer("tiles_texture"):addFX(ProphecyShaderFX(0.5), "prop")
 end
 
 return Map

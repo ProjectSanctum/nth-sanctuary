@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 89,
+  tilecount = 91,
   tiles = {
     {
       id = 0,
@@ -730,10 +730,22 @@ return {
       height = 289
     },
     {
+      id = 94,
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_arch_proph.png",
+      width = 200,
+      height = 500
+    },
+    {
       id = 95,
-      image = "../../../assets/sprites/world/objects/tree_stem.png",
-      width = 71,
-      height = 63
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_proph.png",
+      width = 200,
+      height = 800
+    },
+    {
+      id = 96,
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire_proph.png",
+      width = 320,
+      height = 800
     }
   }
 }
