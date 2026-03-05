@@ -61,19 +61,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 12,
-          name = "lavagradient",
-          type = "",
-          shape = "rectangle",
-          x = 120,
-          y = -80,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 114,
           name = "lavawaverbg",
           type = "",
@@ -843,32 +830,6 @@ return {
           y = 1040,
           width = 360,
           height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 40,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 371,
-          y = 971,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 41,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 362,
-          y = 945.5,
-          width = 0,
-          height = 0,
           rotation = 0,
           visible = true,
           properties = {}

@@ -13,7 +13,6 @@
  <tileset firstgid="856" source="../../../tilesets/flooded_sanctuary_extra.tsx"/>
  <tileset firstgid="919" source="../../../tilesets/ExtraClimbingTiles.tsx"/>
  <objectgroup id="12" name="objects_bg">
-  <object id="12" name="lavagradient" x="120" y="-80" width="40" height="40"/>
   <object id="114" name="lavawaverbg" x="0" y="0">
    <point/>
   </object>
@@ -237,8 +236,6 @@
   <object id="15" x="0" y="880" width="360" height="40"/>
   <object id="16" x="360" y="920" width="40" height="120"/>
   <object id="17" x="0" y="1040" width="360" height="40"/>
-  <object id="40" x="371" y="971"/>
-  <object id="41" x="362" y="945.5"/>
  </objectgroup>
  <objectgroup color="#ff00ff" id="4" name="objects">
   <object id="2" name="transition" x="-40" y="920" width="40" height="120">
