@@ -1,16 +1,16 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
-  width = 32,
-  height = 24,
+  width = 42,
+  height = 26,
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 46,
+  nextobjectid = 84,
   properties = {},
   tilesets = {
     {
@@ -18,6 +18,17 @@ return {
       firstgid = 1,
       filename = "../../../tilesets/church_objects.tsx",
       exportfilename = "../../../tilesets/church_objects.lua"
+    },
+    {
+      name = "bg_dw_church_2_tileset",
+      firstgid = 99,
+      filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
+    },
+    {
+      name = "bg_dw_church_tileset_new",
+      firstgid = 297,
+      filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
+      exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     }
   },
   layers = {
@@ -27,7 +38,7 @@ return {
       id = 2,
       name = "objects_bg",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -41,7 +52,7 @@ return {
           type = "",
           shape = "point",
           x = 40,
-          y = 0,
+          y = 200,
           width = 0,
           height = 0,
           rotation = 0,
@@ -54,8 +65,8 @@ return {
       type = "tilelayer",
       x = 0,
       y = 0,
-      width = 32,
-      height = 24,
+      width = 42,
+      height = 26,
       id = 1,
       name = "Tile Layer 1",
       class = "",
@@ -68,30 +79,32 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        370, 370, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 376, 370, 376, 376, 376, 370, 370, 376, 370, 370, 370, 370, 370, 376, 370, 376, 376, 376,
+        376, 376, 0, 0, 376, 370, 376, 370, 370, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 370, 376, 370, 376, 376, 370, 376, 376, 370, 370, 370, 370, 370, 376, 370, 370, 376, 370,
+        370, 370, 0, 0, 376, 376, 376, 370, 376, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 370, 376, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382,
+        376, 370, 376, 376, 370, 376, 382, 382, 376, 370, 376, 370, 370, 376, 0, 0, 376, 376, 376, 370, 376, 370, 376, 370, 376, 370, 370, 376, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        376, 370, 376, 376, 376, 376, 0, 0, 376, 376, 370, 376, 370, 376, 0, 0, 370, 370, 370, 370, 376, 376, 370, 376, 376, 370, 376, 370, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        382, 382, 382, 382, 370, 376, 370, 376, 376, 370, 382, 382, 376, 370, 0, 0, 370, 376, 382, 382, 382, 382, 382, 382, 382, 382, 382, 370, 370, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 370, 376, 370, 370, 370, 376, 0, 0, 376, 376, 370, 370, 370, 370, 370, 376, 376, 370, 370, 376, 370, 370, 370, 370, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 382, 382, 382, 382, 382, 382, 0, 0, 376, 370, 376, 370, 370, 370, 376, 376, 376, 376, 370, 376, 376, 370, 376, 376, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 382, 382, 382, 382, 382, 370, 370, 382, 382, 382, 376, 376, 0, 382, 382, 370, 370, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 370, 370, 0, 0, 0, 376, 370, 0, 0, 0, 370, 376, 370, 376, 376, 376, 370, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 370, 370, 370, 370, 370, 376, 376, 0, 0, 0, 376, 370, 376, 370, 376, 370, 370, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 370, 370, 370, 370, 370, 376, 376, 0, 0, 0, 382, 382, 382, 382, 382, 382, 382, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 370, 376, 370, 376, 370, 376, 370, 370, 382, 382, 382, 376, 370, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 376, 376, 376, 370, 376, 370, 376, 370, 0, 0, 0, 376, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 370, 376, 376, 376, 376, 376, 370, 370, 376, 370, 382, 382, 382, 382, 376, 370, 0, 0, 0, 376, 370, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 370, 376, 376, 370, 376, 370, 370, 376, 376, 370, 0, 0, 0, 0, 370, 376, 0, 0, 0, 376, 370, 0, 0, 0, 0, 0, 376, 376, 370, 376, 376, 376, 370, 376, 370, 0, 0, 0, 0,
+        0, 0, 0, 382, 382, 382, 376, 376, 382, 382, 382, 376, 370, 0, 0, 0, 0, 370, 370, 0, 0, 0, 376, 370, 0, 0, 0, 0, 0, 376, 376, 376, 376, 370, 370, 370, 376, 370, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 370, 376, 0, 0, 0, 370, 376, 0, 0, 0, 0, 376, 376, 0, 0, 0, 376, 370, 0, 0, 0, 0, 0, 376, 370, 382, 382, 382, 382, 382, 370, 376, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 376, 370, 0, 0, 0, 370, 370, 0, 0, 0, 0, 370, 370, 370, 376, 370, 376, 376, 370, 370, 370, 370, 370, 376, 370, 376, 376, 370, 370, 370, 370, 370, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 370, 370, 376, 376, 376, 376, 376, 0, 0, 0, 0, 376, 376, 376, 370, 376, 370, 376, 370, 376, 376, 376, 370, 370, 376, 376, 370, 370, 376, 370, 376, 370, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 370, 376, 370, 376, 370, 370, 370, 0, 0, 0, 0, 376, 376, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 376, 376, 382, 0, 0, 0, 0,
+        370, 370, 370, 370, 370, 376, 376, 370, 382, 382, 382, 376, 370, 0, 0, 0, 0, 376, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 376, 370, 376, 376, 376, 370, 370,
+        370, 376, 370, 370, 376, 370, 376, 370, 0, 0, 0, 376, 370, 376, 376, 376, 370, 370, 370, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 376, 370, 376, 370, 376, 376, 370,
+        382, 382, 382, 382, 382, 382, 382, 382, 0, 0, 0, 370, 376, 370, 376, 376, 376, 370, 370, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 382, 382, 382, 382, 382, 382, 382,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 382, 382, 382, 382, 382, 382, 382, 382, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
       }
     },
     {
@@ -113,8 +126,8 @@ return {
           name = "churchtilebutton",
           type = "",
           shape = "rectangle",
-          x = 140,
-          y = 320,
+          x = 160,
+          y = 560,
           width = 40,
           height = 40,
           rotation = 0,
@@ -127,12 +140,102 @@ return {
           }
         },
         {
-          id = 36,
+          id = 47,
           name = "churchtilebutton",
           type = "",
           shape = "rectangle",
-          x = 500,
-          y = 320,
+          x = 360,
+          y = 760,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern",
+            ["npcpress"] = false,
+            ["offsound"] = 0,
+            ["onsound"] = 0
+          }
+        },
+        {
+          id = 51,
+          name = "churchtilebutton",
+          type = "",
+          shape = "rectangle",
+          x = 580,
+          y = 500,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern",
+            ["npcpress"] = false,
+            ["offsound"] = 0,
+            ["onsound"] = 0
+          }
+        },
+        {
+          id = 52,
+          name = "churchtilebutton",
+          type = "",
+          shape = "rectangle",
+          x = 800,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern",
+            ["npcpress"] = false,
+            ["offsound"] = 0,
+            ["onsound"] = 0
+          }
+        },
+        {
+          id = 53,
+          name = "churchtilebutton",
+          type = "",
+          shape = "rectangle",
+          x = 1020,
+          y = 720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern",
+            ["npcpress"] = false,
+            ["offsound"] = 0,
+            ["onsound"] = 0
+          }
+        },
+        {
+          id = 82,
+          name = "churchtilebutton",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 840,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern",
+            ["npcpress"] = false,
+            ["offsound"] = 0,
+            ["onsound"] = 0
+          }
+        },
+        {
+          id = 83,
+          name = "churchtilebutton",
+          type = "",
+          shape = "rectangle",
+          x = 580,
+          y = 900,
           width = 40,
           height = 40,
           rotation = 0,
@@ -152,7 +255,7 @@ return {
       id = 5,
       name = "objects_party",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -165,8 +268,8 @@ return {
           name = "lanternshrinking",
           type = "",
           shape = "point",
-          x = 160,
-          y = 240,
+          x = 420,
+          y = 860,
           width = 0,
           height = 0,
           rotation = 0,
@@ -180,8 +283,8 @@ return {
           name = "pathenemygen",
           type = "",
           shape = "point",
-          x = 480,
-          y = 640,
+          x = 540,
+          y = 860,
           width = 0,
           height = 0,
           rotation = 0,
@@ -198,8 +301,8 @@ return {
           name = "pathenemyender",
           type = "",
           shape = "point",
-          x = 480,
-          y = 400,
+          x = 540,
+          y = 380,
           width = 0,
           height = 0,
           rotation = 0,
@@ -211,8 +314,8 @@ return {
           name = "pathenemyturner",
           type = "",
           shape = "point",
-          x = 480,
-          y = 520,
+          x = 540,
+          y = 740,
           width = 0,
           height = 0,
           rotation = 0,
@@ -226,8 +329,8 @@ return {
           name = "pathenemyturner",
           type = "",
           shape = "point",
-          x = 200,
-          y = 520,
+          x = 300,
+          y = 740,
           width = 0,
           height = 0,
           rotation = 0,
@@ -241,8 +344,8 @@ return {
           name = "pathenemyturner",
           type = "",
           shape = "point",
-          x = 200,
-          y = 400,
+          x = 300,
+          y = 500,
           width = 0,
           height = 0,
           rotation = 0,
@@ -256,8 +359,8 @@ return {
           name = "lanternshrinking",
           type = "",
           shape = "point",
-          x = 280,
-          y = 440,
+          x = 180,
+          y = 620,
           width = 0,
           height = 0,
           rotation = 0,
@@ -271,8 +374,8 @@ return {
           name = "lanternshrinking",
           type = "",
           shape = "point",
-          x = 520,
-          y = 240,
+          x = 420,
+          y = 380,
           width = 0,
           height = 0,
           rotation = 0,
@@ -286,8 +389,264 @@ return {
           name = "lanternshrinking",
           type = "",
           shape = "point",
-          x = 400,
-          y = 440,
+          x = 420,
+          y = 620,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 50,
+          name = "pathenemyturner",
+          type = "",
+          shape = "point",
+          x = 540,
+          y = 500,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dir"] = 2
+          }
+        },
+        {
+          id = 54,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 900,
+          y = 380,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 55,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 900,
+          y = 620,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 56,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 900,
+          y = 860,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 57,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 120,
+          y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 60,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 1200,
+          y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 61,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 1140,
+          y = 620,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 62,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 660,
+          y = 520,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 63,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 660,
+          y = 740,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 64,
+          name = "pathenemygen",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 860,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dir"] = 2,
+            ["movetype"] = 3,
+            ["rate"] = 40,
+            ["timer"] = 19
+          }
+        },
+        {
+          id = 65,
+          name = "pathenemyturner",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 740,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dir"] = 1
+          }
+        },
+        {
+          id = 66,
+          name = "pathenemyturner",
+          type = "",
+          shape = "point",
+          x = 1020,
+          y = 740,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dir"] = 2
+          }
+        },
+        {
+          id = 67,
+          name = "pathenemyturner",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 500,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dir"] = 2
+          }
+        },
+        {
+          id = 68,
+          name = "pathenemyturner",
+          type = "",
+          shape = "point",
+          x = 1020,
+          y = 500,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["dir"] = 3
+          }
+        },
+        {
+          id = 69,
+          name = "pathenemyender",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 380,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 78,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 120,
+          y = 980,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "lantern"
+          }
+        },
+        {
+          id = 81,
+          name = "lanternshrinking",
+          type = "",
+          shape = "point",
+          x = 1200,
+          y = 980,
           width = 0,
           height = 0,
           rotation = 0,
@@ -304,7 +663,7 @@ return {
       id = 3,
       name = "markers",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -317,8 +676,8 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 320,
-          y = 240,
+          x = 60,
+          y = 860,
           width = 0,
           height = 0,
           rotation = 0,
@@ -333,7 +692,7 @@ return {
       id = 4,
       name = "objects_overlay",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -347,7 +706,7 @@ return {
           type = "",
           shape = "point",
           x = 0,
-          y = 0,
+          y = 200,
           width = 0,
           height = 0,
           rotation = 0,
@@ -372,21 +731,7 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {
-        {
-          id = 35,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 120,
-          y = 360,
-          width = 440,
-          height = 280,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        }
-      }
+      objects = {}
     }
   }
 }
