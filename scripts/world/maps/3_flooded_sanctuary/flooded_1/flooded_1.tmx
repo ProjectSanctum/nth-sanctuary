@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="149">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="150">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -296,13 +296,13 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,400,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,400,400,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,412,412,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,400,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,406,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,412,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,406,406,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -337,8 +337,8 @@
   <object id="126" name="climbarea" x="1080" y="1040" width="80" height="40"/>
   <object id="127" name="climbarea" x="1000" y="1040" width="40" height="40"/>
   <object id="128" name="climbarea" x="1000" y="960" width="80" height="40"/>
-  <object id="129" name="climbarea" x="1000" y="680" width="80" height="240"/>
-  <object id="134" name="climbarea" x="360" y="680" width="80" height="440"/>
+  <object id="129" name="climbarea" x="1000" y="680" width="40" height="240"/>
+  <object id="134" name="climbarea" x="380" y="680" width="40" height="440"/>
  </objectgroup>
  <objectgroup id="6" name="collision">
   <object id="22" x="160" y="1600" width="1200" height="40"/>
@@ -440,19 +440,19 @@
     <property name="up" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="88" name="climbentry" x="1000" y="640" width="80" height="40">
+  <object id="88" name="climbentry" x="1000" y="640" width="40" height="40">
    <properties>
     <property name="area" type="object" value="87"/>
     <property name="up" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="135" name="climbentry" x="360" y="1120" width="80" height="40">
+  <object id="135" name="climbentry" x="380" y="1120" width="40" height="40">
    <properties>
     <property name="area" type="object" value="116"/>
     <property name="up" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="136" name="climbentry" x="360" y="640" width="80" height="40">
+  <object id="136" name="climbentry" x="380" y="640" width="40" height="40">
    <properties>
     <property name="area" type="object" value="87"/>
     <property name="up" type="bool" value="true"/>
