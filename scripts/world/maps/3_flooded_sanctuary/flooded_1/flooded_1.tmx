@@ -336,7 +336,7 @@
   <object id="125" name="climbarea" x="440" y="1280" width="40" height="40"/>
   <object id="126" name="climbarea" x="1080" y="1040" width="80" height="40"/>
   <object id="127" name="climbarea" x="1000" y="1040" width="40" height="40"/>
-  <object id="128" name="climbarea" x="1000" y="960" width="80" height="40"/>
+  <object id="128" name="climbarea" x="1000" y="960" width="40" height="40"/>
   <object id="129" name="climbarea" x="1000" y="680" width="40" height="240"/>
   <object id="134" name="climbarea" x="380" y="680" width="40" height="440"/>
  </objectgroup>
