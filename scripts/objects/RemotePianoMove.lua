@@ -53,93 +53,110 @@ local function scr_piano_determinepitch(sound)
 		return 1.19
 	elseif sound == 4 then
 		return 1.0414285714285714
-	elseif sound == 5 then 
+	elseif sound == 5 then
 		return 0.8928571428571428
 	elseif sound == 6 then
 		return 0.6964285714285714
 	elseif sound == 7 then
 		return 0.5
 	elseif sound == 8 then
-		return 0.3035714286
+		return 0.44642857142857145
+	else
+		return 1
 	end
 end
 
-function RemotePianoMove:findSafeExit()
-	-- Check all four sides for a safe exit
+function RemotePianoMove:findSafeExitSide()
 	local sides = {
-		{name = "up", x = self.x + self.width/2, y = self.y - 40},
-		{name = "down", x = self.x + self.width/2, y = self.y + self.height + 40},
-		{name = "left", x = self.x - 40, y = self.y + self.height/2},
-		{name = "right", x = self.x + self.width + 40, y = self.y + self.height/2}
+		{name = "up", x = self.x + self.width/2 - 20, y = self.y - 60},
+		{name = "down", x = self.x + self.width/2 - 20, y = self.y + self.height + 20},
+		{name = "left", x = self.x - 40, y = self.y + self.height/2 - 20},
+		{name = "right", x = self.x + self.width + 20, y = self.y + self.height/2 - 20}
 	}
 	
 	for _, side in ipairs(sides) do
-		-- Check if there's space for the party to exit
-		local exit_x = side.x - 20
-		local exit_y = side.y - 20
-		
-		if not self:checkCollision(exit_x, exit_y) then
-			return side.name, exit_x, exit_y
+		if not self:checkCollision(side.x, side.y) then
+			return side.name, side.x, side.y
 		end
 	end
 	
-	-- Fallback: return up position even if not ideal
 	return "up", self.x + self.width/2 - 20, self.y - 60
 end
 
 function RemotePianoMove:checkCollision(x, y)
-	-- Use the built-in collider for collision detection
-	if self.collider then
-		-- Temporarily move collider to test position
-		local original_x, original_y = self.collider.x, self.collider.y
-		self.collider.x = x
-		self.collider.y = y
-		
-		-- Check map boundaries
-		if x < 0 or y < 0 or x + self.width > Game.world.map.width * Game.world.map.tile_width 
-		   or y + self.height > Game.world.map.height * Game.world.map.tile_height then
-			self.collider.x, self.collider.y = original_x, original_y
-			return true
-		end
-		
-		-- Check collision with solid tiles
-		local tile_size = Game.world.map.tile_width
-		local tile_left = math.floor(x / tile_size)
-		local tile_right = math.floor((x + self.width - 1) / tile_size)
-		local tile_top = math.floor(y / tile_size)
-		local tile_bottom = math.floor((y + self.height - 1) / tile_size)
-		
-		for ty = tile_top, tile_bottom do
-			for tx = tile_left, tile_right do
-				if tx >= 0 and ty >= 0 and tx < Game.world.map.width and ty < Game.world.map.height then
-					-- Check collision layer
-					local collision_tile = Game.world.map:getTile("collision", tx, ty)
-					if collision_tile then
-						self.collider.x, self.collider.y = original_x, original_y
-						return true
+	-- Use actual collision hitbox dimensions and offsets
+	local collision_x = x + self.collision_x
+	local collision_y = y + self.collision_y
+	local collision_width = self.collision_width
+	local collision_height = self.collision_height
+	
+	-- Check map boundaries
+	if collision_x < 0 or collision_y < 0 or collision_x + collision_width > Game.world.map.width * Game.world.map.tile_width 
+	   or collision_y + collision_height > Game.world.map.height * Game.world.map.tile_height then
+		return true
+	end
+	
+	-- Check collision with solid tiles
+	local tile_left = math.floor(collision_x / Game.world.map.tile_width)
+	local tile_right = math.floor((collision_x + collision_width - 1) / Game.world.map.tile_width)
+	local tile_top = math.floor(collision_y / Game.world.map.tile_height)
+	local tile_bottom = math.floor((collision_y + collision_height - 1) / Game.world.map.tile_height)
+	
+	for ty = tile_top, tile_bottom do
+		for tx = tile_left, tile_right do
+			if tx >= 0 and ty >= 0 and tx < Game.world.map.width and ty < Game.world.map.height then
+				-- Check piano collision layer first
+				local piano_collision_tile = Game.world.map:getTile("piano_collision", tx, ty)
+				if piano_collision_tile then
+					if self.debug_mode then
+						print("Piano collision detected at tile:", tx, ty)
 					end
-					
-					-- Check regular tile solidity
-					local tile = Game.world.map:getTile(tx, ty)
-					if tile and tile.type and tile.type.solid then
-						self.collider.x, self.collider.y = original_x, original_y
-						return true
+					return true
+				end
+				
+				-- Check regular collision layer as fallback
+				local collision_tile = Game.world.map:getTile("collision", tx, ty)
+				if collision_tile then
+					if self.debug_mode then
+						print("Regular collision detected at tile:", tx, ty)
 					end
+					return true
+				end
+				
+				local tile = Game.world.map:getTile(tx, ty)
+				if tile and tile.type and tile.type.solid then
+					if self.debug_mode then
+						print("Tile solidity detected at tile:", tx, ty)
+					end
+					return true
 				end
 			end
 		end
-		
-		-- Check collision with other solid events using collider
-		local collision = Game.world:checkCollision(self.collider)
-		
-		-- Restore original position
-		self.collider.x, self.collider.y = original_x, original_y
-		
-		return collision ~= nil and collision ~= false
-	else
-		-- Fallback if no collider
-		return false
 	end
+	
+	-- Check collision with solid events
+	local events = Game.world.map:getEvents()
+	if self.debug_mode then
+		print("Checking collision with", #events, "events")
+	end
+	for _, event in ipairs(events) do
+		if event ~= self then
+			if self.debug_mode then
+				print("Event:", event.name or "unnamed", "solid:", event.solid, "type:", event.type)
+			end
+			if event.solid then
+				if collision_x < event.x + event.width and collision_x + collision_width > event.x and
+				   collision_y < event.y + event.height and collision_y + collision_height > event.y then
+					if self.debug_mode then
+						print("Event collision detected with:", event.name or "unnamed event")
+					end
+					return true
+				end
+			end
+		end
+	end
+	
+	return false
 end
 
 function RemotePianoMove:init(x, y, properties)
@@ -211,22 +228,18 @@ function RemotePianoMove:init(x, y, properties)
     self.sprite_offset_x = 0
     self.sprite_offset_y = -20
     
-    -- Set collision hitbox smaller than sprite to only cover piano body (not carpet)
-    -- Piano sprite is 80x80, but we want collision only on the piano part
-    local collision_width = 90  -- Narrower than full sprite
-    local collision_height = 30  -- Shorter than full sprite
-    local collision_x = (self.width - collision_width) / 2  -- Center horizontally
-    local collision_y = self.height - collision_height - 40  -- Position on piano body
+    local collision_width = 80
+    local collision_height = 80
+    local collision_x = -collision_width / 2  -- Center on piano center
+    local collision_y = -collision_height / 2  -- Center on piano center
     
     self:setHitbox(collision_x, collision_y, collision_width, collision_height)
     
-    -- Store collision dimensions for our custom collision detection
     self.collision_width = collision_width
     self.collision_height = collision_height
     self.collision_x = collision_x
     self.collision_y = collision_y
     
-    -- Update collider directly if it exists
     if self.collider then
         self.collider.width = collision_width
         self.collider.height = collision_height
@@ -234,10 +247,9 @@ function RemotePianoMove:init(x, y, properties)
         self.collider.y = collision_y
     end
     
-    -- Set interaction hitbox - same as collision hitbox
     self.interact_width = collision_width
     self.interact_height = collision_height
-    self.interact_x = -collision_width / 2  -- Center on piano center
+    self.interact_x = -collision_width / 2
     self.interact_y = collision_y
     
     print("Sprite and hitbox set")
@@ -251,7 +263,6 @@ function RemotePianoMove:init(x, y, properties)
     self.resetlight = false
     self.catafollow = true
     
-    -- UI Properties
     self.soundtoplay = -1
     self.difficulty = 0
     self.canceltimer = 0
@@ -260,23 +271,21 @@ function RemotePianoMove:init(x, y, properties)
     self.siner = 0
     self.dontdrawmenu = false
     self.drawalpha = 0
-    self.arrowspr = "ui/arrow_10x10"
+    self.arrowspr = "ui/arrow_9x9"
     self.circlespr = "ui/circle_7x7"
     self.drawunits = {}
     
-    -- Sliding properties
     self.is_sliding = false
     self.slide_direction = nil
     self.slide_speed = 8
     self.slide_remaining = 0
     
-    -- Initialize drawunits
     local space = 28
-    table.insert(self.drawunits, {sound = 3, x = 0, y = space, offx = 5, offy = 5, rot = math.rad(0), tex = self.arrowspr})
-    table.insert(self.drawunits, {sound = 5, x = space, y = 0, offx = 5, offy = 5, rot = math.rad(-90), tex = self.arrowspr})
-    table.insert(self.drawunits, {sound = 7, x = 0, y = -space, offx = 5, offy = 5, rot = math.rad(180), tex = self.arrowspr})
-    table.insert(self.drawunits, {sound = 1, x = -space, y = 0, offx = 5, offy = 5, rot = math.rad(-270), tex = self.arrowspr})
-    table.insert(self.drawunits, {sound = 0, x = 0, y = 0, offx = 3, offy = 3, rot = math.rad(0), tex = self.circlespr})
+    table.insert(self.drawunits, {sound = 3, x = 1, y = space, offx = 5, offy = 5, rot = math.rad(0), tex = self.arrowspr})
+    table.insert(self.drawunits, {sound = 5, x = space, y = -8, offx = 5, offy = 5, rot = math.rad(-90), tex = self.arrowspr})
+    table.insert(self.drawunits, {sound = 7, x = -1, y = -space, offx = 5, offy = 5, rot = math.rad(180), tex = self.arrowspr})
+    table.insert(self.drawunits, {sound = 1, x = -space, y = 8, offx = 5, offy = 5, rot = math.rad(-270), tex = self.arrowspr})
+    table.insert(self.drawunits, {sound = 0, x = -1, y = 0, offx = 3, offy = 3, rot = math.rad(0), tex = self.circlespr})
     
     print("=== REMOTE PIANO MOVE INIT COMPLETE ===")
 end
@@ -290,7 +299,6 @@ function RemotePianoMove:onAdd(parent)
 end
 
 function RemotePianoMove:onInteract(player, dir)
-    -- Check if player is within interaction hitbox
     local player_x = player.x
     local player_y = player.y
     local interact_left = self.x + self.interact_x
@@ -298,13 +306,11 @@ function RemotePianoMove:onInteract(player, dir)
     local interact_top = self.y + self.interact_y
     local interact_bottom = interact_top + self.interact_height
     
-    -- Only allow interaction if player is in the interaction area
     if not (player_x >= interact_left and player_x <= interact_right and
             player_y >= interact_top and player_y <= interact_bottom) then
-        return false  -- Don't interact if not in the right spot
+        return false
     end
     
-    -- Original interaction logic continues here...
 	if self.con == 0 and self.buffer <= 0 then
 		if not self.solved then
 			self.progress = {}
@@ -330,9 +336,8 @@ function RemotePianoMove:onInteract(player, dir)
 			if #Game.party >= 4 then
 				party4 = Game.world:getCharacter(Game.party[4]:getActor().id)
 			end
-			-- Calculate interaction position relative to piano's current position
 			local target_x = self.x
-			local target_y = leader.y  -- Keep Kris's current Y position
+            local target_y = leader.y  -- Adjusted for collision change
 			
 			local pointdist = MathUtils.dist(target_x, target_y, leader.x, leader.y)
 			if pointdist > 4 then
@@ -403,6 +408,17 @@ function RemotePianoMove:update()
         print("Piano at:", self.x, self.y, "Visible:", self.visible)
     end
     
+    -- Stop piano if room transition is happening
+    if Game.world and Game.world.transitioning then
+        if self.is_sliding then
+            self.is_sliding = false
+            self.slide_direction = nil
+        end
+        if self.con == 1 then
+            self.con = 4
+        end
+    end
+    
     if self.buffer > 0 then
         self.buffer = self.buffer - 1 * DTMULT
     end
@@ -418,7 +434,7 @@ function RemotePianoMove:update()
     
     if self.con == 1 then
         Game.lock_movement = true
-        if Input.down("cancel") then
+        if Input.down("cancel") and not self.is_sliding then
             self.canceltimer = self.canceltimer + 1 * DTMULT
         else
             self.canceltimer = 0
@@ -436,6 +452,7 @@ function RemotePianoMove:update()
         -- Directional input handling for ice puzzle sliding
         self.soundtoplay = -1
         
+        -- Allow hovering even while sliding, but block selection
         if self.difficulty == 0 then
             if not Input.down("left") and not Input.down("down") and not Input.down("right") and not Input.down("up") then
                 self.soundtoplay = 0
@@ -474,6 +491,12 @@ function RemotePianoMove:update()
                 self.is_sliding = true
                 self.slide_remaining = 1000 -- Large value, will stop on collision
                 Assets.playSound(self.move_sound)
+                
+                -- Create arrow copy effect immediately when sliding starts
+                self:createArrowCopy(self.soundtoplay)
+            else
+                -- Center note (sound = 0) - just play note, no sliding
+                self:createArrowCopy(self.soundtoplay)
             end
             
             self.buffer = 0
@@ -593,10 +616,45 @@ function RemotePianoMove:update()
             Game.world:setCameraAttached(true)
         end
         
+        -- Re-attach followers
+        Game.world:attachFollowers()
+        
         -- Unlock movement after a short delay
         Game.world.timer:after(0.1, function()
             Game.lock_movement = false
         end)
+    end
+end
+
+function RemotePianoMove:createArrowCopy(sound_value)
+    -- Find the matching unit for this sound
+    for i, unit in ipairs(self.drawunits) do
+        if unit.sound == sound_value then
+            local drawx = 0 + self.width/2
+            local drawy = 0 - 70
+            local xloc = drawx + unit.x
+            local yloc = drawy + unit.y + (math.sin((self.siner + (i * 42*4)) / 9) * 2)
+            
+            local litblue = ColorUtils.hexToRGB("#698DE6FF")
+            local note = Sprite(unit.tex, xloc, yloc + 20)
+            note.layer = self.layer + 2
+            note:setColor(litblue)
+            note:setScale(2,2)
+            note:setOriginExact(unit.offx, unit.offy)
+            note.rotation = unit.rot
+            note.physics.direction = math.rad(MathUtils.random(360))
+            note.physics.speed = 5
+            note.physics.friction = 0.35
+            note.physics.direction = unit.rot + math.rad(90)
+            if sound_value == 0 then
+                note.physics.speed = 0
+            end
+            Game.world.timer:tween(20/30, note, {alpha = 0}, 'out-quad', function()
+                note:remove()
+            end)
+            self:addChild(note)
+            break
+        end
     end
 end
 
@@ -627,7 +685,7 @@ function RemotePianoMove:draw()
     love.graphics.setColor(1, 1, 1, 1)
     
     -- UI Drawing
-    self.siner = self.siner + 1 * DTMULT
+    self.siner = self.siner + 0.5 * DTMULT
     if self.con == 1 then
         self.engaged = true
     else
@@ -637,42 +695,23 @@ function RemotePianoMove:draw()
     local alphtarg = 0
     if self.con == 1 and not self.dontdrawmenu then
         alphtarg = 1
-    end
-    self.drawalpha = MathUtils.lerp(self.drawalpha, alphtarg, 0.1*DTMULT)
-    self.drawspace = 18
-    local drawx = center_x
-    local drawy = center_y - 100  -- Shifted up 20px (was -80)
-    love.graphics.setColor(0,0,0,self.drawalpha*0.5)
-    love.graphics.circle("fill", drawx, drawy, 44 + math.sin(self.siner / 64) * 2)
-    local litblue = ColorUtils.hexToRGB("#698DE6FF")
-    local sinstrength = 2
-    local basealpha = 0.35
-    for i, unit in ipairs(self.drawunits) do
-        local bonusalpha = 0
-        local xloc = drawx + unit.x
-        local yloc = drawy + unit.y + (math.sin((self.siner + (i * 42)) / 9) * sinstrength)
-        
-        if self.soundtoplay == unit.sound then
-            bonusalpha = 0.6
-            if Input.pressed("confirm") and self.con == 1 and not Input.down("cancel") then
-                local note = Sprite(unit.tex, xloc, yloc + 20)  -- Add 20px offset to match UI shift
-                note.layer = self.layer + 1
-                note:setColor(litblue)
-                note:setScale(2,2)
-                note:setOriginExact(unit.offx, unit.offy)
-                note.rotation = unit.rot
-                note.physics.direction = math.rad(MathUtils.random(360))
-                note.physics.speed = 5
-                note.physics.friction = 0.35
-                note.physics.direction = unit.rot + math.rad(90)
-                if self.soundtoplay == 0 then
-                    note.physics.speed = 0
-                end
-                Game.world.timer:tween(20/30, note, {alpha = 0}, 'out-quad', function()
-                    note:remove()
-                end)
-                self:addChild(note)
-            end
+	end
+	self.drawalpha = MathUtils.lerp(self.drawalpha, alphtarg, 0.1*DTMULT)
+	self.drawspace = 18
+	local drawx = 0 + self.width/2
+	local drawy = 0 - 70
+	love.graphics.setColor(0,0,0,self.drawalpha*0.5)
+	love.graphics.circle("fill", drawx, drawy, 44 + math.sin(self.siner / 64) * 2)
+	local litblue = ColorUtils.hexToRGB("#698DE6FF")
+	local sinstrength = 2
+	local basealpha = 0.35
+	for i, unit in ipairs(self.drawunits) do
+		local bonusalpha = 0
+		local xloc = drawx + unit.x
+		local yloc = drawy + unit.y + (math.sin((self.siner + (i * 42*4)) / 9) * sinstrength)
+		
+		if self.soundtoplay == unit.sound then
+			bonusalpha = 0.6
         end
         love.graphics.setColor(litblue[1], litblue[2], litblue[3], (basealpha + bonusalpha) * self.drawalpha)
         Draw.draw(Assets.getTexture(unit.tex), xloc, yloc, unit.rot, 2, 2, unit.offx, unit.offy)
@@ -684,6 +723,13 @@ function RemotePianoMove:draw()
         love.graphics.setColor(1, 1, 0, 1)
         love.graphics.print("REMOTE PIANO", center_x - 40, center_y - 60)
         love.graphics.print("X: "..math.floor(self.x).." Y: "..math.floor(self.y), center_x - 40, center_y - 45)
+        
+        -- Draw movement collider (red rectangle)
+        local collider_x = self.x + self.collision_x
+        local collider_y = self.y + self.collision_y
+        love.graphics.setColor(1, 0, 0, 0.8)
+        love.graphics.rectangle("line", collider_x, collider_y, self.collision_width, self.collision_height)
+        love.graphics.print("Collider: "..self.collision_width.."x"..self.collision_height, collider_x, collider_y - 15)
         love.graphics.setColor(1, 1, 1, 1)
     end
 end

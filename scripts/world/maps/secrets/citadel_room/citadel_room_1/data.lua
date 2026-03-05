@@ -9,8 +9,8 @@ return {
   height = 32,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 8,
-  nextobjectid = 39,
+  nextlayerid = 9,
+  nextobjectid = 58,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune",
@@ -164,9 +164,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 80,
+          x = 0,
           y = 1080,
-          width = 480,
+          width = 560,
           height = 200,
           rotation = 0,
           visible = true,
@@ -179,7 +179,7 @@ return {
           shape = "rectangle",
           x = 760,
           y = 1080,
-          width = 480,
+          width = 520,
           height = 200,
           rotation = 0,
           visible = true,
@@ -242,9 +242,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 80,
+          x = 0,
           y = 0,
-          width = 520,
+          width = 600,
           height = 160,
           rotation = 0,
           visible = true,
@@ -257,8 +257,50 @@ return {
           shape = "rectangle",
           x = 720,
           y = 0,
-          width = 480,
+          width = 560,
           height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 8,
+      name = "piano_collision",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 48,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 880,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 49,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1000,
+          y = 920,
+          width = 40,
+          height = 80,
           rotation = 0,
           visible = true,
           properties = {}
@@ -285,12 +327,13 @@ return {
           type = "",
           shape = "point",
           x = 680,
-          y = 640,
+          y = 1040,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           properties = {
+            ["debug_mode"] = true,
             ["height"] = 20,
             ["show_collision"] = "true",
             ["width"] = 30
@@ -457,8 +500,8 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 120,
-          y = 440,
+          x = 680,
+          y = 800,
           width = 0,
           height = 0,
           rotation = 0,
@@ -588,9 +631,9 @@ return {
           name = "piano",
           type = "",
           shape = "rectangle",
-          x = 755,
+          x = 800,
           y = 760,
-          width = 90,
+          width = 80,
           height = 30,
           rotation = 0,
           visible = true,
@@ -605,7 +648,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 755,
+          x = 795,
           y = 800,
           width = 90,
           height = 66,
@@ -613,6 +656,126 @@ return {
           gid = 472,
           visible = true,
           properties = {}
+        },
+        {
+          id = 50,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 1080,
+          width = 560,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
+        },
+        {
+          id = 51,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 760,
+          y = 1080,
+          width = 440,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
+        },
+        {
+          id = 52,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1200,
+          y = 160,
+          width = 80,
+          height = 480,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
+        },
+        {
+          id = 53,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 160,
+          width = 80,
+          height = 640,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
+        },
+        {
+          id = 54,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 920,
+          width = 80,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
+        },
+        {
+          id = 55,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 760,
+          width = 80,
+          height = 320,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
+        },
+        {
+          id = 56,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 600,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
+        },
+        {
+          id = 57,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 720,
+          y = 0,
+          width = 560,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["Solid"] = true
+          }
         }
       }
     }
