@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="22" height="28" tilewidth="40" tileheight="40" infinite="0" parallaxoriginx="-320" parallaxoriginy="-240" nextlayerid="14" nextobjectid="95">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="22" height="28" tilewidth="40" tileheight="40" infinite="0" parallaxoriginx="-320" parallaxoriginy="-240" nextlayerid="14" nextobjectid="95">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -97,9 +97,9 @@
 0,0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,776,776,776,776,776,776,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,776,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,776,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,776,776,776,776,776,776,776,776,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
