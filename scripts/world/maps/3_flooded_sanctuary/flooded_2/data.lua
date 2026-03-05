@@ -1360,7 +1360,7 @@ return {
           name = "parallax_waterfall",
           type = "",
           shape = "rectangle",
-          x = 1360,
+          x = 1440,
           y = 0,
           width = 80,
           height = 1280,

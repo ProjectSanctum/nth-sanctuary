@@ -442,7 +442,7 @@
     <property name="parallax_x" type="float" value="1.1"/>
    </properties>
   </object>
-  <object id="53" name="parallax_waterfall" x="1360" y="0" width="80" height="1280">
+  <object id="53" name="parallax_waterfall" x="1440" y="0" width="80" height="1280">
    <properties>
     <property name="parallax_x" type="float" value="1.2"/>
    </properties>
