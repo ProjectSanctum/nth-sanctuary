@@ -2,7 +2,6 @@ return {
 	egg = function (cutscene)
 		--local get = Game:getFlag("egg")
 		local rand = love.math.random(1,50)
-		print(rand)
 		if rand == 50 then
 			Game.world:mapTransition("fractured_sanctuary/fractured_egg_room", "spawn")
 		else
