@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 37,
+  nextobjectid = 39,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune",
@@ -408,7 +408,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["actor"] = "susie",
+            ["actor"] = "susie_notaparasite",
             ["text1"] = "[face:smile]* Woah, [wait:5]another Kris.[wait:10]\nCool.",
             ["text2"] = "[face:smile]* I'm Susie from \nDimension MS-90.",
             ["text3"] = "[face:small_smile]* (Also known as \nSoulSweeper.)",
@@ -437,8 +437,8 @@ return {
           name = "wandernpc",
           type = "",
           shape = "point",
-          x = 440,
-          y = 760,
+          x = 800,
+          y = 360,
           width = 0,
           height = 0,
           rotation = 0,
@@ -582,6 +582,37 @@ return {
             ["map"] = "secrets/citadel_room/legacy_room_1",
             ["marker"] = "spawn"
           }
+        },
+        {
+          id = 37,
+          name = "piano",
+          type = "",
+          shape = "rectangle",
+          x = 755,
+          y = 760,
+          width = 90,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["destroyhints"] = true,
+            ["destroyswitches"] = false,
+            ["solution"] = "131315"
+          }
+        },
+        {
+          id = 38,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 755,
+          y = 800,
+          width = 90,
+          height = 66,
+          rotation = 0,
+          gid = 472,
+          visible = true,
+          properties = {}
         }
       }
     }

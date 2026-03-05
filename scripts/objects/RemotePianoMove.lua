@@ -213,10 +213,10 @@ function RemotePianoMove:init(x, y, properties)
     
     -- Set collision hitbox smaller than sprite to only cover piano body (not carpet)
     -- Piano sprite is 80x80, but we want collision only on the piano part
-    local collision_width = 20  -- Narrower than full sprite
-    local collision_height = 20  -- Shorter than full sprite
+    local collision_width = 90  -- Narrower than full sprite
+    local collision_height = 30  -- Shorter than full sprite
     local collision_x = (self.width - collision_width) / 2  -- Center horizontally
-    local collision_y = self.height - collision_height - 10  -- Position on piano body
+    local collision_y = self.height - collision_height - 40  -- Position on piano body
     
     self:setHitbox(collision_x, collision_y, collision_width, collision_height)
     
@@ -234,6 +234,12 @@ function RemotePianoMove:init(x, y, properties)
         self.collider.y = collision_y
     end
     
+    -- Set interaction hitbox - same as collision hitbox
+    self.interact_width = collision_width
+    self.interact_height = collision_height
+    self.interact_x = -collision_width / 2  -- Center on piano center
+    self.interact_y = collision_y
+    
     print("Sprite and hitbox set")
     
     self.con = 0
@@ -243,8 +249,6 @@ function RemotePianoMove:init(x, y, properties)
     self.progress = {}
     self.memvolume = -1
     self.resetlight = false
-    self.leader_x = self.x
-    self.leader_y = self.y + 20
     self.catafollow = true
     
     -- UI Properties
@@ -286,6 +290,21 @@ function RemotePianoMove:onAdd(parent)
 end
 
 function RemotePianoMove:onInteract(player, dir)
+    -- Check if player is within interaction hitbox
+    local player_x = player.x
+    local player_y = player.y
+    local interact_left = self.x + self.interact_x
+    local interact_right = interact_left + self.interact_width
+    local interact_top = self.y + self.interact_y
+    local interact_bottom = interact_top + self.interact_height
+    
+    -- Only allow interaction if player is in the interaction area
+    if not (player_x >= interact_left and player_x <= interact_right and
+            player_y >= interact_top and player_y <= interact_bottom) then
+        return false  -- Don't interact if not in the right spot
+    end
+    
+    -- Original interaction logic continues here...
 	if self.con == 0 and self.buffer <= 0 then
 		if not self.solved then
 			self.progress = {}
@@ -311,19 +330,23 @@ function RemotePianoMove:onInteract(player, dir)
 			if #Game.party >= 4 then
 				party4 = Game.world:getCharacter(Game.party[4]:getActor().id)
 			end
-			local pointdist = MathUtils.dist(self.leader_x, self.leader_y, leader.x, leader.y)
+			-- Calculate interaction position relative to piano's current position
+			local target_x = self.x
+			local target_y = leader.y  -- Keep Kris's current Y position
+			
+			local pointdist = MathUtils.dist(target_x, target_y, leader.x, leader.y)
 			if pointdist > 4 then
-				local walkwait = math.min(scr_returnwait(leader.x, leader.y, self.leader_x, self.leader_y, 4), 15)
-				cutscene:wait(cutscene:walkToSpeed(leader, self.leader_x, self.leader_y, walkwait, "up"))
+				local walkwait = math.min(scr_returnwait(leader.x, leader.y, target_x, target_y, 4), 15)
+				cutscene:wait(cutscene:walkToSpeed(leader, target_x, target_y, walkwait, "up"))
 			else
-				leader.x = self.leader_x
-				leader.y = self.leader_y
+				leader.x = target_x
+				leader.y = target_y
 				cutscene:look(leader, "up")
 				print("no need to move")
 			end
 			if self.catafollow then
 				if party2 then
-					local p2x, p2y = self.leader_x + 30, self.leader_y + 20
+					local p2x, p2y = target_x + 30, target_y + 5
 					pointdist = MathUtils.dist(p2x, p2y, party2.x, party2.y)
 					if pointdist > 4 then
 						local walkwait = math.min(scr_returnwait(party2.x, party2.y, p2x, p2y, 4), 15)
@@ -335,7 +358,7 @@ function RemotePianoMove:onInteract(player, dir)
 					end
 				end
 				if party3 then
-					local p3x, p3y = self.leader_x - 30, self.leader_y + 20
+					local p3x, p3y = target_x - 30, target_y + 5
 					pointdist = MathUtils.dist(p3x, p3y, party3.x, party3.y)
 					if pointdist > 4 then
 						local walkwait = math.min(scr_returnwait(party3.x, party3.y, p3x, p3y, 4), 15)
@@ -347,7 +370,7 @@ function RemotePianoMove:onInteract(player, dir)
 					end
 				end
 				if party4 then
-					local p4x, p4y = self.leader_x, self.leader_y + 20
+					local p4x, p4y = target_x, target_y + 10
 					pointdist = MathUtils.dist(p4x, p4y, party4.x, party4.y)
 					if pointdist > 4 then
 						local walkwait = math.min(scr_returnwait(party4.x, party4.y, p4x, p4y, 4), 15)
@@ -473,8 +496,8 @@ function RemotePianoMove:update()
             end
             
             -- Check collision before moving (using collider)
-            local new_x = self.collider.x + move_x
-            local new_y = self.collider.y + move_y
+            local new_x = self.x + move_x
+            local new_y = self.y + move_y
             
             if not self:checkCollision(new_x, new_y) then
                 -- Move piano
@@ -487,12 +510,16 @@ function RemotePianoMove:update()
                     Game.leader.x = Game.leader.x + move_x
                     Game.leader.y = Game.leader.y + move_y
                 end
-                Game.world.player.x = Game.world.player.x + move_x
-                Game.world.player.y = Game.world.player.y + move_y
-                for _, member in ipairs(Game.world.followers) do
-                    if member then
-                        member.x = member.x + move_x
-                        member.y = member.y + move_y
+                if Game.world.player then
+                    Game.world.player.x = Game.world.player.x + move_x
+                    Game.world.player.y = Game.world.player.y + move_y
+                end
+                if Game.world.followers then
+                    for _, member in ipairs(Game.world.followers) do
+                        if member and member.x and member.y then
+                            member.x = member.x + move_x
+                            member.y = member.y + move_y
+                        end
                     end
                 end
                 
@@ -511,13 +538,19 @@ function RemotePianoMove:update()
                 for i = 1, 5 do
                     local dust_sprite = self.dust_sprite or "climb_dust_small"
                     local dust = Sprite("effects/climb_dust_small")
-                    dust.layer = self.layer + 10
-                    dust:setScale(2, 2)
-                    dust.physics.direction = math.rad(MathUtils.random(360))
-                    dust.physics.speed = MathUtils.random(2, 4)
-                    dust.physics.friction = 0.3
-                    dust:fadeOutAndRemove(0.5)
-                    Game.world:addChild(dust)
+                    if dust then
+                        dust.layer = self.layer + 10
+                        dust:setScale(2, 2)
+                        if dust.physics then
+                            dust.physics.direction = math.rad(MathUtils.random(360))
+                            dust.physics.speed = MathUtils.random(2, 4)
+                            dust.physics.friction = 0.3
+                        end
+                        dust:fadeOutAndRemove(0.5)
+                        if Game.world and Game.world.addChild then
+                            Game.world:addChild(dust)
+                        end
+                    end
                 end
             end
             
@@ -536,16 +569,12 @@ function RemotePianoMove:update()
         self.buffer = 6
         self.canceltimer = 0
         self.dontdrawmenu = false
-        Game.lock_movement = false
         
-        -- Find safe exit and move party there
-        local exit_side, exit_x, exit_y = self:findSafeExit()
-        
-        -- Position party 20px below piano center
+        -- Move party to safe exit position (only once)
         local piano_center_x = self.x + self.width/2
         local piano_center_y = self.y + self.height/2
-        exit_x = piano_center_x - 20  -- Center party member
-        exit_y = piano_center_y + 20  -- 20px below center
+        local exit_x = piano_center_x - 20  -- Center party member
+        local exit_y = piano_center_y + 20  -- 20px below center
         
         -- Move party to safe exit position
         if Game.leader then
@@ -553,7 +582,6 @@ function RemotePianoMove:update()
             Game.leader.y = exit_y
         end
         for _, member in ipairs(Game.world.followers) do
-
             if member then
                 member.x = exit_x + (member.id == "susie" and 30 or -30)
                 member.y = exit_y + 30
@@ -564,6 +592,11 @@ function RemotePianoMove:update()
         if self.enable_camera_control then
             Game.world:setCameraAttached(true)
         end
+        
+        -- Unlock movement after a short delay
+        Game.world.timer:after(0.1, function()
+            Game.lock_movement = false
+        end)
     end
 end
 
@@ -608,7 +641,7 @@ function RemotePianoMove:draw()
     self.drawalpha = MathUtils.lerp(self.drawalpha, alphtarg, 0.1*DTMULT)
     self.drawspace = 18
     local drawx = center_x
-    local drawy = center_y - 80
+    local drawy = center_y - 100  -- Shifted up 20px (was -80)
     love.graphics.setColor(0,0,0,self.drawalpha*0.5)
     love.graphics.circle("fill", drawx, drawy, 44 + math.sin(self.siner / 64) * 2)
     local litblue = ColorUtils.hexToRGB("#698DE6FF")
@@ -622,7 +655,7 @@ function RemotePianoMove:draw()
         if self.soundtoplay == unit.sound then
             bonusalpha = 0.6
             if Input.pressed("confirm") and self.con == 1 and not Input.down("cancel") then
-                local note = Sprite(unit.tex, xloc, yloc)
+                local note = Sprite(unit.tex, xloc, yloc + 20)  -- Add 20px offset to match UI shift
                 note.layer = self.layer + 1
                 note:setColor(litblue)
                 note:setScale(2,2)
