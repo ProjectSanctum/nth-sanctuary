@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="141">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="146">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -16,6 +16,7 @@
  <tileset firstgid="1263" source="../../../tilesets/flooded_sanctuary_extra.tsx"/>
  <tileset firstgid="1326" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="1524" source="../../../tilesets/ExtraClimbingTiles.tsx"/>
+ <tileset firstgid="1533" source="../../../tilesets/church_objects.tsx"/>
  <objectgroup id="16" name="objects_bg">
   <object id="99" name="lavawaverbg" x="0" y="80" width="40" height="40"/>
   <object id="100" name="lavagradient" x="80" y="-40" width="40" height="40"/>
@@ -379,7 +380,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup color="#0000ff" id="11" name="objects">
+ <objectgroup color="#ff00b2" id="11" name="objects">
   <object id="28" name="transition" x="1360" y="1640" width="40" height="80">
    <properties>
     <property name="map" value="3_flooded_sanctuary/flooded_hell_entrance"/>
@@ -398,7 +399,6 @@
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="139" name="RemotePianoMove" x="320" y="1360" width="80" height="80"/>
  </objectgroup>
  <objectgroup color="#ff02ff" id="7" name="objects_party">
   <object id="10" name="climbentry" x="1280" y="1600" width="40" height="40">
@@ -449,6 +449,14 @@
     <property name="up" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="142" name="piano" x="315" y="1360" width="90" height="30">
+   <properties>
+    <property name="destroyhints" type="bool" value="true"/>
+    <property name="destroyswitches" type="bool" value="false"/>
+    <property name="solution" value="131315"/>
+   </properties>
+  </object>
+  <object id="143" gid="1540" x="315" y="1400" width="90" height="66"/>
  </objectgroup>
  <objectgroup id="9" name="objects_overlay">
   <object id="17" name="texturescroller" x="-20" y="480">

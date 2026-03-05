@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -9,8 +9,8 @@ return {
   height = 32,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 35,
+  nextlayerid = 8,
+  nextobjectid = 37,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune",
@@ -262,6 +262,39 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 36,
+          name = "RemotePianoMove",
+          type = "",
+          shape = "point",
+          x = 680,
+          y = 640,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["height"] = 20,
+            ["show_collision"] = "true",
+            ["width"] = 30
+          }
         }
       }
     },

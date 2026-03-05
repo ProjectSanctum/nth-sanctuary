@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 20,
-  nextobjectid = 141,
+  nextobjectid = 146,
   properties = {
     ["border"] = "church_flooded_dynamic",
     ["music"] = "floodedsanctuary"
@@ -64,6 +64,12 @@ return {
       name = "ExtraClimbingTiles",
       firstgid = 1524,
       filename = "../../../tilesets/ExtraClimbingTiles.tsx"
+    },
+    {
+      name = "church_objects",
+      firstgid = 1533,
+      filename = "../../../tilesets/church_objects.tsx",
+      exportfilename = "../../../tilesets/church_objects.lua"
     }
   },
   layers = {
@@ -1147,19 +1153,6 @@ return {
             ["map"] = "3_flooded_sanctuary/flooded_2",
             ["marker"] = "entry"
           }
-        },
-        {
-          id = 139,
-          name = "RemotePianoMove",
-          type = "",
-          shape = "rectangle",
-          x = 320,
-          y = 1360,
-          width = 80,
-          height = 80,
-          rotation = 0,
-          visible = true,
-          properties = {}
         }
       }
     },
@@ -1304,6 +1297,37 @@ return {
             ["area"] = { id = 87 },
             ["up"] = true
           }
+        },
+        {
+          id = 142,
+          name = "piano",
+          type = "",
+          shape = "rectangle",
+          x = 315,
+          y = 1360,
+          width = 90,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["destroyhints"] = true,
+            ["destroyswitches"] = false,
+            ["solution"] = "131315"
+          }
+        },
+        {
+          id = 143,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 315,
+          y = 1400,
+          width = 90,
+          height = 66,
+          rotation = 0,
+          gid = 1540,
+          visible = true,
+          properties = {}
         }
       }
     },
