@@ -103,6 +103,7 @@ function event:onInteract(player, dir)
 			if self.center_if_tower then
 				player.x = self.true_x + 20
 			end
+			Kristal.Console:log(self.world.map.cyltower.tower_angle)
 			player.onrotatingtower = true
 			player.falseloop = true
 			player.falseloopx = {}
