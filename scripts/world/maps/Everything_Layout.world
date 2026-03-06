@@ -298,8 +298,8 @@
             "fileName": "secrets/frisk_room/frisk_room.tmx",
             "height": 480,
             "width": 1080,
-            "x": 5240,
-            "y": 7160
+            "x": 5480,
+            "y": 6720
         },
         {
             "fileName": "secrets/new_future/new_future.tmx",
