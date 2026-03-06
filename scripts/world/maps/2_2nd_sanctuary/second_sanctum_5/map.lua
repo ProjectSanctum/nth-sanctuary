@@ -6,6 +6,7 @@ function map:onEnter()
 	if self.world.player.y >= ((self.height * self.tile_height) / 2) then
 		self.cyltower.tower_angle = 278.59
 	end
+	self.cyltower:update()
 end
 
 function map:onExit()
