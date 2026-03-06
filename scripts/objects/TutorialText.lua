@@ -19,7 +19,7 @@ function TutorialText:init(type, target)
 	self.timer_tex = Assets.getFrames("ui/timer/timer")
 	if self.instruction_type == 1 then
 		self.line_count = 2
-		table.insert(self.instruction_lines, {line = "Play Piano", but = "confirm"})
+		table.insert(self.instruction_lines, {line = "Play", but = "confirm"})
 		table.insert(self.instruction_lines, {line = "Exit", but = "cancel", hold = true, cancel = true})
 	end
 	if self.instruction_type == 2 then
