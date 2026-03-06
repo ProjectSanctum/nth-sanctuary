@@ -173,9 +173,7 @@ function event:preClimbEnter(player)
                 follower:setPosition(tx + (i == 1 and -30 or 30), ty + (self.up and 10 or -10))
                 follower:setFacing(player.facing)
             end
-			self.world.timer:after(8/30, function()
-				self.world.player.highlight_force_off = false
-			end)
+			self.world.player.highlight_force_off = false
             self.world.player:interpolateFollowers()
             self.world:attachFollowers()
         end)

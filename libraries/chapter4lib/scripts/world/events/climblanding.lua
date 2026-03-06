@@ -42,12 +42,10 @@ function event:climbFallLanding(player)
                 follower:setPosition(tx + (i == 1 and -30 or 30), ty + (self.up and 10 or -10))
                 follower:setFacing(player.facing)
             end
-			self.world.timer:after(12/30, function()
-				player.highlight_force_off = false
-			end)
             cutscene:interpolateFollowers()
             cutscene:attachFollowers()
             player:resetSprite()
+			player.highlight_force_off = false
         end)
     end
 end
