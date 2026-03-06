@@ -36,6 +36,7 @@ function event:climbFallLanding(player)
                 end
 				self.world.timer:after(12/30, function()
 					follower.shadow_force_off = false
+					follower.highlight_force_off = false
 				end)
                 -- TODO: Support parties > 3
                 follower:setPosition(tx + (i == 1 and -30 or 30), ty + (self.up and 10 or -10))

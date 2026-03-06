@@ -78,7 +78,9 @@ function event:onInteract(player, dir)
         self.world.timer:tween(7/30, colormask, {color = {0.5,0.5,0.5,1}})
         self.world.timer:tween(7/30, mask, {alpha = 0})
 		follower.shadow_force_off = true
+		follower.highlight_force_off = true
     end
+	player.highlight_force_off = true
 
     self:startScript(function (scr)
         -- TODO: Accurate camera movement
@@ -103,7 +105,6 @@ function event:onInteract(player, dir)
 		end
         Assets.playSound("noise")
         player:setState("CLIMB")
-		player.highlight_force_off = true
 		if self.world.map.cyltower then
 			if self.center_if_tower then
 				player.x = self.true_x + 20
@@ -166,6 +167,7 @@ function event:preClimbEnter(player)
                 end
 				self.world.timer:after(8/30, function()
 					follower.shadow_force_off = false
+					follower.highlight_force_off = false
 				end)
                 -- TODO: Support parties > 3
                 follower:setPosition(tx + (i == 1 and -30 or 30), ty + (self.up and 10 or -10))
