@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 122,
+  nextobjectid = 123,
   properties = {},
   tilesets = {
     {
@@ -669,6 +669,23 @@ return {
             ["path"] = "enemy_1",
             ["progress"] = 0.75
           }
+        },
+        {
+          id = 122,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 481.5,
+          y = 742.5,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "kris",
+            ["path"] = "enemy_1",
+            ["progress"] = "0.823"
+          }
         }
       }
     },
@@ -791,19 +808,6 @@ return {
           y = 560,
           width = 320,
           height = 480,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 120,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 10500,
-          y = 2410,
-          width = 0,
-          height = 0,
           rotation = 0,
           visible = true,
           properties = {}
