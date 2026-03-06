@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="105">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="42" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="123">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -31,8 +31,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,711,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,729,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,711,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -65,8 +65,8 @@
 0,0,0,0,0,0,0,0,0,729,0,370,376,376,370,370,370,376,370,382,382,382,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,376,370,370,370,370,772,673,673,376,771,382,382,382,382,376,376,0,0,0,370,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,376,376,370,376,376,673,673,673,376,376,0,0,0,0,370,376,0,0,0,376,376,0,0,0,0,0,370,370,376,376,376,376,376,370,0,0,0,0,0,
-0,0,0,382,382,382,370,370,382,382,382,376,376,0,0,0,0,370,376,0,711,0,376,370,0,0,0,711,0,376,370,376,370,376,376,376,376,0,0,0,0,0,
-0,0,0,0,0,0,376,370,0,0,0,376,376,0,0,0,0,370,370,0,729,0,370,376,0,0,0,729,0,370,370,382,382,382,382,370,376,0,0,0,0,0,
+0,0,0,382,382,382,370,370,382,382,382,376,376,0,0,0,0,370,376,0,711,0,376,370,0,0,0,0,0,376,370,376,370,376,376,376,376,0,0,0,0,0,
+0,0,0,0,0,0,376,370,0,0,0,376,376,0,0,0,0,370,370,0,729,0,370,376,0,0,0,0,0,370,370,382,382,382,382,370,376,0,0,0,0,0,
 0,0,0,0,0,0,376,370,0,0,0,370,376,0,0,0,0,376,370,376,370,376,376,370,370,376,370,370,370,370,376,370,370,370,376,370,376,0,0,0,0,0,
 0,0,0,0,711,0,370,376,376,370,376,370,376,0,0,0,0,376,376,370,370,376,376,370,376,376,370,376,376,674,773,376,376,376,376,376,370,0,711,0,0,0,
 0,0,0,0,729,0,376,376,370,370,370,376,376,0,0,0,0,370,370,382,382,382,382,382,382,382,370,376,382,382,382,382,382,382,382,376,370,0,729,0,0,0,
@@ -80,7 +80,7 @@
 </data>
  </layer>
  <objectgroup id="6" name="objects_switch">
-  <object id="16" name="churchtilebutton" x="360" y="660" width="40" height="40">
+  <object id="16" name="churchtilebutton" x="360" y="640" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -96,7 +96,7 @@
     <property name="onsound" type="int" value="0"/>
    </properties>
   </object>
-  <object id="53" name="churchtilebutton" x="1080" y="820" width="40" height="40">
+  <object id="53" name="churchtilebutton" x="1060" y="820" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -178,24 +178,6 @@
   </object>
  </objectgroup>
  <objectgroup id="5" name="objects_party">
-  <object id="18" name="pathenemygen" x="760" y="1480">
-   <properties>
-    <property name="dir" type="int" value="2"/>
-    <property name="movetype" type="int" value="3"/>
-    <property name="rate" type="float" value="40"/>
-    <property name="timer" type="float" value="19"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="19" name="pathenemyender" x="840" y="1480">
-   <point/>
-  </object>
-  <object id="26" name="pathenemyturner" x="800" y="1480">
-   <properties>
-    <property name="dir" type="int" value="1"/>
-   </properties>
-   <point/>
-  </object>
   <object id="57" name="lanternshrinking" x="-240" y="960">
    <properties>
     <property name="bigsize" type="int" value="640"/>
@@ -205,7 +187,7 @@
    </properties>
    <point/>
   </object>
-  <object id="88" name="lanternshrinking" x="600" y="1160">
+  <object id="88" name="lanternshrinking" x="180" y="880">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
@@ -241,7 +223,7 @@
    </properties>
    <point/>
   </object>
-  <object id="96" name="lanternshrinking" x="1100" y="760">
+  <object id="96" name="lanternshrinking" x="1080" y="760">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
@@ -274,9 +256,45 @@
   <object id="101" name="lanternshrinking" x="1380" y="40">
    <point/>
   </object>
+  <object id="115" name="npc" x="480" y="800">
+   <properties>
+    <property name="actor" value="kris"/>
+    <property name="path" value="enemy_1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="116" name="npc" x="470" y="810">
+   <properties>
+    <property name="actor" value="kris"/>
+    <property name="path" value="enemy_1"/>
+    <property name="progress" type="float" value="0.25"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="117" name="npc" x="460" y="820">
+   <properties>
+    <property name="actor" value="kris"/>
+    <property name="path" value="enemy_1"/>
+    <property name="progress" type="float" value="0.5"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="118" name="npc" x="450" y="830">
+   <properties>
+    <property name="actor" value="kris"/>
+    <property name="path" value="enemy_1"/>
+    <property name="progress" type="float" value="0.75"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="11" name="paths">
+  <object id="113" name="enemy_1" x="480" y="600">
+   <polygon points="0,0 0,400 240,400 240,0"/>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="markers">
-  <object id="2" name="spawn" x="60" y="940">
+  <object id="2" name="spawn" x="60" y="960">
    <point/>
   </object>
  </objectgroup>
@@ -289,5 +307,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="7" name="battleareas"/>
+ <objectgroup id="7" name="battleareas">
+  <object id="119" x="440" y="560" width="320" height="480"/>
+ </objectgroup>
 </map>

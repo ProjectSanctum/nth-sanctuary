@@ -298,8 +298,8 @@
             "fileName": "secrets/frisk_room/frisk_room.tmx",
             "height": 480,
             "width": 1080,
-            "x": 6000,
-            "y": 7240
+            "x": 5480,
+            "y": 6720
         },
         {
             "fileName": "secrets/new_future/new_future.tmx",
@@ -459,8 +459,8 @@
             "fileName": "sanctum_hell/hell_1/hell_1.tmx",
             "height": 960,
             "width": 1200,
-            "x": 7160,
-            "y": 6800
+            "x": 6640,
+            "y": 6760
         },
         {
             "fileName": "secrets/citadel_room/legacy_room_1/legacy_room_1.tmx",

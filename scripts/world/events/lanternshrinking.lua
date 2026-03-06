@@ -104,7 +104,7 @@ end
 function ChurchLanternShrinking:drawLightA()
     local x, y = self:getScreenPos()
 	Draw.setColor(1, 1, 1, self.lightalpha)
-	love.graphics.circle("fill", x, y, (self.size * 1.125) + (math.sin(self.siner / 30) * 2))
+	love.graphics.circle("fill", x, y, (self.size * 1.125) + (math.sin(self.siner / 30) * 2), 24)
 	Draw.setColor(1, 1, 1, 1)
 end
 
@@ -112,7 +112,7 @@ function ChurchLanternShrinking:drawLightB()
 	if self.draw_dimmer_light then
 		local x, y = self:getScreenPos()
 		Draw.setColor(1, 1, 1, self.lightalpha)
-		love.graphics.circle("fill", x, y, self.size + (math.sin(self.siner / 30) * 2))
+		love.graphics.circle("fill", x, y, self.size + (math.sin(self.siner / 30) * 2), 24)
 		Draw.setColor(1, 1, 1, 1)
 	end
 end

@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 30,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 11,
-  nextobjectid = 105,
+  nextlayerid = 12,
+  nextobjectid = 123,
   properties = {},
   tilesets = {
     {
@@ -97,8 +97,8 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 711, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 729, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 711, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -147,8 +147,8 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 729, 0, 370, 376, 376, 370, 370, 370, 376, 370, 382, 382, 382, 376, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 376, 370, 370, 370, 370, 772, 673, 673, 376, 771, 382, 382, 382, 382, 376, 376, 0, 0, 0, 370, 376, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 376, 376, 370, 376, 376, 673, 673, 673, 376, 376, 0, 0, 0, 0, 370, 376, 0, 0, 0, 376, 376, 0, 0, 0, 0, 0, 370, 370, 376, 376, 376, 376, 376, 370, 0, 0, 0, 0, 0,
-        0, 0, 0, 382, 382, 382, 370, 370, 382, 382, 382, 376, 376, 0, 0, 0, 0, 370, 376, 0, 711, 0, 376, 370, 0, 0, 0, 711, 0, 376, 370, 376, 370, 376, 376, 376, 376, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 376, 370, 0, 0, 0, 376, 376, 0, 0, 0, 0, 370, 370, 0, 729, 0, 370, 376, 0, 0, 0, 729, 0, 370, 370, 382, 382, 382, 382, 370, 376, 0, 0, 0, 0, 0,
+        0, 0, 0, 382, 382, 382, 370, 370, 382, 382, 382, 376, 376, 0, 0, 0, 0, 370, 376, 0, 711, 0, 376, 370, 0, 0, 0, 0, 0, 376, 370, 376, 370, 376, 376, 376, 376, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 376, 370, 0, 0, 0, 376, 376, 0, 0, 0, 0, 370, 370, 0, 729, 0, 370, 376, 0, 0, 0, 0, 0, 370, 370, 382, 382, 382, 382, 370, 376, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 376, 370, 0, 0, 0, 370, 376, 0, 0, 0, 0, 376, 370, 376, 370, 376, 376, 370, 370, 376, 370, 370, 370, 370, 376, 370, 370, 370, 376, 370, 376, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 711, 0, 370, 376, 376, 370, 376, 370, 376, 0, 0, 0, 0, 376, 376, 370, 370, 376, 376, 370, 376, 376, 370, 376, 376, 674, 773, 376, 376, 376, 376, 376, 370, 0, 711, 0, 0, 0,
         0, 0, 0, 0, 729, 0, 376, 376, 370, 370, 370, 376, 376, 0, 0, 0, 0, 370, 370, 382, 382, 382, 382, 382, 382, 382, 370, 376, 382, 382, 382, 382, 382, 382, 382, 376, 370, 0, 729, 0, 0, 0,
@@ -181,7 +181,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 360,
-          y = 660,
+          y = 640,
           width = 40,
           height = 40,
           rotation = 0,
@@ -216,7 +216,7 @@ return {
           name = "churchtilebutton",
           type = "",
           shape = "rectangle",
-          x = 1080,
+          x = 1060,
           y = 820,
           width = 40,
           height = 40,
@@ -408,52 +408,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 18,
-          name = "pathenemygen",
-          type = "",
-          shape = "point",
-          x = 760,
-          y = 1480,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["dir"] = 2,
-            ["movetype"] = 3,
-            ["rate"] = 40,
-            ["timer"] = 19
-          }
-        },
-        {
-          id = 19,
-          name = "pathenemyender",
-          type = "",
-          shape = "point",
-          x = 840,
-          y = 1480,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 26,
-          name = "pathenemyturner",
-          type = "",
-          shape = "point",
-          x = 800,
-          y = 1480,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["dir"] = 1
-          }
-        },
-        {
           id = 57,
           name = "lanternshrinking",
           type = "",
@@ -476,8 +430,8 @@ return {
           name = "lanternshrinking",
           type = "",
           shape = "point",
-          x = 600,
-          y = 1160,
+          x = 180,
+          y = 880,
           width = 0,
           height = 0,
           rotation = 0,
@@ -566,7 +520,7 @@ return {
           name = "lanternshrinking",
           type = "",
           shape = "point",
-          x = 1100,
+          x = 1080,
           y = 760,
           width = 0,
           height = 0,
@@ -648,6 +602,125 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 115,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 480,
+          y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "kris",
+            ["path"] = "enemy_1"
+          }
+        },
+        {
+          id = 116,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 470,
+          y = 810,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "kris",
+            ["path"] = "enemy_1",
+            ["progress"] = 0.25
+          }
+        },
+        {
+          id = 117,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 460,
+          y = 820,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "kris",
+            ["path"] = "enemy_1",
+            ["progress"] = 0.5
+          }
+        },
+        {
+          id = 118,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 450,
+          y = 830,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "kris",
+            ["path"] = "enemy_1",
+            ["progress"] = 0.75
+          }
+        },
+        {
+          id = 122,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 481.5,
+          y = 742.5,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "kris",
+            ["path"] = "enemy_1",
+            ["progress"] = "0.823"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 11,
+      name = "paths",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 113,
+          name = "enemy_1",
+          type = "",
+          shape = "polygon",
+          x = 480,
+          y = 600,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 0, y = 400 },
+            { x = 240, y = 400 },
+            { x = 240, y = 0 }
+          },
+          properties = {}
         }
       }
     },
@@ -671,7 +744,7 @@ return {
           type = "",
           shape = "point",
           x = 60,
-          y = 940,
+          y = 960,
           width = 0,
           height = 0,
           rotation = 0,
@@ -725,7 +798,21 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 119,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 560,
+          width = 320,
+          height = 480,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
     }
   }
 }
