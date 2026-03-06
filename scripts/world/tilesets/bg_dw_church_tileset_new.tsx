@@ -4,6 +4,14 @@
   <export target="bg_dw_church_tileset_new.lua" format="lua"/>
  </editorsettings>
  <image source="../../../assets/sprites/tilesets/dr ch3-4 fixed tilesets/bg_dw_church_tileset_new.png" width="240" height="3880"/>
+ <tile id="73" probability="20"/>
+ <tile id="79" probability="20"/>
+ <tile id="376" probability="0.1"/>
+ <tile id="377" probability="0.125"/>
+ <tile id="474" probability="0.1"/>
+ <tile id="475" probability="0.1"/>
+ <tile id="476" probability="0.1"/>
+ <tile id="477" probability="0.1"/>
  <tile id="570" probability="0.25"/>
  <tile id="576" probability="0.75"/>
  <wangsets>

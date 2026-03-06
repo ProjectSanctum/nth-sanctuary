@@ -85,6 +85,38 @@ return {
   tilecount = 582,
   tiles = {
     {
+      id = 73,
+      probability = 20
+    },
+    {
+      id = 79,
+      probability = 20
+    },
+    {
+      id = 376,
+      probability = 0.1
+    },
+    {
+      id = 377,
+      probability = 0.125
+    },
+    {
+      id = 474,
+      probability = 0.1
+    },
+    {
+      id = 475,
+      probability = 0.1
+    },
+    {
+      id = 476,
+      probability = 0.1
+    },
+    {
+      id = 477,
+      probability = 0.1
+    },
+    {
       id = 570,
       probability = 0.25
     },

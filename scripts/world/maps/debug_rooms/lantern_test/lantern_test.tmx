@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="84">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="105">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -7,42 +7,80 @@
  <tileset firstgid="99" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="297" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <objectgroup id="2" name="objects_bg">
-  <object id="1" name="darkroombg" x="40" y="200">
+  <object id="1" name="darkroombg" x="40" y="0">
    <point/>
   </object>
  </objectgroup>
- <layer id="1" name="Tile Layer 1" width="42" height="26">
+ <layer id="8" name="Tile Layer 2" width="42" height="30" offsetx="20" offsety="0">
   <data encoding="csv">
-370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,376,370,376,376,376,370,370,376,370,370,370,370,370,376,370,376,376,376,
-376,376,0,0,376,370,376,370,370,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,370,376,370,376,376,370,376,376,370,370,370,370,370,376,370,370,376,370,
-370,370,0,0,376,376,376,370,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,370,376,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,
-376,370,376,376,370,376,382,382,376,370,376,370,370,376,0,0,376,376,376,370,376,370,376,370,376,370,370,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,
-376,370,376,376,376,376,0,0,376,376,370,376,370,376,0,0,370,370,370,370,376,376,370,376,376,370,376,370,376,0,0,0,0,0,0,0,0,0,0,0,0,0,
-382,382,382,382,370,376,370,376,376,370,382,382,376,370,0,0,370,376,382,382,382,382,382,382,382,382,382,370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,370,376,370,370,370,376,0,0,376,376,370,370,370,370,370,376,376,370,370,376,370,370,370,370,376,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,382,382,382,382,382,382,0,0,376,370,376,370,370,370,376,376,376,376,370,376,376,370,376,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,382,382,382,382,382,370,370,382,382,382,376,376,0,382,382,370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,370,370,0,0,0,376,370,0,0,0,370,376,370,376,376,376,370,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,370,370,370,370,370,376,376,0,0,0,376,370,376,370,376,370,370,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,370,370,370,370,370,376,376,0,0,0,382,382,382,382,382,382,382,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,370,376,370,376,370,376,370,370,382,382,382,376,370,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,376,376,376,370,376,370,376,370,0,0,0,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,370,376,376,376,376,376,370,370,376,370,382,382,382,382,376,370,0,0,0,376,370,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,370,376,376,370,376,370,370,376,376,370,0,0,0,0,370,376,0,0,0,376,370,0,0,0,0,0,376,376,370,376,376,376,370,376,370,0,0,0,0,
-0,0,0,382,382,382,376,376,382,382,382,376,370,0,0,0,0,370,370,0,0,0,376,370,0,0,0,0,0,376,376,376,376,370,370,370,376,370,0,0,0,0,
-0,0,0,0,0,0,370,376,0,0,0,370,376,0,0,0,0,376,376,0,0,0,376,370,0,0,0,0,0,376,370,382,382,382,382,382,370,376,0,0,0,0,
-0,0,0,0,0,0,376,370,0,0,0,370,370,0,0,0,0,370,370,370,376,370,376,376,370,370,370,370,370,376,370,376,376,370,370,370,370,370,0,0,0,0,
-0,0,0,0,0,0,370,370,376,376,376,376,376,0,0,0,0,376,376,376,370,376,370,376,370,376,376,376,370,370,376,376,370,370,376,370,376,370,0,0,0,0,
-0,0,0,0,0,0,370,376,370,376,370,370,370,0,0,0,0,376,376,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,376,376,382,0,0,0,0,
-370,370,370,370,370,376,376,370,382,382,382,376,370,0,0,0,0,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,376,370,376,376,376,370,370,
-370,376,370,370,376,370,376,370,0,0,0,376,370,376,376,376,370,370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,376,370,376,370,376,376,370,
-382,382,382,382,382,382,382,382,0,0,0,370,376,370,376,376,376,370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,382,382,382,382,382,382,382,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,711,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,717,0,0,0,0,0,711,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,723,0,0,0,0,0,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,711,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="1" name="Tile Layer 1" width="42" height="30">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,711,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,729,0,0,0,0,0,0,0,
+0,370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,376,370,376,376,370,370,376,370,370,376,376,370,376,370,370,376,376,376,
+0,370,376,0,370,370,370,370,376,370,0,0,0,0,0,0,0,0,0,0,0,0,711,0,376,376,370,376,370,376,370,370,376,376,376,370,370,370,376,376,370,370,
+0,370,370,0,376,370,370,376,376,376,0,0,0,0,0,0,0,0,0,0,0,0,729,0,376,370,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,
+0,376,370,376,376,376,382,382,370,376,0,0,0,0,0,0,370,376,376,376,370,376,376,370,376,376,376,370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,376,370,370,376,376,0,0,370,376,0,0,0,0,0,0,376,370,370,376,370,370,370,376,376,376,376,370,370,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,382,382,382,376,370,376,370,370,370,0,0,0,0,0,0,376,370,382,382,382,382,382,382,382,382,382,370,376,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,376,370,673,370,376,370,0,0,0,0,0,0,370,376,376,771,370,376,370,370,376,370,376,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,382,382,382,382,376,376,376,370,376,370,774,376,376,370,376,376,370,376,370,370,376,376,376,376,376,0,0,711,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,370,370,370,376,370,376,376,376,376,370,376,382,382,382,376,370,382,382,382,370,376,0,0,729,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,382,382,382,382,382,382,382,382,382,376,370,0,711,0,376,370,0,0,0,370,370,376,376,376,376,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,376,370,0,729,0,370,370,0,0,0,376,376,376,376,370,376,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,370,370,376,376,376,673,376,0,0,0,382,382,382,382,382,382,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,711,0,370,376,376,376,376,370,370,370,376,376,370,370,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,729,0,370,376,376,370,370,370,376,370,382,382,382,376,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,376,370,370,370,370,772,673,673,376,771,382,382,382,382,376,376,0,0,0,370,376,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,376,376,370,376,376,673,673,673,376,376,0,0,0,0,370,376,0,0,0,376,376,0,0,0,0,0,370,370,376,376,376,376,376,370,0,0,0,0,0,
+0,0,0,382,382,382,370,370,382,382,382,376,376,0,0,0,0,370,376,0,711,0,376,370,0,0,0,711,0,376,370,376,370,376,376,376,376,0,0,0,0,0,
+0,0,0,0,0,0,376,370,0,0,0,376,376,0,0,0,0,370,370,0,729,0,370,376,0,0,0,729,0,370,370,382,382,382,382,370,376,0,0,0,0,0,
+0,0,0,0,0,0,376,370,0,0,0,370,376,0,0,0,0,376,370,376,370,376,376,370,370,376,370,370,370,370,376,370,370,370,376,370,376,0,0,0,0,0,
+0,0,0,0,711,0,370,376,376,370,376,370,376,0,0,0,0,376,376,370,370,376,376,370,376,376,370,376,376,674,773,376,376,376,376,376,370,0,711,0,0,0,
+0,0,0,0,729,0,376,376,370,370,370,376,376,0,0,0,0,370,370,382,382,382,382,382,382,382,370,376,382,382,382,382,382,382,382,376,370,0,729,0,0,0,
+376,376,376,376,376,376,370,376,382,382,382,370,370,0,0,0,0,376,376,0,0,0,0,0,0,0,370,370,370,376,370,370,376,370,370,673,370,376,370,370,370,376,
+370,376,376,370,376,370,376,370,0,0,0,370,376,376,376,370,370,376,370,0,0,0,0,0,0,0,370,376,370,370,376,376,370,376,376,772,376,376,376,376,370,370,
+382,382,382,382,382,382,382,382,0,0,0,370,370,376,376,376,376,370,376,0,0,0,0,0,0,0,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,
 0,0,0,0,0,0,0,0,0,0,0,382,382,382,382,382,382,382,382,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="6" name="objects_switch">
-  <object id="16" name="churchtilebutton" x="160" y="560" width="40" height="40">
+  <object id="16" name="churchtilebutton" x="360" y="660" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -50,7 +88,7 @@
     <property name="onsound" type="int" value="0"/>
    </properties>
   </object>
-  <object id="47" name="churchtilebutton" x="360" y="760" width="40" height="40">
+  <object id="52" name="churchtilebutton" x="800" y="820" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -58,7 +96,7 @@
     <property name="onsound" type="int" value="0"/>
    </properties>
   </object>
-  <object id="51" name="churchtilebutton" x="580" y="500" width="40" height="40">
+  <object id="53" name="churchtilebutton" x="1080" y="820" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -66,7 +104,7 @@
     <property name="onsound" type="int" value="0"/>
    </properties>
   </object>
-  <object id="52" name="churchtilebutton" x="800" y="720" width="40" height="40">
+  <object id="82" name="churchtilebutton" x="160" y="940" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -74,7 +112,7 @@
     <property name="onsound" type="int" value="0"/>
    </properties>
   </object>
-  <object id="53" name="churchtilebutton" x="1020" y="720" width="40" height="40">
+  <object id="83" name="churchtilebutton" x="580" y="980" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -82,7 +120,7 @@
     <property name="onsound" type="int" value="0"/>
    </properties>
   </object>
-  <object id="82" name="churchtilebutton" x="160" y="840" width="40" height="40">
+  <object id="84" name="churchtilebutton" x="1520" y="940" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -90,7 +128,47 @@
     <property name="onsound" type="int" value="0"/>
    </properties>
   </object>
-  <object id="83" name="churchtilebutton" x="580" y="900" width="40" height="40">
+  <object id="85" name="churchtilebutton" x="800" y="540" width="40" height="40">
+   <properties>
+    <property name="group" value="lantern"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="86" name="churchtilebutton" x="880" y="220" width="40" height="40">
+   <properties>
+    <property name="group" value="lantern"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="87" name="churchtilebutton" x="1240" y="460" width="40" height="40">
+   <properties>
+    <property name="group" value="lantern"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="102" name="churchtilebutton" x="1360" y="100" width="40" height="40">
+   <properties>
+    <property name="group" value="lantern"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="103" name="churchtilebutton" x="500" y="380" width="40" height="40">
+   <properties>
+    <property name="group" value="lantern"/>
+    <property name="npcpress" type="bool" value="false"/>
+    <property name="offsound" type="int" value="0"/>
+    <property name="onsound" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="104" name="churchtilebutton" x="260" y="300" width="40" height="40">
    <properties>
     <property name="group" value="lantern"/>
     <property name="npcpress" type="bool" value="false"/>
@@ -99,14 +177,8 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="5" name="objects_party" visible="0">
-  <object id="7" name="lanternshrinking" x="420" y="860">
-   <properties>
-    <property name="group" value="lantern"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="18" name="pathenemygen" x="540" y="860">
+ <objectgroup id="5" name="objects_party">
+  <object id="18" name="pathenemygen" x="760" y="1480">
    <properties>
     <property name="dir" type="int" value="2"/>
     <property name="movetype" type="int" value="3"/>
@@ -115,155 +187,101 @@
    </properties>
    <point/>
   </object>
-  <object id="19" name="pathenemyender" x="540" y="380">
+  <object id="19" name="pathenemyender" x="840" y="1480">
    <point/>
   </object>
-  <object id="24" name="pathenemyturner" x="540" y="740">
-   <properties>
-    <property name="dir" type="int" value="3"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="25" name="pathenemyturner" x="300" y="740">
-   <properties>
-    <property name="dir" type="int" value="2"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="26" name="pathenemyturner" x="300" y="500">
+  <object id="26" name="pathenemyturner" x="800" y="1480">
    <properties>
     <property name="dir" type="int" value="1"/>
    </properties>
    <point/>
   </object>
-  <object id="30" name="lanternshrinking" x="180" y="620">
+  <object id="57" name="lanternshrinking" x="-240" y="960">
+   <properties>
+    <property name="bigsize" type="int" value="640"/>
+    <property name="littlesize" type="int" value="400"/>
+    <property name="maxtimer" type="int" value="120"/>
+    <property name="timebuffer" type="int" value="300"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="88" name="lanternshrinking" x="600" y="1160">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="32" name="lanternshrinking" x="420" y="380">
+  <object id="90" name="lanternshrinking" x="380" y="600">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="34" name="lanternshrinking" x="420" y="620">
+  <object id="92" name="lanternshrinking" x="820" y="480">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="50" name="pathenemyturner" x="540" y="500">
-   <properties>
-    <property name="dir" type="int" value="2"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="54" name="lanternshrinking" x="900" y="380">
+  <object id="93" name="lanternshrinking" x="520" y="320">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="55" name="lanternshrinking" x="900" y="620">
+  <object id="94" name="lanternshrinking" x="1260" y="400">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="56" name="lanternshrinking" x="900" y="860">
+  <object id="95" name="lanternshrinking" x="1540" y="880">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="57" name="lanternshrinking" x="120" y="800">
+  <object id="96" name="lanternshrinking" x="1100" y="760">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="60" name="lanternshrinking" x="1200" y="800">
+  <object id="97" name="lanternshrinking" x="820" y="760">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="61" name="lanternshrinking" x="1140" y="620">
+  <object id="98" name="lanternshrinking" x="600" y="920">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="62" name="lanternshrinking" x="660" y="520">
+  <object id="99" name="lanternshrinking" x="280" y="240">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="63" name="lanternshrinking" x="660" y="740">
+  <object id="100" name="lanternshrinking" x="900" y="160">
    <properties>
     <property name="group" value="lantern"/>
    </properties>
    <point/>
   </object>
-  <object id="64" name="pathenemygen" x="780" y="860">
-   <properties>
-    <property name="dir" type="int" value="2"/>
-    <property name="movetype" type="int" value="3"/>
-    <property name="rate" type="float" value="40"/>
-    <property name="timer" type="float" value="19"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="65" name="pathenemyturner" x="780" y="740">
-   <properties>
-    <property name="dir" type="int" value="1"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="66" name="pathenemyturner" x="1020" y="740">
-   <properties>
-    <property name="dir" type="int" value="2"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="67" name="pathenemyturner" x="780" y="500">
-   <properties>
-    <property name="dir" type="int" value="2"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="68" name="pathenemyturner" x="1020" y="500">
-   <properties>
-    <property name="dir" type="int" value="3"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="69" name="pathenemyender" x="780" y="380">
-   <point/>
-  </object>
-  <object id="78" name="lanternshrinking" x="120" y="980">
-   <properties>
-    <property name="group" value="lantern"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="81" name="lanternshrinking" x="1200" y="980">
-   <properties>
-    <property name="group" value="lantern"/>
-   </properties>
+  <object id="101" name="lanternshrinking" x="1380" y="40">
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="3" name="markers" visible="0">
-  <object id="2" name="spawn" x="60" y="860">
+ <objectgroup id="3" name="markers">
+  <object id="2" name="spawn" x="60" y="940">
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="4" name="objects_overlay" visible="0">
-  <object id="9" name="darkness" x="0" y="200">
+ <objectgroup id="4" name="objects_overlay">
+  <object id="9" name="darkness" x="0" y="0">
    <properties>
     <property name="alpha" type="float" value="1"/>
     <property name="highlight" type="bool" value="false"/>

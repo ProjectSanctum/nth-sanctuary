@@ -6,10 +6,10 @@ function ChurchLanternShrinking:init(data)
     local properties = data and data.properties or {}
 	self.draw_dimmer_light = properties["dimmerlight"] or false
 	self.size = properties["size"] or 80
-	self.littlesize = properties["minsize"] or 80
-	self.bigsize = properties["maxsize"] or 180
+	self.littlesize = properties["littlesize"] or 80
+	self.bigsize = properties["bigsizes"] or 240
 	self.timer = 0
-	self.maxtimer = properties["maxtimer"] or 80
+	self.maxtimer = properties["maxtimer"] or 120
 	self.timebuffer = properties["timebuffer"] or 20
 	self.nointeract = properties["interactable"] ~= false
 	self.group = properties["group"] or nil
