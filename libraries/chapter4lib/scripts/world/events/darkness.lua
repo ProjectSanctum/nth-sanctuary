@@ -111,6 +111,7 @@ function Darkness:draw()
 				love.graphics.setStencilTest()
 			end
 		end
+		Draw.setColor(1,1,1,1)
 		
 		love.graphics.translate(MathUtils.round(Game.world.camera.x+SCREEN_WIDTH/2), MathUtils.round(Game.world.camera.y+SCREEN_HEIGHT/2))
 		Draw.popCanvas(true)
@@ -201,6 +202,7 @@ function Darkness:draw()
 				love.graphics.setStencilTest()
 			end
 		end
+		Draw.setColor(1,1,1,1)
 		Draw.popCanvas(true)
 		local fade_highlight_canvas = Draw.pushCanvas(SCREEN_WIDTH,SCREEN_HEIGHT)
 		love.graphics.clear()
