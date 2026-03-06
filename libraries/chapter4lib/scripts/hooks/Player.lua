@@ -604,7 +604,8 @@ function Player:processJumpCharge()
                     afterimage.physics.speed_y = 1
                     afterimage:setParent(self)
 					if self.onrotatingtower then
-						afterimage.physics.speed_x = (self.facing == "right" and -0.1 or 0.1)
+						afterimage.x = self.world.map.cyltower.krisx - self.x
+						afterimage.layer = self.world.map.cyltower.layer + 0.01
 					end
                 end
             end
@@ -761,6 +762,11 @@ function Player:doClimbJump(direction, distance)
 					afterimage.alpha = 0.2
 					afterimage:fadeOutSpeedAndRemove()
 					afterimage:setLayer(self.layer - 0.1)
+					if self.onrotatingtower then
+						afterimage.x = self.world.map.cyltower.krisx
+						afterimage.physics.speed_x = (self.facing == "right" and -0.1 or 0.1)
+						afterimage.layer = self.world.map.cyltower.layer + 0.5
+					end
 					Game.world:addChild(afterimage)
 				end)
 				self.climb_after_1_timer = Game.world.timer:after(duration/2, function ()
@@ -1022,7 +1028,7 @@ function Player:drawClimbReticle()
         end
 
         if (self.facing == "up") then
-            py = px - (20 * found);
+            py = py - (20 * found);
         end
 
         if (self.facing == "left") then

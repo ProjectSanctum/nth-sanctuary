@@ -6,11 +6,19 @@ function event:init(data)
     local properties = data and data.properties or {}
     self.up = properties.up or false
     self.yoffset = properties.yoff or (self.up and -5 or (self.height + 40))
+	self.marker = properties["marker"] or nil
+	self.center_if_tower = properties["towercenter"] ~= false
     self.timer = self:addChild(Timer())
+	self.true_x = self.x
 end
 
 function event:update()
     super.update(self)
+	if self.center_if_tower and self.world.player and not (self.world.player.onrotatingtower) then
+		self.x = self.world.map.cyltower.tower_x - 20
+	else
+		self.x = self.true_x
+	end
     if
         not Game.lock_movement
         and self.world:hasCutscene()
@@ -86,8 +94,21 @@ function event:onInteract(player, dir)
         scr.wait(jumpTo(player,tx,ty,10,.5))
         player:resetSprite()
         self.world:detachFollowers()
+		if self.marker then
+			player:setPosition(self.world.map:getMarker(self.marker))
+		end
         Assets.playSound("noise")
         player:setState("CLIMB")
+		if self.world.map.cyltower then
+			if self.center_if_tower then
+				player.x = self.true_x + 20
+			end
+			player.onrotatingtower = true
+			player.falseloop = true
+			player.falseloopx = {}
+			player.falseloopx[1] = 0
+			player.falseloopx[2] = self.world.map.cyltower.tower_circumference
+		end
     end)
 end
 
@@ -95,16 +116,23 @@ end
 function event:preClimbEnter(player)
     if player.state_manager.state == "CLIMB" then
         player:setState("WALK")
-        -- TODO: Accurate camera movement
-        self.world.camera:panTo(self.x + (self:getScaledWidth()/2), self.y+(self.up and -42 or 43), .5, nil, function()
-            Kristal.Console:log(self.world.camera.y)
-            self.world.camera:setAttached(true)
-        end)
         local tx, ty = player.x, self.y
-		if player.onrotatingtower then
-			tx = self.world.map.cyltower.tower_x
-		end
         ty = ty + self.yoffset
+        -- TODO: Accurate camera movement
+		if self.world.map.cyltower then
+			tx = self.world.map.cyltower.tower_x
+			self.world.player.onrotatingtower = false
+			self.world.player.x = tx
+			self.world.camera:panTo(self.world.camera.x, self.y+(self.up and -42 or 43), .5, nil, function()
+				Kristal.Console:log(self.world.camera.y)
+				self.world.camera:setAttached(true)
+			end)
+		else
+			self.world.camera:panTo(self.x + (self:getScaledWidth()/2), self.y+(self.up and -42 or 43), .5, nil, function()
+				Kristal.Console:log(self.world.camera.y)
+				self.world.camera:setAttached(true)
+			end)
+		end
         self:startScript(function (scr)
             Assets.stopAndPlaySound("wing")
             player.sprite:set("jump_ball")
