@@ -74,7 +74,7 @@ function event:onInteract(player, dir)
     local id2 = "climb_color"
     for _,follower in ipairs(self.world.followers) do
         local colormask = follower:addFX(RecolorFX(1,1,1,1,1), id2)
-        local mask = follower:addFX(AlphaFX(2), id)
+        local mask = follower:addFX(AlphaFX(1), id)
         self.world.timer:tween(7/30, colormask, {color = {0.5,0.5,0.5,1}})
         self.world.timer:tween(7/30, mask, {alpha = 0})
 		follower.shadow_force_off = true
