@@ -214,7 +214,7 @@ This is your home now.</property>
   </object>
   <object id="61" name="transition" x="1120" y="-40" width="40" height="40">
    <properties>
-    <property name="map" value="3_flooded_sanctuary/flooded_hell_entrance"/>
+    <property name="map" value="3_flooded_sanctuary/flooded_1_hellentrance"/>
     <property name="marker" value="spawn"/>
    </properties>
   </object>

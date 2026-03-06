@@ -120,7 +120,7 @@
             "y": 4440
         },
         {
-            "fileName": "3_flooded_sanctuary/flooded_between/flooded_between.tmx",
+            "fileName": "3_flooded_sanctuary/flooded_0_between/flooded_0_between.tmx",
             "height": 960,
             "width": 640,
             "x": 5280,
@@ -141,7 +141,7 @@
             "y": 4560
         },
         {
-            "fileName": "3_flooded_sanctuary/flooded_hell_entrance/flooded_hell_entrance.tmx",
+            "fileName": "3_flooded_sanctuary/flooded_1_hellentrance/flooded_1_hellentrance.tmx",
             "height": 800,
             "width": 640,
             "x": 7440,

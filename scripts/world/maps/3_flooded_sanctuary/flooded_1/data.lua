@@ -1105,7 +1105,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "3_flooded_sanctuary/flooded_hell_entrance",
+            ["map"] = "3_flooded_sanctuary/flooded_1_hellentrance",
             ["marker"] = "entry"
           }
         },
@@ -1121,7 +1121,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "3_flooded_sanctuary/flooded_between",
+            ["map"] = "3_flooded_sanctuary/flooded_0_between",
             ["marker"] = "entry"
           }
         },
@@ -1153,7 +1153,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "3_flooded_sanctuary/flooded_between",
+            ["map"] = "3_flooded_sanctuary/flooded_0_between",
             ["marker"] = "entry4"
           }
         }

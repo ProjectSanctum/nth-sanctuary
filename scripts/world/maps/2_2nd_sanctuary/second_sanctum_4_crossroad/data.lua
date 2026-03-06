@@ -1516,7 +1516,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "3_flooded_sanctuary/flooded_between",
+            ["map"] = "3_flooded_sanctuary/flooded_0_between",
             ["marker"] = "entry2"
           }
         },
@@ -1532,7 +1532,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "3_flooded_sanctuary/flooded_between",
+            ["map"] = "3_flooded_sanctuary/flooded_0_between",
             ["marker"] = "entry3"
           }
         },
