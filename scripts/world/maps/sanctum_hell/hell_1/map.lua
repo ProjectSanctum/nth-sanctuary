@@ -4,6 +4,7 @@ local map, super = Class(Map, "hell-1")
 function map:init(world, data)
     super.init(self, world, data)
 	self.riptimer = 119
+	self.siner = 0
 end
 
 function map:onEnter()
@@ -13,6 +14,10 @@ function map:onEnter()
 end
 
 function map:update(world, data)
+	self.siner = self.siner + DT
+	local a = self:getTileLayer("Tile Layer 3")
+	a.alpha = 0.1 + math.sin(self.siner)/10
+	print(a.alpha)
 	for _,enemy in ipairs(Game.stage:getObjects(ChaserEnemy)) do
 		for _,ripplefloor in ipairs(Game.world.map:getEvents("ripplefloor")) do
 			if enemy:collidesWith(ripplefloor.collider) and self.riptimer >= 120 then
