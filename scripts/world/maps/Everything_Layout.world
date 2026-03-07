@@ -283,8 +283,8 @@
         {
             "fileName": "secrets/citadel_room/citadel_room_2/citadel_room_2.tmx",
             "height": 480,
-            "width": 1000,
-            "x": -3600,
+            "width": 1080,
+            "x": -3680,
             "y": -1320
         },
         {
@@ -340,8 +340,8 @@
             "fileName": "wip_rooms/dark_place/dark_place.tmx",
             "height": 960,
             "width": 1280,
-            "x": 8440,
-            "y": 6760
+            "x": 8040,
+            "y": 8200
         },
         {
             "fileName": "debug_rooms/climb_test/climb_test.tmx",

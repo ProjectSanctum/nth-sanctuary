@@ -41,7 +41,7 @@ function preview:init(mod, button)
     self.fade_time_seconds = 4;
     self.fade_from = 0;
     self.fade_to = 1;
-    self.scroll_speed = 0;
+    self.scroll_speed = 1;
     self.tick = 0;
     self.intro_mode = false;
 
@@ -150,8 +150,8 @@ function preview:drawPart(texture, xx, yy)
         local shader = Kristal.Shaders["Mask"]
         love.graphics.setShader(shader)
         local rune = self.rune
-        local runeox, runeoy = rune:getWidth()/2, rune:getHeight()/2
-        love.graphics.draw(rune, SCREEN_WIDTH/2+_xx, SCREEN_HEIGHT/2+math.sin(self.siner/30)*10+_yy, 0, 2, 2, runeox, runeoy)
+        local runeox, runeoy = rune:getWidth() / 2, rune:getHeight() / 2
+        love.graphics.draw(rune, SCREEN_WIDTH /2+_xx, SCREEN_HEIGHT/2+math.sin(self.siner / 12)*10+_yy, 0, 2, 2, runeox, runeoy)
         love.graphics.setShader(last_shader)
     end, "replace", 1)
     love.graphics.setStencilTest("greater", 0)
