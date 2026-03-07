@@ -1,7 +1,7 @@
 local FlashFadeTower, super = Class(Object)
 
 function FlashFadeTower:init(texture, x, y)
-    super.init(self, texture, x, y)
+    super.init(self, x, y)
 
     if type(texture) == "string" then
         texture = Assets.getTexture(texture) or (Assets.getFrames(texture)[1])

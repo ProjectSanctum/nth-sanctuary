@@ -48,6 +48,18 @@ function ClimbEnemy:init(data)
     self.reverse_progress = false
 	if Game.world.map.cyltower then
 		self.visible = false
+		if Game.world.map.cyltower.appearance == 1 then
+			self.x = self.x - 40
+			self.flashadjustmentx = -20
+			self.flashadjustmenty = 20
+			self.effectadjustmentx = -60
+			self.effectadjustmenty = 20
+		else
+			self.flashadjustmentx = -20
+			self.flashadjustmenty = -20
+			self.effectadjustmentx = -20
+			self.effectadjustmenty = -20
+		end
 	end
 	self.climb_obstacle = true
 end
@@ -155,10 +167,12 @@ function ClimbEnemy:update()
 		self.timer = 0
 		self.color = COLORS.white
 		if self.world.map.cyltower then
-			local flash = FlashFadeTower(self.sprite.texture, self.x, self.y)
+			local flash = FlashFadeTower(self.sprite.texture, self.x + self.flashadjustmentx + 40, self.y + self.flashadjustmenty)
 			Game.world:addChild(flash)
 		else
-			self:flash()
+			local flash = self:flash()
+			flash.x = flash.x + self.flashadjustmentx
+			flash.y = flash.y + self.flashadjustmenty
 		end
 		Assets.playSound("ui_cancel", 0.4, 1.2)
 		Assets.playSound("laz_c", 0.3, 1.2)
@@ -204,6 +218,9 @@ function ClimbEnemy:update()
 			dmg_sprite_2:setOrigin(0.5, 0.5)
 			dmg_sprite_2:setScale(2, 2)
 			dmg_sprite_2:setPosition(relative_pos_x, relative_pos_y)
+			if self.world.map.cyltower then
+				dmg_sprite_2:setPosition(self.world.map.cyltower.tower_x, self.world.map.cyltower.krisy)
+			end
 			dmg_sprite_2.layer = self.layer + 0.01
 			dmg_sprite_2:play(1 / 15, false, function(s) s:remove() end)
 			Game.world:addChild(dmg_sprite_2)
@@ -214,21 +231,21 @@ function ClimbEnemy:update()
 			Assets.playSound("punchmed", 0.4, 1)
 			if self.world.map.cyltower then	
 				local afterimage_2 = AfterImageCutHalfTower(self.sprite.texture_path)
-				afterimage_2:setPosition(self.x/2, self.y/2)
+				afterimage_2:setPosition(self.x/2 + self.effectadjustmentx + 40, self.y/2 + self.effectadjustmenty)
 				afterimage_2.layer = self.layer
 				afterimage_2:setOriginExact(0, 0)
 				Game.world:addChild(afterimage_2)
 				self:remove()
 			else
 				local afterimage_2 = AfterImageCutHalf(self.sprite.texture_path)
-				afterimage_2:setPosition(self.x/2, self.y/2)
+				afterimage_2:setPosition(self.x/2 + self.effectadjustmentx, self.y/2 + self.effectadjustmenty)
 				afterimage_2.layer = self.layer
 				afterimage_2:setOriginExact(0, 0)
 				Game.world:addChild(afterimage_2)
 				self:remove()
 			end
-			return
 		end
+		return
 	end
 	if not Game.world.player:isMovementEnabled() then
 		return

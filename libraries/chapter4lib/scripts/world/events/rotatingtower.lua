@@ -331,6 +331,41 @@ function RotatingTower:draw()
 						end
 					end
 				end
+			elseif event.id == "ClimbEnemy" then
+				local adjustment = -260
+				if self.appearance == 1 then
+					adjustment = -520
+				end
+				local tile_angle = MathUtils.lerp(360, 0, (event.x + adjustment) / self.tower_circumference)
+				local tile_angle1 = tile_angle + self.tower_angle
+				while tile_angle1 > 360 do
+					tile_angle1 = tile_angle1 - 360
+				end
+				if tile_angle1 < 0 then
+					tile_angle1 = tile_angle1 + 360
+				end
+				if not (tile_angle1 > 350 or tile_angle1 <= 170) then
+					-- end here
+				else
+					local tile_x = MathUtils.lengthDirX(self.tower_radius, -math.rad(tile_angle1))
+					local tile_angle2 = tile_angle1 + self.tile_angle_difference
+					if tile_angle2 > 360 then
+						tile_angle2 = tile_angle2 - 360
+					elseif tile_angle2 < 0 then
+						tile_angle2 = tile_angle2 + 360
+					end
+					local tile_xscale = MathUtils.lengthDirX(self.tower_radius, -math.rad(tile_angle2)) - tile_x
+					local tile_yscale = self.tile_height_fine
+					tile_xscale = tile_xscale / self.tile_width_fine
+					tile_yscale = tile_yscale / self.tile_height_fine
+					local tile_color = ColorUtils.mergeColor(COLORS.white, COLORS.gray, math.abs(tile_x + (tile_xscale / 2)) / 190)
+					local event_canvas = Draw.pushCanvas(event.sprite.width, event.sprite.height)
+					Draw.setColor(1,1,1,event.alpha)
+					Draw.draw(event.sprite.texture, event.sprite.width/2, event.sprite.height/2, -event.sprite.rotation, 1, 1, event.sprite.width/2, event.sprite.height/2)
+					Draw.popCanvas()
+					Draw.setColor(tile_color)
+					Draw.drawCanvas(event_canvas, self.tower_x + event.graphics.shake_x + tile_x, event.y + event.graphics.shake_y - 20, 0, tile_xscale, tile_yscale, ox, oy)
+				end
 			else
 				local ox, oy = event:getOriginExact()
 				local adjustment = 1
@@ -346,7 +381,7 @@ function RotatingTower:draw()
 				local tile = self.tile_data[self.tm_tileset[1]][tilex - 1]
 				if tile.vis == 1 then
 					Draw.setColor(tile.color)
-					Draw.draw(event.sprite.texture, self.tower_x + event.graphics.shake_x + tile.x, event.y + event.graphics.shake_y, event.rotation, (tile.xscale * event.scale_x) / self.tile_width_fine, event.scale_y, ox, oy)
+					Draw.draw(event.sprite.texture, self.tower_x + event.graphics.shake_x + tile.x, event.y + event.graphics.shake_y, 0, (tile.xscale * event.scale_x) / self.tile_width_fine, event.scale_y, ox, oy)
 				end
 			end
 		end
@@ -369,7 +404,7 @@ function RotatingTower:draw()
 				love.graphics.setShader(shader)
 				shader:send("inputcolor", COLORS.white)
 				shader:send("amount", flash.alpha)
-				Draw.draw(flash.sprite.texture, self.tower_x + flash.graphics.shake_x + tile.x + xoff, flash.y + flash.graphics.shake_y, flash.rotation, (tile.xscale * flash.scale_x) / self.tile_width_fine, flash.scale_y, ox, oy)
+				Draw.draw(flash.texture, self.tower_x + flash.graphics.shake_x + tile.x + xoff, flash.y + flash.graphics.shake_y, 0, (tile.xscale * flash.scale_x) / self.tile_width_fine, flash.scale_y, ox, oy)
 				shader:send("amount", 1)
 				love.graphics.setShader(last_shader)
 			end
