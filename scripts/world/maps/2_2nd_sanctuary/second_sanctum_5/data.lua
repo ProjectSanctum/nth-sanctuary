@@ -9,8 +9,8 @@ return {
   height = 60,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 16,
-  nextobjectid = 92,
+  nextlayerid = 17,
+  nextobjectid = 99,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -605,6 +605,21 @@ return {
           properties = {}
         }
       }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 16,
+      name = "paths",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {}
     },
     {
       type = "objectgroup",
@@ -1446,6 +1461,21 @@ return {
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_6",
             ["marker"] = "entry"
+          }
+        },
+        {
+          id = 98,
+          name = "chest",
+          type = "",
+          shape = "rectangle",
+          x = 1100,
+          y = 2220,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["item"] = "mysticband"
           }
         }
       }

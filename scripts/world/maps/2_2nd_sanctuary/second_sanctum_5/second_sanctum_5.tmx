@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="92">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="99">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -230,6 +230,7 @@
   <object id="89" name="climbarea" x="760" y="1240" width="80" height="40"/>
   <object id="90" name="climbarea" x="400" y="1040" width="40" height="40"/>
  </objectgroup>
+ <objectgroup id="16" name="paths"/>
  <objectgroup id="12" name="objects_tower">
   <object id="38" name="rotatingtower" x="340" y="0">
    <properties>
@@ -574,6 +575,11 @@
    <properties>
     <property name="map" value="2_2nd_sanctuary/second_sanctum_6"/>
     <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="98" name="chest" x="1100" y="2220" width="40" height="40">
+   <properties>
+    <property name="item" value="mysticband"/>
    </properties>
   </object>
  </objectgroup>
