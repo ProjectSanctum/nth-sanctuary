@@ -40,6 +40,7 @@ function TossFountain:init()
     }
 
     self.note = {}
+	self.hide_main_menu_currency = true
 end
 
 function TossFountain:getNote()
@@ -68,25 +69,6 @@ end
 
 function TossFountain:onLeave()
     self:setState("LEAVING")
-end
-
-function TossFountain:draw()
-    if self.state ~= "MAINMENU" then
-		super.draw(self)
-	else
-		-- Don't draw money
-		self:drawBackground()
-		super.super.draw(self)
-		love.graphics.setFont(self.font)
-        Draw.setColor(COLORS.white)
-        for i = 1, #self.menu_options do
-            love.graphics.print(self.menu_options[i][1], 480, 220 + (i * 40))
-        end
-        Draw.setColor(Game:getSoulColor())
-        Draw.draw(self.heart_sprite, 450, 230 + (self.main_current_selecting * 40))
-		Draw.setColor(0, 0, 0, self.fade_alpha)
-		love.graphics.rectangle("fill", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
-	end
 end
 
 return TossFountain

@@ -1002,40 +1002,44 @@ function Shop:draw()
             Draw.setColor(COLORS.white)
 
             if not self.hide_storage_text then
-                love.graphics.setFont(self.plain_font)
-
                 local current_storage = Game.inventory:getDefaultStorage(current_item.item)
-                local space = Game.inventory:getFreeSpace(current_storage)
-				local space2 = Game.inventory:getItemCount(current_storage)
-                local total_space = space+space2
-				--this is really stupid but current_storage.max wasnt working??
-				local storagespace = Game.inventory:getItemCount("storage")
-                local total_storagespace = Game.inventory:getItemCount("storage")+Game.inventory:getFreeSpace("storage")
+                if not Game:getConfig("newShopSpaceUI") then
+                    local space = Game.inventory:getFreeSpace(current_storage)
+                    love.graphics.setFont(self.plain_font)
 
-                if not Game:getConfig("shopspaceui") then
                     if space <= 0 then
                         love.graphics.print("NO SPACE", 521, 430)
                     else
                         love.graphics.print("Space:" .. space, 521, 430)
-				    end
-			    else
-					love.graphics.setFont(Assets.getFont("8bitsmall"))
-					if current_item.item.type ~= "armor" and current_item.item.type ~= "weapon" and current_item.item.type ~= "key" then 
-						love.graphics.print(space2 .. "/" .. total_space, 556, 413)
-						love.graphics.print(storagespace .. "/" .. total_storagespace, 556, 445)
-						Draw.draw(Assets.getTexture("ui/shop/ui_hold"), 555, 398)
-						Draw.draw(Assets.getTexture("ui/shop/ui_storage"), 555, 430)
-					else
-						love.graphics.print(space2 .. "/" .. total_space, 556, 437)
-						Draw.draw(Assets.getTexture("ui/shop/ui_hold"), 555, 422)
-						if current_item.item.type == "armor" then
-							Draw.draw(Assets.getTexture("ui/shop/ui_armor"), 555, 410)
-						elseif current_item.item.type == "weapon" then
-							Draw.draw(Assets.getTexture("ui/shop/ui_weapon"), 555, 410)
-						elseif current_item.item.type == "key" then
-							Draw.draw(Assets.getTexture("ui/shop/ui_pocket"), 555, 410)
-						end
-					end
+                    end
+                else
+                    local item_type = current_item.item.type
+                    
+                    local space = Game.inventory:getFreeSpace(current_storage, false)
+                    local space_count = Game.inventory:getItemCount(current_storage, false)
+                    local total_space = space + space_count
+                    
+                    local storage_space = Game.inventory:getFreeSpace("storage")
+                    local storage_space_count = Game.inventory:getItemCount("storage")
+                    local storage_total_space = storage_space + storage_space_count
+                    
+                    love.graphics.setFont(self.space_font)
+                    if item_type ~= "armor" and item_type ~= "weapon" and item_type ~= "key" then
+                        Draw.draw(self.ui_hold_sprite, 555, 398)
+                        love.graphics.print(string.format("%02d", space_count) .. "/" .. string.format("%02d", total_space), 556, 412, 0, 0.5, 0.5)
+                        Draw.draw(self.ui_storage_sprite, 555, 430)
+                        love.graphics.print(string.format("%02d", storage_space_count) .. "/" .. string.format("%02d", storage_total_space), 556, 444, 0, 0.5, 0.5)
+                    else
+                        love.graphics.print(string.format("%02d", space_count) .. "/" .. string.format("%02d", total_space), 556, 436, 0, 0.5, 0.5)
+                        Draw.draw(self.ui_hold_sprite, 555, 422)
+                        if item_type == "armor" then
+                            Draw.draw(self.ui_armor_sprite, 555, 410)
+                        elseif item_type == "weapon" then
+                            Draw.draw(self.ui_weapon_sprite, 555, 410)
+                        elseif item_type == "key" then
+                            Draw.draw(self.ui_pocket_sprite, 555, 410)
+                        end
+                    end
                 end
             end
         end
@@ -1484,7 +1488,7 @@ function Shop:draw()
 		Draw.popScissor()
     end
 
-    if self.state == "MAINMENU" 	or
+    if (self.state == "MAINMENU" and not self:shouldHideMainMenuCurrency()) or
        self.state == "BUYMENU"  	or
        self.state == "SELLMENU" 	or
        self.state == "SELLING"  	or
