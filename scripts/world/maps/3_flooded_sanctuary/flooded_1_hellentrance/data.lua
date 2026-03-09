@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -672,7 +672,7 @@ return {
           x = 640,
           y = 560,
           width = 40,
-          height = 160,
+          height = 200,
           rotation = 0,
           visible = true,
           properties = {}

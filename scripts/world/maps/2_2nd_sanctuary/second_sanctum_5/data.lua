@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 17,
-  nextobjectid = 99,
+  nextobjectid = 100,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -598,6 +598,19 @@ return {
           shape = "rectangle",
           x = 400,
           y = 1040,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 99,
+          name = "destructableclimbarea",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 1760,
           width = 40,
           height = 40,
           rotation = 0,

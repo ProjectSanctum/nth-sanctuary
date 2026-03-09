@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 59,
+  nextobjectid = 63,
   properties = {
     ["music"] = "climb"
   },
@@ -233,6 +233,19 @@ return {
           properties = {
             ["timed"] = false
           }
+        },
+        {
+          id = 62,
+          name = "destructableclimbarea",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 280,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
