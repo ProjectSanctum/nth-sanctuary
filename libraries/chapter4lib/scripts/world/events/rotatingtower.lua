@@ -293,6 +293,24 @@ function RotatingTower:draw()
 			end
 		end
 	end
+	for _, text in ipairs(Game.stage:getObjects(Text)) do
+		if text and text.onrotatingtower then
+			local adjustment = -260
+			if self.appearance == 1 then
+				adjustment = -520
+			end
+			local text_angle_pos =  MathUtils.lerp(360, 0, (text.x + adjustment) / self.tower_circumference)
+			local text_angle = text_angle_pos + self.tower_angle
+			if text_angle > 360 then
+				text_angle = text_angle - 360
+			elseif text_angle < 0 then
+				text_angle = text_angle + 360
+			end
+			if not (text_angle > 350 or text_angle <= 170) then
+				self:drawTowerText(text, text_angle)
+			end
+		end
+	end
 	if self.use_tilesets then
 		local cx = 0
 		local cy = 0
@@ -588,6 +606,24 @@ function RotatingTower:draw()
 			end
 		end
 	end
+	for _, text in ipairs(Game.stage:getObjects(Text)) do
+		if text and text.onrotatingtower then
+			local adjustment = -260
+			if self.appearance == 1 then
+				adjustment = -520
+			end
+			local text_angle_pos =  MathUtils.lerp(360, 0, (text.x + adjustment) / self.tower_circumference)
+			local text_angle = text_angle_pos + self.tower_angle
+			if text_angle > 360 then
+				text_angle = text_angle - 360
+			elseif text_angle < 0 then
+				text_angle = text_angle + 360
+			end
+			if (text_angle > 350 or text_angle <= 170) then
+				self:drawTowerText(text, text_angle)
+			end
+		end
+	end
 	self.tower_x = self.tower_x - self.tower_xshake
 	self.tower_y = self.tower_y - self.tower_yshake
 	Draw.setColor(1,1,1,1)
@@ -611,6 +647,17 @@ function RotatingTower:drawTowerCoin(event, angle)
 	if event.con == 0 then
 		Draw.draw(spr, coin_x, event.y + 30 + math.sin(event.siner / 20) * 4, 0, 2, 2, xoff, yoff)
 	end
+end
+
+function RotatingTower:drawTowerText(text, angle)
+	local dist_from_tower = 15
+	if self.appearance == 2 then
+		dist_from_tower = 45
+	end
+	local text_x = self.tower_x + MathUtils.lengthDirX(self.tower_radius + dist_from_tower, -math.rad(angle))
+	local factor = math.sin(math.rad(angle))
+	Draw.setColor(ColorUtils.mergeColor(COLORS.white, COLORS.black, MathUtils.clamp(1 - factor, 0, 1)))
+	Draw.draw(text.canvas, text_x, text.y)
 end
 
 return RotatingTower
