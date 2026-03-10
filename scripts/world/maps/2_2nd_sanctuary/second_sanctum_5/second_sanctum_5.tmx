@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="108">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="110">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -607,6 +607,12 @@
    <properties>
     <property name="item" value="mysticband"/>
    </properties>
+  </object>
+  <object id="108" name="window_glow" x="780" y="220">
+   <point/>
+  </object>
+  <object id="109" name="window_glow" x="1060" y="220">
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="15" name="objects_fog">

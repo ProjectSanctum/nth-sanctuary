@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 17,
-  nextobjectid = 108,
+  nextobjectid = 110,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -1558,6 +1558,32 @@ return {
           properties = {
             ["item"] = "mysticband"
           }
+        },
+        {
+          id = 108,
+          name = "window_glow",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 220,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 109,
+          name = "window_glow",
+          type = "",
+          shape = "point",
+          x = 1060,
+          y = 220,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

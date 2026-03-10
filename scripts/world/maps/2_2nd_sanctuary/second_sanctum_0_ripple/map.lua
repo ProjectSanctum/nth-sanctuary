@@ -48,8 +48,8 @@ function map:onEnter()
 		window.alpha = 0
 		window.sprite.alpha = 0
 	end
-	self.stupid_hitbox = self:getHitbox("rippleblock") ---@type Hitbox
-	self.stupid_hitbox.collidable = true
+	self.x = self:getHitbox("rippleblock") ---@type Hitbox
+	
 	self.ripple_fx = RippleEffect()
 	self.ripple_fx.layer = WORLD_LAYERS["bottom"]
 	Game.world:addChild(self.ripple_fx)
@@ -126,6 +126,15 @@ function map:update()
 				self.tiles_osc.alpha = 1
 				self.con = 2
 				for _, event in ipairs(self.events) do
+					if event.layer == self.layers["collision"] then
+						event:remove()
+						print("Tweaking object number "..k)
+						event.collidable = true
+					end
+					if event.layer == self.layers["postcollision"] then
+						event.data.properties.solid = true
+						event.collidable = true
+					end
 					if event.layer == self.layers["objects_parallax"] then
 						event.visible = true
 					elseif event.layer == self.layers["objects_parallax2"] then
@@ -139,7 +148,6 @@ function map:update()
 				for _, filter in ipairs(Game.world.map:getEvents("filter")) do
 					filter.visible = true
 				end
-				self.stupid_hitbox.collidable = false
 			end
 		end
 	end
