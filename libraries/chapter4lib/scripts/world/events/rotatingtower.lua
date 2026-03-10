@@ -406,7 +406,7 @@ function RotatingTower:draw()
 								tile_yscale = tile_yscale / self.tile_height_fine
 								local tile_color = ColorUtils.mergeColor(COLORS.white, COLORS.gray, math.abs(tile_x + (tile_xscale / 2)) / 190)
 								Draw.setColor(tile_color)
-								Draw.draw(event.sprite_tex, self.tower_x + event.graphics.shake_x + tile_x, event.y + event.graphics.shake_y + yoff + (j - 1) * 40, 0, tile_xscale * 2, 2)
+								Draw.draw(event.sprite_tex, self.tower_x + event.graphics.shake_x + tile_x, event.y + event.graphics.shake_y + yoff + (j - 1) * 40 + 10, 0, tile_xscale * 2, 2)
 							end
 						else
 							local tilex = math.floor(((event.x + 40 + (i - 1) * 40) * xscale_scaled) + 1)
@@ -418,7 +418,7 @@ function RotatingTower:draw()
 							local tile = self.tile_data[self.tm_tileset[1]][tilex - 1]
 							if tile.vis == 1 then
 								Draw.setColor(tile.color)
-								Draw.draw(event.sprite_tex, self.tower_x + event.graphics.shake_x + tile.x, event.y + event.graphics.shake_y + (j - 1) * 40 + 20, 0, (tile.xscale * 2) / self.tile_width_fine, 2, 0, 10)
+								Draw.draw(event.sprite_tex, self.tower_x + event.graphics.shake_x + tile.x, event.y + event.graphics.shake_y + (j - 1) * 40 + 30, 0, (tile.xscale * 2) / self.tile_width_fine, 2, 0, 10)
 							end
 						end
 					end
