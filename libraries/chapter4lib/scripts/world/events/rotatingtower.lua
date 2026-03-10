@@ -273,6 +273,26 @@ function RotatingTower:draw()
 	end
 	self.tower_x = self.tower_x + self.tower_xshake
 	self.tower_y = self.tower_y + self.tower_yshake
+	for _, event in ipairs(self.world.map.events) do
+		if event and event.climb_obstacle then
+			if event.id == "ClimbCoin" then	
+				local adjustment = -260
+				if self.appearance == 1 then
+					adjustment = -520
+				end
+				local coin_angle_pos =  MathUtils.lerp(360, 0, (event.x + adjustment) / self.tower_circumference)
+				local coin_angle = coin_angle_pos + self.tower_angle
+				if coin_angle > 360 then
+					coin_angle = coin_angle - 360
+				elseif coin_angle < 0 then
+					coin_angle = coin_angle + 360
+				end
+				if not (coin_angle > 350 or coin_angle <= 170) then
+					self:drawTowerCoin(event, coin_angle)
+				end
+			end
+		end
+	end
 	if self.use_tilesets then
 		local cx = 0
 		local cy = 0
@@ -423,6 +443,40 @@ function RotatingTower:draw()
 						end
 					end
 				end
+			elseif event.id == "ClimbCoin" then	
+				local adjustment = -260
+				if self.appearance == 1 then
+					adjustment = -520
+				end
+				local tile_angle = MathUtils.lerp(360, 0, (event.x + 20 + adjustment) / self.tower_circumference)
+				local tile_angle1 = tile_angle + self.tower_angle
+				while tile_angle1 > 360 do
+					tile_angle1 = tile_angle1 - 360
+				end
+				if tile_angle1 < 0 then
+					tile_angle1 = tile_angle1 + 360
+				end
+				if not (tile_angle1 > 350 or tile_angle1 <= 170) then
+					-- end here
+				else
+					local tile_x = MathUtils.lengthDirX(self.tower_radius, -math.rad(tile_angle1))
+					local tile_angle2 = tile_angle1 + self.tile_angle_difference
+					if tile_angle2 > 360 then
+						tile_angle2 = tile_angle2 - 360
+					elseif tile_angle2 < 0 then
+						tile_angle2 = tile_angle2 + 360
+					end
+					local tile_xscale = MathUtils.lengthDirX(self.tower_radius, -math.rad(tile_angle2)) - tile_x
+					local tile_yscale = self.tile_height_fine
+					tile_xscale = tile_xscale / self.tile_width_fine
+					tile_yscale = tile_yscale / self.tile_height_fine
+					local brightcol = ColorUtils.mergeColor(COLORS.white, COLORS.gray, math.abs(tile_x + (tile_xscale / 2)) / 190)
+					local darkcol = ColorUtils.mergeColor(COLORS.gray, COLORS.dkgray, math.abs(tile_x + (tile_xscale / 2)) / 190)
+					local tile_color = ColorUtils.mergeColor(brightcol, darkcol, event.bowlindex/15)
+					local sinamt = math.sin(event.siner / 20) * 6 * MathUtils.clamp(1 - (event.bowlindex / 7), 0, 1)
+					Draw.setColor(tile_color)
+					Draw.draw(event.sprite_tex[(math.floor(event.bowlindex)%6)+1], self.tower_x + event.graphics.shake_x + tile_x, event.y + event.graphics.shake_y - sinamt, 0, tile_xscale * 2, tile_yscale * 2, ox, oy)
+				end
 			else
 				local ox, oy = event:getOriginExact()
 				local adjustment = 1
@@ -502,9 +556,49 @@ function RotatingTower:draw()
 		Draw.draw(self.gradient40, (self.tower_x - self.tower_radius) + self.tile_width, self.tower_y, -math.rad(270), self.verticaltilecount + 1, 1)
 		Draw.draw(self.gradient40, (self.tower_x + self.tower_radius) - self.tile_width, self.tower_y, -math.rad(90), -self.verticaltilecount - 1, 1)
 	end
+	for _, event in ipairs(self.world.map.events) do
+		if event and event.climb_obstacle then
+			if event.id == "ClimbCoin" then	
+				local adjustment = -260
+				if self.appearance == 1 then
+					adjustment = -520
+				end
+				local coin_angle_pos =  MathUtils.lerp(360, 0, (event.x + adjustment) / self.tower_circumference)
+				local coin_angle = coin_angle_pos + self.tower_angle
+				if coin_angle > 360 then
+					coin_angle = coin_angle - 360
+				elseif coin_angle < 0 then
+					coin_angle = coin_angle + 360
+				end
+				if (coin_angle > 350 or coin_angle <= 170) then
+					self:drawTowerCoin(event, coin_angle)
+				end
+			end
+		end
+	end
 	self.tower_x = self.tower_x - self.tower_xshake
 	self.tower_y = self.tower_y - self.tower_yshake
 	Draw.setColor(1,1,1,1)
+end
+
+function RotatingTower:drawTowerCoin(event, angle)
+	local dist_from_tower = 15
+	if self.appearance == 2 then
+		dist_from_tower = 45
+	end
+	local coin_x = self.tower_x + MathUtils.lengthDirX(self.tower_radius + dist_from_tower, -math.rad(angle))
+	local factor = math.sin(math.rad(angle))
+	local spr = event.silver_tex[(math.floor(event.siner/4)%4)+1]
+	local xoff = 4
+	local yoff = 4
+	if event.value > 5 then
+		spr = event.gold_tex[(math.floor(event.siner/4)%4)+1]
+		yoff = 5
+	end
+	Draw.setColor(ColorUtils.mergeColor(COLORS.white, COLORS.black, MathUtils.clamp(1 - factor, 0, 1)))
+	if event.con == 0 then
+		Draw.draw(spr, coin_x, event.y + 20 + math.sin(event.siner / 20) * 4, 0, 2, 2, xoff, yoff)
+	end
 end
 
 return RotatingTower

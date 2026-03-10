@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 17,
-  nextobjectid = 106,
+  nextobjectid = 108,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -1037,6 +1037,36 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 106,
+          name = "climbcoin",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 560,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["value"] = 10
+          }
+        },
+        {
+          id = 107,
+          name = "climbcoin",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 560,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["value"] = 5
+          }
         }
       }
     },

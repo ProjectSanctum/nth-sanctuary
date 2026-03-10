@@ -1,7 +1,7 @@
 ---@class Event.climbcoin : Event
-local event, super = Class(Event, "climbcoin")
+local ClimbCoin, super = Class(Event, "ClimbCoin")
 
-function event:init(data)
+function ClimbCoin:init(data)
     super.init(self, data)
     local properties = data and data.properties or {}
 	self.value = properties["value"] or 5
@@ -12,12 +12,16 @@ function event:init(data)
 	self.siner = 0
 	self.bowlindex = 0
 	self:setHitbox(5, 5, 30, 30)
+	self.climb_obstacle = true
+	if Game.world.map.cyltower then
+		self.visible = false
+	end
 end
 
-function event:update()
+function ClimbCoin:update()
     super.update(self)
 	self.siner = self.siner + DTMULT
-	local collider = Hitbox(self, 0, 0, 40, 40)
+	local collider = Hitbox(self, 5, 5, 30, 30)
 	if self.con == 0 then
 		Object.startCache()
 		if Game.world.player:collidesWith(collider) and Game.world.player.state == "CLIMB" then
@@ -66,9 +70,13 @@ function event:update()
                 font = "goldnumbers"
             }
         )
-        value_text.physics.speed_y = -4
+		value_text.physics.speed_y = -4
         value_text.physics.friction = 0.25
         value_text:setLayer(Game.world.player.layer - 0.05)
+		if Game.world.map.cyltower then
+			value_text.x = Game.world.map.cyltower.tower_x - font:getWidth("+"..self.value)/2
+			value_text:setLayer(Game.world.player.layer + 0.05)
+		end
 		Game.world.timer:after(1, function()
 			value_text:remove()
 		end)
@@ -78,7 +86,7 @@ function event:update()
 	end
 end
 
-function event:draw()
+function ClimbCoin:draw()
 	local sinamt = math.sin(self.siner / 20) * 6 * MathUtils.clamp(1 - (self.bowlindex / 7), 0, 1)
 	Draw.setColor(ColorUtils.mergeColor(COLORS.white, COLORS.gray, self.bowlindex/15))
     Draw.draw(self.sprite_tex[(math.floor(self.bowlindex)%6)+1], 0, -sinamt, 0, 2, 2)
@@ -96,4 +104,4 @@ function event:draw()
     super.draw(self)
 end
 
-return event
+return ClimbCoin
