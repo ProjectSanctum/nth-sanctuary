@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 19,
-  nextobjectid = 47,
+  nextobjectid = 49,
   properties = {
     ["border"] = "church_flooded_hell_dim",
     ["music"] = "waves"
@@ -428,7 +428,7 @@ return {
       id = 7,
       name = "objects_party",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -506,7 +506,7 @@ return {
           visible = true,
           properties = {
             ["map"] = "sanctum_hell/hell_1",
-            ["marker"] = "north_exit"
+            ["marker"] = "flooded_exit"
           }
         }
       }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="100">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="102">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -69,20 +69,6 @@
  </layer>
  <objectgroup id="10" name="objects_bg">
   <object id="82" name="hell_bg" x="-200" y="-40">
-   <point/>
-  </object>
- </objectgroup>
- <objectgroup id="3" name="markers">
-  <object id="4" name="spawn" x="620" y="510">
-   <point/>
-  </object>
-  <object id="51" name="frisk_room_exit" x="80" y="240">
-   <point/>
-  </object>
-  <object id="60" name="north_exit" x="1130" y="120">
-   <point/>
-  </object>
-  <object id="63" name="dark_exit" x="1160" y="470">
    <point/>
   </object>
  </objectgroup>
@@ -254,12 +240,26 @@ This is your home now.</property>
    <polygon points="0,-360 0,80 360,-280 360,-360"/>
   </object>
   <object id="90" x="1200" y="80">
-   <polygon points="0,0 -40,40 -40,120 -80,120 -80,80 -440,440 -440,480 0,480"/>
-  </object>
-  <object id="91" x="1160" y="120">
-   <polygon points="0,0 40,-40 40,-120 0,-120"/>
+   <polygon points="0,0 0,-80 -40,-80 -40,80 -80,80 -440,440 -440,480 0,480"/>
   </object>
   <object id="98" x="320" y="840" width="880" height="120"/>
+ </objectgroup>
+ <objectgroup id="3" name="markers">
+  <object id="4" name="spawn" x="620" y="510">
+   <point/>
+  </object>
+  <object id="51" name="frisk_room_exit" x="80" y="240">
+   <point/>
+  </object>
+  <object id="60" name="north_exit" x="1130" y="120">
+   <point/>
+  </object>
+  <object id="63" name="dark_exit" x="1160" y="470">
+   <point/>
+  </object>
+  <object id="101" name="flooded_exit" x="1140" y="20">
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="2" name="objects_overlay"/>
 </map>

@@ -835,11 +835,10 @@ return {
             cutscene:setSpeaker(jamm)
             cutscene:text("* Hey, [wait:5]you guys can go ahead.", "neutral")
             cutscene:text("* I think I dropped something.", "neutral")
-            if jamm.x > 920 and jamm.y > 640 then
-                cutscene:wait(cutscene:walkTo(jamm, "j-detour", 1))
-            end
+            cutscene:wait(cutscene:walkTo(jamm, "jpointA1", 1))
+			cutscene:wait(cutscene:walkTo(jamm, "jpointA2", 1))
             Game.lock_movement = false
-            cutscene:walkTo(jamm, "jammgoesbyebye", 2)
+            cutscene:walkTo(jamm, "jpointA3", 2)
             jamm.following = false
         end
     end,

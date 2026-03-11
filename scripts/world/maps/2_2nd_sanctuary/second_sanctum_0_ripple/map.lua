@@ -121,7 +121,7 @@ function map:update()
 			end
 			if self.frame_timer == 780 then
 				Game.world.color = COLORS.white
-				self.world:loadMap("2_2nd_sanctuary/second_sanctum_0_ripple_post1", "spawn")
+				self.world:loadMap("2_2nd_sanctuary/second_sanctum_0_ripple_post", "spawn")
 				self.fakefader:fadeOutAndRemove(0.5)
 				self.tiles.alpha = 1
 				self.tiles_osc.alpha = 1
