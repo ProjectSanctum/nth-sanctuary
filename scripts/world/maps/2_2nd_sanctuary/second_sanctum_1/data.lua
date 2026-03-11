@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 15,
-  nextobjectid = 118,
+  nextobjectid = 129,
   parallaxorigin = {
     x = -320,
     y = -240
@@ -282,7 +282,7 @@ return {
       id = 9,
       name = "objects_shadow",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -882,6 +882,100 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 122,
+          name = "spoint",
+          type = "",
+          shape = "point",
+          x = 280,
+          y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 123,
+          name = "npoint",
+          type = "",
+          shape = "point",
+          x = 80,
+          y = 760,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 124,
+          name = "spoint2",
+          type = "",
+          shape = "point",
+          x = 200,
+          y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 125,
+          name = "rpoint",
+          type = "",
+          shape = "point",
+          x = 260,
+          y = 770,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 126,
+          name = "kpoint",
+          type = "",
+          shape = "point",
+          x = 260,
+          y = 830,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 127,
+          name = "jpoint2",
+          type = "",
+          shape = "point",
+          x = 300,
+          y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 128,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 200,
+          y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "noelle",
+            ["flagcheck"] = "!noellefall"
+          }
         }
       }
     },
@@ -1016,101 +1110,7 @@ return {
           properties = {
             ["cutscene"] = "primary.fall",
             ["flagcheck"] = "!noellefall",
-            ["once"] = true
-          }
-        },
-        {
-          id = 111,
-          name = "spoint",
-          type = "",
-          shape = "point",
-          x = 280,
-          y = 800,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 112,
-          name = "npoint",
-          type = "",
-          shape = "point",
-          x = 80,
-          y = 760,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 113,
-          name = "spoint2",
-          type = "",
-          shape = "point",
-          x = 200,
-          y = 800,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 114,
-          name = "rpoint",
-          type = "",
-          shape = "point",
-          x = 260,
-          y = 770,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 115,
-          name = "kpoint",
-          type = "",
-          shape = "point",
-          x = 260,
-          y = 830,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 116,
-          name = "jpoint2",
-          type = "",
-          shape = "point",
-          x = 300,
-          y = 800,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 117,
-          name = "npc",
-          type = "",
-          shape = "point",
-          x = 200,
-          y = 800,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["actor"] = "noelle",
-            ["flagcheck"] = "!noellefall"
+            ["once"] = false
           }
         }
       }
