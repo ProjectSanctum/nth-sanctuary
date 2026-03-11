@@ -650,11 +650,11 @@ function RotatingTower:drawTowerCoin(event, angle)
 end
 
 function RotatingTower:drawTowerText(text, angle)
-	local dist_from_tower = 15
+	local dist_from_tower = 25
 	if self.appearance == 2 then
-		dist_from_tower = 45
+		dist_from_tower = 55
 	end
-	local text_x = self.tower_x + MathUtils.lengthDirX(self.tower_radius + dist_from_tower, -math.rad(angle))
+	local text_x = self.tower_x - text.x_offset + MathUtils.lengthDirX(self.tower_radius + dist_from_tower, -math.rad(angle))
 	local factor = math.sin(math.rad(angle))
 	Draw.setColor(ColorUtils.mergeColor(COLORS.white, COLORS.black, MathUtils.clamp(1 - factor, 0, 1)))
 	Draw.draw(text.canvas, text_x, text.y)

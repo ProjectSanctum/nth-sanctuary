@@ -74,7 +74,7 @@ function ClimbCoin:update()
         value_text.physics.friction = 0.25
         value_text:setLayer(Game.world.player.layer - 0.05)
 		if Game.world.map.cyltower then
-			value_text.x = value_text.x - 20
+			value_text.x_offset = font:getWidth("+"..self.value)/2
 			value_text.visible = false
 			value_text.onrotatingtower = true
 			value_text:setLayer(Game.world.player.layer + 0.05)
