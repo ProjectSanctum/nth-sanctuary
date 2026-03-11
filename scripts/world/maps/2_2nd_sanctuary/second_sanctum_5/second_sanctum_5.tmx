@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="112">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="112">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -155,7 +155,7 @@
 1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1222,1223,1224,1225,1226,1222,1223,1224,1214,1226,1222,1223,1224,1225,1226,1222,1223,1224,1225,1226,1222,1223,1224,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1227,1228,1229,1230,1231,1227,1228,1229,1214,1231,1227,1228,1229,1230,1231,1227,1228,1229,1230,1231,1227,1228,1229,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-1232,1233,1234,1235,1236,1232,1233,1234,1214,1243,1243,1243,1214,1214,1214,1232,1233,1234,1235,1236,1232,1233,1234,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1232,1233,1234,1235,1236,1232,1233,1234,1214,1236,1232,1233,1234,1235,1236,1232,1233,1234,1235,1236,1232,1233,1234,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1217,1218,1219,1220,1221,1217,1218,1219,1214,1221,1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1222,1223,1224,1225,1226,1222,1223,1224,1214,1226,1222,1223,1224,1225,1226,1222,1223,1224,1225,1226,1222,1223,1224,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1227,1228,1229,1230,1231,1227,1228,1229,1214,1231,1227,1228,1229,1230,1231,1227,1228,1229,1230,1231,1227,1228,1229,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -230,7 +230,6 @@
   <object id="88" name="climbarea" x="680" y="1240" width="40" height="40"/>
   <object id="89" name="climbarea" x="760" y="1240" width="80" height="40"/>
   <object id="90" name="climbarea" x="400" y="1040" width="40" height="40"/>
-  <object id="111" name="climbarea" x="480" y="440" width="120" height="40"/>
  </objectgroup>
  <objectgroup id="16" name="paths"/>
  <objectgroup id="12" name="objects_tower">
@@ -401,36 +400,6 @@
   <object id="81" name="climbwaterbucket" x="80" y="1440" width="40" height="40">
    <properties>
     <property name="generate" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="103" name="destructableclimbarea" x="360" y="440" width="40" height="40">
-   <properties>
-    <property name="sprite" value="world/events/climbtiles/brittlewall"/>
-   </properties>
-  </object>
-  <object id="104" name="destructableclimbarea" x="400" y="440" width="40" height="40">
-   <properties>
-    <property name="sprite" value="world/events/climbtiles/brittlewall"/>
-   </properties>
-  </object>
-  <object id="105" name="destructableclimbarea" x="440" y="440" width="40" height="40">
-   <properties>
-    <property name="sprite" value="world/events/climbtiles/brittlewall"/>
-   </properties>
-  </object>
-  <object id="106" name="climbcoin" x="240" y="560" width="40" height="40">
-   <properties>
-    <property name="value" type="int" value="10"/>
-   </properties>
-  </object>
-  <object id="107" name="climbcoin" x="400" y="560" width="40" height="40">
-   <properties>
-    <property name="value" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="110" name="climbswitch" x="520" y="440" width="40" height="40">
-   <properties>
-    <property name="timed" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>
