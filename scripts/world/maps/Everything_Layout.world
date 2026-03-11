@@ -74,7 +74,7 @@
             "fileName": "2_2nd_sanctuary/second_sanctum_1/second_sanctum_1.tmx",
             "height": 1120,
             "width": 920,
-            "x": -1200,
+            "x": -1240,
             "y": 4080
         },
         {
@@ -149,10 +149,10 @@
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_0_ripple/second_sanctum_0_ripple.tmx",
-            "height": 1440,
-            "width": 2160,
-            "x": -2400,
-            "y": 1600
+            "height": 1520,
+            "width": 2320,
+            "x": -2560,
+            "y": 1520
         },
         {
             "fileName": "4_4th_sanctuary/fourth_sanctum_1/fourth_sanctum_1.tmx",
@@ -494,7 +494,14 @@
             "fileName": "2_2nd_sanctuary/second_sanctum_0_ripple_post/second_sanctum_0_ripple_post.tmx",
             "height": 960,
             "width": 1680,
-            "x": -4320,
+            "x": -2920,
+            "y": 3120
+        },
+        {
+            "fileName": "2_2nd_sanctuary/second_sanctum_1_winglade/second_sanctum_1_winglade.tmx",
+            "height": 720,
+            "width": 1040,
+            "x": -1240,
             "y": 3280
         }
     ],
