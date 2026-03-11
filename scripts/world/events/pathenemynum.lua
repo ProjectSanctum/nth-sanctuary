@@ -20,11 +20,13 @@ function PathingEnemySpawnNum:init(data)
 	self.prefdir = properties["prefdir"] or "left"
     self.path = properties["path"]
     self.progress = (properties["progress"] or 0) % 1
+end
+
+function PathingEnemySpawnNum:postLoad()
 	local world = Game.world
-	
 	if self.spawnamount > 0 then
 		for i=1, self.spawnamount do
-			local bullet = world:spawnBullet("pathingenemy", self.x, self.y, {
+			local bullet = world:spawnBullet("pathingenemy", self.x + 20, self.y + 20, {
 				damage = self.damage,
 				movetype = self.movetype,
 				movevistype = self.movevistype,
