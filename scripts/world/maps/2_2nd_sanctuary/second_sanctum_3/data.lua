@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -815,19 +815,6 @@ return {
           properties = {}
         },
         {
-          id = 151,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 760,
-          y = 520,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 211,
           name = "",
           type = "",
@@ -1134,7 +1121,7 @@ return {
           x = 760,
           y = 480,
           width = 40,
-          height = 40,
+          height = 80,
           rotation = 0,
           visible = true,
           properties = {}
@@ -2377,19 +2364,6 @@ return {
           properties = {
             ["value"] = 5
           }
-        },
-        {
-          id = 350,
-          name = "destructableclimbarea",
-          type = "",
-          shape = "rectangle",
-          x = 800,
-          y = 480,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
         },
         {
           id = 351,
