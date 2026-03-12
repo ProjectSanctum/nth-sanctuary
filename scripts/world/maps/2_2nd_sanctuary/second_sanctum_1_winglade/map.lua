@@ -1,5 +1,5 @@
 ---@class Map.dark_place : Map
-local map, super = Class(Map, "secsanctuary/ripplepost")
+local map, super = Class(Map, "2_2nd_sanctuary/second_sanctum_1_winglade")
 
 function map:init(world, data)
     super.init(self, world, data)
@@ -7,10 +7,6 @@ function map:init(world, data)
 end
 
 function map:onEnter()
-    local sa = self.world:getCharacter("noelle")
-    if sa and not Game:getFlag("noellefall") then
-        sa:setFacing("left")
-    end
 	for _, event in ipairs(self.events) do
 		if event.layer == self.layers["objects_parallax"] then
 			 event.parallax_x = 0.5

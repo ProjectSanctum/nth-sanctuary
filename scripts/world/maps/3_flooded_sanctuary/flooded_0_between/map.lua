@@ -10,6 +10,9 @@ end
 function map:onEnter()
 	self.fade_left_tiles = 4
     self.fade_right_tiles = 6
+    if self.fakefader then
+        Game.world.timer:tween(0.35, self.fakefader, {alpha = 0})
+    end
 end
 
 function map:update()

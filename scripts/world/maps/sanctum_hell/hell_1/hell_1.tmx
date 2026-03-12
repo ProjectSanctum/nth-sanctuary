@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="102">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="102">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -257,7 +257,7 @@ This is your home now.</property>
   <object id="63" name="dark_exit" x="1160" y="470">
    <point/>
   </object>
-  <object id="101" name="flooded_exit" x="1140" y="20">
+  <object id="101" name="flooded_exit" x="1140" y="50">
    <point/>
   </object>
  </objectgroup>

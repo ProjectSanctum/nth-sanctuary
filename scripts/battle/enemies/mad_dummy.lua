@@ -180,6 +180,11 @@ function Dummy:getHealthDisplay()
     return super.getHealthDisplay(self)
 end
 
+function Dummy:spare(pacify)
+    self.siner_active = false
+    return super.spare(self, pacify)
+end
+
 function Dummy:onDefeat(damage, battler)
     if self.the_true_end == true then return super.onDefeat(self, damage, battler) end
     if Game.battle.battle_ui.attacking then

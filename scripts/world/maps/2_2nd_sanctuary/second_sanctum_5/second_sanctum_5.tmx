@@ -155,7 +155,7 @@
 1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1222,1223,1224,1225,1226,1222,1223,1224,1214,1226,1222,1223,1224,1225,1226,1222,1223,1224,1225,1226,1222,1223,1224,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1227,1228,1229,1230,1231,1227,1228,1229,1214,1231,1227,1228,1229,1230,1231,1227,1228,1229,1230,1231,1227,1228,1229,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-1232,1233,1234,1235,1236,1232,1233,1234,1214,1243,1243,1243,1214,1214,1214,1232,1233,1234,1235,1236,1232,1233,1234,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1232,1233,1234,1235,1236,1232,1233,1234,1214,1236,1232,1233,1234,1235,1236,1232,1233,1234,1235,1236,1232,1233,1234,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1217,1218,1219,1220,1221,1217,1218,1219,1214,1221,1217,1218,1219,1220,1221,1217,1218,1219,1220,1221,1217,1218,1219,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1222,1223,1224,1225,1226,1222,1223,1224,1214,1226,1222,1223,1224,1225,1226,1222,1223,1224,1225,1226,1222,1223,1224,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 1227,1228,1229,1230,1231,1227,1228,1229,1214,1231,1227,1228,1229,1230,1231,1227,1228,1229,1230,1231,1227,1228,1229,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -230,7 +230,6 @@
   <object id="88" name="climbarea" x="680" y="1240" width="40" height="40"/>
   <object id="89" name="climbarea" x="760" y="1240" width="80" height="40"/>
   <object id="90" name="climbarea" x="400" y="1040" width="40" height="40"/>
-  <object id="111" name="climbarea" x="480" y="440" width="120" height="40"/>
  </objectgroup>
  <objectgroup id="16" name="paths"/>
  <objectgroup id="12" name="objects_tower">
@@ -403,36 +402,6 @@
     <property name="generate" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="103" name="destructableclimbarea" x="360" y="440" width="40" height="40">
-   <properties>
-    <property name="sprite" value="world/events/climbtiles/brittlewall"/>
-   </properties>
-  </object>
-  <object id="104" name="destructableclimbarea" x="400" y="440" width="40" height="40">
-   <properties>
-    <property name="sprite" value="world/events/climbtiles/brittlewall"/>
-   </properties>
-  </object>
-  <object id="105" name="destructableclimbarea" x="440" y="440" width="40" height="40">
-   <properties>
-    <property name="sprite" value="world/events/climbtiles/brittlewall"/>
-   </properties>
-  </object>
-  <object id="106" name="climbcoin" x="240" y="560" width="40" height="40">
-   <properties>
-    <property name="value" type="int" value="10"/>
-   </properties>
-  </object>
-  <object id="107" name="climbcoin" x="400" y="560" width="40" height="40">
-   <properties>
-    <property name="value" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="110" name="climbswitch" x="520" y="440" width="40" height="40">
-   <properties>
-    <property name="timed" type="bool" value="false"/>
-   </properties>
-  </object>
  </objectgroup>
  <layer id="14" name="tile_tower_cover" width="60" height="60" visible="0">
   <data encoding="csv">
@@ -498,8 +467,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="9" name="objects_osc" locked="1">
-  <object id="32" name="texturescroller" x="0" y="0">
+ <objectgroup id="9" name="objects_osc">
+  <object id="32" name="texturescroller" x="80" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
@@ -572,7 +541,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="collision" locked="1">
+ <objectgroup id="4" name="collision">
   <object id="4" x="960" y="240" width="200" height="40"/>
   <object id="8" x="1160" y="280" width="40" height="80"/>
   <object id="9" x="0" y="2160" width="1160" height="40"/>
@@ -622,12 +591,12 @@
   </object>
  </objectgroup>
  <objectgroup id="15" name="objects_fog">
-  <object id="1" name="churchfog" x="-66.061" y="23.636">
+  <object id="1" name="churchfog" x="0" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="2" name="objects_top">
-  <object id="2" name="filter" x="-120" y="-80">
+  <object id="2" name="filter" x="40" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
