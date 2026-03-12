@@ -28,11 +28,13 @@ function map:onEnter()
         self.tiles3 = Game.world.map:getTileLayer("tiles3")
         self.tiles4 = Game.world.map:getTileLayer("tiles4")
         self.tiles5 = Game.world.map:getTileLayer("tiles5")
+        self.tiles6 = Game.world.map:getTileLayer("tiles6")
         self.tiles.alpha = 0
         self.tiles2.alpha = 0
         self.tiles3.alpha = 0
         self.tiles4.alpha = 0
         self.tiles5.alpha = 0
+        self.tiles6.alpha = 0
         
         Game.world.timer:after(10/30, function()
             self.con = 1
@@ -119,6 +121,7 @@ function map:update(world, data)
                     self.tiles3.alpha = 1
                     self.tiles4.alpha = 1
                     self.tiles5.alpha = 1
+                    self.tiles6.alpha = 1
                     self.con = 2
                     Game:setFlag("ripplestop", true)
                     Game:setFlag("intro_complete", true)

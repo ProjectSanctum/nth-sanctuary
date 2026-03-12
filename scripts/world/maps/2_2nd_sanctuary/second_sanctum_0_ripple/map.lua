@@ -1,5 +1,5 @@
 ---@class Map.dark_place : Map
-local map, super = Class(Map, "secsanctuary/ripple1")
+local map, super = Class(Map, "2_2nd_sanctuary/ripple1")
 
 function map:init(world, data)
     super.init(self, world, data)
@@ -16,8 +16,6 @@ function map:onEnter()
     self.tiles.alpha = 0
     self.tiles_osc = Game.world.map:getTileLayer("tiles_osc_optimize")
     self.tiles_osc.alpha = 0
-    Game:setFlag("ripple2nd", false)
-    
     for _, event in ipairs(self.events) do
         if event.layer == self.layers["objects_tile_oscillate"] then
              event.visible = false
@@ -38,11 +36,9 @@ function map:onEnter()
              event.visible = false
         end
     end
-
     for _, filter in ipairs(Game.world.map:getEvents("filter")) do
         filter.visible = false
     end
-
     for _, window in ipairs(Game.world.map:getEvents("window_glow")) do
         window.alpha = 0
         window.sprite.alpha = 0
@@ -55,20 +51,18 @@ function map:onEnter()
     self.ripple_fx_alt.layer = WORLD_LAYERS["above_events"]
     Game.world:addChild(self.ripple_fx_alt)
 
-    Game.world.map.timer:script(function(wait)
-        while not Game:getFlag("ripple2nd") do
-            wait(1/30)
-        end
-
+    Game.world.timer:script(function(wait)
+        wait(10/30)
         self.con = 1
         Game.world.music:play("second_church", 0.7, 1)
 
         local beat_times = {0, 95.25, 190.5, 285.75, 381, 476.25, 571.5, 666.75}
-        
+        local current_beat = 1
+
         for i = 1, #beat_times do
             self:spawnRippleBurst()
             
-            if beat_times[i] == 381 then 
+            if i == 5 then 
                 for _, window in ipairs(Game.world.map:getEvents("window_glow")) do
                     Game.world.timer:tween(300/30, window, {alpha = 1}, "linear")
                 end
@@ -145,7 +139,7 @@ function map:transitionMap()
 end
 
 function map:onExit()
-    Game:setFlag("ripple2nd", false)
+	Game:setFlag("ripple2nd", false)
     self.world.color = COLORS.white
 end
 

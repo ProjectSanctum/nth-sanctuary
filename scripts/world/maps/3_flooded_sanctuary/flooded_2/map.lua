@@ -12,6 +12,9 @@ end
 function map:onEnter()
     self.fade_top_px = -4
     self.fade_bottom_px = -4
+    if self.fakefader then
+        Game.world.timer:tween(0.35, self.fakefader, {alpha = 0})
+    end
 end
 
 function map:update()

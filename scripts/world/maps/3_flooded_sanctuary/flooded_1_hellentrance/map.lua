@@ -16,6 +16,9 @@ function map:onEnter()
 	self.ripple_fx.layer = WORLD_LAYERS["bottom"]
 	Game.world:addChild(self.ripple_fx)
 	self.hell_border_alpha = 1
+    if self.fakefader then
+        Game.world.timer:tween(0.35, self.fakefader, {alpha = 0})
+    end
 end
 
 function map:update(world, data)

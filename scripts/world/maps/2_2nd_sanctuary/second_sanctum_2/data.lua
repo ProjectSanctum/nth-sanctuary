@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -340,8 +340,8 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 280,
-          y = 940,
+          x = 320,
+          y = 930,
           width = 0,
           height = 0,
           rotation = 0,
