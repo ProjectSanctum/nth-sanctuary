@@ -95,4 +95,12 @@ return {
                 cutscene:text("* H-He's coming...!", "concern")
                 Assets.playSound("weaponpull_fast")
     end,
+
+    jammslingshot = function (cutscene)
+        local h = Game:getFlag("slingCon")
+
+        if h == 1 then
+            cutscene:text("* Where is it?", "jamm")
+        end
+    end
 }
