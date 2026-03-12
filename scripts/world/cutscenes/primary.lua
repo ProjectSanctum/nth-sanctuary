@@ -829,6 +829,9 @@ return {
         Game.world.timer:after(2, function()sus:remove()end)
         cutscene:startEncounter("titan", true, sus)
     end,
+	ripple2nd = function(cutscene)
+		Game:setFlag("ripple2nd", true)
+	end,
     prefall = function (cutscene)
         if Game:hasPartyMember("jamm") then
             local jamm = cutscene:getCharacter("jamm")

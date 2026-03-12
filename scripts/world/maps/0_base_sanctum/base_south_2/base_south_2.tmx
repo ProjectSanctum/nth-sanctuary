@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="40">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="41">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -157,6 +157,9 @@
    <point/>
   </object>
   <object id="39" name="walkp4" x="180" y="910">
+   <point/>
+  </object>
+  <object id="40" name="ripple_entry" x="180" y="940">
    <point/>
   </object>
  </objectgroup>

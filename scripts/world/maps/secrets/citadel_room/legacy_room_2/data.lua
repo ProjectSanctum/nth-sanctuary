@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -171,19 +171,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        },
-        {
-          id = 9,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 160,
-          y = 120,
-          width = 80,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
         }
       }
     },
@@ -235,7 +222,7 @@ return {
           name = "enemy",
           type = "",
           shape = "rectangle",
-          x = 530,
+          x = 520,
           y = 220,
           width = 40,
           height = 40,
@@ -293,6 +280,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["solid"] = true,
             ["text1"] = "* (Stop looking at it.)"
           }
         },

@@ -18,6 +18,7 @@ function map:onEnter()
 	self.tiles.alpha = 0
 	self.tiles_osc = Game.world.map:getTileLayer("tiles_osc_optimize")
 	self.tiles_osc.alpha = 0
+	Game:setFlag("ripple2nd", false)
 	for _, event in ipairs(self.events) do
 		if event.layer == self.layers["objects_tile_oscillate"] then
 			 event.visible = false
@@ -38,9 +39,6 @@ function map:onEnter()
 			 event.visible = false
 		end
 	end
-	Game.world.timer:after(10/30, function()
-		self.con = 1
-	end)
 	for _, filter in ipairs(Game.world.map:getEvents("filter")) do
 		filter.visible = false
 	end
@@ -59,13 +57,13 @@ function map:onEnter()
 end
 
 function map:onExit()
+	Game:setFlag("ripple2nd", false)
     self.world.color = COLORS.white
 end
 
 function map:update()
-	print(self.con)
 	super.update(self)
-	if self.con == 1 then
+	if  Game:getFlag("ripple2nd") then
 		self.dtmult_timer = self.dtmult_timer + DTMULT
 		if self.dtmult_timer >= 1 then
 			self.dtmult_timer = 0

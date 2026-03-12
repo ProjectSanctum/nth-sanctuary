@@ -922,7 +922,7 @@ return {
           properties = {
             ["cutscene"] = "primary.fall",
             ["flagcheck"] = "!noellefall",
-            ["once"] = false
+            ["once"] = true
           }
         },
         {

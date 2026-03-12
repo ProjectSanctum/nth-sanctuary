@@ -221,7 +221,7 @@
    <properties>
     <property name="cutscene" value="primary.fall"/>
     <property name="flagcheck" value="!noellefall"/>
-    <property name="once" type="bool" value="false"/>
+    <property name="once" type="bool" value="true"/>
    </properties>
   </object>
   <object id="129" name="npc" x="200" y="760">

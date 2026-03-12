@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 14,
-  nextobjectid = 40,
+  nextobjectid = 41,
   properties = {
     ["music"] = "homebase"
   },
@@ -449,6 +449,19 @@ return {
           shape = "point",
           x = 180,
           y = 910,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 40,
+          name = "ripple_entry",
+          type = "",
+          shape = "point",
+          x = 180,
+          y = 940,
           width = 0,
           height = 0,
           rotation = 0,

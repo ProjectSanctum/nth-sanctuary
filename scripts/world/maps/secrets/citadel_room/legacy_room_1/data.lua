@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 46,
+  nextobjectid = 48,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune"
@@ -287,19 +287,6 @@ return {
           properties = {}
         },
         {
-          id = 11,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 200,
-          y = 720,
-          width = 80,
-          height = 200,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 12,
           name = "",
           type = "",
@@ -456,19 +443,6 @@ return {
           properties = {}
         },
         {
-          id = 36,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 120,
-          width = 80,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 41,
           name = "",
           type = "",
@@ -477,6 +451,32 @@ return {
           y = 240,
           width = 40,
           height = 60,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 880,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 47,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 720,
+          width = 80,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}
@@ -600,6 +600,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["solid"] = true,
             ["text1"] = "* (What an interesting statue...)",
             ["text2"] = "* (It is impolite to pass by it.)"
           }
@@ -626,12 +627,13 @@ return {
           type = "",
           shape = "rectangle",
           x = 400,
-          y = 121,
+          y = 120,
           width = 80,
           height = 40,
           rotation = 0,
           visible = true,
           properties = {
+            ["solid"] = true,
             ["text1"] = "* (Stop looking at it.)"
           }
         },
