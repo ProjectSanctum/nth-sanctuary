@@ -63,7 +63,7 @@ function preview:draw()
     if flag == 0 or not flag then
 		self.scroll_speed = 1
 		local surf = Draw.pushCanvas(640, 480);
-		local amt = math.sin((self.tick / 15) * (2 * math.pi)) * (self.scroll_speed * 6)
+		local amt = math.sin((self.tick / 12) * (2 * math.pi)) * (self.scroll_speed * 6)
 		love.graphics.setColor(0, 0, 0, 1)
 		love.graphics.rectangle("fill", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
 		love.graphics.setColor(1,1,1)
@@ -151,7 +151,7 @@ function preview:drawPart(texture, xx, yy)
         love.graphics.setShader(shader)
         local rune = self.rune
         local runeox, runeoy = rune:getWidth() / 2, rune:getHeight() / 2
-        love.graphics.draw(rune, SCREEN_WIDTH /2+_xx, SCREEN_HEIGHT/2+math.sin(self.siner / 12)*10+_yy, 0, 2, 2, runeox, runeoy)
+        love.graphics.draw(rune, SCREEN_WIDTH/2+_xx, SCREEN_HEIGHT/2+(math.sin((self.tick / 12) * (2 * math.pi)) * (self.scroll_speed * 6))+_yy, 0, 2, 2, runeox, runeoy)
         love.graphics.setShader(last_shader)
     end, "replace", 1)
     love.graphics.setStencilTest("greater", 0)
