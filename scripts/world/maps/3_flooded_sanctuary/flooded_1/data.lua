@@ -1300,40 +1300,6 @@ return {
             ["area"] = { id = 87 },
             ["up"] = true
           }
-<<<<<<< HEAD
-        },
-        {
-          id = 142,
-          name = "piano",
-          type = "",
-          shape = "rectangle",
-          x = 1120,
-          y = 520,
-          width = 90,
-          height = 30,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["destroyhints"] = true,
-            ["destroyswitches"] = false,
-            ["solution"] = "131315"
-          }
-        },
-        {
-          id = 143,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1120,
-          y = 560,
-          width = 90,
-          height = 66,
-          rotation = 0,
-          gid = 1540,
-          visible = true,
-          properties = {}
-=======
->>>>>>> parent of 3548490 (Revert "Merge branch 'master' of https://github.com/ProjectSanctum/nth-sanctuary")
         }
       }
     },

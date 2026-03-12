@@ -34,10 +34,7 @@ function map:onEnter()
         self.tiles3.alpha = 0
         self.tiles4.alpha = 0
         self.tiles5.alpha = 0
-<<<<<<< HEAD
-=======
         self.tiles6.alpha = 0
->>>>>>> parent of 3548490 (Revert "Merge branch 'master' of https://github.com/ProjectSanctum/nth-sanctuary")
         
         Game.world.timer:after(10/30, function()
             self.con = 1

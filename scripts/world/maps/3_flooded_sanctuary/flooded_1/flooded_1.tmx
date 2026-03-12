@@ -458,17 +458,6 @@
     <property name="up" type="bool" value="true"/>
    </properties>
   </object>
-<<<<<<< HEAD
-  <object id="142" name="piano" x="1120" y="520" width="90" height="30">
-   <properties>
-    <property name="destroyhints" type="bool" value="true"/>
-    <property name="destroyswitches" type="bool" value="false"/>
-    <property name="solution" value="131315"/>
-   </properties>
-  </object>
-  <object id="143" gid="1540" x="1120" y="560" width="90" height="66"/>
-=======
->>>>>>> parent of 3548490 (Revert "Merge branch 'master' of https://github.com/ProjectSanctum/nth-sanctuary")
  </objectgroup>
  <objectgroup id="9" name="objects_overlay">
   <object id="17" name="texturescroller" x="-20" y="480">

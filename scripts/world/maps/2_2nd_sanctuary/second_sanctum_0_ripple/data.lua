@@ -588,9 +588,6 @@ return {
           y = 800,
           y = 800,
           width = 40,
-<<<<<<< HEAD
-          height = 720,
-=======
           height = 800,
           rotation = 0,
           visible = true,
@@ -606,7 +603,6 @@ return {
           y = 1440,
           width = 120,
           height = 40,
->>>>>>> parent of 3548490 (Revert "Merge branch 'master' of https://github.com/ProjectSanctum/nth-sanctuary")
           rotation = 0,
           visible = true,
           properties = {}
@@ -722,8 +718,6 @@ return {
           properties = {}
         },
         {
-<<<<<<< HEAD
-=======
           id = 165,
           name = "",
           type = "",
@@ -738,7 +732,6 @@ return {
           properties = {}
         },
         {
->>>>>>> parent of 3548490 (Revert "Merge branch 'master' of https://github.com/ProjectSanctum/nth-sanctuary")
           id = 166,
           name = "",
           type = "",
@@ -869,12 +862,8 @@ return {
           type = "",
           shape = "point",
           x = 1800,
-<<<<<<< HEAD
-          y = 1480,
-=======
           y = 1400,
           y = 1400,
->>>>>>> parent of 3548490 (Revert "Merge branch 'master' of https://github.com/ProjectSanctum/nth-sanctuary")
           width = 0,
           height = 0,
           rotation = 0,
