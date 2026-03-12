@@ -51,7 +51,7 @@ function map:onEnter()
     self.ripple_fx_alt.layer = WORLD_LAYERS["above_events"]
     Game.world:addChild(self.ripple_fx_alt)
 
-    Game.world.timer:script(function(wait)
+    Game.world.map.timer:script(function(wait)
         wait(10/30)
         self.con = 1
         Game.world.music:play("second_church", 0.7, 1)
