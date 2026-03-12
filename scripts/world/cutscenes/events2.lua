@@ -100,7 +100,8 @@ return {
         local h = Game:getFlag("slingCon")
 
         if h == 1 then
-            cutscene:text("* Where is it?", "jamm")
+            cutscene:setSpeaker("jamm")
+            cutscene:text("* Where is it...", "suspicious")
         end
     end
 }
