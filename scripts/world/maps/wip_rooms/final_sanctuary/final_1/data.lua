@@ -9,8 +9,8 @@ return {
   height = 34,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 13,
-  nextobjectid = 54,
+  nextlayerid = 14,
+  nextobjectid = 55,
   properties = {
     ["border"] = "church_grand_grey",
     ["music"] = "final"
@@ -230,6 +230,36 @@ return {
         0, 0, 0, 0, 0, 0, 905, 906, 907, 0, 0, 0, 895, 896, 897, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 895, 896, 897, 0, 0, 0, 905, 906, 907, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 905, 906, 907, 0, 0, 0, 895, 896, 897, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 13,
+      name = "objects_shadow_b",
+      class = "",
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 54,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1280,
+          y = 1362,
+          width = 1040,
+          height = 1280,
+          rotation = 270,
+          gid = 515,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
