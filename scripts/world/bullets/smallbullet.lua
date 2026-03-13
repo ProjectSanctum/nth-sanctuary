@@ -14,14 +14,13 @@ function TestBullet:init(x, y, flip, flip2)
 
     self.damage = 20
 
-    self.physics.speed = 0
+    self.physics.speed = 5
     self.physics.friction = -0.2
 
     self.alpha = 0
     self:fadeToSpeed(1, 0.1)
 
     self.start_x = x
-    --Game.world.timer:after(1.5, function()  self:fadeOutSpeedAndRemove(2)end)
 end
 
 function TestBullet:getDrawColor()
