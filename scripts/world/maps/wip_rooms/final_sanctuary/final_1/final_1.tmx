@@ -58,6 +58,9 @@
 0,0,0,0,0,0,905,906,907,0,0,0,895,896,897,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="13" name="objects_shadow_b" visible="0" locked="1">
+  <object id="54" gid="515" x="1320" y="1362" width="1040" height="1320" rotation="270"/>
+ </objectgroup>
  <layer id="12" name="tiles_texture" width="21" height="34" tintcolor="#985100">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,605,605,605,0,0,0,0,0,0,0,0,0,
@@ -96,9 +99,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="13" name="objects_shadow_b" visible="0" locked="1">
-  <object id="54" gid="515" x="1320" y="1362" width="1040" height="1320" rotation="270"/>
- </objectgroup>
  <layer id="1" name="tiles" width="21" height="34">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,1074,1075,1096,0,0,0,0,0,0,0,0,0,

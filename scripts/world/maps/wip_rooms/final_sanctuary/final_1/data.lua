@@ -179,6 +179,36 @@ return {
       }
     },
     {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 13,
+      name = "objects_shadow_b",
+      class = "",
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 54,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1320,
+          y = 1362,
+          width = 1040,
+          height = 1320,
+          rotation = 270,
+          gid = 515,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
       type = "tilelayer",
       x = 0,
       y = 0,
@@ -231,36 +261,6 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 605, 605, 605, 605, 605, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 13,
-      name = "objects_shadow_b",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 54,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1320,
-          y = 1362,
-          width = 1040,
-          height = 1320,
-          rotation = 270,
-          gid = 515,
-          visible = true,
-          properties = {}
-        }
       }
     },
     {
