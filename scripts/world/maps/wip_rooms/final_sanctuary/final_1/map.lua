@@ -1,5 +1,5 @@
 
-local Map, super = Class(Map, "final-1")
+local Map, super = Class(Map, "final_1")
 
 function Map:init(world, data)
     super.init(self, world, data)

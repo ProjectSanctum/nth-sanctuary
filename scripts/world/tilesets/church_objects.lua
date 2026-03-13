@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   name = "church_objects",
   class = "",
   tilewidth = 2880,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 92,
+  tilecount = 96,
   tiles = {
     {
       id = 0,
@@ -39,7 +39,7 @@ return {
     },
     {
       id = 2,
-      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_repeatable.png",
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_connectable.png",
       width = 100,
       height = 620
     },
@@ -752,6 +752,30 @@ return {
       image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire_proph.png",
       width = 320,
       height = 800
+    },
+    {
+      id = 98,
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_connectable_recolorable.png",
+      width = 100,
+      height = 620
+    },
+    {
+      id = 99,
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_tileable_recolorable.png",
+      width = 200,
+      height = 800
+    },
+    {
+      id = 100,
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire_recolorable.png",
+      width = 320,
+      height = 800
+    },
+    {
+      id = 101,
+      image = "../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_recolorable.png",
+      width = 200,
+      height = 289
     }
   }
 }

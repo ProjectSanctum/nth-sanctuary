@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="church_objects" tilewidth="2880" tileheight="800" tilecount="92" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="church_objects" tilewidth="2880" tileheight="800" tilecount="96" columns="0">
  <editorsettings>
   <export target="church_objects.lua" format="lua"/>
  </editorsettings>
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
-  <image width="200" height="289" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches.png" width="200" height="289"/>
  </tile>
  <tile id="1">
-  <image width="100" height="620" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_connectable.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_connectable.png" width="100" height="620"/>
  </tile>
  <tile id="2">
-  <image width="100" height="620" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_repeatable.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_connectable.png" width="100" height="620"/>
  </tile>
  <tile id="3">
-  <image width="200" height="800" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_tileable.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_tileable.png" width="200" height="800"/>
  </tile>
  <tile id="4">
-  <image width="320" height="800" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire.png" width="320" height="800"/>
  </tile>
  <tile id="12">
-  <image width="320" height="100" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_distant_tower.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_distant_tower.png" width="320" height="100"/>
  </tile>
  <tile id="6">
-  <image width="20" height="80" source="../../../assets/sprites/world/objects/spr_dw_church_stairs_legendmarker.png"/>
+  <image source="../../../assets/sprites/world/objects/spr_dw_church_stairs_legendmarker.png" width="20" height="80"/>
  </tile>
  <tile id="14">
-  <image width="20" height="100" source="../../../assets/sprites/world/objects/spr_dw_church_stairs_legendmarker_longer.png"/>
+  <image source="../../../assets/sprites/world/objects/spr_dw_church_stairs_legendmarker_longer.png" width="20" height="100"/>
  </tile>
  <tile id="7">
-  <image width="45" height="33" source="../../../assets/sprites/world/objects/spr_dw_church_piano.png"/>
+  <image source="../../../assets/sprites/world/objects/spr_dw_church_piano.png" width="45" height="33"/>
  </tile>
  <tile id="8">
-  <image width="900" height="20" source="../../../assets/sprites/world/parallax/spr_dw_castle_gradient.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_castle_gradient.png" width="900" height="20"/>
  </tile>
  <tile id="9">
-  <image width="161" height="191" source="../../../assets/sprites/world/objects/spr_dw_church_organ_large.png"/>
+  <image source="../../../assets/sprites/world/objects/spr_dw_church_organ_large.png" width="161" height="191"/>
  </tile>
  <tile id="11">
-  <image width="80" height="80" source="../../../assets/sprites/world/objects/shard_door.png"/>
+  <image source="../../../assets/sprites/world/objects/shard_door.png" width="80" height="80"/>
  </tile>
  <tile id="13">
-  <image width="160" height="360" source="../../../assets/sprites/world/events/window_glow/church_window_huge.png"/>
+  <image source="../../../assets/sprites/world/events/window_glow/church_window_huge.png" width="160" height="360"/>
  </tile>
  <tile id="25">
-  <image width="31" height="112" source="../../../assets/sprites/world/objects/tallwindow.png"/>
+  <image source="../../../assets/sprites/world/objects/tallwindow.png" width="31" height="112"/>
  </tile>
  <tile id="15">
-  <image width="18" height="60" source="../../../assets/sprites/world/objects/church_torch_1.png"/>
+  <image source="../../../assets/sprites/world/objects/church_torch_1.png" width="18" height="60"/>
   <animation>
    <frame tileid="15" duration="100"/>
    <frame tileid="16" duration="100"/>
@@ -56,91 +56,91 @@
   </animation>
  </tile>
  <tile id="16">
-  <image width="18" height="60" source="../../../assets/sprites/world/objects/church_torch_2.png"/>
+  <image source="../../../assets/sprites/world/objects/church_torch_2.png" width="18" height="60"/>
  </tile>
  <tile id="17">
-  <image width="18" height="60" source="../../../assets/sprites/world/objects/church_torch_3.png"/>
+  <image source="../../../assets/sprites/world/objects/church_torch_3.png" width="18" height="60"/>
  </tile>
  <tile id="18">
-  <image width="18" height="60" source="../../../assets/sprites/world/objects/church_torch_4.png"/>
+  <image source="../../../assets/sprites/world/objects/church_torch_4.png" width="18" height="60"/>
  </tile>
  <tile id="19">
-  <image width="360" height="310" source="../../../assets/sprites/world/objects/darkdoor_closed.png"/>
+  <image source="../../../assets/sprites/world/objects/darkdoor_closed.png" width="360" height="310"/>
  </tile>
  <tile id="20">
-  <image width="360" height="310" source="../../../assets/sprites/world/objects/darkdoor_open.png"/>
+  <image source="../../../assets/sprites/world/objects/darkdoor_open.png" width="360" height="310"/>
  </tile>
  <tile id="21">
-  <image width="62" height="63" source="../../../assets/sprites/world/objects/bell_single_1.png"/>
+  <image source="../../../assets/sprites/world/objects/bell_single_1.png" width="62" height="63"/>
  </tile>
  <tile id="22">
-  <image width="62" height="63" source="../../../assets/sprites/world/objects/bell_single_2.png"/>
+  <image source="../../../assets/sprites/world/objects/bell_single_2.png" width="62" height="63"/>
  </tile>
  <tile id="23">
-  <image width="14" height="6" source="../../../assets/sprites/world/objects/bell_single_drum.png"/>
+  <image source="../../../assets/sprites/world/objects/bell_single_drum.png" width="14" height="6"/>
  </tile>
  <tile id="24">
-  <image width="42" height="60" source="../../../assets/sprites/world/objects/bell_enemy.png"/>
+  <image source="../../../assets/sprites/world/objects/bell_enemy.png" width="42" height="60"/>
  </tile>
  <tile id="26">
-  <image width="20" height="20" source="../../../assets/sprites/world/objects/npc_sign.png"/>
+  <image source="../../../assets/sprites/world/objects/npc_sign.png" width="20" height="20"/>
  </tile>
  <tile id="29">
-  <image width="20" height="20" source="../../../assets/sprites/world/objects/treasure_chest_1.png"/>
+  <image source="../../../assets/sprites/world/objects/treasure_chest_1.png" width="20" height="20"/>
  </tile>
  <tile id="30">
-  <image width="35" height="15" source="../../../assets/sprites/world/objects/spr_dw_church_organ_large_chair.png"/>
+  <image source="../../../assets/sprites/world/objects/spr_dw_church_organ_large_chair.png" width="35" height="15"/>
  </tile>
  <tile id="31">
-  <image width="200" height="289" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_darkwall.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_darkwall.png" width="200" height="289"/>
  </tile>
  <tile id="32">
-  <image width="960" height="100" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_distant_tower_longer.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_distant_tower_longer.png" width="960" height="100"/>
  </tile>
  <tile id="33">
-  <image width="38" height="19" source="../../../assets/sprites/world/objects/gerson_books_left.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_books_left.png" width="38" height="19"/>
  </tile>
  <tile id="34">
-  <image width="34" height="25" source="../../../assets/sprites/world/objects/gerson_books_right.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_books_right.png" width="34" height="25"/>
  </tile>
  <tile id="35">
-  <image width="58" height="76" source="../../../assets/sprites/world/objects/gerson_statue_left.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_statue_left.png" width="58" height="76"/>
  </tile>
  <tile id="36">
-  <image width="133" height="48" source="../../../assets/sprites/world/objects/gerson_table.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_table.png" width="133" height="48"/>
  </tile>
  <tile id="89">
-  <image width="120" height="6" source="../../../assets/sprites/world/objects/gerson_table_top.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_table_top.png" width="120" height="6"/>
  </tile>
  <tile id="37">
-  <image width="22" height="13" source="../../../assets/sprites/world/objects/gerson_table_book1.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_table_book1.png" width="22" height="13"/>
  </tile>
  <tile id="38">
-  <image width="18" height="25" source="../../../assets/sprites/world/objects/gerson_table_book2.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_table_book2.png" width="18" height="25"/>
  </tile>
  <tile id="39">
-  <image width="14" height="14" source="../../../assets/sprites/world/objects/gerson_table_book3.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_table_book3.png" width="14" height="14"/>
  </tile>
  <tile id="77">
-  <image width="111" height="51" source="../../../assets/sprites/world/objects/gerson_desk.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_desk.png" width="111" height="51"/>
  </tile>
  <tile id="57">
-  <image width="54" height="52" source="../../../assets/sprites/world/objects/gerson_chair.png"/>
+  <image source="../../../assets/sprites/world/objects/gerson_chair.png" width="54" height="52"/>
  </tile>
  <tile id="78">
-  <image width="13" height="16" source="../../../assets/sprites/world/objects/dw_item_elixir.png"/>
+  <image source="../../../assets/sprites/world/objects/dw_item_elixir.png" width="13" height="16"/>
  </tile>
  <tile id="79">
-  <image width="13" height="9" source="../../../assets/sprites/world/objects/dw_item_guard.png"/>
+  <image source="../../../assets/sprites/world/objects/dw_item_guard.png" width="13" height="9"/>
  </tile>
  <tile id="80">
-  <image width="28" height="25" source="../../../assets/sprites/world/objects/dw_item_scarf.png"/>
+  <image source="../../../assets/sprites/world/objects/dw_item_scarf.png" width="28" height="25"/>
  </tile>
  <tile id="81">
-  <image width="20" height="13" source="../../../assets/sprites/world/objects/dw_item_tea.png"/>
+  <image source="../../../assets/sprites/world/objects/dw_item_tea.png" width="20" height="13"/>
  </tile>
  <tile id="40">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/1.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/1.png" width="70" height="34"/>
   <animation>
    <frame tileid="40" duration="150"/>
    <frame tileid="41" duration="150"/>
@@ -153,28 +153,28 @@
   </animation>
  </tile>
  <tile id="41">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/2.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/2.png" width="70" height="34"/>
  </tile>
  <tile id="42">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/3.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/3.png" width="70" height="34"/>
  </tile>
  <tile id="43">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/4.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/4.png" width="70" height="34"/>
  </tile>
  <tile id="44">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/5.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/5.png" width="70" height="34"/>
  </tile>
  <tile id="45">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/6.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/6.png" width="70" height="34"/>
  </tile>
  <tile id="46">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/7.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/7.png" width="70" height="34"/>
  </tile>
  <tile id="47">
-  <image width="70" height="34" source="../../../assets/sprites/world/objects/study_fireplace/8.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fireplace/8.png" width="70" height="34"/>
  </tile>
  <tile id="48">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/1.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/1.png" width="48" height="44"/>
   <animation>
    <frame tileid="48" duration="125"/>
    <frame tileid="49" duration="150"/>
@@ -188,31 +188,31 @@
   </animation>
  </tile>
  <tile id="49">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/2.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/2.png" width="48" height="44"/>
  </tile>
  <tile id="50">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/3.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/3.png" width="48" height="44"/>
  </tile>
  <tile id="51">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/4.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/4.png" width="48" height="44"/>
  </tile>
  <tile id="52">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/5.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/5.png" width="48" height="44"/>
  </tile>
  <tile id="53">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/6.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/6.png" width="48" height="44"/>
  </tile>
  <tile id="54">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/7.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/7.png" width="48" height="44"/>
  </tile>
  <tile id="55">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/8.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/8.png" width="48" height="44"/>
  </tile>
  <tile id="56">
-  <image width="48" height="44" source="../../../assets/sprites/world/objects/study_fountain/9.png"/>
+  <image source="../../../assets/sprites/world/objects/study_fountain/9.png" width="48" height="44"/>
  </tile>
  <tile id="59">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_1.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_1.png" width="30" height="70"/>
   <animation>
    <frame tileid="59" duration="300"/>
    <frame tileid="60" duration="300"/>
@@ -225,31 +225,31 @@
   </animation>
  </tile>
  <tile id="60">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_2.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_2.png" width="30" height="70"/>
  </tile>
  <tile id="61">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_3.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_3.png" width="30" height="70"/>
  </tile>
  <tile id="62">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_4.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_4.png" width="30" height="70"/>
  </tile>
  <tile id="63">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_5.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_5.png" width="30" height="70"/>
  </tile>
  <tile id="64">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_6.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_6.png" width="30" height="70"/>
  </tile>
  <tile id="65">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_7.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_7.png" width="30" height="70"/>
  </tile>
  <tile id="66">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main_8.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main_8.png" width="30" height="70"/>
  </tile>
  <tile id="67">
-  <image width="30" height="70" source="../../../assets/sprites/world/objects/study_lighting/main.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/main.png" width="30" height="70"/>
  </tile>
  <tile id="68">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_1.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_1.png" width="132" height="54"/>
   <animation>
    <frame tileid="68" duration="300"/>
    <frame tileid="69" duration="300"/>
@@ -262,40 +262,40 @@
   </animation>
  </tile>
  <tile id="69">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_2.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_2.png" width="132" height="54"/>
  </tile>
  <tile id="70">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_3.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_3.png" width="132" height="54"/>
  </tile>
  <tile id="71">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_4.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_4.png" width="132" height="54"/>
  </tile>
  <tile id="72">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_5.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_5.png" width="132" height="54"/>
  </tile>
  <tile id="73">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_6.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_6.png" width="132" height="54"/>
  </tile>
  <tile id="74">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_7.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_7.png" width="132" height="54"/>
  </tile>
  <tile id="75">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner_8.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner_8.png" width="132" height="54"/>
  </tile>
  <tile id="76">
-  <image width="132" height="54" source="../../../assets/sprites/world/objects/study_lighting/corner.png"/>
+  <image source="../../../assets/sprites/world/objects/study_lighting/corner.png" width="132" height="54"/>
  </tile>
  <tile id="82">
-  <image width="20" height="15" source="../../../assets/sprites/world/objects/Wallsign.png"/>
+  <image source="../../../assets/sprites/world/objects/Wallsign.png" width="20" height="15"/>
  </tile>
  <tile id="83">
-  <image width="40" height="60" source="../../../assets/sprites/world/objects/churchb_door.png"/>
+  <image source="../../../assets/sprites/world/objects/churchb_door.png" width="40" height="60"/>
  </tile>
  <tile id="84">
-  <image width="222" height="140" source="../../../assets/sprites/world/objects/prophecy_shards.png"/>
+  <image source="../../../assets/sprites/world/objects/prophecy_shards.png" width="222" height="140"/>
  </tile>
  <tile id="85">
-  <image width="13" height="18" source="../../../assets/sprites/world/events/churchcandle/lit_1.png"/>
+  <image source="../../../assets/sprites/world/events/churchcandle/lit_1.png" width="13" height="18"/>
   <animation>
    <frame tileid="85" duration="125"/>
    <frame tileid="86" duration="125"/>
@@ -304,33 +304,45 @@
   </animation>
  </tile>
  <tile id="86">
-  <image width="13" height="18" source="../../../assets/sprites/world/events/churchcandle/lit_2.png"/>
+  <image source="../../../assets/sprites/world/events/churchcandle/lit_2.png" width="13" height="18"/>
  </tile>
  <tile id="87">
-  <image width="13" height="18" source="../../../assets/sprites/world/events/churchcandle/lit_3.png"/>
+  <image source="../../../assets/sprites/world/events/churchcandle/lit_3.png" width="13" height="18"/>
  </tile>
  <tile id="88">
-  <image width="13" height="18" source="../../../assets/sprites/world/events/churchcandle/lit_4.png"/>
+  <image source="../../../assets/sprites/world/events/churchcandle/lit_4.png" width="13" height="18"/>
  </tile>
  <tile id="91">
-  <image width="2880" height="100" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_distant_tower_longest.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_distant_tower_longest.png" width="2880" height="100"/>
  </tile>
  <tile id="92">
-  <image width="200" height="289" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_fade_alt.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_fade_alt.png" width="200" height="289"/>
  </tile>
  <tile id="93">
-  <image width="200" height="289" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_fade.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_fade.png" width="200" height="289"/>
  </tile>
  <tile id="97">
-  <image width="71" height="63" source="../../../assets/sprites/world/objects/tree_stem.png"/>
+  <image source="../../../assets/sprites/world/objects/tree_stem.png" width="71" height="63"/>
  </tile>
  <tile id="94">
-  <image width="200" height="500" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arch_proph.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arch_proph.png" width="200" height="500"/>
  </tile>
  <tile id="95">
-  <image width="200" height="800" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_proph.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_proph.png" width="200" height="800"/>
  </tile>
  <tile id="96">
-  <image width="320" height="800" source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire_proph.png"/>
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire_proph.png" width="320" height="800"/>
+ </tile>
+ <tile id="98">
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_connectable_recolorable.png" width="100" height="620"/>
+ </tile>
+ <tile id="99">
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_buttress_tileable_recolorable.png" width="200" height="800"/>
+ </tile>
+ <tile id="100">
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_spire_recolorable.png" width="320" height="800"/>
+ </tile>
+ <tile id="101">
+  <image source="../../../assets/sprites/world/parallax/spr_dw_parallax_church_arches_recolorable.png" width="200" height="289"/>
  </tile>
 </tileset>
