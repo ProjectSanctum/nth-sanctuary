@@ -17,6 +17,7 @@ end
 
 function PrismBattleBackground:update()
 	super.update(self)
+	self.siner = self.siner + DTMULT
 	self.rainbow_timer = self.rainbow_timer + DTMULT
 	if not Kristal.Config["simplifyVFX"] and Game.battle.encounter.is_prism then
 		if Game.battle.music.source and Game.battle.music:tell() >= 13.616 and Game.battle.encounter.prism_bg_con == 0 then
