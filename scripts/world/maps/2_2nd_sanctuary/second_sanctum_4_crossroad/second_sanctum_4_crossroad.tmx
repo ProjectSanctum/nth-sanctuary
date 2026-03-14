@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="33" nextobjectid="193">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="33" nextobjectid="193">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -24,7 +24,11 @@
     <property name="color" type="color" value="#ff144139"/>
    </properties>
   </object>
-  <object id="192" gid="1247" x="916" y="1480" width="200" height="1240"/>
+  <object id="192" gid="1247" x="916" y="1480" width="200" height="1240">
+   <properties>
+    <property name="color" type="color" value="#ff144139"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="16" name="objects_parallax1" parallaxx="0.5" parallaxy="0.9">
   <object id="90" gid="3221226624" x="-235" y="899" width="400" height="1600"/>
