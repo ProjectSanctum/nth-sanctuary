@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="33" nextobjectid="192">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="33" nextobjectid="193">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -17,36 +17,26 @@
  <tileset firstgid="1251" source="../../../tilesets/bg_dw_dither_overlay_tileset.tsx"/>
  <tileset firstgid="1297" source="../../../tilesets/RandomExtraTiles.tsx"/>
  <tileset firstgid="1585" source="../../../tilesets/bg_dw_church_watertileset_drained.tsx"/>
- <objectgroup id="32" name="objects_parallax4" tintcolor="#144139" parallaxx="0.45" parallaxy="0.81">
-  <object id="191" gid="2147484897" x="2120" y="-320" width="576" height="1440" rotation="-135">
-   <properties>
-    <property name="color" type="color" value="#ff144139"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup id="32" name="objects_parallax4" tintcolor="#144139" parallaxx="0.45" parallaxy="0.81"/>
  <objectgroup id="17" name="objects_parallax2" tintcolor="#144139" parallaxx="0.5" parallaxy="0.9">
-  <object id="117" gid="1248" x="906" y="2160" width="400" height="1600">
+  <object id="116" gid="1249" x="542" y="1448" width="640" height="1600">
    <properties>
     <property name="color" type="color" value="#ff144139"/>
    </properties>
   </object>
-  <object id="116" gid="2147484897" x="440" y="1770" width="640" height="1600">
-   <properties>
-    <property name="color" type="color" value="#ff144139"/>
-   </properties>
-  </object>
+  <object id="192" gid="1247" x="916" y="1480" width="200" height="1240"/>
  </objectgroup>
  <objectgroup id="16" name="objects_parallax1" parallaxx="0.5" parallaxy="0.9">
-  <object id="90" gid="3221226624" x="-235" y="900" width="400" height="1600"/>
-  <object id="91" gid="3221226625" x="-111" y="1300" width="640" height="1600"/>
+  <object id="90" gid="3221226624" x="-235" y="899" width="400" height="1600"/>
+  <object id="91" gid="1153" x="529" y="-309" width="640" height="1600" rotation="-180"/>
  </objectgroup>
  <objectgroup id="31" name="objects_parallax3" parallaxx="0.55" parallaxy="0.99">
-  <object id="189" gid="2147484801" x="-1240" y="2000" width="704" height="1760" rotation="45"/>
+  <object id="189" gid="1153" x="-920" y="2200" width="704" height="1760" rotation="45"/>
  </objectgroup>
  <objectgroup id="23" name="objects_parallax_fade" visible="0">
   <object id="161" gid="1157" x="1720" y="2320" width="1280" height="1720" rotation="270"/>
  </objectgroup>
- <layer id="21" name="roomglow_dark_bg" width="43" height="43">
+ <layer id="21" name="roomglow_dark_bg" width="43" height="43" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -93,7 +83,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="26" name="objects_below">
+ <objectgroup id="26" name="objects_below" visible="0">
   <object id="173" name="churchmagicglass" x="220" y="0" width="80" height="240">
    <properties>
     <property name="idlealpha" type="float" value="0"/>
@@ -107,7 +97,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer id="28" name="Tile Layer 7" width="43" height="43">
+ <layer id="28" name="Tile Layer 7" width="43" height="43" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -154,7 +144,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="9" name="Tile Layer 3" width="43" height="43">
+ <layer id="9" name="Tile Layer 3" width="43" height="43" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -201,7 +191,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="12" name="Tile Layer 2" width="43" height="43">
+ <layer id="12" name="Tile Layer 2" width="43" height="43" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -248,7 +238,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="29" name="Tile Layer 8" width="43" height="43">
+ <layer id="29" name="Tile Layer 8" width="43" height="43" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -295,7 +285,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="8" name="Tile Layer 1" width="43" height="43">
+ <layer id="8" name="Tile Layer 1" width="43" height="43" visible="0">
   <data encoding="csv">
 0,0,0,0,154,164,165,166,154,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,154,164,165,166,154,0,0,0,0,
 0,0,0,0,154,164,165,166,154,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,154,164,165,166,154,0,0,0,0,
@@ -342,7 +332,7 @@
 0,0,0,0,0,10,10,154,164,165,166,154,164,165,166,154,164,165,166,136,137,138,139,136,137,138,139,136,137,138,139,136,137,138,139,801,802,802,802,803,164,0,166
 </data>
  </layer>
- <objectgroup id="22" name="objects_sign">
+ <objectgroup id="22" name="objects_sign" visible="0">
   <object id="156" gid="1231" x="840" y="720" width="40" height="30"/>
   <object id="159" name="eye_glow" x="800" y="556">
    <point/>
@@ -351,7 +341,7 @@
    <point/>
   </object>
  </objectgroup>
- <layer id="20" name="roomglow_dark" width="43" height="43">
+ <layer id="20" name="roomglow_dark" width="43" height="43" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,331,0,0,0,0,0,0,0,0,0,
@@ -398,9 +388,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="14" name="climbareas"/>
- <objectgroup id="15" name="objects_buckets"/>
- <objectgroup id="7" name="collision">
+ <objectgroup id="14" name="climbareas" visible="0"/>
+ <objectgroup id="15" name="objects_buckets" visible="0"/>
+ <objectgroup id="7" name="collision" visible="0">
   <object id="23" x="160" y="520" width="1400" height="240"/>
   <object id="26" x="0" y="880" width="596" height="280"/>
   <object id="164" x="1360" y="360" width="200" height="160"/>
@@ -430,7 +420,7 @@
   </object>
   <object id="183" x="280" y="1280" width="1440" height="440"/>
  </objectgroup>
- <objectgroup id="6" name="markers">
+ <objectgroup id="6" name="markers" visible="0">
   <object id="7" name="entry" x="40" y="820">
    <point/>
   </object>
@@ -450,7 +440,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="5" name="objects_party">
+ <objectgroup id="5" name="objects_party" visible="0">
   <object id="6" name="transition" x="-40" y="760" width="40" height="120">
    <properties>
     <property name="map" value="2_2nd_sanctuary/second_sanctum_3"/>
@@ -561,7 +551,7 @@ YET BURNING WITH PROMISE.</property>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="30" name="objects_fog">
+ <objectgroup id="30" name="objects_fog" visible="0">
   <object id="1" name="churchfog" x="80" y="0">
    <point/>
   </object>
