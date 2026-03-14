@@ -722,9 +722,9 @@ function Player:doClimbJump(direction, distance)
 				if self.onrotatingtower then
 					dust_x = self.world.map.cyltower.tower_x
 					if self.facing == "right" then
-						dust.physics.speed_x = -4
+						dust.physics.speed_x = -4*dist
 					elseif self.facing == "left" then
-						dust.physics.speed_x = 4
+						dust.physics.speed_x = 4*dist
 					end
 				end
 				if charged then
@@ -753,7 +753,7 @@ function Player:doClimbJump(direction, distance)
 				local prevx = self.x
 				local prevy = self.y
 				self:slideTo(self.x + (dx*40*dist), self.y + (dy*40*dist), duration, "out-sine")
-				self.climbtimer = 0
+				self.climbtimer = 0 climbdist = dist
 				self.climb_during_timer = Game.world.timer:during(duration, function()
 					self.climbtimer = self.climbtimer + DT
 					self.drawoffsety = -math.sin((self.climbtimer / duration) * math.pi) * (2 * (self.jumpchargeamount - 1)) 
@@ -766,10 +766,12 @@ function Player:doClimbJump(direction, distance)
 					afterimage:setLayer(self.layer - 0.1)
 					if self.onrotatingtower then
 						afterimage.x = self.world.map.cyltower.krisx
-						if self.facing == "right" then
-							afterimage.physics.speed_x = -4
-						elseif self.facing == "left" then
-							afterimage.physics.speed_x = 4
+						if self.neutralcon ~= 1 then
+							if self.facing == "right" then
+								afterimage.physics.speed_x = -4*dist
+							elseif self.facing == "left" then
+								afterimage.physics.speed_x = 4*dist
+							end
 						end
 					end
 					Game.world:addChild(afterimage)
