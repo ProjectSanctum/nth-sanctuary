@@ -41,7 +41,7 @@ function PrismBattleBackground:update()
 				self.shape_timer = 0
 			end
 		end
-		if Game.battle.encounter.is_prism and Game.battle.encounter.prism_bg_con == 2 then
+		if Game.battle.encounter.prism_bg_con == 2 then
 			self.transition_end_alpha = 0
 			Game.battle.timer:tween(1, self, {transition_end_alpha = 1}, "out-cubic")
 			Game.battle.timer:tween(4, self, {transition_x = SCREEN_WIDTH}, "out-cubic")
@@ -103,9 +103,9 @@ function PrismBattleBackground:drawBackground()
     Draw.drawWrapped(background, true, true, MathUtils.round(-100 + self.position), MathUtils.round(-100 + self.position))
     love.graphics.setColor(rr, rg, rb, self.alpha)
     Draw.drawWrapped(background, true, true, MathUtils.round(-200 - self.position2), MathUtils.round(-210 - self.position2))
-	if not Kristal.Config["simplifyVFX"] then
+	if not Kristal.Config["simplifyVFX"] and Game.battle.encounter.is_prism then
 		rr, rg, rb = ColorUtils.HSVToRGB((self.rainbow_timer / 255) % 1, 233 / 255, 200 / 255)
-		if Game.battle.encounter.is_prism and Game.battle.encounter.prism_bg_con >= 2 then
+		if Game.battle.encounter.prism_bg_con >= 2 then
 			rr, rg, rb = ColorUtils.mergeColor({1, 1, 1}, {0, 0, 0}, self.transition_end_alpha or 1)
 		end
 		Draw.setColor(rr, rg, rb, 0.3 * self.alpha)
