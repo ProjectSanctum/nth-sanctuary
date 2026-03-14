@@ -45,9 +45,6 @@ function CutsceneStairLooper:update()
 		if self.type == 0 then
 			if px >= self.xpoint and px <= self.xpoint + math.abs(self.xgobackamount) and not self.entered_loop then
 				self.entered_loop = true
-				for _, churchfog in ipairs(self.world:getEvents("churchfog")) do
-					Game.world.timer:tween(1, churchfog, { alpha=0 }, "out-cubic")
-				end
 				self.legend_finish = false
 				if self.cutscene then
 					self.dialogue_finish = false
@@ -102,13 +99,14 @@ function CutsceneStairLooper:update()
 				legender.xx = legender.xx + xback
 				legender.yy = legender.yy + yback
 			end
+			for _, fog in ipairs(self.world:getEvents("churchfog")) do
+				fog.xx = fog.xx - xback/2
+				fog.yy = fog.yy - yback/2
+			end
 		end
 		if self.entered_loop then
 			if self.dialogue_finish and self.legend_finish then
 				self.loop = false
-				for _, churchfog in ipairs(self.world:getEvents("churchfog")) do
-					Game.world.timer:tween(1, churchfog, { alpha=1 }, "out-cubic")
-				end
 				self.preventmenu = false
 				if self.set_flag then
 					Game:setFlag(self.set_flag, (self.set_value == nil and true) or self.set_value)
