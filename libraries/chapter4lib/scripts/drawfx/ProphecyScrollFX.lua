@@ -1,11 +1,13 @@
 ---@class ProphecyScrollFX: FXBase
 local ProphecyScrollFX, super = Class(FXBase)
 
-function ProphecyScrollFX:init(texture, priority)
+function ProphecyScrollFX:init(texture, priority, perlin_tex)
     super.init(self, priority)
     ---@type love.Image
     self.texture = type(texture) == "string" and Assets.getTexture(texture) or (type(texture) == "userdata" and texture)
     self.texture = self.texture or Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS_BRIGHTER")
+    self.perlin_texture = type(perlin_tex) == "string" and Assets.getTexture(perlin_tex) or (type(perlin_tex) == "userdata" and perlin_tex)
+	self.perlin_texture = self.perlin_texture or Assets.getTexture("backgrounds/perlin_noise_looping")
     self.surf_textured = -1;
     self.tile_object = 364;
     self.base_texture = 88;
@@ -80,13 +82,13 @@ function ProphecyScrollFX:drawPart(texture, alpha)
 
     local surf_textured = Draw.pushCanvas(640, 480);
     love.graphics.clear(COLORS.white, 0);
-    local pnl_tex = Assets.getTexture("backgrounds/perlin_noise_looping")
+    local pnl_tex = self.perlin_texture
     local pnl_canvas = Draw.pushCanvas(pnl_tex:getDimensions())
     draw_sprite_tiled_ext(pnl_tex, 0, 0, 0, 1, 1, returnAlphaColor(self.prophecy_color, alpha * self.fade))
     Draw.popCanvas(true)
     love.graphics.setColorMask(true, true, true, false);
     local x, y = -((_cx * 2) + (self.tick * 15)) * 0.5, -((_cy * 2) + (self.tick * 15)) * 0.5
-    draw_sprite_tiled_ext(Assets.getTexture("backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS_BRIGHTER"), 0, x, y, 2, 2, returnAlphaColor(self.prophecy_color, self.fade));
+    draw_sprite_tiled_ext(self.texture, 0, x, y, 2, 2, returnAlphaColor(self.prophecy_color, self.fade));
     local orig_bm, orig_am = love.graphics.getBlendMode()
     love.graphics.setBlendMode("add", "premultiplied");
     draw_sprite_tiled_ext(pnl_canvas, 0, x, y, 2, 2, COLORS.white);
