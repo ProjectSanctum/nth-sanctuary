@@ -4,7 +4,9 @@ local map, super = Class(Map, "hellentrance")
 function map:init(world, data)
     super.init(self, world, data)
 	self.riptimer = 119
-	self.hell_border_alpha = nil
+	self.normal_border_alpha = 0
+	self.hell_border_alpha = 1
+	self.border_dim_alpha = 0.65
     self.lava_alpha = 0.5 + (math.sin((Kristal.getTime() * 30) / 12) * 0.3)
     self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)
 end
@@ -15,7 +17,6 @@ function map:onEnter()
 	self.ripple_fx = RippleEffect()
 	self.ripple_fx.layer = WORLD_LAYERS["bottom"]
 	Game.world:addChild(self.ripple_fx)
-	self.hell_border_alpha = 1
     if self.fakefader then
         Game.world.timer:tween(0.35, self.fakefader, {alpha = 0})
     end

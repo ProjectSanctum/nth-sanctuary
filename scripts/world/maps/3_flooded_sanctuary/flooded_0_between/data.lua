@@ -12,7 +12,7 @@ return {
   nextlayerid = 20,
   nextobjectid = 53,
   properties = {
-    ["border"] = "church_flooded_dynamic_alt",
+    ["border"] = "church_flooded_dynamic",
     ["music"] = "waves",
     ["name"] = "Flooded Sanctuary - Entrance"
   },

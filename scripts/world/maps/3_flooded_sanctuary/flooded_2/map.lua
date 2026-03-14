@@ -1,9 +1,11 @@
 ---@class Map.dark_place : Map
-local map, super = Class(Map, "hellentrance")
+local map, super = Class(Map, "flooded_2")
 
 function map:init(world, data)
     super.init(self, world, data)
-    self.hell_border_alpha = 0
+    self.normal_border_alpha = 0
+    self.hell_border_alpha = 1
+	self.border_dim_alpha = 0
     self.debug = true
     self.lava_alpha = 0.5 + (math.sin((Kristal.getTime() * 30) / 12) * 0.3)
     self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)

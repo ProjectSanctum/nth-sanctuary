@@ -3,7 +3,9 @@ local map, super = Class(Map, "between")
 
 function map:init(world, data)
     super.init(self, world, data)
-    self.hell_border_alpha_alt = nil
+	self.normal_border_alpha = nil
+	self.hell_border_alpha = 0
+	self.border_dim_alpha = 0.65
     self.debug = false
 end
 
@@ -12,6 +14,17 @@ function map:onEnter()
     self.fade_right_tiles = 6
     if self.fakefader then
         Game.world.timer:tween(0.35, self.fakefader, {alpha = 0})
+    end
+	local kris = Game.world.player
+    if kris then
+        local room_center = (self.width * self.tile_width) / 2
+        local dist = kris.x - room_center
+        local left_px = self.fade_left_tiles * -40
+        local right_px = self.fade_right_tiles * 40
+        self.normal_border_alpha = MathUtils.clamp(
+            1 - (dist - right_px) / (left_px - right_px),
+            0, 1
+        )
     end
 end
 
@@ -24,7 +37,7 @@ function map:update()
         local dist = kris.x - room_center
         local left_px = self.fade_left_tiles * -40
         local right_px = self.fade_right_tiles * 40
-        self.hell_border_alpha_alt = MathUtils.clamp(
+        self.normal_border_alpha = MathUtils.clamp(
             1 - (dist - right_px) / (left_px - right_px),
             0, 1
         )

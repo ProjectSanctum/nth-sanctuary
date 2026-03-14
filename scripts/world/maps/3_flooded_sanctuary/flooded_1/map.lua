@@ -1,5 +1,5 @@
 ---@class Map.dark_place : Map
-local map, super = Class(Map, "hellentrance")
+local map, super = Class(Map, "flooded_1")
 
 function map:init(world, data)
     super.init(self, world, data)
@@ -14,7 +14,9 @@ function map:init(world, data)
     end
     self.lava_alpha = 0.5 + (math.sin((Kristal.getTime() * 30) / 12) * 0.3)
     self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)
+	self.normal_border_alpha = 1
     self.hell_border_alpha = 0
+	self.border_dim_alpha = 0
     self.font = nil
     self.debug = true
 end
@@ -60,6 +62,14 @@ function map:onEnter()
 
     self.fade_top_tiles = 6
     self.fade_bottom_tiles = 12
+    local kris = Game.world.player
+    if kris then
+        local room_center = (self.height * self.tile_height) / 2
+        local dist = kris.y - room_center
+        local top_px = self.fade_top_tiles * -40
+        local bottom_px = self.fade_bottom_tiles * 40
+        self.hell_border_alpha = MathUtils.clamp(1 - (dist - bottom_px) / (top_px - bottom_px), 0, 1)
+    end
 end
 
 function map:onExit()

@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -12,7 +12,7 @@ return {
   nextlayerid = 19,
   nextobjectid = 49,
   properties = {
-    ["border"] = "church_flooded_hell_dim",
+    ["border"] = "church_flooded_dynamic",
     ["music"] = "waves"
   },
   tilesets = {

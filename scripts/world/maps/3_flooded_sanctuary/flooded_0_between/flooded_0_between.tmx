@@ -4,7 +4,7 @@
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
-  <property name="border" value="church_flooded_dynamic_alt"/>
+  <property name="border" value="church_flooded_dynamic"/>
   <property name="music" value="waves"/>
   <property name="name" value="Flooded Sanctuary - Entrance"/>
  </properties>
