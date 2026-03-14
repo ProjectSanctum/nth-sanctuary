@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 15,
-  nextobjectid = 67,
+  nextobjectid = 70,
   parallaxorigin = {
     x = -320,
     y = -240
@@ -439,6 +439,22 @@ return {
             ["returntime"] = 3,
             ["time"] = 1.5
           }
+        },
+        {
+          id = 67,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1920,
+          y = 480,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "4_4th_sanctuary/fourth_sanctum_6",
+            ["marker"] = "entry"
+          }
         }
       }
     },
@@ -722,6 +738,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 69,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 1870,
+          y = 520,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -865,6 +894,19 @@ return {
           y = 600,
           width = 560,
           height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 68,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1920,
+          y = 160,
+          width = 40,
+          height = 200,
           rotation = 0,
           visible = true,
           properties = {}
