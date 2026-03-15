@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 13,
+  nextobjectid = 12,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune"
@@ -201,10 +201,10 @@ return {
           }
         },
         {
-          id = 10,
-          name = "npc",
+          id = 11,
+          name = "",
           type = "",
-          shape = "rectangle",
+          shape = "point",
           x = 580,
           y = 180,
           width = 0,
@@ -217,22 +217,6 @@ return {
             ["text1_2"] = "* Dont drag me into [color:red][style:none]it",
             ["text2_1"] = "* stop it youre dragging me into it",
             ["text3_1"] = "[color:red][style:none]* it"
-          }
-        },
-        {
-          id = 12,
-          name = "npc",
-          type = "",
-          shape = "point",
-          x = 200,
-          y = 200,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["actor"] = "mason",
-            ["cutscene"] = "konverge.mason"
           }
         }
       }
