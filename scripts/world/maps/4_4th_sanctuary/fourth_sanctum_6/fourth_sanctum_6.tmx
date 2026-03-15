@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="24">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="27">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -34,8 +34,9 @@
   <object id="13" x="160" y="320">
    <polygon points="0,0 -40,0 -40,240 880,240 880,120 440,120 440,80 400,80 400,40 360,40 360,80 80,80 80,160 0,160"/>
   </object>
-  <object id="14" x="680" y="320">
-   <polygon points="0,0 0,-40 -40,-40 -40,-80 -80,-80 -80,-160 280,-160 280,-240 -80,-240 -80,-200 -200,-200 -200,-320 360,-320 360,0"/>
+  <object id="25" x="480" y="40" width="560" height="40"/>
+  <object id="26" x="600" y="160">
+   <polygon points="0,0 0,80 40,80 40,120 80,120 80,160 440,160 440,-80 360,-80 360,0"/>
   </object>
  </objectgroup>
  <layer id="8" name="Tile Layer 3" width="26" height="14">
@@ -78,7 +79,7 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,772,773,772,773,772,773,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,778,779,778,779,778,779,0,0,
-10,10,10,10,10,10,10,10,10,10,10,195,0,0,0,10,10,10,37,38,39,40,38,41,0,0,
+10,10,10,10,10,10,10,10,10,10,10,195,10,10,10,10,10,10,37,38,39,40,38,41,0,0,
 10,10,10,10,10,10,10,10,10,10,10,10,195,195,195,10,10,10,55,56,57,58,56,59,0,0,
 10,10,10,10,10,10,10,10,10,10,10,10,10,195,195,28,28,28,64,65,66,67,65,68,0,0,
 28,28,28,28,28,28,28,28,28,28,10,10,10,10,195,0,0,0,73,74,75,76,74,77,0,0,
@@ -105,7 +106,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="objects_lightarea">
+ <objectgroup id="11" name="objects_lightarea" visible="0">
   <object id="22" gid="883" x="440" y="760" width="755.284" height="920">
    <properties>
     <property name="light" type="bool" value="true"/>
@@ -123,6 +124,11 @@
     <property name="light_dust" type="bool" value="true"/>
     <property name="light_type" type="int" value="1"/>
    </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="12" name="objects_fog">
+  <object id="24" name="churchfog" x="21.6667" y="-102">
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="3" name="objects_overlay">

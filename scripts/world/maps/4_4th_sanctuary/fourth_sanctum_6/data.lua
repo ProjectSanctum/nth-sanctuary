@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 12,
-  nextobjectid = 24,
+  nextlayerid = 13,
+  nextobjectid = 27,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church"
@@ -196,30 +196,39 @@ return {
           properties = {}
         },
         {
-          id = 14,
+          id = 25,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 40,
+          width = 560,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 26,
           name = "",
           type = "",
           shape = "polygon",
-          x = 680,
-          y = 320,
+          x = 600,
+          y = 160,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
-            { x = 0, y = -40 },
-            { x = -40, y = -40 },
-            { x = -40, y = -80 },
-            { x = -80, y = -80 },
-            { x = -80, y = -160 },
-            { x = 280, y = -160 },
-            { x = 280, y = -240 },
-            { x = -80, y = -240 },
-            { x = -80, y = -200 },
-            { x = -200, y = -200 },
-            { x = -200, y = -320 },
-            { x = 360, y = -320 },
+            { x = 0, y = 80 },
+            { x = 40, y = 80 },
+            { x = 40, y = 120 },
+            { x = 80, y = 120 },
+            { x = 80, y = 160 },
+            { x = 440, y = 160 },
+            { x = 440, y = -80 },
+            { x = 360, y = -80 },
             { x = 360, y = 0 }
           },
           properties = {}
@@ -314,7 +323,7 @@ return {
       data = {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 772, 773, 772, 773, 772, 773, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 778, 779, 778, 779, 778, 779, 0, 0,
-        10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 195, 0, 0, 0, 10, 10, 10, 37, 38, 39, 40, 38, 41, 0, 0,
+        10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 195, 10, 10, 10, 10, 10, 10, 37, 38, 39, 40, 38, 41, 0, 0,
         10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 195, 195, 195, 10, 10, 10, 55, 56, 57, 58, 56, 59, 0, 0,
         10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 195, 195, 28, 28, 28, 64, 65, 66, 67, 65, 68, 0, 0,
         28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 10, 10, 10, 10, 195, 0, 0, 0, 73, 74, 75, 76, 74, 77, 0, 0,
@@ -395,7 +404,7 @@ return {
       id = 11,
       name = "objects_lightarea",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -442,6 +451,35 @@ return {
             ["light_dust"] = true,
             ["light_type"] = 1
           }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 12,
+      name = "objects_fog",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 24,
+          name = "churchfog",
+          type = "",
+          shape = "point",
+          x = 21.6667,
+          y = -102,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

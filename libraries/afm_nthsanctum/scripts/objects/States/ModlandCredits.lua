@@ -13,7 +13,7 @@ function ModlandCredits:init(menu)
                 "DiamondDeltahedron",
                 "TheLucidLibrarian",
                 "Mason",
-                "",
+                "Funkin's Garbage",
                 { "Storywriting", COLORS.yellow },
                 "KayCelestia",
                 "",
@@ -29,6 +29,7 @@ function ModlandCredits:init(menu)
                 { "Music", COLORS.yellow },
                 "DeltaPulsar",
                 "squibles",
+                "Ubinox",
             }
         },
         {
@@ -38,7 +39,7 @@ function ModlandCredits:init(menu)
                 "Runius",
                 "Hyperboid",
                 "Krisp / Tamato",
-                "",
+                "XoticKade",
                 "",
                 "",
                 "",
