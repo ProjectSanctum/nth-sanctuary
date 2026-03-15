@@ -24,7 +24,7 @@ function ModlandCredits:init(menu)
                 { "Contributors", COLORS.yellow },
                 "Hyperboid",
                 "JARU",
-                "",
+                "Leaff",
                 "",
                 { "Music", COLORS.yellow },
                 "DeltaPulsar",
