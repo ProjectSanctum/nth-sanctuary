@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="33" nextobjectid="210">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="33" nextobjectid="218">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -435,6 +435,8 @@
    <polygon points="0,0 160,-160 160,40 0,40"/>
   </object>
   <object id="183" x="280" y="1280" width="1440" height="440"/>
+  <object id="216" x="220" y="-40" width="80" height="40"/>
+  <object id="217" x="1420" y="-40" width="80" height="40"/>
  </objectgroup>
  <objectgroup id="6" name="markers">
   <object id="7" name="entry" x="40" y="820">
@@ -546,12 +548,6 @@ YET BURNING WITH PROMISE.</property>
    <properties>
     <property name="map" value="2_2nd_sanctuary/second_sanctum_5"/>
     <property name="marker" value="entry"/>
-   </properties>
-  </object>
-  <object id="184" name="script" x="400" y="600" width="80" height="120">
-   <properties>
-    <property name="cutscene" value="primary.splitpath"/>
-    <property name="once" type="bool" value="false"/>
    </properties>
   </object>
   <object id="185" name="interactable" x="220" y="-40" width="80" height="40">

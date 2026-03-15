@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 33,
-  nextobjectid = 210,
+  nextobjectid = 218,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -1126,6 +1126,32 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 216,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 220,
+          y = -40,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 217,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1420,
+          y = -40,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -1501,22 +1527,6 @@ return {
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_5",
             ["marker"] = "entry"
-          }
-        },
-        {
-          id = 184,
-          name = "script",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 600,
-          width = 80,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "primary.splitpath",
-            ["once"] = false
           }
         },
         {
