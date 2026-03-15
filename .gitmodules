@@ -4,3 +4,6 @@
 [submodule "libraries/EvenMoreParty"]
 	path = libraries/EvenMoreParty
 	url = https://github.com/Ralszor/EvenMoreParty.git
+[submodule "libraries/CH4EnemyRecreations"]
+	path = libraries/CH4EnemyRecreations
+	url = https://github.com/JustAnotherRandomGithubUser/CH4EnemyRecreations-Kristal
