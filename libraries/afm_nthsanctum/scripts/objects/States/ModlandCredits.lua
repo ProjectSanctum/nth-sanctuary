@@ -13,7 +13,7 @@ function ModlandCredits:init(menu)
                 "DiamondDeltahedron",
                 "TheLucidLibrarian",
                 "Mason",
-                "",
+                "Funkin's Garbage",
                 { "Storywriting", COLORS.yellow },
                 "KayCelestia",
                 "",
