@@ -59,7 +59,7 @@ function RemotePianoMoveUI:draw()
 				local note = Sprite(self.arrowspr, xloc, yy + yloc)
 				note.layer = piano.layer + 1
 				note:setColor(litblue)
-				note:setScale(yscale,yscale)
+				note:setScale(xscale,yscale)
 				note:setOriginExact(4, 4)
 				note.rotation = angle
 				note.physics.speed = 5
@@ -74,7 +74,7 @@ function RemotePianoMoveUI:draw()
 				local note2 = Sprite(self.arrowspr, xloc, yy + yloc)
 				note2.layer = piano.layer + 2
 				note2:setColor(COLORS.white)
-				note2:setScale(yscale,yscale)
+				note2:setScale(xscale,yscale)
 				note2:setOriginExact(4, 4)
 				note2.rotation = angle
 				Game.world.timer:lerpVar(note2, "alpha", 2, 0, 10, 2, "out")
@@ -100,7 +100,7 @@ function RemotePianoMoveUI:draw()
 				local note = Sprite(self.arrowspr, xloc, yy + yloc)
 				note.layer = piano.layer + 1
 				note:setColor(litblue)
-				note:setScale(yscale,yscale)
+				note:setScale(xscale,yscale)
 				note:setOriginExact(4, 4)
 				note.rotation = angle
 				note.physics.speed = 5
@@ -115,7 +115,7 @@ function RemotePianoMoveUI:draw()
 				local note2 = Sprite(self.arrowspr, xloc, yy + yloc)
 				note2.layer = piano.layer + 2
 				note2:setColor(COLORS.white)
-				note2:setScale(yscale,yscale)
+				note2:setScale(xscale,yscale)
 				note2:setOriginExact(4, 4)
 				note2.rotation = angle
 				Game.world.timer:lerpVar(note2, "alpha", 2, 0, 10, 2, "out")
@@ -141,7 +141,7 @@ function RemotePianoMoveUI:draw()
 				local note = Sprite(self.arrowspr, xloc, yy + yloc)
 				note.layer = piano.layer + 1
 				note:setColor(litblue)
-				note:setScale(yscale,yscale)
+				note:setScale(xscale,yscale)
 				note:setOriginExact(4, 4)
 				note.rotation = angle
 				note.physics.speed = 5
@@ -156,7 +156,7 @@ function RemotePianoMoveUI:draw()
 				local note2 = Sprite(self.arrowspr, xloc, yy + yloc)
 				note2.layer = piano.layer + 2
 				note2:setColor(COLORS.white)
-				note2:setScale(yscale,yscale)
+				note2:setScale(xscale,yscale)
 				note2:setOriginExact(4, 4)
 				note2.rotation = angle
 				Game.world.timer:lerpVar(note2, "alpha", 2, 0, 10, 2, "out")
@@ -175,14 +175,14 @@ function RemotePianoMoveUI:draw()
 		angle = -math.rad(0)
 		xscale = 2
 		yscale = 2
-		if piano.soundtoplay == 7 then
+		if piano.soundtoplay == 3 then
 			bonusalpha = 0.5
 			if Input.pressed("confirm") and piano.makenote then
 				piano.makenote = false
 				local note = Sprite(self.arrowspr, xloc, yy + yloc)
 				note.layer = piano.layer + 1
 				note:setColor(litblue)
-				note:setScale(yscale,yscale)
+				note:setScale(xscale,yscale)
 				note:setOriginExact(4, 4)
 				note.rotation = angle
 				note.physics.speed = 5
@@ -192,19 +192,19 @@ function RemotePianoMoveUI:draw()
 				Game.world.timer:after(20/30, function()
 					note:remove()
 				end)
-				piano:addChild(note)
+				Game.world:addChild(note)
 				
 				local note2 = Sprite(self.arrowspr, xloc, yy + yloc)
 				note2.layer = piano.layer + 2
 				note2:setColor(COLORS.white)
-				note2:setScale(yscale,yscale)
+				note2:setScale(xscale,yscale)
 				note2:setOriginExact(4, 4)
 				note2.rotation = angle
 				Game.world.timer:lerpVar(note2, "alpha", 2, 0, 10, 2, "out")
 				Game.world.timer:after(10/30, function()
 					note2:remove()
 				end)
-				piano:addChild(note2)
+				Game.world:addChild(note2)
 			end
 		end
 		love.graphics.setColor(litblue[1], litblue[2], litblue[3], (basealpha + bonusalpha) * piano.drawalpha)
@@ -230,7 +230,7 @@ function RemotePianoMoveUI:draw()
 				Game.world.timer:after(10/30, function()
 					note:remove()
 				end)
-				piano:addChild(note)
+				Game.world:addChild(note)
 			end
 		end
 		love.graphics.setColor(litblue[1], litblue[2], litblue[3], (basealpha + bonusalpha) * piano.drawalpha)
