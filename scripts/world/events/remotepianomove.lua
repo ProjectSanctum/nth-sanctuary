@@ -12,8 +12,6 @@ function RemotePianoMove:init(data)
 	self.shadow_tex = Assets.getTexture("world/objects/saucershadow")
 	self.draw_children_above = 1
 	self.solid = true
-	self.leader_x = self.x + self.width / 2
-	self.leader_y = self.y + self.height - 10
 	self.con = 0
 	self.timer = 0
 	self.yoffset = 0
@@ -54,6 +52,10 @@ function RemotePianoMove:init(data)
 	self.hitstop = 0
 	self.drawalpha = 0
 	self.show_instructions = false
+	self.remember_pos = properties["rememberxy"] or true
+	self.cam_marker = properties["cammarker"] or nil
+	self.dust_timer = (Kristal.getTime()*30) % 2
+	self.last_dust_timer = self.dust_timer
 end
 
 function RemotePianoMove:onAdd(parent)
@@ -62,16 +64,19 @@ function RemotePianoMove:onAdd(parent)
 		local tuttext = TutorialText(4, self)
 		Game.world:addChild(tuttext)
 	end
-	if self:getFlag("last_x") then
-		self.x = self:getFlag("last_x")
-	end
-	if self:getFlag("last_y") then
-		self.y = self:getFlag("last_y")
+	if self.remember_pos then
+		if self:getFlag("last_x") then
+			self.x = self:getFlag("last_x")
+		end
+		if self:getFlag("last_y") then
+			self.y = self:getFlag("last_y")
+		end
 	end
 	self.drawx = self.x + 40
 	self.drawy = self.y - 70
-	self.leader_x = self.x + self.width / 2
-	self.leader_y = self.y + self.height - 10
+	if self.no_cancel then
+		table.remove(Game.stage:getObjects(TutorialText)[1].instruction_lines, #Game.stage:getObjects(TutorialText)[1].instruction_lines)
+	end
 	self.ui = RemotePianoMoveUI(self)
 	self.ui.layer = WORLD_LAYERS["above_events"]
 	Game.world:addChild(self.ui)
@@ -138,17 +143,17 @@ function RemotePianoMove:onInteract(player, dir)
 					pos = {self.x + self.width / 2 - 1, self.y + self.height}
 					cutscene:walkTo(party4, pos[1], pos[2], walktime/30, "up")
 				end
-				if self.pan_marker and not self.final_mode then
+				if self.cam_marker and not self.final_mode then
 					if walktime < 15 then
 						walktime = 15
 					end
 					cutscene:panTo(self.cam_marker, 15/30)
 				else
-					pos = {self.x - 281, self.y - 206}
+					pos = {self.x - 281 + SCREEN_WIDTH/2, self.y - 206 + SCREEN_HEIGHT/2}
 					local min_x, min_y = Game.world.camera:getMinPosition()
 					local max_x, max_y = Game.world.camera:getMaxPosition()
 					pos[1] = MathUtils.clamp(pos[1], min_x, max_x)
-					pos[2] = MathUtils.clamp(pos[2], min_y, min_y)
+					pos[2] = MathUtils.clamp(pos[2], min_y, max_y)
 					cutscene:panTo(pos[1], pos[2], walktime/30)
 				end
 				cutscene:wait(walktime/30)
@@ -164,11 +169,11 @@ function RemotePianoMove:onInteract(player, dir)
 					end
 					cutscene:panTo(self.cam_marker, 15/30)
 				else
-					pos = {self.x - 281, self.y - 206}
+					local pos = {self.x - 281 + SCREEN_WIDTH/2, self.y - 206 + SCREEN_HEIGHT/2}
 					local min_x, min_y = Game.world.camera:getMinPosition()
 					local max_x, max_y = Game.world.camera:getMaxPosition()
 					pos[1] = MathUtils.clamp(pos[1], min_x, max_x)
-					pos[2] = MathUtils.clamp(pos[2], min_y, min_y)
+					pos[2] = MathUtils.clamp(pos[2], min_y, max_y)
 					cutscene:panTo(pos[1], pos[2], walktime/30)
 				end
 				Assets.playSound("wing")
@@ -234,6 +239,8 @@ function RemotePianoMove:onInteract(player, dir)
 				if marker then
 					self.camx, self.camy = marker.center_x, marker.center_y
 				end
+			else
+				Game.world:setCameraAttached(true)
 			end
 		end)
 		return true
@@ -246,6 +253,7 @@ end
 
 function RemotePianoMove:update()
 	super.update(self)
+	self.dust_timer = self.dust_timer + DTMULT
 	local mywidth = 80
 	local myheight = 80
 	if self.engaged then
@@ -432,7 +440,7 @@ function RemotePianoMove:update()
 		local stoppingpoint = false
 		Object.startCache()
 		local collided = false
-		local bound_check = Hitbox(self.world, self.x + 1 + self.myhspeed, self.y + 1 + self.myvspeed, mywidth - 2, myheight - 2)
+		local bound_check = Hitbox(self.world, self.x + 1 + self.myhspeed * DTMULT, self.y + 1 + self.myvspeed * DTMULT, mywidth - 2, myheight - 2)
 		for _, collider in ipairs(Game.world.map.block_collision) do
 			if collider:collidesWith(bound_check) then
 				collided = true
@@ -448,7 +456,7 @@ function RemotePianoMove:update()
 		if collided then
 			stoppingpoint = true
 		end
-		if math.floor(Kristal.getTime()*30) % 2 == 0 then
+		if self.dust_timer >= self.last_dust_timer + 2 then
 			local xoffset = 0.5
 			local yoffset = MathUtils.random(0.6) + 0.2
 			if self.myvspeed ~= 0 then
@@ -463,6 +471,8 @@ function RemotePianoMove:update()
 			dust.physics.speed_x = MathUtils.random(-1, 1)
 			dust.layer = self.layer - 0.1
 			Game.world:addChild(dust)
+			self.dust_timer = (Kristal.getTime()*30) % 2
+			self.last_dust_timer = self.dust_timer
 		end
 		if stoppingpoint then
 			self.myhspeed = MathUtils.round(self.myhspeed)
@@ -474,7 +484,7 @@ function RemotePianoMove:update()
 			for i = 0, (math.max(math.abs(self.myhspeed), math.abs(self.myvspeed)) + 1) do
 				if not endloop then
 					local collided = false
-					local bound_check = Hitbox(self.world, self.x + self.myhspeed, self.y + self.myvspeed, mywidth - 1, myheight - 1)
+					local bound_check = Hitbox(self.world, self.x + 1 + self.myhspeed * DTMULT, self.y + 1 + self.myvspeed * DTMULT, mywidth - 2, myheight - 2)
 					for _, collider in ipairs(Game.world.map.block_collision) do
 						if collider:collidesWith(bound_check) then
 							collided = true
@@ -488,10 +498,10 @@ function RemotePianoMove:update()
 					end
 					if collided then
 						if self.myhspeed ~= 0 then
-							self.myhspeed = (math.abs(self.myhspeed) - 1) * MathUtils.sign(self.myhspeed)
+							self.myhspeed = (math.abs(self.myhspeed * DTMULT) - 1) * MathUtils.sign(self.myhspeed * DTMULT)
 						end
 						if self.myvspeed ~= 0 then
-							self.myvspeed = (math.abs(self.myvspeed) - 1) * MathUtils.sign(self.myvspeed)
+							self.myvspeed = (math.abs(self.myvspeed * DTMULT) - 1) * MathUtils.sign(self.myvspeed * DTMULT)
 						end
 					else
 						endloop = true
@@ -511,8 +521,8 @@ function RemotePianoMove:update()
 			end
 			self.con = 2
 		elseif self.hitstop <= 0 then
-			self.x = self.x + MathUtils.round(self.myhspeed) * DTMULT
-			self.y = self.y + MathUtils.round(self.myvspeed) * DTMULT
+			self.x = self.x + MathUtils.round(self.myhspeed * DTMULT)
+			self.y = self.y + MathUtils.round(self.myvspeed * DTMULT)
 		else
 			self.hitstop = self.hitstop - DTMULT
 		end
@@ -525,8 +535,8 @@ function RemotePianoMove:update()
 		if self.myvspeed ~= 0 then
 			self.myvspeed = MathUtils.lerp(math.abs(self.myvspeed), maxspeed, 0.25*DTMULT) * MathUtils.sign(self.myvspeed)
 		end	
-		self.x = self.x + MathUtils.round(self.myhspeed) * DTMULT
-		self.y = self.y + MathUtils.round(self.myvspeed) * DTMULT
+		self.x = self.x + MathUtils.round(self.myhspeed * DTMULT)
+		self.y = self.y + MathUtils.round(self.myvspeed * DTMULT)
 		self.yspeed = self.yspeed + 0.65 * DTMULT
 		self.yoffset = self.yoffset + self.yspeed * DTMULT
 		if self.yoffset >= 0 then
@@ -585,8 +595,7 @@ function RemotePianoMove:update()
 			end
 			local tx, ty = self.world.camera:getTargetPosition()
 			local pantime = MathUtils.clamp(MathUtils.round(ty / 8), walktime, 15)
-			cutscene:attachCamera(pantime)
-			cutscene:wait(pantime/30)
+			cutscene:attachCamera(pantime/30)
 			cutscene:interpolateFollowers()
 			cutscene:attachFollowers()
 		end)
@@ -598,6 +607,9 @@ function RemotePianoMove:update()
 			self.xbuff = 0
 			self.zbuff = 0
 			Game.world.player:setFacing("down")
+			for _, follower in ipairs(Game.world.followers) do
+				follower:setFacing("down")
+			end
 			self.timer = 0
 			self.con = 0
 			Game.lock_movement = false
@@ -635,11 +647,11 @@ function RemotePianoMove:update()
 				end
 				cutscene:panTo(self.cam_marker, 15/30)
 			else
-				pos = {self.x - 281, self.y - 206}
+				local pos = {self.x - 281 + SCREEN_WIDTH/2, self.y - 206 + SCREEN_HEIGHT/2}
 				local min_x, min_y = Game.world.camera:getMinPosition()
 				local max_x, max_y = Game.world.camera:getMaxPosition()
 				pos[1] = MathUtils.clamp(pos[1], min_x, max_x)
-				pos[2] = MathUtils.clamp(pos[2], min_y, min_y)
+				pos[2] = MathUtils.clamp(pos[2], min_y, max_y)
 				cutscene:panTo(pos[1], pos[2], walktime/30)
 			end
 			Assets.playSound("wing")
@@ -764,15 +776,17 @@ function RemotePianoMove:update()
 	end
 	if self.camcontrol then
 		Game.world:setCameraAttached(false)
-		Game.world.camera:setPosition(self.camx, self.camy)
+		local min_x, min_y = Game.world.camera:getMinPosition()
+		local max_x, max_y = Game.world.camera:getMaxPosition()
+		local camx = MathUtils.clamp(self.camx, min_x, max_x)
+		local camy = MathUtils.clamp(self.camy, min_y, max_y)
+		Game.world.camera:setPosition(camx, camy)
 		if self.camcon == 2 then
-			local min_x, min_y = Game.world.camera:getMinPosition()
-			local max_x, max_y = Game.world.camera:getMaxPosition()
 			local plcamx = MathUtils.clamp(Game.world.player.x, min_x, max_x)
-			local plcamy = MathUtils.clamp(Game.world.player.y, min_y, min_y)
+			local plcamy = MathUtils.clamp(Game.world.player.y, min_y, max_y)
 			self.camstrength = MathUtils.lerp(self.camstrength, 4, 0.010101010101010102 * DTMULT)
-			self.camx = MathUtils.lerp(self.camx, plcamx, (self.camstrength / 8) * DTMULT)
-			self.camy = MathUtils.lerp(self.camy, plcamy, (self.camstrength / 8) * DTMULT)
+			self.camx = MathUtils.lerp(camx, plcamx, (self.camstrength / 8) * DTMULT)
+			self.camy = MathUtils.lerp(camy, plcamy, (self.camstrength / 8) * DTMULT)
 			if MathUtils.dist(plcamx, plcamy, self.camx, self.camy) < 2 then
 				self.camcon = 3
 				self.camcontrol = false
