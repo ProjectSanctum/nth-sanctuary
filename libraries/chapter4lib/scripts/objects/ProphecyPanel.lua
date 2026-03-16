@@ -282,17 +282,14 @@ function ProphecyPanel:draw()
 						local num = unit.note or 0
 						if num ~= 0 then
 							sprangle = math.rad(-(num * 45 - 180 - 45))
-							if sprangle == math.rad(0) then
-								spry = 1
-							end
-							if sprangle == math.rad(270) then
-								spry = 2
-							end
-							if sprangle == math.rad(90) then
-								spry = 3
-							end
-							if sprangle == math.rad(180) then
+							if num == 1 then
 								spry = 0
+							elseif num == 5 then
+								spry = 1
+							elseif num == 3 then
+								spry = 2
+							elseif num == 7 then
+								spry = 3
 							end
 						else
 							spr = self.circlespr
@@ -330,22 +327,19 @@ function ProphecyPanel:draw()
 							local num = unit.note or 0
 							if num ~= 0 then
 								sprangle = math.rad(-(num * 45 - 180 - 45))
-								if sprangle == math.rad(0) then
+								if num == 1 then
+									spry = 0
+								elseif num == 5 then
 									spry = 1
-								end
-								if sprangle == math.rad(270) then
+								elseif num == 3 then
 									spry = 2
-								end
-								if sprangle == math.rad(90) then
+								elseif num == 7 then
 									spry = 3
-								end
-								if sprangle == math.rad(180) then
-									spry = 4
 								end
 							else
 								spr = self.circlespr
 								offx, offy = 3, 3
-								spry = 2.5
+								spry = 4
 							end
 							Draw.draw(spr, nxpos + ((i - 1) * space), nypos + (yspace * spry) + (yspace * spry) + (math.sin((self.siner + (i * 24)) / 10) * 2), sprangle, 2, 2, offx, offy)
 						end
