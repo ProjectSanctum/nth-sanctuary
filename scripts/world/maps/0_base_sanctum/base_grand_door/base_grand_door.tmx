@@ -6,7 +6,7 @@
  <properties>
   <property name="border" value=""/>
   <property name="music" value="grand_bells"/>
-  <property name="name" value="[wave:2]Entrance to Grand Sanctum"/>
+  <property name="name" value="Entrance to Grand Sanctum"/>
  </properties>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
  <tileset firstgid="261" source="../../../tilesets/church_objects.tsx"/>

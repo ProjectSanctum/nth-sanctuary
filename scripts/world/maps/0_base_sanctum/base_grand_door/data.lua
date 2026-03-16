@@ -14,7 +14,7 @@ return {
   properties = {
     ["border"] = "",
     ["music"] = "grand_bells",
-    ["name"] = "[wave:2]Entrance to Grand Sanctum"
+    ["name"] = "Entrance to Grand Sanctum"
   },
   tilesets = {
     {

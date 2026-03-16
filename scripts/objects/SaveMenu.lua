@@ -55,13 +55,27 @@ function SaveMenu:init(marker)
     for i = 1, 3 do
         self.saves[i] = Kristal.getSaveFile(i)
     end
-    self.savedata = Game:getSavePreview()
-    self.roomname = self.savedata and self.savedata.room_name or "???"
-    self.nametxt = Text(self.roomname, 0 -self.font:getWidth(self.roomname),170, 557, 32, {
-        align = "left"
-    })
-    self:addChild(self.nametxt)
-    self.nametxt.x = 319.5 - self.nametxt:getTextWidth()/2
+	self.wave_siner = 0
+end
+
+function SaveMenu:drawRoomName(name, x, y)
+    if name ~= "Entrance to Grand Sanctum" then
+		love.graphics.print(name, x, y)
+	else
+		local strlength = StringUtils.len(name)
+		local xx = 0
+		for i = 1, strlength do
+			local char = StringUtils.sub(name, i, i)
+			local direction = self.wave_siner + (30 * (i-1))
+			local speed = 2
+
+			local xspeed = math.cos(math.rad(-direction)) * speed
+			local yspeed = math.sin(math.rad(-direction)) * speed
+
+			love.graphics.print(char, x + xx + xspeed * 0.7 + 10, y + yspeed * 0.7)
+			xx = xx + self.font:getWidth(char)
+		end
+	end
 end
 
 function SaveMenu:updateSaveBoxSize()
@@ -73,6 +87,7 @@ function SaveMenu:updateSaveBoxSize()
 end
 
 function SaveMenu:update()
+	self.wave_siner = self.wave_siner + 20 * DTMULT
     if self.state == "MAIN" then
         if Input.pressed("cancel") then
             self:remove()
@@ -85,7 +100,6 @@ function SaveMenu:update()
             self.selected_y = self.selected_y == 1 and 2 or 1
         end
         if Input.pressed("confirm") then
-            self.nametxt.visible = false
             if self.selected_x == 1 and self.selected_y == 1 then
                 self.state = "SAVE"
 
@@ -120,7 +134,6 @@ function SaveMenu:update()
     elseif self.state == "SAVE" then
         if Input.pressed("cancel") then
             self.state = "MAIN"
-            self.nametxt.visible = true
 
             self.ui_select:stop()
             self.ui_select:play()
@@ -224,7 +237,7 @@ function SaveMenu:draw()
         love.graphics.print(time_text, 522 - self.font:getWidth(time_text), 120)
 
         -- Room name
-        -- love.graphics.print(data.room_name, 319.5 - self.font:getWidth(data.room_name) / 2, 170)
+        self:drawRoomName(data.room_name, 319.5 - self.font:getWidth(data.room_name) / 2, 170)
 
         -- Buttons
         love.graphics.print("Save", 170, 220)
@@ -301,7 +314,7 @@ function SaveMenu:draw()
             love.graphics.print(time_text, x + w - self.font:getWidth(time_text), y)
 
             -- Room name
-            love.graphics.print(data.room_name, x + (w / 2) - self.font:getWidth(data.room_name) / 2, y + 30)
+            self:drawRoomName(data.room_name, x + (w / 2) - self.font:getWidth(data.room_name) / 2, y + 30)
         end
 
         Draw.setColor(PALETTE["world_text"])
@@ -367,7 +380,7 @@ function SaveMenu:drawSaveFile(index, data, x, y, selected, header)
         local time_text = string.format("%d:%02d", minutes, seconds)
         love.graphics.print(time_text, x + 467 - self.font:getWidth(time_text), y + 6)
 
-        love.graphics.print(data.room_name, x + (493 / 2) - self.font:getWidth(data.room_name) / 2, y + 38)
+        self:drawRoomName(data.room_name, x + (493 / 2) - self.font:getWidth(data.room_name) / 2, y + 38)
 
         if selected and not header then
             Draw.setColor(Game:getSoulColor())
