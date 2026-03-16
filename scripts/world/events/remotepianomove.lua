@@ -54,7 +54,7 @@ function RemotePianoMove:init(data)
 	self.show_instructions = false
 	self.remember_pos = properties["rememberxy"] or true
 	self.cam_marker = properties["cammarker"] or nil
-	self.dust_timer = Kristal.getTime()*30
+	self.dust_timer = (Kristal.getTime()*30) % 2
 	self.last_dust_timer = self.dust_timer
 end
 
@@ -471,7 +471,7 @@ function RemotePianoMove:update()
 			dust.physics.speed_x = MathUtils.random(-1, 1)
 			dust.layer = self.layer - 0.1
 			Game.world:addChild(dust)
-			self.dust_timer = Kristal.getTime()*30
+			self.dust_timer = (Kristal.getTime()*30) % 2
 			self.last_dust_timer = self.dust_timer
 		end
 		if stoppingpoint then
