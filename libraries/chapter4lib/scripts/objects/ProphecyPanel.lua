@@ -1,6 +1,6 @@
 local ProphecyPanel, super = Class(Object)
 
-function ProphecyPanel:init(base_tex, faded_tex, sprite, text, width, height, musichint)
+function ProphecyPanel:init(base_tex, faded_tex, sprite, text, width, height, musichint, bigpiano)
     super.init(self)
 	self:setOrigin(0,0)
     self.debug_select = true
@@ -42,6 +42,7 @@ function ProphecyPanel:init(base_tex, faded_tex, sprite, text, width, height, mu
 	self.musiccol2 = ColorUtils.hexToRGB("#203DFFFF")
 	self.arrowspr = Assets.getTexture("ui/arrow_9x9")
 	self.circlespr = Assets.getTexture("ui/circle_7x7")
+	self.musicproparrows = Assets.getFrames("world/events/prophecy/musicproparrows")
     self.text_color = {0, 1, 1, 1}
 	
 	self.panel_alpha = 0
@@ -51,12 +52,32 @@ function ProphecyPanel:init(base_tex, faded_tex, sprite, text, width, height, mu
 	self.nspace = 28
 	self.nyspace = 32
 	self.musichint = musichint or nil
+	self.bigpianomode = bigpiano or false
+	self.note_array = {}
+	self.note_array["a"] = {pitch = 1, dir = 0, ind = 2}
+	self.note_array["i"] = {pitch = 0.5, dir = 0, ind = 5}
+	self.note_array["b"] = {pitch = 1.125, dir = 1, ind = 0}
+	self.note_array["j"] = {pitch = 0.5625, dir = 1, ind = 3}
+	self.note_array["c"] = {pitch = 1.25, dir = 0, ind = 1}
+	self.note_array["k"] = {pitch = 0.625, dir = 0, ind = 4}
+	self.note_array["d"] = {pitch = 4/3, dir = 0, ind = 0}
+	self.note_array["l"] = {pitch = 2/3, dir = 0, ind = 3}
+	self.note_array["e"] = {pitch = 1.5, dir = 3, ind = 1}
+	self.note_array["m"] = {pitch = 0.75, dir = 3, ind = 4}
+	self.note_array["f"] = {pitch = 1.6666666666666667, dir = 3, ind = 0}
+	self.note_array["n"] = {pitch = 0.8333333333333334, dir = 3, ind = 3}
+	self.note_array["g"] = {pitch = 1.875, dir = 2, ind = 1}
+	self.note_array["o"] = {pitch = 0.9375, dir = 2, ind = 4}
+	self.note_array["h"] = {pitch = 2, dir = 2, ind = 0}
 	self.hint_units = {}
 	if self.musichint then
 		self.music_kind = 1
 		local i = 1
 		while i <= StringUtils.len(self.musichint) do
 			local hint_num = tonumber(StringUtils.sub(self.musichint, i, i))
+			if self.bigpianomode then
+				hint_num = StringUtils.sub(self.musichint, i, i)
+			end
 			table.insert(self.hint_units, {note = hint_num})
 			i = i + 1
 		end
@@ -240,43 +261,18 @@ function ProphecyPanel:draw()
 				local nypos = self.nypos
 				local space = self.nspace
 				local yspace = self.nyspace
-				for i, unit in ipairs(self.hint_units) do
-					local sprangle = 0
-					local scale = 2
-					local spr = self.arrowspr
-					local offx, offy = 4, 4
-					local spry = 0
-					local num = unit.note or 0
-					if num ~= 0 then
-						sprangle = math.rad(-(num * 45 - 180 - 45))
-						if sprangle == math.rad(0) then
-							spry = 1
+				if self.bigpianomode then
+					for i, unit in ipairs(self.hint_units) do
+						local note = self.note_array[unit.note]
+						if note then
+							local ind = note.ind + 1
+							local thisyoff = -85.33333333333333 * (note.pitch - 0.5)
+							local txpos = nxpos + (i * space)
+							local typos = nypos + (math.sin((self.siner + (i * 24)) / 10) * 2) + thisyoff
+							Draw.draw(self.musicproparrows[ind], txpos, typos, math.rad(note.dir * -90), 2, 2, 6, 6)
 						end
-						if sprangle == math.rad(270) then
-							spry = 2
-						end
-						if sprangle == math.rad(90) then
-							spry = 3
-						end
-						if sprangle == math.rad(180) then
-							spry = 0
-						end
-					else
-						spr = self.circlespr
-						offx, offy = 3, 3
-						spry = 4
 					end
-					Draw.draw(spr, nxpos + ((i - 1) * space), nypos + (yspace * spry) + (math.sin((self.siner + (i * 24)) / 10) * 2), sprangle, 2, 2, offx, offy)
-				end
-				self:setGMBlendMode("bm_normal")
-			else
-				love.graphics.stencil(function()
-					local last_shader = love.graphics.getShader()
-					love.graphics.setShader(Kristal.Shaders["Mask"])
-					local nxpos = self.nxpos
-					local nypos = self.nypos
-					local space = self.nspace
-					local yspace = self.nyspace
+				else
 					for i, unit in ipairs(self.hint_units) do
 						local sprangle = 0
 						local scale = 2
@@ -296,14 +292,63 @@ function ProphecyPanel:draw()
 								spry = 3
 							end
 							if sprangle == math.rad(180) then
-								spry = 4
+								spry = 0
 							end
 						else
 							spr = self.circlespr
 							offx, offy = 3, 3
-							spry = 2.5
+							spry = 4
 						end
-						Draw.draw(spr, nxpos + ((i - 1) * space), nypos + (yspace * spry) + (yspace * spry) + (math.sin((self.siner + (i * 24)) / 10) * 2), sprangle, 2, 2, offx, offy)
+						Draw.draw(spr, nxpos + ((i - 1) * space), nypos + (yspace * spry) + (math.sin((self.siner + (i * 24)) / 10) * 2), sprangle, 2, 2, offx, offy)
+					end
+				end
+				self:setGMBlendMode("bm_normal")
+			else
+				love.graphics.stencil(function()
+					local last_shader = love.graphics.getShader()
+					love.graphics.setShader(Kristal.Shaders["Mask"])
+					local nxpos = self.nxpos
+					local nypos = self.nypos
+					local space = self.nspace
+					local yspace = self.nyspace
+					if self.bigpianomode then
+						local note = self.note_array[unit.note]
+						if note then
+							local ind = note.ind + 1
+							local thisyoff = -85.33333333333333 * (note.pitch - 0.5)
+							local txpos = nxpos + (i * space)
+							local typos = nypos + (math.sin((self.siner + (i * 24)) / 10) * 2) + thisyoff
+							Draw.draw(self.musicproparrows[ind], txpos, typos, math.rad(note.dir * -90), 2, 2, 6, 6)
+						end
+					else
+						for i, unit in ipairs(self.hint_units) do
+							local sprangle = 0
+							local scale = 2
+							local spr = self.arrowspr
+							local offx, offy = 4, 4
+							local spry = 0
+							local num = unit.note or 0
+							if num ~= 0 then
+								sprangle = math.rad(-(num * 45 - 180 - 45))
+								if sprangle == math.rad(0) then
+									spry = 1
+								end
+								if sprangle == math.rad(270) then
+									spry = 2
+								end
+								if sprangle == math.rad(90) then
+									spry = 3
+								end
+								if sprangle == math.rad(180) then
+									spry = 4
+								end
+							else
+								spr = self.circlespr
+								offx, offy = 3, 3
+								spry = 2.5
+							end
+							Draw.draw(spr, nxpos + ((i - 1) * space), nypos + (yspace * spry) + (yspace * spry) + (math.sin((self.siner + (i * 24)) / 10) * 2), sprangle, 2, 2, offx, offy)
+						end
 					end
 					love.graphics.setShader(last_shader)
 				end, "replace", 1)

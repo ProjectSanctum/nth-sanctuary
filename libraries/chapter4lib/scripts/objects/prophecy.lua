@@ -44,8 +44,8 @@ function Prophecy:init(data)
 
 	self.base_tex = properties["base_tex"] or "backgrounds/IMAGE_DEPTH_EXTEND_MONO_SEAMLESS"
 	self.faded_tex = properties["faded_tex"] or "backgrounds/IMAGE_DEPTH_EXTEND_SEAMLESS"
-
-    self.panel                 = ProphecyPanel(self.base_tex, self.faded_tex, self.texture, self.text, self.panel_width, self.panel_height, properties["musichint"])
+	
+    self.panel                 = ProphecyPanel(self.base_tex, self.faded_tex, self.texture, self.text, self.panel_width, self.panel_height, properties["musichint"], properties["bignotes"] or false)
     self.panel.sprite_offset_x = self.sprite_offset_x
     self.panel.sprite_offset_y = self.sprite_offset_y
     self.panel.text_offset_x   = self.text_offset_x
@@ -69,6 +69,18 @@ function Prophecy:init(data)
 	end
 	if properties["textcol"] then
 		self.panel.text_color = properties["textcol"] and TiledUtils.parseColorProperty(properties["textcol"])
+	end
+	if properties["notex"] then
+		self.panel.nxpos = properties["notex"]
+	end
+	if properties["notey"] then
+		self.panel.nypos = properties["notey"]
+	end
+	if properties["notexspace"] then
+		self.panel.nspace = properties["notexspace"]
+	end
+	if properties["noteyspace"] then
+		self.panel.nyspace = properties["noteyspace"]
 	end
 
     self.container:addChild(self.panel)
