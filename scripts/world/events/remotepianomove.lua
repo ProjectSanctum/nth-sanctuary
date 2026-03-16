@@ -30,7 +30,7 @@ function RemotePianoMove:init(data)
 	self.canceltime = 15
 	self.engaged = false
 	self.siner = 0
-	self.no_cancel = properties["nocancel"] or false
+	self.no_cancel = properties["nocancel"] or true
 	self.final_mode = properties["final"] ~= false
 	self.ubuff = 0
 	self.rbuff = 0
@@ -72,6 +72,9 @@ function RemotePianoMove:onAdd(parent)
 	end
 	self.drawx = self.x + 40
 	self.drawy = self.y - 70
+	if self.no_cancel then
+		table.remove(Game.stage:getObjects(TutorialText)[1].instruction_lines, #Game.stage:getObjects(TutorialText)[1].instruction_lines)
+	end
 	self.ui = RemotePianoMoveUI(self)
 	self.ui.layer = WORLD_LAYERS["above_events"]
 	Game.world:addChild(self.ui)
