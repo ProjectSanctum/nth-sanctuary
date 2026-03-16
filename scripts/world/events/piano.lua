@@ -416,7 +416,7 @@ function ChurchPiano:draw()
 				if self.soundtoplay == 0 then
 					note.physics.speed = 0
 				end
-				Game.world.timer:lerpvar(note, "alpha", 1, 0, 20, 2, "out")
+				Game.world.timer:lerpVar(note, "alpha", 1, 0, 20, 2, "out")
 				Game.world.timer:after(20/30, function()
 					note:remove()
 				end)
