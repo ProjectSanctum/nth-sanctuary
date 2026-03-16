@@ -12,8 +12,6 @@ function RemotePianoMove:init(data)
 	self.shadow_tex = Assets.getTexture("world/objects/saucershadow")
 	self.draw_children_above = 1
 	self.solid = true
-	self.leader_x = self.x + self.width / 2
-	self.leader_y = self.y + self.height - 10
 	self.con = 0
 	self.timer = 0
 	self.yoffset = 0
@@ -54,6 +52,8 @@ function RemotePianoMove:init(data)
 	self.hitstop = 0
 	self.drawalpha = 0
 	self.show_instructions = false
+	self.remember_pos = properties["rememberxy"] or true
+	self.cam_marker = properties["cammarker"] or nil
 end
 
 function RemotePianoMove:onAdd(parent)
@@ -62,16 +62,16 @@ function RemotePianoMove:onAdd(parent)
 		local tuttext = TutorialText(4, self)
 		Game.world:addChild(tuttext)
 	end
-	if self:getFlag("last_x") then
-		self.x = self:getFlag("last_x")
-	end
-	if self:getFlag("last_y") then
-		self.y = self:getFlag("last_y")
+	if self.remember_pos then
+		if self:getFlag("last_x") then
+			self.x = self:getFlag("last_x")
+		end
+		if self:getFlag("last_y") then
+			self.y = self:getFlag("last_y")
+		end
 	end
 	self.drawx = self.x + 40
 	self.drawy = self.y - 70
-	self.leader_x = self.x + self.width / 2
-	self.leader_y = self.y + self.height - 10
 	self.ui = RemotePianoMoveUI(self)
 	self.ui.layer = WORLD_LAYERS["above_events"]
 	Game.world:addChild(self.ui)
@@ -138,17 +138,17 @@ function RemotePianoMove:onInteract(player, dir)
 					pos = {self.x + self.width / 2 - 1, self.y + self.height}
 					cutscene:walkTo(party4, pos[1], pos[2], walktime/30, "up")
 				end
-				if self.pan_marker and not self.final_mode then
+				if self.cam_marker and not self.final_mode then
 					if walktime < 15 then
 						walktime = 15
 					end
 					cutscene:panTo(self.cam_marker, 15/30)
 				else
-					pos = {self.x - 281, self.y - 206}
+					pos = {self.x - 281 + SCREEN_WIDTH/2, self.y - 206 + SCREEN_HEIGHT/2}
 					local min_x, min_y = Game.world.camera:getMinPosition()
 					local max_x, max_y = Game.world.camera:getMaxPosition()
 					pos[1] = MathUtils.clamp(pos[1], min_x, max_x)
-					pos[2] = MathUtils.clamp(pos[2], min_y, min_y)
+					pos[2] = MathUtils.clamp(pos[2], min_y, max_y)
 					cutscene:panTo(pos[1], pos[2], walktime/30)
 				end
 				cutscene:wait(walktime/30)
@@ -164,11 +164,11 @@ function RemotePianoMove:onInteract(player, dir)
 					end
 					cutscene:panTo(self.cam_marker, 15/30)
 				else
-					pos = {self.x - 281, self.y - 206}
+					local pos = {self.x - 281 + SCREEN_WIDTH/2, self.y - 206 + SCREEN_HEIGHT/2}
 					local min_x, min_y = Game.world.camera:getMinPosition()
 					local max_x, max_y = Game.world.camera:getMaxPosition()
 					pos[1] = MathUtils.clamp(pos[1], min_x, max_x)
-					pos[2] = MathUtils.clamp(pos[2], min_y, min_y)
+					pos[2] = MathUtils.clamp(pos[2], min_y, max_y)
 					cutscene:panTo(pos[1], pos[2], walktime/30)
 				end
 				Assets.playSound("wing")
@@ -234,6 +234,8 @@ function RemotePianoMove:onInteract(player, dir)
 				if marker then
 					self.camx, self.camy = marker.center_x, marker.center_y
 				end
+			else
+				Game.world:setCameraAttached(true)
 			end
 		end)
 		return true
@@ -585,8 +587,7 @@ function RemotePianoMove:update()
 			end
 			local tx, ty = self.world.camera:getTargetPosition()
 			local pantime = MathUtils.clamp(MathUtils.round(ty / 8), walktime, 15)
-			cutscene:attachCamera(pantime)
-			cutscene:wait(pantime/30)
+			cutscene:attachCamera(pantime/30)
 			cutscene:interpolateFollowers()
 			cutscene:attachFollowers()
 		end)
@@ -635,11 +636,11 @@ function RemotePianoMove:update()
 				end
 				cutscene:panTo(self.cam_marker, 15/30)
 			else
-				pos = {self.x - 281, self.y - 206}
+				local pos = {self.x - 281 + SCREEN_WIDTH/2, self.y - 206 + SCREEN_HEIGHT/2}
 				local min_x, min_y = Game.world.camera:getMinPosition()
 				local max_x, max_y = Game.world.camera:getMaxPosition()
 				pos[1] = MathUtils.clamp(pos[1], min_x, max_x)
-				pos[2] = MathUtils.clamp(pos[2], min_y, min_y)
+				pos[2] = MathUtils.clamp(pos[2], min_y, max_y)
 				cutscene:panTo(pos[1], pos[2], walktime/30)
 			end
 			Assets.playSound("wing")
@@ -764,15 +765,17 @@ function RemotePianoMove:update()
 	end
 	if self.camcontrol then
 		Game.world:setCameraAttached(false)
-		Game.world.camera:setPosition(self.camx, self.camy)
+		local min_x, min_y = Game.world.camera:getMinPosition()
+		local max_x, max_y = Game.world.camera:getMaxPosition()
+		local camx = MathUtils.clamp(self.camx, min_x, max_x)
+		local camy = MathUtils.clamp(self.camy, min_y, max_y)
+		Game.world.camera:setPosition(camx, camy)
 		if self.camcon == 2 then
-			local min_x, min_y = Game.world.camera:getMinPosition()
-			local max_x, max_y = Game.world.camera:getMaxPosition()
 			local plcamx = MathUtils.clamp(Game.world.player.x, min_x, max_x)
-			local plcamy = MathUtils.clamp(Game.world.player.y, min_y, min_y)
+			local plcamy = MathUtils.clamp(Game.world.player.y, min_y, max_y)
 			self.camstrength = MathUtils.lerp(self.camstrength, 4, 0.010101010101010102 * DTMULT)
-			self.camx = MathUtils.lerp(self.camx, plcamx, (self.camstrength / 8) * DTMULT)
-			self.camy = MathUtils.lerp(self.camy, plcamy, (self.camstrength / 8) * DTMULT)
+			self.camx = MathUtils.lerp(camx, plcamx, (self.camstrength / 8) * DTMULT)
+			self.camy = MathUtils.lerp(camy, plcamy, (self.camstrength / 8) * DTMULT)
 			if MathUtils.dist(plcamx, plcamy, self.camx, self.camy) < 2 then
 				self.camcon = 3
 				self.camcontrol = false
