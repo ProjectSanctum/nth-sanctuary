@@ -55,6 +55,7 @@ function RemotePianoMove:init(data)
 	self.remember_pos = properties["rememberxy"] or true
 	self.cam_marker = properties["cammarker"] or nil
 	self.dust_timer = Kristal.getTime()*30
+	self.last_dust_timer = self.dust_timer
 end
 
 function RemotePianoMove:onAdd(parent)
@@ -455,7 +456,7 @@ function RemotePianoMove:update()
 		if collided then
 			stoppingpoint = true
 		end
-		if math.floor(self.dust_timer) % 2 == 0 then
+		if self.dust_timer >= self.last_dust_timer + 2 then
 			local xoffset = 0.5
 			local yoffset = MathUtils.random(0.6) + 0.2
 			if self.myvspeed ~= 0 then
@@ -470,7 +471,8 @@ function RemotePianoMove:update()
 			dust.physics.speed_x = MathUtils.random(-1, 1)
 			dust.layer = self.layer - 0.1
 			Game.world:addChild(dust)
-			self.dust_timer = self.dust_timer + DTMULT
+			self.dust_timer = Kristal.getTime()*30
+			self.last_dust_timer = self.dust_timer
 		end
 		if stoppingpoint then
 			self.myhspeed = MathUtils.round(self.myhspeed)
