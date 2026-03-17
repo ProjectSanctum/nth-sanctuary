@@ -1,16 +1,16 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
-  width = 30,
-  height = 24,
+  width = 15,
+  height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 11,
-  nextobjectid = 51,
+  nextlayerid = 9,
+  nextobjectid = 47,
   properties = {
     ["music"] = "smallpiano_room"
   },
@@ -23,20 +23,14 @@ return {
     },
     {
       name = "bg_dw_church_2_tileset",
-      firstgid = 103,
+      firstgid = 91,
       filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
     },
     {
       name = "bg_dw_church_tileset_new",
-      firstgid = 301,
+      firstgid = 289,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
       exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
-    },
-    {
-      name = "flooded_sanctuary_extra",
-      firstgid = 883,
-      filename = "../../../tilesets/flooded_sanctuary_extra.tsx",
-      exportfilename = "../../../tilesets/flooded_sanctuary_extra.lua"
     }
   },
   layers = {
@@ -44,9 +38,9 @@ return {
       type = "tilelayer",
       x = 0,
       y = 0,
-      width = 30,
-      height = 24,
-      id = 10,
+      width = 15,
+      height = 12,
+      id = 5,
       name = "tiles",
       class = "",
       visible = true,
@@ -58,74 +52,18 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 380, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-      }
-    },
-    {
-      type = "tilelayer",
-      x = 0,
-      y = 0,
-      width = 30,
-      height = 24,
-      id = 9,
-      name = "tiles_edge",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      encoding = "lua",
-      data = {
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 907, 908, 908, 908, 908, 908, 908, 908, 908, 908, 908, 908, 909, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 916, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 918, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 934, 934, 934, 934, 934, 934, 934, 934, 934, 934, 934, 934, 934, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        631, 560, 560, 560, 560, 560, 560, 631, 560, 560, 560, 560, 560, 560, 631,
+        637, 560, 553, 560, 560, 553, 560, 637, 560, 553, 560, 560, 553, 560, 637,
+        643, 560, 559, 560, 560, 559, 560, 643, 560, 559, 560, 560, 559, 560, 643,
+        661, 560, 565, 560, 560, 565, 560, 661, 560, 565, 560, 560, 565, 560, 661,
+        655, 566, 566, 566, 566, 566, 566, 655, 566, 566, 566, 566, 566, 566, 655,
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+        118, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 118,
+        0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 0,
+        0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 0,
+        0, 118, 118, 118, 118, 118, 118, 118, 118, 118, 118, 118, 118, 118, 0
       }
     },
     {
@@ -141,7 +79,48 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 30,
+          name = "churchtilebutton",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 320,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["downonce"] = true,
+            ["group"] = "hint2",
+            ["keepdown"] = true,
+            ["npcpress"] = false,
+            ["offsound"] = 0,
+            ["onsound"] = 0
+          }
+        },
+        {
+          id = 31,
+          name = "churchtilebutton",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 320,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["downonce"] = true,
+            ["group"] = "hint",
+            ["keepdown"] = true,
+            ["npcpress"] = false,
+            ["offsound"] = 0,
+            ["onsound"] = 0
+          }
+        }
+      }
     },
     {
       type = "objectgroup",
@@ -158,17 +137,184 @@ return {
       properties = {},
       objects = {
         {
-          id = 50,
-          name = "remotepianomove",
+          id = 2,
+          name = "",
           type = "",
           shape = "rectangle",
-          x = 560,
-          y = 440,
-          width = 80,
-          height = 80,
+          x = 395,
+          y = 240,
+          width = 90,
+          height = 66,
           rotation = 0,
+          gid = 8,
           visible = true,
           properties = {}
+        },
+        {
+          id = 4,
+          name = "piano",
+          type = "",
+          shape = "rectangle",
+          x = 395,
+          y = 200,
+          width = 90,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "piano.door",
+            ["destroyhints"] = false,
+            ["solution"] = "000111333111"
+          }
+        },
+        {
+          id = 9,
+          name = "pianohint",
+          type = "",
+          shape = "rectangle",
+          x = 334,
+          y = 60,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "hint2",
+            ["hint"] = "000111",
+            ["staff"] = "start"
+          }
+        },
+        {
+          id = 10,
+          name = "pianohint",
+          type = "",
+          shape = "rectangle",
+          x = 334,
+          y = 100,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "hint2",
+            ["hint"] = "333111",
+            ["silent"] = true,
+            ["staff"] = "end"
+          }
+        },
+        {
+          id = 21,
+          name = "piano",
+          type = "",
+          shape = "rectangle",
+          x = 115,
+          y = 200,
+          width = 90,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["destroyhints"] = true,
+            ["destroyswitches"] = false,
+            ["solution"] = "131315"
+          }
+        },
+        {
+          id = 22,
+          name = "pianohint",
+          type = "",
+          shape = "rectangle",
+          x = 54,
+          y = 80,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "hint",
+            ["hint"] = "131",
+            ["staff"] = "start"
+          }
+        },
+        {
+          id = 23,
+          name = "pianohint",
+          type = "",
+          shape = "rectangle",
+          x = 144,
+          y = 80,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["group"] = "hint",
+            ["hint"] = "315",
+            ["silent"] = true,
+            ["staff"] = "end"
+          }
+        },
+        {
+          id = 24,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 115,
+          y = 240,
+          width = 90,
+          height = 66,
+          rotation = 0,
+          gid = 8,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 25,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 300,
+          y = 225,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "lobbyman",
+            ["text"] = "* Fuck you i wont leave unless i hear some MUSIC"
+          }
+        },
+        {
+          id = 41,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 200,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/piano_light_test",
+            ["marker"] = "entry"
+          }
+        },
+        {
+          id = 43,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 200,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/piano_big_test",
+            ["marker"] = "entry2"
+          }
         }
       }
     },
@@ -187,53 +333,40 @@ return {
       properties = {},
       objects = {
         {
+          id = 33,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 320,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
           id = 34,
           name = "",
           type = "",
           shape = "rectangle",
-          x = 280,
-          y = 680,
-          width = 600,
+          x = 40,
+          y = 440,
+          width = 520,
           height = 40,
           rotation = 0,
           visible = true,
           properties = {}
         },
         {
-          id = 47,
+          id = 35,
           name = "",
           type = "",
           shape = "rectangle",
-          x = 280,
-          y = 240,
-          width = 600,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 48,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 280,
-          y = 280,
+          x = 0,
+          y = 320,
           width = 40,
-          height = 400,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 49,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 840,
-          y = 280,
-          width = 40,
-          height = 400,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {}
@@ -259,8 +392,34 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 600,
-          y = 640,
+          x = 459,
+          y = 260,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 40,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 560,
+          y = 265,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "entry",
+          type = "",
+          shape = "point",
+          x = 20,
+          y = 260,
           width = 0,
           height = 0,
           rotation = 0,
