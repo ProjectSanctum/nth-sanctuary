@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="104">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="105">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -273,4 +273,5 @@ This is your home now.</property>
   </object>
  </objectgroup>
  <objectgroup id="2" name="objects_overlay"/>
+ <objectgroup id="15" name="objects_mason"/>
 </map>

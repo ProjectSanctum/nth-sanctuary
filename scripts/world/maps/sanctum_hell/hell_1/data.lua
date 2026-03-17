@@ -9,8 +9,8 @@ return {
   height = 24,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 15,
-  nextobjectid = 102,
+  nextlayerid = 16,
+  nextobjectid = 105,
   properties = {
     ["border"] = "hell",
     ["music"] = "hellworld",
@@ -147,7 +147,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -265,7 +264,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
@@ -281,7 +279,6 @@ return {
           width = 240,
           height = 200,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -356,7 +353,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* Welcome to Hell.[wait:10]\nThis is your home now.",
@@ -374,7 +370,6 @@ return {
           width = 80,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "0_base_sanctum/base_center",
@@ -391,7 +386,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "leech",
@@ -408,7 +402,6 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "secrets/frisk_room",
@@ -425,7 +418,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["active"] = true,
@@ -446,7 +438,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "3_flooded_sanctuary/flooded_1_hellentrance",
@@ -463,7 +454,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["hue_start"] = "0",
@@ -486,7 +476,6 @@ return {
           width = 160,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -500,7 +489,6 @@ return {
           width = 80,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -514,9 +502,28 @@ return {
           width = 480,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
+        },
+        {
+          id = 103,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 400,
+          y = 360,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "mason",
+            ["flagcheck"] = "belch3",
+            ["text1_1"] = "[color:#808080]> the plorigus image format is a simple image format.",
+            ["text1_2"] = "[color:#808080]> potentially long or good image (with) useful shit.",
+            ["text1_3"] = "[color:#808080]> do not be fooled by ral's lies about [color:red]it[color:#808080],[wait:5] for he created [color:red]it[color:#808080].",
+            ["text2_1"] = "[color:#808080]> do not be fooled by ral's lies about [color:red]it[color:#808080]."
+          }
         }
       }
     },
@@ -544,7 +551,6 @@ return {
           width = 80,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -558,7 +564,6 @@ return {
           width = 320,
           height = 520,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -572,7 +577,6 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -586,7 +590,6 @@ return {
           width = 720,
           height = 200,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -600,7 +603,6 @@ return {
           width = 80,
           height = 360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -614,7 +616,6 @@ return {
           width = 440,
           height = 360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -628,7 +629,6 @@ return {
           width = 80,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -642,7 +642,6 @@ return {
           width = 160,
           height = 240,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -656,7 +655,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = -360 },
@@ -676,7 +674,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -700,7 +697,6 @@ return {
           width = 880,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -730,7 +726,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -744,7 +739,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -758,7 +752,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -772,7 +765,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -786,7 +778,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -797,6 +788,21 @@ return {
       draworder = "topdown",
       id = 2,
       name = "objects_overlay",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {}
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 15,
+      name = "objects_mason",
       class = "",
       visible = true,
       opacity = 1,
