@@ -3,7 +3,7 @@ local PathingEnemyGenerator, super = Class(Event, "pathenemygen")
 function PathingEnemyGenerator:init(data)
     super.init(self, data)
     local properties = data and data.properties or {}
-	self.spawnamount = properties["spawnamount"] or false
+	self.spawnamount = properties["spawnamount"] or 1
 	self.timer = properties["timer"] or 0
 	self.rate = properties["rate"] or 0
 	self.damage = properties["damage"] or 25
