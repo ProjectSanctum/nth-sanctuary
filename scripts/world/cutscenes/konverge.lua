@@ -141,6 +141,75 @@ return {
         Game:setFlag("intMason", intMason + 1)
     end,
 
+	ddelta = function(cutscene)
+        local ddelta = cutscene:getCharacter("ddelta")
+		cutscene:text("[image:ui/ddelta_asterisk]ddelta here, i helped\n code this lil game!", "aha", ddelta)
+		cutscene:text("[image:ui/ddelta_asterisk]ask me anything will ya", "neutral", ddelta)
+        local ch = cutscene:choicer({"Can you\nturn into\na prism", "Ask about\nlore", "Nah"}, {offset_y_1 = -32})
+		if ch == 1 then
+			if Game:getFlag("ddeltaPrismed", false) then
+				cutscene:text("[image:ui/ddelta_asterisk]nah,[wait:5] not doing it twice", "lookdown", ddelta)
+			else
+				cutscene:text("[image:ui/ddelta_asterisk]hey,[wait:5] i only did that\n ONCE as a joke.", "neutral", ddelta)
+				cutscene:text("[image:ui/ddelta_asterisk]i don't do it all the\n time yknow", "lookdown", ddelta)
+				cutscene:text("[image:ui/ddelta_asterisk](and technically me\n turning into a prism\n isn't even canon...)", "helpme", ddelta)
+				local ch = cutscene:choicer({"Do it anyway", "Okay"})
+				if ch == 1 then
+					cutscene:text("[image:ui/ddelta_asterisk]alright, fiiiine, i'll do\n it", "helpme", ddelta)
+					Game.world.music:pause()
+					local dd_y = ddelta.y
+					Assets.playSound("3dprism_appear")
+					local wave_mag = 0
+					local function getFXWaveMag()
+						return wave_mag
+					end
+					ddelta:addFX(ShaderFX("wave_interlace", {
+						["wave_sine"] = function () return Kristal.getTime() * 100 end,
+						["wave_mag"] = function () return getFXWaveMag() end,
+						["wave_height"] = 2,
+						["texsize"] = { SCREEN_WIDTH, SCREEN_HEIGHT }
+					}), "funky_mode")
+					Game.world.timer:during(15/30, function()
+						ddelta.y = MathUtils.lerp(ddelta.y, dd_y - 40, 0.125)
+						wave_mag = MathUtils.lerp(wave_mag, 120, 0.125)
+					end)
+					cutscene:wait(15/30)
+					wave_mag = 60
+					prism_sprite = Sprite("enemies/3d/idle", ddelta.x, dd_y)
+					prism_sprite:setLayer(ddelta.layer)
+					prism_sprite:play(1/30, true)
+					prism_sprite:setOrigin(0.5, 1)
+					prism_sprite:setScale(2, 2)
+					prism_sprite:addFX(ShaderFX("wave_interlace", {
+						["wave_sine"] = function () return Kristal.getTime() * 100 end,
+						["wave_mag"] = function () return getFXWaveMag() end,
+						["wave_height"] = 2,
+						["texsize"] = { SCREEN_WIDTH, SCREEN_HEIGHT }
+					}), "funky_mode")
+					Game.world:addChild(prism_sprite)
+					ddelta.visible = false
+					Game.world.timer:during(15/30, function()
+						wave_mag = MathUtils.lerp(wave_mag, 0, 0.25)
+					end)
+					cutscene:wait(15/30)
+					wave_mag = 0
+					cutscene:wait(2)
+					prism_sprite:remove()
+					ddelta.y = dd_y
+					ddelta.visible = true
+					Assets.stopSound("3dprism_appear")
+					Game.world.music:resume()
+					cutscene:text("[image:ui/ddelta_asterisk]there ya go!", "lookup", ddelta)
+					cutscene:text("[image:ui/ddelta_asterisk]i'm not doing that again\n by the way", "helpme", ddelta)
+					Game:setFlag("ddeltaPrismed", true)
+				end
+			end
+		elseif ch == 2 then
+			cutscene:text("[image:ui/ddelta_asterisk]funny story i actually\n don't know the lore much\n either", "neutral", ddelta)
+			cutscene:text("[image:ui/ddelta_asterisk]i do the coding,[wait:5] not the\n story", "lookup", ddelta)
+			cutscene:text("[image:ui/ddelta_asterisk]ya got the wrong guy for\n this one,[wait:5] sorry", "lookdown", ddelta)
+		end
+	end,
     cruel = function (cutscene, event)
         for _, child in ipairs(event.children) do
             if child:includes(TileObject) then
@@ -149,6 +218,7 @@ return {
         end
         event:setSprite("world/objects/treasure_chest_2")
         event:setScale(2, 1)
+        Assets.playSound("locker")
         Assets.playSound("locker")
         cutscene:text("* (You looked inside the chest...)")
         local cr = cutscene:spawnNPC("jellycruel", 160, 380)
