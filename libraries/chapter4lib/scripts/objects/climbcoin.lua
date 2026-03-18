@@ -72,7 +72,7 @@ function ClimbCoin:update()
         )
 		value_text.physics.speed_y = -4
         value_text.physics.friction = 0.25
-        value_text:setLayer(Game.world.player.layer - 0.05)
+        value_text:setLayer(Game.world.player.layer + 0.05)
 		if Game.world.map.cyltower then
 			value_text.x_offset = font:getWidth("+"..self.value)/2
 			value_text.visible = false
