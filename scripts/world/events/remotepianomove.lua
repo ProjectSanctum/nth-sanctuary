@@ -861,6 +861,8 @@ function RemotePianoMove:stepTwo()
 			follower:setPosition(xpos + xoff, ypos + yoff)
 			follower:setFacing("up")
 		end
+	else
+		self.layer = self.start_layer
 	end
 	if self.camcontrol then
 		Game.world:setCameraAttached(false)
