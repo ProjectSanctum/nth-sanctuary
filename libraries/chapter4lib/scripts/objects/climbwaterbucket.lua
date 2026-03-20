@@ -75,7 +75,7 @@ function ClimbWaterBucket:update()
 						local water = ClimbWater(self.x, self.y, 1, self.watermovetimer,
 						self.watermoverate, self.watertilelimit, self.waterfallingtimer,
 						self.waterdir, self.spawnrate, self.activetime)
-						water.layer = self.layer + 0.1
+						water.layer = self.world.player.layer + 0.01
 						self.world:addChild(water)
 						if FRAMERATE > 30 or (FRAMERATE == 0 and FPS > 30) then
 							self.stoptimerconds = self.timer
@@ -100,7 +100,7 @@ function ClimbWaterBucket:update()
 						local water = ClimbWater(self.x, self.y, 2, self.watermovetimer,
 						self.watermoverate, self.watertilelimit, self.waterfallingtimer,
 						self.waterdir, self.spawnrate, self.activetime)
-						water.layer = self.layer + 0.1
+						water.layer = self.world.player.layer + 0.01
 						self.world:addChild(water)
 						if FRAMERATE > 30 or (FRAMERATE == 0 and FPS > 30) then
 							self.stoptimerconds = self.timer
