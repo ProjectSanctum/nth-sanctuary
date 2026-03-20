@@ -1,5 +1,5 @@
 ---@class Map.dark_place : Map
-local map, super = Class(Map, "hellentrance")
+local map, super = Class(Map, "flooded_1")
 
 function map:init(world, data)
     super.init(self, world, data)
@@ -68,6 +68,8 @@ end
 
 function map:update(world, data)
     super.update(self)
+    self.lava_alpha = (math.sin((Kristal.getTime() * 30) / 12) * 0.2)
+    self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)
     if not Game:getFlag("intro_complete") then
         local kris = Game.world.player
         if kris then
@@ -77,8 +79,6 @@ function map:update(world, data)
             local bottom_px = self.fade_bottom_tiles * 40
             self.hell_border_alpha = MathUtils.clamp(1 - (dist - bottom_px) / (top_px - bottom_px), 0, 1)
         end
-        self.lava_alpha = (math.sin((Kristal.getTime() * 30) / 12) * 0.2)
-        self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)
         
         if self.con == 1 then
             self.frame_timer = self.frame_timer + DTMULT

@@ -507,6 +507,37 @@ function RotatingTower:draw()
 					Draw.setColor(tile.color)
 					Draw.draw(event.sprite.texture, self.tower_x + event.graphics.shake_x + tile.x, event.y + 10 + event.graphics.shake_y, 0, (tile.xscale * 2) / self.tile_width_fine, 2, 0, 0)
 				end
+			elseif event.id == "ClimbMover" then
+				local adjustment = -260
+				if self.appearance == 1 then
+					adjustment = -520
+				end
+				local tile_angle = MathUtils.lerp(360, 0, (event.x + adjustment) / self.tower_circumference)
+				local tile_angle1 = tile_angle + self.tower_angle
+				while tile_angle1 > 360 do
+					tile_angle1 = tile_angle1 - 360
+				end
+				if tile_angle1 < 0 then
+					tile_angle1 = tile_angle1 + 360
+				end
+				if not (tile_angle1 > 350 or tile_angle1 <= 170) then
+					-- end here
+				else
+					local tile_x = MathUtils.lengthDirX(self.tower_radius, -math.rad(tile_angle1))
+					local tile_angle2 = tile_angle1 + self.tile_angle_difference
+					if tile_angle2 > 360 then
+						tile_angle2 = tile_angle2 - 360
+					elseif tile_angle2 < 0 then
+						tile_angle2 = tile_angle2 + 360
+					end
+					local tile_xscale = MathUtils.lengthDirX(self.tower_radius, -math.rad(tile_angle2)) - tile_x
+					local tile_yscale = self.tile_height_fine
+					tile_xscale = tile_xscale / self.tile_width_fine
+					tile_yscale = tile_yscale / self.tile_height_fine
+					local tile_color = ColorUtils.mergeColor(COLORS.white, COLORS.gray, math.abs(tile_x + (tile_xscale / 2)) / 190)
+					Draw.setColor(tile_color)
+					Draw.draw(event.sprite.texture, self.tower_x + event.graphics.shake_x + tile_x, event.y + event.graphics.shake_y - 20, 0, tile_xscale, tile_yscale, ox, oy)
+				end
 			else
 				local ox, oy = event:getOriginExact()
 				local adjustment = 1

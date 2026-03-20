@@ -1,5 +1,5 @@
 ---@class Map.dark_place : Map
-local map, super = Class(Map, "hellentrance")
+local map, super = Class(Map, "flooded_2")
 
 function map:init(world, data)
     super.init(self, world, data)
@@ -12,6 +12,8 @@ end
 function map:onEnter()
     self.fade_top_px = -4
     self.fade_bottom_px = -4
+    self.silhouette_tiles = Game.world.map:getTileLayer("tile_silhouette")
+	self.silhouette_tiles.visible = false
     if self.fakefader then
         Game.world.timer:tween(0.35, self.fakefader, {alpha = 0})
     end
