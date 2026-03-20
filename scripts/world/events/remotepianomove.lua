@@ -772,7 +772,7 @@ function RemotePianoMove:stepTwo()
 	if self.engaged then
 		Game.world.player:setPosition(self.x + self.width / 2 - 1, self.y + self.height + (self.yoffset * 1.1) - 10)
 		Game.world.player:setSprite("piano")
-		Game.world.player.layer = self.layer + 0.1
+		Game.world.player.layer = self.layer + 0.01
 		for i, follower in ipairs(Game.world.followers) do
 			local xpos = self.x + self.width / 2
 			local ypos = self.y + self.height - 10
@@ -781,17 +781,17 @@ function RemotePianoMove:stepTwo()
 			if i == 1 then
 				xpos = self.x + self.width / 2 + 22 - 1
 				ypos = self.y + self.height
-				follower.layer = self.layer + 0.3
+				follower.layer = self.layer + 0.03
 			end
 			if i == 2 then
 				xpos = self.x + self.width / 2 - 14 - 1
 				ypos = self.y + self.height
-				follower.layer = self.layer + 0.2
+				follower.layer = self.layer + 0.02
 			end
 			if i == 3 then
 				xpos = self.x + self.width / 2 - 1
 				ypos = self.y + self.height
-				follower.layer = self.layer + 0.4
+				follower.layer = self.layer + 0.04
 			end
 			if follower.actor.id == "susie" then
 				yoff = (self.yoffset * 1.05)
