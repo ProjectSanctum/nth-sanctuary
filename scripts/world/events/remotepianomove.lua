@@ -157,6 +157,7 @@ function RemotePianoMove:onInteract(player, dir)
 					cutscene:panTo(pos[1], pos[2], walktime/30)
 				end
 				cutscene:wait(walktime/30)
+				return
 			end)
 		else
 			Game.lock_movement = true
@@ -222,6 +223,7 @@ function RemotePianoMove:onInteract(player, dir)
 				if party4 then
 					party4:resetSprite()
 				end
+				return
 			end)
 		end
 		if Game.stage:getObjects(TutorialText)[1] then
@@ -319,15 +321,16 @@ function RemotePianoMove:update()
 			self.zbuff = 3
 		end
 		Object.startCache()
-		local collider = Hitbox(self, 0, 0, 80, 80)
-		--[[for _, killblock in ipairs(Game.world:getEvents("killpiano")) do
-			if killblock:collidesWith(collider) then
-				if self.con < 400 then
-					self.con = 400
-					self.timer = 0
+		for _, jumppoint in ipairs(Game.world.map:getEvents("pianomovetrigger")) do
+			if self:collidesWith(jumppoint.collider) then
+				if jumppoint.extflag == "killpiano" then
+					if self.con < 400 then
+						self.con = 400
+						self.timer = 0
+					end
 				end
 			end
-		end]]
+		end
 		Object.endCache()
 	end
 	local version = 1
@@ -443,6 +446,29 @@ function RemotePianoMove:update()
 		end	
 		local stoppingpoint = false
 		Object.startCache()
+		local trigger_check = Hitbox(self.world, self.x + 1, self.y + 1, 80 - 2, 80 - 2)
+		for _, jumppoint in ipairs(Game.world.map:getEvents("pianomovetrigger")) do
+			if trigger_check:collidesWith(jumppoint.collider) then
+				if jumppoint.extflag == "jump" then
+					self.con = 4
+					Assets.playSound("motor_upper_2")
+					self.yspeed = -16
+					self.yoffset = self.yspeed
+					self:stepTwo()
+					Object.endCache()
+					return
+				elseif jumppoint.extflag == "camlock" then
+					self.camcontrol = true
+					self.camx = Game.world.camera.x
+					self.camy = Game.world.camera.y
+				elseif jumppoint.extflag == "camfree" then
+					self.camcontrol = false
+					Game.world:setCameraAttached(true)
+				elseif jumppoint.extflag == "explode" then
+					self.con = 400
+				end
+			end
+		end
 		local collider = nil
 		local collided = false
 		local bound_check = Hitbox(self.world, self.x + 1 + self.myhspeed * DTMULT, self.y + 1 + self.myvspeed * DTMULT, mywidth - 2, myheight - 2)
@@ -475,7 +501,7 @@ function RemotePianoMove:update()
 			dust:play(1 / 15, false, function () dust:remove() end)
 			dust:setOrigin(0.5, 0)
 			dust:setScale(2, 2)
-			dust:setPosition(self.x + (xoffset * self.piano_tex:getWidth()), self.y + (yoffset * self.piano_tex:getHeight()))
+			dust:setPosition(self.x + (xoffset * (self.piano_tex:getWidth()*2)), self.y + (yoffset * (self.piano_tex:getHeight())*2))
 			dust.physics.speed_x = MathUtils.random(-1, 1)
 			dust.layer = self.layer - 0.1
 			Game.world:addChild(dust)
@@ -536,6 +562,17 @@ function RemotePianoMove:update()
 		end
 	end	
 	if self.con == 4 then
+		Object.startCache()
+		local trigger_check = Hitbox(self.world, self.x + 1, self.y + 1, 80 - 2, 80 - 2)
+		for _, jumppoint in ipairs(Game.world.map:getEvents("pianomovetrigger")) do
+			if trigger_check:collidesWith(jumppoint.collider) then
+				if jumppoint.extflag == "explode" then
+					self.con = 400
+					self.timer = 0
+				end
+			end
+		end
+		Object.endCache()
 		local maxspeed = 16
 		if self.myhspeed ~= 0 then
 			self.myhspeed = MathUtils.lerp(math.abs(self.myhspeed), maxspeed, 0.25*DTMULT) * MathUtils.sign(self.myhspeed)
@@ -606,6 +643,7 @@ function RemotePianoMove:update()
 			cutscene:attachCamera(pantime/30)
 			cutscene:interpolateFollowers()
 			cutscene:attachFollowers()
+			return
 		end)
 		cutscene:after(function()
 			self.ubuff = 0
@@ -623,7 +661,7 @@ function RemotePianoMove:update()
 			Game.lock_movement = false
 		end)
 	end
-	if self.con == 400 then
+	if self.con == 400 or self.con == 401 then
 		local jumptime = 16
 		local jumpheight = 20
 		local explodedelay = 26
@@ -641,60 +679,85 @@ function RemotePianoMove:update()
 		if self.yoffset >= 0 then
 			self.alpha = self.alpha - 0.1 * DTMULT
 		end
+		self.engaged = false
+		self.show_instructions = false
 		if self.alpha <= 0 then
 			self.visible = false
 			Assets.playSound("impact")
 			Game.world.camera:shake(0, 8)
 			self:remove()
 		end	
-		local cutscene = self.world:startCutscene(function(cutscene)
-			cutscene:detachCamera()
-			if self.cam_marker then
-				if walktime < 15 then
-					walktime = 15
-				end
-				cutscene:panTo(self.cam_marker, 15/30)
-			else
-				local pos = {self.x - 281 + SCREEN_WIDTH/2, self.y - 206 + SCREEN_HEIGHT/2}
+		if self.con == 400 then
+			local cutscene = self.world:startCutscene(function(cutscene)
+				cutscene:detachCamera()
+				local cx = self.x - 281 + SCREEN_WIDTH/2
+				local cy = self.y - 206 + SCREEN_HEIGHT/2
 				local min_x, min_y = Game.world.camera:getMinPosition()
 				local max_x, max_y = Game.world.camera:getMaxPosition()
-				pos[1] = MathUtils.clamp(pos[1], min_x, max_x)
-				pos[2] = MathUtils.clamp(pos[2], min_y, max_y)
-				cutscene:panTo(pos[1], pos[2], walktime/30)
-			end
-			Assets.playSound("wing")
-			local jumpstrength = 12
-			local leader = cutscene:getCharacter(Game.party[1]:getActor().id)
-			local party2, party3, party4 = nil, nil, nil
-			if #Game.party >= 2 then
-				party2 = cutscene:getCharacter(Game.party[2]:getActor().id)
-			end
-			if #Game.party >= 3 then
-				party3 = cutscene:getCharacter(Game.party[3]:getActor().id)
-			end
-			if #Game.party >= 4 then
-				party4 = cutscene:getCharacter(Game.party[4]:getActor().id)
-			end
-			if party2 then
-				pos = {self.x + 36, self.y - 10}
-				cutscene:jumpTo(party2, pos[1], pos[2], jumpstrength, jumptime/30)
-			end
-			if party3 then
-				pos = {self.x + 4, self.y - 10}
-				cutscene:jumpTo(party3, pos[1], pos[2], jumpstrength, jumptime/30)
-			end
-			if party4 then
-				pos = {self.x + 20, self.y - 16}
-				cutscene:jumpTo(party4, pos[1], pos[2], jumpstrength, jumptime/30)
-			end
-			pos = {self.x + 20, self.y - 4}
-			cutscene:jumpTo(leader, pos[1], pos[2], jumpstrength, jumptime/30)
-			cutscene:wait(jumptime/30)
-			Assets.playSound("noise")
-			cutscene:interpolateFollowers()
-			cutscene:attachFollowers()
-			cutscene:attachCamera()
-		end)
+				cx = MathUtils.clamp(cx, min_x, max_x)
+				cy = MathUtils.clamp(cy, min_y, max_y)
+				cutscene:panTo(cx, cy, jumptime/30)
+				Assets.playSound("wing")
+				local jumpstrength = 12
+				local leader = cutscene:getCharacter(Game.party[1]:getActor().id)
+				local party2, party3, party4 = nil, nil, nil
+				if #Game.party >= 2 then
+					party2 = cutscene:getCharacter(Game.party[2]:getActor().id)
+				end
+				if #Game.party >= 3 then
+					party3 = cutscene:getCharacter(Game.party[3]:getActor().id)
+				end
+				if #Game.party >= 4 then
+					party4 = cutscene:getCharacter(Game.party[4]:getActor().id)
+				end
+				cutscene:jumpTo(leader, "killpiano1", jumpstrength, jumptime/30)
+				leader.layer = Game.world.map.object_layer
+				leader.sprite:set("jump_ball")
+				if party2 then
+					party2.sprite:set("jump_ball")
+					party2.layer = Game.world.map.object_layer
+					cutscene:jumpTo(party2, "killpiano2", jumpstrength, jumptime/30)
+				end
+				if party3 then
+					party3.sprite:set("jump_ball")
+					party3.layer = Game.world.map.object_layer
+					cutscene:jumpTo(party3, "killpiano3", jumpstrength, jumptime/30)
+				end
+				if party4 then
+					party4.sprite:set("jump_ball")
+					party4.layer = Game.world.map.object_layer
+					cutscene:jumpTo(party4, "killpiano4", jumpstrength, jumptime/30)
+				end
+				cutscene:wait(jumptime/30)
+				Assets.playSound("noise")
+				leader:resetSprite()
+				if party2 then
+					party2:resetSprite()
+				end
+				if party3 then
+					party3:resetSprite()
+				end
+				if party4 then
+					party4:resetSprite()
+				end
+				cutscene:interpolateFollowers()
+				cutscene:attachFollowers()
+				cutscene:attachCamera()
+				return
+			end)
+			cutscene:after(function()
+				self.ubuff = 0
+				self.dbuff = 0
+				self.lbuff = 0
+				self.rbuff = 0
+				self.xbuff = 0
+				self.zbuff = 0
+				self.timer = 0
+				self.con = 0
+				Game.lock_movement = false
+			end)
+			self.con = 401
+		end
 	end
 	if self.shakex > 0 then
 		self.shakex = self.shakex - DTMULT
@@ -702,22 +765,15 @@ function RemotePianoMove:update()
 	if self.shakey > 0 then
 		self.shakey = self.shakey - DTMULT
 	end
-	local party2, party3, party4 = nil, nil, nil
-	if #Game.party >= 2 then
-		party2 = Game.world:getCharacter(Game.party[2]:getActor().id)
-	end
-	if #Game.party >= 3 then
-		party3 = Game.world:getCharacter(Game.party[3]:getActor().id)
-	end
-	if #Game.party >= 4 then
-		party4 = Game.world:getCharacter(Game.party[4]:getActor().id)
-	end
+	self:stepTwo()
+end
+
+function RemotePianoMove:stepTwo()
 	if self.engaged then
-		Game.world.player:setPosition(self.x + self.width / 2 - 1, self.y + self.height - 10)
+		Game.world.player:setPosition(self.x + self.width / 2 - 1, self.y + self.height + (self.yoffset * 1.1) - 10)
 		Game.world.player:setSprite("piano")
 		Game.world.player.layer = self.layer + 0.1
 		for i, follower in ipairs(Game.world.followers) do
-			local custom_spr = false
 			local xpos = self.x + self.width / 2
 			local ypos = self.y + self.height - 10
 			local xoff = 0
@@ -725,27 +781,43 @@ function RemotePianoMove:update()
 			if i == 1 then
 				xpos = self.x + self.width / 2 + 22 - 1
 				ypos = self.y + self.height
-				follower.layer = self.layer + 0.2
+				follower.layer = self.layer + 0.3
 			end
 			if i == 2 then
 				xpos = self.x + self.width / 2 - 14 - 1
 				ypos = self.y + self.height
-				follower.layer = self.layer + 0.1
+				follower.layer = self.layer + 0.2
 			end
 			if i == 3 then
 				xpos = self.x + self.width / 2 - 1
 				ypos = self.y + self.height
-				follower.layer = self.layer + 0.3
+				follower.layer = self.layer + 0.4
 			end
 			if follower.actor.id == "susie" then
 				yoff = (self.yoffset * 1.05)
-				if self.shakex >= 9 then
-					custom_spr = true
-					follower:setSprite("fall_brace_1")
-					if self.myhspeed < 0 then
-						follower.flip_x = true
-						follower:setPosition(self.x + 96, ypos + yoff)
+				if self.yoffset < 0 then
+					if not follower.piano_custom_spr then
+						follower:setAnimation("fall_brace")
+						follower:play(1/7)
 					end
+					follower.piano_custom_spr = true
+					follower.scale_x = 2
+					if self.myhspeed < 0 then
+						follower.scale_x = -2
+					end
+				elseif self.shakex >= 9 then
+					follower.piano_custom_spr = true
+					follower:setSprite("landed")
+					follower.scale_x = 2
+					if self.myhspeed > 0 then
+						follower.scale_x = -2
+					end
+				else
+					if follower.piano_custom_spr then
+						follower.scale_x = 2
+						follower:resetSprite()
+					end
+					follower.piano_custom_spr = false
 				end
 			end
 			if follower.actor.id == "ralsei" then
@@ -755,26 +827,31 @@ function RemotePianoMove:update()
 				yoff = (self.yoffset * 1.2)
 				if self.yoffset < 0 then
 					self.ralsei_knocked_down = 16
-					custom_spr = true
+					follower.piano_custom_spr = true
 					follower:setPosition(xpos + xoff, ypos + yoff)
 					if self.myhspeed > 0 then
-						follower:setSprite("shocked_right_landed_1")
+						follower:setSprite("shocked_right_landed")
 					else
-						follower:setSprite("shocked_left_landed_1")
+						follower:setSprite("shocked_left_landed")
 					end
+					follower.sprite:setFrame(1)
 				elseif self.ralsei_knocked_down <= 0 then
-					custom_spr = false
+					if follower.piano_custom_spr then
+						follower:resetSprite()
+					end
+					follower.piano_custom_spr = false
 				else
 					self.ralsei_knocked_down = self.ralsei_knocked_down - DTMULT
 					if self.ralsei_knocked_down <= 0 then
 						self.ralshakex = 8
 					end
 					if self.myhspeed > 0 then
-						follower:setSprite("shocked_right_landed_2")
+						follower:setSprite("shocked_right_landed")
 					else
-						follower:setSprite("shocked_left_landed_2")
+						follower:setSprite("shocked_left_landed")
 					end
-					custom_spr = true
+					follower.sprite:setFrame(2)
+					follower.piano_custom_spr = true
 				end
 				self.ralshakex = self.ralshakex - DTMULT
 			end
@@ -815,9 +892,11 @@ function RemotePianoMove:draw()
 	if self.carpet_tex then
         Draw.draw(self.carpet_tex, 0, self.yoffset, 0, 1, 1)
 	end
+	Draw.setColor(1,1,1,self.alpha)
 	if self.piano_tex then
         Draw.draw(self.piano_tex, (math.sin(self.shakex * 1.5) * (self.shakex / 2)), self.yoffset + (math.sin(self.shakey * 1.5) * (self.shakey / 2)), 0, 2, 2, 2, 10)
 	end
+	Draw.setColor(1,1,1,1)
 	super.draw(self)
 end
 

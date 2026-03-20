@@ -8,8 +8,8 @@ function actor:init()
     })
     TableUtils.merge(self.offsets, {
         ["pirouette"] = {-3, -5},
-        ["shocked_left_landed"] = {7, -4},
-        ["shocked_right_landed"] = {7, -4},
+        ["shocked_left_landed"] = {-7, 4},
+        ["shocked_right_landed"] = {-7, 4},
     })
 end
 
