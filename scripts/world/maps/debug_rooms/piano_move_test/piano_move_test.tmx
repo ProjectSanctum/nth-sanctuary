@@ -150,7 +150,7 @@
   </object>
   <object id="84" name="bookshelf_destructable" x="560" y="200" width="80" height="160"/>
   <object id="85" name="bookshelf_destructable" x="720" y="520" width="80" height="160"/>
-  <object id="86" name="bookshelf_destructable" x="400" y="600" width="80" height="160"/>
+  <object id="86" name="bookshelf_destructable" x="400" y="520" width="80" height="160"/>
   <object id="87" name="proxycandle" x="1811" y="374">
    <properties>
     <property name="trigger_rad" type="float" value="140"/>
