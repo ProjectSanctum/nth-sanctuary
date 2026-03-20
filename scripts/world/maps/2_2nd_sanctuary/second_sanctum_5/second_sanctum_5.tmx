@@ -232,9 +232,7 @@
   <object id="112" name="climbarea" x="600" y="1720" width="40" height="40"/>
   <object id="115" name="climbarea" x="560" y="1120" width="40" height="40"/>
  </objectgroup>
- <objectgroup id="16" name="paths">
-  <object id="118" name="enemy_1" x="300" y="480" width="80" height="80"/>
- </objectgroup>
+ <objectgroup id="16" name="paths"/>
  <objectgroup id="12" name="objects_tower">
   <object id="38" name="rotatingtower" x="340" y="0">
    <properties>
@@ -421,12 +419,6 @@
   <object id="114" name="climbwaterbucket" x="480" y="1040" width="40" height="40">
    <properties>
     <property name="generate" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="116" name="climbenemy" x="360" y="460" width="40" height="40">
-   <properties>
-    <property name="path" value="enemy_1"/>
-    <property name="speed" type="float" value="3.5"/>
    </properties>
   </object>
  </objectgroup>

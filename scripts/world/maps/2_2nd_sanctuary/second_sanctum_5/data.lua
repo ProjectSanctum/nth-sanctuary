@@ -638,21 +638,7 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {
-        {
-          id = 118,
-          name = "enemy_1",
-          type = "",
-          shape = "rectangle",
-          x = 300,
-          y = 480,
-          width = 80,
-          height = 80,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        }
-      }
+      objects = {}
     },
     {
       type = "objectgroup",
@@ -1062,22 +1048,6 @@ return {
           visible = true,
           properties = {
             ["generate"] = false
-          }
-        },
-        {
-          id = 116,
-          name = "climbenemy",
-          type = "",
-          shape = "rectangle",
-          x = 360,
-          y = 460,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["path"] = "enemy_1",
-            ["speed"] = 3.5
           }
         }
       }
