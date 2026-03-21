@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 24,
+  nextobjectid = 31,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church"
@@ -76,6 +76,54 @@ return {
           type = "",
           shape = "rectangle",
           x = 1040,
+          y = 80,
+          width = 400,
+          height = 578,
+          rotation = 180,
+          gid = 1073742697,
+          visible = true,
+          properties = {
+            ["color"] = "#ff4646c6"
+          }
+        },
+        {
+          id = 24,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 80,
+          width = 400,
+          height = 578,
+          rotation = 180,
+          gid = 1073742697,
+          visible = true,
+          properties = {
+            ["color"] = "#ff4646c6"
+          }
+        },
+        {
+          id = 25,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 80,
+          width = 400,
+          height = 578,
+          rotation = 180,
+          gid = 1073742697,
+          visible = true,
+          properties = {
+            ["color"] = "#ff4646c6"
+          }
+        },
+        {
+          id = 26,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -160,
           y = 80,
           width = 400,
           height = 578,
@@ -187,8 +235,8 @@ return {
             { x = 440, y = 80 },
             { x = 400, y = 80 },
             { x = 400, y = 40 },
-            { x = 360, y = 40 },
-            { x = 360, y = 80 },
+            { x = 280, y = 40 },
+            { x = 280, y = 80 },
             { x = 80, y = 80 },
             { x = 80, y = 160 },
             { x = 0, y = 160 }
@@ -321,8 +369,8 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 10, 10, 10, 10, 195, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 195, 195, 10, 10, 10, 195, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 10, 195, 195, 195, 195, 195, 195, 195, 195, 10, 10, 10, 10, 195, 10, 10, 10, 10, 10, 10, 10, 10,
-        0, 0, 0, 0, 10, 195, 10, 10, 10, 10, 10, 10, 10, 28, 10, 10, 10, 195, 10, 10, 10, 10, 10, 10, 10, 10,
-        0, 0, 0, 0, 10, 195, 28, 28, 28, 28, 28, 28, 28, 0, 28, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+        0, 0, 0, 0, 10, 195, 10, 10, 10, 10, 10, 28, 28, 28, 10, 10, 10, 195, 10, 10, 10, 10, 10, 10, 10, 10,
+        0, 0, 0, 0, 10, 195, 28, 28, 28, 28, 28, 0, 0, 0, 28, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
         0, 0, 0, 0, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28,
         0, 0, 0, 0, 28, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -348,6 +396,19 @@ return {
           type = "",
           shape = "point",
           x = 40,
+          y = 140,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 28,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 200,
           y = 140,
           width = 0,
           height = 0,
@@ -386,6 +447,31 @@ return {
             ["map"] = "4_4th_sanctuary/fourth_sanctum_5",
             ["marker"] = "entry2"
           }
+        },
+        {
+          id = 30,
+          name = "gueienemy",
+          type = "",
+          shape = "point",
+          x = 520,
+          y = 240,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "guei",
+            ["animation"] = "chase",
+            ["chase"] = true,
+            ["chase_once"] = true,
+            ["chaseaccel"] = 1.05,
+            ["chasemax"] = 100,
+            ["chasespeed"] = 1,
+            ["chasetype"] = "multiplier",
+            ["encounter"] = "balthizard",
+            ["pacetype"] = "horizontalswing",
+            ["swinglength"] = 80
+          }
         }
       }
     },
@@ -395,7 +481,7 @@ return {
       id = 11,
       name = "objects_lightarea",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,

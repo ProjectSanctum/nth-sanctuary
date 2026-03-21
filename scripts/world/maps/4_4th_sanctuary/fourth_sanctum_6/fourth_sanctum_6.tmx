@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="24">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="31">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -22,6 +22,21 @@
     <property name="color" type="color" value="#ff4646c6"/>
    </properties>
   </object>
+  <object id="24" gid="1073742697" x="640" y="80" width="400" height="578" rotation="180">
+   <properties>
+    <property name="color" type="color" value="#ff4646c6"/>
+   </properties>
+  </object>
+  <object id="25" gid="1073742697" x="240" y="80" width="400" height="578" rotation="180">
+   <properties>
+    <property name="color" type="color" value="#ff4646c6"/>
+   </properties>
+  </object>
+  <object id="26" gid="1073742697" x="-160" y="80" width="400" height="578" rotation="180">
+   <properties>
+    <property name="color" type="color" value="#ff4646c6"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="10" name="objects_bg1" parallaxx="0.6">
   <object id="18" gid="1073742609" x="-160" y="1320" width="640" height="1600"/>
@@ -32,7 +47,7 @@
    <polygon points="0,0 400,0 400,40 440,40 440,120 0,120"/>
   </object>
   <object id="13" x="160" y="320">
-   <polygon points="0,0 -40,0 -40,240 880,240 880,120 440,120 440,80 400,80 400,40 360,40 360,80 80,80 80,160 0,160"/>
+   <polygon points="0,0 -40,0 -40,240 880,240 880,120 440,120 440,80 400,80 400,40 280,40 280,80 80,80 80,160 0,160"/>
   </object>
   <object id="14" x="680" y="320">
    <polygon points="0,0 0,-40 -40,-40 -40,-80 -80,-80 -80,-160 280,-160 280,-240 -80,-240 -80,-200 -200,-200 -200,-320 360,-320 360,0"/>
@@ -85,8 +100,8 @@
 0,0,0,0,0,0,0,0,0,0,28,10,10,10,10,195,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,195,195,10,10,10,195,0,0,0,0,0,0,0,0,0,
 0,0,0,0,10,195,195,195,195,195,195,195,195,10,10,10,10,195,10,10,10,10,10,10,10,10,
-0,0,0,0,10,195,10,10,10,10,10,10,10,28,10,10,10,195,10,10,10,10,10,10,10,10,
-0,0,0,0,10,195,28,28,28,28,28,28,28,0,28,10,10,10,10,10,10,10,10,10,10,10,
+0,0,0,0,10,195,10,10,10,10,10,28,28,28,10,10,10,195,10,10,10,10,10,10,10,10,
+0,0,0,0,10,195,28,28,28,28,28,0,0,0,28,10,10,10,10,10,10,10,10,10,10,10,
 0,0,0,0,10,10,0,0,0,0,0,0,0,0,0,28,28,28,28,28,28,28,28,28,28,28,
 0,0,0,0,28,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -94,6 +109,9 @@
  </layer>
  <objectgroup id="4" name="markers">
   <object id="3" name="entry" x="40" y="140">
+   <point/>
+  </object>
+  <object id="28" name="spawn" x="200" y="140">
    <point/>
   </object>
  </objectgroup>
@@ -104,8 +122,24 @@
     <property name="marker" value="entry2"/>
    </properties>
   </object>
+  <object id="30" name="gueienemy" x="520" y="240">
+   <properties>
+    <property name="actor" value="guei"/>
+    <property name="animation" value="chase"/>
+    <property name="chase" type="bool" value="true"/>
+    <property name="chase_once" type="bool" value="true"/>
+    <property name="chaseaccel" type="float" value="1.05"/>
+    <property name="chasemax" type="float" value="100"/>
+    <property name="chasespeed" type="float" value="1"/>
+    <property name="chasetype" value="multiplier"/>
+    <property name="encounter" value="balthizard"/>
+    <property name="pacetype" value="horizontalswing"/>
+    <property name="swinglength" type="float" value="80"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
- <objectgroup id="11" name="objects_lightarea">
+ <objectgroup id="11" name="objects_lightarea" visible="0">
   <object id="22" gid="883" x="440" y="760" width="755.284" height="920">
    <properties>
     <property name="light" type="bool" value="true"/>

@@ -110,7 +110,7 @@
             "height": 1280,
             "width": 1920,
             "x": 120,
-            "y": 7720
+            "y": 7480
         },
         {
             "fileName": "3_flooded_sanctuary/between/between.tmx",
@@ -527,10 +527,10 @@
         },
         {
             "fileName": "debug_rooms/piano_move_test/piano_move_test.tmx",
-            "height": 960,
-            "width": 1200,
-            "x": -6440,
-            "y": -3960
+            "height": 6400,
+            "width": 6400,
+            "x": -11960,
+            "y": -1800
         }
     ],
     "onlyShowAdjacentMaps": false,

@@ -150,7 +150,7 @@
 </data>
  </layer>
  <objectgroup id="15" name="objects_tile_oscillate">
-  <object id="80" name="texturescroller" x="-60" y="1350">
+  <object id="80" name="texturescroller" x="120" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
@@ -518,7 +518,7 @@
     <property name="marker" value="entry2"/>
    </properties>
   </object>
-  <object id="104" name="roomglow" x="0" y="1200">
+  <object id="104" name="roomglow" x="160" y="0">
    <properties>
     <property name="prophecy" type="bool" value="true"/>
    </properties>
@@ -558,12 +558,12 @@
   </object>
  </objectgroup>
  <objectgroup id="6" name="objects_fog">
-  <object id="13" name="churchfog" x="-163" y="1422">
+  <object id="13" name="churchfog" x="80" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="5" name="objects_overlay">
-  <object id="12" name="filter" x="-253" y="1372">
+  <object id="12" name="filter" x="40" y="0">
    <properties>
     <property name="type" value="hsv3"/>
    </properties>
