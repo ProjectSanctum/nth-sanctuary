@@ -40,6 +40,9 @@ function FracturedHSVFX:update()
         self.sat = MathUtils.lerp(self.sat_start, self.sat_target, math.abs(math.sin(_percent * math.pi)));
         self.val = MathUtils.lerp(self.val_start, self.val_target, math.abs(math.sin(_percent * math.pi)));
     end
+	Game:setFlag("fracturedChurchBorderHue", self.hue)
+	Game:setFlag("fracturedChurchBorderSat", self.sat)
+    Game:setFlag("fracturedChurchBorderVal", self.val)
 end
 
 function FracturedHSVFX:isActive()
