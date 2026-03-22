@@ -17,6 +17,13 @@ function map:onEnter()
     if self.fakefader then
         Game.world.timer:tween(0.35, self.fakefader, {alpha = 0})
     end
+	self.destructableblockpos = {}
+	for _, climb in ipairs(Game.world.map:getEvents("destructableclimbarea")) do
+		if climb then
+			table.insert(self.destructableblockpos, {x = climb.x, y = climb.y, layer = climb.layer, width = climb.width, height = climb.height, sprite = climb.sprite, danger = climb.dangerous, dangertime = climb.dangertime})
+			climb:remove()
+		end
+	end
 end
 
 function map:update()

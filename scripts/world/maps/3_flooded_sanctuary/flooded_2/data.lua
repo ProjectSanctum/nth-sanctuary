@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 19,
-  nextobjectid = 162,
+  nextobjectid = 163,
   properties = {
     ["border"] = "church_flooded_dynamic",
     ["music"] = "floodedsanctuary"
@@ -1516,6 +1516,22 @@ return {
           visible = true,
           properties = {
             ["marker"] = "moverpos"
+          }
+        },
+        {
+          id = 162,
+          name = "climbswitch",
+          type = "",
+          shape = "rectangle",
+          x = 1320,
+          y = 200,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["script"] = "respawn_destructables_flooded",
+            ["timed"] = false
           }
         }
       }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="162">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="163">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -526,6 +526,12 @@
   <object id="160" name="climbmover" x="2120" y="280" width="40" height="40">
    <properties>
     <property name="marker" value="moverpos"/>
+   </properties>
+  </object>
+  <object id="162" name="climbswitch" x="1320" y="200" width="40" height="40">
+   <properties>
+    <property name="script" value="respawn_destructables_flooded"/>
+    <property name="timed" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>
