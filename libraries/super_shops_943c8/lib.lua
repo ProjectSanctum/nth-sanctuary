@@ -192,7 +192,7 @@ function Lib.getShopCutscene(group, id)
 end
 
 ---@param debug DebugSystem
-function Mod:registerDebugOptions(debug)
+function Lib:registerDebugOptions(debug)
     local in_game = function() return Kristal.getState() == Game end
     local in_shop = function() return in_game() and Game.state == "SHOP" end
 	
