@@ -18,7 +18,7 @@
    <point/>
   </object>
  </objectgroup>
- <layer id="10" name="Tile Layer 3" width="26" height="22" visible="0" opacity="0.8" parallaxx="0.5" parallaxy="0.5">
+ <layer id="10" name="Tile Layer 3" width="26" height="22" visible="0" opacity="0.4" parallaxx="0.5" parallaxy="0.5">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,716,0,0,0,716,0,0,0,716,0,0,0,716,0,0,0,716,0,0,0,716,0,0,0,
@@ -44,7 +44,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="9" name="tiles_bg" width="26" height="22" visible="0" opacity="0.8" parallaxx="0.55" parallaxy="0.55">
+ <layer id="9" name="tiles_bg" width="26" height="22" visible="0" opacity="0.5" parallaxx="0.55" parallaxy="0.55">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,698,0,0,0,698,0,0,0,698,0,0,0,698,0,0,0,698,0,0,0,698,0,0,0,
