@@ -43,7 +43,7 @@ function FracturedGigaProphecies:onAdd(parent)
 		for i = 0, 4 do	
 			if ((j % 2) == 0 and (i % 2) == 1) or ((j % 2) == 1 and (i % 2) == 0) then
 				table.insert(self.prophecies, {
-					texture = Assets.getTexture("intro_prophecies/set_"..MathUtils.randomInt(1, 10)),
+					texture = Assets.getTexture("world/events/prophecy/fractured_prophecies/set_"..MathUtils.randomInt(1, 10)),
 					x = 50 + i * 256 + MathUtils.random(-42, 42),
 					y = 50 + j * 256 + MathUtils.random(-42, 42),
 					layer = 0,
@@ -57,7 +57,7 @@ function FracturedGigaProphecies:onAdd(parent)
 	for j = 0, 6 do	
 		for i = 0, 6 do
 			table.insert(self.prophecies, {
-				texture = Assets.getTexture("intro_prophecies/set_"..MathUtils.randomInt(1, 10)),
+				texture = Assets.getTexture("world/events/prophecy/fractured_prophecies/set_"..MathUtils.randomInt(1, 10)),
 				x = 50 + i * 170 + MathUtils.random(-52, 52),
 				y = 50 + j * 170 + MathUtils.random(-52, 52),
 				layer = 1,
@@ -70,7 +70,7 @@ function FracturedGigaProphecies:onAdd(parent)
 	for j = 0, 10 do	
 		for i = 0, 10 do
 			table.insert(self.prophecies, {
-				texture = Assets.getTexture("intro_prophecies/set_"..MathUtils.randomInt(1, 10)),
+				texture = Assets.getTexture("world/events/prophecy/fractured_prophecies/set_"..MathUtils.randomInt(1, 10)),
 				x = 50 + i * 96 + MathUtils.random(-42, 42),
 				y = 50 + j * 96 + MathUtils.random(-42, 42),
 				layer = 2,
