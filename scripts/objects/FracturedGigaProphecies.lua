@@ -48,7 +48,7 @@ function FracturedGigaProphecies:onAdd(parent)
 					y = 50 + j * 256 + MathUtils.random(-42, 42),
 					layer = 0,
 					scale = 1,
-					alpha = 1,
+					parallax = 0.2,
 					local_off = MathUtils.random(10)
 				})
 			end
@@ -62,7 +62,7 @@ function FracturedGigaProphecies:onAdd(parent)
 				y = 50 + j * 170 + MathUtils.random(-52, 52),
 				layer = 1,
 				scale = 0.5,
-				alpha = 0.9,
+				parallax = 0.15,
 				local_off = MathUtils.random(10)
 			})
 		end
@@ -75,7 +75,7 @@ function FracturedGigaProphecies:onAdd(parent)
 				y = 50 + j * 96 + MathUtils.random(-42, 42),
 				layer = 2,
 				scale = 0.25,
-				alpha = 0.85,
+				parallax = 0.1,
 				local_off = MathUtils.random(10)
 			})
 		end
@@ -89,8 +89,8 @@ end
 function FracturedGigaProphecies:draw()
     super.draw(self)
 	
-	local cx = Game.world.camera.x - SCREEN_WIDTH/2
-	local cy = Game.world.camera.y - SCREEN_HEIGHT/2
+	local truecx = Game.world.camera.x - SCREEN_WIDTH/2
+	local truecy = Game.world.camera.y - SCREEN_HEIGHT/2
 	local t = Kristal.getTime()
 	local canvas_starfield = Draw.pushCanvas(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
 	love.graphics.clear()
@@ -116,11 +116,14 @@ function FracturedGigaProphecies:draw()
         local shader = Kristal.Shaders["Mask"]
         love.graphics.setShader(shader)
 		for _, prophecy in ipairs(self.prophecies) do
-			if prophecy and prophecy.x > (cx - 280) and prophecy.x < (cx + 640 + 200) and prophecy.y > (cy - 200) and prophecy.y < (cy + 480 + 200) then
-				local tt = (t * 1.25) + prophecy.local_off
-				local xx = prophecy.x - cx
-				local yy = (prophecy.y - cy) + (math.sin(tt * math.pi) * 5)
-				Draw.draw(prophecy.texture, math.floor(xx) * 0.5, math.floor(yy) * 0.5, 0, prophecy.scale, prophecy.scale)
+			if prophecy then
+				local cx, cy = truecx * prophecy.parallax, truecy * prophecy.parallax
+				if prophecy.x > (cx - 280) and prophecy.x < (cx + 640 + 200) and prophecy.y > (cy - 200) and prophecy.y < (cy + 480 + 200) then
+					local tt = (t * 1.25) + prophecy.local_off
+					local xx = prophecy.x - cx
+					local yy = (prophecy.y - cy) + (math.sin(tt * math.pi) * 5)
+					Draw.draw(prophecy.texture, math.floor(xx) * 0.5, math.floor(yy) * 0.5, 0, prophecy.scale, prophecy.scale)
+				end
 			end
 		end
         love.graphics.setShader(last_shader)
@@ -139,23 +142,29 @@ function FracturedGigaProphecies:draw()
 			local shader = Kristal.Shaders["Mask"]
 			love.graphics.setShader(shader)
 			for _, prophecy in ipairs(self.prophecies) do
-				if prophecy and prophecy.layer ~= i and prophecy.x > (cx - 280) and prophecy.x < (cx + 640 + 200) and prophecy.y > (cy - 200) and prophecy.y < (cy + 480 + 200) then
-					local tt = (t * 1.25) + prophecy.local_off
-					local xx = prophecy.x - cx
-					local yy = (prophecy.y - cy) + (math.sin(tt * math.pi) * 5)
-					Draw.draw(prophecy.texture, math.floor(xx) * 0.5, math.floor(yy) * 0.5, 0, prophecy.scale, prophecy.scale)
+				if prophecy then
+					local cx, cy = truecx * prophecy.parallax, truecy * prophecy.parallax
+					if prophecy.layer ~= i and prophecy.x > (cx - 280) and prophecy.x < (cx + 640 + 200) and prophecy.y > (cy - 200) and prophecy.y < (cy + 480 + 200) then
+						local tt = (t * 1.25) + prophecy.local_off
+						local xx = prophecy.x - cx
+						local yy = (prophecy.y - cy) + (math.sin(tt * math.pi) * 5)
+						Draw.draw(prophecy.texture, math.floor(xx) * 0.5, math.floor(yy) * 0.5, 0, prophecy.scale, prophecy.scale)
+					end
 				end
 			end
 			love.graphics.setShader(last_shader)
 		end, "replace", 1)
 		love.graphics.setStencilTest("less", 1)
 		for _, prophecy in ipairs(self.prophecies) do
-			if prophecy and prophecy.layer == i and prophecy.x > (cx - 280) and prophecy.x < (cx + 640 + 200) and prophecy.y > (cy - 200) and prophecy.y < (cy + 480 + 200) then
-				local tt = (t * 1.25) + prophecy.local_off
-				local xx = prophecy.x - cx
-				local yy = (prophecy.y - cy) + (math.sin(tt * math.pi) * 5)
-				Draw.setColor(0, 0, 0, prophecy.layer * 0.15)
-				Draw.draw(prophecy.texture, math.floor(xx) * 0.5, math.floor(yy) * 0.5, 0, prophecy.scale, prophecy.scale)
+			if prophecy then
+				local cx, cy = truecx * prophecy.parallax, truecy * prophecy.parallax
+				if prophecy.layer == i and prophecy.x > (cx - 280) and prophecy.x < (cx + 640 + 200) and prophecy.y > (cy - 200) and prophecy.y < (cy + 480 + 200) then
+					local tt = (t * 1.25) + prophecy.local_off
+					local xx = prophecy.x - cx
+					local yy = (prophecy.y - cy) + (math.sin(tt * math.pi) * 5)
+					Draw.setColor(0, 0, 0, prophecy.layer * 0.15)
+					Draw.draw(prophecy.texture, math.floor(xx) * 0.5, math.floor(yy) * 0.5, 0, prophecy.scale, prophecy.scale)
+				end
 			end
 		end
 		love.graphics.setStencilTest()
