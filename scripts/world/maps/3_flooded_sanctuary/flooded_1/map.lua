@@ -20,6 +20,7 @@ function map:init(world, data)
 end
 
 function map:onEnter()
+    self.ripplemask = Game.world.map:getTileLayer("mask")
     if not Game:getFlag("intro_complete") then
         Game:setFlag("ripplestop", false)
         self.world.color = COLORS.black
@@ -35,6 +36,7 @@ function map:onEnter()
         self.tiles4.alpha = 0
         self.tiles5.alpha = 0
         self.tiles6.alpha = 0
+        self.ripplemask.alpha = 1
         
         Game.world.timer:after(10/30, function()
             self.con = 1
@@ -55,6 +57,7 @@ function map:onEnter()
         end
         Kristal.hideBorder()
     else
+        self.ripplemask.alpha = 0
         Game:setFlag("ripplestop", true)
     end
 
@@ -122,6 +125,7 @@ function map:update(world, data)
                     self.tiles4.alpha = 1
                     self.tiles5.alpha = 1
                     self.tiles6.alpha = 1
+					self.ripplemask.alpha = 0
                     self.con = 2
                     Game:setFlag("ripplestop", true)
                     Game:setFlag("intro_complete", true)
