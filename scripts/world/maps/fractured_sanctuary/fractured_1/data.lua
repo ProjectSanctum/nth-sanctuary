@@ -44,6 +44,35 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 11,
+      name = "objects_bg",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 30,
+          name = "fractured_bg",
+          type = "",
+          shape = "point",
+          x = 120,
+          y = 40,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 12,
       name = "objects_towers",
       class = "",
@@ -144,35 +173,6 @@ return {
           height = 800,
           rotation = 45,
           gid = 1073742869,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 11,
-      name = "objects_bg",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 30,
-          name = "fractured_bg",
-          type = "",
-          shape = "point",
-          x = 120,
-          y = 40,
-          width = 0,
-          height = 0,
-          rotation = 0,
           visible = true,
           properties = {}
         }

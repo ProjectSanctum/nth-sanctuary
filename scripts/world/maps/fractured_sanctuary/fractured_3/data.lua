@@ -35,18 +35,47 @@ return {
     },
     {
       name = "bg_dw_church_tileset_new",
-      firstgid = 553,
+      firstgid = 561,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
       exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "longslides",
-      firstgid = 1135,
+      firstgid = 1143,
       filename = "../../../tilesets/longslides.tsx",
       exportfilename = "../../../tilesets/longslides.lua"
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "objects_bg",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 18,
+          name = "fractured_bg",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 40,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = false,
+          properties = {}
+        }
+      }
+    },
     {
       type = "objectgroup",
       draworder = "topdown",
@@ -76,35 +105,6 @@ return {
       parallaxy = 0.9,
       properties = {},
       objects = {}
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 6,
-      name = "objects_bg",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 18,
-          name = "fractured_bg",
-          type = "",
-          shape = "point",
-          x = 40,
-          y = 40,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = false,
-          properties = {}
-        }
-      }
     },
     {
       type = "tilelayer",

@@ -65,6 +65,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="6" name="objects_bg">
+  <object id="18" name="fractured_bg" x="40" y="40">
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="8" name="objects_towers2" visible="0" locked="1" parallaxx="0.7" parallaxy="0.9">
   <object id="25" gid="463" x="120" y="960" width="320" height="800" rotation="45">
    <properties>
@@ -84,11 +89,6 @@
  </objectgroup>
  <objectgroup id="7" name="objects_towers" visible="0" locked="1" parallaxx="0.8" parallaxy="0.9">
   <object id="22" gid="463" x="1160" y="1320" width="640" height="1600" rotation="315"/>
- </objectgroup>
- <objectgroup id="6" name="objects_bg">
-  <object id="18" name="fractured_bg" x="40" y="40">
-   <point/>
-  </object>
  </objectgroup>
  <layer id="1" name="Tile Layer 1" width="26" height="22">
   <data encoding="csv">
