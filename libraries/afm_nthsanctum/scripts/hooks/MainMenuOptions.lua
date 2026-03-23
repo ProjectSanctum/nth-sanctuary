@@ -27,9 +27,6 @@ function MainMenuOptions:initializeOptions()
             end
         end
     end)
-    
 end
-
-
 
 return MainMenuOptions
