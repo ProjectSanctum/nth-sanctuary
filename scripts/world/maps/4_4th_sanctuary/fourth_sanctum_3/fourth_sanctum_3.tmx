@@ -501,10 +501,10 @@ THROUGH HER HEART.</property>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="22" name="objects_pillars" visible="0" parallaxx="0.8" parallaxy="0.8">
+ <objectgroup id="22" name="objects_pillars" parallaxx="0.8" parallaxy="0.8">
   <object id="78" gid="872" x="1854.28" y="1157.6" width="2880" height="100" rotation="190.395"/>
   <object id="79" gid="872" x="1846.03" y="305.989" width="2880" height="100" rotation="173.764"/>
-  <object id="82" gid="872" x="414" y="1729.01" width="2880" height="100" rotation="254.527"/>
+  <object id="82" gid="872" x="264" y="1751.96" width="2880" height="100" rotation="261.205"/>
   <object id="83" gid="872" x="644" y="1761.9" width="2880" height="100" rotation="274.885"/>
  </objectgroup>
  <objectgroup id="21" name="objects_fog">
