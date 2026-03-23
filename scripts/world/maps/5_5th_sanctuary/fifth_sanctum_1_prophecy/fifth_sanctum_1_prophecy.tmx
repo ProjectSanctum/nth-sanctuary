@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="31">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="31">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -12,16 +12,12 @@
  <tileset firstgid="583" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="781" source="../../../tilesets/church_objects.tsx"/>
  <objectgroup id="9" name="objects_parallax" visible="0" parallaxx="0.5">
-  <object id="17" gid="785" x="-40" y="720" width="320" height="800"/>
-  <object id="18" gid="785" x="400" y="720" width="320" height="800"/>
-  <object id="19" gid="793" x="-40" y="40" width="320" height="100" rotation="45"/>
-  <object id="20" gid="793" x="160" y="240" width="320" height="100" rotation="45"/>
-  <object id="21" gid="793" x="360" y="440" width="320" height="100" rotation="45"/>
-  <object id="22" gid="793" x="560" y="640" width="320" height="100" rotation="45"/>
-  <object id="27" gid="782" x="200" y="600" width="100" height="620"/>
-  <object id="28" gid="2147484430" x="120" y="600" width="100" height="620"/>
-  <object id="29" gid="782" x="400" y="600" width="100" height="620"/>
-  <object id="30" gid="2147484430" x="320" y="600" width="100" height="620"/>
+  <object id="17" gid="785" x="-77" y="740" width="320" height="800"/>
+  <object id="18" gid="785" x="448" y="740" width="320" height="800"/>
+  <object id="27" gid="782" x="210" y="620" width="100" height="620"/>
+  <object id="28" gid="2147484430" x="110" y="620" width="100" height="620"/>
+  <object id="29" gid="782" x="430" y="620" width="100" height="620"/>
+  <object id="30" gid="2147484430" x="330" y="620" width="100" height="620"/>
  </objectgroup>
  <layer id="1" name="Tile Layer 1" width="16" height="12">
   <data encoding="csv">
@@ -104,7 +100,7 @@ AS A BLANKET OF SHADOW.</property>
     <property name="txt_offy" type="float" value="-22"/>
    </properties>
   </object>
-  <object id="5" name="roomglow" x="-80" y="120">
+  <object id="5" name="roomglow" x="-70" y="140">
    <properties>
     <property name="prophecy" type="bool" value="true"/>
    </properties>
