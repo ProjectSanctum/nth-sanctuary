@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="23">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="23">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -110,30 +110,6 @@ KNOW NO END.</property>
    </properties>
    <point/>
   </object>
- </objectgroup>
- <layer id="9" name="tile overlay" width="16" height="12">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-283,284,284,285,0,0,0,0,0,0,0,0,0,0,0,0,
-295,296,296,297,283,284,284,285,0,0,0,0,0,0,0,0,
-295,296,296,297,295,296,296,297,283,284,284,285,0,0,0,0,
-295,296,296,297,295,296,296,297,295,296,296,297,0,0,0,0,
-301,302,302,303,301,302,302,303,295,296,296,297,0,0,0,0,
-301,302,302,303,301,302,302,303,301,302,302,303,0,0,0,0,
-301,302,302,303,301,302,302,303,301,302,302,303,0,0,0,0
-</data>
- </layer>
- <objectgroup id="10" name="objects_over_party_but_not_top">
-  <object id="17" name="silhouette" x="160" y="240" width="160" height="160"/>
-  <object id="18" name="highlight" x="160" y="240" width="160" height="160"/>
-  <object id="19" name="silhouette" x="0" y="200" width="160" height="200"/>
-  <object id="20" name="highlight" x="0" y="200" width="160" height="200"/>
-  <object id="21" name="silhouette" x="320" y="280" width="160" height="160"/>
-  <object id="22" name="highlight" x="320" y="280" width="160" height="160"/>
  </objectgroup>
  <objectgroup id="8" name="objects_fog">
   <object id="11" name="churchfog" x="60" y="0">
