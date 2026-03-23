@@ -604,7 +604,7 @@ return {
         Assets.playSound("wing")
         cutscene:wait(2)
         cutscene:setSpeaker(susie)
-        cutscene:text("[facec:susie_bangs/down]* Ngh...[wait:10] what the hell...")
+        cutscene:text("[facec:susie_bangs/down]* Ugh...[wait:10]\n* What the hell...")
         cutscene:wait(1)
         kris.sprite:setFrame(2)
         susie.sprite:setFrame(2)
@@ -628,35 +628,56 @@ return {
         cutscene:wait(1)
         cutscene:setSpeaker(susie)
         cutscene:wait(1)
-        cutscene:text("* ... Hey,[wait:5] where are we, [wait:5] anyways?[wait:5] It looks like the church again,[wait:5] but...", "annoyed_down")
+        cutscene:text("* ... Hey,[wait:5] where are we,[wait:5] anyways?[wait:5] It looks like the church again,[wait:5] but...", "annoyed_down")
         		Game.world.music:play()
         cutscene:wait(1) 
         susie:setFacing("up")
         cutscene:wait(1)
-        cutscene:text("* Kris,[wait:5][func:turn0][wait:5] you're...[wait:10][func:turn] green?[wait:10] And I'm...[wait:10] uh...[wait:5][react:1]", "suspicious", {
-            reactions = {
-                {"(Uhh... hey, Kris!\nHelp me out here!)", "right", "bottom", "blush", "susie"},
-            },
-            functions = {
-                turn0 = function(text)
-                    kris:setFacing("left")
-                end,
-                turn = function (text)
-                    susie:setFacing("right")
-                end
-            },
-        })
         
-        local choice = cutscene:choicer({"Blue", "Pink", "Susie"})
-        if choice == 1 then
-            cutscene:text("* And I'm blue...[wait:5] Got it.", "nervous_side")
-            Game:setFlag("susiecolor", "blue")
-		elseif choice == 2 then
-            cutscene:text("* And I'm pink...[wait:5] Got it.", "nervous_side")
-            Game:setFlag("susiecolor", "pink")
-		else
-			cutscene:text("* [face:nervous_side]And I'm Su-[face:teeth][speed:1.22]I didn't mean my name,[wait:5] dumbass![speed:1]", "nervous_side")
-			Game:setFlag("susiecolor", "susie")
+        if Game:getFlag("route") == 1 or Game:getFlag("route") == 2 then
+			cutscene:text("* Kris,[wait:5][func:turn0][wait:5] you're...[wait:10][func:turn] green?[wait:10] And I'm...[wait:10] uh...[wait:5][react:1]", "suspicious", {
+				reactions = {
+					{"(Hey, Kris!\nHelp me out here!)", "right", "bottom", "blush", "susie"},
+				},
+				functions = {
+					turn0 = function(text)
+						kris:setFacing("left")
+					end,
+					turn = function (text)
+						susie:setFacing("right")
+					end
+				},
+			})
+			local choice = cutscene:choicer({"Blue", "Pink", "Susie"})
+			if choice == 1 then
+				cutscene:text("* And I'm blue.[wait:5] Got it.", "nervous_side")
+				Game:setFlag("susiecolor", "blue")
+			elseif choice == 2 then
+				cutscene:text("* And I'm...[wait:5] pink.[wait:5]\n* Got it.", "nervous_side")
+				Game:setFlag("susiecolor", "pink")
+			else
+				cutscene:text("* [face:nervous_side]And I'm Susi", "nervous_side", "susie", {auto = true})
+				Assets.playSound("sussurprise")
+				susie:shake()
+				susie:setSprite("exasperated_right")
+				cutscene:text("[speed:1.22]* I didn't mean my name,[wait:5] dumbass!![speed:1]", "teeth")
+				Game:setFlag("susiecolor", "susie")
+				susie:resetSprite()
+				cutscene:setSpeaker(susie)
+			end
+        elseif Game:getFlag("route") == 3 then
+			cutscene:text("* Kris,[wait:5][func:turn0][wait:5] you're...[wait:10][func:turn] green?[wait:10] And I'm...[wait:10] uh...[wait:5]", "suspicious", {
+				functions = {
+					turn0 = function(text)
+						kris:setFacing("left")
+					end,
+					turn = function (text)
+						susie:setFacing("right")
+					end
+				},
+			})
+			cutscene:text("* Blue.", "nervous_side")
+			cutscene:text("* ... This is pretty weird,[wait:5] huh?", "nervous")
         end
         --uhh i'll commit up to this point dont touch this please :3
         susie:walkTo(susie.x - 40, susie.y, 1)
@@ -667,14 +688,14 @@ return {
         susie:resetSprite()
         susie:walkTo(susie.x + 60, susie.y, 1)
         cutscene:wait(1)
-        cutscene:text("* Hey,[wait:5] wait a second...[wait:5] where's Ralsei?", "surprise_frown")
-        cutscene:text("* Did the Knight-", "sad", {auto = true})
+        cutscene:text("* Hey,[wait:5] wait a second...[wait:5]\n* Where's Ralsei?", "surprise_frown")
+        cutscene:text("* Did the Knight", "sad", {auto = true})
         cutscene:setSpeaker(ralsei)
         cutscene:text("[shake:0.51][speed:0.8]* N-[wait:5]No...[wait:5] this can't be...")
         susie:setSprite("shock_left")
         susie:setFacing("left")
         cutscene:setSpeaker(susie)
-        cutscene:text("* R-[wait:5]Ralsei!?", "surprise_frown")
+        cutscene:text("* R-[wait:5] Ralsei!?", "surprise_frown")
         ralsei:resetSprite()
         ralsei:setFacing("up")
         cutscene:attachCamera()
@@ -703,7 +724,7 @@ return {
         kris:shake(6, 0, 1)
         susie:setSprite("surprise_step")
         kris:setSprite("sit")
-        cutscene:text("* Kris..![wait:10] You okay??", "surprise_frown")
+        cutscene:text("* Kris![wait:10] You okay??", "surprise_frown")
         cutscene:text("* Yeesh,[wait:5] talk about a fall...[wait:10] (Even MY legs hurt a little.)", "dejected")
         susie:resetSprite()
         cutscene:wait(cutscene:walkTo(susie, kris.x-50, susie.y, 1))
@@ -742,6 +763,7 @@ return {
         susie:setSprite("heal_kneel")
         cutscene:wait(2)
         cutscene:text("* You,[wait:5] uh...[wait:10] Feel better?", "nervous")
+        cutscene:choicer({"Yes", "Definitely", "Of course", "Yuhum"})
         cutscene:text("* Good.[wait:10] Let's see what Ralsei's so spooked about.", "nervous_side")
         kris.flip_x = false
         Game.world.camera.keep_in_bounds = true
@@ -758,16 +780,16 @@ return {
         cutscene:text("[shake:0.51][speed:0.8]* T-This.. [wait:5]shouldn't be happening...", "concern_smile")
         cutscene:text("[shake:0.51][speed:0.8]* This isn't part of the prophecy...", "concern_smile")
         cutscene:text("[shake:0.51][speed:0.8]* Kris, [wait:5]Susie... [wait:10]We need to seal this fountain.[wait:5] Now...", "concern_smile")
-        cutscene:text("[shake:0.51][speed:0.8]* It's been the same as I remember it until now because-", "concern_smile", {auto = true})
-        cutscene:text("[shake:0.56][speed:1]* First was the King-", "concern_smile", {auto = true})
-        cutscene:text("[shake:0.60][speed:1.1]* And then Queen and her chariot-", "concern_smile", {auto = true})
-        cutscene:text("[shake:0.70][speed:1.2]* Then Tenna, [shake:0.85][wait:5]a-[wait:5]and the Knight-", "concern_smile", {auto = true})
-        cutscene:text("[shake:0.95]* Just before this was the Titan-", "concern_smile", {auto = true})
-        cutscene:text("[shake:1][speed:1.3]* And right now it should be-", "concern_smile", {auto = true})
+        cutscene:text("[shake:0.51][speed:0.8]* It's been the same as I remember it until now because", "concern_smile", {auto = true})
+        cutscene:text("[noskip][shake:0.56][speed:1]* First was the King", "concern_smile", {auto = true})
+        cutscene:text("[noskip][shake:0.60][speed:1.1]* And then Queen and her chariot", "concern_smile", {auto = true})
+        cutscene:text("[noskip][shake:0.70][speed:1.2]* Then Tenna, [shake:0.85][wait:5]a-[wait:5] and the Knight", "concern_smile", {auto = true})
+        cutscene:text("[noskip][shake:0.95]* Just before this was the Titan", "concern_smile", {auto = true})
+        cutscene:text("[noskip][shake:1][speed:1.3]* And right now it should be", "concern_smile", {auto = true})
         cutscene:setSpeaker(susie)
         cutscene:text("* Hang on a sec,[wait:5] it's not in the prophecy...", "suspicious")
         cutscene:text("* And it says the Knight didn't do it?", "suspicious")
-        cutscene:text("* Heh.[wait:10] Suuuure.[wait:10] Guess that's just another opportunity to-", "closed_grin", {auto = true})
+        cutscene:text("* Heh.[wait:10] Sure thing.[wait:10]\n* Guess that's just another opportunity to", "closed_grin", {auto = true})
         cutscene:setSpeaker(ralsei)
         cutscene:text("* Susie,[wait:5] no![wait:5] Please,[wait:5] don't break it!", "concern")
         cutscene:text("* I'd... [wait:5]rather you not get hurt.", "pensive")
@@ -775,20 +797,20 @@ return {
         susie:setFacing("right")
         cutscene:wait(1/2)
         cutscene:setSpeaker(susie)
-        cutscene:text("* ...", "nervous_side")
-        cutscene:text("* Fine.", "nervous_side")
-        susie:setSprite("walk_back_arm/right")
+        cutscene:text("* ... Fine.", "nervous_side")
+        susie:setSprite("walk_back_arm")
         susie.sprite:play(1/5, true)
-        cutscene:wait(cutscene:slideTo(susie, "suspoint2",3))
-        susie:setSprite("walk_back_arm/right_1")
+        cutscene:slideTo(susie, "suspoint2",3)
+		cutscene:wait(1.5)
         cutscene:text("* What a load of junk. [wait:5][face:smile]Are we REALLY gonna fall for this?", "closed_grin")
-        cutscene:text("* Let's go.", "smile")
+        cutscene:text("* These panel things aren't THAT important anyways.", "smile")
+        cutscene:text("* Let's go.", "nervous")
         
-        susie:resetSprite()
         cutscene:attachFollowers()
         for _, save in ipairs(Game.world.map:getEvents("savepoint")) do
             save.visible = true
         end
+        susie:resetSprite()
         kris:setFacing("down")
     end,
     lobby = function(cutscene)
@@ -1035,7 +1057,7 @@ return {
         cutscene:text("* Well", "shock", {auto = true})
         cutscene:text("* Um", "shock_nervous", {auto = true})
         cutscene:text("* I", "shock", {auto = true})
-        cutscene:text("* Uhhhh", "shock_nervous", {auto = true})
+        cutscene:text("* Uh", "shock_nervous", {auto = true})
         cutscene:text("* Well", "shock", {auto = true})
         cutscene:text("* Uhm", "shock_nervous", {auto = true})
         cutscene:text("* HMmmuhh", "shock", {auto = true})
@@ -1053,11 +1075,11 @@ return {
             cutscene:text("* Jamm.", "suspicious")
         end
         cutscene:setSpeaker(ral)
-        cutscene:text("* W-Well, [wait:5]Mister Jamm!...", "pleased")
+        cutscene:text("* W- Well, [wait:5]Mister Jamm!...", "pleased")
         cutscene:text("* We're just trying to find our way out of this Dark World!", "pleased")
         cutscene:wait(1)
         cutscene:setSpeaker(j)
-        cutscene:text("* [wait:30]..Uuh[wait:3]h[wait:3]h huh.", "suspicious")
+        cutscene:text("* [wait:30].. Uuh[wait:3]h[wait:3]h huh.", "suspicious")
         cutscene:text("* How funny. [wait:10]I'm also trying to find my way outta here.", "suspicious")
         if Game:getFlag("route") == 1 or Game:getFlag("route") == 2 then
             cutscene:text("* You guys don't look like murderers, [wait:5]either...", "look_left")
