@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="206">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="219">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -81,7 +81,7 @@
   <object id="65" gid="622" x="642" y="1046" width="28" height="28"/>
   <object id="89" gid="617" x="580" y="724" width="68" height="50"/>
   <object id="165" gid="617" x="100" y="303" width="68" height="50"/>
-  <object id="153" gid="617" x="242.333" y="1045.5" width="68" height="50"/>
+  <object id="153" gid="617" x="242" y="1045" width="68" height="50"/>
   <object id="103" name="transition" x="-40" y="920" width="40" height="80">
    <properties>
     <property name="map" value="0_base_sanctum/base_east_3"/>
@@ -105,15 +105,15 @@
    </properties>
   </object>
   <object id="142" gid="672" x="360" y="989" width="240" height="12"/>
-  <object id="148" gid="616" x="333.5" y="734" width="76" height="38"/>
-  <object id="154" gid="616" x="558.167" y="772" width="76" height="38"/>
+  <object id="148" gid="616" x="333" y="734" width="76" height="38"/>
+  <object id="154" gid="616" x="558" y="772" width="76" height="38"/>
   <object id="164" gid="616" x="264" y="316" width="76" height="38"/>
   <object id="185" gid="616" x="634" y="323" width="76" height="38"/>
   <object id="162" gid="2147484264" x="140" y="340" width="76" height="38"/>
   <object id="149" gid="621" x="366.333" y="787.333" width="36" height="50"/>
   <object id="163" gid="621" x="222" y="326" width="36" height="50"/>
   <object id="186" gid="621" x="566" y="309" width="36" height="50"/>
-  <object id="155" gid="621" x="262" y="887.5" width="36" height="50"/>
+  <object id="155" gid="621" x="262" y="887" width="36" height="50"/>
   <object id="173" name="interactable" x="150.333" y="280" width="158.333" height="29">
    <properties>
     <property name="text1" value="* A bunch of dusty, dry history books."/>
@@ -248,25 +248,25 @@
   <object id="97" x="430" y="240" width="110" height="40"/>
   <object id="118" x="404" y="788" width="160" height="61"/>
   <object id="136" x="451" y="760" width="58" height="28"/>
-  <object id="150" x="334.25" y="714" width="27" height="18.25"/>
-  <object id="161" x="558.25" y="753.5" width="27" height="18.25"/>
-  <object id="158" x="283.25" y="1019.5" width="27" height="18.25"/>
+  <object id="158" x="282.25" y="1018.5" width="27" height="18.25"/>
   <object id="159" x="508.25" y="1052.5" width="27" height="18.25"/>
-  <object id="157" x="241.5" y="1004" width="37" height="38.5"/>
-  <object id="156" x="260" y="846" width="37" height="39"/>
-  <object id="166" x="100.667" y="280.333" width="33.6667" height="19"/>
-  <object id="167" x="141" y="281.333" width="25.6667" height="12"/>
   <object id="168" x="142.333" y="302" width="42.3333" height="23.6667"/>
-  <object id="170" x="224.667" y="280" width="33.3333" height="42"/>
-  <object id="187" x="567" y="262.5" width="35.25" height="42"/>
-  <object id="198" x="188" y="320" width="27" height="18.25"/>
-  <object id="199" x="265" y="295" width="27" height="18.25"/>
-  <object id="200" x="635" y="302" width="27" height="18.25"/>
   <object id="201" x="666" y="289" width="42" height="20"/>
   <object id="202" x="296" y="282" width="42" height="20"/>
   <object id="203" x="590" y="738" width="42" height="20"/>
   <object id="204" x="365" y="700" width="42" height="20"/>
-  <object id="205" x="366" y="746" width="37" height="38.5"/>
+  <object id="206" x="246" y="1011" width="32" height="30"/>
+  <object id="207" x="264" y="296" width="28" height="18"/>
+  <object id="208" x="188" y="320" width="28" height="18"/>
+  <object id="209" x="140" y="277" width="28" height="18"/>
+  <object id="211" x="226" y="292" width="32" height="30"/>
+  <object id="212" x="104" y="269" width="32" height="30"/>
+  <object id="213" x="570" y="275" width="32" height="30"/>
+  <object id="214" x="634" y="303" width="28" height="18"/>
+  <object id="215" x="266" y="853" width="32" height="30"/>
+  <object id="216" x="370" y="754" width="32" height="30"/>
+  <object id="217" x="333" y="714" width="28" height="18"/>
+  <object id="218" x="558" y="752" width="28" height="18"/>
  </objectgroup>
  <objectgroup color="#aa00ff" id="6" name="markers">
   <object id="104" name="entry_left" x="40" y="960">
