@@ -3,7 +3,7 @@ local Organikk, super = Class(Encounter)
 function Organikk:init()
     super.init(self)
 
-    self.text = "* It's a truest cacophony!"
+    self.text = "* The truest cacophony!"
 
     self.music = "ch4_battle"
     self.background = true
