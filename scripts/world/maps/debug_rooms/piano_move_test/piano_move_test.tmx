@@ -33,18 +33,18 @@
   <object id="246" gid="95" x="1840" y="4040" width="400" height="1000"/>
  </objectgroup>
  <objectgroup id="17" name="objects_towers2" parallaxx="0.4" parallaxy="0.82">
-  <object id="72" gid="97" x="520" y="5630" width="640" height="1600"/>
-  <object id="73" gid="2147483744" x="294" y="6021" width="400" height="1600"/>
+  <object id="72" gid="97" x="640" y="5630" width="640" height="1600"/>
+  <object id="73" gid="2147483744" x="414" y="6021" width="400" height="1600"/>
   <object id="236" gid="97" x="40" y="4830" width="640" height="1600"/>
   <object id="237" gid="2147483744" x="-186" y="5221" width="400" height="1600"/>
  </objectgroup>
  <objectgroup id="11" name="objects_towers" parallaxx="0.5" parallaxy="0.9">
-  <object id="61" gid="97" x="-130" y="6060" width="640" height="1600"/>
-  <object id="65" gid="96" x="234" y="6451" width="400" height="1600"/>
+  <object id="61" gid="97" x="-330" y="6060" width="640" height="1600"/>
+  <object id="65" gid="96" x="34" y="6451" width="400" height="1600"/>
   <object id="234" gid="97" x="480" y="4840" width="640" height="1600"/>
   <object id="235" gid="96" x="844" y="5231" width="400" height="1600"/>
  </objectgroup>
- <objectgroup id="12" name="objects_shadow">
+ <objectgroup id="12" name="objects_shadow" visible="0">
   <object id="62" gid="9" x="2000" y="6900" width="1040" height="2000" rotation="270"/>
  </objectgroup>
  <layer id="15" name="tiles_texture" width="160" height="160" tintcolor="#985100">
