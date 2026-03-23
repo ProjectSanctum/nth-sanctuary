@@ -175,7 +175,7 @@
   </object>
   <object id="64" name="npc" x="170" y="300">
    <properties>
-    <property name="actor" value="waferr"/>
+    <property name="actor" value="wafer"/>
     <property name="text1">* This world...[wait:5]
 * Born from the dreams of many.</property>
     <property name="text2">* Who was the author?[wait:5]

@@ -546,7 +546,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["actor"] = "waferr",
+            ["actor"] = "wafer",
             ["text1"] = "* This world...[wait:5]\n* Born from the dreams of many.",
             ["text2"] = "* Who was the author?[wait:5]\n* No one could say.",
             ["text3"] = "* Their names are lost by the time they made it.",
