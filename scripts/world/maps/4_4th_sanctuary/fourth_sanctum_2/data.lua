@@ -36,7 +36,7 @@ return {
     },
     {
       name = "bg_dw_dither_overlay_tileset",
-      firstgid = 883,
+      firstgid = 884,
       filename = "../../../tilesets/bg_dw_dither_overlay_tileset.tsx"
     }
   },
@@ -1650,7 +1650,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["item"] = "dd_burger"
+            ["item"] = "tensiontears"
           }
         },
         {
@@ -1683,7 +1683,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["actor"] = "waferr",
+            ["actor"] = "wafer",
             ["text1"] = "* This world emerged from nothing, born of nothing.",
             ["text2"] = "* Out of the void, it bloomed into a sanctuary for the lost.",
             ["text3"] = "* It has mended every soul, though it was never meant to be.",

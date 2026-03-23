@@ -12,7 +12,7 @@
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="583" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="781" source="../../../tilesets/church_objects.tsx"/>
- <tileset firstgid="883" source="../../../tilesets/bg_dw_dither_overlay_tileset.tsx"/>
+ <tileset firstgid="884" source="../../../tilesets/bg_dw_dither_overlay_tileset.tsx"/>
  <objectgroup id="12" name="objects_parallax3" visible="0" locked="1" parallaxx="0.3" parallaxy="0.82">
   <object id="69" gid="793" x="-140" y="1520" width="416" height="130" rotation="315">
    <properties>
@@ -503,7 +503,7 @@ HEROES CLIMB INFINITY FLIGHT.</property>
   </object>
   <object id="117" name="chest" x="880" y="1040" width="40" height="40">
    <properties>
-    <property name="item" value="dd_burger"/>
+    <property name="item" value="tensiontears"/>
    </properties>
   </object>
   <object id="123" name="npc" x="1548.5" y="390.333">
@@ -518,7 +518,7 @@ HEROES CLIMB INFINITY FLIGHT.</property>
   </object>
   <object id="125" name="npc" x="1025.83" y="750.333">
    <properties>
-    <property name="actor" value="waferr"/>
+    <property name="actor" value="wafer"/>
     <property name="text1" value="* This world emerged from nothing, born of nothing."/>
     <property name="text2" value="* Out of the void, it bloomed into a sanctuary for the lost."/>
     <property name="text3" value="* It has mended every soul, though it was never meant to be."/>
