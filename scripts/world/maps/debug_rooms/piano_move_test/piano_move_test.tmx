@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="160" height="160" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="261">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="160" height="160" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="261">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -12,7 +12,7 @@
  <tileset firstgid="302" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="884" source="../../../tilesets/flooded_sanctuary_extra.tsx"/>
  <tileset firstgid="947" source="../../../tilesets/bg_dw_church_c_tileset.tsx"/>
- <objectgroup id="18" name="objects_towers3" parallaxx="0.3" parallaxy="0.72">
+ <objectgroup id="18" name="objects_towers3" visible="0" parallaxx="0.3" parallaxy="0.72">
   <object id="74" gid="95" x="-120" y="5120" width="400" height="1000"/>
   <object id="76" gid="95" x="280" y="5120" width="400" height="1000"/>
   <object id="83" gid="95" x="680" y="5120" width="400" height="1000"/>
@@ -32,13 +32,13 @@
   <object id="245" gid="95" x="1440" y="4040" width="400" height="1000"/>
   <object id="246" gid="95" x="1840" y="4040" width="400" height="1000"/>
  </objectgroup>
- <objectgroup id="17" name="objects_towers2" parallaxx="0.4" parallaxy="0.82">
+ <objectgroup id="17" name="objects_towers2" visible="0" parallaxx="0.4" parallaxy="0.82">
   <object id="72" gid="97" x="640" y="5630" width="640" height="1600"/>
   <object id="73" gid="2147483744" x="414" y="6021" width="400" height="1600"/>
   <object id="236" gid="97" x="40" y="4830" width="640" height="1600"/>
   <object id="237" gid="2147483744" x="-186" y="5221" width="400" height="1600"/>
  </objectgroup>
- <objectgroup id="11" name="objects_towers" parallaxx="0.5" parallaxy="0.9">
+ <objectgroup id="11" name="objects_towers" visible="0" parallaxx="0.5" parallaxy="0.9">
   <object id="61" gid="97" x="-330" y="6060" width="640" height="1600"/>
   <object id="65" gid="96" x="34" y="6451" width="400" height="1600"/>
   <object id="234" gid="97" x="480" y="4840" width="640" height="1600"/>

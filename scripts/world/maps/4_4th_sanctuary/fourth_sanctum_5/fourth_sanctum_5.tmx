@@ -12,7 +12,7 @@
  <tileset firstgid="781" source="../../../tilesets/light_areas.tsx"/>
  <tileset firstgid="791" source="../../../tilesets/church_objects.tsx"/>
  <tileset firstgid="894" source="../../../tilesets/ExtraClimbingTiles.tsx"/>
- <layer id="14" name="tiles_bg" width="48" height="18" offsetx="-200" offsety="-220" parallaxx="0.4" parallaxy="0.6">
+ <layer id="14" name="tiles_bg" width="48" height="18" visible="0" offsetx="-200" offsety="-220" parallaxx="0.4" parallaxy="0.6">
   <data encoding="csv">
 0,0,0,0,0,0,0,354,0,0,0,0,0,0,0,0,354,0,0,0,0,0,0,0,0,354,0,0,0,0,0,0,0,0,354,0,0,0,0,0,0,0,0,354,0,0,0,0,
 0,0,0,0,0,0,0,360,0,0,0,0,0,0,0,0,360,0,0,0,0,0,0,0,0,360,0,0,0,0,0,0,0,0,360,0,0,0,0,0,0,0,0,360,0,0,0,0,
@@ -503,7 +503,7 @@
    <polygon points="0,0 0,240 240,240 240,0"/>
   </object>
  </objectgroup>
- <objectgroup id="22" name="objects_pillars" parallaxx="0.8" parallaxy="0.8">
+ <objectgroup id="22" name="objects_pillars" visible="0" parallaxx="0.8" parallaxy="0.8">
   <object id="188" gid="882" x="370" y="1800" width="2880" height="100" rotation="261.205"/>
   <object id="189" gid="882" x="1145.65" y="1900.02" width="2880" height="100" rotation="278.661"/>
  </objectgroup>
