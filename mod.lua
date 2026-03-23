@@ -3,7 +3,7 @@ Mod.DarkShardID = {
     TEST_SHARD_1 = 0,
     TEST_SHARD_2 = 1,
     BookShard = 2,
-    TEST_SHARD_3_MORE_LIKE_TEST_SHART = 3,
+    LeafRoomShard = 3,
 }
 
 ---@param plugin TypeGenPlugin.MainScript
@@ -39,7 +39,7 @@ function Mod:registerDebugOptions(debug)
     "Set them to 1.",
     function()
         for g, shard in ipairs(Mod.dark_shards) do
-            shard[g] = 0
+            Mod.dark_shards[g] = 0
         end
     end)
 
