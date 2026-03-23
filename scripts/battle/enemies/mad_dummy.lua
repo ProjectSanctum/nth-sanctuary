@@ -19,10 +19,10 @@ function Dummy:init()
     
     self.dialogue_index = 1
     self.random_dialogue = {
-        "[wave]Pitiful. \nPitiful! \nPITIFUL!!   ",
-        "[wave]Feeble. \nFeeble! \nFEEBLE!!   ",
-        "[wave]Futile. \nFutile! \nFUTILE!!   ",
-        "[wave]Foolish. \nFoolish! \nFOOLISH!!   ",
+        "[float:2]Pitiful.\nPitiful!\nPITIFUL!!",
+        "[float:2]Feeble.\nFeeble!\nFEEBLE!!",
+        "[float:2]Futile.\nFutile!\nFUTILE!!",
+        "[float:2]Foolish.\nFoolish!\nFOOLISH!!",
     }
 
     self.siner_active = false
@@ -131,36 +131,36 @@ function Dummy:triggerTrueBattle(cause, noact)
     self.waves = {"mad_dummy/aiming", "mad_dummy/basic", "mad_dummy/wall"}
     self.wave_override = "mad_dummy/aiming"
 
-    local first_line = {"[wave]YOU!!  ", "[wave]You think you   \ncan just stand   \nthere and smile?!", "[wave]Perhaps you   \nshould've   \nASKED for it   \nfirst! "}
-    local middle_line_1 = {"[wave]And then   \nYOU show up.  ", "[wave]With your   \nfluffy   \nfriends!  ", "[wave]And your   \n\"storytelling\"!  "}
-    local middle_line_2 = {"[wave]And the way   \nyou tell me   \nall this...!  ", "[wave]Horrible.   \nShocking!   \nMIND-BLOWING!!  "}
+    local first_line = {"[float:2]YOU!!", "[float:2]You think you\ncan just stand\nthere and smile?!", "[float:2]Perhaps you\nshould've\nASKED for it\nfirst!"}
+    local middle_line_1 = {"[float:2]And then\nYOU show up.", "[float:2]With your\nfluffy\nfriends!", "[float:2]And your\n\"storytelling\"!"}
+    local middle_line_2 = {"[float:2]And the way\nyou tell me\nall this...!", "[float:2]Horrible.\nShocking!\nMIND-BLOWING!!"}
 
     if self.trigger_cause == "tell story" then
-        first_line = {"[wave]YOU!!  ", "[wave]And your   \nfluffy friend   \nand his   \nBORING stories!!", "[wave]I've heard   \nbetter plots   \nfrom a   \nPOST-IT NOTE!!  "}
-        middle_line_1 = {"[wave]And then   \nyou both   \nhave the   \nAUDACITY...  ", "[wave]To stand   \nthere and   \nlecture me?!  "}
+        first_line = {"[float:2]YOU!!", "[float:2]And your\nfluffy friend\nand his\nBORING stories!!", "[float:2]I've heard\nbetter plots\nfrom a\nPOST-IT NOTE!!"}
+        middle_line_1 = {"[float:2]And then\nyou both\nhave the\nAUDACITY...", "[float:2]To stand\nthere and\nlecture me?!"}
     elseif self.trigger_cause == "susie action" then
-        first_line = {"[wave]YOU! ! ", "[wave]And your   \npurple friend   \nand her   \nVIOLENT hands!!", "[wave]PUNCHING a   \ndummy?!   \nHow original!! "}
-        middle_line_1 = {"[wave]She thinks   \nshe's so   \ntough!  ", "[wave]A real   \nshocker!   \nA real   \nKNOCKOUT!!  "}
+        first_line = {"[float:2]YOU!!", "[float:2]And your\npurple friend\nand her\nVIOLENT hands!!", "[float:2]PUNCHING a\ndummy?!\nHow original!!"}
+        middle_line_1 = {"[float:2]She thinks\nshe's so\ntough!", "[float:2]A real\nshocker!\nA real\nKNOCKOUT!!"}
     elseif self.trigger_cause == "ralsei action" then
-        first_line = {"[wave]YOU!!  ", "[wave]Letting that   \nfluffy boy   \ndrag on   \nforever!!", "[wave]He's boring   \nme to   \nDEATH!! "}
-        middle_line_1 = {"[wave]I'm a ghost,   \nand even I   \nwant to   \nbe free!! ", "[wave]Free from your   \n\"GOAT\" FRIEND'S   \nSPEECHES!"}
+        first_line = {"[float:2]YOU!!", "[float:2]Letting that\nfluffy boy\ndrag on\nforever!!", "[float:2]He's boring\nme to\nDEATH!!"}
+        middle_line_1 = {"[float:2]I'm a ghost,\nand even I\nwant to\nbe free!!", "[float:2]Free from your\n\"GOAT\" FRIEND'S\nSPEECHES!"}
     elseif self.trigger_cause == "fight" then
-        first_line = {"[wave]YOU!!  ", "[wave]Attacking a   \ndefenseless   \ntraining \"tool\"?!", "[wave]Ghosts have   \nfeelings too!  ", "[wave]Coward.   \nCoward!   \nCOWARD!! "}
-        middle_line_2 = {"[wave]The way   \nyou swing   \nthat weapon...!  ", "[wave]DREADFUL!!   \nABHORRENT!!   \nSTUPID!!  "}
+        first_line = {"[float:2]YOU!!", "[float:2]Attacking a\ndefenseless\ntraining \"tool\"?!", "[float:2]Ghosts have\nfeelings too!", "[float:2]Coward.\nCoward!\nCOWARD!!"}
+        middle_line_2 = {"[float:2]The way\nyou swing\nthat weapon...!", "[float:2]DREADFUL!!\nABHORRENT!!\nSTUPID!!"}
     end
 
     self.dialogue = {
         first_line,
-        {"[wave]What?   \nWhat?!   \nWHAT?!?  ", "[wave]What magic attacks?[wait:5]   \nNo magic attacks   \ncan hurt me!  ", "[wave]These are all lies...!  "},
-        {"[wave]You know what   \nwould've been   \nmillion times   \nbetter?", "[wave]If I'd spooked   \naway your SOUL   \nall by myself! "},
-        {"[wave]That's right!   \nAll by myself!  ", "[wave]For I to cross   \nthe BARRIER and   \nbe free!  "},
-        {"[wave]WHAT?!   \nWHAT DO YOU   \nMEAN   \"THERE'S   \nNO BARRIER\"?!? ", "[wave]Foolish.   \nFoolish!   \nFOOLISH!! "},
-        {"[wave]I've spent   \neons in this   \nstupid room!  ", "[wave]Waiting for   \na fool like   \nYOU!!  ", "[wave]Waiting for   \na PURPOSE!  "},
+        {"[float:2]What?\nWhat?!\nWHAT?!?", "[float:2]What magic attacks?[wait:5]\nNo magic attacks\ncan hurt me!", "[float:2]These are all lies...!"},
+        {"[float:2]You know what\nwould've been\nmillion times\nbetter?", "[float:2]If I'd spooked\naway your SOUL\nall by myself!"},
+        {"[float:2]That's right!\nAll by myself!", "[float:2]For I to cross\nthe BARRIER and\nbe free!"},
+        {"[float:2]WHAT?!\nWHAT DO YOU\nMEAN \"THERE'S\nNO BARRIER\"?!?", "[float:2]Foolish.\nFoolish!\nFOOLISH!!"},
+        {"[float:2]I've spent\neons in this\nstupid room!", "[float:2]Waiting for\na fool like\nYOU!!", "[float:2]Waiting for\na PURPOSE!"},
         middle_line_1,
         middle_line_2,
-        {"[wave]I don't need   \na SOUL to   \ndefeat you!  ", "[wave]I have   \nSPIRIT!  ", "[wave]Literally!   \nI'm a ghost!  "},
-        {"[wave]Why won't   \nyou just   \nSTAY STILL?!  ", "[wave]Stop moving!   \nStop breathing!   \nSTOP EXISTING! "},
-        {"[wave]Fine!   \nKeep acting!  ", "[wave]Keep smiling!  ", "[wave]It won't   \nsave you   \nanymore!  "}
+        {"[float:2]I don't need\na SOUL to\ndefeat you!", "[float:2]I have\nSPIRIT!", "[float:2]Literally!\nI'm a ghost!"},
+        {"[float:2]Why won't\nyou just\nSTAY STILL?!", "[float:2]Stop moving!\nStop breathing!\nSTOP EXISTING!"},
+        {"[float:2]Fine!\nKeep acting!", "[float:2]Keep smiling!", "[float:2]It won't\nsave you\nanymore!"}
     }
 
     self:setTired(false)

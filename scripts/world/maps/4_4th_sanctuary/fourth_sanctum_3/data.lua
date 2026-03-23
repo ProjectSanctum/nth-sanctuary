@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 34,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 22,
-  nextobjectid = 78,
+  nextlayerid = 23,
+  nextobjectid = 88,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -297,6 +297,62 @@ return {
           height = 1600,
           rotation = 45,
           gid = 785,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 84,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -46.6688,
+          y = 1953.27,
+          width = 2880,
+          height = 100,
+          rotation = 264.822,
+          gid = 872,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 85,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 771.462,
+          y = 1716.69,
+          width = 2880,
+          height = 100,
+          rotation = 248.191,
+          gid = 872,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 86,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -983.778,
+          y = 719.277,
+          width = 2880,
+          height = 100,
+          rotation = 328.954,
+          gid = 872,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 87,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -953.711,
+          y = 949.663,
+          width = 2880,
+          height = 100,
+          rotation = 349.312,
+          gid = 872,
           visible = true,
           properties = {}
         }
@@ -1368,6 +1424,78 @@ return {
             ["map"] = "4_4th_sanctuary/fourth_sanctum_4",
             ["marker"] = "entry"
           }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 22,
+      name = "objects_pillars",
+      class = "",
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.8,
+      parallaxy = 0.8,
+      properties = {},
+      objects = {
+        {
+          id = 78,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1854.28,
+          y = 1157.6,
+          width = 2880,
+          height = 100,
+          rotation = 190.395,
+          gid = 872,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 79,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1846.03,
+          y = 305.989,
+          width = 2880,
+          height = 100,
+          rotation = 173.764,
+          gid = 872,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 82,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 414,
+          y = 1729.01,
+          width = 2880,
+          height = 100,
+          rotation = 254.527,
+          gid = 872,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 83,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 644,
+          y = 1761.9,
+          width = 2880,
+          height = 100,
+          rotation = 274.885,
+          gid = 872,
+          visible = true,
+          properties = {}
         }
       }
     },

@@ -119,6 +119,14 @@ function Mod:unload()
 end
 
 function Mod:registerTextCommands(text)
+    text:registerCommand("float", function(self,node, dry)
+        self.state.float_dist = tonumber(node.arguments[1]) or 5
+        self.state.float_speed = 2*math.pi * (tonumber(node.arguments[2]) or 1)
+        self.state.float_phase = math.rad(tonumber(node.arguments[3]) or 20)
+        
+        self.draw_every_frame = true
+        return true
+    end)
     text:registerCommand("friend", function(self, node, dry)
         self.state.friendly = (node.arguments[1] ~= "unfriend")
     end, {dry = true})
@@ -199,6 +207,15 @@ function Mod:onDrawText(text, node, state, x, y, scale, font, use_color)
         return true
     end
 end
+
+Utils.hook(Text,"drawChar", function(orig, self, node, state, use_color)
+    if(state.float_dist and state.float_dist > 0) then
+        state.offset_y = state.float_dist * math.sin( (state.float_speed * Kristal.getTime()) + (state.float_phase * state.typed_characters) )
+    else
+        state.offset_y = 0
+    end
+    orig(self, node, state, use_color)
+end)
 
 function Mod:c4lCreateFilterFX(type, properties)
     local fxtype = (type or "hsv"):lower()
