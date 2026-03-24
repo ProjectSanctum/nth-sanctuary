@@ -118,9 +118,9 @@
     <property name="flagcheck" value="!base_1"/>
    </properties>
   </object>
-  <object id="14" name="transition" x="120" y="880" width="120" height="40">
+  <object id="14" name="transition" x="120" y="840" width="120" height="40">
    <properties>
-    <property name="map" value="2_2nd_sanctuary/second_sanctum_0_ripple"/>
+    <property name="map" value="2_2nd_sanctuary/second_sanctum_1_winglade"/>
    </properties>
   </object>
   <object id="17" name="transition" x="640" y="80" width="40" height="80">

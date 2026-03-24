@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 14,
-  nextobjectid = 41,
+  nextobjectid = 40,
   properties = {
     ["music"] = "homebase"
   },
@@ -311,13 +311,13 @@ return {
           type = "",
           shape = "rectangle",
           x = 120,
-          y = 880,
+          y = 840,
           width = 120,
           height = 40,
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "2_2nd_sanctuary/second_sanctum_0_ripple"
+            ["map"] = "2_2nd_sanctuary/second_sanctum_1_winglade"
           }
         },
         {

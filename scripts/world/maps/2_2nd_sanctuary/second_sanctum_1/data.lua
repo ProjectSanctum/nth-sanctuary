@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 15,
-  nextobjectid = 136,
+  nextobjectid = 137,
   parallaxorigin = {
     x = -320,
     y = -240
@@ -956,6 +956,23 @@ return {
           properties = {
             ["cutscene"] = "events2.jammslingshot",
             ["solid"] = false
+          }
+        },
+        {
+          id = 136,
+          name = "enemy",
+          type = "",
+          shape = "point",
+          x = 600,
+          y = 840,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "winglade",
+            ["chase"] = "true",
+            ["encounter"] = "winglade"
           }
         }
       }

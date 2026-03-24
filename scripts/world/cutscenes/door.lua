@@ -45,5 +45,7 @@ return {
         if Game:hasPartyMember("jamm") then
             cutscene:walkTo(jamm, "walkp4", 1.5)
         end
+        cutscene:wait(1)
+        Game.world:mapTransition("2_2nd_sanctuary/second_sanctum_0_ripple")
     end
 }
