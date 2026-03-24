@@ -382,5 +382,31 @@ return {
                 end
             }
         })
+    end,
+    bunny = function (cutscene, event)
+        cutscene:text("* (A bunny.)")
+        if event.interact_count > 1 and Game:hasPartyMember("noelle") then
+            local n = cutscene:getCharacter("noelle")
+            cutscene:setSpeaker(n)
+            cutscene:text("* Aww, [wait:5]a bunny!", "smile_closed")
+            cutscene:text("* I love you, [wait:5]bunny!", "smile_closed_b")
+            local a = Game.world.camera
+            Game.world.timer:tween(1, a, {zoom_x = 2, zoom_y = 2}, 'out-cubic')
+            cutscene:wait(2)
+            local g = Textbox(56,344, 529, 103, 100, 100)
+            Game.stage:addChild(g)
+            g:setText("[font:main,72][style:none][color:red][noskip][speed:0.4]GO F#%@ YOURSELF!")
+            Assets.playSound("go_fuck")
+            cutscene:wait( function ()
+                return g.text:isTyping()==false
+            end)
+            g:remove()
+            a.zoom_x, a.zoom_y = 1, 1
+            event:explode()
+            cutscene:text("* ", "what")
+            cutscene:text("* why did it do that-", "what_smile")
+            
+            --cutscene:text("[font:main,72][style:none][color:red]GO F#%@ YOURSELF!")
+        end
     end
 }

@@ -411,7 +411,7 @@ return {
           visible = true,
           properties = {
             ["actor"] = "bunny",
-            ["text1"] = "* (A bunny.)"
+            ["cutscene"] = "konverge.bunny"
           }
         },
         {
