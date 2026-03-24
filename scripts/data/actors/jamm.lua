@@ -1,153 +1,162 @@
-local PrismBattleBackground, super = Class(BattleBackground)
+local actor, super = Class(Actor, "jamm")
 
-function PrismBattleBackground:init()
+function actor:init()
     super.init(self)
 
-    self.rainbow_timer = 0
-    self.bg_texture = Assets.getTexture("battle/backgrounds/fountainbglooped")
-	self.xx = 0
-	self.transition_x = SCREEN_WIDTH
-	self.shape_timer = 0
-    self.particles = {}
-	self.particle_tex = Assets.getFramesOrTexture("bullets/cube/cube")
-	self.particle_dtmult = 0
-	self.transition_end_alpha = 0
-	self.siner = 0
+    -- Display name (optional)
+    self.name = "Jamm"
+
+    -- Width and height for this actor, used to determine its center
+    self.width = 19
+    self.height = 38
+
+    -- Hitbox for this actor in the overworld (optional, uses width and height by default)
+    self.hitbox = {4, 28, 13, 10}
+
+    -- Color for this actor used in outline areas (optional, defaults to red)
+    self.color = {0, 1, 1}
+
+    -- Path to this actor's sprites (defaults to "")
+    self.path = "party/jamm/dark"
+    -- This actor's default sprite or animation, relative to the path (defaults to "")
+    self.default = "walk"
+
+    -- Sound to play when this actor speaks (optional)
+    self.voice = "jamm"
+    -- Path to this actor's portrait for dialogue (optional)
+    self.portrait_path = "face/jamm"
+    -- Offset position for this actor's portrait (optional)
+    self.portrait_offset = {-19,-3}
+
+    -- Whether this actor as a follower will blush when close to the player
+    self.can_blush = false
+
+    -- Table of sprite animations
+    self.animations = {
+        -- Movement animations
+        ["slide"]               		= {"slide", 4/30, true},
+
+        -- Battle animations
+        ["battle/idle"]         		= {"battle/idle", 0.2, true},
+
+        ["battle/attack"]       		= {"battle/attack", 1/15, false},
+        ["battle/act"]          		= {"battle/act", 1/15, false},
+        ["battle/spell"]        		= {"battle/spell", 1/15, false},
+        ["battle/item"]         		= {"battle/item", 1/15, false, next="battle/idle"},
+        ["battle/spare"]        		= {"battle/act", 1/15, false, next="battle/idle"},
+
+        ["battle/attack_ready"] 		= {"battle/attackready", 0.2, true},
+        ["battle/act_ready"]    		= {"battle/actready", 0.2, true},
+        ["battle/spell_ready"]  		= {"battle/actready", 0.2, true},
+        ["battle/item_ready"]   		= {"battle/itemready", 0.2, true},
+        ["battle/defend_ready"] 		= {"battle/defend", 1/15, false},
+
+        ["battle/act_end"]      		= {"battle/actend", 1/15, false, next="battle/idle"},
+
+        ["battle/hurt"]         		= {"battle/hurt", 1/15, false, temp=true, duration=0.5},
+        ["battle/defeat"]       		= {"battle/defeat", 0.5, true},
+        ["battle/swooned"]              = {"battle/swooned", 1/15, false},
+
+        ["battle/transition"]   		= {"walk/right", 0.2, true},
+        ["battle/intro"]        		= {"battle/attack", 1/15, true},
+        ["battle/victory"]      		= {"battle/victory", 1/10, false},
+		
+        ["battle/tactic_freeze"] 		= {"battle/tactic_freeze", 1/15, false},
+        ["battle/tactic_freeze_shiny"] 	= {"battle/tactic_freeze_shiny", 1/15, false},
+		
+		["battle/transition_out"]       = {"battle/transition_out", 1/15, false},
+		
+		-- Cutscene animations
+        ["jump_ball"]                   = {"ball", 1/15, true},
+		["sit"]               			= {"sit", 4/30, true},
+        ["pirouette"]                   = {"pirouette", 4/30, true},
+    }
+
+    -- Table of sprite offsets (indexed by sprite name)
+    self.offsets = {
+        -- Movement offsets
+        ["walk/left"] = {0, 0},
+        ["walk/right"] = {0, 0},
+        ["walk/up"] = {0, 0},
+        ["walk/down"] = {0, 0},
+		
+        ["walk_serious/left"] = {0, 0},
+        ["walk_serious/right"] = {0, 0},
+        ["walk_serious/up"] = {0, 0},
+        ["walk_serious/down"] = {0, 0},
+
+        ["slide"] = {0, 0},
+
+        -- Battle offsets
+        ["battle/idle"] = {-5, -1},
+
+        ["battle/attack"] = {-5, -1},
+        ["battle/attackready"] = {-5, -1},
+        ["battle/act"] = {-5, -1},
+        ["battle/actend"] = {-5, -1},
+        ["battle/actready"] = {-5, -1},
+        ["battle/item"] = {-5, -1},
+        ["battle/itemready"] = {-5, -1},
+        ["battle/defend"] = {-5, -1},
+        ["battle/swooned"] = {0, 0},
+
+        ["battle/defeat"] = {-8, -5},
+        ["battle/hurt"] = {-5, -1},
+
+        ["battle/intro"] = {-8, -9},
+        ["battle/victory"] = {-3, 0},
+		
+        ["battle/tactic_freeze"] = {-5, -1},
+        ["battle/tactic_freeze_shiny"] = {-5, -1},
+		
+		["sit"] = {4, -8},
+		
+		["ball"] = {0, 18},
+		
+        ["talk_to_marcy"] = {0, 13},
+        ["talk_to_marcy_reach"] = {-7, 13},
+        ["talk_to_marcy_relate"] = {-7, 13},
+		
+        ["pirouette"] = {-4, 0},
+
+        ["sneak/left"] = {-6, 3},
+        ["sneak/right"] = {2, 3},
+
+        --- Climbing offsets
+        ["climb/climb"] = {-4, 8},
+        ["climb/charge"] = {-4, 8},
+        ["climb/slip_left"] = {-4, 8},
+        ["climb/slip_right"] = {-4, 8},
+        ["climb/land_left"] = {-4, 8},
+        ["climb/land_right"] = {-4, 8},
+        ["climb/jump_up"] = {-4, 8},
+        ["climb/jump_left"] = {-4, 8},
+        ["climb/jump_right"] = {-4, 8},
+    }
+
+    self.mirror_sprites = {
+        ["walk/down"] = "walk_shadowed/up",
+        ["walk/up"] = "walk_shadowed/down",
+        ["walk/left"] = "walk_shadowed/left",
+        ["walk/right"] = "walk_shadowed/right",
+		
+        ["walk_serious/down"] = "walk_shadowed/up",
+        ["walk_serious/up"] = "walk_shadowed/down",
+        ["walk_serious/left"] = "walk_shadowed/left",
+        ["walk_serious/right"] = "walk_shadowed/right",
+    }
+
+    self.taunt_sprites = {"box", "bs_win", "maid", "bt"}
+	if Game:getFlag("jamm_closure") then
+		self.taunt_sprites = {"box", "ghost_bs", "maid", "bt"}
+	end
+
+    self.menu_anim = "bs_win"
+    if Game:getFlag("jamm_closure") then
+		self.menu_anim = "ghost_bs"
+	end
+	
+	self.shiny_id = "jamm"
 end
 
-function PrismBattleBackground:update()
-	super.update(self)
-	self.rainbow_timer = self.rainbow_timer + DTMULT
-	if not Kristal.Config["simplifyVFX"] and Game.battle.encounter.is_prism then
-		if Game.battle.music.source and Game.battle.music:tell() >= 13.616 and Game.battle.encounter.prism_bg_con == 0 then
-			Game.battle.encounter.prism_bg_con = 1
-			Game.battle.timer:tween(15/30, self, {transition_x = 0}, "out-cubic")
-		end
-		if Game.battle.encounter.prism_bg_con == 1 then
-			self.shape_timer = self.shape_timer + DT
-			if self.shape_timer >= 0.4 then
-				table.insert(self.particles, {
-					x = MathUtils.random(SCREEN_WIDTH), y = SCREEN_HEIGHT + 40,
-					speed = 8 * MathUtils.random(0.5, 2),
-					xmove = TableUtils.pick({1, 2, 3, 4}),
-					x_last = {-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,
-							  -100,-100,-100,-100,-100,-100,-100,-100,-100,-100,
-							  -100,-100,-100,-100,-100,-100,-100,-100,-100,-100},
-					y_last = {-100,-100,-100,-100,-100,-100,-100,-100,-100,-100,
-							  -100,-100,-100,-100,-100,-100,-100,-100,-100,-100,
-							  -100,-100,-100,-100,-100,-100,-100,-100,-100,-100},
-				})
-				self.shape_timer = 0
-			end
-		end
-		if Game.battle.encounter.is_prism and Game.battle.encounter.prism_bg_con == 2 then
-			self.transition_end_alpha = 0
-			Game.battle.timer:tween(1, self, {transition_end_alpha = 1}, "out-cubic")
-			Game.battle.timer:tween(4, self, {transition_x = SCREEN_WIDTH}, "out-cubic")
-			Game.battle.encounter.prism_bg_con = 3
-		end
-		local particle_to_remove = {}
-		for _,particle in ipairs(self.particles) do
-			if particle.xmove >= 2 then
-				if particle.xmove == 3 then
-					particle.x = particle.x - math.cos(self.siner/10)*2
-				else
-					particle.x = particle.x + math.cos(self.siner/10)*2
-				end
-			else
-				if particle.xmove == 1 then
-					particle.x = particle.x - math.sin(self.siner/10)*2
-				else
-					particle.x = particle.x + math.sin(self.siner/10)*2
-				end
-			end
-			particle.y = particle.y - particle.speed * DTMULT
-			if self.particle_dtmult >= 1 then
-				for i = 30, 2, -1 do
-					particle.x_last[i] = particle.x_last[i - 1]
-					particle.y_last[i] = particle.y_last[i - 1]
-				end
-				particle.x_last[1] = particle.x
-				particle.y_last[1] = particle.y
-			end
-			if particle.y <= -SCREEN_HEIGHT then
-				table.insert(particle_to_remove, particle)
-			end
-		end
-		for _,particle in ipairs(particle_to_remove) do
-			TableUtils.removeValue(self.particles, particle)
-		end
-		if self.particle_dtmult >= 1 then
-			self.particle_dtmult = 0
-		end
-		self.particle_dtmult = self.particle_dtmult + DTMULT
-	end
-end
-
-function PrismBattleBackground:drawBackground()
-    -- Draw the black background
-    love.graphics.setColor(0, 0, 0, self.alpha)
-    love.graphics.rectangle("fill", -10, -10, SCREEN_WIDTH + 10, SCREEN_HEIGHT + 10)
-	local rr, rg, rb = ColorUtils.HSVToRGB((self.rainbow_timer / 255) % 1, 1, 66 / 255)
-	if Game.battle.encounter.is_prism and Game.battle.encounter.prism_bg_con >= 2 then
-		rr, rg, rb = ColorUtils.mergeColor({66/255, 66/255, 66/255}, {0, 0, 0}, self.transition_end_alpha)
-	end
-	if (Game.battle.encounter.is_prism and Game.battle.encounter.prism_bg_con >= 2 and self.transition_end_alpha >= 1) then
-		return
-	end
-    -- Draw the background grid
-    local background = Assets.getTexture("ui/battle/background_recolorable")
-
-    love.graphics.setColor(rr, rg, rb, self.alpha / 2)
-    Draw.drawWrapped(background, true, true, MathUtils.round(-100 + self.position), MathUtils.round(-100 + self.position))
-    love.graphics.setColor(rr, rg, rb, self.alpha)
-    Draw.drawWrapped(background, true, true, MathUtils.round(-200 - self.position2), MathUtils.round(-210 - self.position2))
-	if not Kristal.Config["simplifyVFX"] then
-		rr, rg, rb = ColorUtils.HSVToRGB((self.rainbow_timer / 255) % 1, 233 / 255, 200 / 255)
-		if Game.battle.encounter.is_prism and Game.battle.encounter.prism_bg_con >= 2 then
-			rr, rg, rb = ColorUtils.mergeColor({1, 1, 1}, {0, 0, 0}, self.transition_end_alpha or 1)
-		end
-		Draw.setColor(rr, rg, rb, 0.3 * self.alpha)
-		self.xx = self.xx + -2
-		if self.xx > 600 then
-			self.xx = self.xx - 600
-		end
-		if self.xx < 0 then
-			self.xx = self.xx + 600
-		end
-		for i = 0, 40 do
-			local wp = 600 / 40
-			Draw.drawPart(self.bg_texture, SCREEN_WIDTH/2 + (wp * i) - 6 + 32 - math.sin(self.rainbow_timer / 20) * 32 + self.transition_x, 0 - (wp * i) / 2, wp * i + self.xx, 0, wp * i, 999, 0, i, i)
-			Draw.drawPart(self.bg_texture, SCREEN_WIDTH/2 - (wp * i) + 6 - 32 + math.sin(self.rainbow_timer / 20) * 32 - self.transition_x, 0 - (wp * i) / 2, wp * i + self.xx, 0, wp * i, 999, 0, -i, i)
-		end
-		for _,particle in ipairs(self.particles) do
-			love.graphics.setBlendMode("add")
-			for i = 30, 1, -1 do
-				if Game.battle.encounter.is_prism and Game.battle.encounter.prism_bg_con >= 2 then
-					local col = ColorUtils.mergeColor({1, 1, 1}, {0, 0, 0}, self.transition_end_alpha)
-					if i > 25 then
-						love.graphics.setColor(ColorUtils.mergeColor(COLORS["black"], col, ((30-i)/5)*self.alpha))
-					else
-						love.graphics.setColor(col[1]/2, col[2]/2, col[3]/2, self.alpha)
-					end
-				else
-					local ar, ag, ab = ColorUtils.mergeColor(COLORS["gray"], {rr/2, rg/2, rb/2}, i/30)
-					if i > 25 then
-						love.graphics.setColor(ColorUtils.mergeColor(COLORS["black"], unpack({ar, ag, ab}), ((30-i)/5)*self.alpha))
-					else
-						love.graphics.setColor(ar, ag, ab, self.alpha)
-					end
-				end
-				love.graphics.draw(self.particle_tex[(math.floor(self.rainbow_timer/4)%6)+1], particle.x_last[i], particle.y_last[i], particle.radius, 1, 1, 0, 0)
-			end
-			love.graphics.setBlendMode("alpha")
-			love.graphics.setColor(1, 1, 1, self.alpha)
-			if Game.battle.encounter.prism_bg_con >= 2 then
-				love.graphics.setColor(1, 1, 1, (1-self.transition_end_alpha)*self.alpha)
-			end
-			love.graphics.draw(self.particle_tex[(math.floor(self.rainbow_timer/4)%6)+1], particle.x, particle.y, particle.radius, 1, 1, 0, 0)
-		end
-	end
-end
-
-return PrismBattleBackground
+return actor
