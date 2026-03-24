@@ -75,10 +75,29 @@ function map:onEnter()
 
         wait((720 - 666.75) / 30)
         Game.stage:addChild(self.fakefader)
-        Game.world.timer:tween(1, self.fakefader, {alpha = 1})
+        Game.world.timer:tween(1, self.fakefader, {alpha = 1}, nil, function() 
+            self.finished = true
+            Game.world.color = COLORS.white
+            self.world:loadMap("2_2nd_sanctuary/second_sanctum_0_ripple_post", "spawn")
+            self.fakefader:fadeOutAndRemove(0.5)
+            self.tiles.alpha = 1
+            self.tiles_osc.alpha = 1
+            self.con = 2
+            for _, event in ipairs(self.events) do
+                if event.layer == self.layers["objects_parallax"] or 
+                   event.layer == self.layers["objects_parallax2"] or 
+                   event.layer == self.layers["objects_parallax3"] or 
+                   event.layer == self.layers["objects_tile_oscillate"] then
+                    event.visible = true
+                end
+            end
+            for _, filter in ipairs(Game.world.map:getEvents("filter")) do
+                filter.visible = true
+            end
+        end)
 
-        wait(60/30)
-        self:transitionMap()
+        -- wait(60/30)
+        -- self:transitionMap()
     end)
 end
 
@@ -115,27 +134,6 @@ function map:makeRippleLogic()
     
     self.ripple_fx_alt:makeRipple(loc[self.ripindex+1].x, loc[self.ripindex+1].y, 60, COLORS.white, 200, 1, 14, -5, hhsp, vvsp, 0.25)
     self.ripindex = (self.ripindex + 1) % #loc
-end
-
-function map:transitionMap()
-    self.finished = true
-    Game.world.color = COLORS.white
-    self.world:loadMap("2_2nd_sanctuary/second_sanctum_0_ripple_post", "spawn")
-    self.fakefader:fadeOutAndRemove(0.5)
-    self.tiles.alpha = 1
-    self.tiles_osc.alpha = 1
-    self.con = 2
-    for _, event in ipairs(self.events) do
-        if event.layer == self.layers["objects_parallax"] or 
-           event.layer == self.layers["objects_parallax2"] or 
-           event.layer == self.layers["objects_parallax3"] or 
-           event.layer == self.layers["objects_tile_oscillate"] then
-            event.visible = true
-        end
-    end
-    for _, filter in ipairs(Game.world.map:getEvents("filter")) do
-        filter.visible = true
-    end
 end
 
 function map:onExit()
