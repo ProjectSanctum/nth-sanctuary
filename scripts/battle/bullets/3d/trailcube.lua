@@ -97,8 +97,8 @@ function TrailCubeBullet:shouldSwoon(damage, target, soul)
 end
 
 function TrailCubeBullet:draw()
-	local rr, rg, rb = ColorUtils.HSVToRGB((Game.battle.encounter.rainbow_timer / 255) % 1, 233 / 255, 200 / 255)
-	local br, bb, bg = ColorUtils.HSVToRGB((Game.battle.encounter.rainbow_timer / 255) % 1, 60 / 255, 1)
+	local rr, rg, rb = ColorUtils.HSVToRGB((Game.battle.background.rainbow_timer / 255) % 1, 233 / 255, 200 / 255)
+	local br, bb, bg = ColorUtils.HSVToRGB((Game.battle.background.rainbow_timer / 255) % 1, 60 / 255, 1)
 	for i = self.trails, 1, -1 do
 		love.graphics.setBlendMode("alpha")
 		if i >= self.trails-5 then

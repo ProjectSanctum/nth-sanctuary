@@ -298,7 +298,7 @@ function ThreeDPrism:onSpared()
 	
     self:defeat(pacify and "PACIFIED" or "SPARED", false)
 
-	Game.battle.encounter.con = 2
+	Game.battle.encounter.prism_bg_con = 2
     Game.battle.music:stop()
 end
 
@@ -308,7 +308,7 @@ function ThreeDPrism:onDefeat(damage, battler)
     self.defeated = true
 
     self:defeat("VIOLENCED", true)
-	Game.battle.encounter.con = 2
+	Game.battle.encounter.prism_bg_con = 2
     Game.battle.music:stop()
 end
 

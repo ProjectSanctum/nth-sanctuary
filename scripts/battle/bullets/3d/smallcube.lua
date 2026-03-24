@@ -43,7 +43,7 @@ function CubeBullet:shouldSwoon(damage, target, soul)
 end
 
 function CubeBullet:draw()
-	local rr, rg, rb = ColorUtils.HSVToRGB((Game.battle.encounter.rainbow_timer / 255) % 1, 233 / 255, 200 / 255)
+	local rr, rg, rb = ColorUtils.HSVToRGB((Game.battle.background.rainbow_timer / 255) % 1, 233 / 255, 200 / 255)
     love.graphics.setBlendMode("add")
 	for i = 5, 1, -1 do
 		love.graphics.setColor(ColorUtils.mergeColor(COLORS["black"], {rr, rg, rb}, ((5-i)/5)*self.alpha*0.5))
