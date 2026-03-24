@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 14,
+  nextobjectid = 15,
   properties = {
     ["border"] = "tvworld",
     ["music"] = "greenroom_detune"
@@ -205,8 +205,8 @@ return {
           name = "npc",
           type = "",
           shape = "rectangle",
-          x = 580,
-          y = 180,
+          x = 493.321,
+          y = 183.133,
           width = 0,
           height = 0,
           rotation = 0,
@@ -224,8 +224,8 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 200,
-          y = 200,
+          x = 113.321,
+          y = 203.133,
           width = 0,
           height = 0,
           rotation = 0,
@@ -240,8 +240,8 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 400,
-          y = 200,
+          x = 313.321,
+          y = 203.133,
           width = 0,
           height = 0,
           rotation = 0,
@@ -249,6 +249,22 @@ return {
           properties = {
             ["actor"] = "ddelta",
             ["cutscene"] = "konverge.ddelta"
+          }
+        },
+        {
+          id = 14,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 649.321,
+          y = 201.133,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "mangle",
+            ["cutscene"] = "konverge.mangle"
           }
         }
       }

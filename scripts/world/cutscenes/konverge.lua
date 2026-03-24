@@ -210,6 +210,45 @@ return {
 			cutscene:text("[image:ui/ddelta_asterisk]ya got the wrong guy for\n this one,[wait:5] sorry", "lookdown", ddelta)
 		end
 	end,
+    mangle = function (cutscene, event)
+        cutscene:text("* (Join it for a bite?)")
+        local bite = cutscene:choicer({"Yes", "No No No\nNo No No\nNo No No"})
+        if bite == 1 then
+            Game.world.music:fade(0,1)
+            cutscene:wait(1.5)
+            
+            cutscene:playSound("noise")
+
+            local rect = Rectangle(0, 0, 960, 480)
+            rect:setColor(0, 0, 0)
+            rect.parallax_x = 0
+            rect.parallax_y = 0
+            rect.layer = WORLD_LAYERS["ui"] + 1
+    
+            Game.world:addChild(rect)
+            Game:setBorder("none", 0)
+            cutscene:wait(3)
+
+            local m_anim = Sprite("misc/mangle_jumpscare/mangle_jumpscare")
+            Assets.playSound("fnaf_scream")
+            m_anim:play(1 / 19, false)
+            m_anim.layer = WORLD_LAYERS["ui"] + 3
+            m_anim.x = m_anim.x - 50
+            m_anim.y = m_anim.y - 2
+            m_anim.parallax_x = 0
+            m_anim.parallax_y = 0
+            m_anim:setScale(0.7)
+            Game.world:addChild(m_anim)
+    
+            cutscene:wait(1.5)
+
+            rect:setColor(1, 0, 0)
+            m_anim:remove()
+            Assets.stopSound("fnaf_scream")
+            Game:saveQuick()
+            Game:gameOver(Game.world.player.x, Game.world.player.y)
+        end
+    end,
     cruel = function (cutscene, event)
         for _, child in ipairs(event.children) do
             if child:includes(TileObject) then
@@ -267,9 +306,11 @@ return {
         cutscene:text("* WHADDYA SAY, [wait:5][friend][shake:0][Friend][friend:unfriend]?")
         local ch = cutscene:choicer({"Deal", "No Deal"})
         if ch == 2 then
+            Game.world.music:pause()
             cutscene:wait(2)
             sp:setAnimation("dark")
             cutscene:text("* Oh. [wait:10]Ok.")
+            Game.world.music:resume()
         elseif ch == 1 then
             if Game.money < 500 then
                 cutscene:text("* WHAT??!?! [wait:10]YOU DON'T HAVE ENOUGH [[Wacky Stacks]]?!?")
