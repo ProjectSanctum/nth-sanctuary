@@ -274,6 +274,23 @@ function Mod:afmPostInit(new_file)
         Game:setFlag("fun", love.math.random(1, 170))
         Game.world:startCutscene("primary.intro")
 		Game:setFlag("ft_last_map", "base_center")
+        if (Game:getFlag("route") == 2 or Game:getFlag("route") == 3) then
+            if Game:hasPartyMember("kris") then
+                Game:getPartyMember("kris").health = 240
+                Game:getPartyMember("kris").stats.health = 240
+                Game:getPartyMember("kris").stats.attack = 19
+            end
+            if Game:hasPartyMember("susie") then
+                Game:getPartyMember("susie").health = 290
+                Game:getPartyMember("susie").stats.health = 290
+                Game:getPartyMember("susie").stats.attack = 25
+            end
+            if Game:hasPartyMember("ralsei") then
+                Game:getPartyMember("ralsei").health = 210
+                Game:getPartyMember("ralsei").stats.health = 210
+                Game:getPartyMember("ralsei").stats.attack = 16
+            end
+        end
     else
         Game:setFlag("shards", nil) -- Clean up old save files
         if Game:getFlag("apkpure", true) then

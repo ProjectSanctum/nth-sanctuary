@@ -799,12 +799,29 @@ return {
         cutscene:setSpeaker(susie)
         cutscene:text("* ... Fine.", "nervous_side")
         susie:setSprite("walk_back_arm")
-        susie.sprite:play(1/5, true)
-        cutscene:slideTo(susie, "suspoint2",2.5)
+        cutscene:walkTo(susie, "suspoint2",2)
 		cutscene:wait(1.5)
         cutscene:text("* What a load of junk. [wait:5][face:smile]Are we REALLY gonna fall for this?", "closed_grin")
         cutscene:text("* These panel things aren't THAT important anyways.", "smile")
         cutscene:text("* Let's go.", "nervous")
+		
+        if (Game:getFlag("route") == 2 or Game:getFlag("route") == 3) then
+            if Game:hasPartyMember("kris") then
+                Game:getPartyMember("kris").health = 240
+                Game:getPartyMember("kris").stats.health = 240
+                Game:getPartyMember("kris").stats.attack = 19
+            end
+            if Game:hasPartyMember("susie") then
+                Game:getPartyMember("susie").health = 290
+                Game:getPartyMember("susie").stats.health = 290
+                Game:getPartyMember("susie").stats.attack = 25
+            end
+            if Game:hasPartyMember("ralsei") then
+                Game:getPartyMember("ralsei").health = 210
+                Game:getPartyMember("ralsei").stats.health = 210
+                Game:getPartyMember("ralsei").stats.attack = 16
+            end
+        end
         
         cutscene:attachFollowers()
         for _, save in ipairs(Game.world.map:getEvents("savepoint")) do

@@ -36,6 +36,7 @@ function ModlandFileNamer:onEnter(old_state)
             local orig_map = Mod.info.map
             Mod.info.map = Kristal.getLibConfig("afilemenu", "map")
             Game:load(nil, self.menu.file_select.selected_y, true)
+            Game.save_name = name or Kristal.Config["defaultName"] or Game.save_name
             Mod.info.map = orig_map
             Kristal.callEvent("afmPostInit", true)
 
