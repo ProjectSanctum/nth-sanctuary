@@ -882,6 +882,8 @@ return {
 			jamm = jamm:convertToNPC({ cutscene = "events2.jammslingshot" })
             Game.lock_movement = false
             jamm.following = false
+			jamm:setPosition(200, 85)
+			jamm:setFacing("up")
 			cutscene:attachFollowers()
         end
     end,
@@ -994,6 +996,7 @@ return {
 			jamm = jamm:convertToFollower()
             jamm.x, jamm.y = 680, 480
 			jamm.following = true
+			local jam = Game:getPartyMember("jamm")
 			sus:setFacing("right")
 			kris:setFacing("right")
 			ral:setFacing("right")
@@ -1012,10 +1015,11 @@ return {
 			cutscene:text("* Uhhhhhhh", "shock")
 			cutscene:text("* Nope nothing not at all absolutely nothing happened", "shock_nervous")
 			cutscene:setSpeaker(jamm)
-			cutscene:text("* [wait:30]..Uuh[wait:3]h[wait:3]h huh.", "suspicious")
+			cutscene:text("* [wait:30].. Uuh[wait:3]h[wait:3]h huh.", "suspicious")
 			cutscene:text("* Alright then.", "look_left")
 			Game:setFlag("slingCon", 2)
 			jamm.solid = false
+			jam:setWeapon("basic_sling")
         end
 		
         cutscene:attachFollowers()
