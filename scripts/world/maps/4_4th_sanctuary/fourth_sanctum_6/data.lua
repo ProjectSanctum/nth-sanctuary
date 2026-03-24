@@ -172,7 +172,7 @@ return {
       id = 19,
       name = "objects_parallax_fade",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,

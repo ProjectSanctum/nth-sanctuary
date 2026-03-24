@@ -41,7 +41,7 @@
  <objectgroup id="10" name="objects_bg1" visible="0" parallaxx="0.6">
   <object id="18" gid="1073742609" x="-160" y="1320" width="640" height="1600"/>
  </objectgroup>
- <objectgroup id="19" name="objects_parallax_fade">
+ <objectgroup id="19" name="objects_parallax_fade" visible="0">
   <object id="63" gid="789" x="1040" y="680" width="487.656" height="1040.33" rotation="270"/>
  </objectgroup>
  <layer id="14" name="black" width="26" height="14" tintcolor="#000000">
