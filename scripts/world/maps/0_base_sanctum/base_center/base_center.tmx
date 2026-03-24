@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="65">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="65">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -308,6 +308,26 @@
    <point/>
   </object>
  </objectgroup>
+ <objectgroup id="19" name="objects_windows">
+  <object id="59" name="window_glow" x="760" y="200">
+   <point/>
+  </object>
+  <object id="63" name="window_glow" x="40" y="760">
+   <point/>
+  </object>
+  <object id="64" name="window_glow" x="760" y="760">
+   <point/>
+  </object>
+  <object id="62" name="window_glow" x="1100" y="300">
+   <point/>
+  </object>
+  <object id="61" name="window_glow" x="960" y="300">
+   <point/>
+  </object>
+  <object id="60" name="window_glow" x="440" y="200">
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="5" name="objects_party">
   <object id="2" name="savepoint" x="740" y="280">
    <properties>
@@ -375,24 +395,6 @@ THE KNIGHT IS TO NO FAULT.</property>
    <properties>
     <property name="text1" value="* (Quite a fall, eh?)"/>
    </properties>
-  </object>
-  <object id="59" name="window_glow" x="760" y="200">
-   <point/>
-  </object>
-  <object id="63" name="window_glow" x="40" y="760">
-   <point/>
-  </object>
-  <object id="64" name="window_glow" x="760" y="760">
-   <point/>
-  </object>
-  <object id="62" name="window_glow" x="1100" y="300">
-   <point/>
-  </object>
-  <object id="61" name="window_glow" x="960" y="300">
-   <point/>
-  </object>
-  <object id="60" name="window_glow" x="440" y="200">
-   <point/>
   </object>
  </objectgroup>
  <objectgroup id="14" name="objects_fog">
