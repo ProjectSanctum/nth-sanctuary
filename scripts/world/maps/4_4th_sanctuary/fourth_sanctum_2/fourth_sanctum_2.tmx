@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="142">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="144">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -488,6 +488,24 @@
     <property name="starthidden" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="142" name="climbwaterbucket" x="1320" y="160" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="25"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="12"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="60"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="12"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="143" name="climbwaterbucket" x="1320" y="320" width="40" height="40">
+   <properties>
+    <property name="generate" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="8" name="objects_party">
   <object id="32" name="climbentry" x="1320" y="680" width="40" height="40">
@@ -578,19 +596,6 @@ HEROES CLIMB INFINITY FLIGHT.</property>
    </properties>
    <point/>
   </object>
-  <object id="129" name="climbwaterbucket" x="1320" y="160" width="40" height="40">
-   <properties>
-    <property name="activetime" type="float" value="25"/>
-    <property name="generate" type="bool" value="true"/>
-    <property name="spawnrate" type="float" value="12"/>
-    <property name="timelimit" type="float" value="5"/>
-    <property name="timer" type="float" value="60"/>
-    <property name="waittime" type="float" value="30"/>
-    <property name="waterfallingtimer" type="int" value="12"/>
-    <property name="watermoverate" type="float" value="6"/>
-    <property name="watertilelimit" type="int" value="32"/>
-   </properties>
-  </object>
   <object id="131" name="climbentry" x="1120" y="320" width="40" height="40">
    <properties>
     <property name="area" type="object" value="133"/>
@@ -604,11 +609,6 @@ HEROES CLIMB INFINITY FLIGHT.</property>
   <object id="138" name="climbentry" x="1480" y="320" width="40" height="40">
    <properties>
     <property name="area" type="object" value="136"/>
-   </properties>
-  </object>
-  <object id="141" name="climbwaterbucket" x="1320" y="320" width="40" height="40">
-   <properties>
-    <property name="generate" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>

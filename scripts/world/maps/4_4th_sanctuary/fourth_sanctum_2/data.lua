@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.11.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 27,
-  nextobjectid = 142,
+  nextobjectid = 144,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -1525,6 +1525,44 @@ return {
             ["idlealpha"] = 0,
             ["starthidden"] = true
           }
+        },
+        {
+          id = 142,
+          name = "climbwaterbucket",
+          type = "",
+          shape = "rectangle",
+          x = 1320,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["activetime"] = 25,
+            ["generate"] = true,
+            ["spawnrate"] = 12,
+            ["timelimit"] = 5,
+            ["timer"] = 60,
+            ["waittime"] = 30,
+            ["waterfallingtimer"] = 12,
+            ["watermoverate"] = 6,
+            ["watertilelimit"] = 32
+          }
+        },
+        {
+          id = 143,
+          name = "climbwaterbucket",
+          type = "",
+          shape = "rectangle",
+          x = 1320,
+          y = 320,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["generate"] = false
+          }
         }
       }
     },
@@ -1794,29 +1832,6 @@ return {
           }
         },
         {
-          id = 129,
-          name = "climbwaterbucket",
-          type = "",
-          shape = "rectangle",
-          x = 1320,
-          y = 160,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["activetime"] = 25,
-            ["generate"] = true,
-            ["spawnrate"] = 12,
-            ["timelimit"] = 5,
-            ["timer"] = 60,
-            ["waittime"] = 30,
-            ["waterfallingtimer"] = 12,
-            ["watermoverate"] = 6,
-            ["watertilelimit"] = 32
-          }
-        },
-        {
           id = 131,
           name = "climbentry",
           type = "",
@@ -1909,21 +1924,6 @@ return {
           visible = true,
           properties = {
             ["area"] = { id = 136 }
-          }
-        },
-        {
-          id = 141,
-          name = "climbwaterbucket",
-          type = "",
-          shape = "rectangle",
-          x = 1320,
-          y = 320,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["generate"] = false
           }
         }
       }
