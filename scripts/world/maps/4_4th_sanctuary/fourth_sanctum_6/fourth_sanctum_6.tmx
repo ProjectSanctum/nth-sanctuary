@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="33">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="64">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -11,7 +11,7 @@
  <tileset firstgid="199" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="781" source="../../../tilesets/church_objects.tsx"/>
  <tileset firstgid="884" source="../../../tilesets/light_areas.tsx"/>
- <objectgroup id="9" name="objects_bg2" parallaxx="0.55">
+ <objectgroup id="9" name="objects_bg2" visible="0" parallaxx="0.55">
   <object id="16" gid="1073742608" x="120" y="920" width="400" height="1600">
    <properties>
     <property name="color" type="color" value="#ff4646c6"/>
@@ -38,21 +38,30 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="objects_bg1" parallaxx="0.6">
+ <objectgroup id="10" name="objects_bg1" visible="0" parallaxx="0.6">
   <object id="18" gid="1073742609" x="-160" y="1320" width="640" height="1600"/>
  </objectgroup>
- <objectgroup color="#ff0000" id="6" name="collision">
-  <object id="5" x="0" y="40" width="480" height="40"/>
-  <object id="12" x="0" y="200">
-   <polygon points="0,0 400,0 400,40 440,40 440,120 0,120"/>
-  </object>
-  <object id="13" x="160" y="320">
-   <polygon points="0,0 -40,0 -40,240 880,240 880,120 440,120 440,80 400,80 400,40 320,40 320,80 80,80 80,240 0,240"/>
-  </object>
-  <object id="14" x="680" y="320">
-   <polygon points="0,0 0,-40 -40,-40 -40,-80 -80,-80 -80,-160 280,-160 280,-240 -120,-240 -120,-200 -200,-200 -200,-320 360,-320 360,0"/>
-  </object>
+ <objectgroup id="19" name="parallax_fade">
+  <object id="63" gid="789" x="1040" y="680" width="487.656" height="1040.33" rotation="270"/>
  </objectgroup>
+ <layer id="14" name="black" width="26" height="14" tintcolor="#000000">
+  <data encoding="csv">
+28,28,28,28,28,28,28,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+28,28,28,28,28,28,28,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
  <layer id="8" name="Tile Layer 3" width="26" height="14">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -79,32 +88,62 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,613,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,619,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,625,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,631,0,0,0,0,0,0,0,0,0,0,0,0
+128,129,130,128,129,130,128,129,130,128,129,130,0,0,0,128,129,130,0,0,0,0,0,0,0,0,
+137,138,139,137,138,139,137,138,139,137,138,139,0,0,0,137,138,139,0,0,0,0,0,0,0,0,
+146,147,148,146,147,148,146,147,148,146,147,148,0,0,0,146,147,148,0,0,0,0,0,0,0,0,
+155,156,157,155,156,157,155,156,157,155,156,157,0,0,0,155,156,157,0,0,0,0,0,0,0,0,
+155,156,157,155,0,0,0,0,0,0,0,0,0,613,0,0,0,0,0,0,0,0,0,0,0,0,
+155,156,157,155,0,0,0,0,0,0,0,0,0,619,0,0,0,0,0,0,0,0,0,0,0,0,
+155,156,157,155,0,0,0,0,0,619,0,0,0,625,0,128,129,130,128,129,130,128,129,130,128,129,
+155,156,157,155,0,0,0,0,0,625,0,0,0,631,0,137,138,139,137,138,139,137,138,139,137,138
 </data>
  </layer>
  <layer id="1" name="Tile Layer 1" width="26" height="14">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,772,773,772,773,772,773,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,778,779,778,779,778,779,0,0,
-10,10,10,10,10,10,10,10,10,10,10,195,0,0,10,10,10,10,37,38,39,40,38,41,0,0,
-10,10,10,10,10,10,10,10,10,10,10,10,195,195,195,10,10,10,55,56,57,58,56,59,0,0,
-10,10,10,10,10,10,10,10,10,10,10,10,10,195,195,28,28,28,64,65,66,67,65,68,0,0,
-28,28,28,28,28,28,28,28,28,28,10,10,10,10,195,0,0,0,73,74,75,76,74,77,0,0,
-0,0,0,0,0,0,0,0,0,0,28,10,10,10,10,195,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,195,195,10,10,10,195,0,0,0,0,0,0,0,0,0,
+174,174,174,174,174,174,174,174,174,174,174,174,0,0,174,174,174,174,778,779,778,779,778,779,0,0,
+10,10,10,10,10,10,10,10,10,10,10,195,174,174,10,10,10,10,37,38,39,40,38,41,0,0,
+10,10,10,10,10,10,10,10,10,10,10,10,195,195,195,10,10,10,46,47,48,49,49,50,0,0,
+10,10,10,10,10,10,10,10,10,10,10,168,169,170,171,10,10,10,55,56,57,58,56,59,0,0,
+28,28,28,28,28,28,28,28,28,28,10,177,178,179,180,10,28,28,64,65,66,67,65,68,0,0,
+0,0,0,0,0,0,0,0,0,174,10,186,187,188,189,195,174,0,73,74,75,76,74,77,0,0,
+0,0,0,0,174,174,174,174,174,10,10,195,196,197,198,10,195,174,174,174,174,174,174,174,174,174,
 0,0,0,0,10,195,195,195,195,195,195,195,195,10,10,10,10,195,10,10,10,10,10,10,10,10,
-0,0,0,0,10,195,10,10,10,10,10,195,28,28,10,10,10,195,10,10,10,10,10,10,10,10,
-0,0,0,0,10,195,28,28,28,28,28,28,0,0,28,10,10,10,10,10,10,10,10,10,10,10,
-0,0,0,0,10,10,0,0,0,0,0,0,0,0,0,28,28,28,28,28,28,28,28,28,28,28,
-0,0,0,0,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,10,195,10,10,10,10,10,195,195,10,10,10,10,195,10,10,10,10,10,10,10,10,
+0,0,0,0,10,195,10,10,10,10,195,28,28,28,28,10,10,10,10,10,10,10,10,10,10,10,
+0,0,0,0,10,195,195,28,28,28,28,0,0,0,0,28,28,28,28,28,28,28,28,28,28,28,
+0,0,0,0,10,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,10,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#ff0000" id="6" name="collision" visible="0" locked="1">
+  <object id="5" x="0" y="40" width="480" height="40"/>
+  <object id="37" x="400" y="200">
+   <polygon points="0,0 0,80 -40,80 -40,120 -240,120 -240,360 -400,360 -400,0"/>
+  </object>
+  <object id="38" x="280" y="440">
+   <polygon points="0,0 0,120 760,120 760,0 320,0 320,-40 160,-40 160,0 0,0"/>
+  </object>
+  <object id="39" x="480" y="0">
+   <polygon points="0,0 0,120 80,120 80,80 480,80 480,200 160,200 160,280 200,280 200,320 560,320 560,0"/>
+  </object>
+ </objectgroup>
+ <layer id="18" name="tiless" width="26" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,168,169,170,171,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,177,178,179,180,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,186,187,188,189,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,195,196,197,198,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="4" name="markers">
@@ -124,6 +163,15 @@
     <property name="text2" value="* ... [wait:5]Eh."/>
     <property name="text3" value="* I got tired of guarding that statue after a while."/>
    </properties>
+   <point/>
+  </object>
+  <object id="50" name="window_glow" x="520" y="80">
+   <point/>
+  </object>
+  <object id="51" name="window_glow" x="60" y="480">
+   <point/>
+  </object>
+  <object id="52" name="window_glow" x="1000" y="80">
    <point/>
   </object>
  </objectgroup>
@@ -150,26 +198,107 @@
    </properties>
    <point/>
   </object>
+  <object id="48" name="eye_glow" x="840.227" y="234.881">
+   <point/>
+  </object>
+  <object id="54" name="npc" x="240" y="375.333">
+   <properties>
+    <property name="actor" value="organik"/>
+    <property name="sprite" value="ar"/>
+    <property name="text1" value="* Is this what we are made for?"/>
+    <property name="text2" value="* Our endless wonderland?"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="62" name="npc" x="670" y="400">
+   <properties>
+    <property name="actor" value="balthizard"/>
+    <property name="text1" value="[spacing:5][speed:0.25]* Do not mind me."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="58" name="npc" x="206.5" y="540.167">
+   <properties>
+    <property name="actor" value="organik"/>
+    <property name="sprite" value="a"/>
+    <property name="text1" value="* Is this what we are made for?"/>
+    <property name="text2" value="* Our endless wonderland?"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="56" name="npc" x="187" y="432.333">
+   <properties>
+    <property name="actor" value="organik"/>
+    <property name="sprite" value="b"/>
+    <property name="text1" value="* Is this what we are made for?"/>
+    <property name="text2" value="* Our endless wonderland?"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="55" name="npc" x="307" y="429">
+   <properties>
+    <property name="actor" value="organik"/>
+    <property name="sprite" value="c"/>
+    <property name="text1" value="* Is this what we aren't made for?"/>
+    <property name="text2" value="* Our eternal wasteland?"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="57" name="npc" x="246.667" y="488.833">
+   <properties>
+    <property name="actor" value="organik"/>
+    <property name="sprite" value="dr"/>
+    <property name="text1" value="* Is this what we aren't made for?"/>
+    <property name="text2" value="* Our eternal wasteland?"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
+ <layer id="13" name="tile" width="26" height="14">
+  <data encoding="csv">
+586,587,588,547,586,587,588,547,586,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+598,599,600,553,598,599,600,553,598,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+598,599,600,559,598,599,600,559,598,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+604,605,606,559,604,605,606,559,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+774,774,774,565,774,774,774,565,774,774,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,774,774,774,774,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,774,774,774,774,0,0,0,0,774,774,774,774,774,774,774,774,774,774,774,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
  <objectgroup id="11" name="objects_lightarea" visible="0">
   <object id="22" gid="884" x="440" y="760" width="755.284" height="920">
    <properties>
     <property name="light" type="bool" value="true"/>
-    <property name="light_alpha" type="float" value="0.25"/>
+    <property name="light_alpha" type="float" value="0.1"/>
     <property name="light_color" type="color" value="#ffffffff"/>
     <property name="light_dust" type="bool" value="true"/>
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
-  <object id="23" gid="2147484532" x="-160" y="760" width="755.284" height="920">
+  <object id="23" gid="2147484532" x="-68" y="764" width="755.284" height="920">
    <properties>
     <property name="light" type="bool" value="true"/>
-    <property name="light_alpha" type="float" value="0.25"/>
+    <property name="light_alpha" type="float" value="0.1"/>
     <property name="light_color" type="color" value="#ffffffff"/>
     <property name="light_dust" type="bool" value="true"/>
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
+  <object id="40" name="highlight" x="120" y="-40" width="40" height="280"/>
+  <object id="41" name="highlight" x="280" y="-40" width="40" height="280"/>
+  <object id="42" name="highlight" x="160" y="160" width="120" height="40"/>
+  <object id="44" name="highlight" x="320" y="160" width="80" height="40"/>
+  <object id="46" name="highlight" x="440" y="360" width="160" height="40"/>
+  <object id="47" name="highlight" x="600" y="400" width="440" height="40"/>
+  <object id="45" name="highlight" x="280" y="400" width="160" height="40"/>
+  <object id="43" name="highlight" x="0" y="160" width="120" height="40"/>
  </objectgroup>
  <objectgroup id="3" name="objects_overlay">
   <object id="1" name="texturescroller" x="222.333" y="-48.6667">
