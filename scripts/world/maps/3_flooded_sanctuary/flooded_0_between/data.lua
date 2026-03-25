@@ -496,7 +496,7 @@ return {
           name = "chest",
           type = "",
           shape = "rectangle",
-          x = 200,
+          x = 400,
           y = 240,
           width = 40,
           height = 40,

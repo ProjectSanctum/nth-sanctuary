@@ -237,7 +237,7 @@
     <property name="text2" value="* (You're filled with the power of feeling wet.)"/>
    </properties>
   </object>
-  <object id="52" name="chest" x="200" y="240" width="40" height="40">
+  <object id="52" name="chest" x="400" y="240" width="40" height="40">
    <properties>
     <property name="item" value="revivemint"/>
    </properties>
