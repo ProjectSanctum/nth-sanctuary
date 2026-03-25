@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="35" nextobjectid="227">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="43" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="35" nextobjectid="229">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -676,7 +676,7 @@ YET BURNING WITH PROMISE.</property>
   <object id="224" name="enemy" x="860.061" y="870">
    <properties>
     <property name="actor" value="organikk"/>
-    <property name="encounter" value="organikk"/>
+    <property name="encounter" value="winganikk"/>
     <property name="group" type="int" value="1"/>
     <property name="pacetype" value="horizontalswing"/>
     <property name="swingdiv" type="float" value="30"/>
@@ -686,7 +686,7 @@ YET BURNING WITH PROMISE.</property>
   <object id="225" name="enemy" x="1165.39" y="1254.75">
    <properties>
     <property name="actor" value="organikk"/>
-    <property name="encounter" value="organikk"/>
+    <property name="encounter" value="winganikk"/>
     <property name="group" type="int" value="1"/>
     <property name="pacetype" value="horizontalswing"/>
     <property name="swingdiv" type="float" value="30"/>
@@ -696,12 +696,24 @@ YET BURNING WITH PROMISE.</property>
   <object id="226" name="enemy" x="550.568" y="1251.81">
    <properties>
     <property name="actor" value="organikk"/>
-    <property name="encounter" value="organikk"/>
+    <property name="encounter" value="winganikk"/>
     <property name="group" type="int" value="1"/>
     <property name="pacetype" value="horizontalswing"/>
     <property name="swingdiv" type="float" value="30"/>
     <property name="swinglength" type="float" value="300"/>
    </properties>
+  </object>
+  <object id="227" name="npc" x="1280" y="200">
+   <properties>
+    <property name="actor" value="winglade"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="228" name="npc" x="440" y="200">
+   <properties>
+    <property name="actor" value="winglade"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="30" name="objects_fog">

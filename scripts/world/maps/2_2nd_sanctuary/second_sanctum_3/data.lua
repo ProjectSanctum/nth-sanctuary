@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 34,
-  nextobjectid = 372,
+  nextobjectid = 374,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church",
@@ -2767,6 +2767,21 @@ return {
             ["text1"] = "* Oh[wait:5], this treacherous, [wait:5]crystalline path...",
             ["text2"] = "* It seduced my soul with LIES!",
             ["text3"] = "* CURSES![wait:5] A thousand CURSES upon this fractured vanity and the shadow it has cast!"
+          }
+        },
+        {
+          id = 373,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 979.333,
+          y = 462.667,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "winglade"
           }
         }
       }

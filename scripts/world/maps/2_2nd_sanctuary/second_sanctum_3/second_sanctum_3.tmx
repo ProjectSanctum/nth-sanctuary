@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="34" nextobjectid="372">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="34" nextobjectid="374">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -731,6 +731,12 @@
     <property name="text1" value="* Oh[wait:5], this treacherous, [wait:5]crystalline path..."/>
     <property name="text2" value="* It seduced my soul with LIES!"/>
     <property name="text3" value="* CURSES![wait:5] A thousand CURSES upon this fractured vanity and the shadow it has cast!"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="373" name="npc" x="979.333" y="462.667">
+   <properties>
+    <property name="actor" value="winglade"/>
    </properties>
    <point/>
   </object>

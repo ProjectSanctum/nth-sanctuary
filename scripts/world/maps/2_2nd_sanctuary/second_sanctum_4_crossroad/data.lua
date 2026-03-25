@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 35,
-  nextobjectid = 227,
+  nextobjectid = 229,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -1753,7 +1753,7 @@ return {
           visible = true,
           properties = {
             ["actor"] = "organikk",
-            ["encounter"] = "organikk",
+            ["encounter"] = "winganikk",
             ["group"] = 1,
             ["pacetype"] = "horizontalswing",
             ["swingdiv"] = 30,
@@ -1773,7 +1773,7 @@ return {
           visible = true,
           properties = {
             ["actor"] = "organikk",
-            ["encounter"] = "organikk",
+            ["encounter"] = "winganikk",
             ["group"] = 1,
             ["pacetype"] = "horizontalswing",
             ["swingdiv"] = 30,
@@ -1793,11 +1793,41 @@ return {
           visible = true,
           properties = {
             ["actor"] = "organikk",
-            ["encounter"] = "organikk",
+            ["encounter"] = "winganikk",
             ["group"] = 1,
             ["pacetype"] = "horizontalswing",
             ["swingdiv"] = 30,
             ["swinglength"] = 300
+          }
+        },
+        {
+          id = 227,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 1280,
+          y = 200,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "winglade"
+          }
+        },
+        {
+          id = 228,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 440,
+          y = 200,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "winglade"
           }
         }
       }
