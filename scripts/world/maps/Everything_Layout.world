@@ -298,15 +298,15 @@
             "fileName": "secrets/new_future/new_future.tmx",
             "height": 480,
             "width": 640,
-            "x": 4960,
-            "y": 8360
+            "x": 3400,
+            "y": 8920
         },
         {
             "fileName": "secrets/prophecy_test/prophecy_test.tmx",
             "height": 480,
             "width": 640,
-            "x": 5600,
-            "y": 8360
+            "x": 4040,
+            "y": 8920
         },
         {
             "fileName": "wip_rooms/gerson_study/gerson_study.tmx",
@@ -473,8 +473,8 @@
             "fileName": "secrets/prophecy_test_tree/prophecy_test_tree.tmx",
             "height": 480,
             "width": 640,
-            "x": 6240,
-            "y": 8360
+            "x": 2760,
+            "y": 8920
         },
         {
             "fileName": "fractured_sanctuary/fractured_egg_room/fractured_egg_room.tmx",
@@ -538,6 +538,13 @@
             "width": 960,
             "x": 6160,
             "y": -80
+        },
+        {
+            "fileName": "sanctum_hell/hell_unknown/hell_unknown.tmx",
+            "height": 4080,
+            "width": 4080,
+            "x": 5520,
+            "y": 7240
         }
     ],
     "onlyShowAdjacentMaps": false,
