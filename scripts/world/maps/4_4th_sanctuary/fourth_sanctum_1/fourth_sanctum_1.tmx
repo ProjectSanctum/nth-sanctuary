@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="178">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="178">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -393,10 +393,6 @@
   <object id="174" name="highlight" x="600" y="640" width="200" height="200"/>
   <object id="175" name="silhouette" x="680" y="600" width="120" height="40"/>
   <object id="176" name="highlight" x="680" y="600" width="120" height="40"/>
- </objectgroup>
- <objectgroup id="26" name="objects_pillar" parallaxx="1.2" parallaxy="1.2">
-  <object id="171" gid="684" x="1479.74" y="-660.044" width="2880" height="100" rotation="135"/>
-  <object id="170" gid="684" x="-654" y="230" width="2880" height="100" rotation="45"/>
  </objectgroup>
  <objectgroup id="9" name="objects_lightarea" visible="0" locked="1">
   <object id="119" name="darkness" x="0" y="0">

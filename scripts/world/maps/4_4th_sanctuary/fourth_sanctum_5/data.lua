@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -1199,50 +1199,6 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 22,
-      name = "objects_pillars",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 0.8,
-      parallaxy = 0.8,
-      properties = {},
-      objects = {
-        {
-          id = 188,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 370,
-          y = 1800,
-          width = 2880,
-          height = 100,
-          rotation = 261.205,
-          gid = 882,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 189,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1145.65,
-          y = 1900.02,
-          width = 2880,
-          height = 100,
-          rotation = 278.661,
-          gid = 882,
-          visible = true,
-          properties = {}
-        }
       }
     },
     {

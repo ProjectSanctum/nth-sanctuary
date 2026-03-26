@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="23" nextobjectid="98">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="34" tilewidth="40" tileheight="40" infinite="0" nextlayerid="23" nextobjectid="98">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -505,8 +505,9 @@ THROUGH HER HEART.</property>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="22" name="objects_pillars" parallaxx="0.8" parallaxy="0.8">
-  <object id="82" gid="872" x="264" y="1751.96" width="2880" height="100" rotation="261.205"/>
+ <objectgroup id="22" name="objects_pillars" visible="0" parallaxx="1.2" parallaxy="1.2">
+  <object id="79" gid="872" x="1910" y="1120" width="2880" height="100" rotation="173.764"/>
+  <object id="83" gid="872" x="960" y="1900" width="2880" height="100" rotation="274.885"/>
  </objectgroup>
  <objectgroup id="21" name="objects_fog">
   <object id="3" name="churchfog" x="-147.333" y="50">

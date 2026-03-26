@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 27,
-  nextobjectid = 145,
+  nextobjectid = 144,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -1925,24 +1925,6 @@ return {
           properties = {
             ["area"] = { id = 136 }
           }
-        },
-        {
-          id = 144,
-          name = "npc",
-          type = "",
-          shape = "point",
-          x = 280,
-          y = 400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["actor"] = "organik",
-            ["sprite"] = "cr",
-            ["text1"] = "* The [color:yellow]Sanctum's Spire...[color:reset]",
-            ["text2"] = "* How much longer can it go?"
-          }
         }
       }
     },
@@ -1996,64 +1978,6 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 22,
-      name = "objects_pillars",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 0.8,
-      parallaxy = 0.8,
-      properties = {},
-      objects = {
-        {
-          id = 120,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = -481.022,
-          y = -1.31133,
-          width = 2880,
-          height = 100,
-          rotation = 45,
-          gid = 872,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 121,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1182.72,
-          y = -405.355,
-          width = 2880,
-          height = 100,
-          rotation = 135,
-          gid = 872,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 128,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 2990.2,
-          y = 373.2,
-          width = 2880,
-          height = 100,
-          rotation = 190.395,
-          gid = 872,
-          visible = true,
-          properties = {}
-        }
       }
     },
     {
