@@ -44,8 +44,18 @@ end
 
 function ThreeDPrism:update()
     self.siner = self.siner + DTMULT
+	local y_offset = math.sin(self.siner * 0.1) * 20
+	if Game.battle.music.source and Game.battle.music:tell() >= 13.616 then
+        if Game.battle and Game.battle.camera then 
+            Game.battle.camera.rotation = Utils.lerp(Game.battle.camera.rotation, y_offset/1000, 0.1 * DTMULT)
+        end 
+	else
+        if Game.battle and Game.battle.camera then 
+            Game.battle.camera.rotation = Utils.lerp(Game.battle.camera.rotation, 0, 0.1 * DTMULT)
+        end 
+	end
 	if self.prism_bg_con <= 2 then
-		self.g.y = self.g.y + math.cos(self.siner/10)*2
+		self.g.y = Utils.lerp(self.g.y, 269 + y_offset, 0.1 * DTMULT)
 	end
 end
 
