@@ -90,7 +90,13 @@ return {
 				"* \"I will seal them with my fellows in hand. [wait:10]Let the Order prosper.\""
 			},
 			[4] = {
-				"* \" \"",
+				"* \"The seven remain at their posts.\"",
+				"* \"Each bound to their role.\"",
+				"* \"Each bound to the barrier.\"",
+				"* \"They do not speak anymore.\"",
+				"* \"...Not to us.\"",
+				"* \"But sometimes, [wait:5]we still hear them.\"",
+				"* \"Through the stone.\""
 			},
 			[5] = {
 				"* \"The barrier still stands.\"",
@@ -102,16 +108,34 @@ return {
 				"* \"For the moment it cracks.\""
 			},
 			[6] = {
-				"* \" \"",
-			},
+				"* \"It doesn't matter if it breaks. [wait:10]We are't specifically targeting them.\"",
+				"* \"To Hell with it, [wait:5]quantity over quality.\"",
+				"* \"Both take the same amount of time.\"",
+				"* \"Next.\""
+			}
 			[7] = {
-				"* \" \"",
+				"* \"We found a new point of interest.\"",
+				"* \"A 'home town' of sorts. [wait:10]We're in the process of gauging activity.\"",
+				"* \"In fact, [wait:5]we don't even need our ritual items.\"",
+				"* \"One of our acolytes went to attend and see the interior.\"",
+				"* \"It's larger than our usual churches.\"",
+				"* \"We'll call everyone for this place.\""
 			},
 			[8] = {
-				"* \" \"",
+				"* \"It was easy to get in.\"",
+				"* \"Fragile windows, [wait:5]yet sharp. [wait:10]Good to open a fountain.\"",
+				"* \"...Or more.\"",
+				"* \"We'll stand in a circle and let one in the middle make links to all.\"",
+				"* \"Let Him make the [color:yellow]Grand Sanctum [color:white]and bind us.\"",
+				"* \"Make it darker.\""
 			},
 			[9] = {
-				"* \" \"",
+				"* \"Yet darker. [wait:10]Through it, [wait:5]I see color.\"",
+				"* \"Vivid, [wait:5]dull, [wait:5]and saturated color.\"",
+				"* \"A byproduct of this, [wait:5]though... [wait:10]The windows became part, [wait:5]too.\"",
+				"* \"It's as if their color became where we are now.\"",
+				"* \"And thus, [wait:5]turning those colored shards dark.\"",
+				"* \"The shadows cot deeper than expected.\"",
 			},
 			[10] = {
 				"* (Wait, [wait:5]this passage feels like it was just written.)",
