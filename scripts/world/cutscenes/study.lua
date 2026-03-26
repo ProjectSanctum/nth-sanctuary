@@ -112,7 +112,7 @@ return {
 				"* \"To Hell with it, [wait:5]quantity over quality.\"",
 				"* \"Both take the same amount of time.\"",
 				"* \"Next.\""
-			}
+			},
 			[7] = {
 				"* \"We found a new point of interest.\"",
 				"* \"A 'home town' of sorts. [wait:10]We're in the process of gauging activity.\"",
