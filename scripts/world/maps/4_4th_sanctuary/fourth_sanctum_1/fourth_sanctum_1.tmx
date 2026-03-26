@@ -394,8 +394,7 @@
   <object id="175" name="silhouette" x="680" y="600" width="120" height="40"/>
   <object id="176" name="highlight" x="680" y="600" width="120" height="40"/>
  </objectgroup>
- <objectgroup id="26" name="objects_pillar" visible="0" parallaxx="1.2" parallaxy="1.2">
-  <object id="169" gid="684" x="-184" y="-256" width="2880" height="100" rotation="45"/>
+ <objectgroup id="26" name="objects_pillar" parallaxx="1.2" parallaxy="1.2">
   <object id="171" gid="684" x="1479.74" y="-660.044" width="2880" height="100" rotation="135"/>
   <object id="170" gid="684" x="-654" y="230" width="2880" height="100" rotation="45"/>
  </objectgroup>

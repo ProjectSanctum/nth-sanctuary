@@ -1323,7 +1323,7 @@ return {
       id = 26,
       name = "objects_pillar",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -1331,20 +1331,6 @@ return {
       parallaxy = 1.2,
       properties = {},
       objects = {
-        {
-          id = 169,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = -184,
-          y = -256,
-          width = 2880,
-          height = 100,
-          rotation = 45,
-          gid = 684,
-          visible = true,
-          properties = {}
-        },
         {
           id = 171,
           name = "",
