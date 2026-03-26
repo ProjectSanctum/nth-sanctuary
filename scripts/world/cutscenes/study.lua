@@ -77,9 +77,12 @@ return {
 				"* \"We all agreed.\"",
 				"* \"Any second now, [wait:5]Shade rises.\""
 			},
-			[2] = {
-				"* Interacted 2",
-				"* 2 times!!!1!"
+			[6] = {
+				"* \"They call us heretics.\"",
+				"* \"Blasphemers.[wait:10] Monsters.\"",
+				"* \"...Yet they pray to silence.\"",
+				"* \"And we answer.\"",
+				"* \"Shadows do not forget.\""
 			},
 			[3] = {
 				"* \"The Order has tasked me with aiding them. [wait:10]I uphold their will.\"",
@@ -87,23 +90,28 @@ return {
 				"* \"I will seal them with my fellows in hand. [wait:10]Let the Order prosper.\""
 			},
 			[4] = {
-				"* Interacted 4",
-				"ok"
+				"* \" \"",
 			},
 			[5] = {
-				"* Interacted 5",
+				"* \"The barrier still stands.\"",
+				"* \"Even now, it hums with their resistance.\"",
+				"* \"But time erodes all things.\"",
+				"* \"Even faith.\"",
+				"* \"Even mountains.\"",
+				"* \"We wait. [wait:10]And we listen.\"",
+				"* \"For the moment it cracks.\""
 			},
 			[6] = {
-				"* Interacted 6",
+				"* \" \"",
 			},
 			[7] = {
-				"* Interacted 7",
+				"* \" \"",
 			},
 			[8] = {
-				"* Interacted 8",
+				"* \" \"",
 			},
 			[9] = {
-				"* Interacted 9",
+				"* \" \"",
 			},
 			[10] = {
 				"* (Wait, [wait:5]this passage feels like it was just written.)",
