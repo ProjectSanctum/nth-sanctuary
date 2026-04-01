@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 32,
+  nextobjectid = 33,
   properties = {
     ["border"] = "church_a",
     ["music"] = "mus_rain_deep",
@@ -98,6 +98,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
+          opacity = 1,
           gid = 833,
           visible = true,
           properties = {
@@ -114,6 +115,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
+          opacity = 1,
           gid = 829,
           visible = true,
           properties = {
@@ -130,6 +132,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
+          opacity = 1,
           gid = 829,
           visible = true,
           properties = {
@@ -146,6 +149,7 @@ return {
           width = 200,
           height = 1240,
           rotation = 0,
+          opacity = 1,
           gid = 830,
           visible = true,
           properties = {
@@ -178,6 +182,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -399,6 +404,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["prophecy"] = true
@@ -414,6 +420,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "sanctum_hell/hell_1",
@@ -430,6 +437,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "frisk",
@@ -446,6 +454,7 @@ return {
           width = 280,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cond"] = "Game:getFlag(\"fun\") ~= 69",
@@ -470,6 +479,7 @@ return {
           width = 280,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cond"] = "Game:getFlag(\"fun\") == 69",
@@ -482,6 +492,23 @@ return {
             ["text"] = "FAFA",
             ["texture"] = "friskroom-fafa",
             ["txt_offy"] = -20
+          }
+        },
+        {
+          id = 32,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 520,
+          y = 310,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["actor"] = "rouxls",
+            ["text1"] = "* WHEREST AM I?!?!?!"
           }
         }
       }
@@ -510,6 +537,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -539,6 +567,7 @@ return {
           width = 1040,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -552,6 +581,7 @@ return {
           width = 1040,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -565,6 +595,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
