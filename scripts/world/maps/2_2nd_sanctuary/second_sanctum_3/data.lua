@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 34,
-  nextobjectid = 384,
+  nextobjectid = 390,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church",
@@ -565,7 +565,7 @@ return {
         0, 0, 0, 0, 0, 733, 478, 735, 0, 733, 888, 729, 0, 0, 890, 888, 735, 0, 733, 888, 735, 0, 0, 0, 0, 0, 0, 733, 888, 741, 0, 727, 734, 734, 734, 888, 741, 0, 739, 734, 735, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 734, 735, 0, 884, 734, 888, 735, 0, 733, 734, 735, 0, 0, 0, 0, 0, 727, 734, 735, 0, 727, 888, 888, 734, 735, 741, 0, 0, 0, 739, 741, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 888, 734, 728, 734, 888, 734, 735, 0, 733, 734, 735, 0, 0, 0, 0, 0, 733, 888, 888, 729, 733, 734, 888, 888, 734, 729, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 734, 888, 888, 888, 734, 741, 0, 733, 888, 735, 0, 0, 0, 0, 0, 733, 735, 888, 734, 888, 734, 888, 741, 739, 888, 729, 0, 0, 0, 727, 729,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 733, 734, 888, 888, 888, 734, 741, 0, 733, 888, 735, 0, 0, 0, 0, 0, 733, 735, 887, 734, 888, 734, 888, 741, 739, 888, 729, 0, 0, 0, 727, 729,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 727, 888, 734, 734, 734, 888, 735, 0, 0, 733, 888, 735, 0, 0, 0, 0, 0, 733, 734, 888, 734, 888, 734, 888, 729, 727, 888, 735, 0, 0, 727, 888, 734,
         0, 0, 0, 0, 0, 733, 888, 735, 0, 733, 734, 741, 739, 888, 888, 735, 0, 0, 733, 478, 735, 0, 0, 0, 0, 0, 739, 740, 888, 734, 888, 888, 734, 734, 734, 734, 741, 0, 0, 733, 888, 734,
         0, 0, 0, 0, 0, 733, 888, 735, 0, 733, 888, 729, 727, 734, 888, 735, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 727, 734, 734, 888, 734, 734, 734, 740, 741, 0, 0, 727, 888, 888, 741,
@@ -1641,7 +1641,7 @@ return {
       id = 6,
       name = "collision",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -1812,7 +1812,7 @@ return {
           shape = "rectangle",
           x = 360,
           y = 1120,
-          width = 840,
+          width = 600,
           height = 40,
           rotation = 0,
           visible = true,
@@ -1851,7 +1851,7 @@ return {
           shape = "rectangle",
           x = 0,
           y = 1000,
-          width = 1200,
+          width = 1080,
           height = 40,
           rotation = 0,
           visible = true,
@@ -1890,6 +1890,45 @@ return {
           shape = "rectangle",
           x = -40,
           y = 1040,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 386,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 1040,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 387,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1000,
+          y = 1200,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 389,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 960,
+          y = 1120,
           width = 40,
           height = 80,
           rotation = 0,
@@ -1987,7 +2026,7 @@ return {
           shape = "rectangle",
           x = -40,
           y = 1040,
-          width = 1240,
+          width = 1120,
           height = 80,
           rotation = 0,
           visible = true,
@@ -2011,36 +2050,21 @@ return {
             ["idlealpha"] = 0,
             ["starthidden"] = true
           }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 33,
-      name = "objects_chest",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
+        },
         {
-          id = 366,
-          name = "chest",
+          id = 384,
+          name = "churchmagicglass",
           type = "",
-          shape = "point",
-          x = 1120,
-          y = 1080,
-          width = 0,
-          height = 0,
+          shape = "rectangle",
+          x = 1000,
+          y = 1120,
+          width = 80,
+          height = 80,
           rotation = 0,
           visible = true,
           properties = {
-            ["item"] = "mysticband"
+            ["idlealpha"] = 0,
+            ["starthidden"] = true
           }
         }
       }
@@ -2849,6 +2873,37 @@ return {
           visible = true,
           properties = {
             ["actor"] = "winglade"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 33,
+      name = "objects_chest",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 366,
+          name = "chest",
+          type = "",
+          shape = "point",
+          x = 1040,
+          y = 1150,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["item"] = "mysticband"
           }
         }
       }

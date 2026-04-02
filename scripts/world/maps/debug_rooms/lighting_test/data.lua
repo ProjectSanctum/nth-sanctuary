@@ -12,6 +12,7 @@ return {
   nextlayerid = 7,
   nextobjectid = 25,
   properties = {
+    ["border"] = "church_a",
     ["music"] = "climb"
   },
   tilesets = {
@@ -84,8 +85,8 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 520,
-          y = 400,
+          x = 400,
+          y = 370,
           width = 0,
           height = 0,
           rotation = 0,
@@ -194,7 +195,7 @@ return {
           type = "",
           shape = "point",
           x = 320,
-          y = 400,
+          y = 420,
           width = 0,
           height = 0,
           rotation = 0,
@@ -235,7 +236,7 @@ return {
       id = 5,
       name = "objects_lightareas",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 0.5,
       offsetx = 0,
       offsety = 0,

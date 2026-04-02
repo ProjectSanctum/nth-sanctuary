@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -12,7 +12,8 @@ return {
   nextlayerid = 9,
   nextobjectid = 47,
   properties = {
-    ["music"] = "smallpiano_room"
+    ["border"] = "church_a",
+    ["music"] = "climb"
   },
   tilesets = {
     {

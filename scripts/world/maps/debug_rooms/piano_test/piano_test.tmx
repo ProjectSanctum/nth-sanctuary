@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="15" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="47">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="15" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="47">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
-  <property name="music" value="smallpiano_room"/>
+  <property name="border" value="church_a"/>
+  <property name="music" value="climb"/>
  </properties>
  <tileset firstgid="1" source="../../../tilesets/church_objects.tsx"/>
  <tileset firstgid="104" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>

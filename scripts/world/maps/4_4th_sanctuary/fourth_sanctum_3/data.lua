@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -1504,50 +1504,6 @@ return {
             ["swingdiv"] = 15,
             ["swinglength"] = 200
           }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 22,
-      name = "objects_pillars",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1.2,
-      parallaxy = 1.2,
-      properties = {},
-      objects = {
-        {
-          id = 79,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1910,
-          y = 1120,
-          width = 2880,
-          height = 100,
-          rotation = 173.764,
-          gid = 872,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 83,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 960,
-          y = 1900,
-          width = 2880,
-          height = 100,
-          rotation = 274.885,
-          gid = 872,
-          visible = true,
-          properties = {}
         }
       }
     },

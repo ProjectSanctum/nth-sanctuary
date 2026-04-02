@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="34" nextobjectid="384">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="34" nextobjectid="390">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -175,7 +175,7 @@
 0,0,0,0,0,733,478,735,0,733,888,729,0,0,890,888,735,0,733,888,735,0,0,0,0,0,0,733,888,741,0,727,734,734,734,888,741,0,739,734,735,0,
 0,0,0,0,0,0,0,0,0,733,734,735,0,884,734,888,735,0,733,734,735,0,0,0,0,0,727,734,735,0,727,888,888,734,735,741,0,0,0,739,741,0,
 0,0,0,0,0,0,0,0,0,733,888,734,728,734,888,734,735,0,733,734,735,0,0,0,0,0,733,888,888,729,733,734,888,888,734,729,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,733,734,888,888,888,734,741,0,733,888,735,0,0,0,0,0,733,735,888,734,888,734,888,741,739,888,729,0,0,0,727,729,
+0,0,0,0,0,0,0,0,0,0,733,734,888,888,888,734,741,0,733,888,735,0,0,0,0,0,733,735,887,734,888,734,888,741,739,888,729,0,0,0,727,729,
 0,0,0,0,0,0,0,0,0,727,888,734,734,734,888,735,0,0,733,888,735,0,0,0,0,0,733,734,888,734,888,734,888,729,727,888,735,0,0,727,888,734,
 0,0,0,0,0,733,888,735,0,733,734,741,739,888,888,735,0,0,733,478,735,0,0,0,0,0,739,740,888,734,888,888,734,734,734,734,741,0,0,733,888,734,
 0,0,0,0,0,733,888,735,0,733,888,729,727,734,888,735,0,0,0,0,0,0,0,0,0,0,0,727,734,734,888,734,734,734,740,741,0,0,727,888,888,741,
@@ -348,7 +348,7 @@
   <object id="380" x="1160" y="1120" width="40" height="120"/>
   <object id="382" x="1200" y="1080" width="40" height="80"/>
  </objectgroup>
- <objectgroup id="6" name="collision" visible="0">
+ <objectgroup id="6" name="collision">
   <object id="22" x="0" y="360" width="320" height="40"/>
   <object id="23" x="0" y="520" width="320" height="40"/>
   <object id="28" x="720" y="560" width="280" height="40"/>
@@ -361,13 +361,16 @@
   <object id="264" x="1320" y="800" width="40" height="120"/>
   <object id="342" x="360" y="1160" width="40" height="120"/>
   <object id="344" x="280" y="1280" width="80" height="40"/>
-  <object id="361" x="360" y="1120" width="840" height="40"/>
+  <object id="361" x="360" y="1120" width="600" height="40"/>
   <object id="363" x="1120" y="1040" width="40" height="80"/>
   <object id="369" x="1098.33" y="1040" width="50.6667" height="80"/>
-  <object id="374" x="0" y="1000" width="1200" height="40"/>
+  <object id="374" x="0" y="1000" width="1080" height="40"/>
   <object id="375" x="0" y="1120" width="280" height="40"/>
   <object id="376" x="240" y="1160" width="40" height="120"/>
   <object id="377" x="-40" y="1040" width="40" height="80"/>
+  <object id="386" x="1080" y="1040" width="40" height="160"/>
+  <object id="387" x="1000" y="1200" width="80" height="40"/>
+  <object id="389" x="960" y="1120" width="40" height="80"/>
  </objectgroup>
  <objectgroup id="5" name="markers">
   <object id="3" name="entry" x="40" y="460">
@@ -384,7 +387,7 @@
   </object>
  </objectgroup>
  <objectgroup id="30" name="objects_below">
-  <object id="334" name="churchmagicglass" x="-40" y="1040" width="1240" height="80">
+  <object id="334" name="churchmagicglass" x="-40" y="1040" width="1120" height="80">
    <properties>
     <property name="idlealpha" type="float" value="0"/>
     <property name="starthidden" type="bool" value="true"/>
@@ -396,13 +399,11 @@
     <property name="starthidden" type="bool" value="true"/>
    </properties>
   </object>
- </objectgroup>
- <objectgroup id="33" name="objects_chest">
-  <object id="366" name="chest" x="1120" y="1080">
+  <object id="384" name="churchmagicglass" x="1000" y="1120" width="80" height="80">
    <properties>
-    <property name="item" value="mysticband"/>
+    <property name="idlealpha" type="float" value="0"/>
+    <property name="starthidden" type="bool" value="true"/>
    </properties>
-   <point/>
   </object>
  </objectgroup>
  <layer id="32" name="tilesssss" width="42" height="32">
@@ -748,6 +749,14 @@
   <object id="373" name="npc" x="979.333" y="462.667">
    <properties>
     <property name="actor" value="winglade"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="33" name="objects_chest">
+  <object id="366" name="chest" x="1040" y="1150">
+   <properties>
+    <property name="item" value="mysticband"/>
    </properties>
    <point/>
   </object>

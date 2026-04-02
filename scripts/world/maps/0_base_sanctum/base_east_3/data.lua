@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 20,
-  nextobjectid = 92,
+  nextobjectid = 94,
   properties = {
     ["border"] = "base_sanctum",
     ["music"] = "homebase"
@@ -609,6 +609,35 @@ return {
           height = 50,
           rotation = 0,
           gid = 661,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 92,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 760,
+          y = 200,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* \"ENTRANCE TO THE FOURTH SANCTUARY\""
+          }
+        },
+        {
+          id = 93,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 760,
+          y = 200,
+          width = 40,
+          height = 30,
+          rotation = 0,
+          gid = 705,
           visible = true,
           properties = {}
         }

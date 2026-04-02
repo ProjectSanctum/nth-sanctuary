@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 32,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 27,
-  nextobjectid = 144,
+  nextlayerid = 28,
+  nextobjectid = 146,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -1562,6 +1562,37 @@ return {
           visible = true,
           properties = {
             ["generate"] = false
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 27,
+      name = "objects_decal",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 145,
+          name = "window_glow",
+          type = "",
+          shape = "point",
+          x = 200,
+          y = 920,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["huge"] = true
           }
         }
       }

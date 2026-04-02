@@ -4,6 +4,7 @@
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="border" value="church_a"/>
   <property name="music" value="climb"/>
  </properties>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
@@ -26,7 +27,7 @@
 </data>
  </layer>
  <objectgroup id="4" name="objects_party">
-  <object id="4" name="npc" x="520" y="400">
+  <object id="4" name="npc" x="400" y="370">
    <properties>
     <property name="actor" value="ddelta"/>
     <property name="text1" value="* testing the lighting system here"/>
@@ -55,7 +56,7 @@ than the actual darkness</property>
   <object id="22" x="0" y="320" width="640" height="40"/>
  </objectgroup>
  <objectgroup id="3" name="markers">
-  <object id="1" name="spawn" x="320" y="400">
+  <object id="1" name="spawn" x="320" y="420">
    <point/>
   </object>
   <object id="20" name="entry2" x="600" y="400">
@@ -65,7 +66,7 @@ than the actual darkness</property>
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="5" name="objects_lightareas" opacity="0.5">
+ <objectgroup id="5" name="objects_lightareas" visible="0" opacity="0.5">
   <object id="6" name="darkness" x="0" y="0">
    <properties>
     <property name="alpha" type="float" value="1"/>

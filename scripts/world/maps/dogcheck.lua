@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -94,12 +94,9 @@ return {
             ["offy"] = 0,
             ["panel_h"] = 140,
             ["panel_w"] = 160,
-            ["spr_offx"] = 10,
-            ["spr_offy"] = 30,
-            ["text"] = "",
-            ["texture"] = "dog_check",
-            ["txt_offx"] = -157,
-            ["txt_offy"] = -30
+            ["spr_offx"] = 21,
+            ["spr_offy"] = 38,
+            ["texture"] = "dog_check"
           }
         }
       }

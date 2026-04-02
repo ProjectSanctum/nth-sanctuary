@@ -10,8 +10,9 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 24,
+  nextobjectid = 26,
   properties = {
+    ["border"] = "church_a",
     ["music"] = "climb"
   },
   tilesets = {
@@ -62,7 +63,7 @@ return {
         0, 0, 115, 116, 117, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601,
         601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601,
-        610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610
+        610, 610, 601, 601, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610
       }
     },
     {
@@ -97,9 +98,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 0,
+          x = 160,
           y = 440,
-          width = 640,
+          width = 480,
           height = 40,
           rotation = 0,
           visible = true,
@@ -114,6 +115,19 @@ return {
           y = 360,
           width = 40,
           height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 440,
+          width = 80,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}
@@ -139,8 +153,8 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 520,
-          y = 400,
+          x = 400,
+          y = 370,
           width = 0,
           height = 0,
           rotation = 0,
@@ -168,6 +182,22 @@ return {
             ["map"] = "debug_rooms/lighting_test",
             ["marker"] = "entry"
           }
+        },
+        {
+          id = 25,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 480,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "0_base_sanctum/base_fast_travel",
+            ["marker"] = "entry_debug"
+          }
         }
       }
     },
@@ -190,8 +220,8 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 40,
-          y = 400,
+          x = 120,
+          y = 440,
           width = 0,
           height = 0,
           rotation = 0,
