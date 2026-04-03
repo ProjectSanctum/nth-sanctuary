@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="17">
  <editorsettings>
-  <export target="dogcheck.lua" format="lua"/>
+  <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
   <property name="border" value="church_grand"/>
   <property name="music" value="annoying_prophecy"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/libraryexcerpt.tsx"/>
- <tileset firstgid="49" source="../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/libraryexcerpt.tsx"/>
+ <tileset firstgid="49" source="../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <layer id="1" name="Tile Layer 1" width="16" height="12">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -35,9 +35,9 @@
     <property name="offy" type="float" value="0"/>
     <property name="panel_h" type="float" value="140"/>
     <property name="panel_w" type="float" value="160"/>
-    <property name="spr_offx" type="float" value="21"/>
-    <property name="spr_offy" type="float" value="38"/>
-    <property name="texture" value="dog_check"/>
+    <property name="spr_offx" type="float" value="16"/>
+    <property name="spr_offy" type="float" value="40"/>
+    <property name="texture" value="uz"/>
    </properties>
    <point/>
   </object>
@@ -47,7 +47,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="3" name="collision" locked="1">
+ <objectgroup id="3" name="collision" visible="0" locked="1">
   <object id="15" x="0" y="0" width="640" height="480"/>
  </objectgroup>
 </map>

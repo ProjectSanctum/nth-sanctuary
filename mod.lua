@@ -91,8 +91,8 @@ function Mod:init()
         local ok, result = pcall(orig, id, ...)
         if ok then
            return result
-       elseif id ~= "dogcheck" then
-           return orig("dogcheck", ...)
+       elseif id ~= "dogcheck/dogcheck" then
+           return orig("dogcheck/dogcheck", ...)
        else
            error("Attempt to create non existent map \"" .. tostring(id) .. "\"")
        end
