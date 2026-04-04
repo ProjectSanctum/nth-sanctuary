@@ -19,13 +19,13 @@ return {
     {
       name = "libraryexcerpt",
       firstgid = 1,
-      filename = "../tilesets/libraryexcerpt.tsx",
-      exportfilename = "../tilesets/libraryexcerpt.lua"
+      filename = "../../tilesets/libraryexcerpt.tsx",
+      exportfilename = "../../tilesets/libraryexcerpt.lua"
     },
     {
       name = "bg_dw_church_2_tileset",
       firstgid = 49,
-      filename = "../tilesets/bg_dw_church_2_tileset.tsx"
+      filename = "../../tilesets/bg_dw_church_2_tileset.tsx"
     }
   },
   layers = {
@@ -94,9 +94,9 @@ return {
             ["offy"] = 0,
             ["panel_h"] = 140,
             ["panel_w"] = 160,
-            ["spr_offx"] = 21,
-            ["spr_offy"] = 38,
-            ["texture"] = "dog_check"
+            ["spr_offx"] = 16,
+            ["spr_offy"] = 40,
+            ["texture"] = "uz"
           }
         }
       }
@@ -136,7 +136,7 @@ return {
       id = 3,
       name = "collision",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
