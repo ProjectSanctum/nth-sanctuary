@@ -121,20 +121,22 @@ function WingladeActorSprite:update()
 
     local anim = self.anim or 'idle'
 
-    if anim == 'spin' or anim == "spin2" then
-        self:setOriginExact(26, 24)
-        self.x = 52/2
-        self.y = 48/2
-        if not self.spin_angle then
-            if anim == "spin2" then
-                self.spin_angle = math.rad(180)
-            else
-                self.spin_angle = 0
+    if not Game.world.menu then
+        if anim == 'spin' or anim == "spin2" then
+            self:setOriginExact(26, 24)
+            self.x = 52/2
+            self.y = 48/2
+            if not self.spin_angle then
+                if anim == "spin2" then
+                    self.spin_angle = math.rad(180)
+                else
+                    self.spin_angle = 0
+                end
             end
+            self.spin_angle = self.spin_angle - math.rad(2.975) * DTMULT
+            self.rotation = self.spin_angle
+            return
         end
-        self.spin_angle = self.spin_angle - math.rad(2.975) * DTMULT
-        self.rotation = self.spin_angle
-        return
     end
 
     local speed = self.speed
