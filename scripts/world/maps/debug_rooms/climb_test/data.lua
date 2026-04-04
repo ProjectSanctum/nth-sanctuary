@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,9 +9,10 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 65,
+  nextlayerid = 9,
+  nextobjectid = 85,
   properties = {
+    ["border"] = "church_a",
     ["music"] = "climb"
   },
   tilesets = {
@@ -30,6 +31,16 @@ return {
       name = "bg_dw_church_c_tileset",
       firstgid = 629,
       filename = "../../../tilesets/bg_dw_church_c_tileset.tsx"
+    },
+    {
+      name = "bg_dw_church_2_tileset",
+      firstgid = 908,
+      filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
+    },
+    {
+      name = "ExtraClimbingTiles",
+      firstgid = 1106,
+      filename = "../../../tilesets/ExtraClimbingTiles.tsx"
     }
   },
   layers = {
@@ -40,7 +51,7 @@ return {
       width = 42,
       height = 12,
       id = 5,
-      name = "Tile Layer 2",
+      name = "Tile Layer 4",
       class = "",
       visible = true,
       opacity = 1,
@@ -72,7 +83,71 @@ return {
       y = 0,
       width = 42,
       height = 12,
+      id = 6,
+      name = "Tile Layer 3",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 532, 533, 534, 0, 0, 0, 532, 533, 534, 0, 532, 533, 534, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 532, 533, 534, 0, 0, 538, 539, 540, 0, 0, 0, 538, 539, 540, 0, 538, 539, 540, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 538, 539, 540, 0, 0, 544, 545, 546, 0, 0, 0, 544, 539, 539, 539, 539, 539, 546, 0, 532, 533, 534, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 544, 545, 546, 539, 539, 0, 539, 0, 0, 0, 532, 539, 539, 539, 539, 539, 539, 0, 0, 538, 539, 540, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 539, 539, 539, 539, 0, 0, 0, 538, 539, 539, 539, 539, 539, 539, 533, 534, 544, 545, 546, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 539, 539, 0, 532, 533, 539, 539, 544, 545, 546, 544, 545, 539, 539, 539, 540, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 532, 539, 539, 539, 0, 538, 539, 539, 539, 0, 0, 0, 0, 0, 0, 544, 545, 532, 533, 534, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 538, 539, 539, 0, 0, 544, 545, 546, 0, 532, 533, 534, 0, 0, 0, 0, 0, 538, 539, 540, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 544, 545, 546, 0, 0, 0, 0, 0, 0, 538, 539, 540, 0, 0, 0, 0, 0, 544, 545, 546, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 544, 545, 546, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 42,
+      height = 12,
       id = 1,
+      name = "Tile Layer 2",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 529, 530, 530, 530, 530, 530, 530, 530, 530, 530, 531, 529, 530, 531, 529, 530, 530, 530, 530, 530, 531, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 535, 577, 577, 571, 577, 571, 577, 577, 577, 577, 537, 535, 577, 537, 535, 577, 571, 577, 571, 577, 537, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 535, 577, 536, 536, 536, 536, 577, 536, 577, 536, 536, 536, 536, 543, 541, 536, 536, 536, 542, 542, 543, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 535, 577, 536, 536, 536, 536, 577, 536, 577, 536, 536, 536, 537, 0, 0, 535, 536, 537, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 535, 577, 536, 1113, 1113, 542, 542, 536, 571, 536, 542, 536, 571, 531, 0, 535, 577, 537, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 535, 280, 537, 0, 0, 0, 0, 535, 280, 537, 0, 535, 280, 537, 0, 535, 280, 537, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 541, 542, 543, 0, 0, 0, 0, 541, 542, 543, 0, 541, 542, 543, 0, 541, 542, 543, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 42,
+      height = 12,
+      id = 7,
       name = "Tile Layer 1",
       class = "",
       visible = true,
@@ -88,14 +163,14 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 577, 577, 577, 577, 577, 577, 577, 577, 577, 0, 0, 577, 0, 0, 577, 577, 577, 577, 577, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 577, 0, 0, 0, 0, 577, 0, 577, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 577, 0, 0, 0, 0, 577, 0, 577, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 577, 0, 577, 577, 0, 0, 0, 577, 0, 0, 0, 0, 0, 0, 0, 577, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 577, 0, 0, 0, 0, 0, 0, 577, 0, 0, 0, 577, 0, 0, 0, 577, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 1081, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 0, 0,
+        1081, 1081, 1081, 1081, 0, 1081, 1081, 1081, 1081, 1081, 1081, 0, 1081, 1081, 1081, 0, 1081, 1081, 1081, 0, 1081, 1081, 1081, 1081, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 0, 0,
+        926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 1081, 1081,
+        926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926, 926,
+        935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935, 935
       }
     },
     {
@@ -122,6 +197,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 15,
@@ -141,6 +217,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -156,6 +233,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 15,
@@ -171,10 +249,11 @@ return {
           type = "",
           shape = "rectangle",
           x = 360,
-          y = 240,
+          y = 320,
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -190,6 +269,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["value"] = 5
@@ -205,6 +285,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["value"] = 10
@@ -220,8 +301,11 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
+          }
         },
         {
           id = 46,
@@ -233,8 +317,11 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
+          }
         },
         {
           id = 47,
@@ -246,8 +333,11 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
+          }
         },
         {
           id = 48,
@@ -257,23 +347,28 @@ return {
           x = 600,
           y = 240,
           width = 40,
-          height = 80,
+          height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
+          }
         },
         {
           id = 49,
           name = "climbswitch",
           type = "",
           shape = "rectangle",
-          x = 840,
+          x = 880,
           y = 160,
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
+            ["script"] = "respawn_destructables_flooded",
             ["timed"] = false
           }
         },
@@ -283,10 +378,113 @@ return {
           type = "",
           shape = "rectangle",
           x = 480,
-          y = 280,
-          width = 120,
+          y = 200,
+          width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 8,
+      name = "collision",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 68,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 320,
+          width = 960,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 70,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 440,
+          width = 1680,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 71,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1600,
+          y = 360,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 72,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1600,
+          y = 240,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 73,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 960,
+          y = 200,
+          width = 640,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 74,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 920,
+          y = 240,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -312,14 +510,13 @@ return {
           type = "",
           shape = "rectangle",
           x = 160,
-          y = 360,
+          y = 320,
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {
-            ["area"] = { id = 9 }
-          }
+          properties = {}
         },
         {
           id = 7,
@@ -327,10 +524,11 @@ return {
           type = "",
           shape = "rectangle",
           x = 240,
-          y = 360,
-          width = 160,
+          y = 400,
+          width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -340,14 +538,13 @@ return {
           type = "",
           shape = "rectangle",
           x = 440,
-          y = 360,
+          y = 320,
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {
-            ["area"] = { id = 11 }
-          }
+          properties = {}
         },
         {
           id = 9,
@@ -357,8 +554,9 @@ return {
           x = 160,
           y = 160,
           width = 40,
-          height = 200,
+          height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -372,6 +570,7 @@ return {
           width = 240,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -383,8 +582,9 @@ return {
           x = 440,
           y = 160,
           width = 40,
-          height = 200,
+          height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -398,6 +598,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -411,6 +612,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["trigger_horz"] = 200
@@ -426,6 +628,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -439,6 +642,7 @@ return {
           width = 200,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -448,14 +652,13 @@ return {
           type = "",
           shape = "rectangle",
           x = 600,
-          y = 360,
+          y = 320,
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {
-            ["area"] = { id = 37 }
-          }
+          properties = {}
         },
         {
           id = 37,
@@ -465,8 +668,9 @@ return {
           x = 600,
           y = 320,
           width = 40,
-          height = 40,
+          height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -478,8 +682,9 @@ return {
           x = 760,
           y = 280,
           width = 40,
-          height = 80,
+          height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -489,14 +694,13 @@ return {
           type = "",
           shape = "rectangle",
           x = 760,
-          y = 360,
+          y = 320,
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {
-            ["area"] = { id = 41 }
-          }
+          properties = {}
         },
         {
           id = 52,
@@ -504,10 +708,11 @@ return {
           type = "",
           shape = "point",
           x = 940,
-          y = 360,
+          y = 370,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "ddelta",
@@ -519,11 +724,12 @@ return {
           name = "wandernpc",
           type = "",
           shape = "point",
-          x = 1060,
-          y = 360,
+          x = 1160,
+          y = 340,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "ddelta",
@@ -536,36 +742,43 @@ return {
           type = "",
           shape = "point",
           x = 1040,
-          y = 240,
+          y = 200,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["crazy"] = true
+          }
         },
         {
           id = 55,
           name = "window_parallax",
           type = "",
           shape = "point",
-          x = 1200,
-          y = 240,
+          x = 1520,
+          y = 200,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["crazy"] = true
+          }
         },
         {
           id = 56,
-          name = "window_parallax",
+          name = "window_oscillate",
           type = "",
           shape = "point",
           x = 1360,
-          y = 240,
+          y = 200,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -579,6 +792,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -587,11 +801,12 @@ return {
           name = "window_oscillate",
           type = "",
           shape = "point",
-          x = 1520,
-          y = 240,
+          x = 1200,
+          y = 200,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -605,6 +820,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -618,9 +834,131 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["interactable"] = false
+          }
+        },
+        {
+          id = 65,
+          name = "climblanding",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 400,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 75,
+          name = "climbarea",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 76,
+          name = "window_glow",
+          type = "",
+          shape = "point",
+          x = 1120,
+          y = 120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 77,
+          name = "window_glow",
+          type = "",
+          shape = "point",
+          x = 1280,
+          y = 120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 78,
+          name = "window_glow",
+          type = "",
+          shape = "point",
+          x = 1440,
+          y = 120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 79,
+          name = "wandernpc",
+          type = "",
+          shape = "point",
+          x = 1400,
+          y = 340,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["actor"] = "ddelta",
+            ["text"] = "* those windows up there are weirddd"
+          }
+        },
+        {
+          id = 80,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 400,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/piano_big_test",
+            ["marker"] = "entry"
+          }
+        },
+        {
+          id = 84,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/lighting_test",
+            ["marker"] = "entry2"
           }
         }
       }
@@ -645,10 +983,39 @@ return {
           type = "",
           shape = "point",
           x = 320,
-          y = 440,
+          y = 400,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 81,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 1640,
+          y = 430,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 82,
+          name = "entry",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }

@@ -20,7 +20,7 @@ function TitanDarknessController:update()
     self.spawn_timer = self.spawn_timer - DTMULT
     if self.spawn_timer < 0 then
         self.spawn_timer = self.spawn_timer + self.spawn_speed
-        table.insert(self.fumes, {MathUtils.random(0, SCREEN_WIDTH*2), SCREEN_HEIGHT+90, MathUtils.random(20, 40), self.timer})
+        table.insert(self.fumes, {MathUtils.random(0, SCREEN_WIDTH*2), SCREEN_HEIGHT+120, MathUtils.random(20, 40), self.timer})
     end
 
     local to_remove = {}
@@ -46,7 +46,7 @@ end
 function TitanDarknessController:draw()
     super.draw(self)
 
-    Draw.setColor(0.5, 0.5, 0.5)
+    Draw.setColor(1, 1, 1)
     for index, _ in ipairs(self.fumes) do
         local x, y, radius = self:getFumeInformation(index)
         love.graphics.setLineWidth(4)

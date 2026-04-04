@@ -340,14 +340,14 @@
             "fileName": "debug_rooms/climb_test/climb_test.tmx",
             "height": 480,
             "width": 1680,
-            "x": -10200,
-            "y": -4720
+            "x": -10040,
+            "y": -3120
         },
         {
             "fileName": "debug_rooms/filter_test/filter_test.tmx",
             "height": 480,
             "width": 640,
-            "x": -9720,
+            "x": -11480,
             "y": -3120
         },
         {
@@ -361,7 +361,7 @@
             "fileName": "debug_rooms/lighting_test/lighting_test.tmx",
             "height": 480,
             "width": 640,
-            "x": -9000,
+            "x": -10760,
             "y": -3120
         },
         {

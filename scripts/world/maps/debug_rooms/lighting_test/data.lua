@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 25,
+  nextlayerid = 9,
+  nextobjectid = 26,
   properties = {
     ["border"] = "church_a",
     ["music"] = "climb"
@@ -31,6 +31,11 @@ return {
       name = "light_areas",
       firstgid = 781,
       filename = "../../../tilesets/light_areas.tsx"
+    },
+    {
+      name = "bg_dw_church_c_tileset",
+      firstgid = 791,
+      filename = "../../../tilesets/bg_dw_church_c_tileset.tsx"
     }
   },
   layers = {
@@ -40,8 +45,41 @@ return {
       y = 0,
       width = 16,
       height = 12,
+      id = 8,
+      name = "Tile Layer 3",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      tintcolor = { 74, 74, 74 },
+      properties = {},
+      encoding = "lua",
+      data = {
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821,
+        821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821, 821
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 16,
+      height = 12,
       id = 1,
-      name = "Tile Layer 1",
+      name = "Tile Layer 2",
       class = "",
       visible = true,
       opacity = 1,
@@ -55,12 +93,44 @@ return {
         529, 530, 531, 529, 530, 531, 529, 530, 530, 531, 529, 530, 531, 529, 530, 531,
         535, 536, 537, 535, 536, 537, 535, 536, 536, 537, 535, 536, 537, 535, 536, 537,
         541, 542, 543, 541, 542, 543, 541, 542, 542, 543, 541, 542, 543, 541, 542, 543,
-        0, 0, 0, 0, 0, 0, 175, 176, 177, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 91, 92, 93, 0, 181, 182, 183, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 97, 98, 99, 0, 187, 188, 189, 211, 212, 213, 214, 0, 0, 0,
-        0, 0, 103, 104, 105, 0, 193, 194, 195, 217, 218, 219, 220, 0, 0, 0,
-        0, 0, 109, 110, 111, 0, 199, 200, 201, 223, 224, 225, 226, 0, 0, 0,
-        0, 0, 115, 116, 117, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 91, 92, 93, 211, 212, 213, 214, 175, 176, 177, 0, 0, 0,
+        0, 0, 0, 97, 98, 99, 217, 218, 219, 220, 181, 182, 183, 0, 0, 0,
+        0, 0, 0, 103, 104, 105, 217, 218, 219, 220, 187, 188, 189, 0, 0, 0,
+        0, 0, 0, 109, 110, 111, 217, 218, 219, 220, 193, 194, 195, 0, 0, 0,
+        0, 0, 0, 115, 116, 117, 223, 224, 225, 226, 199, 200, 201, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 16,
+      height = 12,
+      id = 7,
+      name = "Tile Layer 1",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        756, 756, 756, 756, 756, 756, 756, 756, 756, 756, 756, 756, 756, 756, 756, 756,
         601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601,
         601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601, 601,
         610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 610
@@ -90,6 +160,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "ddelta",
@@ -97,22 +168,6 @@ return {
             ["text2"] = "* light type 2/4 is always full-bright",
             ["text3"] = "* light type 3/5 acts kinda like darkness but is brighter\nthan the actual darkness",
             ["text4"] = "* use light types 4 and 5 if you don't want it to draw additively as well"
-          }
-        },
-        {
-          id = 19,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = 640,
-          y = 360,
-          width = 40,
-          height = 80,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "debug_rooms/piano_big_test",
-            ["marker"] = "entry"
           }
         },
         {
@@ -125,10 +180,28 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "debug_rooms/filter_test",
             ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 25,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 360,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "debug_rooms/climb_test",
+            ["marker"] = "entry"
           }
         }
       }
@@ -157,6 +230,7 @@ return {
           width = 640,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -170,6 +244,7 @@ return {
           width = 640,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -199,6 +274,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -212,6 +288,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -225,6 +302,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -254,6 +332,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["alpha"] = 1,
@@ -270,6 +349,7 @@ return {
           width = 80,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {
@@ -289,6 +369,7 @@ return {
           width = 40,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {
@@ -308,6 +389,7 @@ return {
           width = 80,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {
@@ -327,6 +409,7 @@ return {
           width = 40,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {
@@ -346,6 +429,7 @@ return {
           width = 80,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {
@@ -365,6 +449,7 @@ return {
           width = 40,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {
@@ -384,6 +469,7 @@ return {
           width = 80,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {
@@ -403,6 +489,7 @@ return {
           width = 40,
           height = 480,
           rotation = 0,
+          opacity = 1,
           gid = 785,
           visible = true,
           properties = {

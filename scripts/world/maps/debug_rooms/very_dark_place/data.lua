@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,10 +9,11 @@ return {
   height = 16,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 8,
-  nextobjectid = 16,
-  backgroundcolor = { 13, 14, 24 },
-  properties = {},
+  nextlayerid = 9,
+  nextobjectid = 19,
+  properties = {
+    ["border"] = "titan_base"
+  },
   tilesets = {
     {
       name = "bg_dw_church_library_2_tileset",
@@ -24,6 +25,17 @@ return {
       firstgid = 261,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
       exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
+    },
+    {
+      name = "church_objects",
+      firstgid = 843,
+      filename = "../../../tilesets/church_objects.tsx",
+      exportfilename = "../../../tilesets/church_objects.lua"
+    },
+    {
+      name = "bg_dw_dither_overlay_tileset",
+      firstgid = 946,
+      filename = "../../../tilesets/bg_dw_dither_overlay_tileset.tsx"
     }
   },
   layers = {
@@ -94,9 +106,40 @@ return {
         12, 13, 14, 15, 16, 17, 12, 13, 14, 15, 16, 17, 12, 13, 14, 15, 16, 54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         22, 23, 24, 25, 26, 27, 22, 23, 24, 25, 26, 27, 22, 23, 24, 25, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         32, 33, 34, 35, 36, 37, 32, 33, 34, 35, 36, 37, 32, 33, 34, 35, 36, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        22, 23, 24, 25, 26, 27, 22, 23, 24, 25, 26, 27, 22, 23, 24, 25, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953, 953,
         32, 33, 34, 35, 36, 37, 32, 33, 34, 35, 36, 37, 32, 33, 34, 35, 36, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         22, 23, 24, 25, 26, 27, 22, 23, 24, 25, 26, 27, 22, 23, 24, 25, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 8,
+      name = "objects_shadow",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 16,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1200,
+          y = 520,
+          width = 120,
+          height = 1200,
+          rotation = 270,
+          opacity = 1,
+          gid = 851,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
@@ -123,9 +166,9 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        172, 173, 174, 3221225656, 3221225655, 3221225654, 0, 0, 1073742006, 1073742007, 1073742008, 193, 183, 172, 2147483822, 2147483821, 2147483820, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        182, 183, 184, 3221225646, 3221225645, 3221225644, 193, 0, 1073741996, 1073741997, 1073741998, 0, 0, 0, 2147483832, 2147483831, 2147483830, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        192, 192, 192, 184, 171, 173, 182, 172, 192, 192, 174, 181, 193, 162, 174, 191, 192, 194, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        163, 192, 183, 163, 183, 182, 192, 194, 181, 163, 182, 192, 192, 183, 183, 192, 173, 184, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        182, 182, 183, 163, 192, 183, 193, 162, 184, 171, 172, 182, 172, 192, 182, 163, 163, 194, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -159,6 +202,7 @@ return {
           width = 720,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -172,6 +216,7 @@ return {
           width = 720,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -185,6 +230,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -214,6 +260,7 @@ return {
           width = 120,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["lockx"] = true,
@@ -232,6 +279,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -245,6 +293,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "primary.titan",
@@ -261,6 +310,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "debug_rooms/piano_light_test",
@@ -293,6 +343,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -306,6 +357,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -335,6 +387,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"

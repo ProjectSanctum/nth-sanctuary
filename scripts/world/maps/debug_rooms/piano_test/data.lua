@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -91,6 +91,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["downonce"] = true,
@@ -111,6 +112,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["downonce"] = true,
@@ -147,6 +149,7 @@ return {
           width = 90,
           height = 66,
           rotation = 0,
+          opacity = 1,
           gid = 8,
           visible = true,
           properties = {}
@@ -161,6 +164,7 @@ return {
           width = 90,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "piano.door",
@@ -178,6 +182,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["group"] = "hint2",
@@ -195,6 +200,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["group"] = "hint2",
@@ -213,9 +219,10 @@ return {
           width = 90,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
-            ["destroyhints"] = true,
+            ["destroyhints"] = false,
             ["destroyswitches"] = false,
             ["solution"] = "131315"
           }
@@ -230,6 +237,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["group"] = "hint",
@@ -247,6 +255,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["group"] = "hint",
@@ -265,6 +274,7 @@ return {
           width = 90,
           height = 66,
           rotation = 0,
+          opacity = 1,
           gid = 8,
           visible = true,
           properties = {}
@@ -279,6 +289,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "lobbyman",
@@ -295,6 +306,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "debug_rooms/piano_light_test",
@@ -311,6 +323,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "debug_rooms/piano_big_test",
@@ -343,6 +356,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -356,6 +370,7 @@ return {
           width = 520,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -369,6 +384,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -398,6 +414,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -411,6 +428,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -424,6 +442,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
