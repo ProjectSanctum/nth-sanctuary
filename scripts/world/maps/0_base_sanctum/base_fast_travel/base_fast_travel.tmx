@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="119">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="119">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -434,8 +434,7 @@
   </object>
   <object id="114" name="npc" x="760" y="1000">
    <properties>
-    <property name="actor" value="bibliox"/>
-    <property name="animation" value="beard_stroke"/>
+    <property name="actor" value="bibliox_npc"/>
     <property name="text1">* Mumble,[wait:5] mumble...[wait:5]
 * The [color:yellow]TRAVEL[color:reset] button...</property>
     <property name="text2">* Mumble...[wait:5] mumble...[wait:5]

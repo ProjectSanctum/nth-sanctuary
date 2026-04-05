@@ -7,11 +7,11 @@ function actor:init()
     self.name = "Rouxls"
 
     -- Width and height for this actor, used to determine its center
-    self.width = 32
-    self.height = 40
+    self.width = 47
+    self.height = 57
 
     -- Hitbox for this actor in the overworld (optional, uses width and height by default)
-    self.hitbox = {12, 17, 22, 18, 18}
+    self.hitbox = {15, 20, 16, 36}
 
     -- Color for this actor used in outline areas (optional, defaults to red)
     self.color = {1, 0, 0}
