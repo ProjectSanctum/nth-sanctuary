@@ -35,6 +35,10 @@ return function(script)
 			shelf.alpha = 0
 			shelf.layer = pos.layer
 			shelf.unique_id = pos.uid
+			shelf.object_id = pos.oid
+			if shelf.once then
+				shelf:setFlag("used_once", false)
+			end
 			Game.world:addChild(shelf)
 			local lifetime = (i - 1) + 4
 			Game.world.timer:lerpVar(shelf, "alpha", shelf.alpha, 1, lifetime, -1, "out")
