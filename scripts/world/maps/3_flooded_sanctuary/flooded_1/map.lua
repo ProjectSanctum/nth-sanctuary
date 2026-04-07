@@ -24,6 +24,11 @@ function map:onEnter()
     if not Game:getFlag("intro_complete") then
         Game:setFlag("ripplestop", false)
         self.world.color = COLORS.black
+		for _, wfall in ipairs(Game.world.map:getEvents("parallax_waterfall")) do
+			if wfall then
+				wfall.visible = false
+			end
+		end
         self.tiles = Game.world.map:getTileLayer("tiles1")
         self.tiles2 = Game.world.map:getTileLayer("tiles2")
         self.tiles3 = Game.world.map:getTileLayer("tiles3")
@@ -80,6 +85,8 @@ function map:update(world, data)
         local top_px = self.fade_top_tiles * -40
         local bottom_px = self.fade_bottom_tiles * 40
         self.hell_border_alpha = MathUtils.clamp(1 - (dist - bottom_px) / (top_px - bottom_px), 0, 1)
+		local fog = Game.world.map:getEvent("churchfog")
+		fog.mytransparency = self.hell_border_alpha * 0.1
     end
         
     if not Game:getFlag("intro_complete") then
@@ -126,6 +133,11 @@ function map:update(world, data)
                     self.tiles5.alpha = 1
                     self.tiles6.alpha = 1
 					self.ripplemask.alpha = 0
+					for _, wfall in ipairs(Game.world.map:getEvents("parallax_waterfall")) do
+						if wfall then
+							wfall.visible = true
+						end
+					end
                     self.con = 2
                     Game:setFlag("ripplestop", true)
                     Game:setFlag("intro_complete", true)

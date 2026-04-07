@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 32,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 11,
-  nextobjectid = 229,
+  nextlayerid = 12,
+  nextobjectid = 230,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -219,19 +219,6 @@ return {
           y = 680,
           width = 80,
           height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 187,
-          name = "bookshelf_destructable",
-          type = "",
-          shape = "rectangle",
-          x = 200,
-          y = 720,
-          width = 80,
-          height = 160,
           rotation = 0,
           visible = true,
           properties = {}
@@ -789,6 +776,38 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 11,
+      name = "objects_belowparty",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 229,
+          name = "bellplayable",
+          type = "",
+          shape = "rectangle",
+          x = 1640,
+          y = 260,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["interactable"] = true,
+            ["script"] = "respawn_bookshelves_secsanct"
+          }
         }
       }
     },
@@ -1916,6 +1935,19 @@ return {
             ["text1"] = "* (Despite all of your efforts...)",
             ["text2"] = "* (It is still on your way.)"
           }
+        },
+        {
+          id = 187,
+          name = "bookshelf_destructable",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 720,
+          width = 80,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

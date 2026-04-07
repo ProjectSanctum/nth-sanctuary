@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="229">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="230">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -63,7 +63,6 @@
   <object id="152" name="tile_oscillate" x="280" y="400" width="160" height="480"/>
   <object id="153" name="tile_oscillate" x="440" y="680" width="320" height="200"/>
   <object id="154" name="tile_oscillate" x="760" y="680" width="80" height="120"/>
-  <object id="187" name="bookshelf_destructable" x="200" y="720" width="80" height="160"/>
   <object id="202" name="tile_oscillate" x="360" y="880" width="280" height="80"/>
   <object id="203" name="tile_oscillate" x="480" y="960" width="80" height="320"/>
   <object id="205" name="tile_oscillate" x="440" y="240" width="120" height="440"/>
@@ -177,6 +176,14 @@
    <point/>
   </object>
  </objectgroup>
+ <objectgroup id="11" name="objects_belowparty">
+  <object id="229" name="bellplayable" x="1640" y="260" width="40" height="40">
+   <properties>
+    <property name="interactable" type="bool" value="true"/>
+    <property name="script" value="respawn_bookshelves_secsanct"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="3" name="objects_party">
   <object id="18" name="transition" x="1920" y="320" width="40" height="80">
    <properties>
@@ -273,6 +280,7 @@
     <property name="text2" value="* (It is still on your way.)"/>
    </properties>
   </object>
+  <object id="187" name="bookshelf_destructable" x="200" y="720" width="80" height="160"/>
  </objectgroup>
  <objectgroup id="10" name="objects_fog">
   <object id="1" name="churchfog" x="40" y="0">

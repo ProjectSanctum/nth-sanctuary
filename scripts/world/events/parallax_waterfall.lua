@@ -16,7 +16,9 @@ end
 
 function WaterfallParallax:drawCharacter(object)
     love.graphics.push()
-    object:fullDraw()
+    object:preDraw()
+    object:draw()
+    object:postDraw()
     love.graphics.pop()
 end
 
@@ -50,18 +52,24 @@ function WaterfallParallax:draw()
 		if object:getFX("climb_fade") then
 			alpha = alpha * object:getFX("climb_fade").alpha
 		end
-		Draw.setColor(1, 1, 1, alpha)
+		if not object.visible then
+			alpha = 0
+		end
+		local last_alpha = object.alpha
+		object.alpha = alpha
         if (object:includes(Character) and alpha > 0) or object.draw_water_silhouette then
             self:drawCharacter(object)
         end
-		Draw.setColor(1, 1, 1, 1)
+		object.alpha = last_alpha
     end
 	love.graphics.setShader()
 
     Draw.popCanvas()
 
     Draw.setColor(1, 1, 1, 1)
+    love.graphics.setBlendMode("alpha", "premultiplied")
     Draw.draw(canvas)
+    love.graphics.setBlendMode("alpha", "alphamultiply")
     Draw.setColor(1, 1, 1, 1)
 end
 

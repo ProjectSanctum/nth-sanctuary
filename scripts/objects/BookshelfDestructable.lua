@@ -29,8 +29,11 @@ function BookshelfDestructable:onLoad()
 		local this_id = math.floor((self.x / 80) + (self.y / 80))
 		local debris = Sprite("world/events/bookshelf/debris", self.x, self.y + 80)
 		debris:setFrame((this_id % 5) + 1)
-		debris.layer = self.layer - 0.1
+		debris.layer = self.layer - 0.4
 		Game.world:addChild(debris)
+		if Game.world.map.bookshelf_debris_sprites then
+			table.insert(Game.world.map.bookshelf_debris_sprites, debris)
+		end
 		self:remove()
 	end
 end
@@ -52,7 +55,7 @@ function BookshelfDestructable:update()
 			break
 		end
 		if piano.engaged and self.y + 80 < piano.y then
-			self.layer = piano.layer - 0.1
+			self.layer = piano.layer - 0.01
 		else
 			self.layer = self.start_layer
 		end
@@ -90,8 +93,11 @@ function BookshelfDestructable:update()
 			Game.world:addChild(scatter)
 			local debris = Sprite("world/events/bookshelf/debris", self.x, self.y + 80)
 			debris:setFrame((this_id % 5) + 1)
-			debris.layer = self.layer - 0.1
+			debris.layer = self.layer - 0.4
 			Game.world:addChild(debris)
+			if Game.world.map.bookshelf_debris_sprites then
+				table.insert(Game.world.map.bookshelf_debris_sprites, debris)
+			end
 			local afterimage = AfterImageCutHalf(self.sprite.texture_path)
 			afterimage:setScale(2, 2)
 			afterimage:setPosition(self.x + 40, self.y + 40)

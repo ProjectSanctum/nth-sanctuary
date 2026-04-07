@@ -39,6 +39,8 @@ function map:update()
             (dist - (self.fade_bottom_px*-40)) / ((self.fade_top_px*40) - (self.fade_bottom_px*-40)),
             0, 1
         )
+		local fog = Game.world.map:getEvent("churchfog")
+		fog.mytransparency = self.hell_border_alpha * 0.1
     end
     self.lava_alpha = (math.sin((Kristal.getTime() * 30) / 12) * 0.2)
     self.lava_grad_scale = (math.sin((Kristal.getTime() * 30) / 12) * 0.5)

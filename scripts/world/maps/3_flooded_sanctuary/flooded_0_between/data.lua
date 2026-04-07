@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -803,19 +803,6 @@ return {
           properties = {
             ["type"] = "hsv"
           }
-        },
-        {
-          id = 18,
-          name = "churchfog",
-          type = "",
-          shape = "point",
-          x = -40,
-          y = 480,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {}
         }
       }
     }

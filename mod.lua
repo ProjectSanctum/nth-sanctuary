@@ -81,6 +81,9 @@ function Mod:init()
     Game:registerEvent("squeak", function(data)
         return Squeak(data.x, data.y, {data.width, data.height, data.polygon})
     end)
+    Game:registerEvent("bookshelf_destructable", function(data)
+        return BookshelfDestructable(data)
+    end)
     TableUtils.copyInto(MUSIC_VOLUMES, {
         second_church = 0.8
     })
