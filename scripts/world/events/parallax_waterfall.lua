@@ -14,12 +14,6 @@ function WaterfallParallax:init(data)
 	self.shader = Kristal.Shaders["AddColor"]
 end
 
---[[function WaterfallParallax:drawCharacter(object)
-    love.graphics.push()
-    object:fullDraw()
-    love.graphics.pop()
-end]]
-
 function WaterfallParallax:drawCharacter(object)
     love.graphics.push()
     object:preDraw()
