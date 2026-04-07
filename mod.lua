@@ -18,6 +18,10 @@ function Mod:onTiledTypegen(plugin)
     })
 end
 
+function Mod:isWeird()
+    return (Game:getFlag("route") == 3)
+end
+
 function Mod:registerDebugOptions(debug)
     debug:registerMenu("nth_sanctumdebug", "#th Sanctuary Debug","menu")
     

@@ -11,7 +11,7 @@ function character:init()
     self:setLightActor("noelle_lw")
 
     -- Display level (saved to the save file)
-    self.level = Game.chapter
+    self.level = 2
     -- Default title / class (saved to the save file)
     self.title = "Snowcaster\nMight be able to\nuse some cool moves."
 
