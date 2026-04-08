@@ -21,6 +21,7 @@ function Dummy:init()
 
     --- Uncomment this line to add another!
     --self:addEnemy("dummy")
+    self.bg = RedBG()
 end
 
 
@@ -40,5 +41,14 @@ function Dummy:onTurnStart()
     end
 end
 
+function Dummy:createBackground()
+    return Game.battle:addChild(self.bg)
+end
+
+function Dummy:drawBackground(fade)
+    Draw.setColor(0, 0, 0, fade)
+    love.graphics.rectangle("fill", 0, 0, 640, 480)
+    self.bg:drawBackground(fade)
+end
 return Dummy
 
