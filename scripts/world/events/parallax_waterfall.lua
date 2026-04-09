@@ -42,11 +42,6 @@ function WaterfallParallax:draw()
     self.shader:send("inputcolor", ColorUtils.hexToRGB("#0071D5"))
     self.shader:send("amount", 1)
 
-	if Game.world.map and Game.world.map.silhouette_tiles then
-		Game.world.map.silhouette_tiles.visible = true
-		Game.world.map.silhouette_tiles:draw()
-		Game.world.map.silhouette_tiles.visible = false       
-	end
     for _, object in ipairs(Game.world.children) do
 		local alpha = object.alpha
 		if object:getFX("climb_fade") then
@@ -64,10 +59,34 @@ function WaterfallParallax:draw()
     end
 	love.graphics.setShader()
 
-    Draw.popCanvas()
+    Draw.popCanvas(true)
+
+    local tile_canvas = Draw.pushCanvas(80, (self.world.map.height * self.world.map.tile_height) * self.parallax_y)
+    love.graphics.clear()
+
+    love.graphics.translate(-self.x + 40, -self.y)
+	local px, py = self.parent.camera:getParallax(
+        self.parallax_x or 1,
+        self.parallax_y or 1,
+        self.parallax_origin_x,
+        self.parallax_origin_y
+    )
+    love.graphics.translate(-px, -py)
+
+    love.graphics.setShader(self.shader)
+
+	if Game.world.map and Game.world.map.silhouette_tiles then
+		Game.world.map.silhouette_tiles.visible = true
+		Game.world.map.silhouette_tiles:draw()
+		Game.world.map.silhouette_tiles.visible = false       
+	end
+	love.graphics.setShader()
+
+    Draw.popCanvas(true)
 
     Draw.setColor(1, 1, 1, 1)
-    Draw.draw(canvas)
+    Draw.draw(tile_canvas)
+    Draw.drawCanvas(canvas)
     Draw.setColor(1, 1, 1, 1)
 end
 
