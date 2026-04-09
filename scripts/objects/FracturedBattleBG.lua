@@ -1,16 +1,21 @@
-local RedBG, super = Class(BattleBackground)
+local FracturedBattleBG, super = Class(BattleBackground)
 
-function RedBG:init()
+function FracturedBattleBG:init()
     super.init(self)
     self.offset = 0
     self.h = 0
     self.glow_siner = 0
+    self.timer = self:addChild(Timer())
+    
+    self.timer:every(1, function()
+        self.timer:tween(0.5, self, {h = self.h - 25}, "out-expo")
+    end)
 end
 
-function RedBG:update()
+function FracturedBattleBG:update()
     super.update(self)
 
-    self.h = self.h -1
+    self.h = self.h - DTMULT
     self.glow_siner = self.glow_siner + 0.05 
 
 
@@ -26,7 +31,7 @@ function RedBG:update()
 end
 
 
-function RedBG:drawBackground()
+function FracturedBattleBG:drawBackground()
         -- Draw the black background
     Draw.setColor(0, 0, 0, self.alpha)
     love.graphics.rectangle("fill", -10, -10, SCREEN_WIDTH + 20, SCREEN_HEIGHT + 20)
@@ -41,4 +46,4 @@ function RedBG:drawBackground()
     Draw.draw(glow, 0,0,0,2,2)
 end
 
-return RedBG
+return FracturedBattleBG

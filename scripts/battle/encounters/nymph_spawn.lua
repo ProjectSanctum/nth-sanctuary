@@ -3,7 +3,7 @@ local NymphSpawn, super = Class(Encounter)
 function NymphSpawn:init()
     super.init(self)
 
-    self.text = "*          constricts you...\n* [color:yellow]TP[color:reset] Gain reduced outside of [color:green][shake:10]-[shake:0] [color:reset]"
+    self.text = "*          constricts you...\n* [color:yellow]TP[color:reset] Gain reduced outside of [color:green]??? [color:reset]"
 
     self.music = "titan_spawn2"
     self.background = true

@@ -103,6 +103,7 @@ function LeechSpawn:onAct(battler, name)
         else
             return {
                 "* LEECH SPAWN - AT 27 DF 160\n* The backend darkness that leeches off of your fear.",
+                "* Being leeches, [wait:5]they can [color:yellow]drain HP \nand TP[color:reset] from you.",
                 "* Expose it to LIGHT... and gather COURAGE to gain TP.",
                 "* Then, \"[color:yellow]BANISH[color:reset]\" it!",
             }

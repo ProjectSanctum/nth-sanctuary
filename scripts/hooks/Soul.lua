@@ -10,12 +10,13 @@ function Soul:init(x, y, color)
     end
 end
 
-function Soul:draw()
-    super.draw(self)
-end
-
 function Soul:update()
     super.update(self)
+
+    local f = Game.battle:getFX(FracturedHSVFX)
+    if Game.battle and f then
+        --TODO: Make red
+    end
 end
 
 return Soul
