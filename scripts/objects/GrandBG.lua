@@ -53,10 +53,10 @@ function GrandBG:drawBackground()
 	self.shader:send("camx", 0)
 	self.shader:send("camy", 0)
     self.shader:sendColor("col", self.col)
-    Draw.setColor(1, 1, 1, self.alpha / 4)
+    Draw.setColor(1, 1, 1, self.alpha / 12)
     Draw.drawWrapped(gradient, false, true, 0, 900, math.rad(-90))
     self.shader:send("time", Kristal.getTime() * 4.5)
-    Draw.setColor(1, 1, 1, self.alpha / 12)
+    Draw.setColor(1, 1, 1, self.alpha / 16)
     for i = -1, 1 do
         for j = -1, 1 do
             if i ~= 0 or j ~= 0 then
@@ -64,11 +64,11 @@ function GrandBG:drawBackground()
             end
         end
     end
-    Draw.setColor(1, 1, 1, self.alpha / 2)
+    Draw.setColor(1, 1, 1, self.alpha / 8)
     Draw.drawWrapped(background, true, true, MathUtils.round(-100 + self.position), MathUtils.round(-100 + self.position))
     Draw.drawWrapped(background, true, true, MathUtils.round(-100 + self.position), MathUtils.round(-100 + self.position))
     self.shader:send("time", -Kristal.getTime() * 7)
-    Draw.setColor(1, 1, 1, self.alpha / 8)
+    Draw.setColor(1, 1, 1, self.alpha / 12)
     for i = -1, 1 do
         for j = -1, 1 do
             if i ~= 0 or j ~= 0 then
@@ -76,7 +76,7 @@ function GrandBG:drawBackground()
             end
         end
     end
-	Draw.setColor(1, 1, 1, self.alpha)
+	Draw.setColor(1, 1, 1, self.alpha / 4)
     Draw.drawWrapped(background, true, true, MathUtils.round(-200 - self.position2), MathUtils.round(-210 - self.position2))
     Draw.drawWrapped(background, true, true, MathUtils.round(-200 - self.position2), MathUtils.round(-210 - self.position2))
     love.graphics.setShader(last_shader)
