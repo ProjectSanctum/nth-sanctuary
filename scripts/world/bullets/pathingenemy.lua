@@ -517,9 +517,6 @@ function PathingEnemy:draw()
 		local dist = MathUtils.dist(self.x + 20, self.y + 20, px, py)
 		local alpha = (1 - (dist / 80)) * self.alpha
 		local blend = ColorUtils.mergeColor(COLORS.white, COLORS.red, MathUtils.clamp(alpha, 0, 1))
-		if Game.world.player.state == "CLIMB" then
-			blend = COLORS.white
-		end
 		local xoff, yoff = 20, 20
 		Draw.setColor(1,1,1,self.alpha)
 		if dist < 80 and not Game.world.player.state == "CLIMB" then
