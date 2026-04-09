@@ -110,6 +110,9 @@ function PathingEnemy:snapToPath()
 end
 
 function PathingEnemy:onDamage(soul)
+	if not Game.world.player:isMovementEnabled() then
+		return
+	end
     if self:getDamage() > 0 then
 		local remdam = self.damage
 		local lowhp = 999
@@ -516,7 +519,7 @@ function PathingEnemy:draw()
 		local blend = ColorUtils.mergeColor(COLORS.white, COLORS.red, MathUtils.clamp(alpha, 0, 1))
 		local xoff, yoff = 20, 20
 		Draw.setColor(1,1,1,self.alpha)
-		if dist < 80 then
+		if dist < 80 and not Game.world.player.state == "CLIMB" then
 			local last_shader = love.graphics.getShader()
 			local shader = Kristal.Shaders["AddColor"]
 			love.graphics.setShader(shader)
