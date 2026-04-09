@@ -20,7 +20,8 @@ function PathingEnemySpawnNum:init(data)
 	self.prefdir = properties["prefdir"] or "left"
     self.path = properties["path"]
     self.progress = (properties["progress"] or 0) % 1
-    self.onscreen = properties["onscreen"] ~= false
+    self.onscreen = properties["onscreen"] or false
+    self.bounds = properties["bounds"] or nil
 end
 
 function PathingEnemySpawnNum:postLoad()
@@ -43,6 +44,7 @@ function PathingEnemySpawnNum:postLoad()
 				path = self.path,
 				progress = (i-1)/self.spawnamount,
 				onscreen = self.onscreen,
+				bounds = self.bounds,
 			})
 			bullet:setLayer(self.layer)
 		end

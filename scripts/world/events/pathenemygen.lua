@@ -20,7 +20,8 @@ function PathingEnemyGenerator:init(data)
 	self.prefdir = properties["prefdir"] or "left"
     self.path = properties["path"]
     self.progress = (properties["progress"] or 0) % 1
-    self.onscreen = properties["onscreen"] ~= false
+    self.onscreen = properties["onscreen"] or false
+    self.bounds = properties["bounds"] or nil
 end
 
 function PathingEnemyGenerator:onAdd(parent)
@@ -102,6 +103,14 @@ function PathingEnemyGenerator:update()
     if self.onscreen and not (x > -margin and x < SCREEN_WIDTH + margin and y < SCREEN_HEIGHT + margin and y > -margin) then
 		return
     end
+    if self.bounds then
+		Object.startCache()
+		if not Game.world.player:collidesWith(Game.world:getEvent(self.bounds.id)) then
+			Object.endCache()
+			return
+		end
+		Object.endCache()
+    end
 	self.timer = self.timer + DTMULT
 	if self.spawnamount > 0 then
 		if self.timer >= self.rate then
@@ -121,6 +130,7 @@ function PathingEnemyGenerator:update()
 			path = self.path,
 			progress = self.progress,
 			onscreen = self.onscreen,
+			bounds = self.bounds,
 		})
 		bullet:setLayer(self.layer)
 		self.timer = 0

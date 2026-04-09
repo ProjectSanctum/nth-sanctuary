@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="23" nextobjectid="251">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="23" nextobjectid="253">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -711,6 +711,9 @@
     <property name="value" type="int" value="5"/>
    </properties>
   </object>
+  <object id="252" name="screenbounds" x="1760" y="480">
+   <polygon points="0,80 -680,80 -680,320 -760,320 -760,760 0,760"/>
+  </object>
  </objectgroup>
  <objectgroup color="#7f00ff" id="6" name="markers">
   <object id="3" name="entry" x="40" y="980">
@@ -863,92 +866,93 @@
   </object>
   <object id="219" name="pathenemynum" x="1320" y="1080" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="0"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="220" name="pathenemynum" x="1640" y="1080" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="2"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="239" name="pathenemynum" x="1640" y="840" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="2"/>
     <property name="movetype" type="int" value="3"/>
    </properties>
   </object>
   <object id="221" name="pathenemynum" x="1480" y="1040" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="3"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="222" name="pathenemynum" x="1440" y="1000" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="3"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="247" name="pathenemynum" x="1560" y="760" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="3"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="223" name="pathenemynum" x="1480" y="1160" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="1"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="234" name="pathenemynum" x="1560" y="920" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="1"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="224" name="pathenemynum" x="1520" y="1120" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="1"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="238" name="pathenemynum" x="1600" y="880" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="1"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="225" name="pathenemynum" x="1280" y="1040" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="0"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="226" name="pathenemynum" x="1680" y="1120" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="2"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
   <object id="237" name="pathenemynum" x="1680" y="880" width="40" height="40">
    <properties>
+    <property name="bounds" type="object" value="252"/>
     <property name="dir" type="int" value="2"/>
     <property name="movetype" type="int" value="3"/>
-    <property name="onscreen" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>

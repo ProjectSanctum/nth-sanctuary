@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 23,
-  nextobjectid = 251,
+  nextobjectid = 253,
   properties = {
     ["border"] = "church_flooded_dynamic",
     ["music"] = "floodedsanctuary"
@@ -2178,6 +2178,27 @@ return {
           properties = {
             ["value"] = 5
           }
+        },
+        {
+          id = 252,
+          name = "screenbounds",
+          type = "",
+          shape = "polygon",
+          x = 1760,
+          y = 480,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 80 },
+            { x = -680, y = 80 },
+            { x = -680, y = 320 },
+            { x = -760, y = 320 },
+            { x = -760, y = 760 },
+            { x = 0, y = 760 }
+          },
+          properties = {}
         }
       }
     },
@@ -2625,9 +2646,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 0,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2642,9 +2663,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 2,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2659,6 +2680,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 2,
             ["movetype"] = 3
           }
@@ -2675,9 +2697,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 3,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2692,9 +2714,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 3,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2709,9 +2731,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 3,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2726,9 +2748,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 1,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2743,9 +2765,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 1,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2760,9 +2782,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 1,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2777,9 +2799,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 1,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2794,9 +2816,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 0,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2811,9 +2833,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 2,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         },
         {
@@ -2828,9 +2850,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["bounds"] = { id = 252 },
             ["dir"] = 2,
-            ["movetype"] = 3,
-            ["onscreen"] = true
+            ["movetype"] = 3
           }
         }
       }
