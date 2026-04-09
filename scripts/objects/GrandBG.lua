@@ -13,12 +13,12 @@ function GrandBG:init()
     self.darkcol = ColorUtils.hexToRGB("#404040FF")
 	for _, chara in ipairs(Game.battle.party) do
 		if chara and not chara.no_highlight then
-			chara:addFX(ChurchHighlightFX(0, self.highlight, {darkcol = self.darkcol}, 1), "highlight")
+			chara.sprite:addFX(ChurchHighlightFX(0, self.highlight, {darkcol = self.darkcol}, 1), "highlight")
 		end
 	end
 	for _, chara in ipairs(Game.battle.enemies) do
 		if chara and not chara.no_highlight then
-			chara:addFX(ChurchHighlightFX(0, self.highlight, {darkcol = self.darkcol}, 1), "highlight")
+			chara.sprite:addFX(ChurchHighlightFX(0, self.highlight, {darkcol = self.darkcol}, 1), "highlight")
 		end
 	end
 end
@@ -27,12 +27,12 @@ function GrandBG:update()
 	super.update(self)
 	for _, chara in ipairs(Game.battle.party) do
 		if chara and not chara.no_highlight then
-			chara:getFX("highlight").alpha = self.alpha
+			chara.sprite:getFX("highlight").alpha = self.alpha
 		end
 	end
 	for _, chara in ipairs(Game.battle.enemies) do
 		if chara and not chara.no_highlight then
-			chara:getFX("highlight").alpha = self.alpha
+			chara.sprite:getFX("highlight").alpha = self.alpha
 		end
 	end
 end
