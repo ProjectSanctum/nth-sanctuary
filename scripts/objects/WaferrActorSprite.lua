@@ -11,6 +11,10 @@ function OrganikkActorSprite:init(actor)
     self.head = Sprite(self:getTexturePath("head"), 0, 0)
     self.head.debug_select = false
     self:addChild(self.head)
+	
+    self.head_chip = Sprite(self:getTexturePath("head_chip"), 0, 0)
+    self.head_chip.debug_select = false
+    self:addChild(self.head_chip)
 
     self.siner_2 = 0
     self.siner = 0
@@ -24,14 +28,16 @@ function OrganikkActorSprite:update()
 
     local anim = self.anim or "idle"
     if anim == "idle" or anim == "right" then
-        self.head:setFrame(math.floor(self.siner))
-        
         local scale = (anim == "right") and -1 or 1
         local bx = (anim == "right") and 30 or 0
         self.head.scale_x = scale
+        self.head_chip.scale_x = scale
         self.body.scale_x = scale
         self.head.x = bx
+        self.head_chip.x = bx
         self.body.x = bx
+        self.head.y = math.sin(self.siner)
+        self.head_chip.y = math.sin(self.siner_2) * 0.9
     end
 end
 

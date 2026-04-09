@@ -27,7 +27,8 @@ function actor:init()
 
     self.parts = {
         ["body"] = {"body"},
-        ["head"] = {"head"}
+        ["head"] = {"head"},
+        ["head_chip"] = {"head_chip"}
     }
 end
 
