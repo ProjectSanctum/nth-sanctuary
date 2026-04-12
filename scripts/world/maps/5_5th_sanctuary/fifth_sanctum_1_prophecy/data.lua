@@ -362,7 +362,6 @@ return {
             ["no_back"] = false,
             ["offx"] = 160,
             ["offy"] = -110,
-            ["panel_h"] = "120",
             ["spr_offx"] = 99,
             ["spr_offy"] = 62,
             ["text"] = "DARKNESS FALLS UPON THE WORLD\nAS A BLANKET OF SHADOW.",

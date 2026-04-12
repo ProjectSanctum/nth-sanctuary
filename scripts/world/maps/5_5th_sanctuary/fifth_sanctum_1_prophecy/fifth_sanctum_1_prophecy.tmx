@@ -91,7 +91,6 @@
     <property name="no_back" type="bool" value="false"/>
     <property name="offx" type="float" value="160"/>
     <property name="offy" type="float" value="-110"/>
-    <property name="panel_h" value="120"/>
     <property name="spr_offx" type="float" value="99"/>
     <property name="spr_offy" type="float" value="62"/>
     <property name="text">DARKNESS FALLS UPON THE WORLD
