@@ -92,7 +92,7 @@
     <property name="offx" type="float" value="160"/>
     <property name="offy" type="float" value="-110"/>
     <property name="spr_offx" type="float" value="79"/>
-    <property name="spr_offy" type="float" value="59"/>
+    <property name="spr_offy" type="float" value="89"/>
     <property name="text">DARKNESS FALLS UPON THE WORLD
 AS A BLANKET OF SHADOW.</property>
     <property name="texture" value="darknessfalls"/>

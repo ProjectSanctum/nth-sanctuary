@@ -363,7 +363,7 @@ return {
             ["offx"] = 160,
             ["offy"] = -110,
             ["spr_offx"] = 79,
-            ["spr_offy"] = 59,
+            ["spr_offy"] = 89,
             ["text"] = "DARKNESS FALLS UPON THE WORLD\nAS A BLANKET OF SHADOW.",
             ["texture"] = "darknessfalls",
             ["txt_offy"] = -48
