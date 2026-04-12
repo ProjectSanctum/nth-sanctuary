@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="31">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="31">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -92,8 +92,8 @@
     <property name="offx" type="float" value="160"/>
     <property name="offy" type="float" value="-110"/>
     <property name="panel_h" value="120"/>
-    <property name="spr_offx" type="float" value="78"/>
-    <property name="spr_offy" type="float" value="100"/>
+    <property name="spr_offx" type="float" value="99"/>
+    <property name="spr_offy" type="float" value="62"/>
     <property name="text">DARKNESS FALLS UPON THE WORLD
 AS A BLANKET OF SHADOW.</property>
     <property name="texture" value="darknessfalls"/>

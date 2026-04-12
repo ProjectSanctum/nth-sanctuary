@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -363,8 +363,8 @@ return {
             ["offx"] = 160,
             ["offy"] = -110,
             ["panel_h"] = "120",
-            ["spr_offx"] = 78,
-            ["spr_offy"] = 100,
+            ["spr_offx"] = 99,
+            ["spr_offy"] = 62,
             ["text"] = "DARKNESS FALLS UPON THE WORLD\nAS A BLANKET OF SHADOW.",
             ["texture"] = "darknessfalls",
             ["txt_offy"] = -22
