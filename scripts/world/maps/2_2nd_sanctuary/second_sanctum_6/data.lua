@@ -795,7 +795,7 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 1680,
+          x = 1660,
           y = 360,
           width = 0,
           height = 0,
