@@ -141,6 +141,13 @@ function character:onLevelUp(level)
     end
 end
 
+function character:hasXAct()
+    if self:checkArmor("doctrine_veil") then
+        return false
+    end 
+    return true   
+end
+
 function character:drawPowerStat(index, x, y, menu)
     if index == 1 then
         local icon = Assets.getTexture("ui/menu/icon/snow")
