@@ -57,6 +57,7 @@ function RemotePianoMove:init(data)
 	self.dust_timer = (Kristal.getTime()*30) % 2
 	self.last_dust_timer = self.dust_timer
 	self.start_layer = self.layer
+	self.ignore_layer_set = false
 end
 
 function RemotePianoMove:onAdd(parent)
@@ -180,8 +181,9 @@ function RemotePianoMove:onInteract(player, dir)
 					cutscene:panTo(pos[1], pos[2], walktime/30)
 				end
 				Assets.playSound("wing")
+				self.ignore_layer_set = true
 				local last_layer = self.layer
-				self.layer = Game.world.player.layer - 0.1
+				self.layer = Game.world.player.layer - 0.01
 				local jumpstrength = 12
 				local leader = cutscene:getCharacter(Game.party[1]:getActor().id)
 				local party2, party3, party4 = nil, nil, nil
@@ -215,6 +217,7 @@ function RemotePianoMove:onInteract(player, dir)
 				cutscene:wait(16/30)
 				Assets.playSound("noise")
 				self.layer = last_layer
+				self.ignore_layer_set = false
 				leader:resetSprite()
 				if party2 then
 					party2:resetSprite()
@@ -772,7 +775,9 @@ end
 
 function RemotePianoMove:stepTwo()
 	if self.engaged then
-		self.layer = self.start_layer - 0.05
+		if not self.ignore_layer_set then
+			self.layer = self.start_layer - 0.05
+		end
 		Game.world.player:setPosition(self.x + self.width / 2 - 1, self.y + self.height + (self.yoffset * 1.1) - 10)
 		Game.world.player:setSprite("piano")
 		Game.world.player.layer = self.layer + 0.01
@@ -862,7 +867,9 @@ function RemotePianoMove:stepTwo()
 			follower:setFacing("up")
 		end
 	else
-		self.layer = self.start_layer
+		if not self.ignore_layer_set then
+			self.layer = self.start_layer
+		end
 	end
 	if self.camcontrol then
 		Game.world:setCameraAttached(false)
