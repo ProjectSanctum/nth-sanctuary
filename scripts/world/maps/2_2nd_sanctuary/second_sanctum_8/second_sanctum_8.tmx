@@ -34,7 +34,7 @@
 </data>
  </layer>
  <objectgroup color="#93ffed" id="9" name="objects_osc">
-  <object id="32" name="texturescroller" x="-1200" y="0">
+  <object id="32" name="texturescroller" x="80" y="0">
    <properties>
     <property name="base_tex" value="backgrounds/glow_purple_tile_oscillate"/>
     <property name="scroll_tex" value="backgrounds/perlin_noise_purple_looping"/>
@@ -126,12 +126,12 @@
   </object>
  </objectgroup>
  <objectgroup id="10" name="objects_fog">
-  <object id="1" name="churchfog" x="-1240" y="0">
+  <object id="1" name="churchfog" x="40" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="2" name="objects_top">
-  <object id="2" name="filter" x="-1280" y="0">
+  <object id="2" name="filter" x="0" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
