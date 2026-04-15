@@ -15,6 +15,10 @@ function Jellycruel:init()
     self:addEnemy("jellycruel")
 	
 	self.poison_chance = 0
+    self.bg = RedBG2()
 end
 
+function Jellycruel:createBackground()
+    return Game.battle:addChild(self.bg)
+end
 return Jellycruel

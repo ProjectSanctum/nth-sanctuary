@@ -292,9 +292,20 @@ return {
                 child:remove()
             end
         end
+        if Game:getFlag("cruelled") then
+            cutscene:text("* (Never again.)")
+            if Game:getFlag("cruelled") == 1 then
+                cutscene:text("* (...Actually, [wait:5]the [color:red]Jellycruel[color:white] left something behind.)")
+                cutscene:text("* (It was an axe.)")
+                Assets.playSound("item")
+                Game.inventory:addItem("cruelaxe")
+                cutscene:text("* (You obtained the [color:red]CruelAxe[color:white].)")
+                Game:setFlag("cruelled", 2)
+            end
+            return
+        end
         event:setSprite("world/objects/treasure_chest_2")
         event:setScale(2, 1)
-        Assets.playSound("locker")
         Assets.playSound("locker")
         cutscene:text("* (You looked inside the chest...)")
         local cr = cutscene:spawnNPC("jellycruel", 160, 380)
@@ -311,6 +322,7 @@ return {
         src:setPitch(0.8)
         cutscene:wait(12/30)
         cutscene:startEncounter("jellycruel")
+        Game:setFlag("cruelled", 1)
         cr:remove()
         event:setSprite("world/objects/treasure_chest_1")
     end,

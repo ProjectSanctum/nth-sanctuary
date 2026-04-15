@@ -231,7 +231,12 @@ function character:drawPowerStat(index, x, y, menu)
         return true
     elseif index == 2 then
         if Game.chapter >= 3 then
-            return
+            if self:checkWeapon("cruelaxe") == true then
+                local icon = Assets.getTexture("enemies/jellycruel/jellycruel")
+                Draw.draw(icon, x-26, y+6, 0, 0.5, 0.5)
+                love.graphics.print("Cruel", x, y, 0, 2, 1)
+            end
+            return true
         end
         local icon = Assets.getTexture("ui/menu/icon/demon")
         Draw.draw(icon, x-26, y+6, 0, 2, 2)

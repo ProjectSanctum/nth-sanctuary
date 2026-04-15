@@ -30,7 +30,7 @@ function Basic:onStart()
         self.stay:remove()
         Game.battle.arena:shake(10, 0, 0.5, 1/15)
         Assets.playSound("snd_closet_fall")
-        self.timer:tween(3, Game.battle.arena, {y = Game.battle.arena.y + 600, rotation = math.rad(90)}, "in-cubic", function()
+        self.timer:tween(3, Game.battle.arena, {y = Game.battle.arena.y + 700, rotation = math.rad(90)}, "in-cubic", function()
             if Game.battle.soul.y > SCREEN_HEIGHT then
                 Game.battle.party[1]:hurt(9999)
                 Assets.playSound("mercy_down")
