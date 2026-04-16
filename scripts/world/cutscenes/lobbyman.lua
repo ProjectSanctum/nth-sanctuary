@@ -41,7 +41,7 @@ return {
 
         choicebox()
         kris:setFacing("down")
-    end
+    end,
     four = function(cutscene)
         local man = cutscene:getCharacter("lobbyman")
         local susie, ralsei, kris = cutscene:getCharacter("susie"),cutscene:getCharacter("ralsei"),cutscene:getCharacter("kris")
