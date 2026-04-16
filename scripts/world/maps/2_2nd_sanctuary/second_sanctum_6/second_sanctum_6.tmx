@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="233">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="234">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -328,10 +328,10 @@
   <object id="183" name="bookshelf_destructable" x="360" y="560" width="80" height="160"/>
   <object id="184" name="bookshelf_destructable" x="360" y="640" width="80" height="160"/>
   <object id="189" name="bookshelf_destructable" x="200" y="640" width="80" height="160"/>
-  <object id="228" name="interactable" x="480" y="1080" width="80" height="80">
+  <object id="228" name="interactable" x="480" y="1080" width="80" height="40">
    <properties>
     <property name="text1" value="* (Despite all of your efforts...)"/>
-    <property name="text2" value="* (It is still on your way.)"/>
+    <property name="text2" value="* (It is still in your way.)"/>
    </properties>
   </object>
   <object id="187" name="bookshelf_destructable" x="200" y="720" width="80" height="160"/>
@@ -339,6 +339,12 @@
    <properties>
     <property name="map" value="2_2nd_sanctuary/second_sanctum_7"/>
     <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="233" name="interactable" x="480" y="1120" width="80" height="40">
+   <properties>
+    <property name="text1" value="* (Despite all of your efforts...)"/>
+    <property name="text2" value="* (It is no longer your way.)"/>
    </properties>
   </object>
  </objectgroup>
