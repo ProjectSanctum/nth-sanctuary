@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 22,
-  nextobjectid = 159,
+  nextobjectid = 160,
   properties = {
     ["border"] = "church_flooded_dynamic",
     ["music"] = "floodedsanctuary"
@@ -1431,6 +1431,22 @@ return {
           properties = {
             ["map"] = "3_flooded_sanctuary/flooded_0_between",
             ["marker"] = "entry4"
+          }
+        },
+        {
+          id = 159,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 860,
+          y = 1200,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "lobbyman",
+            ["cutscene"] = "lobbyman.four"
           }
         }
       }

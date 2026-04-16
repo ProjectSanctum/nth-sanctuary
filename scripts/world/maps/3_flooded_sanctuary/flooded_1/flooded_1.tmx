@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="159">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="160">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -553,6 +553,13 @@
     <property name="map" value="3_flooded_sanctuary/flooded_0_between"/>
     <property name="marker" value="entry4"/>
    </properties>
+  </object>
+  <object id="159" name="npc" x="860" y="1200">
+   <properties>
+    <property name="actor" value="lobbyman"/>
+    <property name="cutscene" value="lobbyman.four"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="9" name="objects_overlay">
