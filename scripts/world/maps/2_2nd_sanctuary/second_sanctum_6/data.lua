@@ -2160,7 +2160,7 @@ return {
           visible = true,
           properties = {
             ["text1"] = "* (Despite all of your efforts...)",
-            ["text2"] = "* (It is no longer your way.)"
+            ["text2"] = "* (It is no longer in your way.)"
           }
         }
       }

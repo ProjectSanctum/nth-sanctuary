@@ -344,7 +344,7 @@
   <object id="233" name="interactable" x="480" y="1120" width="80" height="40">
    <properties>
     <property name="text1" value="* (Despite all of your efforts...)"/>
-    <property name="text2" value="* (It is no longer your way.)"/>
+    <property name="text2" value="* (It is no longer in your way.)"/>
    </properties>
   </object>
  </objectgroup>
