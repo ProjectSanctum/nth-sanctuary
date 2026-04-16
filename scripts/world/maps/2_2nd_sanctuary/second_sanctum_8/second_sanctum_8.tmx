@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="281">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="290">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -13,6 +13,10 @@
  <tileset firstgid="965" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="1163" source="../../../tilesets/longslides.tsx"/>
  <tileset firstgid="1217" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
+ <objectgroup id="14" name="objects_parallax" parallaxx="0.5" parallaxy="0.9">
+  <object id="281" gid="3221225477" x="-280" y="720" width="640" height="1600"/>
+  <object id="287" gid="5" x="240" y="840" width="640" height="1600" rotation="45"/>
+ </objectgroup>
  <layer id="8" name="tile_osc_optimize" width="32" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -86,13 +90,13 @@
 0,0,0,0,983,983,974,974,983,974,974,983,974,983,974,974,974,983,974,983,974,974,974,983,983,974,974,974,983,983,974,983,
 0,0,0,0,974,974,974,974,983,974,974,983,983,974,983,974,974,983,983,974,974,974,974,974,974,974,974,974,974,983,983,974,
 0,0,0,0,992,992,992,992,992,992,992,992,974,974,983,974,974,974,983,974,992,992,992,992,992,992,992,992,992,992,992,992,
-0,0,0,0,447,448,449,539,447,448,449,539,974,974,974,983,974,974,983,983,539,447,448,449,539,447,448,449,539,447,448,449,
-0,0,0,0,453,454,455,545,453,454,455,545,992,983,983,974,983,983,983,992,545,453,454,455,545,453,454,455,545,453,454,455,
-0,0,0,0,459,460,461,545,459,460,461,545,0,992,992,992,992,992,992,0,545,459,460,461,545,459,460,461,545,459,460,461,
-0,0,0,0,465,466,467,545,465,466,467,545,0,539,584,585,586,587,539,0,545,465,466,467,545,465,466,467,545,465,466,467,
-0,0,0,0,471,472,473,545,471,472,473,545,0,545,590,591,592,593,545,0,545,471,472,473,545,471,472,473,545,471,472,473,
-0,0,0,0,0,0,0,545,0,0,0,545,0,545,596,597,598,599,545,0,545,0,0,0,545,0,0,0,545,0,0,0,
-0,0,0,0,0,0,0,545,0,0,0,545,0,545,602,603,604,605,545,0,545,0,0,0,545,0,0,0,545,0,0,0
+0,0,0,0,539,518,539,584,585,586,587,539,974,974,974,983,974,974,983,983,539,584,585,586,587,539,518,539,584,585,586,587,
+0,0,0,0,545,524,545,590,591,592,593,545,983,983,983,974,983,983,983,983,545,590,591,592,593,545,524,545,590,591,592,593,
+0,0,0,0,545,530,545,596,597,598,599,545,992,992,992,992,992,992,992,992,545,596,597,598,599,545,530,545,596,597,598,599,
+0,0,0,0,545,524,545,602,603,604,605,545,518,539,584,585,586,587,539,518,545,602,603,604,605,545,524,545,602,603,604,605,
+0,0,0,0,545,524,545,608,609,610,611,545,524,545,590,591,592,593,545,524,545,608,609,610,611,545,524,545,608,609,610,611,
+0,0,0,0,545,524,545,0,0,604,1129,545,530,545,596,597,598,599,545,530,545,0,603,604,0,545,524,545,0,603,604,0,
+0,0,0,0,545,524,545,0,603,604,1129,545,524,545,602,603,604,605,545,524,545,0,603,604,0,545,524,545,0,603,604,0
 </data>
  </layer>
  <objectgroup id="4" name="collision">
@@ -100,15 +104,13 @@
   <object id="264" x="720" y="0" width="40" height="120"/>
   <object id="265" x="480" y="120" width="120" height="120"/>
   <object id="266" x="280" y="240" width="200" height="120"/>
-  <object id="269" x="520" y="600" width="240" height="40"/>
+  <object id="269" x="480" y="600" width="320" height="40"/>
   <object id="271" x="120" y="240" width="40" height="240"/>
   <object id="272" x="160" y="200" width="120" height="40"/>
   <object id="273" x="800" y="240" width="480" height="120"/>
-  <object id="274" x="800" y="480" width="480" height="80"/>
+  <object id="274" x="800" y="480" width="480" height="120"/>
   <object id="275" x="680" y="120" width="120" height="120"/>
-  <object id="276" x="160" y="480" width="320" height="80"/>
-  <object id="277" x="480" y="560" width="40" height="40"/>
-  <object id="278" x="760" y="560" width="40" height="40"/>
+  <object id="276" x="160" y="480" width="320" height="120"/>
  </objectgroup>
  <objectgroup id="6" name="objects"/>
  <objectgroup id="5" name="markers">
@@ -125,6 +127,25 @@
     <property name="map" value="2_2nd_sanctuary/second_sanctum_7"/>
     <property name="marker" value="entry2"/>
    </properties>
+  </object>
+  <object id="282" name="window_glow" x="900" y="300">
+   <point/>
+  </object>
+  <object id="283" name="window_glow" x="1060" y="300">
+   <point/>
+  </object>
+  <object id="284" name="window_glow" x="1220" y="300">
+   <point/>
+  </object>
+  <object id="285" name="window_glow" x="380" y="300">
+   <point/>
+  </object>
+  <object id="289" name="npc" x="220" y="320">
+   <properties>
+    <property name="actor" value="lobbyman"/>
+    <property name="text1" value="* Placeholder text."/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="10" name="objects_fog">
