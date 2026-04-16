@@ -1,4 +1,47 @@
 return {
+    second = function(cutscene)
+        local man = cutscene:getCharacter("lobbyman")
+        local susie, ralsei, kris = cutscene:getCharacter("susie"),cutscene:getCharacter("ralsei"),cutscene:getCharacter("kris")
+        local tick = 0
+        local tick2 = 0
+        cutscene:setSpeaker(man)
+        cutscene:text("* Hello. [wait:5]I am the Lobby Man.")
+        local opts = {"Where am I?", "Who are you?", "Bye"}
+        local function choicebox()
+            if tick == 1 then opts[2] = "...Really?" end
+            if tick2 == 1 then opts[1] = "Where next?" end
+            local choice = cutscene:choicer(opts)
+            if choice == 1 then
+                if tick2 ~= 1 then
+                    cutscene:text("* You are in the 2nd Sanctuary.")
+                    cutscene:text("* ...Surely, [wait:5]you know this place already.")
+                    tick2 = 1
+                else
+                    cutscene:text("* I foresee a crossroads...")
+                    cutscene:text("* I can only wish you two luck.")
+                end
+                choicebox()
+            elseif choice == 2 then
+                if tick ~= 1 then
+                    cutscene:text("* I am the Lobby Man.")
+                    tick = 1
+                else
+                    cutscene:text("* There is nothing more to me.")
+                end
+
+                choicebox()
+            elseif choice == 3 then
+                cutscene:text("* bye")
+                Assets.playSound("snd_mysterygo")
+                Game.world.timer:tween(0.75, man, {alpha = 0, scale_x = 1, scale_y = 3}, 'out-circ')
+                cutscene:wait(1)
+                man:remove()
+            end
+        end
+
+        choicebox()
+        kris:setFacing("down")
+    end
     four = function(cutscene)
         local man = cutscene:getCharacter("lobbyman")
         local susie, ralsei, kris = cutscene:getCharacter("susie"),cutscene:getCharacter("ralsei"),cutscene:getCharacter("kris")
@@ -138,4 +181,49 @@ return {
         cutscene:text("* The pretty green to blue...")
         cutscene:text("* Good luck, [wait:5]you all.")
     end,
+    flood = function(cutscene)
+        local man = cutscene:getCharacter("lobbyman")
+        local susie, ralsei, kris = cutscene:getCharacter("susie"),cutscene:getCharacter("ralsei"),cutscene:getCharacter("kris")
+        local tick = 0
+        local tick2 = 0
+        cutscene:setSpeaker(man)
+        cutscene:text("* Hello. [wait:5]I am the Lobby Man.")
+        local opts = {"Where am I?", "Who are you?", "Bye"}
+        local function choicebox()
+            if tick == 1 then opts[2] = "...Really?" end
+            if tick2 == 1 then opts[1] = "Where next?" end
+            local choice = cutscene:choicer(opts)
+            if choice == 1 then
+                if tick2 ~= 1 then
+                    cutscene:text("* You are in the Flooded Sanctuary.")
+                    --i really hate to get in the way of ral's vision (crew) of what the fifth sanctuary is, so change this if needed.
+                    cutscene:text("* An area sunken, [wait:5]yet shines with hope akin to fire.")
+                    tick2 = 1
+                else
+                    --i really hate to get in the way of ral's vision (crew) of what the fifth sanctuary is, so change this if needed.
+                    cutscene:text("* I am uncertain of what lies beyond.")
+                    cutscene:text("* I will advise, [wait:5]stay safe.")
+                end
+                choicebox()
+            elseif choice == 2 then
+                if tick ~= 1 then
+                    cutscene:text("* I am the Lobby Man.")
+                    tick = 1
+                else
+                    cutscene:text("* There is nothing more to me.")
+                end
+
+                choicebox()
+            elseif choice == 3 then
+                cutscene:text("* bye")
+                Assets.playSound("snd_mysterygo")
+                Game.world.timer:tween(0.75, man, {alpha = 0, scale_x = 1, scale_y = 3}, 'out-circ')
+                cutscene:wait(1)
+                man:remove()
+            end
+        end
+
+        choicebox()
+        kris:setFacing("down")
+    end
 }
