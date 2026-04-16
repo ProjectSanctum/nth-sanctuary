@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 35,
-  nextobjectid = 229,
+  nextobjectid = 243,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -828,6 +828,111 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 236,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 100,
+          y = 1120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
+          }
+        },
+        {
+          id = 237,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 300,
+          y = 1120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
+          }
+        },
+        {
+          id = 238,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 460,
+          y = 1120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
+          }
+        },
+        {
+          id = 239,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 100,
+          y = 1360,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
+          }
+        },
+        {
+          id = 240,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 100,
+          y = 1600,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
+          }
+        },
+        {
+          id = 241,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 1380,
+          y = 1120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
+          }
+        },
+        {
+          id = 242,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 1540,
+          y = 1120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
+          }
         }
       }
     },

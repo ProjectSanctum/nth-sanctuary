@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 23,
-  nextobjectid = 202,
+  nextobjectid = 207,
   parallaxorigin = {
     x = -320,
     y = -240
@@ -391,6 +391,21 @@ return {
           properties = {
             ["idlealpha"] = 0,
             ["starthidden"] = true
+          }
+        },
+        {
+          id = 206,
+          name = "window_oscillate",
+          type = "",
+          shape = "point",
+          x = 460,
+          y = 680,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "window_knight_oscillate"
           }
         }
       }

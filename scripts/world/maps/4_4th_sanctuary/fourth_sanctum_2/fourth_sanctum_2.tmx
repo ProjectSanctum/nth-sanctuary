@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="28" nextobjectid="146">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="28" nextobjectid="148">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -505,6 +505,12 @@
    <properties>
     <property name="generate" type="bool" value="false"/>
    </properties>
+  </object>
+  <object id="147" name="window_oscillate" x="1740" y="960">
+   <properties>
+    <property name="texture" value="window_knight_oscillate"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="27" name="objects_decal">
