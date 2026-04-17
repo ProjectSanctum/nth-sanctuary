@@ -29,7 +29,7 @@ return {
 			cutscene:text("* So THAT'S where it went! [wait:10][face:surprise_smile]Can you give it back to me?", "surprise", {auto = true})
 			cutscene:setSpeaker()
 			cutscene:text("* [voice:jack]ME MISS OLDMAN... I MISS T...")
-			cutscene:text("* [voice:jack]ME WANTES TIME TO REFLEGHT...")
+			cutscene:text("* [voice:jack]ME WANTES TIME TO REHMAEMBER...")
 			cutscene:text("* [voice:jack]COAM BACHK SOON...? [wait:10]I JUST NEED SOME TAIME ALOAN WITH IT...")
 			cutscene:setSpeaker(s)
 			cutscene:text("* [wait:5]...Alright... [wait:10]I miss him too...", "bangs_neutral")
