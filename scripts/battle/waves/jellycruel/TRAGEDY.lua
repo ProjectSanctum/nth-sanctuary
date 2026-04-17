@@ -4,6 +4,7 @@ function Basic:init()
     super.init(self)
     self.time = 30
     self.input = [[#thSanctuary:setState("TRAGEDY") ]]
+	self.flipped = TableUtils.pick({true, false})
 end
 
 function Basic:onStart()
@@ -17,8 +18,15 @@ function Basic:onStart()
             wait(1/30)
             Assets.playSound("voice/default")
         end
-        self.stay = Sprite("stayhere")
-        self:spawnObject(self.stay, Game.battle.arena:getLeft()-20, Game.battle.arena:getTop()-20)
+		local fliprot = math.rad(90)
+		if self.flipped then
+			fliprot = math.rad(-90)
+			self.stay = Sprite("stayhere_flip")
+			self:spawnObject(self.stay, Game.battle.arena:getRight()-134, Game.battle.arena:getTop()-20)
+		else
+			self.stay = Sprite("stayhere")
+			self:spawnObject(self.stay, Game.battle.arena:getLeft()-20, Game.battle.arena:getTop()-20)
+		end
         self.stay:setLayer(9999)
         self.stx, self.sty = self.stay.x, self.stay.y
         for k = 0, 5, 0.1 do
@@ -26,11 +34,14 @@ function Basic:onStart()
             wait(1/29)
         end
         wait(1)
+		if self.flipped then
+			h.x = Game.battle.arena:getLeft()-140-Game.battle.arena.width-71
+		end
         h:explode()
         self.stay:remove()
         Game.battle.arena:shake(10, 0, 0.5, 1/15)
         Assets.playSound("snd_closet_fall")
-        self.timer:tween(3, Game.battle.arena, {y = Game.battle.arena.y + 700, rotation = math.rad(90)}, "in-cubic", function()
+        self.timer:tween(3, Game.battle.arena, {y = Game.battle.arena.y + 700, rotation = fliprot}, "in-cubic", function()
             if Game.battle.soul.y > SCREEN_HEIGHT then
                 Game.battle.party[1]:hurt(9999)
                 Assets.playSound("mercy_down")
