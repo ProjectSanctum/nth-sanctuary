@@ -1,34 +1,40 @@
 return {
 	jack = function (cutscene, event)
+		local flag = Game:getFlag("talkedtojack")
 		local s = cutscene:getCharacter("susie")
+		if flag then 
+			cutscene:text({
+			"* (A bunch of old history books. [wait:10]Sadly, [wait:5]they're in your way.)",
+			"* (You can still hear Jackenstein crying through the doorway...)",
+			})
+			cutscene:setSpeaker(s)
+			cutscene:text("* Kris, let's just give him some time alone...", "dejected")
+			return
+		end
+		
 		cutscene:text({
 			"* (A bunch of old history books. [wait:10]Sadly, [wait:5]they're in your way.)",
 			"* (...But, [wait:5]you can hear a deep voice crying from beyond.)",
 		})
-		local flag = Game:getFlag("talkedtojack")
-		if flag then 
-			return
-		end
-		cutscene:setSpeaker(s)
-		cutscene:text("* Hey, [wait:5]wait. [wait:10]Is that Jack?", "surprise_smile")
-		cutscene:setSpeaker()
-		cutscene:text("* [voice:jack]...SCAIRY... GO NO FAERTHER....")
-		cutscene:setSpeaker(s)
-		cutscene:text("* Jack, [wait:5]what are you doing back there??")
-		cutscene:setSpeaker()
-		cutscene:text("* [voice:jack]AX... [wait:10]FELL THROAGH SCEILING...")
-		cutscene:text("* [voice:jack]PROATECTING FROM SCAIRY FIGORE...")
-		cutscene:setSpeaker(s)
-		cutscene:text("* So THAT'S where it went! [wait:10][face:surprise_smile]Can you give it back to me?", "surprise", {auto = true})
-		cutscene:setSpeaker()
-		cutscene:text("* [voice:jack]ME MISSES OALD MAN... I MISS T...")
-		cutscene:text("* [voice:jack]ME WANTES TIME TO REFLEGHT...")
-		cutscene:text("* [voice:jack]COAM BACHK SOON...? [wait:10]I JUHST NEED SOME TAIME ALOAN WITH IT...")
-		cutscene:setSpeaker(s)
-		cutscene:text("* [wait:5]...Alright... [wait:10]I miss him too...", "bangs_neutral")
-		cutscene:text("* See you later, [wait:5]I guess...", "bangs_neutral")
-		Game:setFlag("talkedtojack", true)
-
+			cutscene:setSpeaker(s)
+			cutscene:text("* Hey, [wait:5]wait. [wait:10]Is that Jack?", "surprise_smile")
+			cutscene:setSpeaker()
+			cutscene:text("* [voice:jack]...SCAIRY... GO NO FAERTHER....")
+			cutscene:setSpeaker(s)
+			cutscene:text("* Jack, [wait:5]what are you doing back there??", "surprise_frown")
+			cutscene:setSpeaker()
+			cutscene:text("* [voice:jack]AX... [wait:10]FELL THROAGH SCEILING...")
+			cutscene:text("* [voice:jack]PROATECTING FROM SCAIRY FIGORE...")
+			cutscene:setSpeaker(s)
+			cutscene:text("* So THAT'S where it went! [wait:10][face:surprise_smile]Can you give it back to me?", "surprise", {auto = true})
+			cutscene:setSpeaker()
+			cutscene:text("* [voice:jack]ME MISS OLDMAN... I MISS T...")
+			cutscene:text("* [voice:jack]ME WANTES TIME TO REFLEGHT...")
+			cutscene:text("* [voice:jack]COAM BACHK SOON...? [wait:10]I JUST NEED SOME TAIME ALOAN WITH IT...")
+			cutscene:setSpeaker(s)
+			cutscene:text("* [wait:5]...Alright... [wait:10]I miss him too...", "bangs_neutral")
+			cutscene:text("* See you later, [wait:5]I guess...", "bangs_neutral")
+			Game:setFlag("talkedtojack", true)
 	end,
     oldman = function(cutscene, event)
         local susie, ralsei, kris = cutscene:getCharacter("susie"),cutscene:getCharacter("ralsei"),cutscene:getCharacter("kris")
