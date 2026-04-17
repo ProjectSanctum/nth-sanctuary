@@ -69,7 +69,7 @@
 </data>
  </layer>
  <objectgroup id="10" name="objects_bg">
-  <object id="82" name="hell_bg" x="-200" y="-40">
+  <object id="82" name="hell_bg" x="0" y="0">
    <point/>
   </object>
  </objectgroup>
@@ -130,7 +130,7 @@
 </data>
  </layer>
  <objectgroup draworder="index" id="11" name="objects_tile_oscillate">
-  <object id="94" name="texturescroller" x="-132" y="-52">
+  <object id="94" name="texturescroller" x="40" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
@@ -332,7 +332,7 @@
 </data>
  </layer>
  <objectgroup id="2" name="objects_overlay">
-  <object id="105" name="roomglow" x="20" y="2.667">
+  <object id="105" name="roomglow" x="120" y="0">
    <properties>
     <property name="active" type="bool" value="true"/>
     <property name="alpha" type="float" value="1"/>
@@ -343,7 +343,7 @@
    </properties>
    <point/>
   </object>
-  <object id="106" name="filter" x="-40" y="-160">
+  <object id="106" name="filter" x="80" y="0">
    <properties>
     <property name="hue_start" value="0"/>
     <property name="hue_target" value="0"/>

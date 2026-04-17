@@ -587,6 +587,13 @@
             "width": 1280,
             "x": -80,
             "y": 11720
+        },
+        {
+            "fileName": "secrets/secret_sanctuary/secret_sanctuary.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 4440,
+            "y": 12520
         }
     ],
     "onlyShowAdjacentMaps": false,

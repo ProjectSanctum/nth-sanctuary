@@ -221,7 +221,7 @@
 </data>
  </layer>
  <objectgroup id="2" name="objects_bg">
-  <object id="1" name="hell_bg" x="-120" y="-40">
+  <object id="1" name="hell_bg" x="0" y="0">
    <point/>
   </object>
  </objectgroup>
@@ -660,7 +660,7 @@
   </object>
  </objectgroup>
  <objectgroup id="3" name="objects_overlay">
-  <object id="2" name="roomglow" x="60" y="-37.333">
+  <object id="2" name="roomglow" x="80" y="0">
    <properties>
     <property name="active" type="bool" value="true"/>
     <property name="alpha" type="float" value="1"/>
@@ -671,7 +671,7 @@
    </properties>
    <point/>
   </object>
-  <object id="3" name="filter" x="0" y="-200">
+  <object id="3" name="filter" x="40" y="0">
    <properties>
     <property name="hue_start" value="0"/>
     <property name="hue_target" value="0"/>
