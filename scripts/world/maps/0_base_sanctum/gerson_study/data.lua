@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 222,
+  nextobjectid = 223,
   properties = {
     ["border"] = "base_sanctum",
     ["music"] = "church_study_slower",
@@ -1644,19 +1644,6 @@ return {
           shape = "rectangle",
           x = 282.25,
           y = 1018.5,
-          width = 27,
-          height = 18.25,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 159,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 508.25,
-          y = 1052.5,
           width = 27,
           height = 18.25,
           rotation = 0,
