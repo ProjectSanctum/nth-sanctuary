@@ -78,6 +78,7 @@ return {
         cutscene:wait(cutscene:attachFollowers())
 		kris:setFacing("down")
 		susie:setFacing("down")
+		Game:setFlag("enteredGersonStudy", true)
     end,
     fountain = function(cutscene, event)
 		if not Game:getFlag("interactedWithFountain", false) then
