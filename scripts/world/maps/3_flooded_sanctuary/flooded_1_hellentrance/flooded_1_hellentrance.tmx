@@ -249,7 +249,7 @@
   <object id="32" x="640" y="240" width="40" height="120"/>
  </objectgroup>
  <objectgroup id="9" name="objects_overlay">
-  <object id="16" name="roomglow" x="-40" y="80">
+  <object id="16" name="roomglow" x="80" y="0">
    <properties>
     <property name="active" type="bool" value="true"/>
     <property name="alpha" type="float" value="0.5"/>
@@ -260,13 +260,13 @@
    </properties>
    <point/>
   </object>
-  <object id="17" name="texturescroller" x="-40" y="160">
+  <object id="17" name="texturescroller" x="40" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
    <point/>
   </object>
-  <object id="18" name="churchfog" x="-40" y="280">
+  <object id="18" name="churchfog" x="0" y="0">
    <point/>
   </object>
  </objectgroup>
