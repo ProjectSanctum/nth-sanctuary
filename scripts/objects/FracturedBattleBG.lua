@@ -5,11 +5,6 @@ function FracturedBattleBG:init()
     self.offset = 0
     self.h = 0
     self.glow_siner = 0
-    self.timer = self:addChild(Timer())
-    
-    self.timer:every(1, function()
-        self.timer:tween(0.5, self, {h = self.h - 25}, "out-expo")
-    end)
 end
 
 function FracturedBattleBG:update()
