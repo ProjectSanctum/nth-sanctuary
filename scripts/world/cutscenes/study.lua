@@ -78,15 +78,14 @@ return {
 		cutscene:text("* Maybe we can find something interesting.", "dejected_smile")
 		
 		cutscene:attachCamera()
-		local susie_layer = susie.layer
-		susie.layer = susie_layer - 0.21
+		susie:walkTo(340, 960, 1.5)
+		cutscene:wait(1.5)
         cutscene:wait(cutscene:attachFollowers())
 		kris:setFacing("down")
 		susie:setFacing("down")
         for _, save in ipairs(Game.world.map:getEvents("savepoint")) do
             save.visible = true
         end
-		susie.layer = susie_layer
 		Game:setFlag("enteredGersonStudy", true)
     end,
     fountain = function(cutscene, event)
