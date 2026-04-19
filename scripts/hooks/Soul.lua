@@ -8,14 +8,9 @@ function Soul:init(x, y, color)
         self.sprite:setSprite("player/n_heart_sq")
         self.graze_sprite.texture = Assets.getTexture("player/n_graze")
     end
-end
 
-function Soul:update()
-    super.update(self)
-
-    local f = Game.battle:getFX(FracturedHSVFX)
-    if Game.battle and f then
-        --TODO: Make red
+    if Game.battle and Game.battle:getFX(FracturedHSVFX) then
+        self:addFX(FracturedHSVFXRevert())
     end
 end
 

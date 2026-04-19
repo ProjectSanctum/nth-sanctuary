@@ -1,16 +1,16 @@
----@class FracturedHSVFX: ShaderFX
+---@class FracturedHSVFXRevert: ShaderFX
 ---@field shader love.Shader
-local FracturedHSVFX, super = Class(ShaderFX)
+local FracturedHSVFXRevert, super = Class(ShaderFX)
 
-function FracturedHSVFX:init(heartbeat, priority)
+function FracturedHSVFXRevert:init(heartbeat, priority)
     super.init(self, "hsv_transform", {}, nil, priority)
-    
-    self.hue_start = love.math.random(0, 360);
-    self.sat_start = love.math.random(5, 15)/10;
-    self.val_start = love.math.random(5, 15)/10;
-    self.hue_target = love.math.random(0, 360);
-    self.sat_target = love.math.random(5, 15)/10;
-    self.val_target = love.math.random(5, 15)/10;
+    local f = Game.battle:getFX(FracturedHSVFX)
+    self.hue_start = 360-f.hue_start;
+    self.sat_start = 1;
+    self.val_start = 1;
+    self.hue_target = 360-f.hue_target;
+    self.sat_target = 1;
+    self.val_target = 1;
     self.hue = self.hue_start;
     self.sat = self.sat_start;
     self.val = self.val_start;
@@ -26,7 +26,7 @@ function FracturedHSVFX:init(heartbeat, priority)
     end
 end
 
-function FracturedHSVFX:update()
+function FracturedHSVFXRevert:update()
     super.update(self)
     if (self.wave_time > 0) then
         self.hue = Ch4Lib.scr_wave(self.hue_start, self.hue_target, self.wave_time, 0);
@@ -40,16 +40,13 @@ function FracturedHSVFX:update()
         self.sat = MathUtils.lerp(self.sat_start, self.sat_target, math.abs(math.sin(_percent * math.pi)));
         self.val = MathUtils.lerp(self.val_start, self.val_target, math.abs(math.sin(_percent * math.pi)));
     end
-	Game:setFlag("fracturedChurchBorderHue", self.hue)
-	Game:setFlag("fracturedChurchBorderSat", self.sat)
-    Game:setFlag("fracturedChurchBorderVal", self.val)
 end
 
-function FracturedHSVFX:isActive()
+function FracturedHSVFXRevert:isActive()
     return super.isActive(self) and self.amount > 0
 end
 
-function FracturedHSVFX:draw(texture)
+function FracturedHSVFXRevert:draw(texture)
     self.shader:send("_hsv", {self.hue, self.sat, self.val})
 	if self.amount < 1 then
 		Draw.drawCanvas(texture)
@@ -64,4 +61,4 @@ function FracturedHSVFX:draw(texture)
 	end
 end
 
-return FracturedHSVFX
+return FracturedHSVFXRevert

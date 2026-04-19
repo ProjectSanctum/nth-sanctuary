@@ -16,4 +16,8 @@ function Encounter:createBackground()
     return super.createBackground(self)
 end
 
+function Encounter:update()
+    super.update(self)
+end
+
 return Encounter
