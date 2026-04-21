@@ -6,10 +6,10 @@ function FracturedHSVFXRevert:init(heartbeat, priority)
     super.init(self, "hsv_transform", {}, nil, priority)
     local f = Game.battle:getFX(FracturedHSVFX)
     self.hue_start = 360-f.hue_start;
-    self.sat_start = 1;
+    self.sat_start = 0.5+f.sat_start;
     self.val_start = 1;
     self.hue_target = 360-f.hue_target;
-    self.sat_target = 1;
+    self.sat_target = 0.5+f.sat_target;
     self.val_target = 1;
     self.hue = self.hue_start;
     self.sat = self.sat_start;

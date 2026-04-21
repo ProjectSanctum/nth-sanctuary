@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 17,
+  nextobjectid = 23,
   properties = {
     ["border"] = "church_grand",
     ["music"] = "annoying_prophecy"
@@ -95,7 +95,7 @@ return {
             ["panel_h"] = 140,
             ["panel_w"] = 160,
             ["spr_offx"] = 16,
-            ["spr_offy"] = 40,
+            ["spr_offy"] = 60,
             ["texture"] = "uz"
           }
         }
@@ -136,7 +136,7 @@ return {
       id = 3,
       name = "collision",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -153,6 +153,58 @@ return {
           y = 0,
           width = 640,
           height = 480,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 19,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 720,
+          y = -200,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 20,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 800,
+          y = -160,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 680,
+          y = -160,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 22,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 720,
+          y = -80,
+          width = 80,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}

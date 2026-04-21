@@ -120,6 +120,8 @@ function character:getTitle()
         return prefix.."Ice Trancer\nReceives pain to\nbecome stronger."
     elseif self:getFlag("iceshocks_used", 0) > 0 then
         return prefix.."Frostmancer\nFreezes the enemy."
+    elseif self:checkArmor("doctrine_veil") then
+        return prefix.."   \nA veil that\nhides the truth."    
     else
         return super.getTitle(self)
     end
@@ -129,7 +131,7 @@ function character:getLevel()
     if self:checkWeapon("thornring") or self:getFlag("iceshocks_used", 0) > 0 then
         return super.getLevel(self)
     else
-        return 1
+        return self.level
     end
 end
 

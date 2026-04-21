@@ -6,11 +6,11 @@ function FracturedHSVFX:init(heartbeat, priority)
     super.init(self, "hsv_transform", {}, nil, priority)
     
     self.hue_start = love.math.random(0, 360);
-    self.sat_start = love.math.random(5, 15)/10;
-    self.val_start = love.math.random(5, 15)/10;
+    self.sat_start = love.math.random(5, 10)/10;
+    self.val_start = love.math.random(5, 10)/10;
     self.hue_target = love.math.random(0, 360);
-    self.sat_target = love.math.random(5, 15)/10;
-    self.val_target = love.math.random(5, 15)/10;
+    self.sat_target = love.math.random(5, 10)/10;
+    self.val_target = love.math.random(5, 10)/10;
     self.hue = self.hue_start;
     self.sat = self.sat_start;
     self.val = self.val_start;

@@ -99,9 +99,9 @@ function Mod:init()
         local ok, result = pcall(orig, id, ...)
         if ok then
            return result
-       elseif id ~= "dogcheck/dogcheck" then
-           return orig("dogcheck/dogcheck", ...)
-       else
+        elseif id ~= "dogcheck/dogcheck" then
+           return Registry.createMap("dogcheck", ...)
+        else
            error("Attempt to create non existent map \"" .. tostring(id) .. "\"")
        end
     end)
