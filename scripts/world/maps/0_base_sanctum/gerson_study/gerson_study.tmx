@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="223">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="229">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -58,6 +58,7 @@
   <object id="115" gid="642" x="34" y="472" width="30" height="70"/>
   <object id="116" gid="642" x="896" y="472" width="30" height="70"/>
   <object id="141" name="gerson_table" gid="619" x="334" y="1055" width="266" height="96"/>
+  <object id="228" gid="2147484307" x="740" y="794" width="132" height="54"/>
  </objectgroup>
  <objectgroup color="#ffffff" id="7" name="objects_tableitems">
   <object id="127" name="sprite" x="480" y="990">
