@@ -8,7 +8,7 @@ function CreatureActorGuei:init(actor)
 
 
     super.init(self, actor)
-    self.body = Sprite(self:getTexturePath("body"), 0, 15)
+    self.body = Sprite(self:getTexturePath("body"), 0, 24)
     self.body.debug_select = true
     self:addChild(self.body)
     self.body:addFX(static_fx, "static_fx")
