@@ -31,6 +31,8 @@ function Dummy:init()
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
         "creatures/guei/basic",
+        "creatures/guei/guei_fire",
+        
 
     }
 
