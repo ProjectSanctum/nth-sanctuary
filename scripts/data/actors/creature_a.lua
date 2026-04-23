@@ -51,8 +51,9 @@ function actor:init()
     }
 
     self.parts = {
-        ["body"] = {"body"},
+        ["head"] = {"head"},
         ["eye"] = {"eye"},
+        ["body"] = {"body"},
         ["hand"] = {"hand"},
         ["wisp1"] = {"wisp1"},
         ["wisp2"] = {"wisp2"}
