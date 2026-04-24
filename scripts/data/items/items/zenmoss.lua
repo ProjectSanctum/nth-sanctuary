@@ -42,6 +42,7 @@ function item:init()
     self.reactions = {
         susie = "Woah...",
         ralsei = "I feel stronger...",
+		jamm = "I feel... tough.",
     }
 end
 

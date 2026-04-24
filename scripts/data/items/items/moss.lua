@@ -43,7 +43,7 @@ function item:init()
         susie = "Yummers",
         ralsei = "O-Oh...",
         noelle = "Ew, Kris!!",
-        jamm = "Not the weirdest thing I've eaten..."
+        jamm = "Not the weirdest thing I've eaten...",
     }
 end
 
