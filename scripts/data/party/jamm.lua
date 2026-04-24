@@ -7,8 +7,6 @@ function character:init()
 
     self:setActor("jamm")
     self:setLightActor("jamm_lw")
-    self.actor_hurt = Registry.createActor("jamm_hurt")
-    self.lw_actor_hurt = Registry.createActor("jamm_lw_hurt")
     self:setDarkTransitionActor("jamm_dark_transition")
 
     self.level = Game.chapter
@@ -17,44 +15,24 @@ function character:init()
     self.soul_priority = 1
     self.soul_color = {1, 106/255, 0}
 
-    if Game:getFlag("jamm_canact") then
-        self.has_act = true
-		self.soul_priority = 10
-    else
-        self.has_act = false
-    end
+    self.has_act = false
     self.has_spells = true
 
     self.has_xact = true
     self.xact_name = "J-Action"
-
-    if Game:getFlag("dungeonkiller") then
-        self.lw_portrait = "face/jamm/shaded_neutral"
-    else
-        self.lw_portrait = "face/jamm/neutral"
-    end
+	
+    self.lw_portrait = "face/jamm/neutral"
 
     self:addSpell("darksling")
     self:addSpell("numbshot")
 
-    self.health = 200
-
-    if Game.chapter == 1 then
-        self.stats = {
-            health = 120,
-            attack = 10,
-            defense = 2,
-            magic = 3
-        }
-    else
-        self.stats = {
-            health = 200,
-            attack = 15,
-            defense = 4,
-            magic = 7
-        }
-
-    end
+    self.health = 215
+    self.stats = {
+        health = 215,
+        attack = 15,
+        defense = 4,
+        magic = 7
+    }
 
     self.weapon_icon = "ui/menu/equip/sling"
 
@@ -77,11 +55,7 @@ function character:init()
     self.head_icons = "party/jamm/icon"
     self.name_sprite = "party/jamm/name"
 	
-	if Game:getFlag("dungeonkiller") and Game:getFlag("jamm_closure") then
-		self:setActor("jamm_hurt")
-		self:setLightActor("jamm_lw_hurt")
-		self.menu_icon = "party/jamm/head_shadowed"
-	elseif Game:getFlag("marcy_joined") then
+	if Game:getFlag("marcy_joined") then
 		self:setActor("jammarcy")
 		self:setLightActor("jammarcy_light")
 		self:setDarkTransitionActor("jammarcy_dark_transition")
@@ -98,27 +72,11 @@ function character:init()
     self.battle_offset = {2, 1}
     self.head_icon_offset = {0, -3}
     self.menu_icon_offset = nil
-
-    self.gameover_message = nil
 	
 	self.flee_text = {
 		"[voice:jamm][facec:jamm/nervous]Nope! I'm out!"
 	}
-	
-	self.graduate = true
 end
-
-function character:getActor(light)
-    if light == nil then
-        light = Game.light
-    end
-    if Game:getFlag("jamm_closure") and Game:getFlag("dungeonkiller") then
-        return light and self.lw_actor_hurt or self.actor_hurt
-    end
-    return super.getActor(self, light)
-end
-
-function character:getStarmanTheme() return "jamm" end
 
 function character:onTurnStart(battler)
 	if self.stun then
@@ -168,12 +126,6 @@ end
 
 function character:getFleeText()
 	if Game:getFlag("marcy_joined") then
-		if Game:getFlag("marcy_pirate") then
-			return {
-				"[voice:jamm][facec:jamm/nervous]Nope! I'm out!",
-				"[voice:marcy][facec:marcy/frown_open_patch]Marcy thinks we should go!"
-			}
-		end
 		return {
 			"[voice:jamm][facec:jamm/nervous]Nope! I'm out!",
 			"[voice:marcy][facec:marcy/frown_open]Marcy thinks we should go!"
@@ -182,23 +134,18 @@ function character:getFleeText()
 	return self.flee_text
 end
 
-function character:getMinimemberID()
-    if Game:getFlag("marcy_joined") then
-        return "marcy"
-    end
-    return super.getMinimemberID(self)
-end
+-- function character:getMinimemberID()
+    -- if Game:getFlag("marcy_joined") then
+        -- return "marcy"
+    -- end
+    -- return super.getMinimemberID(self)
+-- end
 
 function character:getGameOverMessage(main)
     return {
         "Hey, I believe we\ncan do this.",
         main:getName()..",[wait:5]\nlet's try again!"
     }
-end
-
-function character:getTVName()
-	if Game:getFlag("marcy_joined") then return "J+M" end
-	return "JAM"
 end
 
 return character
