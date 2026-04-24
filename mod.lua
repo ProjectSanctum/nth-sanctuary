@@ -470,7 +470,7 @@ end
 ---@return int
 function Mod:getDarkShardCount(dark_shard_bits)
     dark_shard_bits = dark_shard_bits or self.dark_shards
-    local count = 1 -- (Because of the starting dark shard)
+    local count = 0 -- (Because of the starting dark shard)
     for id = 0, #dark_shard_bits * 32 do
         local word = bit.rshift(id, 5) + 1
         local subid = bit.band(id, 0b00011111)
