@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="160">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="160">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -67,7 +67,7 @@
 </data>
  </layer>
  <objectgroup id="16" name="objects_bg">
-  <object id="146" name="lavawaverbg" x="0" y="120">
+  <object id="146" name="lavawaverbg" x="80" y="0">
    <point/>
   </object>
  </objectgroup>
@@ -563,13 +563,13 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="objects_overlay">
-  <object id="17" name="texturescroller" x="-20" y="480">
+  <object id="17" name="texturescroller" x="40" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
    <point/>
   </object>
-  <object id="18" name="churchfog" x="-40" y="480">
+  <object id="18" name="churchfog" x="0" y="0">
    <point/>
   </object>
   <object id="154" name="parallax_waterfall" x="480" y="0" width="80" height="1760">

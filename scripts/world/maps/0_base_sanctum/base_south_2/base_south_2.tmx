@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="40">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="41">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -166,15 +166,15 @@
   </object>
  </objectgroup>
  <objectgroup color="#0000ff" id="8" name="collision">
-  <object id="2" x="-40" y="0" width="720" height="80"/>
+  <object id="2" x="0" y="0" width="680" height="80"/>
   <object id="3" x="240" y="160" width="400" height="280"/>
-  <object id="5" x="-40" y="80" width="160" height="440"/>
-  <object id="6" x="-40" y="520" width="520" height="160"/>
-  <object id="7" x="274" y="680" width="206" height="240"/>
-  <object id="10" x="-40" y="680" width="206" height="240"/>
-  <object id="11" x="-40" y="920" width="40" height="120"/>
+  <object id="5" x="0" y="80" width="120" height="440"/>
+  <object id="6" x="0" y="520" width="480" height="200"/>
+  <object id="7" x="274" y="720" width="206" height="200"/>
+  <object id="10" x="0" y="720" width="80" height="280"/>
   <object id="12" x="0" y="1000" width="640" height="40"/>
   <object id="13" x="640" y="160" width="40" height="880"/>
+  <object id="40" x="80" y="720" width="80" height="200"/>
  </objectgroup>
  <objectgroup id="9" name="objects_overlay">
   <object id="18" name="texturescroller" x="0" y="0">

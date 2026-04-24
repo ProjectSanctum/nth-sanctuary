@@ -1,7 +1,7 @@
 return {
   version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -110,6 +110,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
+          opacity = 1,
           gid = 623,
           visible = true,
           properties = {}
@@ -124,6 +125,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
+          opacity = 1,
           gid = 627,
           visible = true,
           properties = {}
@@ -138,6 +140,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
+          opacity = 1,
           gid = 623,
           visible = true,
           properties = {}
@@ -152,6 +155,7 @@ return {
           width = 200,
           height = 1240,
           rotation = 0,
+          opacity = 1,
           gid = 2147484272,
           visible = true,
           properties = {}
@@ -166,6 +170,7 @@ return {
           width = 400,
           height = 1600,
           rotation = 0,
+          opacity = 1,
           gid = 2147484274,
           visible = true,
           properties = {}
@@ -196,6 +201,7 @@ return {
           width = 900,
           height = 1200,
           rotation = 270,
+          opacity = 1,
           gid = 631,
           visible = true,
           properties = {}
@@ -346,6 +352,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -359,6 +366,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -372,6 +380,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -385,6 +394,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -398,6 +408,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -427,6 +438,7 @@ return {
           width = 80,
           height = 120,
           rotation = 0,
+          opacity = 1,
           gid = 706,
           visible = true,
           properties = {}
@@ -441,6 +453,7 @@ return {
           width = 121,
           height = 140,
           rotation = 0,
+          opacity = 1,
           gid = 725,
           visible = true,
           properties = {}
@@ -471,6 +484,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "0_base_sanctum/base_east_2",
@@ -487,6 +501,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "guei",
@@ -512,6 +527,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "4_4th_sanctuary/fourth_sanctum_1",
@@ -528,6 +544,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "0_base_sanctum/base_east_3_prophecy",
@@ -544,6 +561,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "wafer",
@@ -564,6 +582,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "0_base_sanctum/gerson_study",
@@ -580,6 +599,7 @@ return {
           width = 68,
           height = 50,
           rotation = 0,
+          opacity = 1,
           gid = 657,
           visible = true,
           properties = {}
@@ -594,6 +614,7 @@ return {
           width = 76,
           height = 38,
           rotation = 0,
+          opacity = 1,
           gid = 656,
           visible = true,
           properties = {}
@@ -608,6 +629,7 @@ return {
           width = 36,
           height = 50,
           rotation = 0,
+          opacity = 1,
           gid = 661,
           visible = true,
           properties = {}
@@ -622,6 +644,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* \"ENTRANCE TO THE FOURTH SANCTUARY\""
@@ -637,6 +660,7 @@ return {
           width = 40,
           height = 30,
           rotation = 0,
+          opacity = 1,
           gid = 705,
           visible = true,
           properties = {}
@@ -667,6 +691,7 @@ return {
           width = 360,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -680,6 +705,7 @@ return {
           width = 360,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -693,6 +719,7 @@ return {
           width = 200,
           height = 280,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -706,6 +733,7 @@ return {
           width = 400,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -719,6 +747,7 @@ return {
           width = 280,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -732,6 +761,7 @@ return {
           width = 640,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -745,6 +775,7 @@ return {
           width = 680,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -758,6 +789,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -771,6 +803,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -789,6 +822,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -808,6 +842,7 @@ return {
           width = 320,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -821,6 +856,7 @@ return {
           width = 280,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -834,6 +870,7 @@ return {
           width = 32,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -847,6 +884,7 @@ return {
           width = 28,
           height = 18,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -860,6 +898,7 @@ return {
           width = 32,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -873,6 +912,7 @@ return {
           width = 28,
           height = 18,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -886,6 +926,7 @@ return {
           width = 42,
           height = 20,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -910,11 +951,12 @@ return {
           name = "churchfog",
           type = "",
           shape = "point",
-          x = -270,
-          y = 60,
+          x = 0,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -939,11 +981,12 @@ return {
           name = "texturescroller",
           type = "",
           shape = "point",
-          x = -222.667,
-          y = -174.667,
+          x = 40,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
@@ -954,11 +997,12 @@ return {
           name = "filter",
           type = "",
           shape = "point",
-          x = -302.667,
-          y = -14.6664,
+          x = 80,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv2"

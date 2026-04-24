@@ -1,7 +1,7 @@
 return {
   version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -124,6 +124,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -137,6 +138,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -150,6 +152,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -163,6 +166,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -176,6 +180,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -189,6 +194,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["size"] = 96
@@ -204,6 +210,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -217,6 +224,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -246,6 +254,7 @@ return {
           width = 200,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -259,6 +268,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -272,6 +282,7 @@ return {
           width = 1000,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -285,6 +296,7 @@ return {
           width = 1000,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -298,6 +310,7 @@ return {
           width = 200,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -311,6 +324,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -340,6 +354,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["downonce"] = true,
@@ -361,6 +376,7 @@ return {
           width = 58,
           height = 246,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["flagcheck"] = "!pianotest"
@@ -392,6 +408,7 @@ return {
           width = 26,
           height = 36,
           rotation = 0,
+          opacity = 1,
           gid = 86,
           visible = true,
           properties = {
@@ -408,6 +425,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["marker"] = "light2"
@@ -423,6 +441,7 @@ return {
           width = 26,
           height = 36,
           rotation = 0,
+          opacity = 1,
           gid = 86,
           visible = true,
           properties = {
@@ -439,6 +458,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["marker"] = "light3"
@@ -454,6 +474,7 @@ return {
           width = 26,
           height = 36,
           rotation = 0,
+          opacity = 1,
           gid = 86,
           visible = true,
           properties = {}
@@ -468,6 +489,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["marker1"] = "light4",
@@ -484,6 +506,7 @@ return {
           width = 26,
           height = 36,
           rotation = 0,
+          opacity = 1,
           gid = 86,
           visible = true,
           properties = {}
@@ -498,6 +521,7 @@ return {
           width = 90,
           height = 30,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["flag"] = "pianotest",
@@ -514,6 +538,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["flagcheck"] = "!pianotest",
@@ -534,6 +559,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["flagcheck"] = "!pianotest",
@@ -555,6 +581,7 @@ return {
           width = 90,
           height = 66,
           rotation = 0,
+          opacity = 1,
           gid = 8,
           visible = true,
           properties = {}
@@ -569,6 +596,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["size"] = 96
@@ -584,6 +612,7 @@ return {
           width = 26,
           height = 36,
           rotation = 0,
+          opacity = 1,
           gid = 86,
           visible = true,
           properties = {}
@@ -598,6 +627,7 @@ return {
           width = 26,
           height = 36,
           rotation = 0,
+          opacity = 1,
           gid = 86,
           visible = true,
           properties = {}
@@ -612,6 +642,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["marker"] = "light1"
@@ -627,6 +658,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "debug_rooms/very_dark_place",
@@ -643,6 +675,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "debug_rooms/piano_test",
@@ -670,11 +703,12 @@ return {
           name = "darkness",
           type = "",
           shape = "point",
-          x = 40,
+          x = 0,
           y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["alpha"] = 1,

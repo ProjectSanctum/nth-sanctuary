@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="85">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="85">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -132,10 +132,10 @@
  </objectgroup>
  <objectgroup id="11" name="objects_over_party" parallaxx="0.9"/>
  <objectgroup id="2" name="objects_overlay">
-  <object id="1" name="churchfog" x="-78" y="-28">
+  <object id="1" name="churchfog" x="40" y="0">
    <point/>
   </object>
-  <object id="2" name="filter" x="-160" y="-40">
+  <object id="2" name="filter" x="0" y="0">
    <properties>
     <property name="type" value="fractured"/>
    </properties>

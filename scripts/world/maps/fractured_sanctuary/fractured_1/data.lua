@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -60,11 +60,12 @@ return {
           name = "fractured_bg",
           type = "",
           shape = "point",
-          x = 120,
-          y = 40,
+          x = 0,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -94,6 +95,7 @@ return {
           width = 316.955,
           height = 458,
           rotation = 270,
+          opacity = 1,
           gid = 1073742865,
           visible = true,
           properties = {
@@ -110,6 +112,7 @@ return {
           width = 316.955,
           height = 458,
           rotation = 270,
+          opacity = 1,
           gid = 1073742865,
           visible = true,
           properties = {
@@ -126,6 +129,7 @@ return {
           width = 316.955,
           height = 1018,
           rotation = 270,
+          opacity = 1,
           gid = 1073742865,
           visible = true,
           properties = {
@@ -158,6 +162,7 @@ return {
           width = 320,
           height = 800,
           rotation = 300,
+          opacity = 1,
           gid = 1073742869,
           visible = true,
           properties = {}
@@ -172,6 +177,7 @@ return {
           width = 320,
           height = 800,
           rotation = 45,
+          opacity = 1,
           gid = 1073742869,
           visible = true,
           properties = {}
@@ -322,6 +328,7 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -335,6 +342,7 @@ return {
           width = 80,
           height = 400,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -348,6 +356,7 @@ return {
           width = 80,
           height = 400,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -361,6 +370,7 @@ return {
           width = 560,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -374,6 +384,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -387,6 +398,7 @@ return {
           width = 40,
           height = 400,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -400,6 +412,7 @@ return {
           width = 240,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -413,6 +426,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -426,6 +440,7 @@ return {
           width = 160,
           height = 440,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -439,6 +454,7 @@ return {
           width = 680,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -452,6 +468,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -465,6 +482,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -478,6 +496,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -491,6 +510,7 @@ return {
           width = 80,
           height = 640,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -504,6 +524,7 @@ return {
           width = 121,
           height = 196,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -517,6 +538,7 @@ return {
           width = 121,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -530,6 +552,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -543,6 +566,7 @@ return {
           width = 240,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -612,6 +636,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* NQUV KP C RNCEG, VJG JGTQGU NQUG JQRG",
@@ -628,6 +653,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "lobbyman",
@@ -644,6 +670,7 @@ return {
           width = 240,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["fade_edges"] = true,
@@ -669,6 +696,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "fractured_sanctuary/fractured_2",
@@ -701,6 +729,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -714,6 +743,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -783,6 +813,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -796,6 +827,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -825,6 +857,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -838,6 +871,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "fractured"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="51">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="51">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -249,18 +249,18 @@
   </object>
  </objectgroup>
  <objectgroup id="10" name="objects_fog">
-  <object id="32" name="churchfog" x="-140" y="210">
+  <object id="32" name="churchfog" x="80" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="8" name="objects_overlay">
-  <object id="19" name="texturescroller" x="-116" y="-14.0003">
+  <object id="19" name="texturescroller" x="0" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
    <point/>
   </object>
-  <object id="20" name="filter" x="-196" y="146">
+  <object id="20" name="filter" x="40" y="0">
    <properties>
     <property name="type" value="hsv2"/>
    </properties>

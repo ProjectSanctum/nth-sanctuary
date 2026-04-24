@@ -216,18 +216,18 @@
   </object>
  </objectgroup>
  <objectgroup id="9" name="objects_fog">
-  <object id="145" name="churchfog" x="-40" y="80">
+  <object id="145" name="churchfog" x="80" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="8" name="objects_overlay">
-  <object id="143" name="texturescroller" x="-40" y="-120">
+  <object id="143" name="texturescroller" x="40" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
    <point/>
   </object>
-  <object id="144" name="filter" x="-120" y="40.0006">
+  <object id="144" name="filter" x="120" y="0">
    <properties>
     <property name="type" value="hsv2"/>
    </properties>

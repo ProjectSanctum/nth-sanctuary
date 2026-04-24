@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="28" nextobjectid="154">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="28" nextobjectid="154">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -189,7 +189,7 @@
 </data>
  </layer>
  <objectgroup id="15" name="objects_tile_oscillate">
-  <object id="80" name="texturescroller" x="-60" y="150">
+  <object id="80" name="texturescroller" x="80" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
@@ -617,12 +617,12 @@ HEROES CLIMB INFINITY FLIGHT.</property>
 </data>
  </layer>
  <objectgroup id="6" name="objects_fog">
-  <object id="13" name="churchfog" x="-163" y="222">
+  <object id="13" name="churchfog" x="120" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="5" name="objects_overlay">
-  <object id="12" name="filter" x="-253" y="172">
+  <object id="12" name="filter" x="40" y="0">
    <properties>
     <property name="type" value="hsv3"/>
    </properties>

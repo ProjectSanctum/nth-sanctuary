@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="53">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="53">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -13,7 +13,7 @@
  <tileset firstgid="781" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
  <tileset firstgid="1041" source="../../../tilesets/church_objects.tsx"/>
  <objectgroup id="11" name="objects_bg">
-  <object id="30" name="fractured_bg" x="120" y="40">
+  <object id="30" name="fractured_bg" x="0" y="0">
    <point/>
   </object>
  </objectgroup>

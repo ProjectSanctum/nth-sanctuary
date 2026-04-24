@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -111,6 +111,7 @@ return {
           width = 480,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -124,6 +125,7 @@ return {
           width = 40,
           height = 840,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -137,6 +139,7 @@ return {
           width = 40,
           height = 840,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -150,6 +153,7 @@ return {
           width = 120,
           height = 280,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -163,6 +167,7 @@ return {
           width = 400,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -176,6 +181,7 @@ return {
           width = 120,
           height = 400,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -189,6 +195,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -218,6 +225,7 @@ return {
           width = 240,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -231,6 +239,7 @@ return {
           width = 36,
           height = 120,
           rotation = 0,
+          opacity = 1,
           gid = 3221226070,
           visible = true,
           properties = {
@@ -250,6 +259,7 @@ return {
           width = 36,
           height = 120,
           rotation = 0,
+          opacity = 1,
           gid = 1073742422,
           visible = true,
           properties = {
@@ -269,6 +279,7 @@ return {
           width = 36,
           height = 120,
           rotation = 0,
+          opacity = 1,
           gid = 3221226070,
           visible = true,
           properties = {
@@ -288,6 +299,7 @@ return {
           width = 36,
           height = 120,
           rotation = 0,
+          opacity = 1,
           gid = 1073742422,
           visible = true,
           properties = {
@@ -307,6 +319,7 @@ return {
           width = 36,
           height = 120,
           rotation = 0,
+          opacity = 1,
           gid = 3221226070,
           visible = true,
           properties = {
@@ -326,6 +339,7 @@ return {
           width = 36,
           height = 120,
           rotation = 0,
+          opacity = 1,
           gid = 1073742422,
           visible = true,
           properties = {
@@ -361,6 +375,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "ddelta",
@@ -377,6 +392,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "4_4th_sanctuary/fourth_sanctum_2",
@@ -409,6 +425,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -422,6 +439,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -446,11 +464,12 @@ return {
           name = "darkness",
           type = "",
           shape = "point",
-          x = 0,
+          x = 40,
           y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["alpha"] = 0.5,
@@ -467,6 +486,7 @@ return {
           width = 184,
           height = 262,
           rotation = 0,
+          opacity = 1,
           gid = 689,
           visible = true,
           properties = {
@@ -487,6 +507,7 @@ return {
           width = 120,
           height = 262,
           rotation = 0,
+          opacity = 1,
           gid = 689,
           visible = true,
           properties = {
@@ -507,6 +528,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
+          opacity = 1,
           gid = 692,
           visible = true,
           properties = {
@@ -526,6 +548,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
+          opacity = 1,
           gid = 2147484340,
           visible = true,
           properties = {
@@ -545,6 +568,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
+          opacity = 1,
           gid = 692,
           visible = true,
           properties = {
@@ -564,6 +588,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
+          opacity = 1,
           gid = 2147484340,
           visible = true,
           properties = {
@@ -583,6 +608,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
+          opacity = 1,
           gid = 692,
           visible = true,
           properties = {
@@ -602,6 +628,7 @@ return {
           width = 62,
           height = 80,
           rotation = 0,
+          opacity = 1,
           gid = 2147484340,
           visible = true,
           properties = {
@@ -616,11 +643,12 @@ return {
           name = "lightbeamfx",
           type = "",
           shape = "point",
-          x = 40,
+          x = 80,
           y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -645,11 +673,12 @@ return {
           name = "filter",
           type = "",
           shape = "point",
-          x = -40,
-          y = -40,
+          x = 0,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["hue_start"] = "0",

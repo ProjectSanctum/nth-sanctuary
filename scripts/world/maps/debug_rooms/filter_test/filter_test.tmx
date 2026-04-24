@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="26">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="26">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -101,7 +101,7 @@
   </object>
  </objectgroup>
  <objectgroup id="2" name="objects_overlay">
-  <object id="5" name="filter" x="240" y="400">
+  <object id="5" name="filter" x="0" y="0">
    <properties>
     <property name="hue_start" value="200"/>
     <property name="hue_target" value="240"/>

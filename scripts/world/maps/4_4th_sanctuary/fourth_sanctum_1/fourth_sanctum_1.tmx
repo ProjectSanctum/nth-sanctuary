@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="178">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="178">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -141,7 +141,7 @@
   <object id="89" name="tile_oscillate" x="800" y="880" width="80" height="240"/>
   <object id="90" name="tile_oscillate" x="160" y="640" width="440" height="240"/>
   <object id="91" name="tile_oscillate" x="160" y="880" width="160" height="320"/>
-  <object id="92" name="texturescroller" x="-30" y="0">
+  <object id="92" name="texturescroller" x="0" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
@@ -428,12 +428,12 @@
   </object>
  </objectgroup>
  <objectgroup id="18" name="objects_fog">
-  <object id="72" name="churchfog" x="-110" y="180">
+  <object id="72" name="churchfog" x="40" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="2" name="objects_overlay">
-  <object id="2" name="filter" x="-160" y="120">
+  <object id="2" name="filter" x="80" y="0">
    <properties>
     <property name="type" value="hsv3"/>
    </properties>

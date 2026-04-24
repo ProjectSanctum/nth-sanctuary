@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="65">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="65">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -18,7 +18,7 @@
  <tileset firstgid="1771" source="../../../tilesets/bg_dw_dither_overlay_tileset.tsx"/>
  <tileset firstgid="1817" source="../../../tilesets/church_objects.tsx"/>
  <objectgroup id="12" name="objects_bg">
-  <object id="39" name="basesanctum_bg" x="0" y="0">
+  <object id="39" name="basesanctum_bg" x="40" y="0">
    <point/>
   </object>
  </objectgroup>
@@ -377,7 +377,7 @@ THE KNIGHT IS TO NO FAULT.</property>
     <property name="marker" value="entry_primary"/>
    </properties>
   </object>
-  <object id="32" name="roomglow" x="40" y="40">
+  <object id="32" name="roomglow" x="80" y="0">
    <properties>
     <property name="prophecy" type="bool" value="true"/>
    </properties>
@@ -398,18 +398,18 @@ THE KNIGHT IS TO NO FAULT.</property>
   </object>
  </objectgroup>
  <objectgroup id="14" name="objects_fog">
-  <object id="47" name="churchfog" x="-70" y="260">
+  <object id="47" name="churchfog" x="120" y="0">
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="6" name="objects_overlay">
-  <object id="3" name="texturescroller" x="-52" y="50.6667">
+  <object id="3" name="texturescroller" x="0" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
    <point/>
   </object>
-  <object id="4" name="filter" x="-132" y="210.667">
+  <object id="4" name="filter" x="160" y="0">
    <properties>
     <property name="type" value="hsv2"/>
    </properties>
