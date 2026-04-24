@@ -28,6 +28,7 @@ function item:init()
     self.reactions = {
         susie = "Well thats... Cheesy.",
         ralsei = "A bit savory, but nice!",
+		jamm = "Is this from a certain warehouse?",
     }
 end
 
