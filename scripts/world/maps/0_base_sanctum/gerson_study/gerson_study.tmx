@@ -75,7 +75,7 @@
   <object id="181" gid="640" x="430" y="844" width="108" height="104"/>
   <object id="182" gid="660" x="366" y="872" width="222" height="102"/>
  </objectgroup>
- <objectgroup color="#ff00ff" id="4" name="objects_party" visible="0">
+ <objectgroup color="#ff00ff" id="4" name="objects_party">
   <object id="54" gid="618" x="154" y="910" width="116" height="152"/>
   <object id="60" gid="621" x="604" y="1072" width="36" height="50"/>
   <object id="61" gid="620" x="334" y="1076" width="44" height="26"/>
