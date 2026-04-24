@@ -6,14 +6,19 @@ function CreatureActorGuei:init(actor)
         ["brightness"] = 2
     })
 
-
     super.init(self, actor)
+
     self.body = Sprite(self:getTexturePath("body"), 0, 24)
     self.body.debug_select = true
     self:addChild(self.body)
     self.body:addFX(static_fx, "static_fx")
 
-    self.eye = Part(17, 15, 10)
+    self.head = Sprite(self:getTexturePath("head"), 3, 0)
+    self.head.debug_select = false
+    self:addChild(self.head)
+    self.head:addFX(static_fx, "static_fx")
+
+    self.eye = Part(17, 17, 8)
     self:addChild(self.eye)
 
     self.hand = Sprite(self:getTexturePath("hand"), -15, 30)
@@ -57,6 +62,7 @@ function CreatureActorGuei:update()
     self.animsiner = self.animsiner + (1 * DTMULT)
 
     self.body:setFrame(math.floor(self.animsiner / 6))
+    self.head:setFrame(math.floor(self.animsiner / 6))
 
     self.hand.x = math.sin(self.siner * 1.5) * 24 + 8
     self.hand.y = -math.cos(self.siner * 1.5) * 12 + 30
