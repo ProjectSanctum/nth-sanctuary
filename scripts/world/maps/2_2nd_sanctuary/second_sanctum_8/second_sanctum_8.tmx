@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="291">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="293">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -111,7 +111,6 @@
   <object id="274" x="800" y="480" width="480" height="120"/>
   <object id="275" x="680" y="120" width="120" height="120"/>
   <object id="276" x="160" y="480" width="320" height="120"/>
-  <object id="290" x="1280" y="360" width="40" height="120"/>
  </objectgroup>
  <objectgroup id="6" name="objects"/>
  <objectgroup id="5" name="markers">
@@ -119,6 +118,9 @@
    <point/>
   </object>
   <object id="230" name="spawn" x="640" y="280">
+   <point/>
+  </object>
+  <object id="291" name="entry2" x="1240" y="420">
    <point/>
   </object>
  </objectgroup>
@@ -147,6 +149,12 @@
     <property name="cutscene" value="lobbyman.second"/>
    </properties>
    <point/>
+  </object>
+  <object id="292" name="transition" x="1280" y="360" width="40" height="120">
+   <properties>
+    <property name="map" value="2_2nd_sanctuary/second_sanctum_9"/>
+    <property name="marker" value="entry"/>
+   </properties>
   </object>
  </objectgroup>
  <objectgroup id="10" name="objects_fog">

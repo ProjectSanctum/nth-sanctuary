@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="231">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="306">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -75,7 +75,7 @@
   <object id="181" gid="640" x="430" y="844" width="108" height="104"/>
   <object id="182" gid="660" x="366" y="872" width="222" height="102"/>
  </objectgroup>
- <objectgroup color="#ff00ff" id="4" name="objects_party">
+ <objectgroup color="#ff00ff" id="4" name="objects_party" visible="0">
   <object id="54" gid="618" x="154" y="910" width="116" height="152"/>
   <object id="60" gid="621" x="604" y="1072" width="36" height="50"/>
   <object id="61" gid="620" x="334" y="1076" width="44" height="26"/>
@@ -170,18 +170,12 @@
  </objectgroup>
  <objectgroup color="#0000ff" id="3" name="collision">
   <object id="28" x="160" y="800" width="80" height="110"/>
-  <object id="29" x="190" y="720">
-   <polygon points="-40,-40 80,80 90,80 -30,80 -30,200 -190,200 -190,-720 770,-720 770,480 -190,480 -190,280 -30,280 -12,321 10,348 31,365 67,382 97,390 130,396 170,400 410,400 450,396 483,390 513,382 530,374 549,364 570,348 592,321 610,280 610,80 490,80 500,80 620,-40 690,-40 690,-440 100,-440 100,-520 -6,-520 -6,-440 -110,-440 -108,-40"/>
-  </object>
   <object id="56" x="360" y="988" width="240" height="67"/>
   <object id="58" x="334" y="1054" width="42" height="20"/>
   <object id="62" x="608" y="1038" width="32" height="30"/>
   <object id="66" x="624" y="994" width="28" height="18"/>
   <object id="67" x="642" y="1026" width="28" height="18"/>
   <object id="68" x="580" y="680" width="36" height="40"/>
-  <object id="73" x="160" y="623">
-   <polygon points="10,17 0,17 0,-263 640,-263 640,17 630,17 520,127 560,87 560,81 514,69 480,63 394,57 254,57 168,63 134,69 80,81 80,87 120,127"/>
-  </object>
   <object id="90" x="620" y="690" width="28" height="26"/>
   <object id="118" x="404" y="788" width="160" height="61"/>
   <object id="136" x="451" y="760" width="58" height="28"/>
@@ -203,6 +197,39 @@
   <object id="216" x="370" y="754" width="32" height="30"/>
   <object id="217" x="333" y="714" width="28" height="18"/>
   <object id="218" x="558" y="752" width="28" height="18"/>
+  <object id="259" x="360" y="988" width="240" height="67"/>
+  <object id="260" x="334" y="1054" width="42" height="20"/>
+  <object id="261" x="608" y="1038" width="32" height="30"/>
+  <object id="262" x="624" y="994" width="28" height="18"/>
+  <object id="263" x="642" y="1026" width="28" height="18"/>
+  <object id="264" x="580" y="680" width="36" height="40"/>
+  <object id="277" x="620" y="690" width="28" height="26"/>
+  <object id="281" x="404" y="788" width="160" height="61"/>
+  <object id="282" x="451" y="760" width="58" height="28"/>
+  <object id="283" x="282.25" y="1018.5" width="27" height="18.25"/>
+  <object id="284" x="142.333" y="302" width="42.3333" height="23.6667"/>
+  <object id="285" x="666" y="289" width="42" height="20"/>
+  <object id="286" x="296" y="282" width="42" height="20"/>
+  <object id="287" x="590" y="738" width="42" height="20"/>
+  <object id="288" x="365" y="700" width="42" height="20"/>
+  <object id="289" x="246" y="1011" width="32" height="30"/>
+  <object id="290" x="264" y="296" width="28" height="18"/>
+  <object id="291" x="188" y="320" width="28" height="18"/>
+  <object id="292" x="140" y="277" width="28" height="18"/>
+  <object id="293" x="226" y="292" width="32" height="30"/>
+  <object id="294" x="104" y="269" width="32" height="30"/>
+  <object id="295" x="570" y="275" width="32" height="30"/>
+  <object id="296" x="634" y="303" width="28" height="18"/>
+  <object id="297" x="266" y="853" width="32" height="30"/>
+  <object id="298" x="370" y="754" width="32" height="30"/>
+  <object id="299" x="333" y="714" width="28" height="18"/>
+  <object id="300" x="558" y="752" width="28" height="18"/>
+  <object id="304" x="190" y="720">
+   <polygon points="-41,-40 79,80 -30,80 -30,200 -190,200 -190,-720 770,-720 770,480 -190,480 -190,280 -30,280 -30,302 -12,320 -14,320 26,360 26,361 53,388 90,388 102,400 479,400 490,389 490,388 524,388 552,360 553,360 593,320 592,320 610,302 610,80 501,80 621,-40 690,-40 690,-440 100,-440 100,-520 -6,-520 -6,-440 -110,-440 -110,-40"/>
+  </object>
+  <object id="305" x="160" y="623">
+   <polygon points="0,0 0,-263 640,-263 640,0 520,120 560,80 450,57 394,57 190,57 80,80 120,120"/>
+  </object>
  </objectgroup>
  <objectgroup color="#aa00ff" id="6" name="markers">
   <object id="104" name="entry_left" x="40" y="960">

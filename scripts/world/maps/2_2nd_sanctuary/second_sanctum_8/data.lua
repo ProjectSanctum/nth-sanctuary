@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 15,
-  nextobjectid = 291,
+  nextobjectid = 293,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -75,6 +75,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
+          opacity = 1,
           gid = 3221225477,
           visible = true,
           properties = {}
@@ -89,6 +90,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 45,
+          opacity = 1,
           gid = 5,
           visible = true,
           properties = {}
@@ -159,6 +161,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["base_tex"] = "backgrounds/glow_purple_tile_oscillate",
@@ -272,6 +275,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -285,6 +289,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -298,6 +303,7 @@ return {
           width = 120,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -311,6 +317,7 @@ return {
           width = 200,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -324,6 +331,7 @@ return {
           width = 320,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -337,6 +345,7 @@ return {
           width = 40,
           height = 240,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -350,6 +359,7 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -363,6 +373,7 @@ return {
           width = 480,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -376,6 +387,7 @@ return {
           width = 480,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -389,6 +401,7 @@ return {
           width = 120,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -402,19 +415,7 @@ return {
           width = 320,
           height = 120,
           rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 290,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 1280,
-          y = 360,
-          width = 40,
-          height = 120,
-          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -459,6 +460,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -472,6 +474,21 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 291,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 1240,
+          y = 420,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -501,6 +518,7 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_7",
@@ -517,6 +535,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -530,6 +549,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -543,6 +563,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -556,6 +577,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -569,10 +591,28 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "lobbyman",
             ["cutscene"] = "lobbyman.second"
+          }
+        },
+        {
+          id = 292,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1280,
+          y = 360,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "2_2nd_sanctuary/second_sanctum_9",
+            ["marker"] = "entry"
           }
         }
       }
@@ -601,6 +641,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -630,6 +671,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
