@@ -1,4 +1,4 @@
-local item, super = Class("lancer_cookie", true)
+local item, super = Class("lancercookie", true)
 
 function item:init()
     super.init(self)

@@ -20,7 +20,7 @@ function item:init()
 			jamm = "Chug! Chug! Chug!"
         },
         jamm = {
-			jamm = "Tastes like hot cocoa... I like it."
+			jamm = "Tastes like hot cocoa... I like it.",
 			susie = "Hot cocoa!? Give me some!"
 		},
     })

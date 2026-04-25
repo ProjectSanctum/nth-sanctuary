@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="57">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="57">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -239,7 +239,7 @@
   </object>
   <object id="52" name="chest" x="400" y="240" width="40" height="40">
    <properties>
-    <property name="item" value="revivemint"/>
+    <property name="item" value="master_medallion"/>
    </properties>
   </object>
  </objectgroup>

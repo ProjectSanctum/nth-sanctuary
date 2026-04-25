@@ -1,4 +1,4 @@
-local item, super = Class("javacooke", true)
+local item, super = Class("javacookie", true)
 
 function item:init()
     super.init(self)

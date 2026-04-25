@@ -3,9 +3,9 @@ local item, super = Class("ralsei_tea", true)
 function item:init()
     super.init(self)
 	
-	self.heal_amounts = TableUtils(self.heal_amounts, {
+	self.heal_amounts = TableUtils.merge(self.heal_amounts, {
 		jamm = 90
-	}
+	})
 
     self.reactions = TableUtils.merge(self.reactions, {
         kris = {
