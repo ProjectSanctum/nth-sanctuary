@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.12.1",
   class = "",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 16,
-  nextobjectid = 33,
+  nextlayerid = 17,
+  nextobjectid = 37,
   properties = {
     ["border"] = "church_a",
     ["music"] = "mus_rain_deep",
@@ -39,6 +39,11 @@ return {
       firstgid = 829,
       filename = "../../../tilesets/church_objects.tsx",
       exportfilename = "../../../tilesets/church_objects.lua"
+    },
+    {
+      name = "light_areas",
+      firstgid = 932,
+      filename = "../../../tilesets/light_areas.tsx"
     }
   },
   layers = {
@@ -277,7 +282,7 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 204, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 822, 822, 822, 822, 822, 822, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 680, 681, 681, 681, 681, 683, 684, 611, 612, 624, 724, 721, 722, 600, 320, 320, 723, 320, 320, 320, 320, 320, 320, 320, 320, 320,
+        0, 680, 681, 681, 681, 681, 683, 684, 611, 612, 624, 724, 721, 722, 721, 320, 320, 723, 320, 320, 320, 320, 320, 320, 320, 320, 320,
         0, 692, 693, 693, 693, 693, 695, 696, 617, 618, 623, 599, 600, 605, 606, 320, 320, 320, 62, 320, 320, 320, 320, 320, 320, 320, 320,
         0, 710, 699, 709, 711, 712, 702, 710, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76,
         0, 716, 705, 715, 717, 718, 708, 716, 729, 730, 682, 590, 591, 592, 0, 727, 728, 729, 730, 0, 590, 591, 592, 682, 727, 728, 0,
@@ -399,7 +404,7 @@ return {
           name = "roomglow",
           type = "",
           shape = "point",
-          x = 0,
+          x = 40,
           y = 0,
           width = 0,
           height = 0,
@@ -499,7 +504,7 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 520,
+          x = 540,
           y = 310,
           width = 0,
           height = 0,
@@ -510,6 +515,78 @@ return {
             ["actor"] = "rouxls",
             ["text1"] = "* WHEREST AM I?!?!?!"
           }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 16,
+      name = "objects_lightarea",
+      class = "",
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 33,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 634,
+          y = 514,
+          width = 376,
+          height = 458,
+          rotation = 0,
+          opacity = 1,
+          gid = 932,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.2,
+            ["light_color"] = "#ff7ffaff",
+            ["light_dust"] = true,
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 34,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 314,
+          y = 514,
+          width = 376,
+          height = 458,
+          rotation = 0,
+          opacity = 1,
+          gid = 932,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.2,
+            ["light_color"] = "#ff7ffaff",
+            ["light_dust"] = true,
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 35,
+          name = "lightbeamfx",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
         }
       }
     },

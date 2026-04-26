@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="24" nextobjectid="102">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="24" nextobjectid="102">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -371,7 +371,7 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="10" name="objects_lightarea" visible="0">
+ <objectgroup id="10" name="objects_lightarea">
   <object id="48" gid="625" x="320" y="890" width="160" height="720">
    <properties>
     <property name="light" type="bool" value="true"/>
@@ -409,7 +409,7 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
   <object id="73" name="lightbeamfx" x="0" y="0">
    <point/>
   </object>
-  <object id="101" name="darkness" x="30" y="0">
+  <object id="101" name="darkness" x="160" y="0">
    <properties>
     <property name="alpha" type="float" value="0.2"/>
     <property name="highlight" type="bool" value="true"/>
@@ -423,7 +423,7 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
   </object>
  </objectgroup>
  <objectgroup id="7" name="objects_overlay">
-  <object id="69" name="texturescroller" x="0" y="0">
+  <object id="69" name="texturescroller" x="200" y="0">
    <properties>
     <property name="type" value="hsv"/>
    </properties>
