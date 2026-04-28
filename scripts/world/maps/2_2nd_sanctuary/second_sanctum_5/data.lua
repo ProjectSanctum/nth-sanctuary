@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 18,
-  nextobjectid = 138,
+  nextobjectid = 139,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -321,7 +321,6 @@ return {
           width = 40,
           height = 400,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -335,7 +334,6 @@ return {
           width = 40,
           height = 200,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -349,7 +347,6 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -363,7 +360,6 @@ return {
           width = 400,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -377,7 +373,6 @@ return {
           width = 40,
           height = 360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -391,7 +386,6 @@ return {
           width = 40,
           height = 440,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -405,7 +399,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -419,7 +412,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -433,7 +425,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -447,7 +438,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -461,7 +451,6 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -475,7 +464,6 @@ return {
           width = 520,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -489,7 +477,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -503,7 +490,6 @@ return {
           width = 240,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -517,7 +503,6 @@ return {
           width = 240,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -531,7 +516,6 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -545,7 +529,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -559,7 +542,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -573,7 +555,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -587,7 +568,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -601,7 +581,6 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -615,7 +594,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -629,7 +607,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -643,7 +620,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -662,56 +638,7 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {
-        {
-          id = 135,
-          name = "destructableclimbarea",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 1720,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["sprite"] = "world/events/climbtiles/brittlebrick"
-          }
-        },
-        {
-          id = 136,
-          name = "destructableclimbarea",
-          type = "",
-          shape = "rectangle",
-          x = 440,
-          y = 1720,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["sprite"] = "world/events/climbtiles/brittlebrick"
-          }
-        },
-        {
-          id = 137,
-          name = "destructableclimbarea",
-          type = "",
-          shape = "rectangle",
-          x = 480,
-          y = 1720,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["sprite"] = "world/events/climbtiles/brittlebrick"
-          }
-        }
-      }
+      objects = {}
     },
     {
       type = "objectgroup",
@@ -752,7 +679,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["angle"] = 114.95,
@@ -775,7 +701,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["towercenter"] = true,
@@ -792,7 +717,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["towercenter"] = true,
@@ -809,7 +733,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -833,7 +756,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -849,7 +771,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -873,7 +794,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -889,7 +809,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -913,7 +832,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -929,7 +847,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -953,7 +870,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -977,7 +893,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -1001,7 +916,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -1025,7 +939,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -1049,7 +962,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -1065,7 +977,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -1081,7 +992,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -1097,7 +1007,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -1113,7 +1022,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
@@ -1129,7 +1037,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["activetime"] = 60,
@@ -1153,10 +1060,54 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["generate"] = false
+          }
+        },
+        {
+          id = 135,
+          name = "destructableclimbarea",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 1720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
+          }
+        },
+        {
+          id = 136,
+          name = "destructableclimbarea",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 1720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
+          }
+        },
+        {
+          id = 137,
+          name = "destructableclimbarea",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 1720,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
           }
         }
       }
@@ -1185,7 +1136,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
@@ -1201,7 +1151,6 @@ return {
           width = 1120,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1215,7 +1164,6 @@ return {
           width = 1160,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -1325,7 +1273,6 @@ return {
           width = 200,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1339,7 +1286,6 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1353,7 +1299,6 @@ return {
           width = 1160,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1367,7 +1312,6 @@ return {
           width = 1120,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1381,7 +1325,6 @@ return {
           width = 840,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1395,7 +1338,6 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1409,7 +1351,6 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1423,7 +1364,6 @@ return {
           width = 1160,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1437,7 +1377,6 @@ return {
           width = 34.3333,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1451,7 +1390,6 @@ return {
           width = 30,
           height = 23.3333,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1465,7 +1403,6 @@ return {
           width = 26.25,
           height = 26,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1479,7 +1416,6 @@ return {
           width = 41,
           height = 20.5,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1493,7 +1429,6 @@ return {
           width = 38.1818,
           height = 41.8182,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1507,7 +1442,6 @@ return {
           width = 34.7273,
           height = 41.0909,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1521,7 +1455,6 @@ return {
           width = 24,
           height = 22.1818,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1535,7 +1468,6 @@ return {
           width = 24.25,
           height = 22.25,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1549,7 +1481,6 @@ return {
           width = 38.75,
           height = 20,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -1579,7 +1510,6 @@ return {
           width = 80.4444,
           height = 125.333,
           rotation = 0,
-          opacity = 1,
           gid = 84,
           visible = true,
           properties = {}
@@ -1610,7 +1540,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1624,7 +1553,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1638,7 +1566,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -1668,7 +1595,6 @@ return {
           width = 80,
           height = 300,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_4_crossroad",
@@ -1685,7 +1611,6 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_6",
@@ -1702,7 +1627,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["money"] = 350
@@ -1718,7 +1642,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1732,7 +1655,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -1746,7 +1668,6 @@ return {
           width = 68,
           height = 50,
           rotation = 0,
-          opacity = 1,
           gid = 35,
           visible = true,
           properties = {}
@@ -1761,7 +1682,6 @@ return {
           width = 68,
           height = 50,
           rotation = 0,
-          opacity = 1,
           gid = 35,
           visible = true,
           properties = {}
@@ -1776,7 +1696,6 @@ return {
           width = 76,
           height = 38,
           rotation = 0,
-          opacity = 1,
           gid = 34,
           visible = true,
           properties = {}
@@ -1791,7 +1710,6 @@ return {
           width = 76,
           height = 38,
           rotation = 0,
-          opacity = 1,
           gid = 34,
           visible = true,
           properties = {}
@@ -1806,7 +1724,6 @@ return {
           width = 36,
           height = 50,
           rotation = 0,
-          opacity = 1,
           gid = 39,
           visible = true,
           properties = {}
@@ -1837,7 +1754,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -1867,7 +1783,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
