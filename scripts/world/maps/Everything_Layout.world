@@ -431,22 +431,22 @@
             "fileName": "fractured_sanctuary/fractured_1/fractured_1.tmx",
             "height": 800,
             "width": 1040,
-            "x": 3800,
-            "y": 1480
+            "x": 2280,
+            "y": 1560
         },
         {
             "fileName": "fractured_sanctuary/fractured_2/fractured_2.tmx",
             "height": 880,
             "width": 1040,
-            "x": 4920,
-            "y": 1480
+            "x": 3400,
+            "y": 1560
         },
         {
             "fileName": "fractured_sanctuary/fractured_3/fractured_3.tmx",
             "height": 800,
             "width": 1040,
-            "x": 4560,
-            "y": 2440
+            "x": 3040,
+            "y": 2520
         },
         {
             "fileName": "sanctum_hell/hell_1/hell_1.tmx",
@@ -480,7 +480,7 @@
             "fileName": "fractured_sanctuary/fractured_egg_room/fractured_egg_room.tmx",
             "height": 480,
             "width": 640,
-            "x": 6000,
+            "x": 4480,
             "y": 1960
         },
         {

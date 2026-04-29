@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.12.1",
   class = "",
@@ -52,7 +52,7 @@ return {
       id = 12,
       name = "objects_parallax",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,

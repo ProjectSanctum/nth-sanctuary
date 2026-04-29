@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 3,
-  nextobjectid = 11,
+  nextlayerid = 4,
+  nextobjectid = 13,
   properties = {
     ["border"] = "church_grand"
   },
@@ -103,6 +103,21 @@ return {
           }
         }
       }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 3,
+      name = "objects_filter",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {}
     }
   }
 }
