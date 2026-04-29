@@ -5,6 +5,7 @@ function map:init(world, data)
 	super.init(self, world, data)
 	self.bookshelf_pos = {}
 	self.bookshelf_debris_sprites = {}
+	self.go_con = 0
 end
 
 function map:onEnter()
@@ -26,6 +27,28 @@ function map:update()
 			end
 			return
 		end
+	end
+end
+
+function map:doBullets()
+	self.timer:every(1, function()
+		if self.world:inBattle() and Game:getFlag("chasepass") ~= true then
+			for i = 1, 14 do
+	    		local new1 = self.world:spawnBullet("smallbullet", 400 + (120*i), 600, false, true)
+				new1:addFX(OutlineFX()):setColor(Utils.unpackColor(Utils.hexToRgb("#ff0000")))
+			end
+		end
+	end)
+end
+
+function map:update()
+	super.update(self)
+	if Game.world.player.x >= 1360 and Game:getFlag("chasepass") ~= true then
+		Game.world.player.x = Game.world.player.x - 480
+		if self.go_con > 9 then
+			Game:setFlag("chasepass", true)
+		end
+		self.go_con = self.go_con+1
 	end
 end
 

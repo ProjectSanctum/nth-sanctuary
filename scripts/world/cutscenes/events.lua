@@ -233,5 +233,71 @@ return {
 			cutscene:text("* If you see him, [wait:5]please let me know.")
 			Game:setFlag("interacted_with_random_guy", 5)
 		end
+	end,
+	chase = function(cutscene)
+		Game.world.music:fade(0, 2)
+		local kris = cutscene:getCharacter("kris")
+		local susie = cutscene:getCharacter("susie")
+		local ralsei = cutscene:getCharacter("ralsei")
+		local jamm = cutscene:getCharacter("jamm")
+
+		cutscene:text("* Hey, [wait:5]wait.", "neutral_side", susie)
+		cutscene:text("* I'm starting to think this is more than just another Dark World.", "neutral_side", susie)
+		cutscene:text("* What do you mean?", "small_smile", ralsei)
+		cutscene:text("* Like, [wait:5]it feels.. [wait:10]More???[wait:10][face:sus_nervous] Like a big Dark World?", "neutral", susie)
+		--
+		--
+		if jamm then
+			cutscene:text("* I don't really know about this [wait:5]\"Dark World\" [wait:5]stuff.", "neutral", jamm)
+			cutscene:text("* But you're right, [wait:5]this place [wait:3]IS[wait:3] pretty expansive...", "look_left", jamm)
+		end
+		cutscene:text("* It appears so...", "pensive", ralsei)
+		cutscene:text("* I am more worried of the prophec", "pensive", ralsei, {auto = true})
+		Assets.playSound("sussurprise")
+		susie:shake()
+		susie:setSprite("exasperated_right")
+		cutscene:text("* SCREW the prophecy, [wait:5]Ralsei!", "teeth_b", susie)
+		cutscene:text("* I just wanna get out of here!", "teeth_b", susie)
+		cutscene:text("* I don't want to sit here, [wait:5]and twiddle my thumb", "teeth_b", susie, {auto = true})
+		Assets.playSound("ghostappear")
+		cutscene:wait(2)
+		susie:resetSprite()
+		susie:setFacing("down")
+		cutscene:text("* ...Did you guys hear that?", "sus_nervous", susie)
+		susie:setSprite("surprise_step")
+		cutscene:text("* Wait, [wait:5]what is THAT?", "sad", susie)
+		local h = cutscene:getCharacter("randomGuy") -- <--Replace with cultist
+		local t = Game.world.timer:every(1/7, function()
+			local image = AfterImage(h.sprite, 0.5, 0.02)
+			image.physics.speed = 2
+			Game.world:addChild(image)
+		end)
+		local ox, oy = Game.world.camera.x, Game.world.camera.y 
+		cutscene:wait(cutscene:panTo(1000, Game.world.camera.y, 1.5, 'out-circ'))
+		h:slideTo(1720, h.y, 2, 'in-back')
+		cutscene:wait(2)
+		cutscene:panTo(ox, oy, 2, 'out-cubic')
+		cutscene:detachFollowers()
+		susie:setSprite("point_right")
+		Game.world.music:play("creepychase", 1)
+		cutscene:text("* HEY, [wait:5]GET BACK HERE!", "angry_e", susie)
+		susie:resetSprite()
+		cutscene:walkTo(susie, 1720, 880, 3)
+		cutscene:wait(1)
+		cutscene:text("* S-[wait:5]Susie, [wait:5]wait!", "concern", ralsei)
+		cutscene:walkTo(ralsei, 1720, 880, 3)
+		cutscene:wait(1)
+		if jamm then
+			cutscene:text("* Well, [wait:5]guess we're doing this.", "stern", jamm)
+			
+			jamm:walkTo(1720, 880, 3)
+		end
+		cutscene:attachCamera()
+		Game.world.map:doBullets()
+		
+
+
+
+		
 	end
 }
