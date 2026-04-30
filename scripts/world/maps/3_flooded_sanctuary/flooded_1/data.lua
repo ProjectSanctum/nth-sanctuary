@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.12.1",
   class = "",
@@ -9,8 +9,8 @@ return {
   height = 44,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 22,
-  nextobjectid = 160,
+  nextlayerid = 23,
+  nextobjectid = 165,
   properties = {
     ["border"] = "church_flooded_dynamic",
     ["music"] = "floodedsanctuary"
@@ -81,6 +81,11 @@ return {
       firstgid = 1732,
       filename = "../../../tilesets/ExtraWallArchTiles.tsx",
       exportfilename = "../../../tilesets/ExtraWallArchTiles.lua"
+    },
+    {
+      name = "light_areas",
+      firstgid = 1798,
+      filename = "../../../tilesets/light_areas.tsx"
     }
   },
   layers = {
@@ -1507,6 +1512,116 @@ return {
             ["actor"] = "lobbyman",
             ["cutscene"] = "lobbyman.flood"
           }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 22,
+      name = "objects_lightarea",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 160,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 100,
+          y = 760,
+          width = 160,
+          height = 720,
+          rotation = 0,
+          opacity = 1,
+          gid = 1800,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 161,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 300,
+          y = 760,
+          width = 160,
+          height = 720,
+          rotation = 0,
+          opacity = 1,
+          gid = 1800,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 162,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 700,
+          y = 760,
+          width = 160,
+          height = 720,
+          rotation = 0,
+          opacity = 1,
+          gid = 1800,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 163,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 900,
+          y = 760,
+          width = 160,
+          height = 720,
+          rotation = 0,
+          opacity = 1,
+          gid = 1800,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.1,
+            ["light_color"] = "#ffffffff",
+            ["light_type"] = 1
+          }
+        },
+        {
+          id = 164,
+          name = "lightbeamfx",
+          type = "",
+          shape = "point",
+          x = 120,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
         }
       }
     },

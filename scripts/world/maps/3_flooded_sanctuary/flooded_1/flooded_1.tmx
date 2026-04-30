@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="160">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="34" height="44" tilewidth="40" tileheight="40" infinite="0" nextlayerid="23" nextobjectid="165">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -19,6 +19,7 @@
  <tileset firstgid="1608" source="../../../tilesets/church_objects.tsx"/>
  <tileset firstgid="1711" source="../../../tilesets/ClimbableBrickTilesSilhouette.tsx"/>
  <tileset firstgid="1732" source="../../../tilesets/ExtraWallArchTiles.tsx"/>
+ <tileset firstgid="1798" source="../../../tilesets/light_areas.tsx"/>
  <layer id="20" name="mask" width="34" height="44" visible="0">
   <data encoding="csv">
 562,562,562,562,562,562,562,562,0,0,0,562,562,0,0,562,562,562,562,562,562,562,562,562,562,562,562,562,562,562,562,562,562,562,
@@ -560,6 +561,43 @@
     <property name="actor" value="lobbyman"/>
     <property name="cutscene" value="lobbyman.flood"/>
    </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="22" name="objects_lightarea">
+  <object id="160" gid="1800" x="100" y="760" width="160" height="720">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="161" gid="1800" x="300" y="760" width="160" height="720">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="162" gid="1800" x="700" y="760" width="160" height="720">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="163" gid="1800" x="900" y="760" width="160" height="720">
+   <properties>
+    <property name="light" type="bool" value="true"/>
+    <property name="light_alpha" type="float" value="0.1"/>
+    <property name="light_color" type="color" value="#ffffffff"/>
+    <property name="light_type" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="164" name="lightbeamfx" x="120" y="0">
    <point/>
   </object>
  </objectgroup>
