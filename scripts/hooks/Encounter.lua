@@ -2,7 +2,9 @@ local Encounter, super = HookSystem.hookScript(Encounter)
 
 function Encounter:init()
     super.init(self)
-	self.frac_hsv_fx = Game.world:getEvent("filter").fx or FracturedHSVFX()
+    if StringUtils.contains(Game.world.map.id, "fractured") then
+		self.frac_hsv_fx = Game.world:getEvent("filter").fx or FracturedHSVFX()
+	end
 end
 
 function Encounter:onBattleInit()
