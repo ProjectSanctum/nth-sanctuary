@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 21,
-  nextobjectid = 1056,
+  nextobjectid = 1062,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church"
@@ -821,6 +821,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 1061,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 1640,
+          y = 880,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -830,7 +843,7 @@ return {
       id = 20,
       name = "battleareas",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -913,21 +926,6 @@ return {
           }
         },
         {
-          id = 1053,
-          name = "npc",
-          type = "",
-          shape = "point",
-          x = 1000,
-          y = 880,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["actor"] = "randomGuy"
-          }
-        },
-        {
           id = 1054,
           name = "npc",
           type = "",
@@ -940,6 +938,22 @@ return {
           visible = true,
           properties = {
             ["actor"] = "randomGuy"
+          }
+        },
+        {
+          id = 1056,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1680,
+          y = 840,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "2_2nd_sanctuary/second_sanctum_10_final",
+            ["marker"] = "entry"
           }
         }
       }

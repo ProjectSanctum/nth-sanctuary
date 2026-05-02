@@ -266,7 +266,7 @@ return {
 		cutscene:text("* ...Did you guys hear that?", "sus_nervous", susie)
 		susie:setSprite("surprise_step")
 		cutscene:text("* Wait, [wait:5]what is THAT?", "sad", susie)
-		local h = cutscene:getCharacter("randomGuy") -- <--Replace with cultist
+		local h = cutscene:spawnNPC("randomGuy",1000, 880) -- <--Replace with cultist
 		local t = Game.world.timer:every(1/7, function()
 			local image = AfterImage(h.sprite, 0.5, 0.02)
 			image.physics.speed = 2
