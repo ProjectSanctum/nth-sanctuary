@@ -54,6 +54,11 @@ function Dummy:init()
         "* When did you start being yourself?",
         
     }
+	self.static_hp = true
+end
+
+function Dummy:getHealthDisplay()
+    return "???"
 end
 
 function Dummy:update()
