@@ -519,7 +519,7 @@ function PathingEnemy:draw()
 		local blend = ColorUtils.mergeColor(COLORS.white, COLORS.red, MathUtils.clamp(alpha, 0, 1))
 		local xoff, yoff = 20, 20
 		Draw.setColor(1,1,1,self.alpha)
-		if dist < 80 and not Game.world.player.state == "CLIMB" then
+		if dist < 80 then
 			local last_shader = love.graphics.getShader()
 			local shader = Kristal.Shaders["AddColor"]
 			love.graphics.setShader(shader)
