@@ -252,6 +252,7 @@ function Player:processClimbInputs()
 				if self.onrotatingtower then
 					if self.world.map.cyltower.horizontal then
 						dust.y = self.world.map.cyltower.tower_y
+						dust.physics.speed_y = -6
 					else
 						dust.x = self.world.map.cyltower.tower_x
 					end
