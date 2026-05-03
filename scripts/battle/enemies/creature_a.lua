@@ -7,6 +7,7 @@ function Dummy:init()
     self.name = "Creature Ψ"
     -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/dummy.lua)
     self:setActor("creature_a")
+    self.boss = true
 
     -- Enemy health
     self.max_health = 4000
@@ -22,6 +23,8 @@ function Dummy:init()
     	
 	self.tired_percentage = 0
     self.low_health_percentage = 0
+
+    self.comment = "(Imbued)"
 	
 	self.disable_mercy = true
 

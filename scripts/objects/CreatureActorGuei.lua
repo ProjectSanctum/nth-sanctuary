@@ -84,7 +84,6 @@ function CreatureActorGuei:update()
     
     self.hand3.x = math.sin(math.pi + self.siner * 1.5) * 24 + 8
     self.hand3.y = -math.cos(math.pi + self.siner * 1.5) * 12 + 30
-    print(self.hand3.x, self.hand3.layer)
     if self.hand3.x < -14 then
         self.hand3:setLayer(self.body.layer - 1)
     elseif self.hand3.x > 28 then
