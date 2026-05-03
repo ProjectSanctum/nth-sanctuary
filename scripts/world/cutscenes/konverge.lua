@@ -242,9 +242,28 @@ return {
 				end
 			end
 		elseif ch == 2 then
-			cutscene:text("[image:ui/ddelta_asterisk]funny story i actually\n don't know the lore much\n either", "neutral", ddelta)
-			cutscene:text("[image:ui/ddelta_asterisk]i do the coding,[wait:5] not the\n story", "lookup", ddelta)
-			cutscene:text("[image:ui/ddelta_asterisk]ya got the wrong guy for\n this one,[wait:5] sorry", "lookdown", ddelta)
+			if Mod:checkIndoct(10) and not Game:getFlag("ddelta_knows", false) then
+				local ddelta_layer = ddelta.layer
+				Game.world.music:pause()
+				local rect = Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+				rect:setColor(COLORS.black)
+				rect:setParallax(0)
+				rect.layer = WORLD_LAYERS["ui"] - 2
+				Game.world:addChild(rect)
+				Kristal.hideBorder(0)
+				ddelta.layer = WORLD_LAYERS["ui"] - 1		
+				cutscene:wait(5)
+				cutscene:text("[speed:0.4][image:ui/ddelta_asterisk]I know what you did.", "neutral", ddelta)
+				ddelta.layer = ddelta_layer
+				rect:remove()
+				Game.world.music:resume()
+				Game:setFlag("ddelta_knows", true)
+				Kristal.showBorder(0)
+			else
+				cutscene:text("[image:ui/ddelta_asterisk]funny story i actually\n don't know the lore much\n either", "neutral", ddelta)
+				cutscene:text("[image:ui/ddelta_asterisk]i do the coding,[wait:5] not the\n story", "lookup", ddelta)
+				cutscene:text("[image:ui/ddelta_asterisk]ya got the wrong guy for\n this one,[wait:5] sorry", "lookdown", ddelta)
+			end
 		end
 	end,
     mangle = function (cutscene, event)
