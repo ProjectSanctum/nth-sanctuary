@@ -244,14 +244,16 @@ return {
 		elseif ch == 2 then
 			if Mod:checkIndoct(10) and not Game:getFlag("ddelta_knows", false) then
 				local ddelta_layer = ddelta.layer
+				cutscene:wait(0.25)
 				Game.world.music:pause()
+				Assets.playSound("noise")
 				local rect = Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
 				rect:setColor(COLORS.black)
 				rect:setParallax(0)
 				rect.layer = WORLD_LAYERS["ui"] - 2
 				Game.world:addChild(rect)
 				Kristal.hideBorder(0)
-				ddelta.layer = WORLD_LAYERS["ui"] - 1		
+				ddelta.layer = WORLD_LAYERS["ui"] - 1
 				cutscene:wait(5)
 				cutscene:text("[speed:0.4][image:ui/ddelta_asterisk]I know what you did.", "neutral", ddelta)
 				ddelta.layer = ddelta_layer
