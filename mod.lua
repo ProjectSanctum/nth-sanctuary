@@ -22,6 +22,18 @@ function Mod:isWeird()
     return (Game:getFlag("route") == 3)
 end
 
+function Mod:increaseIndoct(amt)
+    local amount = amt or 1
+    local flag = Game:getFlag("indoct-con")
+    Game:setFlag("indoct-con", flag + amount)
+
+    Assets.playSound("indoct_up", 1, 1 - (Game:getFlag("indoct-con") / 20))
+end
+
+function Mod:checkIndoct(amt)
+    return Game:getFlag("indoct-con") >= amt
+end
+
 function Mod:registerDebugOptions(debug)
     debug:registerMenu("nth_sanctumdebug", "#th Sanctuary Debug","menu")
     
