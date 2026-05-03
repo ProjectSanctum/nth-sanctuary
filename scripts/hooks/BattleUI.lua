@@ -30,14 +30,25 @@ function BattleUI:drawState()
                         Draw.setColor(COLORS.white)
 						local static_shader = Mod.staticBulletShader
 						static_shader:send("time", Kristal.getTime())
-						static_shader:send("brightness", 2)
+						static_shader:send("brightness", 1)
                         love.graphics.setShader(static_shader)
                         love.graphics.rectangle("fill", hp_x, 55 + y_off, math.ceil(hp_percent * 81), 16)
                         love.graphics.setShader()
 
                         if draw_percents then
+							love.graphics.stencil(function()
+								local last_shader = love.graphics.getShader()
+								love.graphics.setShader(Kristal.Shaders["Mask"])
+								love.graphics.rectangle("fill", hp_x, 55 + y_off, math.ceil(hp_percent * 81), 16)
+								love.graphics.setShader(last_shader)
+							end, "replace", 1)
+							love.graphics.setStencilTest("greater", 0)
+                            Draw.setColor(COLORS.black)
+                            love.graphics.print(enemy:getHealthDisplay(), hp_x + 4, 55 + y_off, 0, 1, 0.5)
+							love.graphics.setStencilTest("less", 1)
                             Draw.setColor(COLORS.white)
                             love.graphics.print(enemy:getHealthDisplay(), hp_x + 4, 55 + y_off, 0, 1, 0.5)
+							love.graphics.setStencilTest()
                         end
                     end
                 end
