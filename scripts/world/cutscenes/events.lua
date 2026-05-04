@@ -294,7 +294,7 @@ return {
 		end
 		cutscene:attachCamera()
 		Game.world.map:doBullets()
-		
+		Game.world.timer:cancel(t)
 
 
 
