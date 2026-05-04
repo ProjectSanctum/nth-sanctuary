@@ -295,9 +295,61 @@ return {
 		cutscene:attachCamera()
 		Game.world.map:doBullets()
 		Game.world.timer:cancel(t)
-
-
-
+		Game:setFlag("chase_cutscene_prog", 1)
+	end,
+	postchase = function (cutscene)
+		local kris = cutscene:getCharacter("kris")
+		local susie = cutscene:getCharacter("susie")
+		local ralsei = cutscene:getCharacter("ralsei")
+		local jamm = cutscene:getCharacter("jamm")
+		ralsei.y = 340
+		if jamm then jamm.y = 380 end
+		susie.x = 90
+		susie:setSprite("point_right")
+		cutscene:text("* HEY, [wait:5]YOU!", "angry_c", susie)
+		cutscene:text("* YOU CAN'T RUN! [wait:10]GET BACK HERE!", "angry_d", susie)
+		susie:resetSprite()
+		cutscene:walkTo(susie, 620, susie.y, 2)
+		cutscene:wait(cutscene:panTo(800, Game.world.camera.y, 2, 'in-out-cubic'))
+		Game.world.music:pause()
+		local rect = Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+		rect:setColor(COLORS.black)
+		rect:setParallax(0)
+		rect.layer = WORLD_LAYERS["ui"] - 2
+		Game.world:addChild(rect)
+		Kristal.hideBorder(0)
+		local g = cutscene:getCharacter("guei")
+		g:setLayer(rect.layer + 1)
+		g:addFX(ColorMaskFX(COLORS.white))
+		cutscene:wait(20/30)
+		for i = 1, 15 do
+			local spr = Sprite("effects/attack/red_slash")
+			spr:setOrigin(0, 0.5)
+			spr:setPosition(g.x, g.y - g.height)
+			Game.world:addChild(spr)
+			spr.layer = g.layer + 1
+			spr.rotation = math.rad(i * 78)
+			spr:play(1/15, false, function() spr:remove() g:shake() end)
+			local waw = DamageNumber("damage", love.math.random(6500, 8000), g.x + g.width/2, g.y)
+       		waw.layer = g.layer + 3
+       		Game.world:addChild(waw)
+       		waw:setColor({0, 0, 1})
+			Assets.playSound("bigcut", 1, 2 - (i / 15))
+			cutscene:wait(3/30)
+		end
+		cutscene:wait(2)
+		rect:remove()
+		g:removeFX(ColorMaskFX())
+		Assets.playSound("imbue_hit", 2.5, 1)
+		Game.world.camera:shake(20, 0, 0.5, 10, 10) 
+		        local static_fx = ShaderFX(Mod.staticBulletShader, {
+            ["time"] = function() return Kristal.getTime() end,
+            ["brightness"] = 2
+        })
+        local waw = DamageNumber("msg", "imbued", g.x + g.width/2, g.y)
+        waw.layer = 99999999
+        Game.world:addChild(waw)
+        waw:addFX(static_fx, "static_fx")
 		
 	end
 }
