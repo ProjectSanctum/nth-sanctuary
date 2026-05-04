@@ -48,7 +48,7 @@
   </object>
   <object id="5" name="horizontaltower" x="0" y="440">
    <properties>
-    <property name="angle" type="float" value="157.9"/>
+    <property name="angle" type="float" value="157.05"/>
     <property name="anglefine" type="float" value="457.9"/>
     <property name="height" type="int" value="280"/>
     <property name="horztiles" type="int" value="38"/>

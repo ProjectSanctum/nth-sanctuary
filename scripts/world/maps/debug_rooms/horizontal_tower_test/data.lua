@@ -143,7 +143,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["angle"] = 157.9,
+            ["angle"] = 157.05,
             ["anglefine"] = 457.9,
             ["height"] = 280,
             ["horztiles"] = 38,
