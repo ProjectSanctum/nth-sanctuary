@@ -319,6 +319,7 @@ return {
 		Game.world:addChild(rect)
 		Kristal.hideBorder(0)
 		local g = cutscene:getCharacter("guei")
+		local origlayer = g.layer
 		g:setLayer(rect.layer + 1)
 		g:addFX(ColorMaskFX(COLORS.white))
 		cutscene:wait(20/30)
@@ -341,6 +342,10 @@ return {
 		rect:remove()
 		g:removeFX(ColorMaskFX())
 		Assets.playSound("imbue_hit", 2.5, 1)
+		local sm = SmokeFx(g.x-10, g.y - g.height/2, 2, 1.5)
+		Game.world:spawnObject(sm)
+		g.layer = origlayer
+		sm:setLayer(g.layer + 1)
 		Game.world.camera:shake(20, 0, 0.5, 10, 10) 
 		        local static_fx = ShaderFX(Mod.staticBulletShader, {
             ["time"] = function() return Kristal.getTime() end,
@@ -350,6 +355,8 @@ return {
         waw.layer = 99999999
         Game.world:addChild(waw)
         waw:addFX(static_fx, "static_fx")
+		cutscene:wait(3)
+		cutscene:startEncounter("creature_a", false)
 		
 	end
 }

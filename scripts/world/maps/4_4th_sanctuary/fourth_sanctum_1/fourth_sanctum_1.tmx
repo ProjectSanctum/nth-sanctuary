@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="178">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="27" nextobjectid="178">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -319,7 +319,9 @@
   </object>
   <object id="9" name="savepoint" x="520" y="800" width="40" height="40">
    <properties>
-    <property name="text1" value="* Another one."/>
+    <property name="text1" value="* (You find yourself in yet another sanctuary.)"/>
+    <property name="text2" value="* (Susie is green, [wait:5]and Ralsei is pale blue.)"/>
+    <property name="text3" value="* (You are filled with the ideology of prismatic color refraction.)"/>
    </properties>
   </object>
   <object id="30" name="interactable" x="160" y="640" width="40" height="40">

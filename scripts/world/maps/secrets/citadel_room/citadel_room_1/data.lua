@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -439,8 +439,8 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 680,
-          y = 800,
+          x = 120,
+          y = 440,
           width = 0,
           height = 0,
           rotation = 0,
@@ -496,7 +496,8 @@ return {
           visible = true,
           properties = {
             ["solid"] = "true",
-            ["text1"] = "               <---\n* Free money down this lane\n               <---",
+            ["text1_1"] = "               <---\n* fre moniey down this laen\n               <---",
+            ["text1_2"] = "               --->\n* not fre moniey\n               --->",
             ["usetile"] = true
           }
         },
