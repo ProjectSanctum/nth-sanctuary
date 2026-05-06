@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="38" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="10" nextobjectid="88">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../../../tilesets/bg_dw_tower_tileset.tsx"/>
+ <tileset firstgid="31" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="229" source="../../../tilesets/tower_tileset_rotate.tsx"/>
+ <tileset firstgid="259" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="841" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
+ <tileset firstgid="1101" source="../../../tilesets/church_objects.tsx"/>
+ <layer id="1" name="tile_tower" width="38" height="24">
+  <data encoding="csv">
+230,231,232,233,230,231,232,233,230,246,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,
+236,237,238,239,236,237,238,239,236,246,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,
+242,243,244,245,242,243,244,245,242,246,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,
+248,249,250,251,248,249,250,251,248,246,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,
+254,255,256,257,254,255,256,257,254,246,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,
+230,231,232,233,230,231,232,233,230,246,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,
+236,237,238,239,236,237,238,239,236,246,238,239,236,237,246,239,246,246,246,246,236,246,246,246,246,237,238,239,236,237,238,239,236,237,238,239,236,237,
+242,243,244,245,242,243,244,245,242,246,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,
+248,249,250,251,248,249,250,251,248,246,250,251,246,246,246,246,248,249,250,251,248,249,250,251,246,249,250,251,248,249,250,251,248,249,250,251,248,249,
+254,255,256,257,254,255,256,257,254,246,256,257,254,255,256,257,230,231,232,233,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,
+236,237,246,246,246,246,246,246,246,246,246,246,246,231,232,246,246,246,246,246,230,231,232,233,246,246,246,246,246,246,246,246,246,246,246,246,230,231,
+236,237,246,239,236,237,238,239,236,246,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,238,246,236,237,
+242,243,244,245,242,243,244,245,242,246,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,
+248,249,250,251,248,249,250,251,248,246,250,251,248,249,246,246,248,249,246,251,248,246,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,
+254,255,256,257,254,255,256,257,254,246,256,257,254,255,246,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,
+230,231,232,233,230,231,232,233,230,246,232,233,230,231,246,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,
+236,237,238,239,236,237,238,239,236,246,238,239,236,237,246,239,236,237,246,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,
+242,243,244,245,242,243,244,245,242,246,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,
+248,249,250,251,248,249,250,251,248,246,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,250,251,248,249,
+254,255,256,257,254,255,256,257,254,246,256,257,254,255,246,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,256,257,254,255,
+230,231,232,233,230,231,232,233,230,246,232,233,230,231,246,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,232,233,230,231,
+236,237,238,239,236,237,238,239,236,246,238,239,236,237,246,246,246,246,246,246,246,246,238,239,236,237,238,239,236,237,238,239,236,237,238,239,236,237,
+242,243,244,245,242,243,244,245,242,246,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,244,245,242,243,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="3" name="objects_tower">
+  <object id="2" name="climbarea" x="80" y="400" width="440" height="40"/>
+  <object id="3" name="climbentry" x="80" y="440" width="40" height="40">
+   <properties>
+    <property name="towercenter" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" name="climbentry" x="1400" y="440" width="40" height="40">
+   <properties>
+    <property name="towercenter" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" name="horizontaltower" x="0" y="440">
+   <properties>
+    <property name="angle" type="float" value="157.05"/>
+    <property name="anglefine" type="float" value="457.9"/>
+    <property name="height" type="int" value="280"/>
+    <property name="horztiles" type="int" value="38"/>
+    <property name="tilelayer1" value="tile_tower"/>
+    <property name="usetiles" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="13" name="climbarea" x="960" y="400" width="480" height="40"/>
+  <object id="14" name="climbarea" x="480" y="320" width="160" height="40"/>
+  <object id="15" name="climbarea" x="560" y="240" width="40" height="40"/>
+  <object id="17" name="climbarea" x="640" y="240" width="160" height="40"/>
+  <object id="19" name="climbarea" x="840" y="240" width="160" height="40"/>
+  <object id="21" name="climbarea" x="600" y="400" width="200" height="40"/>
+  <object id="22" name="climbarea" x="960" y="320" width="40" height="40"/>
+  <object id="23" name="climbwaterbucket" x="680" y="200" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="25"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="55"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="24" name="climbwaterbucket" x="760" y="200" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="25"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="75"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="25" name="climbwaterbucket" x="680" y="360" width="40" height="40">
+   <properties>
+    <property name="generate" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="26" name="climbwaterbucket" x="760" y="360" width="40" height="40">
+   <properties>
+    <property name="generate" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="32" name="climbarea" x="360" y="0" width="40" height="920"/>
+  <object id="68" name="climbwaterbucket" x="840" y="440" width="40" height="40">
+   <properties>
+    <property name="activetime" type="float" value="60"/>
+    <property name="generate" type="bool" value="true"/>
+    <property name="spawnrate" type="float" value="25"/>
+    <property name="timelimit" type="float" value="5"/>
+    <property name="timer" type="float" value="75"/>
+    <property name="waittime" type="float" value="30"/>
+    <property name="waterfallingtimer" type="int" value="16"/>
+    <property name="watermoverate" type="float" value="6"/>
+    <property name="watertilelimit" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="69" name="climbcoin" x="780" y="520" width="40" height="40">
+   <properties>
+    <property name="value" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="70" name="destructableclimbarea" x="600" y="600" width="40" height="40">
+   <properties>
+    <property name="sprite" value="world/events/climbtiles/brittlebrick"/>
+   </properties>
+  </object>
+  <object id="71" name="destructableclimbarea" x="640" y="600" width="40" height="40">
+   <properties>
+    <property name="sprite" value="world/events/climbtiles/brittlebrick"/>
+   </properties>
+  </object>
+  <object id="72" name="destructableclimbarea" x="680" y="600" width="40" height="40">
+   <properties>
+    <property name="sprite" value="world/events/climbtiles/brittlebrick"/>
+   </properties>
+  </object>
+  <object id="73" name="destructableclimbarea" x="720" y="600" width="40" height="40">
+   <properties>
+    <property name="sprite" value="world/events/climbtiles/brittlebrick"/>
+   </properties>
+  </object>
+  <object id="74" name="destructableclimbarea" x="600" y="560" width="160" height="40">
+   <properties>
+    <property name="sprite" value="world/events/climbtiles/brittlebrick"/>
+   </properties>
+  </object>
+  <object id="75" name="climbarea" x="560" y="520" width="40" height="160"/>
+  <object id="76" name="climbarea" x="600" y="520" width="40" height="40"/>
+  <object id="77" name="climbarea" x="720" y="520" width="40" height="40"/>
+  <object id="78" name="bellplayable" x="660" y="520" width="40" height="40">
+   <properties>
+    <property name="interactable" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="79" name="climbarea" x="720" y="640" width="40" height="40"/>
+  <object id="80" name="climbarea" x="840" y="520" width="40" height="40"/>
+  <object id="81" name="climbcoin" x="840" y="580" width="40" height="40">
+   <properties>
+    <property name="value" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="82" name="climbcoin" x="840" y="640" width="40" height="40">
+   <properties>
+    <property name="value" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="83" name="climbcoin" x="840" y="700" width="40" height="40">
+   <properties>
+    <property name="value" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="84" name="bellplayable" x="840" y="760" width="40" height="40">
+   <properties>
+    <property name="interactable" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="86" name="climbarea" x="600" y="840" width="280" height="40"/>
+  <object id="87" name="climbwaterbucket" x="840" y="800" width="40" height="40">
+   <properties>
+    <property name="generate" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="8" name="tile2" width="38" height="24">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+391,391,391,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,852,853,854,852,
+391,391,391,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,862,863,864,862,
+391,391,391,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,862,863,864,862,
+391,391,391,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,862,863,864,862,
+391,391,391,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,862,863,864,862,
+391,391,391,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,862,863,864,862,
+391,391,391,391,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,862,863,864,862,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="tile1" width="38" height="24">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+40,40,40,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1031,1032,1032,1013,
+40,40,40,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1011,1012,1003,1023,
+40,40,40,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1021,1003,1032,1003,
+58,58,58,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1061,1062,1062,1062,
+740,741,742,694,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+746,747,748,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+752,753,754,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+758,759,760,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,391,391,391,391,
+764,765,766,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,391,391,391,391,
+0,0,0,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,391,391,391,391,
+0,0,0,700,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,391,391,391,391,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="9" name="objects_shadow">
+  <object id="31" gid="1109" x="1520" y="760" width="120" height="160" rotation="270"/>
+ </objectgroup>
+ <objectgroup id="2" name="objects"/>
+ <objectgroup id="6" name="collision">
+  <object id="7" x="1360" y="440" width="160" height="40"/>
+  <object id="8" x="1320" y="480" width="40" height="120"/>
+  <object id="9" x="1360" y="600" width="160" height="40"/>
+  <object id="10" x="0" y="600" width="160" height="40"/>
+  <object id="11" x="160" y="480" width="40" height="120"/>
+  <object id="12" x="0" y="440" width="160" height="40"/>
+  <object id="85" name="climbarea" x="560" y="760" width="40" height="120"/>
+ </objectgroup>
+ <objectgroup id="4" name="markers">
+  <object id="6" name="spawn" x="60" y="540">
+   <point/>
+  </object>
+  <object id="29" name="entry2" x="1480" y="540">
+   <point/>
+  </object>
+  <object id="30" name="entry" x="40" y="540">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="objects_party">
+  <object id="27" name="transition" x="-40" y="480" width="40" height="120">
+   <properties>
+    <property name="map" value="debug_rooms/piano_light_test"/>
+    <property name="marker" value="entry2"/>
+   </properties>
+  </object>
+  <object id="28" name="transition" x="1520" y="480" width="40" height="120">
+   <properties>
+    <property name="map" value="debug_rooms/very_dark_place"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

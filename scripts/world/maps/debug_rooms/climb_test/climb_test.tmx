@@ -155,7 +155,7 @@
   <object id="73" x="960" y="200" width="640" height="40"/>
   <object id="74" x="920" y="240" width="40" height="80"/>
  </objectgroup>
- <objectgroup id="2" name="objects_party" locked="1">
+ <objectgroup id="2" name="objects_party">
   <object id="6" name="climbentry" x="160" y="320" width="40" height="40"/>
   <object id="7" name="climblanding" x="240" y="400" width="40" height="40"/>
   <object id="8" name="climbentry" x="440" y="320" width="40" height="40"/>

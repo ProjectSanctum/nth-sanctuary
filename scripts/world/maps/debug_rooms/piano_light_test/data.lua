@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.12.1",
   class = "",
@@ -661,7 +661,7 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["map"] = "debug_rooms/very_dark_place",
+            ["map"] = "debug_rooms/horizontal_tower_test",
             ["marker"] = "entry"
           }
         },
