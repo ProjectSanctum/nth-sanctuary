@@ -424,7 +424,7 @@
             "fileName": "debug_rooms/very_dark_place/very_dark_place.tmx",
             "height": 640,
             "width": 1200,
-            "x": -4360,
+            "x": -2760,
             "y": -2960
         },
         {
@@ -622,6 +622,13 @@
             "width": 1200,
             "x": 3040,
             "y": 12240
+        },
+        {
+            "fileName": "debug_rooms/horizontal_tower_test/horizontal_tower_test.tmx",
+            "height": 960,
+            "width": 1520,
+            "x": -4360,
+            "y": -3200
         }
     ],
     "onlyShowAdjacentMaps": false,
