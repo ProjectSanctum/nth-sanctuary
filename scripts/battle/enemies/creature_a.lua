@@ -53,11 +53,14 @@ function Dummy:init()
     self.text = {
         "* It screams, but there's no sound.",
         "* Smells like rot.",
-        "* Creature Ψ's hand spasms wildly.",
+        "* Its hand spasms wildly.",
         "* When did you start being yourself?",
+        "* Ralsei is hyperventilating.",
+        (Game:hasPartyMember("jamm") and "* Jamm is sweating.")
         
     }
 	self.static_hp = true
+    self.nametimer = 2
 end
 
 function Dummy:getHealthDisplay()
@@ -66,7 +69,17 @@ end
 
 function Dummy:update()
     super.update(self)
-    
+    self.nametimer = self.nametimer - 1
+    if self.nametimer <= 0 then
+        self.nametimer = 2
+        local chars = { "G", "U", "E", "I", "g", "u", "e", "i" }
+        local name = {}
+        for i = 1,4 do
+            local char = chars[math.random(1, #chars)]
+            table.insert(name, char)
+        end
+        self.name = table.concat(name)
+    end
     if Game.battle.soul then
         self.sprite.eye.target = Game.battle.soul
     else
@@ -97,6 +110,11 @@ function Dummy:onAct(battler, name)
             cutscene:text("* "..battler.chara:getName().." tried to \"[color:yellow]ACT[color:reset]\"...\n* But, the enemy couldn't understand!")
         end)
         return
+    elseif name == "Check" then
+        return {
+            "IMBUED ENTITY - AT 37 DF 6\n* You can feel an unholy presence.",
+            "The more time passes,[wait:5] the more it feels like darkness entraps your SOUL."
+        }
     end
 
     -- If the act is none of the above, run the base onAct function
