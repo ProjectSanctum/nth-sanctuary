@@ -466,6 +466,7 @@ return {
             local g = Textbox(56,344, 529, 103, 100, 100)
             Game.stage:addChild(g)
             g:setText("[font:main,72][style:none][color:red][noskip][speed:0.4]GO F#%@ YOURSELF!")
+            Game.world.music:pause()
             Assets.playSound("go_fuck")
             cutscene:wait( function ()
                 return g.text:isTyping()==false
@@ -473,6 +474,7 @@ return {
             g:remove()
             a.zoom_x, a.zoom_y = 1, 1
             event:explode()
+            Game.world.music:resume()
             cutscene:text("* ", "what")
             cutscene:text("* why did it do that-", "what_smile")
             

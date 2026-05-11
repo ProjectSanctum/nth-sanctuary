@@ -266,7 +266,8 @@ return {
 		cutscene:text("* ...Did you guys hear that?", "sus_nervous", susie)
 		susie:setSprite("surprise_step")
 		cutscene:text("* Wait, [wait:5]what is THAT?", "sad", susie)
-		local h = cutscene:spawnNPC("randomGuy",1000, 880) -- <--Replace with cultist
+		local h = cutscene:spawnNPC("cultist1",1000, 880)
+		h:setAnimation("idle")
 		local t = Game.world.timer:every(1/7, function()
 			local image = AfterImage(h.sprite, 0.5, 0.02)
 			image.physics.speed = 2
@@ -356,6 +357,7 @@ return {
         Game.world:addChild(waw)
         waw:addFX(static_fx, "static_fx")
 		cutscene:wait(3)
+		Game:setFlag("chase_cutscene_prog", 2)
 		cutscene:startEncounter("creature_a", false)
 		
 	end
