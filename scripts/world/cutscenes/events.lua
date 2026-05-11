@@ -268,6 +268,7 @@ return {
 		cutscene:text("* Wait, [wait:5]what is THAT?", "sad", susie)
 		local h = cutscene:spawnNPC("cultist1",1000, 880)
 		h:setAnimation("idle")
+		h.layer = 99999999999
 		local t = Game.world.timer:every(1/7, function()
 			local image = AfterImage(h.sprite, 0.5, 0.02)
 			image.physics.speed = 2

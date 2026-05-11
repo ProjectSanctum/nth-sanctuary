@@ -46,7 +46,7 @@ function Dummy:init()
     -- Check text (automatically has "ENEMY NAME - " at the start)
     self.check = {
         "AT 37 DF 6\n* You can feel an unholy presence.",
-        "The more time passes,[wait:5] the more it feels like darkness entraps your SOUL."
+        "* The more time passes,[wait:5] the more it feels like darkness entraps your SOUL."
     }
 
     -- Text randomly displayed at the bottom of the screen each turn
@@ -56,7 +56,7 @@ function Dummy:init()
         "* Its hand spasms wildly.",
         "* When did you start being yourself?",
         "* Ralsei is hyperventilating.",
-        (Game:hasPartyMember("jamm") and "* Jamm is sweating.")
+        (Game:hasPartyMember("jamm") and "* Jamm is sweating.") or "* ..."
         
     }
 	self.static_hp = true
@@ -112,8 +112,8 @@ function Dummy:onAct(battler, name)
         return
     elseif name == "Check" then
         return {
-            "IMBUED ENTITY - AT 37 DF 6\n* You can feel an unholy presence.",
-            "The more time passes,[wait:5] the more it feels like darkness entraps your SOUL."
+            "* IMBUED ENTITY - AT 37 DF 6\n* You can feel an unholy presence.",
+            "* The more time passes,[wait:5] the more it feels like darkness entraps your SOUL."
         }
     end
 

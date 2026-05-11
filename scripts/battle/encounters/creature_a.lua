@@ -5,8 +5,8 @@ function Dummy:init()
 
     -- Text displayed at the bottom of the screen at the start of the encounter
     self.text = [[
-* Creature Ψ attacks. [wait:10]\n
-* Its presence alone makes you shake.
+* Darkness pours everywhere... [wait:10]\n
+* The creature's presence makes you shake.
 ]]
 
     -- Battle music ("battle" is rude buster)
