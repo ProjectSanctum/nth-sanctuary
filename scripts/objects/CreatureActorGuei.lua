@@ -65,7 +65,7 @@ function CreatureActorGuei:update()
     self.head:setFrame(math.floor(self.animsiner / 6))
 
     self.hand.x = math.sin(self.siner * 1.5) * 24 + 8
-    self.hand.y = -math.cos(self.siner * 1.5) * 12 + 30
+    self.hand.y = -math.cos(self.siner * 1.5) * 12 + 30 - math.cos(self.siner * 1.5) * 8 - 5
     if self.hand.x < -14 then
         self.hand:setLayer(self.body.layer - 1)
     elseif self.hand.x > 28 then
@@ -73,7 +73,7 @@ function CreatureActorGuei:update()
     end
 
     self.hand2.x = math.sin(math.pi/2 + self.siner * 1.5) * 24 + 11
-    self.hand2.y = -math.cos(math.pi/2 + self.siner * 1.5) * 12 + 26
+    self.hand2.y = -math.cos(math.pi/2 + self.siner * 1.5) * 12 + 26 - math.cos(self.siner * 1.5) * 8 - 5
     self.hand2:setFrame(math.floor(self.animsiner / 6))
     self.hand2.alpha = 0.5 + math.sin(self.animsiner / 14) * 0.5
     if self.hand2.x < -12 then
@@ -83,7 +83,7 @@ function CreatureActorGuei:update()
     end
     
     self.hand3.x = math.sin(math.pi + self.siner * 1.5) * 24 + 8
-    self.hand3.y = -math.cos(math.pi + self.siner * 1.5) * 12 + 30
+    self.hand3.y = -math.cos(math.pi + self.siner * 1.5) * 12 + 30 - math.cos(self.siner * 1.5) * 8 - 5
     if self.hand3.x < -14 then
         self.hand3:setLayer(self.body.layer - 1)
     elseif self.hand3.x > 28 then
@@ -91,7 +91,7 @@ function CreatureActorGuei:update()
     end
 
     self.hand4.x = math.sin((math.pi * 1.5) + self.siner * 1.5) * 24 + 11
-    self.hand4.y = -math.cos((math.pi * 1.5) + self.siner * 1.5) * 12 + 26
+    self.hand4.y = -math.cos((math.pi * 1.5) + self.siner * 1.5) * 12 + 26 - math.cos(self.siner * 1.5) * 8 - 5
     self.hand4:setFrame(math.floor(self.animsiner / 6))
     self.hand4.alpha = 0.5 + math.sin(self.animsiner / 14) * 0.5
     if self.hand4.x < -12 then
