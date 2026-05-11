@@ -24,7 +24,7 @@ function BattleUI:drawState()
 
                     if enemy.selectable and enemy.static_hp then
                         -- Draw the enemy's HP
-                        Draw.setColor(COLORS.black)
+                        Draw.setColor(COLORS.dkgray)
                         love.graphics.rectangle("fill", hp_x, 55 + y_off, 81, 16)
 
                         Draw.setColor(COLORS.white)
