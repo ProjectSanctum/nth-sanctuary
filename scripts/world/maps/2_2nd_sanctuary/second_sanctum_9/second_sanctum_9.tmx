@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="1062">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="42" height="32" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="1062">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -13,14 +13,14 @@
  <tileset firstgid="965" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="1163" source="../../../tilesets/longslides.tsx"/>
  <tileset firstgid="1217" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
- <objectgroup id="17" name="objects_parallax_4" parallaxx="0.2" parallaxy="0.62">
+ <objectgroup id="17" name="objects_parallax_4" visible="0" parallaxx="0.2" parallaxy="0.62">
   <object id="1050" gid="92" x="-1200" y="416" width="2880" height="100">
    <properties>
     <property name="color" type="color" value="#ff717171"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="19" name="objects_parallax_3" parallaxx="0.3" parallaxy="0.72">
+ <objectgroup id="19" name="objects_parallax_3" visible="0" parallaxx="0.3" parallaxy="0.72">
   <object id="941" gid="93" x="720" y="760" width="200" height="289">
    <properties>
     <property name="color" type="color" value="#ff717171"/>
@@ -47,13 +47,13 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="18" name="objects_parallax_2" parallaxx="0.45" parallaxy="0.85">
+ <objectgroup id="18" name="objects_parallax_2" visible="0" parallaxx="0.45" parallaxy="0.85">
   <object id="854" gid="93" x="480" y="1200" width="400" height="678"/>
   <object id="855" gid="93" x="80" y="1200" width="400" height="678"/>
   <object id="856" gid="93" x="-320" y="1200" width="400" height="678"/>
   <object id="857" gid="93" x="880" y="1200" width="400" height="678"/>
  </objectgroup>
- <objectgroup id="14" name="objects_parallax_1" parallaxx="0.675" parallaxy="0.9">
+ <objectgroup id="14" name="objects_parallax_1" visible="0" parallaxx="0.675" parallaxy="0.9">
   <object id="287" gid="1073741925" x="389.311" y="881.629" width="640" height="1600" rotation="31.8038">
    <properties>
     <property name="color" type="color" value="#ff2b2b79"/>

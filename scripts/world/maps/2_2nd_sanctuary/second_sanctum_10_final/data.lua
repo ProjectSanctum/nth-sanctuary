@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 13,
-  nextobjectid = 72,
+  nextobjectid = 76,
   properties = {
     ["border"] = "church_b",
     ["music"] = "second_church",
@@ -47,7 +47,7 @@ return {
       id = 12,
       name = "objects_towers3",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = -80,
@@ -65,6 +65,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -81,6 +82,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -97,6 +99,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -113,6 +116,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -129,6 +133,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -145,6 +150,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -161,6 +167,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -177,6 +184,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -193,6 +201,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -209,6 +218,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -225,6 +235,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -241,6 +252,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 1152,
           visible = true,
           properties = {
@@ -255,7 +267,7 @@ return {
       id = 11,
       name = "objects_towers2",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -273,6 +285,7 @@ return {
           width = 2880,
           height = 100,
           rotation = 0,
+          opacity = 1,
           gid = 1151,
           visible = true,
           properties = {
@@ -287,7 +300,7 @@ return {
       id = 10,
       name = "objects_towers1",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -305,6 +318,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 348.546,
+          opacity = 1,
           gid = 1073742984,
           visible = true,
           properties = {
@@ -321,6 +335,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 198.546,
+          opacity = 1,
           gid = 1160,
           visible = true,
           properties = {
@@ -353,6 +368,7 @@ return {
           width = 400,
           height = 200,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -366,6 +382,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
@@ -381,6 +398,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -486,6 +504,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -499,6 +518,35 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 72,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 340,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 73,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 380,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -528,6 +576,7 @@ return {
           width = 440,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -541,6 +590,7 @@ return {
           width = 440,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -554,6 +604,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -567,6 +618,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -580,6 +632,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -593,6 +646,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -606,6 +660,7 @@ return {
           width = 280,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -619,6 +674,7 @@ return {
           width = 160,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -632,6 +688,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -645,6 +702,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -658,6 +716,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -671,6 +730,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -684,6 +744,7 @@ return {
           width = 200,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -697,6 +758,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -710,6 +772,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -723,6 +786,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -736,6 +800,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -749,6 +814,7 @@ return {
           width = 280,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -762,6 +828,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -775,6 +842,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -788,6 +856,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -817,6 +886,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "guei"
@@ -832,6 +902,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_9",
@@ -848,6 +919,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "events.postchase",
@@ -880,6 +952,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -909,6 +982,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
