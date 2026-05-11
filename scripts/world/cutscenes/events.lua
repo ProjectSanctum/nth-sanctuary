@@ -324,7 +324,7 @@ return {
 		g:setLayer(rect.layer + 1)
 		g:addFX(ColorMaskFX(COLORS.white))
 		cutscene:wait(20/30)
-		for i = 1, 15 do
+		for i = 1, 15 do -- <-- Need to add one singular big slash instead, need effect sprites
 			local spr = Sprite("effects/attack/red_slash")
 			spr:setOrigin(0, 0.5)
 			spr:setPosition(g.x, g.y - g.height)
