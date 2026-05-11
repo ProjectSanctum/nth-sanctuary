@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -57,7 +57,7 @@ return {
       id = 17,
       name = "objects_parallax_4",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -75,6 +75,7 @@ return {
           width = 2880,
           height = 100,
           rotation = 0,
+          opacity = 1,
           gid = 92,
           visible = true,
           properties = {
@@ -89,7 +90,7 @@ return {
       id = 19,
       name = "objects_parallax_3",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -107,6 +108,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {
@@ -123,6 +125,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {
@@ -139,6 +142,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {
@@ -155,6 +159,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {
@@ -171,6 +176,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {
@@ -185,7 +191,7 @@ return {
       id = 18,
       name = "objects_parallax_2",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -203,6 +209,7 @@ return {
           width = 400,
           height = 678,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {}
@@ -217,6 +224,7 @@ return {
           width = 400,
           height = 678,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {}
@@ -231,6 +239,7 @@ return {
           width = 400,
           height = 678,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {}
@@ -245,6 +254,7 @@ return {
           width = 400,
           height = 678,
           rotation = 0,
+          opacity = 1,
           gid = 93,
           visible = true,
           properties = {}
@@ -257,7 +267,7 @@ return {
       id = 14,
       name = "objects_parallax_1",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -275,6 +285,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 31.8038,
+          opacity = 1,
           gid = 1073741925,
           visible = true,
           properties = {
@@ -291,6 +302,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 24.4231,
+          opacity = 1,
           gid = 101,
           visible = true,
           properties = {
@@ -307,6 +319,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 348.546,
+          opacity = 1,
           gid = 101,
           visible = true,
           properties = {
@@ -391,6 +404,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["base_tex"] = "backgrounds/glow_purple_tile_oscillate",
@@ -632,6 +646,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -645,6 +660,7 @@ return {
           width = 76,
           height = 280,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -658,6 +674,7 @@ return {
           width = 76,
           height = 280,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -671,6 +688,7 @@ return {
           width = 1280,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -684,6 +702,7 @@ return {
           width = 1480,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -697,6 +716,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -710,6 +730,7 @@ return {
           width = 40,
           height = 200,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -723,6 +744,7 @@ return {
           width = 400,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -736,6 +758,7 @@ return {
           width = 200,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -780,6 +803,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -793,6 +817,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -806,6 +831,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -819,6 +845,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -832,6 +859,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -861,6 +889,7 @@ return {
           width = 1240,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -890,6 +919,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_8",
@@ -906,6 +936,7 @@ return {
           width = 40,
           height = 279,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -919,6 +950,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "events.chase",
@@ -935,6 +967,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["actor"] = "randomGuy"
@@ -950,6 +983,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_10_final",
@@ -982,6 +1016,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -1011,6 +1046,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
