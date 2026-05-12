@@ -31,8 +31,6 @@ function CreatureBG:drawBackground()
 
     local fog = Assets.getTexture("battle/backgrounds/perlin_noise_dark_looping")
     local bgtexture = Assets.getTexture("battle/backgrounds/creature_bg")
-
-    
     
     Draw.setColor(1, 1, 1, 0.5 + math.sin(self.h/40)/32)
     Draw.drawWrapped(bgtexture, true, true, MathUtils.round(6 - self.h/2), MathUtils.round(2 - self.h/2), 0, 2, 2)
