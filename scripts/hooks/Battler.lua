@@ -1,6 +1,6 @@
 local Battler, super = HookSystem.hookScript(Battler)
 
-function Battler:statusMessage(x, y, type, arg, color, kill, delay)
+function Battler:statusMessage(x, y, type, arg, color, kill, delay, chara)
     x, y = self:getRelativePos(x, y)
 
     local offset = 0
@@ -8,7 +8,7 @@ function Battler:statusMessage(x, y, type, arg, color, kill, delay)
         offset = (self.hit_count * 20)
     end
 
-    local percent = DamageNumber(type, arg, x + 4, y + 20 - offset, color, delay, self.chara)
+    local percent = DamageNumber(type, arg, x + 4, y + 20 - offset, color, delay, chara or nil)
     if kill then
         percent.kill_others = true
     end
