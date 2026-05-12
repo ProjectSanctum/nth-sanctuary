@@ -2,7 +2,7 @@ local AttackBox, super = HookSystem.hookScript(AttackBox)
 
 function AttackBox:init(battler, offset, index, x, y)
     super.init(self, battler, offset, index, x, y)
-	self.BOLTSPEED = 8
+	self.BOLTSPEED = super.BOLTSPEED
 	if battler.chara.id == "lobbyman_party" then
 		local static_fx = ShaderFX(Mod.staticBulletShader, {
 			["time"] = function() return Kristal.getTime() end,
