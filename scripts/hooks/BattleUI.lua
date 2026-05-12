@@ -162,7 +162,33 @@ function BattleUI:drawState()
                 end
 			end
         end
-	end
+    elseif Game.battle.state == "PARTYSELECT" then
+        local page = math.ceil(Game.battle.current_menu_y / 3) - 1
+        local max_page = math.ceil(#Game.battle.party / 3) - 1
+        local page_offset = page * 3
+
+        local font = Assets.getFont("main")
+        love.graphics.setFont(font)
+
+        for index = page_offset + 1, math.min(page_offset + 3, #Game.battle.party) do
+            if Game.battle.party[index].chara.id == "lobbyman_party" then
+				Draw.setColor(COLORS.dkgray)
+				love.graphics.rectangle("fill", 400, 55 + ((index - page_offset - 1) * 30), 101, 16)
+
+				local percentage = Game.battle.party[index].chara:getHealth() / Game.battle.party[index].chara:getStat("health")
+				-- Chapter 3 introduces this lower limit, but all chapters in Kristal might as well have it
+				-- Swooning is the only time you can ever see it this low
+				percentage = math.max(-1, percentage)
+				Draw.setColor(COLORS.white)
+				local static_shader = Mod.staticBulletShader
+				static_shader:send("time", Kristal.getTime())
+				static_shader:send("brightness", 1)
+				love.graphics.setShader(static_shader)
+				love.graphics.rectangle("fill", 400, 55 + ((index - page_offset - 1) * 30), math.ceil(percentage * 101), 16)
+				love.graphics.setShader()
+			end
+        end
+    end
 end
 
 return BattleUI
