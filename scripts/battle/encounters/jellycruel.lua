@@ -16,6 +16,7 @@ function Jellycruel:init()
 	
 	self.poison_chance = 0
     self.bg = RedBG2()
+    self.border = Kristal.getBorder()
 end
 
 function Jellycruel:createBackground()
@@ -27,7 +28,7 @@ function Jellycruel:onBattleStart()
 end
 
 function Jellycruel:onBattleEnd()
-    Game:setBorder("tvworld")
+    Game:setBorder(self.border)
 end
 
 return Jellycruel

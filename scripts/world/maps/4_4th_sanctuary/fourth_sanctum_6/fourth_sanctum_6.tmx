@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="75">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="22" nextobjectid="78">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -171,6 +171,9 @@
   <object id="28" name="spawn" x="200" y="140">
    <point/>
   </object>
+  <object id="77" name="entry2" x="1000" y="370">
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="12" name="objects">
   <object id="32" name="npc" x="840" y="150">
@@ -228,14 +231,6 @@
    </properties>
    <point/>
   </object>
-  <object id="62" name="npc" x="670" y="400">
-   <properties>
-    <property name="actor" value="balthizard"/>
-    <property name="animation" value="spared_overlay"/>
-    <property name="text1" value="[spacing:5][speed:0.25]* Do not mind me."/>
-   </properties>
-   <point/>
-  </object>
   <object id="58" name="npc" x="206.5" y="540.167">
    <properties>
     <property name="actor" value="organik"/>
@@ -271,6 +266,12 @@
     <property name="text2" value="* Our eternal wasteland?"/>
    </properties>
    <point/>
+  </object>
+  <object id="75" name="transition" x="1040" y="320" width="40" height="120">
+   <properties>
+    <property name="map" value="4_4th_sanctuary/fourth_sanctum_7"/>
+    <property name="marker" value="entry"/>
+   </properties>
   </object>
  </objectgroup>
  <layer id="13" name="tile" width="26" height="14" visible="0">
