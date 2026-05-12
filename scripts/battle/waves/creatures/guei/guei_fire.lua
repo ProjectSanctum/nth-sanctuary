@@ -2,9 +2,22 @@ local Basic, super = Class(Wave)
 
 function Basic:init()
     super.init(self)
-    self:setArenaSize(175)
+    self:setArenaSize(250)
     self:setSoulPosition(320, 230)
     self.diff = love.math.random(1,5)
+        self.arenaShape = {}
+    for i = 1,360, 45 do
+        local x, y = 175*math.sin(math.rad(i)), 175* math.cos(math.rad(i))
+        if x < 0.001 and x > -0.001 then
+            x=0
+        end
+        if y < 0.001 and y > -0.001 then
+            y=0
+        end
+        
+        table.insert(self.arenaShape, {x, y})
+    end
+    self:setArenaShape(unpack(self.arenaShape))
 end
 
 local spr = Sprite("enemies/creature_a/eye")
@@ -39,6 +52,9 @@ function Basic:update()
     -- Code here gets called every frame
     super.update(self)
     spr.rotation = spr.rotation + (DTMULT/60)
+    Game.battle.arena.rotation = spr.rotation
+    spr.x = Game.battle.arena.x + (math.sin(DTMULT*10)*100)
+    spr.y = Game.battle.arena.y + (math.cos(DTMULT*10)*100)
 end
 
 return Basic
