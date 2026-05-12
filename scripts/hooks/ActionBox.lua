@@ -18,7 +18,7 @@ function ActionBox:drawActionBox()
             Draw.setColor(COLORS.white)
 			local static_shader = Mod.staticBulletShader
 			static_shader:send("time", Kristal.getTime())
-			static_shader:send("brightness", 0.5)
+			static_shader:send("brightness", 1)
             love.graphics.setShader(static_shader)
 		end
         Draw.setColor(self.battler.chara:getColor())
@@ -42,7 +42,7 @@ function ActionBox:drawSelectionMatrix()
             r,g,b,a = 1,1,1,1
 			local static_shader = Mod.staticBulletShader
 			static_shader:send("time", Kristal.getTime())
-			static_shader:send("brightness", 0.5)
+			static_shader:send("brightness", 1)
             love.graphics.setShader(static_shader)
 		end
 		
