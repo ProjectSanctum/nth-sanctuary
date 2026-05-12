@@ -18,6 +18,7 @@ function Basic:init()
         table.insert(self.arenaShape, {x, y})
     end
     self:setArenaShape(unpack(self.arenaShape))
+    self.siner = 0
 end
 
 local spr = Sprite("enemies/creature_a/eye")
@@ -51,10 +52,11 @@ end
 function Basic:update()
     -- Code here gets called every frame
     super.update(self)
+    self.siner = self.siner + DTMULT
     spr.rotation = spr.rotation + (DTMULT/60)
     Game.battle.arena.rotation = spr.rotation
-    spr.x = Game.battle.arena.x + (math.sin(DTMULT*10)*100)
-    spr.y = Game.battle.arena.y + (math.cos(DTMULT*10)*100)
+    spr.x = Game.battle.arena.x + (math.sin(self.siner/5)*10)
+    spr.y = Game.battle.arena.y + (math.cos(self.siner/5)*10)
 end
 
 return Basic
