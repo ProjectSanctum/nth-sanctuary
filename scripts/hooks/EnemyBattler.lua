@@ -3,7 +3,7 @@ local EnemyBattler, super = HookSystem.hookScript(EnemyBattler)
 function EnemyBattler:hurt(amount, battler, on_defeat, color, show_status, attacked)
     if amount == 0 or (amount < 0 and Game:getConfig("damageUnderflowFix")) then
         if show_status ~= false then
-            self:statusMessage("msg", "miss", color or (battler and { battler.chara:getDamageColor() }), battler and battler.chara)
+            self:statusMessage("msg", "miss", color or (battler and { battler.chara:getDamageColor() }), nil, 2, battler and battler.chara)
         end
 
         self:onDodge(battler, attacked)
@@ -12,7 +12,7 @@ function EnemyBattler:hurt(amount, battler, on_defeat, color, show_status, attac
 
     self.health = self.health - amount
     if show_status ~= false then
-        self:statusMessage("damage", amount, color or (battler and { battler.chara:getDamageColor() }), battler and battler.chara)
+        self:statusMessage("damage", amount, color or (battler and { battler.chara:getDamageColor() }), nil, 2, battler and battler.chara)
     end
 
     if amount > 0 then
