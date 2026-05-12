@@ -577,15 +577,15 @@
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_7/second_sanctum_7.tmx",
             "height": 2800,
-            "width": 960,
-            "x": 160,
+            "width": 800,
+            "x": 240,
             "y": 8840
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_8/second_sanctum_8.tmx",
             "height": 800,
             "width": 1280,
-            "x": -80,
+            "x": 0,
             "y": 11720
         },
         {
@@ -613,14 +613,14 @@
             "fileName": "2_2nd_sanctuary/second_sanctum_9/second_sanctum_9.tmx",
             "height": 1280,
             "width": 1680,
-            "x": 1280,
+            "x": 1360,
             "y": 11720
         },
         {
             "fileName": "2_2nd_sanctuary/second_sanctum_10_final/second_sanctum_10_final.tmx",
             "height": 720,
             "width": 1200,
-            "x": 3040,
+            "x": 3120,
             "y": 12240
         },
         {
