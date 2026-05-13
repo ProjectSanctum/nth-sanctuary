@@ -45,6 +45,7 @@ function SmallBullet:onDamage(soul)
 			Game.battle.encounter.poison_chance = 0
 			Assets.stopAndPlaySound("statuseffect")
 			target:inflictStatus("poison")
+			target.hit_count = target.hit_count + 1
 			target:statusMessage("msg", "poisoned")
 		else
 			Game.battle.encounter.poison_chance = Game.battle.encounter.poison_chance + 1

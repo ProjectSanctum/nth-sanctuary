@@ -53,6 +53,7 @@ function Basic:onStart()
 						sndpitch = sndpitch - 0.1
 						if not battler:hasStatus("poison") then
 							battler:inflictStatus("poison")
+							battler.hit_count = battler.hit_count + 1
 							battler:statusMessage("msg", "poisoned")
 						end
                     end
