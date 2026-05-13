@@ -47,11 +47,15 @@ function Basic:onStart()
                 Assets.playSound("error", 1.2)
                 self.timer:after(1, function()
 					local sndpitch = 1
+					local not_poisoned_members = 0
                     for _, battler in ipairs(Game.battle.party) do
 						battler:hurt(40)
-						Assets.playSound("statuseffect", 1-(#Game.battle.party)*0.08, sndpitch)
-						sndpitch = sndpitch - 0.1
 						if not battler:hasStatus("poison") then
+							not_poisoned_members = not_poisoned_members + 1
+						end
+						if not battler:hasStatus("poison") then
+							Assets.playSound("statuseffect", 1-(not_poisoned_members)*0.08, sndpitch)
+							sndpitch = sndpitch - 0.1
 							battler:inflictStatus("poison")
 							battler.hit_count = battler.hit_count + 1
 							battler:statusMessage("msg", "poisoned")
