@@ -42,10 +42,23 @@ function Basic:onStart()
         Game.battle.arena:shake(10, 0, 0.5, 1/15)
         Assets.playSound("snd_closet_fall")
         self.timer:tween(3, Game.battle.arena, {y = Game.battle.arena.y + 700, rotation = fliprot}, "in-cubic", function()
-            if Game.battle.soul.y > SCREEN_HEIGHT then
-                Game.battle.party[1]:hurt(9999)
-                Assets.playSound("mercy_down")
-                Game.battle.enemies[1]:addMercy(-5)
+            if Game.battle.soul.y > SCREEN_HEIGHT + 19 then
+				Game.battle.soul.active = false
+                Assets.playSound("error", 1.2)
+                self.timer:after(1, function()
+					local sndpitch = 1
+                    for _, battler in ipairs(Game.battle.party) do
+						battler:hurt(40)
+						Assets.playSound("statuseffect", 1-(#Game.battle.party)*0.08, sndpitch)
+						sndpitch = sndpitch - 0.1
+						if not battler:hasStatus("poison") then
+							battler:inflictStatus("poison")
+							battler:statusMessage("msg", "poisoned")
+						end
+                    end
+					Assets.playSound("mercy_down")
+					Game.battle.enemies[1]:addMercy(-5)
+                end)
             else
                 Assets.playSound("dumbvictory")
                 self.timer:after(1, function()
@@ -56,7 +69,9 @@ function Basic:onStart()
                 end)
             end
             self.timer:after(1, function()
-                self:setFinished() end)
+				Game.battle.soul.active = true
+                self:setFinished()
+			end)
         end)
     end)
 end

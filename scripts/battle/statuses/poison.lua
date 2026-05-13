@@ -7,7 +7,7 @@ function Poison:init()
 	
 	self.desc = "Slowly lowers your HP when it's your turn, but never kills."
 	
-	self.default_turns = 3
+	self.default_turns = 4
 	
 	self.icon = "ui/status/poison"
 	
