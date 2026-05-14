@@ -3,26 +3,16 @@ local character, super = Class(PartyMember, "lobby_man")
 function character:init()
     super.init(self)
 
-    local ralsei_style = Game:getConfig("ralseiStyle")
-
     -- Display name
-    self.name = "Ralsei"
+    self.name = "Lobby Man"
 
     -- Actor (handles sprites)
     self:setActor("ralsei")
 
     -- Display level (saved to the save file)
-    self.level = Game.chapter
+    self.level = "?"
     -- Default title / class (saved to the save file)
-    if Game.chapter == 1 then
-        self.title = "Lonely Prince\nDark-World being.\nHas no subjects."
-    elseif Game.chapter == 2 then
-        self.title = "Dark Prince\nDark-World being.\nHas friends now."
-    elseif Game.chapter == 3 then
-        self.title = "Dark Prince\nDark-World being.\nHas friends."
-    else
-        self.title = "Dark Hero\nRecords and faces\nthe fate."
-    end
+    self.title = "???"
 
     -- Determines which character the soul comes from (higher number = higher priority)
     self.soul_priority = -1
@@ -36,71 +26,26 @@ function character:init()
     -- Whether the party member can use their X-Action
     self.has_xact = true
     -- X-Action name (displayed in this character's spell menu)
-    self.xact_name = "R-Action"
+    self.xact_name = "L-Action"
 
     -- Spells
     self:addSpell("pacify")
     self:addSpell("heal_prayer")
 
     -- Current health (saved to the save file)
-    if Game.chapter == 1 then
-        self.health = 70
-    elseif Game.chapter == 2 then
-        self.health = 100
-    elseif Game.chapter == 3 then
-        self.health = 140
-    else
-        self.health = 180
-    end
+    self.health = 180
 
     -- Base stats (saved to the save file)
-    if Game.chapter == 1 then
-        self.stats = {
-            health = 70,
-            attack = 8,
-            defense = 2,
-            magic = 7
-        }
-    elseif Game.chapter == 2 then
-        self.stats = {
-            health = 100,
-            attack = 10,
-            defense = 2,
-            magic = 9,
-        }
-    elseif Game.chapter == 3 then
-        self.stats = {
-            health = 140,
-            attack = 12,
-            defense = 2,
-            magic = 11,
-        }
-    else
-        self.stats = {
-            health = 180,
-            attack = 15,
-            defense = 2,
-            magic = 14,
-        }
-    end
+    self.stats = {
+        health = 180,
+        attack = 15,
+        defense = 2,
+        magic = 14,
+    }
     -- Max stats from level-ups
-    if Game.chapter == 1 then
-        self.max_stats = {
-            health = 100
-        }
-    elseif Game.chapter == 2 then
-        self.max_stats = {
-            health = 140
-        }
-    elseif Game.chapter == 3 then
-        self.max_stats = {
-            health = 180
-        }
-    else
-        self.max_stats = {
-            health = 210
-        }
-    end
+    self.max_stats = {
+        health = 210
+    }
     
     -- Party members which will also get stronger when this character gets stronger, even if they're not in the party
     self.stronger_absent = {"kris","susie","ralsei"}
@@ -135,15 +80,11 @@ function character:init()
     self.highlight_color_alt = COLORS.white
 
     -- Head icon in the equip / power menu
-    if ralsei_style == 1 then
-        self.menu_icon = "party/ralsei/head_ch1"
-    else
-        self.menu_icon = "party/ralsei/head"
-    end
+    self.menu_icon = "party/lobby_man/head"
     -- Path to head icons used in battle
-    self.head_icons = "party/ralsei/icon"
+    self.head_icons = "party/lobby_man/icon"
     -- Name sprite (optional)
-    self.name_sprite = "party/ralsei/name"
+    self.name_sprite = "party/lobby_man/name"
 
     -- Effect shown above enemy after attacking it
     self.attack_sprite = "effects/attack/slap_r"
@@ -167,34 +108,11 @@ function character:init()
 end
 
 function character:getTitle()
-    if Game.chapter == 1 then
-        if self:checkWeapon("ragger") then
-            return "LV"..self.level.." Prickly Prince\nDeals damage with\nhis rugged scarf."
-        elseif self:checkWeapon("daintyscarf") then
-            return "LV"..self.level.." Fluffy Prince\nWeak, but has nice\nhealing powers."
-        end
-    end
-    return super.getTitle(self)
-end
-
-function character:onLevelUp(level)
-    self:increaseStat("health", 2)
-    if level % 10 == 0 then
-        self:increaseStat("attack", 1)
-        self:increaseStat("magic", 1)
-    end
-end
-
-function character:onPowerSelect(menu)
-    if MathUtils.random() <= 0.03 then
-        menu.ralsei_dog = true
-    else
-        menu.ralsei_dog = false
-    end
+    return self.title
 end
 
 function character:drawPowerStat(index, x, y, menu)
-    if index == 1 then
+    --[[if index == 1 then
         if Game.chapter == 1 then
             -- Chapter 1 Ralsei "Kindness" stat (doggable)
             if not menu.ralsei_dog then
@@ -238,7 +156,7 @@ function character:drawPowerStat(index, x, y, menu)
             Draw.draw(icon, x+90, y+6, 0, 2, 2)
         end
         return true
-    end
+    end]]
 end
 
 return character
