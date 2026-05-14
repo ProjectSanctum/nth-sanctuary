@@ -12,6 +12,17 @@ function OverworldActionBox:init(x, y, index, chara)
 	end
 end
 
+function OverworldActionBox:setHeadIcon(icon)
+	super.setHeadIcon(self, icon)
+	if self.chara.id == "lobby_man" then
+		if icon == "heart" then
+			self.head_sprite:getFX("static_fx").active = false
+		else
+			self.head_sprite:getFX("static_fx").active = true
+		end
+	end
+end
+
 function OverworldActionBox:draw()
     -- Draw the line at the top
 	local health_bg_col = PALETTE["action_health_bg"]
