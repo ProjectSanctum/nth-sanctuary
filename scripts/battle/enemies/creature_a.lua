@@ -53,7 +53,8 @@ function Dummy:init()
     self.text = {
         "* It screams, but there's no sound.",
         "* Smells like rot.",
-        "* Its hand spasms wildly.",
+        "* Smells like burnt smoke, whatever that means.",
+        "* Its hands orbit around itself aimlessly.",
         "* When did you start being yourself?",
         "* Ralsei is hyperventilating.",
         (Game:hasPartyMember("jamm") and "* Jamm is sweating.") or "* ..."

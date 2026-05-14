@@ -19,6 +19,7 @@ function Basic:init()
     end
     self:setArenaShape(unpack(self.arenaShape))
     self.siner = 0
+    self.time = 10
 end
 
 local spr = Sprite("enemies/creature_a/eye")
@@ -55,8 +56,8 @@ function Basic:update()
     self.siner = self.siner + DTMULT
     spr.rotation = spr.rotation + (DTMULT/60)
     Game.battle.arena.rotation = spr.rotation
-    spr.x = Game.battle.arena.x + (math.sin(self.siner/5)*10)
-    spr.y = Game.battle.arena.y + (math.cos(self.siner/5)*10)
+    spr.x = Game.battle.arena.x + (math.sin(self.siner/20)*200)
+    spr.y = Game.battle.arena.y
 end
 
 return Basic

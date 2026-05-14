@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 89,
+  nextobjectid = 91,
   properties = {},
   tilesets = {
     {
@@ -233,9 +233,9 @@ return {
           name = "climbarea",
           type = "",
           shape = "rectangle",
-          x = 840,
+          x = 880,
           y = 240,
-          width = 160,
+          width = 120,
           height = 40,
           rotation = 0,
           opacity = 1,
@@ -557,20 +557,6 @@ return {
           properties = {}
         },
         {
-          id = 80,
-          name = "climbarea",
-          type = "",
-          shape = "rectangle",
-          x = 840,
-          y = 520,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 81,
           name = "climbcoin",
           type = "",
@@ -641,7 +627,7 @@ return {
           shape = "rectangle",
           x = 600,
           y = 840,
-          width = 280,
+          width = 240,
           height = 40,
           rotation = 0,
           opacity = 1,
@@ -679,6 +665,36 @@ return {
           properties = {
             ["script"] = "respawn_destructables_flooded",
             ["timed"] = false
+          }
+        },
+        {
+          id = 89,
+          name = "climbarea",
+          type = "",
+          shape = "rectangle",
+          x = 880,
+          y = 520,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 90,
+          name = "destructableclimbarea",
+          type = "",
+          shape = "rectangle",
+          x = 840,
+          y = 520,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["sprite"] = "world/events/climbtiles/brittlebrick"
           }
         }
       }

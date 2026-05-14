@@ -49,6 +49,8 @@ function Basic:onStart()
                 Assets.playSound("impact", 1, 0.9)
             end)
         end)
+        self.timer:tween(0.5, Game.battle.arena, {x = Game.battle.arena.right + 50}, 'in-expo', function()
+        end)
         wait(1)
         local x1, x2 = 0, Game.battle.arena.width
         self.timer:every(1/7, function()
