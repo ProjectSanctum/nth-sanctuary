@@ -4,7 +4,7 @@ function ActionBoxDisplay:draw()
 	local health_bg_col = PALETTE["action_health_bg"]
     if Game.battle.current_selecting == self.actbox.index then
         Draw.setColor(self.actbox.battler.chara:getColor())
-		if self.actbox.battler.chara.id == "lobbyman_party" then
+		if self.actbox.battler.chara.id == "lobby_man" then
 			health_bg_col = COLORS.dkgray
             Draw.setColor(COLORS.white)
 			local static_shader = Mod.staticBulletShader
@@ -14,7 +14,7 @@ function ActionBoxDisplay:draw()
 		end
     else
         Draw.setColor(PALETTE["action_strip"], 1)
-		if self.actbox.battler.chara.id == "lobbyman_party" then
+		if self.actbox.battler.chara.id == "lobby_man" then
 			health_bg_col = COLORS.dkgray
 		end
     end
@@ -39,7 +39,7 @@ function ActionBoxDisplay:draw()
 
     if health > 0 then
         Draw.setColor(self.actbox.battler.chara:getColor())
-		if self.actbox.battler.chara.id == "lobbyman_party" then
+		if self.actbox.battler.chara.id == "lobby_man" then
             Draw.setColor(COLORS.white)
 			local static_shader = Mod.staticBulletShader
 			static_shader:send("time", Kristal.getTime())

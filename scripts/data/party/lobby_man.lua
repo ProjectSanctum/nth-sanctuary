@@ -1,4 +1,4 @@
-local character, super = Class(PartyMember, "lobbyman_party")
+local character, super = Class(PartyMember, "lobby_man")
 
 function character:init()
     super.init(self)

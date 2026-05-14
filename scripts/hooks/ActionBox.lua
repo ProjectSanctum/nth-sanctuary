@@ -3,7 +3,7 @@ local ActionBox, super = HookSystem.hookScript(ActionBox)
 function ActionBox:init(x, y, index, battler)
     super.init(self, x, y, index, battler)
 
-	if battler.chara.id == "lobbyman_party" then
+	if battler.chara.id == "lobby_man" then
 		local static_fx = ShaderFX(Mod.staticBulletShader, {
 			["time"] = function() return Kristal.getTime() end,
 			["brightness"] = 0.5
@@ -14,7 +14,7 @@ end
 
 function ActionBox:drawActionBox()
     if Game.battle.current_selecting == self.index then
-		if self.battler.chara.id == "lobbyman_party" then
+		if self.battler.chara.id == "lobby_man" then
             Draw.setColor(COLORS.white)
 			local static_shader = Mod.staticBulletShader
 			static_shader:send("time", Kristal.getTime())
@@ -38,7 +38,7 @@ function ActionBox:drawSelectionMatrix()
 
     if Game.battle.current_selecting == self.index then
         local r,g,b,a = self.battler.chara:getColor()
-		if self.battler.chara.id == "lobbyman_party" then
+		if self.battler.chara.id == "lobby_man" then
             r,g,b,a = 1,1,1,1
 			local static_shader = Mod.staticBulletShader
 			static_shader:send("time", Kristal.getTime())
