@@ -235,10 +235,12 @@ function Lib:init()
         local value = orig(self, name, default, light)
         if Game.battle then
             local battler = Game.battle:getPartyBattler(self.id)
-            for id, status in pairs(battler.statuses) do
-                ---@cast status {statcon:StatusCondition}
-                value = status.statcon:applyStatModifier(name, value)
-            end
+			if battler then
+				for id, status in pairs(battler.statuses) do
+					---@cast status {statcon:StatusCondition}
+					value = status.statcon:applyStatModifier(name, value)
+				end
+			end
         end
         return value
     end)
