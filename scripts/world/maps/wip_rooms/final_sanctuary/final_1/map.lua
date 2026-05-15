@@ -20,6 +20,8 @@ function Map:onEnter()
 		end
 	end
 	self:getTileLayer("tiles_texture"):addFX(ProphecyShaderFX(0.5), "prop")
+	local man = Game.world:getCharacter("lobbyman")
+	man.flip_x = true
 end
 
 return Map

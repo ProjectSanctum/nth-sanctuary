@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 34,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 14,
-  nextobjectid = 63,
+  nextlayerid = 15,
+  nextobjectid = 65,
   properties = {
     ["border"] = "church_grand_grey",
     ["music"] = "final"
@@ -74,7 +74,6 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
-          opacity = 1,
           gid = 603,
           visible = true,
           properties = {}
@@ -89,7 +88,6 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
-          opacity = 1,
           gid = 603,
           visible = true,
           properties = {}
@@ -120,7 +118,6 @@ return {
           width = 1040,
           height = 1280,
           rotation = 270,
-          opacity = 1,
           gid = 515,
           visible = true,
           properties = {}
@@ -205,7 +202,6 @@ return {
           width = 1040,
           height = 1320,
           rotation = 270,
-          opacity = 1,
           gid = 515,
           visible = true,
           properties = {}
@@ -345,7 +341,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -375,7 +370,6 @@ return {
           width = 200,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -389,7 +383,6 @@ return {
           width = 280,
           height = 320,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -403,7 +396,6 @@ return {
           width = 280,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -417,7 +409,6 @@ return {
           width = 280,
           height = 280,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -431,7 +422,6 @@ return {
           width = 280,
           height = 280,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -445,7 +435,6 @@ return {
           width = 80,
           height = 1360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -459,7 +448,6 @@ return {
           width = 280,
           height = 280,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -473,7 +461,6 @@ return {
           width = 240,
           height = 520,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -487,7 +474,6 @@ return {
           width = 240,
           height = 520,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -501,7 +487,6 @@ return {
           width = 80,
           height = 1360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -515,7 +500,6 @@ return {
           width = 280,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -529,7 +513,6 @@ return {
           width = 80,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -559,11 +542,27 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "0_base_sanctum/base_grand_door",
             ["marker"] = "entry_grand2"
+          }
+        },
+        {
+          id = 64,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 190,
+          y = 120,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "lobbyman",
+            ["sprite"] = "cardboard",
+            ["text1"] = "* ?! [wait:10]\n* (It's made of cardboard...!)"
           }
         }
       }
@@ -592,7 +591,6 @@ return {
           width = 840,
           height = 1360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -622,7 +620,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["hue_start"] = "0",
