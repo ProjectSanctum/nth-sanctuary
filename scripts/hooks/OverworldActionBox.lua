@@ -3,7 +3,7 @@ local OverworldActionBox, super = HookSystem.hookScript(OverworldActionBox)
 function OverworldActionBox:init(x, y, index, chara)
     super.init(self, x, y, index, chara)
 	
-	if chara.id == "lobbyman_party" then
+	if chara.id == "lobby_man" then
 		local static_fx = ShaderFX(Mod.staticBulletShader, {
 			["time"] = function() return Kristal.getTime() end,
 			["brightness"] = 0.5
@@ -12,12 +12,23 @@ function OverworldActionBox:init(x, y, index, chara)
 	end
 end
 
+function OverworldActionBox:setHeadIcon(icon)
+	super.setHeadIcon(self, icon)
+	if self.chara.id == "lobby_man" then
+		if icon == "heart" then
+			self.head_sprite:getFX("static_fx").active = false
+		else
+			self.head_sprite:getFX("static_fx").active = true
+		end
+	end
+end
+
 function OverworldActionBox:draw()
     -- Draw the line at the top
 	local health_bg_col = PALETTE["action_health_bg"]
     if self.selected then
         Draw.setColor(self.chara:getColor())
-		if self.chara.id == "lobbyman_party" then
+		if self.chara.id == "lobby_man" then
 			health_bg_col = COLORS.dkgray
             Draw.setColor(COLORS.white)
 			local static_shader = Mod.staticBulletShader
@@ -27,7 +38,7 @@ function OverworldActionBox:draw()
 		end
     else
         Draw.setColor(PALETTE["action_strip"])
-		if self.chara.id == "lobbyman_party" then
+		if self.chara.id == "lobby_man" then
 			health_bg_col = COLORS.dkgray
 		end
     end
@@ -49,7 +60,7 @@ function OverworldActionBox:draw()
 
     if health > 0 then
         Draw.setColor(self.chara:getColor())
-		if self.chara.id == "lobbyman_party" then
+		if self.chara.id == "lobby_man" then
             Draw.setColor(COLORS.white)
 			local static_shader = Mod.staticBulletShader
 			static_shader:send("time", Kristal.getTime())

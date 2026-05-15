@@ -30,7 +30,7 @@ function BattleUI:drawState()
 
                     -- Draw head only if it isn't the currently selected character
                     if Game.battle:getPartyIndex(party_id) ~= Game.battle.current_selecting then
-						if chara.id == "lobbyman_party" then
+						if chara.id == "lobby_man" then
 							local static_shader = Mod.staticBulletShader
 							static_shader:send("time", Kristal.getTime())
 							static_shader:send("brightness", 0.5)
@@ -47,7 +47,7 @@ function BattleUI:drawState()
             if item.icons then
                 for _, icon in ipairs(item.icons) do
                     if type(icon) == "string" then
-                        icon = { icon, false, 0, 0, nil }
+                        icon = { icon, false, 0, 0, lobby_man }
                     end
                     if not icon[2] then
                         local texture = Assets.getTexture(icon[1])
@@ -59,7 +59,7 @@ function BattleUI:drawState()
             if able then
                 -- Using color like a function feels wrong... should this be called getColor?
                 Draw.setColor(item:color() or { 1, 1, 1, 1 })
-				if item.name == Game.battle.party[Game.battle.current_selecting].chara:getXActName() and Game.battle.party[Game.battle.current_selecting].chara.id == "lobbyman_party" then
+				if item.name == Game.battle.party[Game.battle.current_selecting].chara:getXActName() and Game.battle.party[Game.battle.current_selecting].chara.id == "lobby_man" then
 					local static_shader = Mod.staticBulletShader
 					static_shader:send("time", Kristal.getTime())
 					static_shader:send("brightness", 0.3)
@@ -78,7 +78,7 @@ function BattleUI:drawState()
                 end
                 for _, icon in ipairs(item.icons) do
                     if type(icon) == "string" then
-                        icon = { icon, false, 0, 0, nil }
+                        icon = { icon, false, 0, 0, lobby_man }
                     end
                     if icon[2] then
                         local texture = Assets.getTexture(icon[1])
@@ -110,7 +110,7 @@ function BattleUI:drawState()
 
             if enemy then
                 if Game.battle.state_reason == "XACT" then
-					if Game.battle.party[Game.battle.current_selecting].chara.id == "lobbyman_party" then
+					if Game.battle.party[Game.battle.current_selecting].chara.id == "lobby_man" then
 						Draw.setColor(COLORS.white)
 						local static_shader = Mod.staticBulletShader
 						static_shader:send("time", Kristal.getTime())
@@ -171,7 +171,7 @@ function BattleUI:drawState()
         love.graphics.setFont(font)
 
         for index = page_offset + 1, math.min(page_offset + 3, #Game.battle.party) do
-            if Game.battle.party[index].chara.id == "lobbyman_party" then
+            if Game.battle.party[index].chara.id == "lobby_man" then
 				Draw.setColor(COLORS.dkgray)
 				love.graphics.rectangle("fill", 400, 55 + ((index - page_offset - 1) * 30), 101, 16)
 

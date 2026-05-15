@@ -3,7 +3,7 @@ local AttackBox, super = HookSystem.hookScript(AttackBox)
 function AttackBox:init(battler, offset, index, x, y)
     super.init(self, battler, offset, index, x, y)
 	self.BOLTSPEED = super.BOLTSPEED
-	if battler.chara.id == "lobbyman_party" then
+	if battler.chara.id == "lobby_man" then
 		local static_fx = ShaderFX(Mod.staticBulletShader, {
 			["time"] = function() return Kristal.getTime() end,
 			["brightness"] = 0.5
@@ -13,7 +13,7 @@ function AttackBox:init(battler, offset, index, x, y)
 end
 
 function AttackBox:draw()
-	if self.battler.chara.id == "lobbyman_party" then	
+	if self.battler.chara.id == "lobby_man" then	
 		local target_color = { self.battler.chara:getAttackBarColor() }
 		local box_color = { self.battler.chara:getAttackBoxColor() }
 
