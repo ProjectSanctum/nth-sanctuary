@@ -10,7 +10,7 @@ function character:init()
     self:setActor("ralsei")
 
     -- Display level (saved to the save file)
-    self.level = "?"
+    self.level = "??"
     -- Default title / class (saved to the save file)
     self.title = "???"
 
@@ -108,7 +108,15 @@ function character:init()
 end
 
 function character:getTitle()
-    return self.title
+    local prefix = "LV "..self:getLevel().." "
+    local msg = ""
+    if Mod:isWeird() then
+        msg = "Cohort\nImbues enemies with\na Dark Will."
+    else
+        msg = "\"Follower\"\n???? ???? ?? ????\n???? ???? ??? ?????"--<-- "They seem to know what they are doing"
+    end
+    return prefix..msg 
+
 end
 
 function character:drawPowerStat(index, x, y, menu)
