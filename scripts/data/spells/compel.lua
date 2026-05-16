@@ -11,7 +11,7 @@ function spell:init()
     -- Battle description
     self.effect = "Push ATK\n& power"
     -- Menu description
-    self.description = "Per 16% TP, Increase MAGIC by 2 for a selected ally.\n(16% TP = 1 stack, up to 6)"
+    self.description = "Per 16% TP, Increase MAGIC by 2 for a selected ally. (16% TP = 1 stack, up to 6)"
 
     -- TP cost
     self.cost = 16
@@ -33,8 +33,23 @@ end
 function spell:onCast(user, target)
     local stacks = self.stacks
     print("stacks : ", self.stacks)
-    -- Apply the effect based on the number of stacks
-    target:inflictStatus("compelled", 2, stacks)
+
+    Assets.playSound("great_shine", 1, 1.2)
+    Assets.playSound("dtrans_twinkle")
+    target:flash()
+
+    local afterimage1 = AfterImage(target, 0.5)
+    local afterimage2 = AfterImage(target, 0.6)
+    afterimage1.physics.speed_x = -2.5
+    afterimage2.physics.speed_x = -5
+    afterimage1:setLayer(target.layer + 1)
+    afterimage2:setLayer(target.layer + 2)
+    Game.battle:addChild(afterimage1)
+    Game.battle:addChild(afterimage2)
+    Game.battle.timer:after(0.5, function()
+    target:statusMessage("msg", "compelled")
+         target:inflictStatus("compelled", 2, stacks)
+     end)
     
 end
 

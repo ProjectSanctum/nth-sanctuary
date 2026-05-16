@@ -15,7 +15,7 @@ end
 
 function Compelled:applyStatModifier(stat, value)
     if stat == "magic" then
-        value = 2 * self.amplifier
+        value = value + (2 * self.amplifier)
     end
     return value
 end
