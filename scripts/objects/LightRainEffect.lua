@@ -122,7 +122,7 @@ function LightRainEffect:update()
 			self.drop_timer = self.drop_timer + DTMULT
 			if self.drop_timer >= self.drop_wait then
 				self.drop_timer = 0
-				self.drop_wait = math.max(self.drop_timer * 0.75, 2)
+				self.drop_wait = math.max(self.drop_wait * 0.75, 2)
 			end
 		end
 		
