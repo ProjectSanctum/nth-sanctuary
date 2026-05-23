@@ -9,6 +9,7 @@ function SpeechSpikeBubble:init(text, x, y, options, speaker)
 	self.bg_color = options["bg_color"] or COLORS.black
 	self.text.line_offset = options["line_offset"] or 0
 	
+	self.centered = options["center"] ~= false
 	self.w = options["width"] or 60
 	self.h = options["height"] or 40
 	self.tailx = options["tailx"] or 220
@@ -43,7 +44,9 @@ function SpeechSpikeBubble:init(text, x, y, options, speaker)
 		yy = Game.world.camera.y - SCREEN_HEIGHT / 2
 	end
     self:updateSize()
-	self.x = self.x + (self.text_width + 20) / 2
+	if self.centered then
+		self.x = self.x + (self.text_width + 20) / 2
+	end
 	self.remcamerax = xx
 	self.remcameray = yy
 end
@@ -91,8 +94,8 @@ function SpeechSpikeBubble:draw()
 	end
 	if surfaceupdate then
 		self.siner = self.siner + r
-		local x = self.x - self.w * self.scaled
-		local y = self.y - ((self.text_height * 0.25) + 4) * self.scaled
+		local x = self.x - (self.centered and self.w * self.scaled or self.w * self.scaled)
+		local y = self.y - ((self.text_height * 0.25) + 4 * (self.scaled == 2 and 1 or 2)) * 2
 		local x1 = ((x - xx) / self.scaled) + (MathUtils.random(-1, 2) * r) + (math.sin(self.siner / 3) * 3)
 		local x2 = (((x + (self.w * self.scaled)) - xx) / self.scaled) + (MathUtils.random(-1, 2) * r) + (math.sin(self.siner / 3) * 3)
 		local y1 = ((y - yy) / self.scaled) + (MathUtils.random(-1, 2) * r) + (math.cos(self.siner / 3) * 3)

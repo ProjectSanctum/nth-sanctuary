@@ -194,6 +194,14 @@ function Mod:registerTextCommands(text)
     text:registerCommand("friend", function(self, node, dry)
         self.state.friendly = (node.arguments[1] ~= "unfriend")
     end, {dry = true})
+    text:registerCommand("static", function(self, node, dry)
+        self.state.static = (node.arguments[1] ~= "unstatic")
+        self.state.static_brightness = node.arguments[2] or 1
+    end, {dry = true})
+    text:registerCommand("imbuedstatic", function(self, node, dry)
+        self.state.imbued_static = (node.arguments[1] ~= "unstatic")
+        self.state.static_brightness = node.arguments[2] or 1
+    end, {dry = true})
     text:registerCommand("dualcol", function(self, node, dry)
         self.state.dualcol = (node.arguments[1] ~= "stop")
         if node.arguments[1] == "stop" then return end
@@ -221,6 +229,25 @@ function Mod:onDrawText(text, node, state, x, y, scale, font, use_color)
         shader:sendColor("from", {1, 0.4, 1, 1})
         shader:sendColor("to", {1,1,0,1})
         Draw.draw(canvas, x, y)
+        love.graphics.setShader(last_shader)
+        return true    
+    elseif state.static or state.imbued_static then
+        local last_shader = love.graphics.getShader()
+        local w, h = text:getNodeSize(node, state)
+        local canvas = Draw.pushCanvas(w, h, { stencil = false })
+        love.graphics.print(node.character, 0, 0, 0, scale, scale)
+        Draw.popCanvas()
+		local static_shader = Mod.staticBulletShader
+		static_shader:send("time", Kristal.getTime())
+		love.graphics.setShader(static_shader)
+		static_shader:send("brightness", state.static_brightness or 1)
+        Draw.draw(canvas, x, y)
+		if state.imbued_static then
+			for i = 0, 5 do
+				Draw.setColor(1,1,1,0.7 - (i * 0.1))
+				Draw.draw(canvas, x - (i * 1) + MathUtils.random(i * 2), y - (i * 1) + MathUtils.random(i * 2))
+			end
+		end
         love.graphics.setShader(last_shader)
         return true
     elseif state.golden then
