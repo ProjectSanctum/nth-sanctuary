@@ -152,7 +152,7 @@ end
 
 function Mod:onFootstep(chara, num)
     if chara:includes(Player) then
-        for i, w in ipairs(Game.stage:getObjects(LightRainEffect()) do
+        for i, w in ipairs(Game.stage:getObjects(LightRainEffect) do
 			local make_steps = true
 			for _,dryzone in ipairs(Game.world.map:getEvents("dryzone")) do
 				if Game.world.player:collidesWith(dryzone.collider) then
