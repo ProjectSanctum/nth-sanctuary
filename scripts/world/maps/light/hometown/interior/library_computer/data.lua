@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -20,14 +20,14 @@ return {
     {
       name = "hometownobjects",
       firstgid = 1,
-      filename = "../../../../tilesets/hometownobjects.tsx",
-      exportfilename = "../../../../tilesets/hometownobjects.lua"
+      filename = "../../../../../tilesets/hometownobjects.tsx",
+      exportfilename = "../../../../../tilesets/hometownobjects.lua"
     }
   },
   layers = {
     {
       type = "imagelayer",
-      image = "../../../../../../assets/sprites/world/maps/hometown/interior/library_computer.png",
+      image = "../../../../../../../assets/sprites/world/maps/hometown/interior/library_computer.png",
       id = 2,
       name = "room",
       class = "",
@@ -65,6 +65,7 @@ return {
           width = 40,
           height = 70,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -78,6 +79,7 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -91,6 +93,7 @@ return {
           width = 40,
           height = 420,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -104,6 +107,7 @@ return {
           width = 576,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -117,6 +121,7 @@ return {
           width = 40,
           height = 418,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -130,6 +135,7 @@ return {
           width = 40,
           height = 72,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -143,6 +149,7 @@ return {
           width = 176,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -156,6 +163,7 @@ return {
           width = 76,
           height = 186,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -169,6 +177,7 @@ return {
           width = 22,
           height = 88,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -182,6 +191,7 @@ return {
           width = 200,
           height = 104,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -195,6 +205,7 @@ return {
           width = 76,
           height = 44,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -208,6 +219,7 @@ return {
           width = 18,
           height = 124,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -221,6 +233,7 @@ return {
           width = 24,
           height = 44,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -234,6 +247,7 @@ return {
           width = 472,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -263,6 +277,7 @@ return {
           width = 60,
           height = 36,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -280,6 +295,7 @@ return {
           width = 36,
           height = 38,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -297,6 +313,7 @@ return {
           width = 98,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -313,6 +330,7 @@ return {
           width = 42,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (The closet is spacious and full of old electronics.)",
@@ -329,6 +347,7 @@ return {
           width = 144,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* (Various posters talking about Internet safety.)"
@@ -344,6 +363,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["facing"] = "down",
@@ -361,6 +381,7 @@ return {
           width = 110,
           height = 192,
           rotation = 0,
+          opacity = 1,
           gid = 15,
           visible = true,
           properties = {}
@@ -375,6 +396,7 @@ return {
           width = 222,
           height = 148,
           rotation = 0,
+          opacity = 1,
           gid = 16,
           visible = true,
           properties = {}
@@ -389,6 +411,7 @@ return {
           width = 62,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (Looks like the library's state-of-the-art public laptop.)",
@@ -405,6 +428,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* (It's a computer. The monitor is flickering brightly.)"
@@ -420,6 +444,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* (It's a computer. The monitor is flickering brightly.)"
@@ -435,6 +460,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (It's a computer.)",
@@ -451,6 +477,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (It's a computer.)",
@@ -467,6 +494,7 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* (It's a computer. The monitor is flickering brightly.)"
@@ -498,6 +526,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
