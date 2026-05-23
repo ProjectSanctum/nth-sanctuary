@@ -44,13 +44,13 @@ function BeachWater:update()
 	
     self.siner = self.siner + DT
 	self.rain_sprite.siner = self.siner
-	if Game.stage:hasWeather("rain") and self.rain_mode == false then
+	--[[if Game.stage:hasWeather("rain") and self.rain_mode == false then
 		self.rain_sprite.visible = true
 		self.rain_mode = true
 	elseif not Game.stage:hasWeather("rain") and self.rain_mode == true then
 		self.rain_sprite.visible = false
 		self.rain_mode = false
-	end
+	end]]
 	if self.rain_mode then
 		self.timer = self.timer - DTMULT
 		if self.timer < 0 then
