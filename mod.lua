@@ -593,16 +593,6 @@ function Mod:preUpdate()
     self.sound_timer = MathUtils.approach(self.sound_timer, 0, DTMULT)
 end
 
-function Mod:loadObject(world, name, data)
-    if data.gid then
-		local tobj = world.map:createTileObject(data)
-		tobj.day_mode = data.properties["day"] or nil
-		tobj.night_mode = data.properties["night"] or nil
-		tobj.rain_mode = data.properties["rain"] or nil
-		return tobj
-    end
-end
-
 --[==[
 function Mod:preInit()
     ---@return string|number[][]
