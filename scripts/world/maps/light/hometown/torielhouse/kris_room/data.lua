@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -49,7 +49,7 @@ return {
       id = 6,
       name = "objects_room_night",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -67,7 +67,6 @@ return {
           width = 640,
           height = 480,
           rotation = 0,
-          opacity = 1,
           gid = 78,
           visible = true,
           properties = {
@@ -100,7 +99,6 @@ return {
           width = 210,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -114,7 +112,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -128,7 +125,6 @@ return {
           width = 40,
           height = 360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -142,7 +138,6 @@ return {
           width = 520,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -156,7 +151,6 @@ return {
           width = 40,
           height = 400,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -170,7 +164,6 @@ return {
           width = 190,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -184,7 +177,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -214,7 +206,6 @@ return {
           width = 82,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -231,7 +222,6 @@ return {
           width = 82,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -248,7 +238,6 @@ return {
           width = 106,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -265,7 +254,6 @@ return {
           width = 100,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -283,7 +271,6 @@ return {
           width = 94,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -301,7 +288,6 @@ return {
           width = 74,
           height = 60,
           rotation = 0,
-          opacity = 1,
           gid = 34,
           visible = true,
           properties = {
@@ -318,7 +304,6 @@ return {
           width = 92,
           height = 76,
           rotation = 0,
-          opacity = 1,
           gid = 35,
           visible = true,
           properties = {
@@ -335,7 +320,6 @@ return {
           width = 106,
           height = 64,
           rotation = 0,
-          opacity = 1,
           gid = 37,
           visible = true,
           properties = {}
@@ -350,7 +334,6 @@ return {
           width = 92,
           height = 34,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -370,7 +353,6 @@ return {
           width = 58,
           height = 36,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["solid"] = true,
@@ -387,7 +369,6 @@ return {
           width = 24,
           height = 28,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["text"] = "* It's stained."
@@ -403,7 +384,6 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["facing"] = "down",
@@ -421,7 +401,6 @@ return {
           width = 40,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -433,7 +412,7 @@ return {
       id = 7,
       name = "objects_night",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -451,7 +430,6 @@ return {
           width = 74,
           height = 60,
           rotation = 0,
-          opacity = 1,
           gid = 33,
           visible = true,
           properties = {
@@ -468,7 +446,6 @@ return {
           width = 106,
           height = 64,
           rotation = 0,
-          opacity = 1,
           gid = 79,
           visible = true,
           properties = {
@@ -501,7 +478,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -531,7 +507,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -545,7 +520,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }

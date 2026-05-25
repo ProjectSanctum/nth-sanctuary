@@ -10,33 +10,43 @@
 
     "chapter": 4,
     "map": "fileselect",
-    "party": ["kris", "susie", "ralsei"],
+    "party": ["kris"], //["kris", "susie", "ralsei"],
     "inventory": {
         "items": ["scarlixir","scarlixir","scarlixir","rhapsotea","rhapsotea","rhapsotea","ancientsweet"],
         "key_items": ["cell_phone", "shadowcrystal", "claimbclaws", "sheetmusic"]
     },
     "equipment": {
         "kris": {
-            "weapon": "winglade",
-            "armor": ["waferguard", "tennatie"]
-        },
-        "susie": {
-            "weapon": "absorbax",
-            "armor": ["spikeband", "shadowmantle"]
-        },
-        "ralsei": {
-            "weapon": "scarfmark",
-            "armor": ["princessrbn", ""]
+            "weapon": "light/quillpen"
         }
+        // "kris": {
+            // "weapon": "winglade",
+            // "armor": ["waferguard", "tennatie"]
+        // },
+        // "susie": {
+            // "weapon": "absorbax",
+            // "armor": ["spikeband", "shadowmantle"]
+        // },
+        // "ralsei": {
+            // "weapon": "scarfmark",
+            // "armor": ["princessrbn", ""]
+        // }
     },
-    	"namesMessages": {
+    "namesMessages": {
 		// Characters (I guess)
 		"CAMAC": "did you mean: tobyfox?\ndiscord.gg/tobyfox",
         "RALSZOR": "hi its me",
         "RAL": "hi its still me",
-        "MERG": "What's up guys, today we are\nplaying Deltarune: #th Sanctuary, \netc etc..."
+        "MERG": "What's up guys, today we are\nplaying Deltarune: #th Sanctuary, \netc etc...",
+        "CHERRY": "hi its me chernobyl",
+        "MARCY": "Not viable.",
+        "DDELTA": "Placeholder text",
+        "LUCID": "Placeholder text"
     },
-
+    "namesDeny": [
+        "MARCY"
+    ],
+    
     "hardReset": false,
     "hidden": false,
     "setWindowTitleAndIcon": false,
@@ -52,7 +62,7 @@
                 "short": "Ep"
             },
             "chapter": false,
-            "map": "0_base_sanctum/base_center",
+            "map": "light/hometown/torielhouse/kris_roomempty",
             "noStyledOptions": false,
             "style": "greatdoor",
             "hookOverlay": true,
