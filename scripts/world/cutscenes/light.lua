@@ -5,6 +5,9 @@ return {
 			follower.visible = false
 		end
         cutscene:loadMap("light/hometown/torielhouse/kris_room")
+		for _, save in ipairs(Game.world:getEvents("savepoint")) do
+			save:remove()
+		end
         Game.world.music:stop()
         Game.world.music:play("jitterbug_muffled")
         cutscene:fadeIn(2, {alpha = 1, music = false})
