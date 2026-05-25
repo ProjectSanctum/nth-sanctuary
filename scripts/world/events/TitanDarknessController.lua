@@ -8,9 +8,11 @@ function TitanDarknessController:init(data)
     self.spawn_speed = 0
     self.spawn_timer = self.spawn_speed
     self.fumes = {}
+    self.spawn_width = SCREEN_WIDTH * 2
+    self.init_x = 0
     self:addFX(PixelateFX(2))
     for i = 1, 8 do
-        table.insert(self.fumes, {MathUtils.random(0, SCREEN_WIDTH*2), SCREEN_HEIGHT+90, MathUtils.random(20, 40), self.timer + MathUtils.random(-30, 30)})
+        table.insert(self.fumes, {MathUtils.random(self.init_x, self.init_x +self.spawn_width), SCREEN_HEIGHT+90, MathUtils.random(20, 40), self.timer + MathUtils.random(-30, 30)})
     end
 end
 function TitanDarknessController:update()
@@ -20,7 +22,7 @@ function TitanDarknessController:update()
     self.spawn_timer = self.spawn_timer - DTMULT
     if self.spawn_timer < 0 then
         self.spawn_timer = self.spawn_timer + self.spawn_speed
-        table.insert(self.fumes, {MathUtils.random(0, SCREEN_WIDTH*2), SCREEN_HEIGHT+120, MathUtils.random(20, 40), self.timer})
+        table.insert(self.fumes, {MathUtils.random(self.init_x, self.init_x +self.spawn_width), SCREEN_HEIGHT+120, MathUtils.random(20, 40), self.timer})
     end
 
     local to_remove = {}

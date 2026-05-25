@@ -355,14 +355,6 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
     <property name="txt_offy" type="float" value="-32"/>
    </properties>
   </object>
-  <object id="38" name="cameratarget" x="400" y="240" width="280" height="80">
-   <properties>
-    <property name="lockx" type="bool" value="true"/>
-    <property name="locky" type="bool" value="true"/>
-    <property name="marker" value="targ"/>
-    <property name="time" type="float" value="1"/>
-   </properties>
-  </object>
   <object id="35" name="roomglow" x="120" y="0">
    <properties>
     <property name="prophecy" type="bool" value="true"/>

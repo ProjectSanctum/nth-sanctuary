@@ -258,7 +258,7 @@ return {
 		susie:setSprite("exasperated_right")
 		cutscene:text("* SCREW the prophecy, [wait:5]Ralsei!", "teeth_b", susie)
 		cutscene:text("* I just wanna get out of here!", "teeth_b", susie)
-		cutscene:text("* I don't want to sit here, [wait:5]and twiddle my thumb", "teeth_b", susie, {auto = true})
+		cutscene:text("* I don't want to sit here, [wait:5]and do nothing!", "teeth_b", susie, {auto = true})
 		Assets.playSound("ghostappear")
 		cutscene:wait(2)
 		susie:resetSprite()
@@ -357,6 +357,8 @@ return {
         waw.layer = 99999999
         Game.world:addChild(waw)
         waw:addFX(static_fx, "static_fx")
+		g:addFX(static_fx, "static_fx")
+		
 		cutscene:wait(3)
 		Game:setFlag("chase_cutscene_prog", 2)
 		cutscene:startEncounter("creature_a", false)

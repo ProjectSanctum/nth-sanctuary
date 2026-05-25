@@ -965,24 +965,6 @@ return {
           }
         },
         {
-          id = 38,
-          name = "cameratarget",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 240,
-          width = 280,
-          height = 80,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["lockx"] = true,
-            ["locky"] = true,
-            ["marker"] = "targ",
-            ["time"] = 1
-          }
-        },
-        {
           id = 35,
           name = "roomglow",
           type = "",
