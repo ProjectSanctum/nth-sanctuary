@@ -77,7 +77,11 @@ function ThreeDPrism:onAct(battler, name)
 			return "* Kris held their breath.\n* Their heartbeat quickened.\n* The SOUL now moves faster."
 		end
 	elseif name == "Gyrate" then
-        self:addMercy(6)
+		if Game.battle.encounter.raged then
+			self:addMercy(0)
+		else
+			self:addMercy(6)
+		end
         Assets.stopAndPlaySound("pirouette", 0.7, 1.1)
         battler:setAnimation("pirouette")
 		return "* Kris spun around three-dimensionally!"
@@ -185,17 +189,34 @@ function ThreeDPrism:onShortAct(battler, name)
     if name == "Standard" then --X-Action
         Assets.stopAndPlaySound("pirouette", 0.7, 1.1)
         battler:setAnimation("pirouette")
-        if battler.chara.id == "ralsei" then
-			self:addMercy(3)
+        if battler.chara.id == "ralsei" then	
+			if Game.battle.encounter.raged then
+				self:addMercy(0)
+			else
+				self:addMercy(3)
+			end
 			return "* Ralsei demonstrates 3D rotation!"
 		elseif battler.chara.id == "susie" then
-			self:addMercy(2)
+			if Game.battle.encounter.raged then
+				self:addMercy(0)
+			else
+				self:addMercy(2)
+			end
 			return "* Susie spun like a turntable!"
 		elseif battler.chara.id == "jamm" then
-			self:addMercy(2)
+			if Game.battle.encounter.raged then
+				self:addMercy(0)
+			else
+				self:addMercy(2)
+			end
 			return "* Jamm revolved around the Z-axis!"
 		else
 			self:addMercy(2)
+			if Game.battle.encounter.raged then
+				self:addMercy(0)
+			else
+				self:addMercy(2)
+			end
 			return "* "..battler.chara:getName().." spun around in 3D!"
 		end
     end
