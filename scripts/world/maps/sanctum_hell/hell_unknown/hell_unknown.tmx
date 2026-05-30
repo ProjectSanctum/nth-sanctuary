@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="102" height="102" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="165">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="102" height="102" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="167">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -506,6 +506,22 @@
     <property name="text3" value="* Yet the further I walked toward it,[wait:5] the more it seemed to slip away."/>
     <property name="text4" value="* And now,[wait:5] I stand at this hollow intersection, [wait:5]a traveler who outran his destination."/>
     <property name="text5" value="* How profoundly...[wait:5] absurd."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="166" name="gueienemy" x="1320" y="1000">
+   <properties>
+    <property name="actor" value="spawn_something"/>
+    <property name="animation" value="idle"/>
+    <property name="chase" type="bool" value="true"/>
+    <property name="chaseaccel" type="float" value="1.05"/>
+    <property name="chasedist" value="99999999"/>
+    <property name="chasemax" type="float" value="3"/>
+    <property name="chasespeed" type="float" value="1"/>
+    <property name="chasing" type="bool" value="true"/>
+    <property name="encounter" value="spawn_something"/>
+    <property name="linear" value="multiplier"/>
+    <property name="noclip" type="bool" value="true"/>
    </properties>
    <point/>
   </object>

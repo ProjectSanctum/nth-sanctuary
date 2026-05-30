@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 12,
-  nextobjectid = 165,
+  nextobjectid = 167,
   properties = {
     ["border"] = "hell",
     ["music"] = "hellworld"
@@ -867,6 +867,31 @@ return {
             ["text3"] = "* Yet the further I walked toward it,[wait:5] the more it seemed to slip away.",
             ["text4"] = "* And now,[wait:5] I stand at this hollow intersection, [wait:5]a traveler who outran his destination.",
             ["text5"] = "* How profoundly...[wait:5] absurd."
+          }
+        },
+        {
+          id = 166,
+          name = "gueienemy",
+          type = "",
+          shape = "point",
+          x = 1320,
+          y = 1000,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "spawn_something",
+            ["animation"] = "idle",
+            ["chase"] = true,
+            ["chaseaccel"] = 1.05,
+            ["chasedist"] = "99999999",
+            ["chasemax"] = 3,
+            ["chasespeed"] = 1,
+            ["chasing"] = true,
+            ["encounter"] = "spawn_something",
+            ["linear"] = "multiplier",
+            ["noclip"] = true
           }
         }
       }
