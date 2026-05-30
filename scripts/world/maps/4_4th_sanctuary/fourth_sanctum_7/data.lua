@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 19,
-  nextobjectid = 56,
+  nextobjectid = 58,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church"
@@ -278,6 +278,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 57,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 240,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -537,6 +550,22 @@ return {
           visible = true,
           properties = {
             ["money"] = 350
+          }
+        },
+        {
+          id = 56,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 160,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "4_4th_sanctuary/fourth_sanctum_8",
+            ["marker"] = "spawn"
           }
         }
       }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="56">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="18" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="58">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -62,6 +62,9 @@
  </objectgroup>
  <objectgroup id="4" name="markers">
   <object id="5" name="entry" x="40" y="590">
+   <point/>
+  </object>
+  <object id="57" name="entry2" x="40" y="240">
    <point/>
   </object>
  </objectgroup>
@@ -183,6 +186,12 @@
   <object id="55" name="chest" x="1100" y="540" width="40" height="40">
    <properties>
     <property name="money" type="int" value="350"/>
+   </properties>
+  </object>
+  <object id="56" name="transition" x="-40" y="160" width="40" height="120">
+   <properties>
+    <property name="map" value="4_4th_sanctuary/fourth_sanctum_8"/>
+    <property name="marker" value="spawn"/>
    </properties>
   </object>
  </objectgroup>

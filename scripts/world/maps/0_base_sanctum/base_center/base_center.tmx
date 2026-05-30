@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="65">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="65">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -222,7 +222,7 @@
   <object id="58" name="eye_glow" x="180.313" y="830.5">
    <point/>
   </object>
-  <object id="54" name="eye_glow" x="200.553" y="474.442">
+  <object id="54" name="eye_glow" x="200" y="474">
    <point/>
   </object>
  </objectgroup>
