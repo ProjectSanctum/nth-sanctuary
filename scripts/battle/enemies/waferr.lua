@@ -23,7 +23,7 @@ function Waferr:init()
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
-        "liieng/fireorbs",
+        "waferr/wafers",
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
