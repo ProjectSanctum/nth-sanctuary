@@ -363,5 +363,41 @@ return {
 		Game:setFlag("chase_cutscene_prog", 2)
 		cutscene:startEncounter("creature_a", false)
 		
+	end,
+	jamm_lore = function (cutscene)
+		-- J: What was odd to me, and in hindsight, maybe not to you...
+		-- J: Was that when I opened the doors, I couldn't see... anything.
+		-- J: But Marcy was in there, so I figured I should follow.
+		local susie = cutscene:getCharacter("susie")
+		local ralsei = cutscene:getCharacter("ralsei")
+		local jamm = cutscene:getCharacter("jamm")
+		cutscene:enableMovement()
+		cutscene:text("[noskip]* So, uh, [wait:5]Jamm, [wait:5]right?[wait:60]", "nervous", susie, {auto = true})
+		cutscene:text("[noskip]* Yeah.[wait:30]", "neutral", jamm, {auto = true})
+		cutscene:text("[noskip]* Where exactly did you, [wait:5]uh... [wait:10]Come from?[wait:20]", "nervous", susie, {auto = true})
+		cutscene:text("[noskip]* Kris and I haven't seen you at all in Hometown.[wait:60]", "nervous_side", susie, {auto = true})
+		cutscene:text("[noskip]* Well, [wait:5]we come from Frivatown, [wait:5]actually.[react:1][react:2][wait:60]", "look_left", jamm, {auto = true,
+		reactions = {
+			{"\"We\"?", "leftmid", "bottom", "surprise_neutral", "ralsei"},
+			{"His daughter, dumbass.", "rightmid", "bottom", "neutral", "susie"},
+		}})
+		cutscene:text("[noskip]* Haven't heard of it.[wait:25]", "nervous", susie, {auto = true})
+		cutscene:text("[noskip]* I mean, [wait:5]it's not exactly the most popular town.[wait:10]", "neutral", jamm, {auto = true})
+		cutscene:text("[noskip]* It's quite small, [wait:5]too. [wait:10][face:look_left]But I think that's good.[wait:20]", "neutral", jamm, {auto = true})
+		cutscene:text("[noskip]* Anyways, [wait:5]We were on the way to visit some relatives...[wait:20]", "neutral", jamm, {auto = true})
+		Game.world.music:fade(0, 2)
+		cutscene:wait(3)
+		Game.lock_movement = true
+		cutscene:text("[noskip]* We needed to stop for the night, [wait:5]so we ended up in Hometown.[wait:30]", "neutral", jamm, {auto = true})
+		cutscene:text("[noskip]* I noticed Marcy was gone, [wait:5]so I followed her trail of crackers...[wait:30]", "look_left", jamm, {auto = true})
+		cutscene:text("[noskip]* [wait:3].[wait:2].[wait:1].and it led to this church.[wait:30]", "stern", jamm, {auto = true})
+		cutscene:panTo(Game.world.camera.x + 200, Game.world.camera.y, 2)
+		jamm:setFacing("up")
+		cutscene:text("[noskip]* What was odd to me, [wait:5]and in hindsight, [wait:5]maybe not to you...[wait:25]", "stern", jamm, {auto = true})
+		cutscene:text("[noskip]* Was that when I opened the doors, [wait:5]I couldn't see... [wait:10][speed:0.65]anything.[wait:25]", "stern", jamm, {auto = true})
+		cutscene:text("[noskip]* But Marcy was in there, [wait:5]so I figured I should follow.[wait:40]", "stern", jamm, {auto = true})
+		cutscene:wait(cutscene:attachCamera())
+		Game.lock_movement = false
+		
 	end
 }

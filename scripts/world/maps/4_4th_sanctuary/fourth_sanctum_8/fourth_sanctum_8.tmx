@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="70" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="64">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="70" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="67">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -65,6 +65,9 @@
  </objectgroup>
  <objectgroup id="3" name="markers">
   <object id="15" name="spawn" x="2760" y="443">
+   <point/>
+  </object>
+  <object id="66" name="entry2" x="40" y="443">
    <point/>
   </object>
  </objectgroup>
@@ -170,6 +173,12 @@
   <object id="61" name="eye_glow" x="280" y="312">
    <point/>
   </object>
+  <object id="65" name="transition" x="-40" y="360" width="30" height="120">
+   <properties>
+    <property name="map" value="4_4th_sanctuary/fourth_sanctum_9"/>
+    <property name="marker" value="spawn"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer id="12" name="Tile Layer 3" width="70" height="16">
   <data encoding="csv">
@@ -211,12 +220,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="9" name="objects_top" parallaxx="1.5">
-  <object id="38" gid="290" x="800" y="-560" width="2880" height="100" rotation="45"/>
-  <object id="51" name="churchfog" x="-51.8125" y="-12.5">
-   <point/>
-  </object>
- </objectgroup>
  <objectgroup id="13" name="objects_lightarea" parallaxx="0.8">
   <object id="63" gid="581" x="600" y="600" width="525.415" height="640">
    <properties>
@@ -226,6 +229,12 @@
     <property name="light_dust" type="bool" value="true"/>
     <property name="light_type" type="int" value="1"/>
    </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="objects_top" parallaxx="1.5">
+  <object id="38" gid="290" x="800" y="-560" width="2880" height="100" rotation="45"/>
+  <object id="51" name="churchfog" x="-51.8125" y="-12.5">
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="5" name="objects_overlay">

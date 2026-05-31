@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 14,
-  nextobjectid = 64,
+  nextobjectid = 67,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church"
@@ -263,6 +263,19 @@ return {
           type = "",
           shape = "point",
           x = 2760,
+          y = 443,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 66,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 40,
           y = 443,
           width = 0,
           height = 0,
@@ -578,6 +591,22 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 65,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 360,
+          width = 30,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "4_4th_sanctuary/fourth_sanctum_9",
+            ["marker"] = "spawn"
+          }
         }
       }
     },
@@ -656,6 +685,42 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 13,
+      name = "objects_lightarea",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.8,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 63,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 600,
+          width = 525.415,
+          height = 640,
+          rotation = 0,
+          gid = 581,
+          visible = true,
+          properties = {
+            ["light"] = true,
+            ["light_alpha"] = 0.2,
+            ["light_color"] = "#ff7ffaff",
+            ["light_dust"] = true,
+            ["light_type"] = 1
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 9,
       name = "objects_top",
       class = "",
@@ -693,42 +758,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 13,
-      name = "objects_lightarea",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 0.8,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 63,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 600,
-          y = 600,
-          width = 525.415,
-          height = 640,
-          rotation = 0,
-          gid = 581,
-          visible = true,
-          properties = {
-            ["light"] = true,
-            ["light_alpha"] = 0.2,
-            ["light_color"] = "#ff7ffaff",
-            ["light_dust"] = true,
-            ["light_type"] = 1
-          }
         }
       }
     },
