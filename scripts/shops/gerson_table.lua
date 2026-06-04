@@ -22,6 +22,7 @@ function GersonTable:init()
     
     self.hide_world = false
 	self.bg_cover.visible = false
+	Input.clear("confirm")
 end
 
 function GersonTable:onLeave()

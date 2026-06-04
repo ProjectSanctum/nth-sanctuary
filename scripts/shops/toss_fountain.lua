@@ -41,6 +41,7 @@ function TossFountain:init()
 
     self.note = {}
 	self.hide_main_menu_currency = true
+	Input.clear("confirm")
 end
 
 function TossFountain:getNote()
