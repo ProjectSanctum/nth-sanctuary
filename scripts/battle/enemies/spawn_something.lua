@@ -3,7 +3,7 @@ local TitanSpawn, super = Class(EnemyBattler, "spawn_something")
 function TitanSpawn:init()
     super.init(self)
 
-    self.name = "SPAWN_"
+    self.name = "!battle_spawn"
     self:setActor("spawn_something")
 
     self.max_health = 3000
@@ -123,12 +123,12 @@ function TitanSpawn:onAct(battler, name)
 	if name == "Check" then
         if Game:getTension() >= 64 then
             return {
-                "* SPAWN_ - AT 30 DF 200\n* A shard of guilt, taking the form \nof your fears.",
+                "* !BATTLE_SPAWN - AT 30 DF 200\n* A shard of guilt, taking the form \nof your fears.",
                 "* The atmosphere feels tense...\n* (You can use [color:yellow]BANISH[color:reset]!)"
             }
         else
             return {
-                "* SPAWN_ - AT 30 DF 200\n* A shard of guilt, taking the form \nof your fears.",
+                "* !BATTLE_SPAWN - AT 30 DF 200\n* A shard of guilt, taking the form \nof your fears.",
                 "* Expose it to LIGHT... and gather COURAGE to gain TP.",
                 "* Then, \"[color:yellow]BANISH[color:reset]\" it!",
             }
