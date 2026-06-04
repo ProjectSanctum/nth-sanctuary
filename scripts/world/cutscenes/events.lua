@@ -394,27 +394,27 @@ return {
 		if Game.world.player.moving_x > 0 or Game.world.player:getFacing() == "right" then
 			side = -1
 		end
-		if Game.world.camera.x + 200*side >= 1840 then
-			Game.world.player.x = Game.world.player.x - 200
+		if Game.world.camera.x + 400*side >= 1840 then
+			Game.world.player.x = Game.world.player.x - 400
 			for _, follower in ipairs(Game.world.followers) do
-				follower.x = follower.x - 200
+				follower.x = follower.x - 400
 				for _,point in ipairs(follower.history) do
-					point.x = point.x - 200
+					point.x = point.x - 400
 				end
 			end
 			for _, fog in ipairs(Game.world:getEvents("churchfog")) do
-				fog.xx = fog.xx + 200 / 2
+				fog.xx = fog.xx + 400 / 2
 			end
-		elseif Game.world.camera.x + 200*side <= 960 then
-			Game.world.player.x = Game.world.player.x + 200
+		elseif Game.world.camera.x + 400*side <= 960 then
+			Game.world.player.x = Game.world.player.x + 400
 			for _, follower in ipairs(Game.world.followers) do
-				follower.x = follower.x + 200
+				follower.x = follower.x + 400
 				for _,point in ipairs(follower.history) do
-					point.x = point.x + 200
+					point.x = point.x + 400
 				end
 			end
 			for _, fog in ipairs(Game.world:getEvents("churchfog")) do
-				fog.xx = fog.xx - 200 / 2
+				fog.xx = fog.xx - 400 / 2
 			end
 		end
 		cutscene:text("[noskip]* We needed to stop for the night, [wait:5]so we ended up in Hometown.[wait:30]", "neutral", jamm, {auto = true})
