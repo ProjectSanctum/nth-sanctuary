@@ -323,7 +323,7 @@ end
 function TitanSpawn:onHurt(damage, battler)
 	super.onHurt(self, damage, battler)
 
-    Assets.stopAndPlaySound("spawn_weaker")
+    Assets.stopAndPlaySound("spawn_something")
 end
 
 function TitanSpawn:onDefeat(damage, battler)
