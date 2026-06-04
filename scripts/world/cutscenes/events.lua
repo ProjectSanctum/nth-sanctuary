@@ -389,10 +389,38 @@ return {
 		Game.world.music:fade(0, 2)
 		cutscene:wait(3)
 		Game.lock_movement = true
+		Game.world:getEvent("stairlooper"):remove()	
+		local side = 1
+		if Game.world.player.moving_x > 0 or Game.world.player:getFacing() == "right" then
+			side = -1
+		end
+		if Game.world.camera.x + 200*side >= 1840 then
+			Game.world.player.x = Game.world.player.x - 200
+			for _, follower in ipairs(Game.world.followers) do
+				follower.x = follower.x - 200
+				for _,point in ipairs(follower.history) do
+					point.x = point.x - 200
+				end
+			end
+			for _, fog in ipairs(Game.world:getEvents("churchfog")) do
+				fog.xx = fog.xx + 200 / 2
+			end
+		elseif Game.world.camera.x + 200*side <= 960 then
+			Game.world.player.x = Game.world.player.x + 200
+			for _, follower in ipairs(Game.world.followers) do
+				follower.x = follower.x + 200
+				for _,point in ipairs(follower.history) do
+					point.x = point.x + 200
+				end
+			end
+			for _, fog in ipairs(Game.world:getEvents("churchfog")) do
+				fog.xx = fog.xx - 200 / 2
+			end
+		end
 		cutscene:text("[noskip]* We needed to stop for the night, [wait:5]so we ended up in Hometown.[wait:30]", "neutral", jamm, {auto = true})
 		cutscene:text("[noskip]* I noticed Marcy was gone, [wait:5]so I followed her trail of crackers...[wait:30]", "look_left", jamm, {auto = true})
 		cutscene:text("[noskip]* [wait:3].[wait:2].[wait:1].and it led to this church.[wait:30]", "stern", jamm, {auto = true})
-		cutscene:panTo(Game.world.camera.x + 200, Game.world.camera.y, 2)
+		cutscene:panTo(Game.world.camera.x + 200*side, Game.world.camera.y, 2)
 		jamm:setFacing("up")
 		cutscene:text("[noskip]* What was odd to me, [wait:5]and in hindsight, [wait:5]maybe not to you...[wait:25]", "stern", jamm, {auto = true})
 		cutscene:text("[noskip]* Was that when I opened the doors, [wait:5]I couldn't see... [wait:10][speed:0.65]anything.[wait:25]", "stern", jamm, {auto = true})
@@ -401,7 +429,5 @@ return {
 		Game.lock_movement = false
 		Game.world.player.force_walk = false
 		Game:setFlag("jamm_lore_done", true)
-		Game.world:getEvent("stairlooper"):remove()
-		
 	end
 }
