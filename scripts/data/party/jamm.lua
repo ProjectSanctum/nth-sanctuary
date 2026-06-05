@@ -147,4 +147,25 @@ function character:getGameOverMessage(main)
     }
 end
 
+function character:heal(amount, playsound)
+    if not self:hasAssist() then return super.heal(self, amount, playsound) end
+	if self.health <= 0 then return super.heal(self, amount, playsound) end
+	
+	if self.assist_health < self:getStat("assist_health") then
+		local missing = self:getStat("assist_health") - self:getAssistHealth()
+		
+		if missing == amount then
+			if playsound == nil or playsound then
+				Assets.stopAndPlaySound("power")
+			end
+			self:setAssistHealth(math.min(math.max(self:getStat("assist_health"), self:getAssistHealth()), self:getAssistHealth() + amount))
+			return (self:getStat("health") <= self:getHealth()) and (self:getStat("assist_health") <= self:getAssistHealth())
+		elseif missing ~= 0 then
+			amount = amount - missing
+			self:setAssistHealth(self:getStat("assist_health"))
+		end
+	end
+	return super.heal(self, amount, playsound)
+end
+
 return character

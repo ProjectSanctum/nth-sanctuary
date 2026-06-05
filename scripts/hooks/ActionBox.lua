@@ -10,6 +10,11 @@ function ActionBox:init(x, y, index, battler)
 		})
 		self.head_sprite:addFX(static_fx, "static_fx")
 	end
+	
+	if battler.chara:hasAssist() then
+		self.abox = AssistBox(0, -35, index, battler)
+		self.box:addChild(self.abox)
+	end
 end
 
 function ActionBox:drawActionBox()

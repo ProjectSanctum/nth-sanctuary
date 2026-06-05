@@ -187,6 +187,15 @@ function BattleUI:drawState()
 				love.graphics.rectangle("fill", 400, 55 + ((index - page_offset - 1) * 30), math.ceil(percentage * 101), 16)
 				love.graphics.setShader()
 			end
+			if Game.battle.party[index].chara:hasAssist() then
+				Draw.setColor(PALETTE["action_health_bg"])
+				love.graphics.rectangle("fill", 400, 55 + ((index - page_offset - 1) * 30), 101, 8)
+				
+				local percentage = Game.battle.party[index].chara:getAssistHealth() / Game.battle.party[index].chara:getStat("assist_health")
+				percentage = math.max(-1, percentage)
+				Draw.setColor(Game.battle.party[index].chara.assist_color)
+				love.graphics.rectangle("fill", 400, 55 + ((index - page_offset - 1) * 30), math.ceil(percentage * 101), 8)
+			end
         end
     end
 end

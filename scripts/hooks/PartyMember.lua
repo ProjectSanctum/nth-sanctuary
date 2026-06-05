@@ -5,6 +5,8 @@ function PartyMember:init()
 	
 	self.assist_health = 0
 	self.stats["assist_health"] = 0
+	self.assist_name = nil
+	self.assist_path = nil
 end
 
 function PartyMember:getStat(name, default, light)
@@ -75,6 +77,8 @@ function PartyMember:healAssist(amount, playsound)
 end
 
 function PartyMember:getAssistHealth() return self.assist_health end
+function PartyMember:getAssistName() return self.assist_name end
+function PartyMember:hasAssist() return false end
 
 function PartyMember:setAssistHealth(health)
     self.assist_health = health
