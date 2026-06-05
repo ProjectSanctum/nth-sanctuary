@@ -594,7 +594,17 @@ function Mod:preUpdate()
     self.sound_timer = MathUtils.approach(self.sound_timer, 0, DTMULT)
 end
 
---[[function Mod:loadObject(world, name, data)
+function Mod:loadObject(world, name, data)
+    if Game.event_registry:has(name) then
+        return Game.event_registry:create(name, data)
+    end
+    loaded = world.map:legacyLoadObject(name, data)
+    if loaded ~= nil then
+        return loaded
+    end
+    if Game.builtin_event_registry:has(name) then
+        return Game.builtin_event_registry:create(name, data)
+    end
     if data.gid then
 		local tobj = world.map:createTileObject(data)
 		tobj.day_mode = data.properties["day"] or nil
@@ -602,7 +612,8 @@ end
 		tobj.rain_mode = data.properties["rain"] or nil
 		return tobj
     end
-end]]
+	return nil
+end
 
 --[==[
 function Mod:preInit()
