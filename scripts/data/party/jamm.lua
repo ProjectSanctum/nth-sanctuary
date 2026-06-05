@@ -4,6 +4,9 @@ function character:init()
     super.init(self)
 
     self.name = "Jamm"
+	
+	self.assist_name = "Marcy"
+	self.assist_path = "battle/assist/marcy"
 
     self:setActor("jamm")
     self:setLightActor("jamm_lw")
@@ -52,6 +55,7 @@ function character:init()
     self.highlight_color = ColorUtils.hexToRGB("#7F6A00FF")
 		-- highlight color B
     self.highlight_color_alt = ColorUtils.hexToRGB("#7F0000FF")
+	self.assist_color = {0, 1, 1}
 
     self.menu_icon = "party/jamm/head"
     self.head_icons = "party/jamm/icon"
@@ -62,9 +66,6 @@ function character:init()
 		self:setLightActor("jammarcy_light")
 		self:setDarkTransitionActor("jammarcy_dark_transition")
 		self.menu_icon = "party/jamm/withmarcy/head"
-		self.head_icons = "party/jamm/withmarcy/icon"
-		self.name_sprite = "party/jamm/withmarcy/name"
-		self.name = "J&M"
 	end
 
     self.attack_sprite = "effects/attack/sling"
@@ -92,13 +93,6 @@ function character:onLevelUp(level)
     if level % 10 == 0 then
         self:increaseStat("attack", 1)
     end
-end
-
-function character:onLevelUpLVLib(level)
-    self:increaseStat("health", 10)
-    self:increaseStat("attack", 2)
-    self:increaseStat("defense", 1)
-    self:increaseStat("magic", 1)
 end
 
 function character:drawPowerStat(index, x, y, menu)
@@ -136,6 +130,8 @@ function character:getFleeText()
 	end
 	return self.flee_text
 end
+
+function character:hasAssist() return Game:getFlag("marcy_joined") end
 
 -- function character:getMinimemberID()
     -- if Game:getFlag("marcy_joined") then
