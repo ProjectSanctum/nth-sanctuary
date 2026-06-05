@@ -87,7 +87,7 @@ vec2 matcap(vec3 eye, vec3 normal) {
         mat4 modelViewMatrix = viewMatrix * modelMatrix;
         worldPosition = modelMatrix * vertexPosition;
         viewPosition = modelViewMatrix * vertexPosition;
-        // viewPosition = viewPosition + vec4(vec2(20),vec2(0));
+        viewPosition = viewPosition + vec4(vec2(20),vec2(0));
         screenPosition = projectionMatrix * viewPosition;
         vertexNormal = VertexNormal;
         vertexColor = VertexColor;

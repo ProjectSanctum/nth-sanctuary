@@ -44,7 +44,7 @@ function ThreeDActorPrism:update()
 		self.timer = self.timer + Game.battle.encounter.rage_anim_speed * DTMULT
 		local rot = MathUtils.lerp(math.sin(self.timer / 4) * 45, 0, self.slow_timer/60)
 		self.model:setRotation(math.rad(90), math.rad(MathUtils.lerp(-5, 0, self.slow_timer/60)), math.rad(rot))
-		self.model:setTranslation(35, 320, 120)
+		self.model:setTranslation(15, 320, 120)
 	else
 		if self.hurted then
 			self.model.mesh:setTexture(Assets.getTexture("models/prism"))
@@ -54,7 +54,7 @@ function ThreeDActorPrism:update()
 		self.timer = self.timer - MathUtils.lerp((10 * Game.battle.encounter.rage_anim_speed), 0, self.slow_timer/60) * DTMULT
 		local y_offset = math.sin((self.timer / 10) * 0.1) * 10
 		self.model:setRotation(math.rad(90), 0, math.rad(self.timer))
-		self.model:setTranslation(30, 320, 120 + y_offset)
+		self.model:setTranslation(10, 320, 120 + y_offset)
 	end
     Draw.pushCanvas(self.canvas)
 	love.graphics.push()
