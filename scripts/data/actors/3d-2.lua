@@ -53,7 +53,10 @@ function actor:init()
 end
 
 function actor:createSprite()
-    return ThreeDActorCube(self)
+	if not Kristal.Config["simplifyVFX"] then
+		return ThreeDActorCube(self)
+	end
+	return ActorSprite(self)
 end
 
 function actor:preSpriteDraw(sprite)
@@ -62,8 +65,10 @@ end
 
 function actor:onSpriteDraw(sprite)
 	super.onSpriteDraw(sprite)
-    Draw.setColor(sprite:getDrawColor())
-	Draw.drawCanvas(sprite.canvas)
+	if not Kristal.Config["simplifyVFX"] then
+		Draw.setColor(sprite:getDrawColor())
+		Draw.drawCanvas(sprite.canvas)
+	end
 end
 
 return actor

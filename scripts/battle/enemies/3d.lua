@@ -61,6 +61,22 @@ function ThreeDPrism:init()
 	self.exit_on_defeat = false
 	self.tired_percentage = -1
 	self.challenge_acted = false
+	if Kristal.Config["simplifyVFX"] then
+		self.sprite.anim_delay = (1/30)
+		self.sprite.loop = true
+		self.sprite:setAnimation(function(sprite, wait)
+			while true do
+				sprite:setFrame(1)
+				wait(sprite.anim_delay)
+				while sprite.frame < #sprite.frames do
+					sprite:setFrame(sprite.frame + math.floor(Game.battle.encounter.rage_anim_speed))
+					wait(sprite.anim_delay)
+					sprite:setFrame(sprite.frame + math.ceil(Game.battle.encounter.rage_anim_speed))
+					wait(sprite.anim_delay)
+				end
+			end
+		end)
+	end
 	self.last_mercy = 0
 end
 
