@@ -38,7 +38,6 @@ function ThreeDPrism:init()
     }
     self.dialogue_offset = {30, 0}
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT [image:infinite, -5, 0, 2,2] DF [image:infinite,-5,0,2,2] \n* Start fucking running"
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
@@ -85,7 +84,13 @@ function ThreeDPrism:isXActionShort(battler)
 end
 
 function ThreeDPrism:onAct(battler, name)
-    if name == "HoldBreath" then
+    if name == "Check" then
+		if Game.battle.encounter.raged then
+			return "* FURIOUS 3D PRISM - AT [image:infinite, -5, 0, 2,2]^2 DF "..math.floor((self.defense+100)/10).." \n* Now you've REALLY made it angry!"
+		else
+			return "* 3D SPINNING PRISM - AT [image:infinite, -5, 0, 2,2] DF "..math.floor((self.defense+100)/10).." \n* Start fucking running"
+		end
+    elseif name == "HoldBreath" then
 		if Game.battle.encounter.holdbreath then
 			return "* Kris held their breath...\n* Nothing happened."
 		else
@@ -243,13 +248,13 @@ end
 function ThreeDPrism:onTurnEnd()
     self.progress = self.progress + 1
 	if Game.battle.encounter.raged then
-		if self.defense < -500 then
+		if self.defense > -500 then
 			self.defense = self.defense - 100
 		else
 			self.defense = -500
 		end
 	else
-		if self.defense > -100 then
+		if self.defense < -100 then
 			self.defense = self.defense + 100
 		else
 			self.defense = -100
