@@ -144,4 +144,27 @@ function PartyBattler:downAssist()
     -- end
 end
 
+function PartyBattler:healAssist(amount, sparkle_color, show_up, playsound)
+    amount = math.floor(amount)
+
+    local max_hp = self.chara:healAssist(amount, playsound)
+
+    local was_down = self.is_down
+    self:checkHealth(false)
+
+    if max_hp then
+        self:statusMessage("msg", "max", nil, nil, 8)
+    else
+        if show_up and was_down ~= self.is_down then
+            self:statusMessage("msg", "up", nil, nil, 1)
+        else
+            self:statusMessage("heal", amount, { 0, 1, 0 }, nil, show_up and 1 or 8)
+        end
+    end
+
+    if not show_up then
+        self:healEffect(unpack(sparkle_color or {}))
+    end
+end
+
 return PartyBattler

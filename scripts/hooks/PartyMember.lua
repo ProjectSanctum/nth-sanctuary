@@ -84,4 +84,12 @@ function PartyMember:setAssistHealth(health)
     self.assist_health = health
 end
 
+function PartyMember:autoHealAssistAmount()
+    return math.ceil(self:getStat("assist_health") / 8)
+end
+
+function PartyMember:autoHealAmount()
+    return math.ceil(self:getStat("health") / 8)
+end
+
 return PartyMember

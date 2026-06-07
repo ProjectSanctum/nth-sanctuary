@@ -64,8 +64,6 @@ function actor:init()
         ["walk_church/left"] = "light_church/left",
         ["walk_church/right"] = "light_church/right",
     }
-	
-	self.shiny_id = "jamm"
 end
 
 return actor
