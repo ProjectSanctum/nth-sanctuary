@@ -165,7 +165,7 @@ function CreatureGueiTextbox:draw()
 	Draw.draw(self.canvas, -8, -8, 0, 1, 1)
 	love.graphics.pop()
 	Draw.setColor(1,1,1,1)
-	local static_shader = Mod.staticBulletShader
+	local static_shader = Assets.getShader("static_bullet")
 	static_shader:send("time", Kristal.getTime())
 	static_shader:send("brightness", 0.3)
     love.graphics.setShader(static_shader)

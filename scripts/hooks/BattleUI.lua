@@ -31,7 +31,7 @@ function BattleUI:drawState()
                     -- Draw head only if it isn't the currently selected character
                     if Game.battle:getPartyIndex(party_id) ~= Game.battle.current_selecting then
 						if chara.id == "lobby_man" then
-							local static_shader = Mod.staticBulletShader
+							local static_shader = Assets.getShader("static_bullet")
 							static_shader:send("time", Kristal.getTime())
 							static_shader:send("brightness", 0.5)
 							love.graphics.setShader(static_shader)
@@ -60,7 +60,7 @@ function BattleUI:drawState()
                 -- Using color like a function feels wrong... should this be called getColor?
                 Draw.setColor(item:color() or { 1, 1, 1, 1 })
 				if item.name == Game.battle.party[Game.battle.current_selecting].chara:getXActName() and Game.battle.party[Game.battle.current_selecting].chara.id == "lobby_man" then
-					local static_shader = Mod.staticBulletShader
+					local static_shader = Assets.getShader("static_bullet")
 					static_shader:send("time", Kristal.getTime())
 					static_shader:send("brightness", 0.3)
 					love.graphics.setShader(static_shader)
@@ -112,7 +112,7 @@ function BattleUI:drawState()
                 if Game.battle.state_reason == "XACT" then
 					if Game.battle.party[Game.battle.current_selecting].chara.id == "lobby_man" then
 						Draw.setColor(COLORS.white)
-						local static_shader = Mod.staticBulletShader
+						local static_shader = Assets.getShader("static_bullet")
 						static_shader:send("time", Kristal.getTime())
 						static_shader:send("brightness", 0.3)
 						love.graphics.setShader(static_shader)
@@ -136,7 +136,7 @@ function BattleUI:drawState()
                         love.graphics.rectangle("fill", hp_x, 55 + y_off, 81, 16)
 
                         Draw.setColor(COLORS.white)
-						local static_shader = Mod.staticBulletShader
+						local static_shader = Assets.getShader("static_bullet")
 						static_shader:send("time", Kristal.getTime())
 						static_shader:send("brightness", 1)
                         love.graphics.setShader(static_shader)
@@ -180,7 +180,7 @@ function BattleUI:drawState()
 				-- Swooning is the only time you can ever see it this low
 				percentage = math.max(-1, percentage)
 				Draw.setColor(COLORS.white)
-				local static_shader = Mod.staticBulletShader
+				local static_shader = Assets.getShader("static_bullet")
 				static_shader:send("time", Kristal.getTime())
 				static_shader:send("brightness", 1)
 				love.graphics.setShader(static_shader)

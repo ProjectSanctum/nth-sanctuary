@@ -4,7 +4,7 @@ function AttackBox:init(battler, offset, index, x, y)
     super.init(self, battler, offset, index, x, y)
 	self.BOLTSPEED = super.BOLTSPEED
 	if battler.chara.id == "lobby_man" then
-		local static_fx = ShaderFX(Mod.staticBulletShader, {
+		local static_fx = ShaderFX("static_bullet", {
 			["time"] = function() return Kristal.getTime() end,
 			["brightness"] = 0.5
 		})
@@ -27,7 +27,7 @@ function AttackBox:draw()
 		local ch1_offset = Game:getConfig("oldUIPositions")
 		
 		Draw.setColor(COLORS.gray)
-		local static_shader = Mod.staticBulletShader
+		local static_shader = Assets.getShader("static_bullet")
 		static_shader:send("time", Kristal.getTime())
 		static_shader:send("brightness", 0.5)
         love.graphics.setShader(static_shader)

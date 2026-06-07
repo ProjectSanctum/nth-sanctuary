@@ -4,7 +4,7 @@ function DamageNumber:init(type, arg, x, y, color, delay, chara)
     super.init(self, type, arg, x, y, color, delay)
 
 	if chara and chara.id == "lobby_man" then
-		local static_fx = ShaderFX(Mod.staticBulletShader, {
+		local static_fx = ShaderFX("static_bullet", {
 			["time"] = function() return Kristal.getTime() end,
 			["brightness"] = 0.3
 		})

@@ -15,7 +15,7 @@ function Basic:onStart()
     -- Every 0.33 seconds...
     self.timer:script(function (wait)
         local hand = Sprite("enemies/creature_a/hand")
-        hand:addFX(ShaderFX(Mod.staticBulletShader, {
+        hand:addFX(ShaderFX("static_bullet", {
             ["time"] = function() return Kristal.getTime() end,
             ["brightness"] = 2
         }), "static_fx")
@@ -32,7 +32,7 @@ function Basic:onStart()
 
 
         local hand2 = Sprite("enemies/creature_a/hand")
-        hand2:addFX(ShaderFX(Mod.staticBulletShader, {
+        hand2:addFX(ShaderFX("static_bullet", {
             ["time"] = function() return Kristal.getTime() end,
             ["brightness"] = 2
         }), "static_fx")

@@ -4,7 +4,7 @@ function OverworldActionBox:init(x, y, index, chara)
     super.init(self, x, y, index, chara)
 	
 	if chara.id == "lobby_man" then
-		local static_fx = ShaderFX(Mod.staticBulletShader, {
+		local static_fx = ShaderFX("static_bullet", {
 			["time"] = function() return Kristal.getTime() end,
 			["brightness"] = 0.5
 		})
@@ -31,7 +31,7 @@ function OverworldActionBox:draw()
 		if self.chara.id == "lobby_man" then
 			health_bg_col = COLORS.dkgray
             Draw.setColor(COLORS.white)
-			local static_shader = Mod.staticBulletShader
+			local static_shader = Assets.getShader("static_bullet")
 			static_shader:send("time", Kristal.getTime())
 			static_shader:send("brightness", 1)
             love.graphics.setShader(static_shader)
@@ -62,7 +62,7 @@ function OverworldActionBox:draw()
         Draw.setColor(self.chara:getColor())
 		if self.chara.id == "lobby_man" then
             Draw.setColor(COLORS.white)
-			local static_shader = Mod.staticBulletShader
+			local static_shader = Assets.getShader("static_bullet")
 			static_shader:send("time", Kristal.getTime())
 			static_shader:send("brightness", 1)
             love.graphics.setShader(static_shader)

@@ -349,7 +349,7 @@ return {
 		g.layer = origlayer
 		sm:setLayer(g.layer + 1)
 		Game.world.camera:shake(20, 0, 0.5, 10, 10) 
-		        local static_fx = ShaderFX(Mod.staticBulletShader, {
+		        local static_fx = ShaderFX("static_bullet", {
             ["time"] = function() return Kristal.getTime() end,
             ["brightness"] = 2
         })

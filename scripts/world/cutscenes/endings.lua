@@ -1,6 +1,6 @@
 return {
     indoct_end = function (cutscene)
-        local static_fx = ShaderFX(Mod.staticBulletShader, {
+        local static_fx = ShaderFX("static_bullet", {
             ["time"] = function() return Kristal.getTime() end,
             ["brightness"] = 2
         })

@@ -1,7 +1,7 @@
 local CreatureActorMizzle, super = Class(ActorSprite)
 
 function CreatureActorMizzle:init(actor)
-    local static_fx = ShaderFX(Mod.staticBulletShader, {
+    local static_fx = ShaderFX("static_bullet", {
         ["time"] = function() return Kristal.getTime() end,
         ["brightness"] = 2
     })

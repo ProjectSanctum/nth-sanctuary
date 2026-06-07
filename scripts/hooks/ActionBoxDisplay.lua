@@ -7,7 +7,7 @@ function ActionBoxDisplay:draw()
 		if self.actbox.battler.chara.id == "lobby_man" then
 			health_bg_col = COLORS.dkgray
             Draw.setColor(COLORS.white)
-			local static_shader = Mod.staticBulletShader
+			local static_shader = Assets.getShader("static_bullet")
 			static_shader:send("time", Kristal.getTime())
 			static_shader:send("brightness", 1)
             love.graphics.setShader(static_shader)
@@ -41,7 +41,7 @@ function ActionBoxDisplay:draw()
         Draw.setColor(self.actbox.battler.chara:getColor())
 		if self.actbox.battler.chara.id == "lobby_man" then
             Draw.setColor(COLORS.white)
-			local static_shader = Mod.staticBulletShader
+			local static_shader = Assets.getShader("static_bullet")
 			static_shader:send("time", Kristal.getTime())
 			static_shader:send("brightness", 1)
             love.graphics.setShader(static_shader)
