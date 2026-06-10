@@ -555,7 +555,7 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 80,
+          x = 260,
           y = 360,
           width = 0,
           height = 0,
@@ -1026,7 +1026,11 @@ return {
           rotation = 0,
           opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["cond"] = "Game:getFlag(\"chase_cutscene_prog\", 0) >= 2",
+            ["text1"] = "* (Despite the tense battle,[wait:5] when everything looked hopeless...)",
+            ["text2"] = "* (You are filled with the power of courage burning the dark away.)"
+          }
         }
       }
     },

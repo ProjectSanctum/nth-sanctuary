@@ -154,7 +154,7 @@
   <object id="4" name="entry" x="40" y="360">
    <point/>
   </object>
-  <object id="5" name="spawn" x="80" y="360">
+  <object id="5" name="spawn" x="260" y="360">
    <point/>
   </object>
   <object id="72" x="40" y="340">
@@ -225,7 +225,13 @@
   <object id="89" name="window_glow" x="1260" y="220">
    <point/>
   </object>
-  <object id="41" name="savepoint" x="240" y="280" width="40" height="40"/>
+  <object id="41" name="savepoint" x="240" y="280" width="40" height="40">
+   <properties>
+    <property name="cond" value="Game:getFlag(&quot;chase_cutscene_prog&quot;, 0) &gt;= 2"/>
+    <property name="text1" value="* (Despite the tense battle,[wait:5] when everything looked hopeless...)"/>
+    <property name="text2" value="* (You are filled with the power of courage burning the dark away.)"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="objects_fog">
   <object id="2" name="churchfog" x="80" y="0">
