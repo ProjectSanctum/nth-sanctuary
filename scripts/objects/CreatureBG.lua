@@ -10,17 +10,6 @@ function CreatureBG:update()
     super.update(self)
 
     self.h = self.h -1
-
-
-    if not self.fading_out then
-        self.alpha = MathUtils.approach(self.alpha, 1, 0.1 * DTMULT)
-    else
-        self.alpha = MathUtils.approach(self.alpha, 0, 0.1 * DTMULT)
-
-        if self.alpha <= 0 then
-            self:remove()
-        end
-    end
 end
 
 
