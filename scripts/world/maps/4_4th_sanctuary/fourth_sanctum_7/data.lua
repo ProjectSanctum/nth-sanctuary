@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -39,12 +39,12 @@ return {
     },
     {
       name = "light_areas",
-      firstgid = 841,
+      firstgid = 842,
       filename = "../../../tilesets/light_areas.tsx"
     },
     {
       name = "bg_dw_church_tileset_new",
-      firstgid = 851,
+      firstgid = 852,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
       exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     }
@@ -83,9 +83,9 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        899, 0, 0, 0, 899, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        905, 0, 0, 0, 905, 0, 0, 0, 905, 0, 0, 0, 905, 0, 0, 0, 905, 0, 0, 0, 905, 0, 0, 0, 905, 0, 0, 0, 905, 0,
-        911, 0, 0, 0, 911, 0, 0, 0, 911, 0, 0, 0, 911, 0, 0, 0, 911, 0, 0, 0, 911, 0, 0, 0, 911, 0, 0, 0, 911, 0
+        900, 0, 0, 0, 900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        906, 0, 0, 0, 906, 0, 0, 0, 906, 0, 0, 0, 906, 0, 0, 0, 906, 0, 0, 0, 906, 0, 0, 0, 906, 0, 0, 0, 906, 0,
+        912, 0, 0, 0, 912, 0, 0, 0, 912, 0, 0, 0, 912, 0, 0, 0, 912, 0, 0, 0, 912, 0, 0, 0, 912, 0, 0, 0, 912, 0
       }
     },
     {
@@ -112,6 +112,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {
@@ -128,6 +129,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {
@@ -144,6 +146,7 @@ return {
           width = 400,
           height = 578,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {
@@ -176,6 +179,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {}
@@ -190,6 +194,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {}
@@ -204,6 +209,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {}
@@ -218,6 +224,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {}
@@ -232,6 +239,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {}
@@ -246,6 +254,7 @@ return {
           width = 200,
           height = 289,
           rotation = 0,
+          opacity = 1,
           gid = 738,
           visible = true,
           properties = {}
@@ -272,10 +281,11 @@ return {
           type = "",
           shape = "point",
           x = 40,
-          y = 590,
+          y = 560,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -289,6 +299,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -356,6 +367,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["huge"] = false
@@ -371,6 +383,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["huge"] = false
@@ -386,6 +399,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["huge"] = false
@@ -427,8 +441,8 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        127, 128, 129, 130, 127, 128, 129, 130, 127, 128, 129, 130, 127, 128, 129, 130, 127, 128, 129, 130, 127, 127, 128, 129, 130, 127, 128, 129, 130, 127,
+        136, 137, 138, 139, 136, 137, 138, 139, 136, 137, 138, 139, 136, 137, 138, 139, 136, 137, 138, 139, 136, 136, 137, 138, 139, 136, 137, 138, 139, 136
       }
     },
     {
@@ -505,69 +519,6 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 3,
-      name = "objects_party",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 4,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = -40,
-          y = 520,
-          width = 40,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "4_4th_sanctuary/fourth_sanctum_6",
-            ["marker"] = "entry2"
-          }
-        },
-        {
-          id = 55,
-          name = "chest",
-          type = "",
-          shape = "rectangle",
-          x = 1100,
-          y = 540,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["money"] = 350
-          }
-        },
-        {
-          id = 56,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = -40,
-          y = 160,
-          width = 40,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "4_4th_sanctuary/fourth_sanctum_8",
-            ["marker"] = "spawn"
-          }
-        }
       }
     },
     {
@@ -709,6 +660,7 @@ return {
           width = 520,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -722,6 +674,7 @@ return {
           width = 1160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -735,6 +688,7 @@ return {
           width = 480,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -748,6 +702,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -761,6 +716,7 @@ return {
           width = 480,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -769,11 +725,12 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = -40,
+          x = 0,
           y = 160,
-          width = 1200,
+          width = 1160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -787,6 +744,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -800,6 +758,7 @@ return {
           width = 520,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -813,6 +772,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -826,8 +786,75 @@ return {
           width = 40,
           height = 320,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 3,
+      name = "objects_party",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 4,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 520,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "4_4th_sanctuary/fourth_sanctum_6",
+            ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 55,
+          name = "chest",
+          type = "",
+          shape = "rectangle",
+          x = 1100,
+          y = 540,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["money"] = 350
+          }
+        },
+        {
+          id = 56,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 200,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "4_4th_sanctuary/fourth_sanctum_8",
+            ["marker"] = "spawn"
+          }
         }
       }
     },
@@ -855,6 +882,7 @@ return {
           width = 480,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -868,6 +896,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -881,6 +910,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -894,6 +924,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -907,6 +938,7 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -920,6 +952,7 @@ return {
           width = 480,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -933,6 +966,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -946,6 +980,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -959,6 +994,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -972,6 +1008,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -1001,7 +1038,8 @@ return {
           width = 525.415,
           height = 640,
           rotation = 0,
-          gid = 841,
+          opacity = 1,
+          gid = 842,
           visible = true,
           properties = {
             ["light"] = true,
@@ -1032,11 +1070,12 @@ return {
           name = "churchfog",
           type = "",
           shape = "point",
-          x = -62,
-          y = -7,
+          x = 0,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -1061,11 +1100,12 @@ return {
           name = "filter",
           type = "",
           shape = "point",
-          x = -78.6919,
-          y = -29.6372,
+          x = 40,
+          y = 0,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv3"

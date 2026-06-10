@@ -636,6 +636,27 @@
             "width": 880,
             "x": 4560,
             "y": 12080
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_7/fourth_sanctum_7.tmx",
+            "height": 720,
+            "width": 1200,
+            "x": 14400,
+            "y": -3280
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_8/fourth_sanctum_8.tmx",
+            "height": 640,
+            "width": 2800,
+            "x": 11520,
+            "y": -4600
+        },
+        {
+            "fileName": "4_4th_sanctuary/fourth_sanctum_9/fourth_sanctum_9.tmx",
+            "height": 480,
+            "width": 2800,
+            "x": 11480,
+            "y": -5520
         }
     ],
     "onlyShowAdjacentMaps": false,
