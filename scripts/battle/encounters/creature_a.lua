@@ -1,6 +1,6 @@
-local Dummy, super = Class(Encounter)
+local ImbuedGuei, super = Class(Encounter)
 
-function Dummy:init()
+function ImbuedGuei:init()
     super.init(self)
 
     -- Text displayed at the bottom of the screen at the start of the encounter
@@ -21,7 +21,11 @@ function Dummy:init()
     --self:addEnemy("dummy")
 end
 
-function Dummy:createBackground()
+function ImbuedGuei:onBattleStart()
+	Game:setFlag("imbued_battle_fading", false)
+end
+
+function ImbuedGuei:createBackground()
     return Game.battle:addChild(CreatureBG())
 end
-return Dummy
+return ImbuedGuei
