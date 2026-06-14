@@ -70,6 +70,7 @@ function Dummy:init()
     end
     
     self.atkup = false
+    self.charcoaled = false
 end
 
 function Dummy:onSpareable()
@@ -169,9 +170,12 @@ function Dummy:onAct(battler, name)
             self:hurt(80)
             Assets.playSound("damage")
             self:statusMessage("damage", "+5", {1, 0.25, 0})
+            self:flash()
+            self:setAnimation("fire")
             cutscene:text("* Pewdinn's ATTACK rose from the charcoal!")
             self.attack = self.attack + 5
             self.atkup = true
+            self.charcoaled = true
         end)
     elseif name == "BlowOut" then
         self:addMercy(40)
@@ -189,8 +193,12 @@ function Dummy:onAct(battler, name)
 end
 
 function Dummy:onTurnStart()
+    if self.charcoaled then
+        self:resetSprite()
+    end
     if self.atkup then
         self.atkup = false
+        self.charcoaled = false
         self:statusMessage("damage", "-5", {1, 0.25, 0})
         self.attack = self.attack - 5
     end
