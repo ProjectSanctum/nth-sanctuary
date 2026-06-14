@@ -139,8 +139,8 @@ function Pewdinn:onAct(battler, name)
         Game.battle:startActCutscene(function(cutscene)
             self:statusMessage("damage", "+5", {1, 0.25, 0})
             self.attack = self.attack + 5
-			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 1})
-			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 1
+			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 2})
+			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 2
             self.atkup = true
             self.charcoaled = true
             self:setAnimation("fire")
@@ -234,8 +234,8 @@ function Pewdinn:onTurnStart()
         self.charcoaled = false
         self:statusMessage("damage", "-5", {1, 0.25, 0})
         self.attack = self.attack - 5
-		Game.battle.timer:tween(0.5, Game.battle.encounter, {heat_wave_mag_bg = math.max(Game.battle.encounter.heat_wave_mag_bg - 0.5, 0)})
-		Game.battle.encounter.heat_wave_mag = math.max(Game.battle.encounter.heat_wave_mag - 0.5, 0)
+		Game.battle.timer:tween(0.5, Game.battle.encounter, {heat_wave_mag_bg = math.max(Game.battle.encounter.heat_wave_mag_bg - 1, 0)})
+		Game.battle.encounter.heat_wave_mag = math.max(Game.battle.encounter.heat_wave_mag - 1, 0)
 		Game.battle.encounter.apply_heatfx_to_bullets = false
     end
 end
