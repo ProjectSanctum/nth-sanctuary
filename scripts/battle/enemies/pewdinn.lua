@@ -139,8 +139,8 @@ function Pewdinn:onAct(battler, name)
         Game.battle:startActCutscene(function(cutscene)
             self:statusMessage("damage", "+5", {1, 0.25, 0})
             self.attack = self.attack + 5
-			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg+2})
-			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 2
+			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 1})
+			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 1
             self.atkup = true
             self.charcoaled = true
             self:setAnimation("fire")
@@ -164,7 +164,7 @@ function Pewdinn:onAct(battler, name)
         -- Give the enemy 50% mercy
         self:addMercy(50)
         if battler.chara.id == "ralsei" then
-            			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg+1})
+            Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 1})
 			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 1
             -- R-Action text
             return "* Ralsei bowed politely.\n* The dummy spiritually bowed\nin return."
@@ -199,7 +199,7 @@ function Pewdinn:onAct(battler, name)
 				wait(4/30)
 				Assets.playSound("board_torch", 1, 0.8)
 			end)
-			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg+2})
+			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 2})
 			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 2
             cutscene:text("* Pewdinn's ATTACK rose from the charcoal!")
             self.attack = self.attack + 5
@@ -234,8 +234,8 @@ function Pewdinn:onTurnStart()
         self.charcoaled = false
         self:statusMessage("damage", "-5", {1, 0.25, 0})
         self.attack = self.attack - 5
-		Game.battle.timer:tween(0.5, Game.battle.encounter, {heat_wave_mag_bg = (Game.battle.encounter.heat_wave_mag_bg - 2> 0 and Game.battle.encounter.heat_wave_mag_bg - 2) or 0})
-		Game.battle.encounter.heat_wave_mag = (Game.battle.encounter.heat_wave_mag - 2>0 and Game.battle.encounter.heat_wave_mag - 2) or 0
+		Game.battle.timer:tween(0.5, Game.battle.encounter, {heat_wave_mag_bg = math.max(Game.battle.encounter.heat_wave_mag_bg - 0.5, 0)})
+		Game.battle.encounter.heat_wave_mag = math.max(Game.battle.encounter.heat_wave_mag - 0.5, 0)
 		Game.battle.encounter.apply_heatfx_to_bullets = false
     end
 end
