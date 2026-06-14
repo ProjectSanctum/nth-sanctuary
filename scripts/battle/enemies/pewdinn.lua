@@ -139,8 +139,8 @@ function Pewdinn:onAct(battler, name)
         Game.battle:startActCutscene(function(cutscene)
             self:statusMessage("damage", "+5", {1, 0.25, 0})
             self.attack = self.attack + 5
-			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 2})
-			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 2
+			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = math.min(Game.battle.encounter.heat_wave_mag_bg + 2, 6)})
+			Game.battle.encounter.heat_wave_mag = math.min(Game.battle.encounter.heat_wave_mag + 2, 6)
             self.atkup = true
             self.charcoaled = true
             self:setAnimation("fire")
@@ -164,8 +164,8 @@ function Pewdinn:onAct(battler, name)
         -- Give the enemy 50% mercy
         self:addMercy(50)
         if battler.chara.id == "ralsei" then
-            Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 1})
-			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 1
+			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = math.min(Game.battle.encounter.heat_wave_mag_bg + 1, 6)})
+			Game.battle.encounter.heat_wave_mag = math.min(Game.battle.encounter.heat_wave_mag + 1, 6)
             -- R-Action text
             return "* Ralsei bowed politely.\n* The dummy spiritually bowed\nin return."
         elseif battler.chara.id == "susie" then
@@ -199,8 +199,8 @@ function Pewdinn:onAct(battler, name)
 				wait(4/30)
 				Assets.playSound("board_torch", 1, 0.8)
 			end)
-			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = Game.battle.encounter.heat_wave_mag_bg + 2})
-			Game.battle.encounter.heat_wave_mag = Game.battle.encounter.heat_wave_mag + 2
+			Game.battle.timer:tween(1, Game.battle.encounter, {heat_wave_mag_bg = math.min(Game.battle.encounter.heat_wave_mag_bg + 2, 6)})
+			Game.battle.encounter.heat_wave_mag = math.min(Game.battle.encounter.heat_wave_mag + 2, 6)
             cutscene:text("* Pewdinn's ATTACK rose from the charcoal!")
             self.attack = self.attack + 5
             self.atkup = true
