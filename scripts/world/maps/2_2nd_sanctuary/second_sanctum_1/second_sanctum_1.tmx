@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="23" height="28" tilewidth="40" tileheight="40" infinite="0" parallaxoriginx="-320" parallaxoriginy="-240" nextlayerid="17" nextobjectid="140">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="23" height="28" tilewidth="40" tileheight="40" infinite="0" parallaxoriginx="-320" parallaxoriginy="-240" nextlayerid="17" nextobjectid="146">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -284,14 +284,14 @@
     <property name="once" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="103" name="script" x="160" y="600" width="280" height="240">
+  <object id="103" name="script" x="552" y="480" width="8" height="88">
    <properties>
     <property name="cutscene" value="primary.fall"/>
     <property name="flagcheck" value="!noellefall"/>
     <property name="once" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="129" name="npc" x="200" y="760">
+  <object id="129" name="npc" x="200" y="720">
    <properties>
     <property name="actor" value="noelle"/>
     <property name="flagcheck" value="!noellefall"/>
@@ -323,6 +323,22 @@
    </properties>
    <point/>
   </object>
+  <object id="140" name="npc" x="280" y="680">
+   <properties>
+    <property name="actor" value="guei"/>
+    <property name="animation" value="idle"/>
+    <property name="flagcheck" value="!noellefall"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="141" name="npc" x="280" y="760">
+   <properties>
+    <property name="actor" value="guei"/>
+    <property name="animation" value="idle"/>
+    <property name="flagcheck" value="!noellefall"/>
+   </properties>
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup id="4" name="markers">
   <object id="18" name="entry" x="200" y="60">
@@ -340,31 +356,22 @@
   <object id="101" name="jpointA2" x="640" y="300">
    <point/>
   </object>
-  <object id="122" name="spoint" x="280" y="760">
-   <point/>
-  </object>
-  <object id="123" name="npoint" x="80" y="730">
-   <point/>
-  </object>
-  <object id="124" name="spoint2" x="200" y="760">
-   <point/>
-  </object>
-  <object id="125" name="kpoint" x="240" y="720">
-   <point/>
-  </object>
-  <object id="126" name="rpoint" x="290" y="760">
-   <point/>
-  </object>
-  <object id="127" name="jpoint2" x="420" y="660">
-   <point/>
-  </object>
-  <object id="130" name="kpoint0" x="280" y="680">
-   <point/>
-  </object>
-  <object id="131" name="rpoint0" x="340" y="720">
+  <object id="123" name="npoint" x="80" y="690">
    <point/>
   </object>
   <object id="132" name="jpointA3" x="480" y="160">
+   <point/>
+  </object>
+  <object id="142" name="camto" x="300" y="720">
+   <point/>
+  </object>
+  <object id="143" name="susto_1" x="360" y="680">
+   <point/>
+  </object>
+  <object id="144" name="susto_2" x="200" y="720">
+   <point/>
+  </object>
+  <object id="145" name="jpoint2" x="360" y="720">
    <point/>
   </object>
  </objectgroup>

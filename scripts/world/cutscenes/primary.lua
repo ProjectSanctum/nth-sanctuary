@@ -920,52 +920,65 @@ return {
         local no = cutscene:getCharacter("noelle")
         local kris = cutscene:getCharacter("kris")
         local jamm = cutscene:getCharacter("jamm")
+		local g1 = Game.world.map:getEvent(140)
+		local g2 = Game.world.map:getEvent(141)
 		if Game:getFlag("route") == 3 then
 			no:setSprite("walk_look_up/left_1")
 		end
 		cutscene:detachCamera()
         cutscene:detachFollowers()
-		cutscene:panTo(no.x+120, no.y-40, 1.25, 'out-cubic')
+        cutscene:setSpeaker("noelle")
+		if Game:getFlag("route") == 3 then
+			cutscene:text("* What was it that they told me to do...?")
+		else
+			cutscene:text("* S-someone...[wait:10] Help...")
+		end
         cutscene:setSpeaker("susie")
-        cutscene:text("* (Kris, [wait:5]look! [wait:10]It's Noelle!)", "blush")
-		cutscene:walkToSpeed(kris, 400, 640, 8, "left", true)
-		cutscene:wait(0.1)
-		cutscene:walkToSpeed(sus, 400, 640, 8, "left", true)
-		cutscene:walkToSpeed(kris, 280, 660, 8, "left", true)
-		cutscene:wait(0.1)
-		cutscene:walkToSpeed(ral, 360, 640, 8, "left", true)
-		cutscene:wait(0.1)
-		cutscene:walkToSpeed(ral, 400, 640, 8)
-        cutscene:walkToSpeed(sus, "spoint", 8, "left")
-		cutscene:walkToSpeed(ral, "rpoint0", 10, "left")
-		cutscene:walkToSpeed(kris, "kpoint0", 8, nil, true)
-		sus:setFacing("left")
-		ral:setFacing("left")
-		cutscene:wait(2)
+        cutscene:text("* (Kris, [wait:5]did you hear that?[wait:10] That sounded like...)", "blush")
+		if Game:getFlag("route") == 3 then
+			no:setAnimation({"battle_alt/idle", 1/6, true})
+		else
+			no:setAnimation({"battle/defeat", 1/6, true})
+		end
+		cutscene:wait(cutscene:panTo("camto", 1))
+		local continuing = false
+        cutscene:setSpeaker("noelle")
+		if Game:getFlag("route") == 3 then
+			cutscene:text("* I believe it was...[wait:10] IceShock...?")
+		else
+			cutscene:text("* I can't...[wait:10] Move...")
+		end
+		cutscene:wait(0.6)
+		Assets.playSound("rudebuster_swing")
+		local rb = Game.world:addChild(RudeBusterBeam(false, sus.x, sus.y - 20, g1.x, g1.y - 40, function(damage_bonus, play_sound)
+			Game:setFlag("last_overworld_buster_damage", damage_bonus)
+			continuing = true
+			g1:setAnimation("hurt")
+			g1:shake(4)
+		end))
+		rb:setLayer(WORLD_LAYERS["above_events"])
+		cutscene:wait(function() return continuing end)
         no:shake(2,0)
         cutscene:slideTo(no, "npoint", 1, 'out-circ')
         no:setSprite("scare")
         no:play(1/15, true)
         Assets.playSound("noscared")
-        sus:setSprite("point_left")
-        cutscene:text("* Hey, [wait:5]Noelle!", "sincere_smile", {auto = true})
         Game.world.music:pause()
-        Assets.playSound("snd_sussurprise")
-        sus:setSprite("shock_left")
-		sus:shake(4, 0, 1)
-		ral:setSprite("shocked_left")
-        ral:shake(4, 0, 1)
-        cutscene:text("* Uh-", "shock")
+		cutscene:wait(1.3)
+        cutscene:setSpeaker("susie")
+        cutscene:text("* Noelle!", "shock")
+		g1:setAnimation("idle")
         no:play(1/15, false)
+		cutscene:walkToSpeed(sus, "susto_1", 10, nil, nil, function()
+			g1:slideTo(g1.x, g1.y - 40, 1)
+			cutscene:walkToSpeed(sus, "susto_2", 10, nil, nil, function()
+				sus:setSprite("kneel_left")
+			end)
+		end)
         cutscene:wait(1)
         no:setSprite("shocked")
         cutscene:wait(0.25)
         Game.world.timer:tween(2, no, {y = no.y + 800, x = no.x - 130 + 130, rotation = math.rad(0)}, 'in-circ')
-        sus:resetSprite()
-		ral:resetSprite()
-        cutscene:walkTo(sus, "spoint2", 0.5, "left", true)
-        cutscene:walkTo(ral, "rpoint", 0.5, "left", true)
-        cutscene:walkTo(kris, "kpoint", 0.5, "left", true)
         cutscene:fadeOut(1, {music = false})
         cutscene:text("* Wait, [wait:5]NOELLE!", "surprise_frown")
         cutscene:wait(1)
@@ -1063,8 +1076,19 @@ return {
 			cutscene:setSpeaker("susie")
 			Game.world.music:play("second_church", 1, 1)
 			img:remove()
+			kris.x = sus.x + 40
+			kris.y = sus.y - 40
+			kris:setFacing("left")
+			ral.x = sus.x + 40
+			ral.y = sus.y + 40
+			ral:setFacing("left")
+			local x = g1.x + 80
+			local y = g1.y
+			g1:remove()
+			g1 = Game.world:spawnNPC("guei", x, y, {animation = "idle"})
+			g2.x = g2.x + 80
+			g2.y = g2.y + 40
 			cutscene:fadeIn(0)
-			sus:setSprite("shock_down_flip_1")
 		else
 			local pitch = 0.75
 			Assets.playSound("splat", 1, pitch)
@@ -1083,14 +1107,27 @@ return {
 			cutscene:text("[voice:echo][speed:0.25][shake:0.52]* Can you hear me?!")
 			cutscene:wait(1)
 			Game.world.music:play()
+			kris.x = sus.x + 40
+			kris.y = sus.y - 40
+			kris:setFacing("left")
+			ral.x = sus.x + 40
+			ral.y = sus.y + 40
+			ral:setFacing("left")
+			local x = g1.x + 80
+			local y = g1.y
+			g1:remove()
+			g1 = Game.world:spawnNPC("guei", x, y, {animation = "idle"})
+			g2.x = g2.x + 80
+			g2.y = g2.y + 40
 			cutscene:fadeIn(1, {music = false})
-			sus:setSprite("shock_down_flip_1")
 			cutscene:wait(1)
 		end
         cutscene:setSpeaker(sus)
         cutscene:text("* D-Did-", "surprise_frown")
         cutscene:text("* Did Noelle just die?!", "surprise_frown")
-        cutscene:text("* DID I KILL NOELLE?!", "shock_nervous")
+		if Game:getFlag("route") == 3 then
+			cutscene:text("* DID I KILL NOELLE?!", "shock_nervous")
+		end
         cutscene:setSpeaker(ral)
         cutscene:text("* W-Well Susie, [wait:5]um...", "surprise_confused")
         cutscene:text("* I think she's... [wait:5]okay? [wait:10]It doesn't seem like falling here would...", "surprise_neutral_side")
@@ -1100,14 +1137,28 @@ return {
         cutscene:wait(1/2)
         sus:resetSprite()
         sus:setFacing("right")
-        cutscene:wait(1/2)
+        ral:setFacing("right")
+        kris:setFacing("right")
         cutscene:setSpeaker(sus)
-        cutscene:text("* Uh, [wait:5]Kris?", "nervous")
-        cutscene:text("* You okay? [wait:10]You look freaked out...", "nervous")
-        cutscene:text("* (Ralsei, [wait:5]are humans supposed to breathe like that?)", "suspicious")
-        cutscene:setSpeaker(ral)
-        cutscene:text("* (...)", "frown")
-		cutscene:wait(1/2)
+        cutscene:text("* ...", "bangs/neutral")
+        cutscene:text("* ...Arright,[wait:5] freaks.[wait:10] Listen up.", "bangs/neutral")
+        cutscene:text("* If it's a fight you want...", "bangs/neutral")
+		sus:setAnimation("battle/attack")
+		Assets.playSound("laz_c")
+		cutscene:wait(0.7)
+        cutscene:text("* Then you're gonna fight someone your own size!", "bangs/teeth_angry")
+		local i = Game:getPartyIndex("jamm")
+		Game:removePartyMember("jamm")
+		local w, e = cutscene:startEncounter("guei_hurt", true, {g1, g2}, {wait=false})
+		g1:remove()
+		g2:remove()
+		cutscene:wait(w)
+		Game:addPartyMember("jamm", i)
+        cutscene:wait(1)
+        sus:resetSprite()
+		sus:shake(2)
+		Assets.playSound("wing")
+		cutscene:wait(1)
         if Game:hasPartyMember("jamm") then
 			jamm = jamm:convertToFollower()
             jamm.x, jamm.y = 680, 480
@@ -1138,6 +1189,7 @@ return {
 			jam:setWeapon("basic_sling")
         end
 		
+        cutscene:interpolateFollowers()
         cutscene:attachFollowers()
 		cutscene:attachCamera()
         Game:setFlag("noellefall", true)
