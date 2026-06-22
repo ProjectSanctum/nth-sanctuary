@@ -112,6 +112,7 @@ function Mod:init()
         if ok then
            return result
         elseif id ~= "dogcheck/dogcheck" then
+			print("Dogcheck triggered due to following error:\n" .. result)
            return Registry.createMap("dogcheck", ...)
         else
            error("Attempt to create non existent map \"" .. tostring(id) .. "\"")

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 10,
-  nextobjectid = 103,
+  nextobjectid = 108,
   properties = {
     ["border"] = "church_a",
     ["music"] = "climb"
@@ -43,14 +43,8 @@ return {
       filename = "../../../tilesets/ExtraClimbingTiles.tsx"
     },
     {
-      name = "castle",
-      firstgid = 1115,
-      filename = "D:/kristaldata/Kristal/mods/example/scripts/world/tilesets/castle.tsx",
-      exportfilename = "D:/kristaldata/Kristal/mods/example/scripts/world/tilesets/castle.lua"
-    },
-    {
       name = "church_objects",
-      firstgid = 1175,
+      firstgid = 1115,
       filename = "../../../tilesets/church_objects.tsx",
       exportfilename = "../../../tilesets/church_objects.lua"
     }
@@ -301,22 +295,6 @@ return {
           visible = true,
           properties = {
             ["value"] = 10
-          }
-        },
-        {
-          id = 48,
-          name = "destructableclimbarea",
-          type = "",
-          shape = "rectangle",
-          x = 600,
-          y = 240,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["sprite"] = "world/events/climbtiles/brittlebrick"
           }
         },
         {
@@ -617,7 +595,7 @@ return {
           height = 40,
           rotation = 0,
           opacity = 1,
-          gid = 1279,
+          gid = 1219,
           visible = true,
           properties = {}
         },
@@ -632,7 +610,7 @@ return {
           height = 40,
           rotation = 0,
           opacity = 1,
-          gid = 1279,
+          gid = 1219,
           visible = true,
           properties = {}
         },
@@ -647,22 +625,22 @@ return {
           height = 40,
           rotation = 0,
           opacity = 1,
-          gid = 1279,
+          gid = 1219,
           visible = true,
           properties = {}
         },
         {
-          id = 102,
+          id = 107,
           name = "fallingclimbarea",
           type = "",
           shape = "rectangle",
-          x = 480,
-          y = 240,
-          width = 160,
+          x = 600,
+          y = 280,
+          width = 40,
           height = 40,
           rotation = 0,
           opacity = 1,
-          gid = 1279,
+          gid = 1219,
           visible = true,
           properties = {}
         }
@@ -688,7 +666,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 240,
-          y = 400,
+          y = 360,
           width = 160,
           height = 40,
           rotation = 0,
@@ -916,20 +894,6 @@ return {
           }
         },
         {
-          id = 85,
-          name = "",
-          type = "",
-          shape = "point",
-          x = 780,
-          y = 400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 86,
           name = "climbentry",
           type = "",
@@ -960,20 +924,6 @@ return {
           properties = {
             ["target"] = { id = 85 }
           }
-        },
-        {
-          id = 88,
-          name = "",
-          type = "",
-          shape = "point",
-          x = 620,
-          y = 400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
         },
         {
           id = 89,
@@ -1008,20 +958,6 @@ return {
           }
         },
         {
-          id = 91,
-          name = "",
-          type = "",
-          shape = "point",
-          x = 460,
-          y = 400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 92,
           name = "climbentry",
           type = "",
@@ -1052,20 +988,6 @@ return {
           properties = {
             ["target"] = { id = 91 }
           }
-        },
-        {
-          id = 94,
-          name = "",
-          type = "",
-          shape = "point",
-          x = 180,
-          y = 400,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
         },
         {
           id = 95,
@@ -1149,6 +1071,62 @@ return {
           type = "",
           shape = "point",
           x = 40,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 85,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 88,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 620,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 91,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 460,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 94,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 180,
           y = 400,
           width = 0,
           height = 0,
