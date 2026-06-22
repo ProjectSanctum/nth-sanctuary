@@ -87,7 +87,7 @@ function ClimbWater:update()
 	local topy = MathUtils.clamp(self.drawy, self.starty - self.y, self.endy - self.y)
 	local boty = MathUtils.clamp(-40 + (self.scaley * 40) + self.drawy, self.starty - self.y, self.endy - self.y)
 	self:setHitbox(0, topy, 40, boty - topy)
-	if not self.triggered and Game.world.player.state_manager.state == "CLIMB" and not Game.lock_movement then
+	if not self.triggered and Game.world.player:isClimbing() and not Game.lock_movement then
 		local topy = MathUtils.clamp(self.drawy, self.starty - self.y, self.endy - self.y)
 		local boty = MathUtils.clamp(-40 + (self.scaley * 40) + self.drawy, self.starty - self.y, self.endy - self.y)
 		local width = 40
@@ -105,7 +105,7 @@ function ClimbWater:update()
 			Object.startCache()
 			local collider = Hitbox(self, adjustment + 8, topy + yoff, width - 16, boty - topy - 8)
 			if Game.world.player:collidesWith(collider) then
-				if Game.world.player.falling == 0 and Game.world.player.neutralcon == 1 or Game.world.player.jumpchargecon >= 1 then
+                if Game.world.player.climb_state.fall_state == 0 and (Game.world.player.climb_state:isIdle() or Game.world.player.climb_state.charge_state > 0) then
 					Game.world.player.falldir = self.falldir
 					Game.world.player.falling = 1
 					Game.world.player.fallingtimer = self.fallingtimer

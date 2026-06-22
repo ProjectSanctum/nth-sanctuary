@@ -2,7 +2,7 @@
 ---@field world World
 local Player, super = HookSystem.hookScript(Player)
 
-function Player:init(chara, x, y)
+--[[function Player:init(chara, x, y)
     super.init(self, chara, x, y)
 	self.falseloopaffects = {false,false}
 	self.falseloopy = {}
@@ -835,6 +835,6 @@ function Player:onAdd(parent)
 			end
 		end
     end
-end
+end]]
 
 return Player
