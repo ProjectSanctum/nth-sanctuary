@@ -327,9 +327,9 @@ return {
 		cutscene:wait(2)
 		s.sprite.anim_speed = 0
 		cutscene:wait(2)
+		cutscene:text("* See you tomorrow,[wait:5] Kris.", "small_smile")
 		s:setSprite("walk_look_down")
 		s:setFacing("down")
-		cutscene:text("* See you tomorrow,[wait:5] Kris.", "small_smile")
 		cutscene:wait(0.5)
 		cutscene:walkTo(s, s.x, 640, 2, "down")
 		cutscene:wait(0.5)
