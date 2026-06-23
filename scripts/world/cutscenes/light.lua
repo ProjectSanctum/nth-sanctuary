@@ -333,8 +333,85 @@ return {
 		cutscene:wait(0.5)
 		cutscene:walkTo(s, s.x, 640, 2, "down")
 		cutscene:wait(2)
-		rainfx.rain_outdoors_sfx:fade(0, 2)
+		rainfx.rain_outdoors_sfx:fade(0.5, 2)
         cutscene:fadeOut(2)
 		cutscene:wait(2)
+		Game:setFlag("hometown_raining", 2)
+        cutscene:loadMap("light/hometown/town_church")
+		s = cutscene:spawnNPC("susie_lw", 860, -40)
+		s:setSprite("walk_look_down")
+		s:setFacing("down")
+		cutscene:attachCameraImmediate()
+		Game.world.camera.target = s
+		Game.world.player.visible = false
+		Game.world.music:stop()
+		Game.world.map.image_layers["churchup"].visible = false
+		local church_door = ChurchDoorDarkness(566, 528)
+		church_door:setLayer(Game.world:parseLayer("objects"))
+		Game.world:addChild(church_door)
+		local church_darkness = ChurchDarknessVFX(0, 0)
+		church_darkness:setLayer(Game.world:parseLayer("objects"))
+		Game.world:addChild(church_darkness)
+		local rainfx = Game.stage:getObjects(LightRainEffect)[1]
+		if not rainfx then
+			rainfx = LightRainEffect()
+			Game.world:addChild(rainfx)
+		end
+		if not rainfx.rain_outdoors_sfx then
+			rainfx.rain_outdoors_sfx = Music()
+			rainfx.rain_outdoors_sfx:play("raining", 0.5, 1)
+		end
+		rainfx.rain_outdoors_sfx:setPitch(0.9)
+        cutscene:fadeIn(1)
+		cutscene:walkToSpeed(s, s.x, 500, 3, "down")
+		cutscene:wait(0.5)
+		cutscene:setSpeaker("susie")
+		cutscene:text("* Test fucking dialogue[wait:30]", nil, s, {skip = false, auto = true})
+		cutscene:text("* Test fucking dialogue 2[wait:30]", nil, s, {skip = false, auto = true})
+		cutscene:wait(function()
+			if s.y >= 500 then
+				return true
+			end
+			return false
+		end)
+		s:setSprite("walk_unhappy")
+		s:setFacing("down")
+		cutscene:wait(0.5)
+		s:setFacing("left")
+		cutscene:wait(0.5)
+		s:setFacing("up")
+		cutscene:wait(0.5)
+		s:setFacing("right")
+		cutscene:wait(0.5)
+		cutscene:walkTo(s, 960, 510, 0.5, "right")
+		cutscene:wait(1)
+		cutscene:text("* Test fucking Jamm Car dialogue")
+		cutscene:detachCamera()
+        cutscene:panTo(740, 580, 1, "out-cubic")
+		cutscene.wind_sound = Music()
+		cutscene.wind_sound:play("wind_highplace", 0, 0.6)
+		cutscene.windpitch = 1
+		Assets.playSound("dooropen", 0.7, 0.4)
+		Assets.playSound("dooropen", 0.7, 0.5)
+		church_darkness.bg_active = true
+		church_darkness.window_active = true
+		church_door:setFrame(2)
+		cutscene.wind_sound:fade(1, 1)
+		rainfx.rain_outdoors_sfx:fade(0.3, 1)
+		cutscene:during(function()
+			cutscene.wind_sound:setPitch(cutscene.windpitch)
+		end)
+		Game.world.timer:tween(1, cutscene, {windpitch = 1.5}, "linear")
+		cutscene:wait(0.5)
+		Assets.playSound("sussurprise")
+		s:setSprite("shock_down")
+		s:shake()
+		s:alert(20/30, {play_sound = false})
+		cutscene:wait(1)
+		s:setSprite("walk")
+		Game.world.music:play("cultchase")
+		cutscene:wait(cutscene:walkTo(s, s.x - 100, 730, 10/30, "down"))
+		cutscene:wait(cutscene:walkTo(s, 600, 730, 20/30, "left"))
+		s:setFacing("up")
     end
 }

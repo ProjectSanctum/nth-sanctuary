@@ -85,7 +85,7 @@ function LightRainEffect:update()
 		if Game:getFlag("hometown_rain_indoors", false) then
 			self.rain_indoors_sfx:setVolume(0.75)
 		else
-			self.rain_outdoors_sfx:setVolume(0.5)		
+			self.rain_outdoors_sfx:setVolume(0.5)
 		end
 		if self.prewarm then
 			if not self.crossfade then
