@@ -803,23 +803,9 @@ return {
       properties = {},
       objects = {
         {
-          id = 124,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 240,
-          y = 280,
-          width = 160,
-          height = 40,
-          rotation = 0,
-          opacity = 1,
-          visible = false,
-          properties = {}
-        },
-        {
           id = 125,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 240,
           y = 320,
@@ -833,7 +819,7 @@ return {
         {
           id = 148,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 240,
           y = 280,
@@ -847,7 +833,7 @@ return {
         {
           id = 211,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 920,
           y = 840,
@@ -861,7 +847,7 @@ return {
         {
           id = 212,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 760,
@@ -875,7 +861,7 @@ return {
         {
           id = 213,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 680,
@@ -889,7 +875,7 @@ return {
         {
           id = 214,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 440,
@@ -903,7 +889,7 @@ return {
         {
           id = 215,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1400,
           y = 680,
@@ -917,7 +903,7 @@ return {
         {
           id = 216,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 920,
           y = 760,
@@ -931,7 +917,7 @@ return {
         {
           id = 219,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1400,
           y = 720,
@@ -945,7 +931,7 @@ return {
         {
           id = 234,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 240,
           y = 600,
@@ -959,7 +945,7 @@ return {
         {
           id = 235,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 240,
           y = 920,
@@ -973,7 +959,7 @@ return {
         {
           id = 236,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 480,
           y = 920,
@@ -987,7 +973,7 @@ return {
         {
           id = 237,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 240,
           y = 560,
@@ -1001,7 +987,7 @@ return {
         {
           id = 238,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 400,
           y = 600,
@@ -1015,7 +1001,7 @@ return {
         {
           id = 239,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 440,
           y = 640,
@@ -1029,7 +1015,7 @@ return {
         {
           id = 241,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 400,
           y = 360,
@@ -1043,7 +1029,7 @@ return {
         {
           id = 242,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 400,
           y = 520,
@@ -1057,7 +1043,7 @@ return {
         {
           id = 248,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 560,
           y = 440,
@@ -1071,7 +1057,7 @@ return {
         {
           id = 249,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 480,
           y = 480,
@@ -1085,7 +1071,7 @@ return {
         {
           id = 250,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 560,
           y = 520,
@@ -1099,7 +1085,7 @@ return {
         {
           id = 251,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 520,
           y = 560,
@@ -1113,7 +1099,7 @@ return {
         {
           id = 252,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 480,
           y = 240,
@@ -1127,7 +1113,7 @@ return {
         {
           id = 254,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 600,
           y = 280,
@@ -1141,7 +1127,7 @@ return {
         {
           id = 255,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 520,
           y = 320,
@@ -1155,7 +1141,7 @@ return {
         {
           id = 257,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 760,
           y = 240,
@@ -1169,7 +1155,7 @@ return {
         {
           id = 259,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 760,
           y = 480,
@@ -1183,7 +1169,7 @@ return {
         {
           id = 278,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 400,
           y = 440,
@@ -1197,7 +1183,7 @@ return {
         {
           id = 279,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 920,
           y = 800,
@@ -1211,7 +1197,7 @@ return {
         {
           id = 281,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1200,
           y = 920,
@@ -1225,7 +1211,7 @@ return {
         {
           id = 282,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 840,
@@ -1239,7 +1225,7 @@ return {
         {
           id = 283,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1200,
           y = 480,
@@ -1253,7 +1239,7 @@ return {
         {
           id = 284,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1280,
           y = 400,
@@ -1267,7 +1253,7 @@ return {
         {
           id = 285,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1400,
           y = 280,
@@ -1281,7 +1267,7 @@ return {
         {
           id = 287,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 280,
@@ -1295,7 +1281,7 @@ return {
         {
           id = 288,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1080,
           y = 440,
@@ -1309,7 +1295,7 @@ return {
         {
           id = 289,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1080,
           y = 280,
@@ -1323,7 +1309,7 @@ return {
         {
           id = 290,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1160,
           y = 320,
@@ -1337,7 +1323,7 @@ return {
         {
           id = 291,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1280,
           y = 280,
@@ -1351,7 +1337,7 @@ return {
         {
           id = 292,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1240,
           y = 280,
@@ -1365,7 +1351,7 @@ return {
         {
           id = 293,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1240,
           y = 400,
@@ -1379,7 +1365,7 @@ return {
         {
           id = 294,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1320,
           y = 440,
@@ -1393,7 +1379,7 @@ return {
         {
           id = 295,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1400,
           y = 480,
@@ -1407,7 +1393,7 @@ return {
         {
           id = 296,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1600,
           y = 520,
@@ -1421,7 +1407,7 @@ return {
         {
           id = 297,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1560,
           y = 600,
@@ -1435,7 +1421,7 @@ return {
         {
           id = 298,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1440,
           y = 680,
@@ -1449,7 +1435,7 @@ return {
         {
           id = 301,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 160,
@@ -1463,7 +1449,7 @@ return {
         {
           id = 302,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1200,
           y = 160,
@@ -1477,7 +1463,7 @@ return {
         {
           id = 303,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1280,
           y = 160,
@@ -1491,7 +1477,7 @@ return {
         {
           id = 304,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1400,
           y = 160,
@@ -1505,7 +1491,7 @@ return {
         {
           id = 306,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1480,
           y = 160,
@@ -1519,7 +1505,7 @@ return {
         {
           id = 307,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1600,
           y = 160,
@@ -1533,7 +1519,7 @@ return {
         {
           id = 312,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1280,
           y = 1200,
@@ -1547,7 +1533,7 @@ return {
         {
           id = 313,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1320,
           y = 1040,
@@ -1561,7 +1547,7 @@ return {
         {
           id = 314,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1400,
           y = 1000,
@@ -1575,7 +1561,7 @@ return {
         {
           id = 315,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1400,
           y = 960,
@@ -1589,7 +1575,7 @@ return {
         {
           id = 317,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1240,
           y = 560,
@@ -1603,7 +1589,7 @@ return {
         {
           id = 318,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 520,
           y = 400,
@@ -1617,7 +1603,7 @@ return {
         {
           id = 319,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 560,
           y = 280,
@@ -1631,7 +1617,7 @@ return {
         {
           id = 321,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 640,
           y = 320,
@@ -1645,7 +1631,7 @@ return {
         {
           id = 322,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 760,
           y = 360,
@@ -1659,7 +1645,7 @@ return {
         {
           id = 329,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 960,
           y = 880,
@@ -1673,7 +1659,7 @@ return {
         {
           id = 370,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 960,
@@ -1687,7 +1673,7 @@ return {
         {
           id = 371,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1120,
           y = 1200,
@@ -1701,7 +1687,7 @@ return {
         {
           id = 380,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1160,
           y = 1120,
@@ -1715,7 +1701,7 @@ return {
         {
           id = 382,
           name = "",
-          type = "",
+          type = "climbarea",
           shape = "rectangle",
           x = 1200,
           y = 1080,
@@ -1744,7 +1730,7 @@ return {
       objects = {
         {
           id = 22,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 0,
@@ -1758,7 +1744,7 @@ return {
         },
         {
           id = 23,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 0,
@@ -1772,7 +1758,7 @@ return {
         },
         {
           id = 28,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 720,
@@ -1786,7 +1772,7 @@ return {
         },
         {
           id = 29,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 720,
@@ -1800,7 +1786,7 @@ return {
         },
         {
           id = 30,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 1360,
@@ -1814,7 +1800,7 @@ return {
         },
         {
           id = 31,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 1360,
@@ -1828,7 +1814,7 @@ return {
         },
         {
           id = 261,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 320,
@@ -1842,7 +1828,7 @@ return {
         },
         {
           id = 262,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 680,
@@ -1856,7 +1842,7 @@ return {
         },
         {
           id = 263,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 1000,
@@ -1870,7 +1856,7 @@ return {
         },
         {
           id = 264,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 1320,
@@ -1884,7 +1870,7 @@ return {
         },
         {
           id = 342,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 360,
@@ -1898,7 +1884,7 @@ return {
         },
         {
           id = 344,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 280,
@@ -1912,7 +1898,7 @@ return {
         },
         {
           id = 361,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 360,
@@ -1926,7 +1912,7 @@ return {
         },
         {
           id = 374,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 0,
@@ -1940,7 +1926,7 @@ return {
         },
         {
           id = 375,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 0,
@@ -1954,7 +1940,7 @@ return {
         },
         {
           id = 376,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 240,
@@ -1968,7 +1954,7 @@ return {
         },
         {
           id = 377,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = -40,
@@ -1982,7 +1968,7 @@ return {
         },
         {
           id = 386,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 1080,
@@ -1996,7 +1982,7 @@ return {
         },
         {
           id = 387,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 1000,
@@ -2010,7 +1996,7 @@ return {
         },
         {
           id = 389,
-          name = "climbarea",
+          name = "",
           type = "",
           shape = "rectangle",
           x = 960,
