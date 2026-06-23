@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 29,
-  nextobjectid = 166,
+  nextobjectid = 167,
   properties = {
     ["border"] = "church_d",
     ["music"] = "fourth_church",
@@ -1503,22 +1503,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 46,
-          name = "",
-          type = "climbarea",
-          shape = "rectangle",
-          x = 1420,
-          y = 640,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["value"] = 1
-          }
-        },
-        {
           id = 33,
           name = "",
           type = "climbarea",
@@ -1813,6 +1797,22 @@ return {
           visible = true,
           properties = {
             ["texture"] = "window_knight_oscillate"
+          }
+        },
+        {
+          id = 166,
+          name = "climbcoin",
+          type = "",
+          shape = "rectangle",
+          x = 1420,
+          y = 640,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["value"] = 1
           }
         }
       }
