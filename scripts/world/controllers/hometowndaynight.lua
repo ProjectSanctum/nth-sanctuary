@@ -96,7 +96,7 @@ end
 
 function HometownDayNight:draw()
     super.draw(self)
-    if self.shader then
+    if self.shader and ((not self.inside) or self.church) then
         love.graphics.setShader(self.shader)
 		self.shader:send("palette_tex", self.palette_tex)
 		local palw, palh = self.palette_tex:getWidth(), self.palette_tex:getHeight()

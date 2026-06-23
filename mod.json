@@ -10,27 +10,15 @@
 
     "chapter": 4,
     "map": "fileselect",
-    "party": ["kris"], //["kris", "susie", "ralsei"],
+    "party": ["kris"],
     "inventory": {
-        "items": ["scarlixir","scarlixir","scarlixir","rhapsotea","rhapsotea","rhapsotea","ancientsweet"],
-        "key_items": ["cell_phone", "shadowcrystal", "claimbclaws", "sheetmusic"]
+        "items": [],
+        "key_items": ["cell_phone"]
     },
     "equipment": {
-        "kris": {
-            "weapon": "light/quillpen"
-        }
-        // "kris": {
-            // "weapon": "winglade",
-            // "armor": ["waferguard", "tennatie"]
-        // },
-        // "susie": {
-            // "weapon": "absorbax",
-            // "armor": ["spikeband", "shadowmantle"]
-        // },
-        // "ralsei": {
-            // "weapon": "scarfmark",
-            // "armor": ["princessrbn", ""]
-        // }
+         "kris": {
+             "weapon": "light/quillpen"
+         }
     },
     "namesMessages": {
 		// Characters (I guess)
@@ -40,7 +28,7 @@
         "MERG": "What's up guys, today we are\nplaying Deltarune: #th Sanctuary, \netc etc...",
         "CHERRY": "hi its me chernobyl",
         "MARCY": "Not viable.",
-        "DDELTA": "Placeholder text",
+        "DDELTA": "No problem here.",
         "LUCID": "Placeholder text"
     },
     "namesDeny": [

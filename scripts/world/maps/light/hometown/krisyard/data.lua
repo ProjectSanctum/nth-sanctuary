@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 15,
-  nextobjectid = 56,
+  nextobjectid = 57,
   properties = {
     ["border"] = "leaves",
     ["light"] = true,
@@ -687,42 +687,7 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {
-        {
-          id = 26,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 250,
-          y = 342,
-          width = 26,
-          height = 30,
-          rotation = 0,
-          opacity = 1,
-          gid = 356,
-          visible = true,
-          properties = {
-            ["night"] = 2
-          }
-        },
-        {
-          id = 27,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 398,
-          y = 342,
-          width = 26,
-          height = 30,
-          rotation = 0,
-          opacity = 1,
-          gid = 356,
-          visible = true,
-          properties = {
-            ["night"] = 2
-          }
-        }
-      }
+      objects = {}
     },
     {
       type = "objectgroup",
@@ -776,20 +741,6 @@ return {
             ["marker"] = "entryeast",
             ["sound"] = "dooropen"
           }
-        },
-        {
-          id = 22,
-          name = "torcar",
-          type = "",
-          shape = "rectangle",
-          x = 460,
-          y = 220,
-          width = 156,
-          height = 148,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
         }
       }
     },

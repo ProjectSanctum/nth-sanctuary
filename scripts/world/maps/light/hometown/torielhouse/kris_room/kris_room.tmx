@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="30">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="30">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -65,11 +65,6 @@
     <property name="text2" value="* &quot;catti &amp; catty&quot; can be seen faintly written on it in worn gel pen."/>
    </properties>
   </object>
-  <object id="13" gid="34" x="470" y="390" width="74" height="60">
-   <properties>
-    <property name="solid" type="bool" value="true"/>
-   </properties>
-  </object>
   <object id="14" gid="35" x="466" y="274" width="92" height="76">
    <properties>
     <property name="day" type="int" value="1"/>
@@ -106,11 +101,6 @@
   <object id="27" name="savepoint" x="306" y="219" width="40" height="40"/>
  </objectgroup>
  <objectgroup id="7" name="objects_night">
-  <object id="23" gid="33" x="470" y="390" width="74" height="60">
-   <properties>
-    <property name="night" type="int" value="1"/>
-   </properties>
-  </object>
   <object id="24" gid="79" x="86" y="400" width="106" height="64">
    <properties>
     <property name="night" type="int" value="1"/>

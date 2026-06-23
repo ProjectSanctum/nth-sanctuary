@@ -66,7 +66,7 @@ function LightRainEffect:onRemove(parent)
         self.rain_indoors_sfx:remove()
         self.rain_indoors_sfx = nil
     end
-	if self.rain_active and not Game:getFlag("hometown_rain_door_transition", false) then
+	if self.rain_active and Game:getFlag("hometown_rain_door_transition", false) ~= false then
 		Game:setFlag("hometown_raining", 3)
 	end
 end
