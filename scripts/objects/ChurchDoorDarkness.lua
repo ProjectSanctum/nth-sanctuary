@@ -5,6 +5,8 @@ function ChurchDoorDarkness:init(x, y)
 	
 	self.timer = 0
 	self:setScale(2)
+	self.lightning_tex = Assets.getFrames("world/objects/church_door_lightning")
+	self.lightning_alpha = 0
 end
 
 function ChurchDoorDarkness:update()
@@ -42,6 +44,14 @@ function ChurchDoorDarkness:update()
 			Game.world:addChild(ball)
 		end
 	end
+end
+
+function ChurchDoorDarkness:draw()
+    super.draw(self)
+	
+	Draw.setColor(1,1,1,self.lightning_alpha)
+	Draw.draw(self.lightning_tex[self.frame])
+	Draw.setColor(1,1,1,1)
 end
 
 return ChurchDoorDarkness

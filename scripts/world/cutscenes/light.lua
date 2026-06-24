@@ -21,6 +21,9 @@ return {
 				cutscene.church_lightning:setLayer(Game.world:parseLayer("objects"))
 				Game.world:addChild(cutscene.church_lightning)
 			end
+			if cutscene.church_door then
+				cutscene.church_door.lightning_alpha = 1
+			end
 			if cutscene.church_darkness then
 				cutscene.church_darkness.lightning_cancel_alpha = 0
 			end
@@ -41,6 +44,9 @@ return {
 			table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, palettesys.overlay, {alpha = 0.6}, "out-cubic"))
 			if cutscene.church_lightning then
 				table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, cutscene.church_lightning, {alpha = 0}, "out-cubic"))
+			end
+			if cutscene.church_door then
+				table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, cutscene.church_door, {lightning_alpha = 0}, "out-cubic"))
 			end
 			if cutscene.church_darkness then
 				table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, cutscene.church_darkness, {lightning_cancel_alpha = 1}, "out-cubic"))
@@ -66,6 +72,9 @@ return {
 				palettesys.overlay.alpha = 0.6
 				if cutscene.church_darkness then
 					cutscene.church_darkness.lightning_cancel_alpha = 1
+				end
+				if cutscene.church_door then
+					cutscene.church_door.lightning_alpha = 0
 				end
 				if cutscene.church_lightning then
 					cutscene.church_lightning:remove()
@@ -419,9 +428,9 @@ return {
 		Game.world.player.visible = false
 		Game.world.music:stop()
 		Game.world.map.image_layers["churchup"].visible = false
-		local church_door = ChurchDoorDarkness(566, 528)
-		church_door:setLayer(Game.world:parseLayer("objects"))
-		Game.world:addChild(church_door)
+		cutscene.church_door = ChurchDoorDarkness(566, 528)
+		cutscene.church_door:setLayer(Game.world:parseLayer("objects"))
+		Game.world:addChild(cutscene.church_door)
 		cutscene.church_darkness = ChurchDarknessVFX(0, 0)
 		cutscene.church_darkness:setLayer(Game.world:parseLayer("objects"))
 		Game.world:addChild(cutscene.church_darkness)
@@ -468,7 +477,7 @@ return {
 		Assets.playSound("dooropen", 0.7, 0.5)
 		cutscene.church_darkness.bg_active = true
 		cutscene.church_darkness.window_active = true
-		church_door:setFrame(2)
+		cutscene.church_door:setFrame(2)
 		cutscene.wind_sound:fade(1, 1)
 		rainfx.rain_outdoors_sfx:fade(0.3, 1)
 		cutscene:during(function()
