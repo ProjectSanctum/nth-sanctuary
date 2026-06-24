@@ -387,6 +387,7 @@ return {
 		bed:remove()
 		pillow:remove()
 		wagon:remove()
+		phone:remove()
 		Game:setFlag("hometown_rain_drop_wait", 8)
 		Game:setFlag("hometown_rain_max_particles", 240)
         cutscene:loadMap("light/hometown/krisyard")
