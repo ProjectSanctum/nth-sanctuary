@@ -55,7 +55,7 @@ function ScythemareEffect:update()
 					Assets.playSound("swing", 0.32, 1.5 + (self.count * 0.25))
 				end)
 			else
-				Assets.playSound("bump", 2, 1 + MathUtils.random(-0.5, 0.5)
+				Assets.playSound("bump", 2, 1 + MathUtils.random(-0.5, 0.5))
 			end
 			if self.count == 0 then Assets.stopSound(self.pacify_sound)
 			if self.joker then
@@ -95,7 +95,7 @@ function ScythemareEffect:draw()
 		local altspin = MathUtils.lerp(360, -10, MathUtils.easeInOutAccurate(timer / 20, 3))
 		if timer >= 20 then
 			local spin = MathUtils.lerp(-20, 0, MathUtils.easeInAccurate((timer / 20) / 8, 3))
-			local altspin = MathUtils.lerp(-10, 0, MathUtils.easeInAccurate((timer / 20 / 8, 3))
+			local altspin = MathUtils.lerp(-10, 0, MathUtils.easeInAccurate((timer / 20) / 8, 3))
 		end
 		Draw.setColor(r, g, b, a * crossfadeB / 2)
 		Draw.draw(self.spare_z_tex, 0, 0, -math.rad(self.last_altspin), 3, 3, self.spare_z_tex:getWidth() / 2, self.spare_z_tex:getHeight() / 2)
@@ -136,7 +136,7 @@ function ScythemareEffect:draw()
 		end
 		if timer < 9 then
 			Draw.setColor(r, g, b, a)
-			Draw.draw(self.slash_tex[math.floor((timer / 3 % self.slash_tex) + 1]], 0, 0, -math.rad(90), 1, 2, self.slash_tex:getWidth() / 2, self.slash_tex:getHeight() / 2)
+			Draw.draw(self.slash_tex[math.floor((timer / 3 % self.slash_tex) + 1], 0, 0, -math.rad(90), 1, 2, self.slash_tex:getWidth() / 2, self.slash_tex:getHeight() / 2)
 		end
 	end
 
