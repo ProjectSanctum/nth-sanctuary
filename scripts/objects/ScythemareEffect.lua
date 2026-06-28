@@ -66,7 +66,7 @@ function ScythemareEffect:update()
 			self.con = 3
 		end
     end
-	if self.simer >= 64 then
+	if self.siner >= 64 then
 		self:remove()
 	end
 
