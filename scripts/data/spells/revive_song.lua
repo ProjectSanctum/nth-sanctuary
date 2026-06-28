@@ -51,7 +51,7 @@ function spell:onCast(user, target)
     Game.battle:addChild(effect)
 	Game.world.timer:after(75/30, function()
 		Game.battle:finishAction()
-	end
+	end)
     return false
 end
 

@@ -80,7 +80,7 @@ function spell:onCast(user, target)
     end
 	Game.world.timer:after((64 + (count * 10)/30, function()
 		Game.battle:finishAction()
-	end
+	end)
     return false
 end
 
