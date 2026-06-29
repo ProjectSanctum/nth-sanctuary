@@ -13,7 +13,7 @@ function ScythemareEffect:init(x, y, count, success)
     self.siner = 0
 	self.con = 0
 	self.laugh = false
-	self.pacify_sound = Assets.newSound("spell_pacify")
+	self.pacify_sound = Assets.getSound("spell_pacify")
 	self.last_spin = 0
 	self.last_altspin = 0
 	self.count = count or 0
