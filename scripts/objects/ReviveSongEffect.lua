@@ -12,7 +12,11 @@ function ReviveSongEffect:init(chara, x, y, after)
 	self.xoff = 0
 	self.yoff = 0
 	self.chara = chara
-	self.chara.layer = self.chara.layer - 0.01
+	for _, chara in ipairs(Game.stage:getObjects(PartyBattler)) do
+		if chara.y <= self.chara.y then
+			chara.layer = chara.layer - 0.01
+		end
+	end
 	self.yspawn = -5
 	self.do_heal = false
     self.after_func = after
@@ -38,6 +42,16 @@ function ReviveSongEffect:init(chara, x, y, after)
 		self.y = self.y + 26
 		self.yoff = self.yoff - 22
 		self.xoff = self.xoff + 2
+	elseif chara.chara.id == "jamm" then
+		self.x = self.x + 10
+		self.y = self.y + 10
+		if chara.chara.health > 0 then
+			self.xoff = self.xoff + 4
+			self.yoff = self.yoff - 20
+		else
+			self.x = self.x + 12
+			self.yoff = self.yoff - 10
+		end
 	end
 end
 
@@ -52,7 +66,11 @@ function ReviveSongEffect:onRemove(parent)
 			feather.layer = self.layer
 		end
 	end
-	self.chara.layer = self.chara.layer + 0.01
+	for _, chara in ipairs(Game.stage:getObjects(PartyBattler)) do
+		if chara.y <= self.chara.y then
+			chara.layer = chara.layer + 0.01
+		end
+	end
 end
 
 local function returnAlphaColor(color, value)
