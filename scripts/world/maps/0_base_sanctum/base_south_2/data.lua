@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 26,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 14,
-  nextobjectid = 41,
+  nextlayerid = 15,
+  nextobjectid = 46,
   properties = {
     ["music"] = "homebase"
   },
@@ -58,7 +58,6 @@ return {
           width = 200,
           height = 1240,
           rotation = 0,
-          opacity = 1,
           gid = 782,
           visible = true,
           properties = {}
@@ -73,7 +72,6 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
-          opacity = 1,
           gid = 785,
           visible = true,
           properties = {}
@@ -104,7 +102,6 @@ return {
           width = 900,
           height = 680,
           rotation = 270,
-          opacity = 1,
           gid = 789,
           visible = true,
           properties = {}
@@ -204,6 +201,37 @@ return {
       }
     },
     {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 14,
+      name = "objects_glass",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 45,
+          name = "magicglass",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 160,
+          width = 400,
+          height = 280,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["new_sprite"] = "yeah"
+          }
+        }
+      }
+    },
+    {
       type = "tilelayer",
       x = 0,
       y = 0,
@@ -273,7 +301,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -303,7 +330,6 @@ return {
           width = 200,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["cutscene"] = "door.d1",
@@ -320,7 +346,6 @@ return {
           width = 120,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "2_2nd_sanctuary/second_sanctum_1_winglade"
@@ -336,11 +361,42 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "0_base_sanctum/base_south_1",
             ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 42,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 540,
+          y = 490,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "jamm",
+            ["flagcheck"] = "!jamm_join"
+          }
+        },
+        {
+          id = 43,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 300,
+          y = 390,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "primary.jamm",
+            ["flagcheck"] = "!jamm_join"
           }
         }
       }
@@ -369,7 +425,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -383,7 +438,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -397,7 +451,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -411,7 +464,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -425,7 +477,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -439,7 +490,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -453,7 +503,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -462,12 +511,11 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 360,
-          y = 480,
+          x = 200,
+          y = 160,
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["comment"] = "Like, Titan spawn?"
@@ -483,7 +531,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -497,7 +544,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -527,7 +573,6 @@ return {
           width = 680,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -541,7 +586,6 @@ return {
           width = 400,
           height = 280,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -555,7 +599,6 @@ return {
           width = 120,
           height = 440,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -569,7 +612,6 @@ return {
           width = 480,
           height = 200,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -583,7 +625,6 @@ return {
           width = 206,
           height = 200,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -597,7 +638,6 @@ return {
           width = 80,
           height = 280,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -611,7 +651,6 @@ return {
           width = 640,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -625,7 +664,6 @@ return {
           width = 40,
           height = 880,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -639,7 +677,6 @@ return {
           width = 80,
           height = 200,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -669,7 +706,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv"
@@ -685,7 +721,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["type"] = "hsv2"

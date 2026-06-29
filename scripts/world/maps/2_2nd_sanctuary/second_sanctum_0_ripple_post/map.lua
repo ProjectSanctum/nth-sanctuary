@@ -12,7 +12,7 @@ function map:update()
     if not self.jamm_slingshot_done and Game.world and Game.world.player and Game:hasPartyMember("jamm") then
         local player = Game.world.player
 
-        if player.x < 280 and player.y > 750 then
+        if player.x < 280 and player.y > 880 then
             local jamm = Game.world:getCharacter("jamm")
 
             if jamm then

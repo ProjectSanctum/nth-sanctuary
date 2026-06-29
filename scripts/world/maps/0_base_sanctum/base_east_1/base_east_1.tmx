@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="25" nextobjectid="115">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="25" nextobjectid="115">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -333,13 +333,6 @@
     <property name="marker" value="entry_east"/>
    </properties>
   </object>
-  <object id="29" name="npc" x="880" y="760">
-   <properties>
-    <property name="actor" value="jamm"/>
-    <property name="flagcheck" value="!jamm_join"/>
-   </properties>
-   <point/>
-  </object>
   <object id="32" name="transition" x="1040" y="720" width="40" height="80">
    <properties>
     <property name="map" value="0_base_sanctum/base_east_2"/>
@@ -363,12 +356,6 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
     <property name="prophecy" type="bool" value="true"/>
    </properties>
    <point/>
-  </object>
-  <object id="102" name="script" x="640" y="720" width="40" height="82.6667">
-   <properties>
-    <property name="cutscene" value="primary.jamm"/>
-    <property name="flagcheck" value="!jamm_join"/>
-   </properties>
   </object>
   <object id="111" name="climbexit" x="520" y="440" width="40" height="40">
    <properties>

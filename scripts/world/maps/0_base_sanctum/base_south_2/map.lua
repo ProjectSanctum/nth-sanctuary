@@ -7,6 +7,10 @@ function map:init(world, data)
 end
 
 function map:onEnter()
+	local sa = self.world:getCharacter("jamm")
+    if sa and not Game:getFlag("jamm_join") then
+        sa:setSprite("landed_1")
+    end
 	for _, event in ipairs(self.events) do
 		if event.layer == self.layers["objects_parallax"] then
 			 event.parallax_x = 0.5

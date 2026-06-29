@@ -137,14 +137,10 @@ function ImbuedGuei:getDialogueCutscene()
             cutscene:text("[shake:0.62][speed:0.5]* ...[wait:5]Kris, [wait:5]Susie, [wait:5]I...","roaring", ralsei)
             cutscene:text("[shake:0.62][speed:0.5]* ...","down", ralsei)
             cutscene:text("[shake:0.7][speed:0.75]* I won't back down like before..!", "determined", ralsei)
-            ralsei:setAnimation("battle/spellready")
-            cutscene:wait(5)
-            
+            cutscene:gotoCutscene("imbued", "ralseicast")
             --Assets.playSound("chargeshot_fire", 1, 0.7)
             --Assets.playSound("dtrans_square", 1, 0.7)
             --Assets.playSound("board_bomb", 1, 1)
-
-             
         end
     end
 end

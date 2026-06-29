@@ -6,16 +6,12 @@ return {
         cutscene:walkTo(susie, "spoint", 1.5)
         cutscene:walkTo(ralsei, "rpoint", 1.5)
         cutscene:walkTo(kris, "kpoint", 1.5)
-        if Game:hasPartyMember("jamm") then
-            cutscene:walkTo(jamm, "jpoint", 1.5)
-        end
+        cutscene:walkTo(jamm, "jpoint", 1.5)
         cutscene:wait(1.5)
         susie:setFacing("up")
         kris:setFacing("up")
         ralsei:setFacing("up")
-        if Game:hasPartyMember("jamm") then
-            jamm:setFacing("up")
-        end
+        jamm:setFacing("up")
         cutscene:wait(1)
         cutscene:setSpeaker(susie)
         cutscene:text("* Hmm...", "suspicious")
@@ -25,7 +21,7 @@ return {
         cutscene:text("* ", "shock_smile")
         cutscene:text("* Or maybe, [wait:5]we find a way out???", "shock_smile")
         cutscene:text("* Kris, [wait:5]what do you think?", "surprise_smile")
-        local choice = cutscene:choicer({"We die", "Point and \nhearts come out", "Find a way out"})
+        local choice = cutscene:choicer({"We die", "Point and \nhearts come out", "Find a way out", "Jamm's Idea"})
 
         if choice == 1 then
             cutscene:setSpeaker(susie)
@@ -38,13 +34,15 @@ return {
             cutscene:setSpeaker(ralsei)
             cutscene:text("* See, [wait:5]Susie?", "pleased")
             cutscene:text("* Kris is optimistic!", "pleased")
+        elseif choice == 4 then
+            cutscene:text("* Kris is right, [wait:5]Marcy could be in there.", "look_left", jamm)
+            cutscene:text("* Let's get going.", "neutral", jamm)
         end
+
         cutscene:walkTo(susie, "walkp2", 1.5)
         cutscene:walkTo(ralsei, "walkp3", 1.5)
         cutscene:walkTo(kris, "walkp", 1.5)
-        if Game:hasPartyMember("jamm") then
-            cutscene:walkTo(jamm, "walkp4", 1.5)
-        end
+        cutscene:walkTo(jamm, "walkp4", 1.5)
         cutscene:wait(1)
         Game.world:mapTransition("2_2nd_sanctuary/second_sanctum_0_ripple")
     end

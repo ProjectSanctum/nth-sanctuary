@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="14" nextobjectid="41">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="26" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="46">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -76,6 +76,13 @@
 0,0,0,307,307,308,309,309,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="14" name="objects_glass">
+  <object id="45" name="magicglass" x="240" y="160" width="400" height="280">
+   <properties>
+    <property name="new_sprite" value="yeah"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Tile Layer 5" width="16" height="26">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -129,6 +136,19 @@
     <property name="marker" value="entry2"/>
    </properties>
   </object>
+  <object id="42" name="npc" x="540" y="490">
+   <properties>
+    <property name="actor" value="jamm"/>
+    <property name="flagcheck" value="!jamm_join"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="43" name="script" x="300" y="390" width="40" height="160">
+   <properties>
+    <property name="cutscene" value="primary.jamm"/>
+    <property name="flagcheck" value="!jamm_join"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="10" name="markers">
   <object id="23" name="entry" x="600" y="120">
@@ -152,7 +172,7 @@
   <object id="30" name="walkp3" x="260" y="900">
    <point/>
   </object>
-  <object id="37" name="spawn" x="360" y="480">
+  <object id="37" name="spawn" x="200" y="160">
    <properties>
     <property name="comment" value="Like, Titan spawn?"/>
    </properties>
