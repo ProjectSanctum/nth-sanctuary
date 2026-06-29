@@ -1,8 +1,8 @@
----@class ReviveSongSpell : Object
----@overload fun(...) : ReviveSongSpell
-local ReviveSongSpell, super = Class(Object)
+---@class ReviveSongEffect : Object
+---@overload fun(...) : ReviveSongEffect
+local ReviveSongEffect, super = Class(Object)
 
-function ReviveSongSpell:init(chara, x, y, after)
+function ReviveSongEffect:init(chara, x, y, after)
     super.init(self, x, y)
 	
 	self.timer = 0
@@ -40,11 +40,11 @@ function ReviveSongSpell:init(chara, x, y, after)
 	end
 end
 
-function ReviveSongSpell:update()
+function ReviveSongEffect:update()
 	super.update(self)
 end
 
-function ReviveSongSpell:onRemove(parent)
+function ReviveSongEffect:onRemove(parent)
 	super.onRemove(self, parent)
 	for _, feather in ipairs(self.feathers) do
 		if feather and not feather:isRemoved() then
@@ -64,7 +64,7 @@ local function returnAlphaColor(color, value)
     }
 end
 
-function ReviveSongSpell:drawCharacter(object)
+function ReviveSongEffect:drawCharacter(object)
     love.graphics.push()
     object:preDraw()
     object:draw()
@@ -72,7 +72,7 @@ function ReviveSongSpell:drawCharacter(object)
     love.graphics.pop()
 end
 
-function ReviveSongSpell:drawBeam(x, y, length, spread, dir, smooth)
+function ReviveSongEffect:drawBeam(x, y, length, spread, dir, smooth)
 	local xx = x
 	local yy = y
 	local length = length
@@ -90,7 +90,7 @@ function ReviveSongSpell:drawBeam(x, y, length, spread, dir, smooth)
 	love.graphics.polygon("fill", xx, yy, end1.x + xx, end1.y + yy, end2.x + xx, end2.y + yy)
 end
 
-function ReviveSongSpell:draw()
+function ReviveSongEffect:draw()
     super.draw(self)
 	local stupid_ass_chara_canvas = Draw.pushCanvas(640, 480)
 	self:drawCharacter(self.chara)
@@ -223,4 +223,4 @@ function ReviveSongSpell:draw()
 	self.timer = self.timer + DTMULT
 end
 
-return ReviveSongSpell
+return ReviveSongEffect

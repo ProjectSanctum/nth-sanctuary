@@ -38,7 +38,7 @@ function spell:onCast(user, target)
 	end
 	local bx, by = target:getRelativePos(0, 0)
 	user:setAnimation("sing")
-    local effect = ReviveSongSpell(target, bx, by, function()
+    local effect = ReviveSongEffect(target, bx, by, function()
 		local start_health = target.chara.health
 		local base_heal = user.chara:getStat("magic") * 10
 		if start_health <= 0 then
