@@ -1,0 +1,380 @@
+return {
+  version = "1.10",
+  luaversion = "5.1",
+  tiledversion = "1.10.2",
+  class = "",
+  orientation = "orthogonal",
+  renderorder = "right-down",
+  width = 40,
+  height = 12,
+  tilewidth = 32,
+  tileheight = 32,
+  nextlayerid = 11,
+  nextobjectid = 23,
+  properties = {
+    ["music"] = "vapor_sanct_wip"
+  },
+  tilesets = {
+    {
+      name = "vapor_assets",
+      firstgid = 1,
+      filename = "../../../tilesets/vapor_assets.tsx",
+      exportfilename = "../../../tilesets/vapor_assets.lua"
+    },
+    {
+      name = "bg_dw_church_2_tileset",
+      firstgid = 3,
+      filename = "../../../tilesets/bg_dw_church_2_tileset.tsx"
+    },
+    {
+      name = "vapor_sanctum_wip",
+      firstgid = 201,
+      filename = "../../../tilesets/vapor_sanctum_wip.tsx",
+      exportfilename = "../../../tilesets/vapor_sanctum_wip.lua"
+    }
+  },
+  layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 2,
+      name = "objects_parallax3",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 1,
+          name = "vaporsun",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 280,
+          width = 400,
+          height = 278,
+          rotation = 0,
+          gid = 1,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 9,
+      name = "objects_bottom",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 14,
+          name = "glowy",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 4,
+      name = "objects_parallax2",
+      class = "",
+      visible = true,
+      opacity = 0.65,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.3,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 4,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 400,
+          width = 320,
+          height = 800,
+          rotation = 315,
+          gid = 3221225474,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 5,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 840,
+          width = 320,
+          height = 800,
+          rotation = 0,
+          gid = 2,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 6,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 840,
+          width = 320,
+          height = 800,
+          rotation = 0,
+          gid = 2,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 3,
+      name = "objects_parallax",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.4,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 2,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -680,
+          y = 880,
+          width = 640,
+          height = 1600,
+          rotation = 45,
+          gid = 2,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 3,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 1720,
+          y = 1240,
+          width = 640,
+          height = 1600,
+          rotation = 315,
+          gid = 2,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 8,
+      name = "markers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 13,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 64,
+          y = 224,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 40,
+      height = 12,
+      id = 1,
+      name = "tiles",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        263, 264, 264, 265, 263, 264, 264, 265, 263, 264, 264, 264, 265, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        209, 210, 211, 212, 209, 210, 211, 212, 209, 210, 211, 212, 295, 214, 215, 216, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        240, 241, 242, 243, 240, 241, 242, 243, 240, 241, 242, 243, 295, 245, 214, 215, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        271, 272, 273, 274, 271, 272, 273, 274, 271, 272, 273, 274, 295, 276, 245, 246, 263, 264, 265, 263, 265, 263, 265, 263, 265, 263, 265, 263, 265, 263, 265, 263, 265, 263, 265, 263, 265, 263, 265, 263,
+        302, 303, 304, 305, 302, 303, 304, 305, 302, 303, 304, 305, 326, 307, 276, 277, 294, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 338, 307, 308, 294, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 369, 338, 339, 294, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 369, 370, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects_party",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {}
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "collision",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 15,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 128,
+          width = 416,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 17,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 256,
+          width = 416,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 18,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 512,
+          y = 256,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = -96, y = -96 },
+            { x = -96, y = -128 },
+            { x = 0, y = -128 }
+          },
+          properties = {}
+        },
+        {
+          id = 19,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 416,
+          y = 256,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 0, y = 96 },
+            { x = 96, y = 96 }
+          },
+          properties = {}
+        },
+        {
+          id = 20,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 512,
+          y = 224,
+          width = 800,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 21,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 512,
+          y = 352,
+          width = 800,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    }
+  }
+}

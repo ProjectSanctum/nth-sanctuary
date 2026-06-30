@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="12" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="23">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="vapor_sanct_wip"/>
+ </properties>
+ <tileset firstgid="1" source="../../../tilesets/vapor_assets.tsx"/>
+ <tileset firstgid="3" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="201" source="../../../tilesets/vapor_sanctum_wip.tsx"/>
+ <objectgroup id="2" name="objects_parallax3" parallaxx="0.1">
+  <object id="1" name="vaporsun" gid="1" x="200" y="280" width="400" height="278"/>
+ </objectgroup>
+ <objectgroup id="9" name="objects_bottom">
+  <object id="14" name="glowy" x="0" y="0">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="objects_parallax2" opacity="0.65" parallaxx="0.3">
+  <object id="4" gid="3221225474" x="480" y="400" width="320" height="800" rotation="315"/>
+  <object id="5" gid="2" x="40" y="840" width="320" height="800"/>
+  <object id="6" gid="2" x="480" y="840" width="320" height="800"/>
+ </objectgroup>
+ <objectgroup id="3" name="objects_parallax" locked="1" parallaxx="0.4">
+  <object id="2" gid="2" x="-680" y="880" width="640" height="1600" rotation="45"/>
+  <object id="3" gid="2" x="1720" y="1240" width="640" height="1600" rotation="315"/>
+ </objectgroup>
+ <objectgroup id="8" name="markers">
+  <object id="13" name="spawn" x="64" y="224">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="1" name="tiles" width="40" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+263,264,264,265,263,264,264,265,263,264,264,264,265,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+209,210,211,212,209,210,211,212,209,210,211,212,295,214,215,216,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+240,241,242,243,240,241,242,243,240,241,242,243,295,245,214,215,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+271,272,273,274,271,272,273,274,271,272,273,274,295,276,245,246,263,264,265,263,265,263,265,263,265,263,265,263,265,263,265,263,265,263,265,263,265,263,265,263,
+302,303,304,305,302,303,304,305,302,303,304,305,326,307,276,277,294,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,
+0,0,0,0,0,0,0,0,0,0,0,0,0,338,307,308,294,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,
+0,0,0,0,0,0,0,0,0,0,0,0,0,369,338,339,294,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,296,295,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,369,370,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326,326
+</data>
+ </layer>
+ <objectgroup id="7" name="objects_party"/>
+ <objectgroup color="#ff0000" id="6" name="collision">
+  <object id="15" x="0" y="128" width="416" height="32"/>
+  <object id="17" x="0" y="256" width="416" height="32"/>
+  <object id="18" x="512" y="256">
+   <polygon points="0,0 -96,-96 -96,-128 0,-128"/>
+  </object>
+  <object id="19" x="416" y="256">
+   <polygon points="0,0 0,96 96,96"/>
+  </object>
+  <object id="20" x="512" y="224" width="800" height="32"/>
+  <object id="21" x="512" y="352" width="800" height="32"/>
+ </objectgroup>
+</map>

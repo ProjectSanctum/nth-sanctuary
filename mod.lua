@@ -97,6 +97,13 @@ function Mod:init()
     Game:registerEvent("bookshelf_destructable", function(data)
         return BookshelfDestructable(data)
     end)
+    Game:registerEvent("glowy", function(data)
+        return Glowy(data)
+    end)
+    Game:registerEvent("vaporsun", function(data)
+        return VaporSun(data.center_x, data.center_y)
+    end)
+    
     TableUtils.copyInto(MUSIC_VOLUMES, {
         second_church = 0.8
     })
