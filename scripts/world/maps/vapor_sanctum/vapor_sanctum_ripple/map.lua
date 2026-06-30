@@ -42,6 +42,8 @@ function map:onEnter()
     end
     for _, window in ipairs(Game.world.map:getEvents("vaporsun")) do
         window.alpha = 0
+        self.og_y = window.y
+        window.y = window.y + 940
     end
     
     self.ripple_fx = RippleEffect()
@@ -66,6 +68,7 @@ function map:onEnter()
                 self.spawncolor = {1,0,1}
                 for _, window in ipairs(Game.world.map:getEvents("vaporsun")) do
                     Game.world.timer:tween(210/30, window, {alpha = 1}, "linear")
+                    Game.world.timer:tween(175/30, window, {y = self.og_y}, "out-cubic")
                 end
             end
 
