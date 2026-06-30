@@ -9,7 +9,8 @@ end
 function map:onEnter()
     super.onEnter(self)
     self.target = self:getTileLayer("tiles")
-    self.fx = self.target:addFX(RecolorFX())
+	self.fx = RecolorFX()
+    self.target:addFX(self.fx)
 end
 function map:update()
     super.update(self)

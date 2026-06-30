@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 32,
   tileheight = 32,
-  nextlayerid = 11,
-  nextobjectid = 23,
+  nextlayerid = 12,
+  nextobjectid = 28,
   properties = {
     ["music"] = "vapor_sanct_wip"
   },
@@ -18,8 +18,7 @@ return {
     {
       name = "vapor_assets",
       firstgid = 1,
-      filename = "../../../tilesets/vapor_assets.tsx",
-      exportfilename = "../../../tilesets/vapor_assets.lua"
+      filename = "../../../tilesets/vapor_assets.tsx"
     },
     {
       name = "bg_dw_church_2_tileset",
@@ -58,6 +57,7 @@ return {
           width = 400,
           height = 278,
           rotation = 0,
+          opacity = 1,
           gid = 1,
           visible = true,
           properties = {}
@@ -88,6 +88,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -117,6 +118,7 @@ return {
           width = 320,
           height = 800,
           rotation = 315,
+          opacity = 1,
           gid = 3221225474,
           visible = true,
           properties = {}
@@ -131,6 +133,7 @@ return {
           width = 320,
           height = 800,
           rotation = 0,
+          opacity = 1,
           gid = 2,
           visible = true,
           properties = {}
@@ -145,6 +148,7 @@ return {
           width = 320,
           height = 800,
           rotation = 0,
+          opacity = 1,
           gid = 2,
           visible = true,
           properties = {}
@@ -175,6 +179,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 45,
+          opacity = 1,
           gid = 2,
           visible = true,
           properties = {}
@@ -189,6 +194,7 @@ return {
           width = 640,
           height = 1600,
           rotation = 315,
+          opacity = 1,
           gid = 2,
           visible = true,
           properties = {}
@@ -219,6 +225,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -254,6 +261,70 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 338, 307, 308, 294, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 369, 338, 339, 294, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295, 296, 295,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 369, 370, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326, 326
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 11,
+      name = "objects_reflection",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 23,
+          name = "vaporreflect",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 160,
+          width = 416,
+          height = 96,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 24,
+          name = "vaporreflect",
+          type = "",
+          shape = "polygon",
+          x = 416,
+          y = 160,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 96, y = 96 },
+            { x = 96, y = 192 },
+            { x = 0, y = 96 }
+          },
+          properties = {}
+        },
+        {
+          id = 25,
+          name = "vaporreflect",
+          type = "",
+          shape = "rectangle",
+          x = 512,
+          y = 256,
+          width = 768,
+          height = 96,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        }
       }
     },
     {
@@ -295,6 +366,7 @@ return {
           width = 416,
           height = 32,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -308,6 +380,7 @@ return {
           width = 416,
           height = 32,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -321,6 +394,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -340,6 +414,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -358,6 +433,7 @@ return {
           width = 800,
           height = 32,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -371,6 +447,7 @@ return {
           width = 800,
           height = 32,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
