@@ -7,10 +7,11 @@ function VaporRipple:init(x, y, color, size, points, fadeout, line_width, scale_
     self.points = points or 4
     self.alpha = 1
     self.color = color or {1, 0, 0}
-    self.fadeout = fadeout or 0.05
-    self.line_width = line_width or 4
+    self.fadeout = fadeout or 0.025
+    self.line_width = line_width or 20
     self.scale_factor = scale_factor or 10
-    self.spin_factor = spin_factor or 1
+    self.spin_factor = spin_factor or 5
+    self.rotation = love.math.random(360)
 end
 
 function VaporRipple:draw()
@@ -24,8 +25,9 @@ end
 function VaporRipple:update()
     super.update(self)
     self.alpha = self.alpha - self.fadeout * DTMULT
-    self.rotation = self.rotation + math.rad(self.spin_factor) * DTMULT
-    self.size = self.size + self.scale_factor * DTMULT
+    self.rotation = self.rotation + math.rad(self.spin_factor) * DTMULT * self.alpha
+    self.size = self.size * (1 + self.scale_factor * 0.01 * DTMULT * self.alpha)
+    self.line_width = self.line_width + (1 - self.line_width) * 0.1 * DTMULT * (1 - self.alpha)
     if self.alpha < 0 then
         self.alpha = 0
         self:remove()

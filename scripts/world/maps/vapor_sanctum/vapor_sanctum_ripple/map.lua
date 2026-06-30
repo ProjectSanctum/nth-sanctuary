@@ -112,7 +112,7 @@ function map:spawnRippleBurst()
 end
 
 function map:makeVaporRipple()
-    self.world:spawnObject(VaporRipple(love.math.random(0, SCREEN_WIDTH), love.math.random(0, SCREEN_HEIGHT),  self.spawncolor, 60, love.math.random(3, 8), nil, 2), 999999)
+    self.world:spawnObject(VaporRipple(love.math.random(0, SCREEN_WIDTH), love.math.random(0, SCREEN_HEIGHT),  self.spawncolor, 60, love.math.random(3, 8), nil, 10), 999999)
 end
 
 function map:makeRippleLogic()
