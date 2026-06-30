@@ -4,8 +4,8 @@ local Glowy, super = Class(Event)
 function Glowy:init(data)
     super.init(self, data)
     self.siner = 0
-    self.bg_bands = 24
-    self.bg_band_height = 25
+    self.bg_bands = 21
+    self.bg_band_height = 20
     self.bg_speed = 0.5
     self.alphade = 0
     self.bg_color = {.4,.4,.4}
