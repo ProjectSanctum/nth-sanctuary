@@ -42,6 +42,7 @@ function Huemist:init()
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
         "* Huemist daydreams about an empty\nfield somewhere distant.",
+        "* Huemist radiates in pink and gold.",
         "* The air feels clear and broad.",
         "* Smells like [friend][shake:0][Polygons][friend:unfriend].",
         "* And then you fired again.",
@@ -107,7 +108,7 @@ function Huemist:update()
     self.counter = self.counter + DTMULT
     if self.counter > 30 then
         self.counter = 0
-        local a = Game.battle:addChild(VaporRipple(self.x, self.y-(self.height/2),  self.spawncolor, 10, 4, 0.0125, 6, 30), -200)
+        local a = Game.battle:addChild(VaporRipple(self.x, self.y-(self.height/2), ColorUtils.mergeColor(COLORS.fuchsia, COLORS.yellow, MathUtils.random(0, 1)), 10, 4, 0.0125, 6, 30), -200)
         a.alpha = 0.5
         a.layer = self.layer - 10
     end
