@@ -24,9 +24,10 @@ function DropletLines:onStart()
 		if add_diff == self.last_add_diff then
 			self.add_diff_same_count = self.add_diff_same_count + 1
 			if self.add_diff_same_count >= 3 then
-				while add_diff == self.last_add_diff do
-					add_diff = TableUtils.pick({0, 1})
-					self.last_add_diff = add_diff
+				if add_diff == 0 then
+					add_diff = 1
+				else
+					add_diff = 0
 				end
 				self.add_diff_same_count = 0
 			end
