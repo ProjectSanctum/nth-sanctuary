@@ -16,7 +16,7 @@ function item:init()
     -- Battle description
     self.effect = "Healing\nvaries"
     -- Shop description
-    self.shop = ""
+    self.shop = "Jamm flavor\n\nHealing \n             varies"
     -- Menu description
     self.description = "It's own-flavored beverage.\nThe flavor just says \"Jamm.\""
 
@@ -33,7 +33,7 @@ function item:init()
     }
 
     -- Default shop price (sell price is halved)
-    self.price = 0
+    self.price = 600
     -- Whether the item can be sold
     self.can_sell = true
 

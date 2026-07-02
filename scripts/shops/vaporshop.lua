@@ -43,13 +43,14 @@ function MouseHole:init()
         self:registerItem("brews/"..party.id)
     end
 
-    self:registerTalk("About Yourself")
-    self:registerTalk("About Wall Guardian")
-    self:registerTalk("Cheese Key")
+    self:registerTalk("Who are you?")
+    self:registerTalk("PartyBrew?")
+    self:registerTalk("Vapor Sanctuary?")
 
-    self:registerTalkAfter("Cheese?", 1)
-    self:registerTalkAfter("Picture Frame", 2, "talk_2", 1)
-    self:registerTalkAfter("Together", 2, "talk_2", 2)
+    self:registerTalkAfter("Vapor Sun?", 1)
+    self:registerTalkAfter("Dark Shards?", 2, "talk_2", 1)
+    self:registerTalkAfter("Dark Shards", 2, "talk_2", 2)
+    
 end
 
 function MouseHole:postInit()
@@ -61,48 +62,42 @@ function MouseHole:postInit()
 end
 
 function MouseHole:startTalk(talk)
-    if talk == "About Yourself" then
+    if talk == "Who are you?" then
         self:startDialogue({
-            "[emote:idle]* Oh, there's not much to say about little old me.",
-            "[emote:left]* I'm just a humble shopkeeper,[wait:5] is all.\n[wait:5]* Small business passed down through the generations,[wait:5] and I just happen to be the one running it now.",
-            "[emote:explaining]* I mean, [wait:5]I really like seeing everything that passes through my shop.\n[wait:5]* There's always interesting things from outsiders!",
-            "[emote:happy]* Some of the regulars even bring me a little snack from time to time.\n[wait:5]* It's really nice."
+            "[friend]* I am the Vapor Guy. [wait:10]I run this shop.",
+            "[friend]* Take a load off, dolls.\n[wait:10]* See the Vapor Sun? [wait:10]Sit back an' watch to your hearts' content.",
+            
         })
-    elseif talk == "Cheese?" then
+    elseif talk == "Vapor Sun?" then
         self:startDialogue({
-            "[emote:idle]* You wanna talk about...[wait:5] cheese?",
-            "[emote:left]* I mean, what is there to even say about it?\n[wait:5]* It's,[wait:5] well,[wait:5] just cheese.\n[wait:5]* The perfect food.",
-            "[emote:explaining]* Wh-[wait:5]no, [wait:5]I'm not addicted, [wait:5]I can stop any time I want, [wait:5]alright?"
+            "[friend]* The Vapor Sun? [wait:10]That's the big ol' thing out there.",
+            "[friend]* It's been there for as long as I can remember.",
+            "[friend]* Some say it's a portal to another world,\n[wait:10]* but I just think it's a really cool light show."
         })
-    elseif talk == "About Wall Guardian" then
+    elseif talk == "PartyBrew?" then
         self:setFlag("talk_2", 1)
         self:startDialogue({
-            "[emote:left]* Wallie? [wait:5]He's a good friend of mine.",
-            "* He's been here for...[wait:5] well,[wait:5] as long as I can remember.\n[wait:5]* He even showed me around when I first got here.",
-            "[emote:idle]* Saying things like,[wait:5] \"Wall Here. No Wall over There.\"",
-            "* He was a lot more helpful than it sounds,[wait:5] believe me."
+            "[friend]* Yeah, [wait:5]I make those Party Brews.[wait:10]\n* Just makin' whatever.",
+            "[friend]* Taste's a little different for each one of yous, [wait:5]and which one they drink.",
         })
-    elseif talk == "Picture Frame" then
-        self:setFlag("talk_2", 2)
+    elseif talk == "Dark Shards?" then
+            self:setFlag("talk_2", 2)
+            self:startDialogue({
+            "[friend][wave]* Ahhhh, [wait:10]so you found some.",
+            "[friend]* Each Sanctuary has a Dark Shard. Located in the deepest pits of them.",
+            "[friend]* Each Sanctuary is bound to the [friend:unfriend][color:yellow]Grand Sanctum.",
+            "[friend]* That should be your goal. [wait:10]Open the gates, [wait:5]and do yous' thing.",
+            })
+    elseif talk == "Dark Shards" then
         self:startDialogue({
-            "[emote:left]* Oh, [wait:5]that...?\n[wait:5]* I keep forgetting I put that there.",
-            "[emote:idle]* Pay no attention to it,[wait:5] it's just..."
-        })
-    elseif talk == "Together" then
+                "[friend]* Each Sanctuary is bound to the [friend:unfriend][color:yellow]Grand Sanctum.",
+                "[friend]* I see you already have [friend:unfriend][color:9999ff]"..Mod:getDarkShardCount().." Dark Shards.",
+                "[friend]* Keep doing what you're doin', [wait:5]and you'll get there.",
+            })
+    elseif talk == "Vapor Sanctuary?" then
         self:startDialogue({
-            "[emote:left]* U-us? [wait:5]No, [wait:5]we're not... [wait:5]I-I mean, [wait:5]I don't have much goin' for me.",
-            "[emote:happy]* That's all!!"
-        })
-    elseif talk == "Cheese Key" then
-        self:startDialogue({
-            "[emote:idle]* Oh,[wait:5] why the shop's locked behind a key?",
-            "[emote:left]* Well, [wait:5]we can't have just anyone coming in,[wait:5] cause we've had some nasty visitors in the past.",
-            "[emote:idle]* That's why we give trusted customers a key to the shop.",
-            "[emote:idle]* The littlest ones can come in without it,[wait:5] though.",
-            "[emote:left]* I don't wanna turn anyone away,[wait:5]\nbut it's a system we've had for some time now.",
-            "[emote:left]* The fact that you found one,[wait:5] though...",
-            "[emote:idle]* Well,[wait:5] the fact you tried so hard to get in,[wait:5] I guess that means you can be trusted.",
-            "[emote:happy]* Plus,[wait:5] I wanna see what you've got."
+            "[friend]* Not what you expected, [wait:5]yeah?",
+            "[friend]* Take a load off, [wait:5]might just be the prettiest place you've ever seen.",
         })
     end
 end

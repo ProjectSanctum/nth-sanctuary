@@ -16,7 +16,7 @@ function item:init()
     -- Battle description
     self.effect = "Healing\nvaries"
     -- Shop description
-    self.shop = ""
+    self.shop = "Try your luck.\n\nHealing \n             varies"
     -- Menu description
     self.description = "It's own-flavored beverage.\nThe flavor is scratched out.\""
 
@@ -33,9 +33,9 @@ function item:init()
     }
 
     -- Default shop price (sell price is halved)
-    self.price = 0
+    self.price = 300
     -- Whether the item can be sold
-    self.can_sell = true
+    self.can_sell = false
 
     -- Consumable target mode (ally, party, enemy, enemies, or none)
     self.target = "ally"
