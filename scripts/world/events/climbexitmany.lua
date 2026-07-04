@@ -35,34 +35,36 @@ end
 function ClimbExitMany:calculateAutoExit()
 	local exits = {"down", "up", "left", "right"}
 	for _, exitdir in ipairs(exits) do
-		local x_diff = self.target_x[exitdir] - self.x
-		local y_diff = self.target_y[exitdir] - self.y
+		if self.target_x[exitdir] ~= nil and self.target_y[exitdir] ~= nil then
+			local x_diff = self.target_x[exitdir] - self.x
+			local y_diff = self.target_y[exitdir] - self.y
 
-		local climb_x = MathUtils.sign(x_diff)
-		local climb_y = MathUtils.sign(y_diff)
+			local climb_x = MathUtils.sign(x_diff)
+			local climb_y = MathUtils.sign(y_diff)
 
-		if climb_x ~= 0 and climb_y ~= 0 then
-			-- Figure out which one went further
-			if math.abs(x_diff) > math.abs(y_diff) then
-				climb_y = 0
-			else
-				climb_x = 0
+			if climb_x ~= 0 and climb_y ~= 0 then
+				-- Figure out which one went further
+				if math.abs(x_diff) > math.abs(y_diff) then
+					climb_y = 0
+				else
+					climb_x = 0
+				end
 			end
-		end
 
-		if climb_x == 0 and climb_y == 0 then
-			climb_y = -1
-		end
+			if climb_x == 0 and climb_y == 0 then
+				climb_y = -1
+			end
 
-		-- Now we use the directions (and invert them)
-		if climb_x == 1 then
-			self.auto_exit["right"] = true
-		elseif climb_x == -1 then
-			self.auto_exit["left"] = true
-		elseif climb_y == 1 then
-			self.auto_exit["down"] = true
-		elseif climb_y == -1 then
-			self.auto_exit["up"] = true
+			-- Now we use the directions (and invert them)
+			if climb_x == 1 then
+				self.auto_exit["right"] = true
+			elseif climb_x == -1 then
+				self.auto_exit["left"] = true
+			elseif climb_y == 1 then
+				self.auto_exit["down"] = true
+			elseif climb_y == -1 then
+				self.auto_exit["up"] = true
+			end
 		end
 	end
 end
