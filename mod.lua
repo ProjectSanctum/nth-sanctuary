@@ -165,6 +165,13 @@ function Mod:afmGetMusic()
 	end
 end
 
+function Mod:getActionButtons(battler, buttons)
+    if StringUtils.contains(battler.chara.id, "cuptain") then
+        return {"fight", "magic", "defend"}
+    end
+    return 
+end
+        
 function Mod:afmGetStyle()
     return "normal"
 end

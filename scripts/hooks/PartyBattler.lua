@@ -23,8 +23,48 @@ function PartyBattler:hurt(amount, exact, color, options)
 	end
 	
 	super.hurt(self, amount, exact, color, options)
+
+    if StringUtils.contains(self.chara.id, "cuptain") and self.chara.health < 0 then
+        Game.battle.timer:script(function (wait)
+            for k, enemies in ipairs(Game.battle.enemies) do
+                if enemies.current_target == self.chara.id then
+                    enemies.current_target = Game.party[1].id
+                end
+            end
+
+            for i, battler in ipairs(Game.party) do
+                if Game.party[i] == self.chara.id then
+                    table.remove(Game.world.followers, i-1)
+                    break
+                end
+            end
+
+            Assets.playSound("smallcar_yelp")
+            Assets.playSound("bump", 2, 1)
+            self.chara:addFlag("recruited", 1)
+            self.physics.gravity = 0.8
+            self.physics.speed_x = -6
+            self.physics.speed_y = -1
+            
+            self.graphics.spin = -0.1
+        end)
+    end
 end
 
+function PartyBattler:update()
+    super.update(self)
+    for i, battler in ipairs(Game.party) do
+        if battler.id == self.chara.id and self.y > SCREEN_HEIGHT then
+            Mod.libs["midbattleparty"]:removePartyBattler(i)
+            table.remove(Game.party, i)
+            if self.chara.health < 0 then
+                self.chara.health = self.chara:getStat("health")
+            end
+            self:remove()
+            break
+        end
+    end
+end
 function PartyBattler:removeAssistHealth(amount, swoon)
     if (self.chara:getAssistHealth() <= 0) then
         amount = MathUtils.round(amount / 4)

@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 30,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 13,
-  nextobjectid = 36,
+  nextlayerid = 14,
+  nextobjectid = 40,
   properties = {
     ["music"] = "vapor_sanct_wip"
   },
@@ -52,7 +52,6 @@ return {
           width = 400,
           height = 278,
           rotation = 0,
-          opacity = 1,
           gid = 801,
           visible = true,
           properties = {}
@@ -83,7 +82,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -113,7 +111,6 @@ return {
           width = 320,
           height = 800,
           rotation = 315,
-          opacity = 1,
           gid = 3221226274,
           visible = true,
           properties = {}
@@ -128,7 +125,6 @@ return {
           width = 320,
           height = 800,
           rotation = 315,
-          opacity = 1,
           gid = 802,
           visible = true,
           properties = {}
@@ -159,7 +155,6 @@ return {
           width = 640,
           height = 1600,
           rotation = 180,
-          opacity = 1,
           gid = 802,
           visible = true,
           properties = {}
@@ -174,7 +169,6 @@ return {
           width = 640,
           height = 1600,
           rotation = 0,
-          opacity = 1,
           gid = 802,
           visible = true,
           properties = {}
@@ -305,7 +299,6 @@ return {
           width = 800,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -319,7 +312,6 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -333,7 +325,6 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -347,7 +338,6 @@ return {
           width = 240,
           height = 280,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -361,7 +351,6 @@ return {
           width = 360,
           height = 240,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -375,7 +364,6 @@ return {
           width = 80,
           height = 920,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -389,7 +377,6 @@ return {
           width = 480,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -403,7 +390,6 @@ return {
           width = 520,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -417,7 +403,6 @@ return {
           width = 40,
           height = 480,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -431,7 +416,6 @@ return {
           width = 680,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -445,7 +429,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
@@ -483,7 +466,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -497,7 +479,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -527,7 +508,6 @@ return {
           width = 600,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -541,7 +521,6 @@ return {
           width = 120,
           height = 360,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -555,7 +534,6 @@ return {
           width = 520,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -569,7 +547,6 @@ return {
           width = 600,
           height = 240,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -583,7 +560,6 @@ return {
           width = 120,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -613,7 +589,6 @@ return {
           width = 60,
           height = 60,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["marker"] = { id = 14 },
@@ -630,11 +605,72 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "vapor_sanctum/vapor_sanctum_2",
             ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 36,
+          name = "sprite",
+          type = "",
+          shape = "point",
+          x = 50,
+          y = 1040,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "cup_tower"
+          }
+        },
+        {
+          id = 39,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 1080,
+          width = 80,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "events2.cupadd"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 13,
+      name = "objects_partyplusone",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 38,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 80,
+          y = 1070,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "cuptain_party",
+            ["animation"] = "tapping"
           }
         }
       }

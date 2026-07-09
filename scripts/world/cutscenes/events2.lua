@@ -71,6 +71,55 @@ return {
             cutscene:wait(cutscene:slideTo(guy, 1320, guy.y, 1, "linear"))
             Game.world.player:setFacing("down")
         end
+    end,
+    cupadd = function (cutscene)
+
+        local function addCup()
+            local cup
+            for i=1, 8 do
+                if not Game:hasPartyMember("cuptain_party"..i) then
+                    cup = i
+                break
+                end
+            end
+            if cup then
+                Game:addPartyMember("cuptain_party"..cup)
+                Game.world:spawnFollower("cuptain_party")
+            else
+                cutscene:text("* Hey now, [wait:5]8 might be my limit.")
+            end
+        end
+
+        local flag = Game:getFlag("interested_in_cups")
+        if not flag then
+            Game:setFlag("interested_in_cups", true)
+            cutscene:text("* Hey! [wait:10]Delta Warriors!")
+            cutscene:text("* Y'need any support? [wait:5]We got your back!")
+            cutscene:text("* With your [color:yellow]expanded party[color:white], [wait:5]you can [color:yellow]RECRUIT[color:white]us into your party!")
+            cutscene:text("* Give it a try!")
+            local ch = cutscene:choicer({"Yes", "No"})
+            if ch == 1 then
+                addCup()
+                Assets.playSound("item")
+                cutscene:wait(1)
+                Game.world.music:pause()
+                local a = cutscene:playSound("fanfare")
+                cutscene:text("[voice:none][noskip][speed:0.1]* (Cuptain joined the party!)")
+                cutscene:wait(a)
+                Game.world.music:play()
+                cutscene:text("* Let's get 'em, [wait:5]boss!")
+            else
+                cutscene:text("* Awww, [wait:5]please?")
+            end
+        else
+            cutscene:text("* (Recruit a Cuptain?)")
+            local ch = cutscene:choicer({"Yes", "No"})
+            if ch == 1 then
+                addCup()
+                Assets.playSound("item")
+                cutscene:text("* (Cup added.)")
+            end
+        end
     end
         
 
