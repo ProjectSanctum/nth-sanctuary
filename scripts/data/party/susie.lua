@@ -1,5 +1,12 @@
 local character, super = Class("susie", true)
 
+function character:init()
+    super.init(self)
+
+    self:removeSpell("ok_heal")
+    self:addSpell("better_heal")
+end
+
 function character:drawPowerStat(index, x, y, menu)
     if index == 1 then
         local icon = Assets.getTexture("ui/menu/icon/demon")
