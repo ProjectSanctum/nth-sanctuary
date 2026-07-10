@@ -48,48 +48,75 @@ function Huemist:init()
     self.low_health_text = "* Huemist is turning back into mist."
 
     -- Register act called "Smile"
-    self:registerAct("Smile")
+    self:registerAct("Fizzy Drink", "25%\nMERCY")
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
-    self:registerAct("Tell Story", "", {"ralsei"})
+    self:registerAct("Sour Drink", "35% & TIRE", {"susie"})
+    self:registerAct("Sweet Drink", "50% &\nDelayed\nTIRED", {"ralsei"})
+    self:registerAct("Lotta Drink", "35% & \nMove\nslower", {"jamm"})
 
     self.siner = 0
     self.overlay = Assets.getTexture("enemies/huemist/overlay")
 end
 
 function Huemist:onAct(battler, name)
-    if name == "Smile" then
+    if name == "Fizzy Drink" then
         -- Give the enemy 100% mercy
-        self:addMercy(100)
+        self:addMercy(25)
         -- Change this enemy's dialogue for 1 turn
         self.dialogue_override = "... ^^"
         -- Act text (since it's a list, multiple textboxes)
         return {
-            "* You smile.[wait:5]\n* The dummy smiles back.",
-            "* It seems the dummy just wanted\nto see you happy."
+            "* You pour Huemist and yourself a glass of sparkling water.[wait:5]\n* Huemist appreciates the gesture!"
         }
-
-    elseif name == "Tell Story" then
+    
+    elseif name == "Sour Drink" then
         -- Loop through all enemies
         for _, enemy in ipairs(Game.battle.enemies) do
             -- Make the enemy tired
             enemy:setTired(true)
+            self:addMercy(35)
         end
-        return "* You and Ralsei told the dummy\na bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
+        return {
+            "* You and Susie share sour drinks with the enemies.[wait:5]\n* The enemies shouldn't have drank that...",
+            "* Everything slows down for this turn!"
+        }
+    
+    elseif name == "Sweet Drink" then
+        -- Loop through all enemies
+        for _, enemy in ipairs(Game.battle.enemies) do
+            self:addMercy(35)
+        end
+        return {
+            "* You and Ralsei share sugary drinks with the enemies.[wait:5]\n* Everyone became hyper with sugar!",
+            "* Everything speeds up for this turn!"
+        }
+
+    elseif name == "Lotta Drink" then
+        -- Loop through all enemies
+        for _, enemy in ipairs(Game.battle.enemies) do
+            self:addMercy(50)
+        end
+        return {
+            "* You and Jamm drink a lot of water with the enemies...",
+            "* Movement speed down for this turn!"
+        }
 
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
-        self:addMercy(50)
-        if battler.chara.id == "ralsei" then
-            -- R-Action text
-            return "* Ralsei bowed politely.\n* The dummy spiritually bowed\nin return."
-        elseif battler.chara.id == "susie" then
-            -- S-Action: start a cutscene (see scripts/battle/cutscenes/dummy.lua)
-            Game.battle:startActCutscene("dummy", "susie_punch")
-            return
+        self:addMercy(25)
+        if battler.chara.id == "susie" then
+            -- S-Action text
+            return "* Susie throws a bottle of water into the air, and catches it with her mouth.[wait:5]\n* Huemist applaudes!"
+        elseif battler.chara.id == "ralsei" then
+            -- R-Action: start a cutscene (see scripts/battle/cutscenes/dummy.lua)
+            return "* Ralsei drank water with huemist.[wait:5]\n* Huemist enjoyed it!"
+        elseif battler.chara.id == "jamm" then
+            -- J-Action: start a cutscene (see scripts/battle/cutscenes/dummy.lua)
+            return "* Jamm and Huemist teach the others about the importance of hydration."
         else
             -- Text for any other character (like Noelle)
-            return "* "..battler.chara:getName().." straightened the\ndummy's hat."
+            return "* "..battler.chara:getName().." pours huemist a drink."
         end
     end
 

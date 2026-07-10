@@ -15,7 +15,7 @@ function Glowy:init()
     self.fx = ShaderFX("wave_interlace", {
 				["wave_sine"] = function () return Kristal.getTime() * 50 end,
 				["wave_mag"] = function () return 10 end,
-				["wave_height"] = 25,
+				["wave_height"] = 10,
 				["texsize"] = { SCREEN_WIDTH, SCREEN_HEIGHT }
 			}), "funky_mode"
             self:addFX(self.fx)
@@ -63,7 +63,7 @@ function Glowy:draw()
     Draw.setColor(0, 0, 0, self.alpha)
     love.graphics.rectangle("fill", -10, -10, SCREEN_WIDTH + 20, SCREEN_HEIGHT + 20)
     Draw.setColor(1, 1, 1, self.alpha)
-    love.graphics.draw(self.spr, SCREEN_WIDTH/2-self.spr:getWidth(),Game.battle and Game.battle.battle_ui.y - self.spr:getHeight()*2 or 0,0,2,2)
+    love.graphics.draw(self.spr, SCREEN_WIDTH/2-self.spr:getWidth(),Game.battle and Game.battle.battle_ui.y - 9 - self.spr:getHeight()*2 or 0,0,2,2)
     love.graphics.push()
     love.graphics.translate(0,SCREEN_HEIGHT + 100)
     local scale = Utils.clampMap(math.sin(Kristal.getTime() * self.bg_speed * math.pi * 0.5), -1, 1, 0.5, 1)
