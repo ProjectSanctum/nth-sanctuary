@@ -1,7 +1,7 @@
 return {
   version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 22,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 14,
-  nextobjectid = 56,
+  nextlayerid = 16,
+  nextobjectid = 59,
   properties = {
     ["music"] = "vapor_sanct_wip"
   },
@@ -24,10 +24,73 @@ return {
     {
       name = "vapor_assets",
       firstgid = 801,
-      filename = "../../../tilesets/vapor_assets.tsx"
+      filename = "../../../tilesets/vapor_assets.tsx",
+      exportfilename = "../../../tilesets/vapor_assets.lua"
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 15,
+      name = "objects_starfield2",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.005,
+      parallaxy = 0.005,
+      properties = {},
+      objects = {
+        {
+          id = 58,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -638,
+          y = 199,
+          width = 1280,
+          height = 720,
+          rotation = 0,
+          opacity = 0.5,
+          gid = 804,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 14,
+      name = "objects_starfield",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 0.01,
+      parallaxy = 0.01,
+      properties = {},
+      objects = {
+        {
+          id = 57,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -647,
+          y = 197,
+          width = 1280,
+          height = 720,
+          rotation = 0,
+          opacity = 1,
+          gid = 803,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
     {
       type = "objectgroup",
       draworder = "topdown",

@@ -68,7 +68,7 @@ return {
         else
             cutscene:text("[friend][wave]* Vaporific. [wait:10][wave:0]Come on right.")
             Game:setFlag("seevaporshop", "true")
-            cutscene:wait(cutscene:slideTo(guy, 1320, guy.y, 1, "linear"))
+            cutscene:wait(cutscene:slideTo(guy, 1320, guy.y, 1, "inBack"))
             Game.world.player:setFacing("down")
         end
     end,
