@@ -393,7 +393,7 @@ THE KNIGHT IS TO NO FAULT.</property>
   </object>
   <object id="53" name="interactable" x="540" y="380" width="120" height="40">
    <properties>
-    <property name="text1" value="* (You saw your reflection in the shattered prophecy.)"/>
+    <property name="text1" value="* (You saw your reflection in the shards of glass.)"/>
    </properties>
   </object>
  </objectgroup>

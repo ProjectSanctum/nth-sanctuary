@@ -1165,7 +1165,7 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["text1"] = "* (You saw your reflection in the shattered prophecy.)"
+            ["text1"] = "* (You saw your reflection in the shards of glass.)"
           }
         }
       }
