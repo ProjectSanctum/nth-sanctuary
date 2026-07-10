@@ -450,7 +450,7 @@
     <property name="lockx" type="bool" value="false"/>
     <property name="locky" type="bool" value="true"/>
     <property name="marker" value="targ"/>
-    <property name="time" type="float" value="0.5"/>
+    <property name="time" type="float" value="0.75"/>
    </properties>
   </object>
   <object id="54" name="transition" x="800" y="400" width="40" height="80">

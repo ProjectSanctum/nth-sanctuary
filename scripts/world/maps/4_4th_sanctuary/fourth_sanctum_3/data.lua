@@ -1638,7 +1638,7 @@ return {
             ["lockx"] = false,
             ["locky"] = true,
             ["marker"] = "targ",
-            ["time"] = 0.5
+            ["time"] = 0.75
           }
         },
         {

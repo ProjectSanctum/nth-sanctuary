@@ -505,7 +505,7 @@
     <property name="lockx" type="bool" value="false"/>
     <property name="locky" type="bool" value="true"/>
     <property name="marker" value="targ"/>
-    <property name="time" type="float" value="0.25"/>
+    <property name="time" type="float" value="0.5"/>
    </properties>
   </object>
   <object id="95" name="prophecy" x="240" y="360" width="280" height="120">
