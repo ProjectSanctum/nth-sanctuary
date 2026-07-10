@@ -36,7 +36,7 @@ return {
     },
     {
       name = "ExtraClimbingTiles",
-      firstgid = 888,
+      firstgid = 890,
       filename = "../../../tilesets/ExtraClimbingTiles.tsx"
     }
   },
@@ -1635,10 +1635,10 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["lockx"] = true,
+            ["lockx"] = false,
             ["locky"] = true,
             ["marker"] = "targ",
-            ["time"] = 1
+            ["time"] = 0.5
           }
         },
         {

@@ -12,7 +12,7 @@
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="199" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="781" source="../../../tilesets/church_objects.tsx"/>
- <tileset firstgid="888" source="../../../tilesets/ExtraClimbingTiles.tsx"/>
+ <tileset firstgid="890" source="../../../tilesets/ExtraClimbingTiles.tsx"/>
  <objectgroup id="15" name="objects_parallax3" visible="0" parallaxx="0.3" parallaxy="0.82">
   <object id="70" gid="793" x="-246.933" y="1038.27" width="416" height="130" rotation="-315">
    <properties>
@@ -447,10 +447,10 @@
   </object>
   <object id="51" name="cameratarget" x="320" y="400" width="320" height="80">
    <properties>
-    <property name="lockx" type="bool" value="true"/>
+    <property name="lockx" type="bool" value="false"/>
     <property name="locky" type="bool" value="true"/>
     <property name="marker" value="targ"/>
-    <property name="time" type="float" value="1"/>
+    <property name="time" type="float" value="0.5"/>
    </properties>
   </object>
   <object id="54" name="transition" x="800" y="400" width="40" height="80">
