@@ -19,14 +19,17 @@ function character:drawPowerStat(index, x, y, menu)
         end
         return true
     elseif index == 2 then
-        if Game.chapter >= 3 then
+        if Game.chapter >= 4 then
             if self:checkWeapon("cruelaxe") == true then
                 local icon = Assets.getTexture("enemies/jellycruel/jellycruel")
                 Draw.draw(icon, x-26, y+6, 0, 0.5, 0.5)
                 love.graphics.print("Cruel", x, y, 0, 2, 1)
-            end
+            else
+				love.graphics.print("* Healing", x-24, y)
+				love.graphics.print(15 + (self:getFlag("healing_used") or 0), x+130, y)
+			end
             return true
-        end
+		end
         local icon = Assets.getTexture("ui/menu/icon/demon")
         Draw.draw(icon, x-26, y+6, 0, 2, 2)
         if Game.chapter == 1 then
