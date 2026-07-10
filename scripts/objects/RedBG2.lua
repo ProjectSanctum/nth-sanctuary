@@ -10,8 +10,8 @@ end
 function RedBG2:update()
     super.update(self)
 
-    self.h = self.h -1
-    self.glow_siner = self.glow_siner + 0.05 
+    self.h = self.h - DTMULT
+    self.glow_siner = self.glow_siner + 0.05 * DTMULT
 
 
     if not self.fading_out then
