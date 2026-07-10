@@ -39,7 +39,7 @@ function map:onEnter()
 				obj.visible = false
 			end
 		end
-        self.tiles0 = Game.world.map:getTileLayer("tiles1")
+        self.tiles0 = Game.world.map:getTileLayer("tiles0")
         self.tiles = Game.world.map:getTileLayer("tiles1")
         self.tiles2 = Game.world.map:getTileLayer("tiles2")
         self.tiles3 = Game.world.map:getTileLayer("tiles3")
