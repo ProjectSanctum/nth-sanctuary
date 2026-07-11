@@ -5,6 +5,11 @@ function Basic:init()
     self.time = 30
     self.input = [[#thSanctuary:setState("TRAGEDY") ]]
 	self.flipped = TableUtils.pick({true, false})
+	self.last_framerate = FPS
+end
+
+function Basic:onEnd()
+	FRAMERATE = self.last_framerate
 end
 
 function Basic:onStart()
@@ -34,6 +39,8 @@ function Basic:onStart()
             wait(1/29)
         end
         wait(1)
+		self.last_framerate = FRAMERATE
+		FRAMERATE = 30
 		if self.flipped then
 			h.x = Game.battle.arena:getLeft()-140-Game.battle.arena.width-71
 		end
@@ -42,6 +49,7 @@ function Basic:onStart()
         Game.battle.arena:shake(10, 0, 0.5, 1/15)
         Assets.playSound("snd_closet_fall")
         self.timer:tween(3, Game.battle.arena, {y = Game.battle.arena.y + 700, rotation = fliprot}, "in-cubic", function()
+			FRAMERATE = self.last_framerate
             if Game.battle.soul.y > SCREEN_HEIGHT + 19 then
 				Game.battle.soul.active = false
                 Assets.playSound("error", 1.2)

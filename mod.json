@@ -42,7 +42,8 @@
 
     "config": {
         "kristal": {
-            "targetSystem": true
+            "targetSystem": true,
+			"newChoicers": true
         },
         "afilemenu": {
             "chaptername": {

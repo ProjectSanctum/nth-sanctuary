@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="25" nextobjectid="115">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="26" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="25" nextobjectid="117">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -370,6 +370,14 @@ THE DEOXYNN, WHO LIES ON COLD GROUND.</property>
   <object id="114" name="climbexit" x="200" y="440" width="40" height="40">
    <properties>
     <property name="target" type="object" value="112"/>
+   </properties>
+  </object>
+  <object id="116" name="cameratarget" x="400" y="240" width="280" height="80">
+   <properties>
+    <property name="lockx" type="bool" value="false"/>
+    <property name="locky" type="bool" value="true"/>
+    <property name="marker" value="targ"/>
+    <property name="time" type="float" value="0.25"/>
    </properties>
   </object>
  </objectgroup>

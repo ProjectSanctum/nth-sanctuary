@@ -12,7 +12,9 @@ function Battler:statusMessage(x, y, type, arg, color, kill, delay, chara)
     if kill then
         percent.kill_others = true
     end
-    self.parent:addChild(percent)
+    if self.parent then
+        self.parent:addChild(percent)
+    end
 
     if not kill then
         self.hit_count = self.hit_count + 1

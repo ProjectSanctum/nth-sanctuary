@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="67">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="67">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -393,7 +393,7 @@ THE KNIGHT IS TO NO FAULT.</property>
   </object>
   <object id="53" name="interactable" x="540" y="380" width="120" height="40">
    <properties>
-    <property name="text1" value="* (Quite a fall, eh?)"/>
+    <property name="text1" value="* (You saw your reflection in the shards of glass.)"/>
    </properties>
   </object>
  </objectgroup>

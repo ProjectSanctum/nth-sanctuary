@@ -46,6 +46,7 @@ function MouseHole:init()
     self:registerTalk("Who are you?")
     self:registerTalk("PartyBrew?")
     self:registerTalk("Vapor Sanctuary?")
+    self:registerTalk("Lobby Man?")
 
     self:registerTalkAfter("Vapor Sun?", 1)
     self:registerTalkAfter("Dark Shards?", 2, "talk_2", 1)
@@ -98,6 +99,17 @@ function MouseHole:startTalk(talk)
         self:startDialogue({
             "[friend]* Not what you expected, [wait:5]yeah?",
             "[friend]* Take a load off, [wait:5]might just be the prettiest place you've ever seen.",
+        })
+    elseif talk == "Lobby Man?" then
+        self:startDialogue({
+            "[friend]* Oh, [wait:5]him?",
+            "[friend]* Haven't seen him ever since he passed by some time ago.",
+            "[friend]* Huh? Do I know him?[wait:15] Yeah, [wait:5]sorta.",
+            "[friend]* I don't really remember a whole lot, [wait:5] but...",
+            "[friend]* ...",
+            "[friend]* I think he means well.",
+            "[friend]* ...Before ya leave, [wait:5]if you end up runnin' into him here... [wait:10]",
+            "[friend]* Tell him to come by some time. I'll brew his favorite!",
         })
     end
 end

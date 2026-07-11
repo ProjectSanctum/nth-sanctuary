@@ -10,8 +10,19 @@ function Bullet:onDamage(soul)
     if damage > 0 then
         local target = self:getTarget()
         local battlers = Game.battle:hurt(damage, false, target, self:shouldSwoon(damage, target, soul))
-        soul.inv_timer = self.inv_timer
+
+        local inv_frames = self:getInvulnFrames()
+
+        -- TODO: Option to disable Invuln Bonus accuracy?
+        -- Equipment invulnerability bonuses are only applied for single-target damage as of Chapter 5
+        if target ~= "ALL" then
+            inv_frames = Game:applyInvulnBonuses(inv_frames)
+        end
+
+        Game:setInvulnFrames(inv_frames)
+
         soul:onDamage(self, damage)
+
         if Game.battle.encounter.id == "mechanic_tester_2" then
             for k,v in ipairs(battlers) do
                 v:recruitMessage(10, 20, "poisoned")

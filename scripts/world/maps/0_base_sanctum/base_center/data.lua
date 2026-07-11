@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.12.1",
   class = "",
@@ -1165,7 +1165,7 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["text1"] = "* (Quite a fall, eh?)"
+            ["text1"] = "* (You saw your reflection in the shards of glass.)"
           }
         }
       }

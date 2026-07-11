@@ -9,6 +9,7 @@ function actor:init()
         ["fall_hurt_wind"] = {"fall_hurt_wind", 1/5, true},
         ["run"] = {"run", 3/30, true}
     })
+    self.animations["slide"] = {"slide_animated", 4/30, true}
 end
 
 return actor

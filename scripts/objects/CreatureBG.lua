@@ -9,7 +9,7 @@ end
 function CreatureBG:update()
     super.update(self)
 
-    self.h = self.h -1
+    self.h = self.h - DTMULT
 end
 
 

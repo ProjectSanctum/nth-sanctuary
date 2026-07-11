@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.12.1",
   class = "",
@@ -9,7 +9,7 @@ return {
   height = 41,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 19,
+  nextlayerid = 20,
   nextobjectid = 98,
   properties = {
     ["music"] = "homebase"
@@ -575,7 +575,7 @@ return {
       draworder = "topdown",
       id = 18,
       name = "climbing",
-      class = "",
+      class = "objects",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -593,34 +593,6 @@ return {
           y = 1040,
           width = 40,
           height = 200,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 92,
-          name = "",
-          type = "",
-          shape = "point",
-          x = 320,
-          y = 1280,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 93,
-          name = "",
-          type = "",
-          shape = "point",
-          x = 320,
-          y = 990,
-          width = 0,
-          height = 0,
           rotation = 0,
           opacity = 1,
           visible = true,
@@ -982,6 +954,34 @@ return {
           opacity = 1,
           visible = true,
           properties = {}
+        },
+        {
+          id = 92,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 1280,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 93,
+          name = "",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 990,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -999,23 +999,6 @@ return {
       parallaxy = 1,
       properties = {},
       objects = {
-        {
-          id = 42,
-          name = "darkness",
-          type = "",
-          shape = "point",
-          x = 40,
-          y = 0,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["alpha"] = 0.1,
-            ["highlight"] = true
-          }
-        },
         {
           id = 43,
           name = "lightbeamfx",
@@ -1196,6 +1179,39 @@ return {
         0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 408, 409, 0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 408, 409, 0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 408, 409, 0, 0, 0, 0, 0, 0, 408, 409, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 19,
+      name = "objects_darkness",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 42,
+          name = "darkness",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["alpha"] = 0.1,
+            ["highlight"] = true
+          }
+        }
       }
     },
     {

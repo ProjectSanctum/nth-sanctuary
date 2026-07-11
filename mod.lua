@@ -165,6 +165,13 @@ function Mod:afmGetMusic()
 	end
 end
 
+function Mod:getActionButtons(battler, buttons)
+    if StringUtils.contains(battler.chara.id, "cuptain") then
+        return {"fight", "magic", "defend"}
+    end
+    return 
+end
+        
 function Mod:afmGetStyle()
     return "normal"
 end
@@ -261,22 +268,19 @@ function Mod:onDrawText(text, node, state, x, y, scale, font, use_color)
         love.graphics.setShader(last_shader)
         return true
     elseif state.rainbow then
-        local function pastelRainbow(t)
-            local r = 0.6 + 0.4 * math.sin(t)
-            local g = 0.6 + 0.4 * math.sin(t + 2)
-            local b = 0.6 + 0.4 * math.sin(t + 4)
-            return r, g, b
-        end
-        local shader = Kristal.Shaders["AddColor"]
+		local shader = Kristal.Shaders["GradientV"]
         local last_shader = love.graphics.getShader()
         local w, h = text:getNodeSize(node, state)
         local canvas = Draw.pushCanvas(w, h, { stencil = false })
         love.graphics.print(node.character, 0, 0, 0, scale, scale)
         Draw.popCanvas()
+		local color = {ColorUtils.HSVToRGB((((state.typed_characters * 20) + (text.timer * 3)) / 255) % 1, 1, 1)}
+		Draw.setColor(color[1] * 0.3, color[2] * 0.3, color[3] * 0.3, 1)
+        Draw.draw(canvas, x + 1, y + 1)
+		Draw.setColor(1,1,1,1)
         love.graphics.setShader(shader)
-        local r,g,b = pastelRainbow(Kristal.getTime() * 1.5) -- slow rainbow
-        shader:sendColor("inputcolor", {r, g, b, 1})
-        shader:send("amount", 1)
+        shader:sendColor("from", COLORS.white)
+        shader:sendColor("to", color)
         Draw.draw(canvas, x, y)
         love.graphics.setShader(last_shader)
         return true

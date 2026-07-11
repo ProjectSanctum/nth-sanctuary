@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="40" height="41" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="98">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="40" height="41" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="98">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -218,14 +218,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="18" name="climbing">
+ <objectgroup id="18" name="climbing" class="objects">
   <object id="91" type="climbarea" x="300" y="1040" width="40" height="200"/>
-  <object id="92" x="320" y="1280">
-   <point/>
-  </object>
-  <object id="93" x="320" y="990">
-   <point/>
-  </object>
   <object id="94" name="climbentry" x="300" y="1200" width="40" height="40">
    <properties>
     <property name="target" type="object" value="95"/>
@@ -299,15 +293,14 @@
   <object id="50" name="hell" x="840" y="1600">
    <point/>
   </object>
- </objectgroup>
- <objectgroup id="13" name="objects_lightareas">
-  <object id="42" name="darkness" x="40" y="0">
-   <properties>
-    <property name="alpha" type="float" value="0.1"/>
-    <property name="highlight" type="bool" value="true"/>
-   </properties>
+  <object id="92" x="320" y="1280">
    <point/>
   </object>
+  <object id="93" x="320" y="990">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="13" name="objects_lightareas">
   <object id="43" name="lightbeamfx" x="0" y="0">
    <point/>
   </object>
@@ -402,6 +395,15 @@
 0,0,0,0,0,0,408,409,0,0,0,0,0,0,0,0,0,0,0,0,0,408,409,0,0,408,409,0,0,0,0,0,0,408,409,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="19" name="objects_darkness">
+  <object id="42" name="darkness" x="40" y="0">
+   <properties>
+    <property name="alpha" type="float" value="0.1"/>
+    <property name="highlight" type="bool" value="true"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="10" name="objects_fog">
   <object id="32" name="churchfog" x="80" y="0">
    <point/>

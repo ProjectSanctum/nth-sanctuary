@@ -1,10 +1,10 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.2",
   name = "vapor_assets",
   class = "",
-  tilewidth = 320,
+  tilewidth = 1280,
   tileheight = 800,
   spacing = 0,
   margin = 0,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 2,
+  tilecount = 4,
   tiles = {
     {
       id = 0,
@@ -36,6 +36,18 @@ return {
       image = "../../../assets/sprites/world/parallax/vapor_tower_1.png",
       width = 320,
       height = 800
+    },
+    {
+      id = 2,
+      image = "../../../assets/sprites/world/parallax/starfields1.png",
+      width = 1280,
+      height = 720
+    },
+    {
+      id = 3,
+      image = "../../../assets/sprites/world/parallax/starfields2.png",
+      width = 1280,
+      height = 720
     }
   }
 }

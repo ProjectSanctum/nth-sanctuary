@@ -293,7 +293,7 @@ return {
         local ddelta = cutscene:getCharacter("ddelta")
 		cutscene:text("[image:ui/ddelta_asterisk]ddelta here, i helped\n code this lil game!", "aha", ddelta)
 		cutscene:text("[image:ui/ddelta_asterisk]ask me anything will ya", "neutral", ddelta)
-        local ch = cutscene:choicer({"Can you\nturn into\na prism", "Ask about\nlore", "Nah"}, {offset_y_1 = -32})
+        local ch = cutscene:choicer({"Can you\nturn into\na prism", "Ask about\nlore", "Nah"})
 		if ch == 1 then
 			if Game:getFlag("ddeltaPrismed", false) then
 				cutscene:text("[image:ui/ddelta_asterisk]nah,[wait:5] not doing it twice", "lookdown", ddelta)

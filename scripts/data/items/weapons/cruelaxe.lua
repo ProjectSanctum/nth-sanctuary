@@ -69,6 +69,11 @@ function item:onAttackHit(battler, enemy, damage)
         hit.x = enemy.x + math.random(-enemy.width/2, enemy.width/2)
         Game.battle:addChild(hit)
     end
+    local cruelaxe_attacks = battler.chara:getFlag("cruelaxe_attacks", 0)
+    if cruelaxe_attacks < 666 then
+        cruelaxe_attacks = cruelaxe_attacks + 1
+		battler.chara:setFlag("cruelaxe_attacks", cruelaxe_attacks)
+    end
 end
 
 return item

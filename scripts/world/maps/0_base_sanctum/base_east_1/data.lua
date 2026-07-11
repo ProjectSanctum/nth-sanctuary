@@ -1,5 +1,5 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
   tiledversion = "1.12.1",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 25,
-  nextobjectid = 115,
+  nextobjectid = 117,
   properties = {
     ["border"] = "base_sanctum",
     ["music"] = "homebase"
@@ -1067,6 +1067,25 @@ return {
           visible = true,
           properties = {
             ["target"] = { id = 112 }
+          }
+        },
+        {
+          id = 116,
+          name = "cameratarget",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 240,
+          width = 280,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["lockx"] = false,
+            ["locky"] = true,
+            ["marker"] = "targ",
+            ["time"] = 0.25
           }
         }
       }
