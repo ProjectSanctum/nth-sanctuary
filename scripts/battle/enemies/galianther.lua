@@ -9,8 +9,8 @@ function Galianther:init()
     self.max_health = 1000
     self.health = 1000
     self.attack = 14
-    self.defense = 0
-    self.money = 155
+    self.defense = 4
+    self.money = 170
     self.spare_points = 10
 
     self.waves = {
@@ -20,17 +20,18 @@ function Galianther:init()
     }
 
     self.dialogue = {
-        "Halo, goodeye!        Halo, goodeye!",
-        "Halo, are you listening?            ",
-        "You oppose the revolution?          ",
-        "Open your eyes        Open your eyes"
+        "Aggrieve  Abstain  Accede  Abscond  Abjure",
+        "Halo, come with me!            ",
+        "Do you oppose authority?          ",
+        "Rebuild our land      Rebuild our land",
+        "",
     }
     self.dialogue_mercy = {
         "Viva la revolution!  Viva la revolution!",
         "To spin, is to trust"
     }
 
-    self.check = "A radical blade with\nfeathers at the hilt."
+    self.check = "A radical blade with\na forked handle."
 
     self.text = {
         "* Galianther molts and revolts.",

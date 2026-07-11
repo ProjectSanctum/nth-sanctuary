@@ -3,48 +3,48 @@ local WingladeActorSprite, super = Class(ActorSprite)  --in case one of yall pee
 function WingladeActorSprite:init(actor)
     super.init(self, actor)
 
-    self.horn = Sprite(self:getTexturePath("horn"), 18, 0)
-    self.horn.debug_select = false
+    self.horn = Sprite(self:getTexturePath("horn"), 16, 0)
+    self.horn.debug_select = true
     self.horn:setScaleOrigin(0.5, 1)
     self:addChild(self.horn)
 
     self.sword = Sprite(self:getTexturePath("sword"), 18, 22)
-    self.sword.debug_select = false
+    self.sword.debug_select = true
     self.sword:setScaleOrigin(0.5, 0)
     self:addChild(self.sword)
 
-    self.left_wing = Sprite(self:getTexturePath("left_wing"), -3)
-    self.left_wing.debug_select = false
+    self.left_wing = Sprite(self:getTexturePath("left_wing"), 0)
+    self.left_wing.debug_select = true
     self.left_wing:play(1/6)
     self:addChild(self.left_wing)
 
-    self.right_wing = Sprite(self:getTexturePath("right_wing"), -3)
-    self.right_wing.debug_select = false
+    self.right_wing = Sprite(self:getTexturePath("right_wing"), 0)
+    self.right_wing.debug_select = true
     self.right_wing:play(1/6)
     self:addChild(self.right_wing)
 
-    self.black = Sprite(self:getTexturePath("black"), 19, 16)
-    self.black.debug_select = false
+    self.black = Sprite(self:getTexturePath("black"), 21, 16)
+    self.black.debug_select = true
     self:addChild(self.black)
 
-    self.halo = Sprite(self:getTexturePath("halo"), 16, 13)
-    self.halo.debug_select = false
+    self.halo = Sprite(self:getTexturePath("halo"), 17, 13)
+    self.halo.debug_select = true
     self:addChild(self.halo)
 
-    self.eye_white = Sprite(self:getTexturePath("eye_white"), 27, 23)
+    self.eye_white = Sprite(self:getTexturePath("eye_white"), 30, 25)
     self.eye_white:setOriginExact(5, 3)
-    self.eye_white.debug_select = false
+    self.eye_white.debug_select = true
     self:addChild(self.eye_white)
 
-    self.eye_pupil = Sprite(self:getTexturePath("eye_pupil"), 27, 23)
+    self.eye_pupil = Sprite(self:getTexturePath("eye_pupil"), 30, 25)
     self.eye_pupil:setOriginExact(2, 2)
-    self.eye_pupil.debug_select = false
+    self.eye_pupil.debug_select = true
     self:addChild(self.eye_pupil)
 
     self.timer = 0
     self.speed = 0.05
 
-    self.eye_default_position = {27, 23}
+    self.eye_default_position = {30, 25}
     self.eye_target_x = 0
     self.eye_target_y = 0
     self.eye_target_set = false
