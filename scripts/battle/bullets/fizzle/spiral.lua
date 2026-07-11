@@ -1,6 +1,6 @@
 local Spiral, super = Class(Bullet, "fizzle/spiral")
 
-function Spiral:init(x, y, dir, speed, lifetime, turnvar, enemyspeed)
+function Spiral:init(x, y, dir, speed, lifetime, turnvar, enemyspeed, movement)
     super.init(self, x, y, "bullets/fizzle/spiral")
 
     self:setScale(0)
@@ -12,6 +12,7 @@ function Spiral:init(x, y, dir, speed, lifetime, turnvar, enemyspeed)
 	self.bullet_direction = dir
 	self.bullet_speed = speed
 	self.bullet_lifetime = lifetime or 48
+	self.bullet_movement = movement or 1
 	self.dont_remove_on_lifetime_end = false
 	self.remove_outside_arena = false
 	self.enemy_speed = enemyspeed
@@ -43,6 +44,7 @@ function Spiral:update()
 			bullet.alpha = 0
 			bullet.scale_x = 0
 			bullet.scale_y = 0
+			bullet.movement = self.bullet_movement
 			bullet.physics.speed = self.bullet_speed * self.enemy_speed
 			bullet.remove_outside_arena = self.remove_outside_arena
 		end
@@ -52,7 +54,7 @@ function Spiral:update()
 		Game.battle.timer:lerpVar(bullet, "scale_x", 0, 0.75, 14)
 		Game.battle.timer:lerpVar(bullet, "scale_y", 0, 0.75, 14)
 
-		if not self.dont_remove_auto then
+		if not self.dont_remove_on_lifetime_end then
 			Game.battle.timer:after(lifetime/30, function()
 				bullet.physics.speed = 0
 				bullet.collidable = false
