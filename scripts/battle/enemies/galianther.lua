@@ -26,8 +26,8 @@ function Galianther:init()
         "Rebuild our land      Rebuild our land",
     }
     self.dialogue_mercy = {
-        "Live to protect!   Live to protect!",
-        "While I spin     There's still hope"
+        "Live to protect!      Live to protect!",
+        "While I spin        There's still hope"
     }
 
     self.check = "A radical blade with\na forked handle."
