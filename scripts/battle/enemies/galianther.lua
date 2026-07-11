@@ -24,7 +24,6 @@ function Galianther:init()
         "Halo, come with me!            ",
         "Do you oppose authority?          ",
         "Rebuild our land      Rebuild our land",
-        "",
     }
     self.dialogue_mercy = {
         "Viva la revolution!  Viva la revolution!",
