@@ -22,7 +22,7 @@ function HueDroplet:update()
 	self.siner = self.siner + DTMULT
 
 	if self.rotation == math.rad(0) then
-		self.y = self.y +math.sin((self.siner*(math.pi/2))/12)*2
+		self.y = self.y + math.sin((self.siner*(math.pi/2))/12)*2
 	elseif self.rotation == math.rad(90) then
 		self.x = self.x + math.sin((self.siner*(math.pi/2))/12)*2
 	elseif self.rotation == math.rad(180) then

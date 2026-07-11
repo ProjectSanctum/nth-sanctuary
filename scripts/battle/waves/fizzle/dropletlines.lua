@@ -8,6 +8,10 @@ function DropletLines:init()
 	self.last_add_diff = -1
 	self.add_diff_same_count = 0
 	self.trail_tex = Assets.getTexture("battle/bullets/mizzle/holydroplet")
+	self.duo = false
+	if #Game.battle.enemies == 2 then
+		self.duo = true
+	end
 end
 
 
@@ -15,16 +19,22 @@ function DropletLines:onStart()
     local attackers = self:getAttackers()           --scr_monsterpop()
     local enemies = #Game.battle:getActiveEnemies()  --sameattack
     local arena = Game.battle.arena
-	local speed = attackers[1].attack_speed
+	local speed = attackers[2].attack_speed
 	Game.battle.soul.speed = Game.battle.encounter.next_soul_speed
 
 	local function spawnBullets()
+		local amountcontroller = 1
 		local side = (self.side % 4) + 1
 		local direction = math.rad(90 * (side - 1))
 		local x, y = arena.x, arena.y
 		local x_diff, y_diff = 0, 0
 		local distance, diff = 60, 32
 		local add_diff = TableUtils.pick({0, 1})
+		if not self.duo then
+			amountcontroller = 2
+		else
+			amountcontroller = 1
+		end
 		if add_diff == self.last_add_diff then
 			self.add_diff_same_count = self.add_diff_same_count + 1
 			if self.add_diff_same_count >= 3 then
@@ -51,7 +61,7 @@ function DropletLines:onStart()
 			x_diff = diff
 			y = arena.bottom + distance
 		end
-		for i = -2, 1 do
+		for i = -amountcontroller, 1 do
 			turnvar = 0
 			local bullet = self:spawnBullet("fizzle/spiral", x + (x_diff * i), y + (y_diff * i), direction, 4, 50, turnvar, speed)
 			bullet.dont_remove_on_lifetime_end = true
@@ -62,6 +72,9 @@ function DropletLines:onStart()
 
 	self.timer:everyInstant(2.5 / speed, function()
 		spawnBullets()
+		if self.duo then
+			spawnBullets()
+		end
 		self.timer:after(1.25 / speed, spawnBullets)
 	end)
 end

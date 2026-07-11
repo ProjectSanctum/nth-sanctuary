@@ -98,7 +98,7 @@ function Fizzle:onAct(battler, name)
         for _, enemy in ipairs(Game.battle.enemies) do
             enemy:addMercy(35)
             self.sugarcrash = true
-            eneattack_speed = 1.5
+            enemy.attack_speed = 1.5
         end
         Game.battle.encounter.next_soul_speed = 6
         
