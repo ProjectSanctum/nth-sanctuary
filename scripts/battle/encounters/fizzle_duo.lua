@@ -1,6 +1,6 @@
-local Fizzle_Duo, super = Class(Encounter)
+local Dummy, super = Class(Encounter)
 
-function Fizzle_Duo:init()
+function Dummy:init()
     super.init(self)
 
     -- Text displayed at the bottom of the screen at the start of the encounter
@@ -18,25 +18,11 @@ function Fizzle_Duo:init()
     --- Uncomment this line to add another!
     --self:addEnemy("dummy")
     self.bg = VaporBattleBG()
-
-    self.next_soul_speed = 4
 end
 
-function Fizzle_Duo:createSoul(x, y, color)
-    local soul = super.createSoul(self, x, y, color)    
-    if self.next_soul_speed then
-        soul.speed = self.next_soul_speed
-    end
-    return soul
-end
-
-function Fizzle_Duo:onWavesDone()
-    self.next_soul_speed = 4
-end
-
-function Fizzle_Duo:createBackground()
+function Dummy:createBackground()
     self.bg.layer =BATTLE_LAYERS["background"]
     return Game.battle:addChild(self.bg)
 end
 
-return Fizzle_Duo
+return Dummy

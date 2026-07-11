@@ -36,7 +36,7 @@ function Spiral:update()
     self.timer = self.timer + DTMULT
 
 	if self.timer == 5 then
-		local bullet = self.wave:spawnBullet("fizzle/fizzydroplet", self.x, self.y, self.enemy_speed)
+		local bullet = self.wave:spawnBullet("fizzle/huedroplet", self.x, self.y, self.enemy_speed)
 		if bullet then
 			bullet.physics.direction = self.bullet_direction
 			bullet.rotation = bullet.physics.direction
