@@ -102,7 +102,7 @@ function GaliantherCircle:update()
         else
             self.shoot_counter = self.shoot_counter + 1
         end
-        local bullet = self:spawnBullet("winglade/ring", x_pos, y_pos, angle, 7.5)
+        local bullet = self:spawnBullet("galianther/ring", x_pos, y_pos, angle, 7.5)
         bullet:setLayer(self.attacker.layer - 0.01)
         self.timer = 0
         self.alpha_set = false

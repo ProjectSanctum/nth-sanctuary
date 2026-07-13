@@ -14,8 +14,8 @@ function Galianther:init()
     self.spare_points = 10
 
     self.waves = {
-        "winglade/circlearena",
-        "winglade/aim"
+        "galianther/circlearena2",
+        "galianther/galiantheraim"
         --we need original waves for them
     }
 
