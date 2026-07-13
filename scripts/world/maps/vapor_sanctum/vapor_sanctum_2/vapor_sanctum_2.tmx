@@ -8,10 +8,10 @@
  </properties>
  <tileset firstgid="1" source="../../../tilesets/vapor_sanctum_wip.tsx"/>
  <tileset firstgid="801" source="../../../tilesets/vapor_assets.tsx"/>
- <objectgroup id="15" name="objects_starfield2" parallaxx="0.005" parallaxy="0.005">
+ <objectgroup id="15" name="objects_starfield2" visible="0" parallaxx="0.005" parallaxy="0.005">
   <object id="58" gid="804" x="-638" y="199" width="1280" height="720" opacity="0.5"/>
  </objectgroup>
- <objectgroup id="14" name="objects_starfield" parallaxx="0.01" parallaxy="0.01">
+ <objectgroup id="14" name="objects_starfield" visible="0" parallaxx="0.01" parallaxy="0.01">
   <object id="57" gid="803" x="-647" y="197" width="1280" height="720"/>
  </objectgroup>
  <objectgroup id="2" name="objects_parallax3" visible="0" parallaxx="0.1" parallaxy="0.1">
@@ -172,11 +172,11 @@
   </object>
   <object id="36" name="enemy" x="520" y="700">
    <properties>
-    <property name="actor" value="fizzle"/>
+    <property name="actor" value="huemist"/>
     <property name="animation" value="spin"/>
     <property name="chase" value="false"/>
     <property name="chasedist" type="float" value="1"/>
-    <property name="encounter" value="fizzle_duo"/>
+    <property name="encounter" value="huemist_duo"/>
     <property name="group" type="int" value="1"/>
     <property name="path" value="circle"/>
     <property name="speed" type="int" value="-9"/>
@@ -191,11 +191,11 @@
   </object>
   <object id="44" name="enemy" x="720" y="700">
    <properties>
-    <property name="actor" value="fizzle"/>
+    <property name="actor" value="huemist"/>
     <property name="animation" value="spin"/>
     <property name="chase" value="false"/>
     <property name="chasedist" type="float" value="1"/>
-    <property name="encounter" value="fizzle_duo"/>
+    <property name="encounter" value="huemist_duo"/>
     <property name="group" type="int" value="1"/>
     <property name="path" value="circle"/>
     <property name="progress" type="float" value="2.5"/>

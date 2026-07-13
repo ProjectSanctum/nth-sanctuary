@@ -9,10 +9,10 @@
  <tileset firstgid="1" source="../../../tilesets/vapor_assets.tsx"/>
  <tileset firstgid="5" source="../../../tilesets/bg_dw_church_2_tileset.tsx"/>
  <tileset firstgid="203" source="../../../tilesets/vapor_sanctum_wip.tsx"/>
- <objectgroup id="16" name="objects_starfield2" parallaxx="0.005" parallaxy="0.005">
+ <objectgroup id="16" name="objects_starfield2" visible="0" parallaxx="0.005" parallaxy="0.005">
   <object id="41" gid="4" x="-630" y="200" width="1280" height="720"/>
  </objectgroup>
- <objectgroup id="14" name="objects_starfield" parallaxx="0.01" parallaxy="0.01">
+ <objectgroup id="14" name="objects_starfield" visible="0" parallaxx="0.01" parallaxy="0.01">
   <object id="40" gid="3" x="-630" y="200" width="1280" height="720"/>
  </objectgroup>
  <objectgroup id="9" name="objects_bottom" visible="0">
