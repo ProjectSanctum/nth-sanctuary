@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -938,11 +938,11 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["actor"] = "huemist",
+            ["actor"] = "fizzle",
             ["animation"] = "spin",
             ["chase"] = "false",
             ["chasedist"] = 1,
-            ["encounter"] = "huemist_duo",
+            ["encounter"] = "fizzle_duo",
             ["group"] = 1,
             ["path"] = "circle",
             ["speed"] = -9
@@ -978,11 +978,11 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["actor"] = "huemist",
+            ["actor"] = "fizzle",
             ["animation"] = "spin",
             ["chase"] = "false",
             ["chasedist"] = 1,
-            ["encounter"] = "huemist_duo",
+            ["encounter"] = "fizzle_duo",
             ["group"] = 1,
             ["path"] = "circle",
             ["progress"] = 2.5,

@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 71,
+  nextobjectid = 72,
   properties = {
     ["border"] = "none",
     ["music"] = "secret_sanctuary",
@@ -96,8 +96,26 @@ return {
           name = "spires",
           type = "",
           shape = "rectangle",
-          x = 680,
-          y = 640,
+          x = 820,
+          y = 520,
+          width = 480,
+          height = 1200,
+          rotation = -45,
+          opacity = 1,
+          gid = 299,
+          visible = true,
+          properties = {
+            ["HasProphecyEffect"] = true,
+            ["color"] = "#ff530003"
+          }
+        },
+        {
+          id = 71,
+          name = "spires",
+          type = "",
+          shape = "rectangle",
+          x = 430,
+          y = 910,
           width = 480,
           height = 1200,
           rotation = -45,
@@ -197,12 +215,12 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 37, 38, 40, 41, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 46, 47, 49, 50, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 46, 47, 49, 50, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 55, 57, 58, 59, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 64, 66, 67, 68, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 73, 75, 76, 77, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 37, 38, 38, 38, 38, 39, 40, 41, 0, 0, 0, 0,
+        0, 0, 0, 0, 46, 48, 48, 47, 47, 48, 48, 50, 0, 0, 0, 0,
+        0, 0, 0, 0, 46, 49, 47, 49, 47, 47, 48, 50, 0, 0, 0, 0,
+        0, 0, 0, 0, 55, 56, 56, 57, 58, 58, 58, 59, 0, 0, 0, 0,
+        0, 0, 0, 0, 65, 66, 67, 71, 72, 66, 67, 69, 0, 0, 0, 0,
+        0, 0, 0, 0, 74, 75, 76, 80, 81, 75, 76, 78, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
       }
@@ -234,7 +252,7 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["idlealpha"] = 0.25,
+            ["idlealpha"] = 0.5,
             ["starthidden"] = true
           }
         },
@@ -245,13 +263,13 @@ return {
           shape = "rectangle",
           x = 0,
           y = 200,
-          width = 240,
+          width = 160,
           height = 80,
           rotation = 0,
           opacity = 1,
           visible = true,
           properties = {
-            ["idlealpha"] = 0.25,
+            ["idlealpha"] = 0.5,
             ["starthidden"] = true
           }
         },
@@ -260,15 +278,15 @@ return {
           name = "churchmagicglass",
           type = "",
           shape = "rectangle",
-          x = 400,
+          x = 480,
           y = 200,
-          width = 240,
+          width = 160,
           height = 80,
           rotation = 0,
           opacity = 1,
           visible = true,
           properties = {
-            ["idlealpha"] = 0.25,
+            ["idlealpha"] = 0.5,
             ["starthidden"] = true
           }
         },
@@ -285,7 +303,7 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["idlealpha"] = 0.25,
+            ["idlealpha"] = 0.5,
             ["starthidden"] = true
           }
         }
@@ -310,9 +328,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 240,
+          x = 160,
           y = 320,
-          width = 40,
+          width = 120,
           height = 160,
           rotation = 0,
           opacity = 1,
@@ -326,7 +344,7 @@ return {
           shape = "rectangle",
           x = 0,
           y = 280,
-          width = 240,
+          width = 160,
           height = 40,
           rotation = 0,
           opacity = 1,
@@ -338,9 +356,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 240,
+          x = 160,
           y = 0,
-          width = 40,
+          width = 120,
           height = 160,
           rotation = 0,
           opacity = 1,
@@ -352,9 +370,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 400,
+          x = 480,
           y = 280,
-          width = 240,
+          width = 160,
           height = 40,
           rotation = 0,
           opacity = 1,
@@ -368,7 +386,7 @@ return {
           shape = "rectangle",
           x = 360,
           y = 320,
-          width = 40,
+          width = 120,
           height = 160,
           rotation = 0,
           opacity = 1,
@@ -382,7 +400,7 @@ return {
           shape = "rectangle",
           x = 360,
           y = 0,
-          width = 40,
+          width = 120,
           height = 160,
           rotation = 0,
           opacity = 1,
@@ -394,9 +412,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 400,
+          x = 480,
           y = 160,
-          width = 240,
+          width = 160,
           height = 40,
           rotation = 0,
           opacity = 1,
@@ -410,7 +428,7 @@ return {
           shape = "rectangle",
           x = 0,
           y = 160,
-          width = 240,
+          width = 160,
           height = 40,
           rotation = 0,
           opacity = 1,
@@ -439,7 +457,7 @@ return {
           type = "",
           shape = "point",
           x = 320,
-          y = 240,
+          y = 280,
           width = 0,
           height = 0,
           rotation = 0,
@@ -600,11 +618,12 @@ return {
           opacity = 1,
           visible = true,
           properties = {
+            ["flagcheck"] = "#secrets/secret_sanctuary#70:used_once",
             ["text1"] = "* You find yourself standing on an island made of cloth.",
             ["text2"] = "* In each direction, are thousands of identical islands, all connected by glass.",
             ["text3"] = "* You ponder if it's a good idea to explore here, when you remember your TRAVEL button.",
             ["text4"] = "* Maybe you'll find something of interest?",
-            ["text5"] = "* With that, the you're filled with the power of infinite islands."
+            ["text5"] = "* With that, you're filled with the power of infinite islands."
           }
         }
       }
