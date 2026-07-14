@@ -20,8 +20,8 @@ function map:onEnter()
 	for _, event in ipairs(self.events) do
 			if event.layer == self.layers["objects_parallax"] then
 				event:setOrigin(0.5, 0.5)
-				event.x = math.random(80, 520)
-				event.y = math.random(120, 240)
+				event.x = math.random(120, 460)
+				event.y = math.random(190, 350)
 				event.rotation = TableUtils.pick(angles)
 			end
 		end
@@ -51,11 +51,11 @@ function map:update()
 			end
 		end
 	end
-	events[1].x = events[1].x + math.sin(self.d[1]+self.siner)/5
-	events[1].y = events[1].y + math.cos(self.d[2]+self.siner)/5
+	events[1].x = events[1].x + math.sin(self.d[1]+self.siner)/24
+	events[1].y = events[1].y + math.cos(self.d[2]+self.siner)/24
 
-	events[2].x = events[2].x - math.sin(self.d[2]+self.siner)/5
-	events[2].y = events[2].y - math.cos(self.d[1]+self.siner)/5
+	events[2].x = events[2].x - math.sin(self.d[2]+self.siner)/24
+	events[2].y = events[2].y - math.cos(self.d[1]+self.siner)/24
 
 	--stars[1].sprite.alpha = math.sin(self.siner)
 
