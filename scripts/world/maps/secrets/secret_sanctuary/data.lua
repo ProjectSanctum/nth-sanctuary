@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -71,7 +71,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -101,7 +100,6 @@ return {
           width = 480,
           height = 1200,
           rotation = -45,
-          opacity = 1,
           gid = 299,
           visible = true,
           properties = {
@@ -119,7 +117,6 @@ return {
           width = 480,
           height = 1200,
           rotation = -45,
-          opacity = 1,
           gid = 299,
           visible = true,
           properties = {
@@ -249,7 +246,6 @@ return {
           width = 80,
           height = 160,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["idlealpha"] = 0.5,
@@ -266,7 +262,6 @@ return {
           width = 160,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["idlealpha"] = 0.5,
@@ -283,7 +278,6 @@ return {
           width = 160,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["idlealpha"] = 0.5,
@@ -300,7 +294,6 @@ return {
           width = 80,
           height = 160,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["idlealpha"] = 0.5,
@@ -333,7 +326,6 @@ return {
           width = 120,
           height = 160,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -347,7 +339,6 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -361,7 +352,6 @@ return {
           width = 120,
           height = 160,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -375,7 +365,6 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -389,7 +378,6 @@ return {
           width = 120,
           height = 160,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -403,7 +391,6 @@ return {
           width = 120,
           height = 160,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -417,7 +404,6 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -431,7 +417,6 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -461,7 +446,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -475,7 +459,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -489,7 +472,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -503,7 +485,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -517,7 +498,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -547,7 +527,6 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "secrets/secret_sanctuary",
@@ -564,7 +543,6 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "secrets/secret_sanctuary",
@@ -581,7 +559,6 @@ return {
           width = 40,
           height = 80,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "secrets/secret_sanctuary",
@@ -598,7 +575,6 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "secrets/secret_sanctuary",
@@ -615,10 +591,8 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
-            ["flagcheck"] = "#secrets/secret_sanctuary#70:used_once",
             ["text1"] = "* You find yourself standing on an island made of cloth.",
             ["text2"] = "* In each direction, are thousands of identical islands, all connected by glass.",
             ["text3"] = "* You ponder if it's a good idea to explore here, when you remember your TRAVEL button.",
@@ -652,7 +626,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["spawn_rate"] = 0.25
@@ -684,7 +657,6 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
-          opacity = 1,
           visible = true,
           properties = {
             ["active"] = true,
