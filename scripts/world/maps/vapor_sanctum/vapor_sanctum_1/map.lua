@@ -3,7 +3,6 @@ local map, super = Class(Map)
 function map:init(...)
     super.init(self, ...)
     self.siner = 0
-    self.siner = 0
 end
 
 function map:onEnter()

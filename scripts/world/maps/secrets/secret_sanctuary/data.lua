@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,11 +9,12 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 13,
-  nextobjectid = 50,
+  nextlayerid = 16,
+  nextobjectid = 71,
   properties = {
     ["border"] = "none",
-    ["music"] = "secret_sanctuary"
+    ["music"] = "secret_sanctuary",
+    ["name"] = "Secret Sanctuary"
   },
   tilesets = {
     {
@@ -29,23 +30,53 @@ return {
     },
     {
       name = "bg_dw_church_tileset_new",
-      firstgid = 302,
+      firstgid = 308,
       filename = "../../../tilesets/bg_dw_church_tileset_new.tsx",
       exportfilename = "../../../tilesets/bg_dw_church_tileset_new.lua"
     },
     {
       name = "bg_dw_library_tileset_new",
-      firstgid = 884,
+      firstgid = 890,
       filename = "../../../tilesets/bg_dw_library_tileset_new.tsx"
     },
     {
       name = "ExtraCarpetTiles",
-      firstgid = 1714,
+      firstgid = 1720,
       filename = "../../../tilesets/ExtraCarpetTiles.tsx",
       exportfilename = "../../../tilesets/ExtraCarpetTiles.lua"
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 15,
+      name = "objects_below",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 55,
+          name = "glowy",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = 0,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
     {
       type = "objectgroup",
       draworder = "topdown",
@@ -61,37 +92,201 @@ return {
       properties = {},
       objects = {
         {
-          id = 43,
+          id = 44,
           name = "spires",
           type = "",
           shape = "rectangle",
           x = 680,
-          y = 1120,
+          y = 640,
           width = 480,
           height = 1200,
           rotation = -45,
+          opacity = 1,
           gid = 299,
           visible = true,
           properties = {
             ["HasProphecyEffect"] = true,
             ["color"] = "#ff530003"
           }
-        },
+        }
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 16,
+      height = 12,
+      id = 14,
+      name = "tiles_below",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 16,
+      height = 12,
+      id = 13,
+      name = "tiles_glass",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 16,
+      height = 12,
+      id = 1,
+      name = "tiles",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 37, 38, 40, 41, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 46, 47, 49, 50, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 46, 47, 49, 50, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 55, 57, 58, 59, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 64, 66, 67, 68, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 73, 75, 76, 77, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 10,
+      name = "objects_glass",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
         {
-          id = 44,
-          name = "spires",
+          id = 16,
+          name = "churchmagicglass",
           type = "",
           shape = "rectangle",
-          x = 880,
-          y = 920,
-          width = 480,
-          height = 1200,
-          rotation = -45,
-          gid = 299,
+          x = 280,
+          y = 320,
+          width = 80,
+          height = 160,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
-            ["HasProphecyEffect"] = true,
-            ["color"] = "#ff530003"
+            ["idlealpha"] = 0.25,
+            ["starthidden"] = true
+          }
+        },
+        {
+          id = 59,
+          name = "churchmagicglass",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 200,
+          width = 240,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["idlealpha"] = 0.25,
+            ["starthidden"] = true
+          }
+        },
+        {
+          id = 60,
+          name = "churchmagicglass",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 200,
+          width = 240,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["idlealpha"] = 0.25,
+            ["starthidden"] = true
+          }
+        },
+        {
+          id = 61,
+          name = "churchmagicglass",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 0,
+          width = 80,
+          height = 160,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["idlealpha"] = 0.25,
+            ["starthidden"] = true
           }
         }
       }
@@ -120,19 +315,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 31,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 200,
-          y = 280,
-          width = 40,
-          height = 40,
-          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -141,24 +324,12 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 160,
-          y = 160,
-          width = 40,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 33,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 200,
-          y = 120,
-          width = 40,
+          x = 0,
+          y = 280,
+          width = 240,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -168,36 +339,11 @@ return {
           type = "",
           shape = "rectangle",
           x = 240,
-          y = 80,
-          width = 160,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 35,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 120,
+          y = 0,
           width = 40,
-          height = 40,
+          height = 160,
           rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 36,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 440,
-          y = 160,
-          width = 40,
-          height = 120,
-          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -208,9 +354,10 @@ return {
           shape = "rectangle",
           x = 400,
           y = 280,
-          width = 40,
+          width = 240,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -224,41 +371,52 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 56,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 0,
+          width = 40,
+          height = 160,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 57,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 160,
+          width = 240,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 58,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 160,
+          width = 240,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
-      }
-    },
-    {
-      type = "tilelayer",
-      x = 0,
-      y = 0,
-      width = 16,
-      height = 12,
-      id = 1,
-      name = "Tile Layer 1",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      encoding = "lua",
-      data = {
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 37, 38, 39, 41, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 37, 1717, 48, 48, 1716, 41, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 46, 48, 47, 48, 48, 50, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 55, 1715, 47, 48, 1714, 59, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 64, 55, 56, 57, 59, 64, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 73, 65, 66, 67, 68, 73, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 74, 75, 76, 77, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
       }
     },
     {
@@ -276,49 +434,74 @@ return {
       properties = {},
       objects = {
         {
-          id = 7,
+          id = 62,
           name = "spawn",
           type = "",
           shape = "point",
           x = 320,
-          y = 400,
+          y = 240,
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 10,
-      name = "objects_below",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
+        },
         {
-          id = 16,
-          name = "churchmagicglass",
+          id = 63,
+          name = "maze_down",
           type = "",
-          shape = "rectangle",
-          x = 280,
-          y = 320,
-          width = 80,
-          height = 160,
+          shape = "point",
+          x = 320,
+          y = 440,
+          width = 0,
+          height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
-          properties = {
-            ["idlealpha"] = 0,
-            ["starthidden"] = true
-          }
+          properties = {}
+        },
+        {
+          id = 64,
+          name = "maze_left",
+          type = "",
+          shape = "point",
+          x = 40,
+          y = 240,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 65,
+          name = "maze_right",
+          type = "",
+          shape = "point",
+          x = 600,
+          y = 240,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 66,
+          name = "maze_up",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 40,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -337,7 +520,7 @@ return {
       properties = {},
       objects = {
         {
-          id = 14,
+          id = 51,
           name = "transition",
           type = "",
           shape = "rectangle",
@@ -346,10 +529,82 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
-            ["map"] = "fractured_sanctuary/fractured_3",
-            ["marker"] = "entry"
+            ["map"] = "secrets/secret_sanctuary",
+            ["marker"] = "maze_up"
+          }
+        },
+        {
+          id = 67,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 200,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "secrets/secret_sanctuary",
+            ["marker"] = "maze_right"
+          }
+        },
+        {
+          id = 68,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 200,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "secrets/secret_sanctuary",
+            ["marker"] = "maze_left"
+          }
+        },
+        {
+          id = 69,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = -40,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["map"] = "secrets/secret_sanctuary",
+            ["marker"] = "maze_down"
+          }
+        },
+        {
+          id = 70,
+          name = "savepoint",
+          type = "",
+          shape = "rectangle",
+          x = 320,
+          y = 240,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["text1"] = "* You find yourself standing on an island made of cloth.",
+            ["text2"] = "* In each direction, are thousands of identical islands, all connected by glass.",
+            ["text3"] = "* You ponder if it's a good idea to explore here, when you remember your TRAVEL button.",
+            ["text4"] = "* Maybe you'll find something of interest?",
+            ["text5"] = "* With that, the you're filled with the power of infinite islands."
           }
         }
       }
@@ -378,6 +633,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["spawn_rate"] = 0.25
@@ -409,6 +665,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["active"] = true,

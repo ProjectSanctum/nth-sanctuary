@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="102" height="102" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="167">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="102" height="102" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="169">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -350,18 +350,6 @@
     <property name="marker" value="11"/>
    </properties>
   </object>
-  <object id="139" name="transition" x="3360" y="-80" width="80" height="80">
-   <properties>
-    <property name="map" value="sanctum_hell/hell_unknown"/>
-    <property name="marker" value="10"/>
-   </properties>
-  </object>
-  <object id="140" name="transition" x="3400" y="4080" width="80" height="80">
-   <properties>
-    <property name="map" value="sanctum_hell/hell_unknown"/>
-    <property name="marker" value="4"/>
-   </properties>
-  </object>
   <object id="141" name="transition" x="2680" y="4080" width="80" height="80">
    <properties>
     <property name="map" value="sanctum_hell/hell_unknown"/>
@@ -525,6 +513,22 @@
    </properties>
    <point/>
   </object>
+  <object id="167" name="script" x="3360" y="-40" width="80" height="40">
+   <properties>
+    <property name="cutscene" value="events.secretsanctum1"/>
+    <property name="map" value="sanctum_hell/hell_unknown"/>
+    <property name="marker" value="4"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="168" name="script" x="3400" y="4080" width="80" height="40">
+   <properties>
+    <property name="cutscene" value="events.secretsanctum2"/>
+    <property name="map" value="sanctum_hell/hell_unknown"/>
+    <property name="marker" value="4"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="5" name="collision" visible="0">
   <object id="4" x="0" y="0" width="800" height="400"/>
@@ -632,7 +636,7 @@
   <object id="117" name="3" x="2520" y="80">
    <point/>
   </object>
-  <object id="118" name="4" x="3400" y="80">
+  <object id="118" name="4" x="3400" y="40">
    <point/>
   </object>
   <object id="119" name="5" x="4040" y="1200">
@@ -650,7 +654,7 @@
   <object id="123" name="9" x="4040" y="3640">
    <point/>
   </object>
-  <object id="124" name="10" x="3440" y="4040">
+  <object id="124" name="10" x="3440" y="4060">
    <point/>
   </object>
   <object id="126" name="11" x="2720" y="4040">

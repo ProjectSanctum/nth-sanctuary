@@ -592,8 +592,8 @@
             "fileName": "secrets/secret_sanctuary/secret_sanctuary.tmx",
             "height": 480,
             "width": 640,
-            "x": 4040,
-            "y": 8440
+            "x": 8600,
+            "y": 6680
         },
         {
             "fileName": "secrets/citadel_room/tree/tree.tmx",

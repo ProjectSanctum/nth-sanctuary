@@ -12,6 +12,28 @@ return {
 			end
 		end
 	end,
+	secretsanctum1 = function (cutscene)
+		--local get = Game:getFlag("egg")
+		local rand = love.math.random(1,50)
+		if rand == 50 then
+			Game.world:mapTransition("secrets/secret_sanctuary", "spawn")
+		else
+			if Game.world.map.id == "sanctum_hell/hell_unknown" then
+				Game.world:mapTransition("sanctum_hell/hell_unknown", "10")
+			end
+		end
+	end,
+	secretsanctum2 = function (cutscene)
+		--local get = Game:getFlag("egg")
+		local rand = love.math.random(1,50)
+		if rand == 50 then
+			Game.world:mapTransition("secrets/secret_sanctuary", "spawn")
+		else
+			if Game.world.map.id == "sanctum_hell/hell_unknown" then
+				Game.world:mapTransition("sanctum_hell/hell_unknown", "4")
+			end
+		end
+	end,
 	scarlet_tree = function (cutscene)
 		--local get = Game:getFlag("egg")
 		local rand = love.math.random(1,10)
