@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.2",
   name = "church_objects",
   class = "",
   tilewidth = 2880,
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 103,
+  tilecount = 101,
   tiles = {
     {
       id = 0,
@@ -90,12 +90,6 @@ return {
       image = "../../../assets/sprites/world/objects/spr_dw_church_organ_large.png",
       width = 161,
       height = 191
-    },
-    {
-      id = 11,
-      image = "../../../assets/sprites/world/objects/shard_door.png",
-      width = 80,
-      height = 80
     },
     {
       id = 13,
@@ -811,12 +805,6 @@ return {
       id = 107,
       image = "../../../assets/sprites/world/objects/warning_dogmarriage.png",
       width = 120,
-      height = 80
-    },
-    {
-      id = 108,
-      image = "../../../assets/sprites/world/objects/shard_door_vapor.png",
-      width = 80,
       height = 80
     }
   }

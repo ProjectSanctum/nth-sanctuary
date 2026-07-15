@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="132">
+<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="133">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -9,9 +9,10 @@
  </properties>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_library_2_tileset.tsx"/>
  <tileset firstgid="261" source="../../../tilesets/church_objects.tsx"/>
- <tileset firstgid="370" source="../../../tilesets/light_areas.tsx"/>
- <tileset firstgid="380" source="../../../tilesets/tiles_moss.tsx"/>
- <tileset firstgid="382" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="369" source="../../../tilesets/light_areas.tsx"/>
+ <tileset firstgid="379" source="../../../tilesets/tiles_moss.tsx"/>
+ <tileset firstgid="381" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="963" source="../../../tilesets/fast_travel_doors.tsx"/>
  <layer id="9" name="tile_osc_optimize" width="27" height="48" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -27,7 +28,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,260,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,260,260,260,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,260,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,482,0,260,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,481,0,260,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,260,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,260,260,260,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,260,260,260,260,0,0,0,0,0,0,0,0,0,0,
@@ -246,7 +247,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3221225852,1073742204,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3221225851,1073742203,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -307,7 +308,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup color="#0000ff" id="3" name="collision">
+ <objectgroup color="#0000ff" id="3" name="collision" locked="1">
   <object id="1" x="40" y="1680" width="480" height="240"/>
   <object id="2" x="680" y="1680" width="400" height="240"/>
   <object id="4" x="0" y="1600" width="40" height="80"/>
@@ -324,8 +325,8 @@
   <object id="118" x="0" y="0" width="520" height="960"/>
  </objectgroup>
  <objectgroup id="4" name="objects_party">
-  <object id="22" name=" " gid="272" x="40" y="1600" width="160" height="160"/>
-  <object id="23" name=" " gid="272" x="200" y="1600" width="160" height="160"/>
+  <object id="22" name=" " gid="963" x="40" y="1600" width="160" height="160"/>
+  <object id="23" name=" " gid="963" x="200" y="1600" width="160" height="160"/>
   <object id="25" name="shard_door" x="60" y="1570" width="120" height="30">
    <properties>
     <property name="map" value="4_4th_sanctuary/fourth_sanctum_1"/>
@@ -353,8 +354,8 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="48" name=" " gid="272" x="680" y="1600" width="160" height="160"/>
-  <object id="49" name=" " gid="272" x="880" y="1600" width="160" height="160"/>
+  <object id="48" name=" " gid="963" x="680" y="1600" width="160" height="160"/>
+  <object id="49" name=" " gid="963" x="880" y="1600" width="160" height="160"/>
   <object id="50" name="shard_door" x="700" y="1570" width="120" height="30">
    <properties>
     <property name="req" value="7"/>
@@ -378,8 +379,8 @@
     <property name="marker" value="entry_ft"/>
    </properties>
   </object>
-  <object id="74" name=" " gid="272" x="680" y="1280" width="160" height="160"/>
-  <object id="75" name=" " gid="272" x="880" y="1280" width="160" height="160"/>
+  <object id="74" name=" " gid="963" x="680" y="1280" width="160" height="160"/>
+  <object id="75" name=" " gid="963" x="880" y="1280" width="160" height="160"/>
   <object id="76" name="shard_door" x="700" y="1250" width="120" height="30">
    <properties>
     <property name="req" value="7"/>
@@ -392,9 +393,9 @@
     <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="91" name=" " gid="272" x="200" y="960" width="160" height="160"/>
-  <object id="92" name=" " gid="272" x="200" y="1280" width="160" height="160"/>
-  <object id="93" name=" " gid="272" x="360" y="1280" width="160" height="160"/>
+  <object id="91" name=" " gid="963" x="200" y="960" width="160" height="160"/>
+  <object id="92" name=" " gid="963" x="200" y="1280" width="160" height="160"/>
+  <object id="93" name=" " gid="963" x="360" y="1280" width="160" height="160"/>
   <object id="94" name="shard_door" x="220" y="930" width="120" height="30">
    <properties>
     <property name="map" value="secrets/citadel_room/citadel_room_1"/>
@@ -422,7 +423,7 @@
     <property name="marker" value="entry_north"/>
    </properties>
   </object>
-  <object id="111" name=" " gid="272" x="360" y="960" width="160" height="160"/>
+  <object id="111" name=" " gid="963" x="360" y="960" width="160" height="160"/>
   <object id="112" name="shard_door" x="380" y="930" width="120" height="30">
    <properties>
     <property name="map" value="debug_rooms/filter_test"/>
@@ -447,10 +448,10 @@
    </properties>
    <point/>
   </object>
-  <object id="120" gid="369" x="360" y="1600" width="160" height="160"/>
+  <object id="120" gid="964" x="360" y="1600" width="160" height="160"/>
  </objectgroup>
  <objectgroup id="7" name="objects_lightarea" visible="0">
-  <object id="28" gid="372" x="40" y="2040" width="160" height="1980">
+  <object id="28" gid="371" x="40" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -458,7 +459,7 @@
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
-  <object id="31" gid="372" x="200" y="2040" width="160" height="1980">
+  <object id="31" gid="371" x="200" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -466,7 +467,7 @@
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
-  <object id="32" gid="2147484020" x="360" y="2040" width="160" height="1980">
+  <object id="32" gid="2147484019" x="360" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -481,7 +482,7 @@
    </properties>
    <point/>
   </object>
-  <object id="62" gid="372" x="680" y="2040" width="160" height="1980">
+  <object id="62" gid="371" x="680" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
@@ -489,7 +490,7 @@
     <property name="light_type" type="int" value="1"/>
    </properties>
   </object>
-  <object id="63" gid="2147484020" x="880" y="2040" width="160" height="1980">
+  <object id="63" gid="2147484019" x="880" y="2040" width="160" height="1980">
    <properties>
     <property name="light" type="bool" value="true"/>
     <property name="light_alpha" type="float" value="0.1"/>
