@@ -554,14 +554,14 @@ return {
           type = "",
           shape = "rectangle",
           x = 1280,
-          y = 440,
+          y = 480,
           width = 40,
-          height = 160,
+          height = 80,
           rotation = 0,
           opacity = 1,
           visible = true,
           properties = {
-            ["map"] = "2_2nd_sanctuary/ponder",
+            ["map"] = "2_2nd_sanctuary/second_sanctum_11_ponder",
             ["marker"] = "entry"
           }
         }

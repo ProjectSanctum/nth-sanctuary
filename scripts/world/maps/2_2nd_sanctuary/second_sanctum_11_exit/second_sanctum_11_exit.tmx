@@ -172,9 +172,9 @@
   <object id="327" name="window_glow" x="260" y="380">
    <point/>
   </object>
-  <object id="328" name="transition" x="1280" y="440" width="40" height="160">
+  <object id="328" name="transition" x="1280" y="480" width="40" height="80">
    <properties>
-    <property name="map" value="2_2nd_sanctuary/ponder"/>
+    <property name="map" value="2_2nd_sanctuary/second_sanctum_11_ponder"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
