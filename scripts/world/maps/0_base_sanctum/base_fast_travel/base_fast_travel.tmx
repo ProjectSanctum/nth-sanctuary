@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="133">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="27" height="48" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="133">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -395,7 +395,7 @@
   </object>
   <object id="91" name=" " gid="963" x="200" y="960" width="160" height="160"/>
   <object id="92" name=" " gid="963" x="200" y="1280" width="160" height="160"/>
-  <object id="93" name=" " gid="963" x="360" y="1280" width="160" height="160"/>
+  <object id="93" name=" " gid="965" x="360" y="1280" width="160" height="160"/>
   <object id="94" name="shard_door" x="220" y="930" width="120" height="30">
    <properties>
     <property name="map" value="secrets/citadel_room/citadel_room_1"/>
@@ -516,10 +516,10 @@
    <point/>
   </object>
   <object id="121" x="200" y="1280" width="160" height="40">
-   <text fontfamily="Times New Roman" pixelsize="32" wrap="1" color="#ff0004" halign="center" valign="center">???</text>
+   <text fontfamily="Times New Roman" pixelsize="32" wrap="1" color="#ff0004" halign="center" valign="center">2nd</text>
   </object>
   <object id="122" x="360" y="1280" width="160" height="40">
-   <text fontfamily="Times New Roman" pixelsize="32" wrap="1" color="#ff0004" halign="center" valign="center">???</text>
+   <text fontfamily="Times New Roman" pixelsize="32" wrap="1" color="#ff0004" halign="center" valign="center">Flooded</text>
   </object>
   <object id="123" x="680" y="1280" width="160" height="40">
    <text fontfamily="Times New Roman" pixelsize="32" wrap="1" color="#ff0004" halign="center" valign="center">???</text>
