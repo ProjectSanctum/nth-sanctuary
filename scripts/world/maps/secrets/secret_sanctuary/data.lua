@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 17,
-  nextobjectid = 76,
+  nextobjectid = 78,
   properties = {
     ["border"] = "hell",
     ["music"] = "secret_sanctuary",
@@ -102,7 +102,7 @@ return {
       id = 12,
       name = "objects_parallax",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -642,6 +642,29 @@ return {
             ["text3"] = "* You ponder if it's a good idea to explore here, when you remember your TRAVEL button.",
             ["text4"] = "* Maybe you'll find something of interest?",
             ["text5"] = "* With that, you're filled with the power of infinite islands."
+          }
+        },
+        {
+          id = 77,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 420,
+          y = 200,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["actor"] = "wafer",
+            ["flagcheck"] = "spire_watcher",
+            ["text1"] = "* You seem to be lost.[wait:5]\n* How did you find this place?",
+            ["text2"] = "* .[wait:1].[wait:1].",
+            ["text3"] = "* The scarlet spires, shifting outside of view... [wait:5]\n* Isn't it mesmerizing?",
+            ["text4"] = "* I wonder... [wait:5]\n* Just what is it that causes the spires to be so active here?",
+            ["text5"] = "* So many questions...[wait:5]\n* Will I ever know their answers?",
+            ["text6"] = "* .[wait:1].[wait:1].[wait:10] ...Perhaps not."
           }
         }
       }
