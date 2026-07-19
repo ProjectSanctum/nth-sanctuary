@@ -120,6 +120,48 @@ return {
                 cutscene:text("* (Cup added.)")
             end
         end
+    end,
+    noelletest = function (cutscene)
+        cutscene:text("* (Start the cutscene?)")
+        local ch = cutscene:choicer({"Yes", "No"})
+        if ch == 2 then
+            return 
+        end
+        local n = cutscene:getCharacter("noelle")
+        local man = cutscene:getCharacter("lobby_man")
+        if not n then
+            cutscene:text("[color:red]Add Noelle to your party!")
+            return
+        end
+        if not man then
+            cutscene:text("[color:red]Add Lobby Man to your party!")
+            return
+        end
+        cutscene:detachFollowers()
+        cutscene:wait(cutscene:walkTo(n, 300, 280))
+        man.x,man.y = 320, -20
+        n:setFacing("down")
+        Game.world.music:fade(0, 2)
+        cutscene:walkTo(man, 320, 200,5)
+        cutscene:wait(1)
+        cutscene:text("* So... [wait:10]Are you ready?", "neutral", man)
+        cutscene:text("* Ready to make your last step?", "neutral", man)
+        cutscene:wait(function () return math.ceil(man.y) >= 200 end)
+        cutscene:text("[speed:0.5]* Last step to being a strong, [wait:5]independant person?", "neutral", man)
+        cutscene:wait(1)
+        cutscene:text("* ...", "sad_side", n)
+        cutscene:text("* ...", "upset_down_b", n)
+        cutscene:text("* I...", "upset_down", n)
+        cutscene:text("* ...[wait:10]I am.", "upset_down", n)
+        cutscene:text("* Just tell me what to do...", "upset_down", n)
+        man:setSprite("shaded")
+        cutscene:text("[speed:0.5]* If you tell me to... [wait:10]I can do it...", "upset_down", n)
+        cutscene:walkTo(man, 320, 250)
+        cutscene:text("[speed:0.4][noskip]* Perfect.[wait:10] So mote it be.[wait:30]", "neutral", man, {auto = true})
+        cutscene:text("[speed:0.4][noskip]* Just stand perfectly still...[wait:30]", "neutral", man, {auto = true})
+        cutscene:wait(0.5)
+        man:setSprite("shaded_down")
+        
     end
         
 

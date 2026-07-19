@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 17,
-  nextobjectid = 76,
+  nextlayerid = 18,
+  nextobjectid = 79,
   properties = {
     ["border"] = "none",
     ["music"] = "secret_sanctuary",
@@ -44,6 +44,12 @@ return {
       firstgid = 1720,
       filename = "../../../tilesets/ExtraCarpetTiles.tsx",
       exportfilename = "../../../tilesets/ExtraCarpetTiles.lua"
+    },
+    {
+      name = "vapor_assets",
+      firstgid = 1724,
+      filename = "../../../tilesets/vapor_assets.tsx",
+      exportfilename = "../../../tilesets/vapor_assets.lua"
     }
   },
   layers = {
@@ -93,7 +99,36 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {}
+      objects = {
+        {
+          id = 77,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -270.303,
+          y = 608.485,
+          width = 1280,
+          height = 720,
+          rotation = 0,
+          gid = 1726,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 78,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = -43,
+          y = 581,
+          width = 1280,
+          height = 720,
+          rotation = 0,
+          gid = 1726,
+          visible = true,
+          properties = {}
+        }
+      }
     },
     {
       type = "objectgroup",

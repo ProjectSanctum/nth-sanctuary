@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="15" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="53">
+ <editorsettings>
+  <export target="data.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="church_a"/>
+  <property name="music" value="climb"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/church_objects.tsx"/>
+ <tileset firstgid="110" source="../../tilesets/bg_dw_church_2_tileset.tsx"/>
+ <tileset firstgid="308" source="../../tilesets/bg_dw_church_tileset_new.tsx"/>
+ <tileset firstgid="890" source="../../tilesets/bg_dw_dither_overlay_tileset.tsx"/>
+ <layer id="5" name="tiles" width="15" height="12">
+  <data encoding="csv">
+0,0,0,0,119,119,119,119,119,119,119,0,0,0,0,
+0,0,0,0,119,119,119,119,119,119,119,0,0,0,0,
+0,0,0,0,119,119,119,119,119,119,119,0,0,0,0,
+0,0,0,0,119,119,119,119,119,119,119,0,0,0,0,
+0,0,0,0,119,119,119,119,119,119,119,0,0,0,0,
+0,0,0,0,119,119,119,119,119,119,119,0,0,0,0,
+0,0,0,0,137,119,119,119,119,119,137,0,0,0,0,
+0,0,0,0,818,137,119,119,119,137,820,0,0,0,0,
+0,0,0,0,824,818,119,119,119,820,826,0,0,0,0,
+0,0,0,0,0,824,137,137,137,826,0,0,0,0,0,
+0,0,0,0,0,0,818,819,820,0,0,0,0,0,0,
+0,0,0,0,0,0,824,825,826,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="10" name="decal" width="15" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,899,0,0,0,0,0,899,0,0,0,0,
+0,0,0,0,0,899,0,0,0,899,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,899,899,899,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="3" name="objects_party">
+  <object id="21" name="interactable" x="280" y="330" width="40" height="30">
+   <properties>
+    <property name="cutscene" value="events2.noelletest"/>
+    <property name="solid" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="collision">
+  <object id="35" x="120" y="0" width="40" height="240"/>
+  <object id="48" x="440" y="0" width="40" height="240"/>
+  <object id="49" x="120" y="240">
+   <polygon points="0,0 80,0 80,40 120,40 120,160 0,160"/>
+  </object>
+  <object id="50" x="360" y="400">
+   <polygon points="0,0 0,-120 40,-120 40,-160 120,-160 120,0"/>
+  </object>
+  <object id="51" x="240" y="360" width="120" height="120"/>
+ </objectgroup>
+ <objectgroup id="4" name="markers">
+  <object id="3" name="spawn" x="300" y="280">
+   <point/>
+  </object>
+ </objectgroup>
+</map>
