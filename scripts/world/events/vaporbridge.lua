@@ -43,6 +43,7 @@ function VaporBridge:onPostLoad()
 		chara.floored_log_index = 0
 		chara.ceiled_log_index = 0
 		chara.log_index = nil
+		chara.bridge_id = nil
 		chara.no_bridge_sprite_y = chara.sprite.y
 		chara.bridge_sprite_y = chara.sprite.y
 	end
