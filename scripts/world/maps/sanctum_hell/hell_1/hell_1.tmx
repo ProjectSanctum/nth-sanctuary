@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="123">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="123">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -242,11 +242,8 @@
   <object id="103" name="npc" x="400" y="360">
    <properties>
     <property name="actor" value="mason"/>
+    <property name="cutscene" value="konverge.hell_mason"/>
     <property name="flagcheck" value="belch3"/>
-    <property name="text1_1" value="[color:#808080]&gt; the plorigus image format is a simple image format."/>
-    <property name="text1_2" value="[color:#808080]&gt; potentially long or good image (with) useful shit."/>
-    <property name="text1_3" value="[color:#808080]&gt; do not be fooled by ral's lies about [color:red]it[color:#808080],[wait:5] for he created [color:red]it[color:#808080]."/>
-    <property name="text2_1" value="[color:#808080]&gt; do not be fooled by ral's lies about [color:red]it[color:#808080]."/>
    </properties>
    <point/>
   </object>

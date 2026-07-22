@@ -6,9 +6,12 @@ function map:init(world, data)
 end
 
 function map:onEnter()
-    if Game:getFlag("belch") then
+    if Game:getFlag("belch", false) and not Game:getFlag("nomoremasonsad", false) then
         local mason = Game.world:getCharacter("mason")
         mason:setSprite("fell")
+    elseif Game:getFlag("nomoremasonsad") then
+        local mason = Game.world:getCharacter("mason")
+        mason:remove()
     end
 end
 

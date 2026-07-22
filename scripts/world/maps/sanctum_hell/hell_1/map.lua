@@ -11,10 +11,13 @@ function map:onEnter()
 	self.ripple_fx = RippleEffect()
 	self.ripple_fx.layer = WORLD_LAYERS["bottom"]
 	Game.world:addChild(self.ripple_fx)
-	if Game:getFlag("belch3") then
+	if Game:getFlag("belch3") and not Game:getFlag("hellmason_foundout") then
         local mason = Game.world:getCharacter("mason")
         mason:setSprite("goner")
-    end
+    elseif Game:getFlag("hellmason_foundout") then
+		local mason = Game.world:getCharacter("mason")
+		mason:remove()
+	end
 end
 
 function map:update(world, data)

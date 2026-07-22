@@ -231,6 +231,7 @@ return {
         local belch = Game:getFlag("belch", false)
         local belch2 = Game:getFlag("belch2", false)
         local belch3 = Game:getFlag("belch3", false)
+        local belch4 = Game:getFlag("belch4", false)
         local mason = cutscene:getCharacter("mason")
         if not belch then
             if intMason >= 1 then
@@ -275,7 +276,7 @@ return {
                 Game:saveQuick()
                 Game:gameOver(Game.world.player.x, Game.world.player.y)
             end
-        else
+        elseif not belch4 then
             cutscene:text("> so did you hear about the belch.plorgius from that man in hell?", { indent_string = "> " }, mason)
             cutscene:text("> good.", { indent_string = "> " }, mason)
             local ch = cutscene:choicer({"Mention", "Do Not"})
@@ -285,8 +286,123 @@ return {
                 Game:saveQuick()
                 Game:gameOver(Game.world.player.x, Game.world.player.y)
             end
+        else
+            cutscene:text("> WHAT HAVE YOU DONE!!??", { indent_string = "> " }, mason)
+            cutscene:text("> [rainbow]NONONONONONONONONONONONONONONON\nONONONONONONONONONONONONO-[rainbow:unrainbow]", { indent_string = "> ", auto = true }, mason)
+            mason:explode()
+            Game:setFlag("nomoremasonsad", true)
         end
         Game:setFlag("intMason", intMason + 1)
+    end,
+
+    INSERTBELCHPLORGIUS = function(cutscene)
+        local function texter(text, x, y, persist,waitfor)
+            text = DialogueText("[speed:0.03][font:vcr, 48][voice:none]" .. text, x or 160, y or 40, SCREEN_WIDTH, SCREEN_HEIGHT, {align = "left"})
+            text.layer = 101
+            text.can_advance = false
+            text.align = "center"
+            text.skip_speed = true
+            local fade = 0
+            Game.stage:addChild(text)
+            if not persist then
+                cutscene:wait(function () return not text:isTyping() end)
+                cutscene:wait(0.75)
+                text:advance()
+                cutscene:wait(function () return text:isDone() end)
+                Game.stage:removeChild(text)
+                cutscene:wait(0.75)
+            else
+                --[[ cutscene:wait(waitfor)
+                cutscene:during(function ()
+                    if fade < 1 then
+                        fade = fade + DTMULT * 0.05
+                        text:setColor(1, 1, 1, 1 - fade)
+                    end
+                end)
+                cutscene:wait(function () return fade >= 1 end)
+                Game.stage:removeChild(text)
+                cutscene:wait(0.75) ]]
+                cutscene:wait(function () return not text:isTyping() end)
+                cutscene:wait(0.75)
+                text:advance()
+                cutscene:wait(function () return text:isDone() end)
+                cutscene:during(function ()
+                    if fade < 1 then
+                        fade = fade + DTMULT * 0.05
+                        text:setColor(1, 1, 1, 1 - fade)
+                    end
+                end)
+                cutscene:wait(function () return fade >= 1 end)
+                Game.stage:removeChild(text)
+                cutscene:wait(0.75)
+            end
+        end
+
+        local rect = Game.stage:addChild(Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+        rect:setLayer(100)
+        rect:setColor(COLORS.black)
+        Game.world.music:play("snd_plorgius_next", 1.25, 0.65)
+        Game.stage:addFX(CrtFX(), "vhsfx")
+        cutscene:wait(1)
+        texter("Insert The[wait:80]\nBelch.Plorgius.[wait:120]")
+        Game.stage:removeFX("vhsfx")
+        Game:setFlag("belch4", true)
+        Game:saveQuick()
+        Game:gameOver(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+    end,
+
+    hell_mason = function(cutscene)
+        local interactedCount = Game:getFlag("hellmason_intCount", 0)
+        local mason = cutscene:getCharacter("mason")
+        
+        if interactedCount == 0 and not Game:getFlag("belch4") then
+            cutscene:setSpeaker(mason)
+            cutscene:text("[color:#808080]> the plorgius image format...")
+            cutscene:text("[color:#808080]> the plorgius image format is a simple image format.")
+            cutscene:text("[color:#808080]> here is what it stands for:[wait:5]\n> Potentially[wait:5] Long[wait:5] (or)[wait:5] Good[wait:5] Image[wait:5] (with)[wait:5] Useful[wait:5] S#!%.")
+            cutscene:text("[color:#808080]> [color:red]it[color:#808080][wait:5] is the [color:red]it[color:#808080][wait:5] that ral mentions.")
+            cutscene:text("[color:#808080]> he created it,[wait:5] so you must not be fooled by his lies.")
+            cutscene:text("[color:#808080]> mention it to ral,[wait:5] and insert it.")
+        elseif interactedCount >= 1 and not Game:getFlag("belch4") then
+            cutscene:setSpeaker(mason)
+            cutscene:text("[color:#808080]> mention it to ral,[wait:5] and insert it.")
+        elseif Game:getFlag("belch4") then
+            cutscene:setSpeaker(mason)
+            cutscene:text("[color:#808080]> IT HAS BEEN INSERTED...!")
+            mason:explode()
+            cutscene:wait(1.5)
+            cutscene:text("[instant]* ", "shock", "susie")
+            cutscene:text("[instant]* ", "shock_down", "susie")
+            cutscene:text("[instant]* ", "shock_nervous", "susie")
+            cutscene:text("* Kris let's not talk to that guy again", "shock_nervous", "susie")
+            Game:setFlag("hellmason_foundout", true)
+        end
+
+        Game:setFlag("hellmason_intCount", interactedCount + 1)
+    end,
+
+    ralszor = function(cutscene)
+        local ralszorintcount = Game:getFlag("ralszor_intCount", 0)
+        local ralszor = cutscene:getCharacter("ral")
+
+        if Game:getFlag("hellmason_intCount", 0) >= 1 and not Game:getFlag("belch4") then
+            cutscene:gotoCutscene("konverge.INSERTBELCHPLORGIUS")
+        elseif Game:getFlag("belch4") then
+            cutscene:setSpeaker(ralszor)
+            cutscene:text("[style:none][font:main,48]*[font:main,72] You saw nothing.")
+        elseif ralszorintcount == 0 then
+            cutscene:setSpeaker(ralszor)
+            cutscene:text("* I have no connection to Ralsei whatsoever I am Ralszor")
+            cutscene:text("* Dont drag me into [color:red][style:none]it")
+        elseif ralszorintcount == 1 then
+            cutscene:setSpeaker(ralszor)
+            cutscene:text("* stop it youre dragging me into [color:red][style:none]it")
+        elseif ralszorintcount >= 2 then
+            cutscene:setSpeaker(ralszor)
+            cutscene:text("[color:red][style:none][font:main,48]*[font:main,72] it")
+        end
+
+        Game:setFlag("ralszor_intCount", ralszorintcount + 1)
     end,
 
 	ddelta = function(cutscene)
