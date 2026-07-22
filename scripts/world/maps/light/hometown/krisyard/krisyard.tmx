@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="15" nextobjectid="57">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="57">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -127,7 +127,7 @@
   <object id="16" x="418" y="240" width="40" height="108"/>
  </objectgroup>
  <objectgroup id="12" name="objects_light_night"/>
- <objectgroup color="#ff00ff" id="7" name="objects">
+ <objectgroup color="#ff00ff" id="7" name="objects_party">
   <object id="10" name="transition" x="240" y="840" width="200" height="40">
    <properties>
     <property name="facing" value="down"/>
@@ -170,23 +170,30 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,142,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,192,141,142,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,192,141,142,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,150,151,192,141,142,0,0,0,0,0,0,0,0,0,0,
+0,151,150,151,150,153,0,0,0,0,0,138,141,140,141,190,
+0,150,151,150,150,153,0,0,0,0,0,149,150,151,152,151,
+0,151,150,151,150,153,0,0,0,0,0,149,151,150,151,152,
+0,0,0,150,150,153,0,0,0,0,0,149,150,151,152,151,
+0,0,0,0,0,0,0,0,0,0,0,149,151,150,151,152,
+0,0,0,0,0,0,0,0,0,0,0,149,150,151,150,151
 </data>
  </layer>
  <imagelayer id="10" name="houseover" offsetx="80" offsety="40">
   <image source="../../../../../../assets/sprites/world/maps/hometown/krishouseover.png" width="390" height="380"/>
  </imagelayer>
  <objectgroup id="13" name="objects_light_above_night"/>
- <objectgroup color="#00aa00" id="11" name="controllers">
+ <objectgroup id="15" name="objects_time_overlay">
   <object id="23" name="hometowndaynight" x="0" y="0">
+   <properties>
+    <property name="toplayers" type="list">
+     <item value="treeup"/>
+    </property>
+   </properties>
    <point/>
   </object>
+ </objectgroup>
+ <objectgroup color="#00aa00" id="11" name="controllers">
   <object id="55" name="lwraineffect" x="20" y="0">
    <point/>
   </object>

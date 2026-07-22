@@ -9,7 +9,7 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 23,
+  nextlayerid = 24,
   nextobjectid = 56,
   properties = {
     ["border"] = "leaves",
@@ -598,7 +598,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 11,
-      name = "objects",
+      name = "objects_party",
       class = "",
       visible = true,
       opacity = 1,
@@ -928,20 +928,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 53,
-          name = "hometowndaynight",
-          type = "",
-          shape = "point",
-          x = 0,
-          y = -20,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 55,
           name = "lwraineffect",
           type = "",
@@ -954,6 +940,40 @@ return {
           opacity = 1,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 23,
+      name = "objects_time_overlay",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 53,
+          name = "hometowndaynight",
+          type = "",
+          shape = "point",
+          x = 0,
+          y = -20,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["toplayers"] = {
+              "treeup"
+            }
+          }
         }
       }
     }

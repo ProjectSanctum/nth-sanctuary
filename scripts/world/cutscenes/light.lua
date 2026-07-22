@@ -14,7 +14,6 @@ return {
 				cutscene.church_door_lightning:remove()
 			end
 			cutscene.lightning_timers = {}
-			local top_layers = {"treeup"}
 			local palettesys = Game.world:getEvent("hometowndaynight")
 			palettesys.night = 2
 			palettesys.overlay.alpha = 0
@@ -40,13 +39,6 @@ return {
 				end
 				chara:addFX(LightningFlashFX(1, 2), "lightning")
 			end
-			for _, layer_id in ipairs(top_layers) do
-				local layer = Game.world.map:getTileLayer(layer_id)
-				if layer:getFX("palhack") then
-					layer:removeFX("palhack")
-				end
-				layer:addFX(PaletteFX("world/town_palette", 2), "palhack")
-			end
 			table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, palettesys, {night = 1}, "out-cubic"))
 			table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, palettesys.overlay, {alpha = 0.6}, "out-cubic"))
 			if cutscene.church_lightning then
@@ -62,18 +54,9 @@ return {
 				local fx = chara:getFX("lightning")
 				table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, fx, {alpha = 0}, "out-cubic"))
 			end
-			for _, layer_id in ipairs(top_layers) do
-				local layer = Game.world.map:getTileLayer(layer_id)
-				local fx = layer:getFX("palhack")
-				table.insert(cutscene.lightning_timers, Game.world.timer:tween(80/30, fx, {palette_index = 1}, "out-cubic"))
-			end
 			table.insert(cutscene.lightning_timers, Game.world.timer:after(80/30, function()
 				for _, chara in ipairs(Game.stage:getObjects(Character)) do
 					chara:removeFX("lightning")
-				end
-				for _, layer_id in ipairs(top_layers) do
-					local layer = Game.world.map:getTileLayer(layer_id)
-					layer:removeFX("palhack")
 				end
 				palettesys.night = 1
 				palettesys.overlay.alpha = 0.6
@@ -397,10 +380,10 @@ return {
 		s = cutscene:spawnNPC("susie_lw", 300, 436)
 		s:setSprite("look_down_left")
         cutscene:fadeIn(0)
-		local rainfx = Game.stage:getObjects(LightRainEffect)[1]
-		if not rainfx then
-			rainfx = LightRainEffect()
-			Game.world:addChild(rainfx)
+		cutscene.rainfx = Game.stage:getObjects(LightRainEffect)[1]
+		if not cutscene.rainfx then
+			cutscene.rainfx = LightRainEffect()
+			Game.world:addChild(cutscene.rainfx)
 		end
 		cutscene:wait(2)
 		cutscene:text("* Kris.[wait:5] I want to make sure you know...[wait:5]", "dejected_smile")
@@ -410,14 +393,14 @@ return {
 		s:setSprite("rain_windblow_1", true)
 		cutscene:text("* Until then,[wait:5] try to get some rest,[wait:5] dumbass.", "small_smile")
 		Game:setFlag("hometown_raining", 1)
-		rainfx.faded_in_starting_rainsfx = true
-		rainfx.rain_active = true
-		if not rainfx.rain_outdoors_sfx then
-			rainfx.rain_outdoors_sfx = Music()
-			rainfx.rain_outdoors_sfx:play("raining", 0, 1)
+		cutscene.rainfx.faded_in_starting_rainsfx = true
+		cutscene.rainfx.rain_active = true
+		if not cutscene.rainfx.rain_outdoors_sfx then
+			cutscene.rainfx.rain_outdoors_sfx = Music()
+			cutscene.rainfx.rain_outdoors_sfx:play("raining", 0, 1)
 		end
-		rainfx.rain_outdoors_sfx:setPitch(0.9)
-		rainfx.rain_outdoors_sfx:fade(1, 2)
+		cutscene.rainfx.rain_outdoors_sfx:setPitch(0.9)
+		cutscene.rainfx.rain_outdoors_sfx:fade(1, 2)
 		s:setAnimation("rain_windblow")
 		cutscene:wait(4)
 		cutscene:text("* See you tomorrow,[wait:5] Kris.", "small_smile")
@@ -426,7 +409,7 @@ return {
 		cutscene:wait(0.5)
 		cutscene:walkTo(s, s.x, 640, 2, "down")
 		cutscene:wait(2)
-		rainfx.rain_outdoors_sfx:fade(0.5, 2)
+		cutscene.rainfx.rain_outdoors_sfx:fade(0.5, 2)
         cutscene:fadeOut(2)
 		cutscene:wait(2)
 		Game:setFlag("hometown_raining", 2)
@@ -445,16 +428,16 @@ return {
 		cutscene.church_darkness = ChurchDarknessVFX(0, 0)
 		cutscene.church_darkness:setLayer(Game.world:parseLayer("objects"))
 		Game.world:addChild(cutscene.church_darkness)
-		local rainfx = Game.stage:getObjects(LightRainEffect)[1]
-		if not rainfx then
-			rainfx = LightRainEffect()
-			Game.world:addChild(rainfx)
+		cutscene.rainfx = Game.stage:getObjects(LightRainEffect)[1]
+		if not cutscene.rainfx then
+			cutscene.rainfx = LightRainEffect()
+			Game.world:addChild(cutscene.rainfx)
 		end
-		if not rainfx.rain_outdoors_sfx then
-			rainfx.rain_outdoors_sfx = Music()
-			rainfx.rain_outdoors_sfx:play("raining", 0.5, 1)
+		if not cutscene.rainfx.rain_outdoors_sfx then
+			cutscene.rainfx.rain_outdoors_sfx = Music()
+			cutscene.rainfx.rain_outdoors_sfx:play("raining", 0.5, 1)
 		end
-		rainfx.rain_outdoors_sfx:setPitch(0.9)
+		cutscene.rainfx.rain_outdoors_sfx:setPitch(0.9)
         cutscene:fadeIn(1)
 		cutscene:walkToSpeed(s, s.x, 500, 3, "down")
 		cutscene:wait(0.5)
@@ -492,9 +475,24 @@ return {
 		cutscene.church_darkness.window_active = true
 		cutscene.church_door:setFrame(2)
 		cutscene.wind_sound:fade(1, 1)
-		rainfx.rain_outdoors_sfx:fade(0.3, 1)
+		cutscene.rainfx.rain_outdoors_sfx:fade(0.3, 1)
+		cutscene.rainpitch = 0.9
+		cutscene.rain_fade_pitch = false
+		cutscene.lightning_timer = 0
+		cutscene.lightning_loop = false
 		cutscene:during(function()
+			if cutscene.rainfx and cutscene.rain_fade_pitch then
+				cutscene.rainfx.rain_outdoors_sfx:setPitch(cutscene.rainpitch)
+			end
 			cutscene.wind_sound:setPitch(cutscene.windpitch)
+			if cutscene.lightning_loop then
+				cutscene.lightning_timer = cutscene.lightning_timer + DTMULT
+				if cutscene.lightning_timer >= 320 then
+					Assets.playSound("thunder_instant")
+					lightningFlash()
+					cutscene.lightning_timer = cutscene.lightning_timer - TableUtils.pick({320, 280, 240, 200})
+				end
+			end
 		end)
 		Game.world.timer:tween(1, cutscene, {windpitch = 1.5}, "linear")
 		cutscene:wait(0.5)
@@ -508,6 +506,8 @@ return {
 		cutscene:wait(cutscene:walkTo(s, s.x - 100, 730, 10/30, "down"))
 		cutscene:wait(cutscene:walkTo(s, 600, 730, 20/30, "left"))
 		s:setFacing("up")
+		local daynightevent = Game.world:getEvent("hometowndaynight")
+		table.insert(daynightevent.lightning_shadow_objs, s)
 		Assets.playSound("thunder_instant")
 		lightningFlash()
 		cutscene:wait(1)
@@ -521,46 +521,134 @@ return {
 		cutscene:walkPath(s,{{860, s.y},{860, 300}}, {speed = 10})
 		cutscene:text("* Kris! [wait:10]Kris, [wait:5]get up! [wait:10]We got ourselves a problem!", "angry_c", s)
 		cutscene.wind_sound:fade(0, 2)
+		cutscene.rainfx.rain_outdoors_sfx:fade(0, 2)
 		cutscene:wait(cutscene:fadeOut(2, {music = true}))
 		cutscene.wind_sound:stop()
+		cutscene.rainfx.rain_outdoors_sfx:stop()
+		cutscene.church_door:remove()
+		cutscene.church_door = nil
+		cutscene.church_darkness:remove()
+		cutscene.church_darkness = nil
+        local function spikeBubbleTextFade(bubble, wait)
+            local bubble = bubble
+            Game.world.timer:tween(2, bubble, { draw_alpha = 0 }, "linear", function()
+                bubble:remove()
+            end)
+            Game.world.timer:tween(2, bubble.text, { alpha = 0 }, "linear", function()
+                bubble:remove()
+            end)
+            if wait ~= false then
+                cutscene:wait(2)
+            end
+        end
 
+        local function spikeBubbleText(str, advance, x, y, options)
+			Assets.playSound("giygastalk")
+			local text = "[voice:none][color:white][shake:0.75][spacing:2][speed:0.25]" .. str
+			local bubble = SpeechSpikeBubble(text, x, y, options)
+            bubble.layer = WORLD_LAYERS["textbox"]
+            bubble.text.skip_speed = not skippable
+            Game.world:addChild(bubble)
+            if advance ~= false then
+                cutscene:wait(function() return not bubble.text:isTyping() end)
+				cutscene:wait(10/30)
+                spikeBubbleTextFade(bubble, true)
+            end
+			return bubble
+        end
 		cutscene:loadMap("light/hometown/torielhouse/kris_room")
+		for _, save in ipairs(Game.world:getEvents("savepoint")) do
+			save:remove()
+		end
 		Game.world.player.visible = false
 		Game.world.music:stop()
-        Game.world.music:play("jitterbug_muffled")
+		local rainfx = Game.stage:getObjects(LightRainEffect)[1]
+		if rainfx then
+			rainfx:remove()
+		end
+		local rain_sfx_fake = Music()
+		rain_sfx_fake:play("raining", 0, 0.5)
+		rain_sfx_fake:fade(1, 2)
         cutscene:fadeIn(2, {music = false})
 		
+		local bed = Sprite("world/maps/hometown/torielhouse/kris_bed", 466, 176)
+		bed:setScale(2)
+		bed:setLayer(k.layer - 0.11)
+		Game.world:addChild(bed)
+		local pillow = Sprite("world/maps/hometown/torielhouse/kris_bed_pillow", 488, 194)
+		pillow:setScale(2)
+		pillow:setLayer(k.layer - 0.1)
+		Game.world:addChild(pillow)
+		local phone = Sprite("world/objects/kris_phone_floor_2", ((Game.world.camera.x - SCREEN_WIDTH/2) + 408) - 40, 
+		((Game.world.camera.y - SCREEN_HEIGHT/2) + 336) - 94)
+		phone:setScale(2)
+		phone:setLayer(k.layer - 0.1)
+		Game.world:addChild(phone)
+		local wagon = Sprite("tilesets/objects/s_cageclosed", 470, 330)
+		wagon:setLayer(k.layer - 0.1)
+		Game.world:addChild(wagon)
 		local spr = Game.world:spawnObject(Sprite("world/kris_window_ready"))
 		spr.x, spr.y = 294, 84
 		spr:setScale(2)
-		Game.world.music:fade(0, 2)
 		cutscene:wait(3)
+		local bubble_x = ((Game.world.camera.x - SCREEN_WIDTH/2) + 408) - 80
+		local bubble_y = 324
+		spikeBubbleText("...\nKris...", true, bubble_x, bubble_y, {adjheight = false, center = true, tailbug = true, xadd = 20, tailbugy = -220, tailx = bubble_x + 70, taily = bubble_y - 60, taildir = "top", spiketop = false})
+		spikeBubbleText("...\ndon't\nforget,\nKris...", true, bubble_x, bubble_y, {adjheight = false, center = true, tailbug = true, xadd = 20, tailbugy = -220, tailx = bubble_x + 70, taily = bubble_y - 60, taildir = "top", spiketop = false})
+		local bubble = spikeBubbleText("...\nyou promised.", false, bubble_x, bubble_y, {adjheight = false, center = true, tailbug = true, xadd = 20, tailbugy = -220, tailx = bubble_x + 70, taily = bubble_y - 60, taildir = "top", spiketop = false})
+		cutscene:wait(1)
 		Assets.playSound("wing")
 		spr:play(1/15,false)
 		cutscene:wait(2)
 		spr:setSprite("world/kris_window_leave")
+		spikeBubbleTextFade(bubble, false)
 		spr:play(1/10, false)
 		cutscene:wait(3)
 		cutscene:fadeOut(2, {music = true})
 		cutscene:wait(2)
+		rain_sfx_fake:stop()
 		cutscene:loadMap("light/hometown/krisyard")
-		cutscene:fadeIn(2, {music = true})
+		Game.world.music:stop()
+		cutscene.rainfx = Game.stage:getObjects(LightRainEffect)[1]
+		if not cutscene.rainfx then
+			cutscene.rainfx = LightRainEffect()
+			Game.world:addChild(cutscene.rainfx)
+		end
+		if not cutscene.rainfx.rain_outdoors_sfx then
+			cutscene.rainfx.rain_outdoors_sfx = Music()
+			cutscene.rainfx.rain_outdoors_sfx:play("raining", 0.5, 1)
+		end
+		cutscene.rainfx.rain_outdoors_sfx:setPitch(0.5)
+		cutscene.rainpitch = 0.5
+		cutscene.rain_fade_pitch = true
+		daynightevent = Game.world:getEvent("hometowndaynight")
+		Game.world.timer:tween(1, cutscene, {rainpitch = 0.9})
+		cutscene:fadeIn(2, {music = false})
 		Game.world.player.visible = true
 		Game.world.player:setPosition(150, 480)
+		daynightevent.ignore_palette_for_some_objs = true
 		local p = Game.world.player --[[ <-- My stupid ass ]]
 		p.flip_x = true
 		p:setSprite("soul_put_back")
 		cutscene:wait(2)
+		cutscene.rain_fade_pitch = false
 		p.sprite:play(1/10, false)
 		cutscene:wait(function () return p.sprite.frame == 6 end)
 		Assets.playSound("grab")
 		Assets.playSound("hurt")
-		Game.world:spawnObject(HeartBurst(152, 460))
+		local burst = Game.world:spawnObject(HeartBurst(152, 460))
+		burst:setLayer(WORLD_LAYERS["above_events"])
+		cutscene:wait(1)
+		p.shadow_offset = -7
+		Assets.playSound("thunder_instant")
+		lightningFlash()
 		cutscene:wait(2)
 		p.flip_x = false
 		p:setPosition(p.x-14, p.y-4)
 		p:resetSprite()
 		p:shake()
+		daynightevent.ignore_palette_for_some_objs = false
+		p.shadow_offset = 0
 		Assets.playSound("wing")
 		p:setFacing("right")
 		cutscene:wait(1.5)
@@ -583,6 +671,10 @@ return {
 		cutscene:wait(cutscene:walkTo(susie, p.x, p.y+40, 1))
 		cutscene:text("* What are you doing just standing there?", 'angry_c', susie)
 		cutscene:text("* [voice:susie]The CHURCH, [wait:10]has ANOTHER DARK WORLD.", 'angry_c', susie)
+		table.insert(daynightevent.lightning_shadow_objs, susie)
+		Assets.playSound("thunder_instant")
+		lightningFlash()
+		cutscene:wait(1)
 		cutscene:wait(cutscene:walkTo(susie, p.x, p.y+20, 0.12))
 		Assets.playSound("grab")
 
@@ -596,11 +688,12 @@ return {
 		cutscene:fadeOut(1, {music = true})
 		cutscene:wait(1)
 		cutscene:loadMap("light/hometown/town_north", 'entry_north')
+		Game.world.music:stop()
 		cutscene:fadeIn(1, {music = false})
 		s = cutscene:spawnNPC("susie_lw", 860, -20)
 		s:setSprite("kris_run")
 		Game.world.camera.target = s
-		Game.world.player:setPosition(0,0)
+		Game.world.player.visible = false
 		cutscene:text("* [voice:susie][noskip][func:a]I can't make this up, [wait:5]Kris.[wait:30]", {
 			auto = true,
 			functions = {
@@ -619,36 +712,38 @@ return {
 		})
 		cutscene:text("* [voice:susie][noskip]I saw it while I was on my way home.[wait:30]", {auto = true})
 		cutscene:wait(function() return s.y == 520 end)
+		cutscene:walkToSpeed(s,s.x, s.y + 100, 8)
 
-		cutscene:fadeOut(0.3, {music = false})
-		cutscene:wait(0.3)
-		cutscene:loadMap("light/hometown/town_mid", 'entry_north')
-		cutscene:fadeIn(0.3, {music = false})
-		
-		p.visible = false
-		s = cutscene:spawnNPC("susie_lw", 1660, -20)
-		s:setSprite("kris_run")
-		Game.world.camera.target = s
-		Game.world.player:setPosition(0,0)
-		cutscene:wait(cutscene:walkTo(s,s.x, 500, 1.1))
-		
-		cutscene:fadeOut(0.3, {music = false})
-		cutscene:wait(0.3)
-		cutscene:loadMap("light/hometown/town_south", 'entry_north')
-		cutscene:fadeIn(0.3, {music = false})
-
-		p.visible = false
-		s = cutscene:spawnNPC("susie_lw", 1700, -20)
-		s:setSprite("kris_run")
-		Game.world.camera.target = s
-		Game.world.player:setPosition(0,0)
-		cutscene:wait(cutscene:walkTo(s,s.x, 500, 1.1))
-
-				cutscene:fadeOut(0.3, {music = false})
-		cutscene:wait(0.3)
+		cutscene:fadeOut(0.5, {music = false})
+		cutscene:wait(0.5)
 		cutscene:loadMap("light/hometown/town_church", 'entry_north')
-		cutscene:fadeIn(0.3, {music = false})
+		Game.world.music:stop()
+		cutscene:fadeIn(0.5, {music = false})
 
+		Game.world.player.visible = false
+		s = cutscene:spawnNPC("susie_lw", 860, -20)
+		s:setSprite("kris_run")
+		Game.world.camera.target = s
+		daynightevent = Game.world:getEvent("hometowndaynight")
+		table.insert(daynightevent.lightning_shadow_objs, s)
+		Game.world.map.image_layers["churchup"].visible = false
+		cutscene.church_door = ChurchDoorDarkness(566, 528)
+		cutscene.church_door:setLayer(WORLD_LAYERS["above_events"])
+		Game.world:addChild(cutscene.church_door)
+		cutscene.church_darkness = ChurchDarknessVFX(0, 0)
+		cutscene.church_darkness:setLayer(Game.world:parseLayer("objects"))
+		Game.world:addChild(cutscene.church_darkness)
+		cutscene.church_darkness.bg_active = true
+		cutscene.church_darkness.window_active = true
+		cutscene.church_door:setFrame(2)
+		cutscene.wind_sound = Music()
+		cutscene.wind_sound:play("wind_highplace", 0, 1.5)
+		cutscene.wind_sound:fade(1, 1)
+		cutscene:wait(cutscene:walkToSpeed(s,s.x, 620, 8))
+		cutscene.church_door:setLayer(Game.world:parseLayer("objects"))
+		Assets.playSound("thunder_instant")
+		lightningFlash()
+		cutscene.lightning_loop = true
 		--[[	Delta's edits go here for the church part	
 			Notes for dialogue
 			Susie drags Kris down. 

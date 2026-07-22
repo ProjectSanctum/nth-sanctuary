@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="43" height="31" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="130">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="43" height="31" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="130">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -329,13 +329,15 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="6" name="controllers">
+ <objectgroup id="11" name="objects_time_overlay">
   <object id="74" name="hometowndaynight" x="0" y="0">
    <properties>
     <property name="palette" value="world/church_palette"/>
    </properties>
    <point/>
   </object>
+ </objectgroup>
+ <objectgroup id="6" name="controllers">
   <object id="129" name="lwraineffect" x="10" y="0">
    <point/>
   </object>

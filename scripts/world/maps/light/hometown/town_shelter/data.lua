@@ -9,7 +9,7 @@ return {
   height = 62,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 16,
+  nextlayerid = 17,
   nextobjectid = 54,
   properties = {
     ["border"] = "leaves",
@@ -792,7 +792,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 9,
-      name = "objects",
+      name = "objects_party",
       class = "",
       visible = true,
       opacity = 1,
@@ -996,8 +996,8 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
-      id = 13,
-      name = "controllers",
+      id = 16,
+      name = "objects_time_overlay",
       class = "",
       visible = true,
       opacity = 1,
@@ -1019,8 +1019,28 @@ return {
           rotation = 0,
           opacity = 1,
           visible = true,
-          properties = {}
-        },
+          properties = {
+            ["toplayers"] = {
+              "treeup"
+            }
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 13,
+      name = "controllers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
         {
           id = 53,
           name = "lwraineffect",

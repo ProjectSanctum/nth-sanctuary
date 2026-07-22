@@ -9,7 +9,7 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 11,
+  nextlayerid = 12,
   nextobjectid = 30,
   properties = {
     ["border"] = "leaves",
@@ -497,8 +497,8 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
-      id = 10,
-      name = "controllers",
+      id = 11,
+      name = "objects_time_overlay",
       class = "",
       visible = true,
       opacity = 1,
@@ -523,7 +523,23 @@ return {
           properties = {
             ["palette"] = "world/church_palette"
           }
-        },
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 10,
+      name = "controllers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
         {
           id = 29,
           name = "lwraineffect",

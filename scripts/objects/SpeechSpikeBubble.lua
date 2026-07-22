@@ -5,7 +5,7 @@ function SpeechSpikeBubble:init(text, x, y, options, speaker)
 	if Game.state ~= "BATTLE" then
 	    self.layer = WORLD_LAYERS["textbox"] - 1
 	end
-	
+	self:setOrigin(0, 0)
 	self.bg_color = options["bg_color"] or COLORS.black
 	self.text.line_offset = options["line_offset"] or 0
 	
@@ -21,10 +21,13 @@ function SpeechSpikeBubble:init(text, x, y, options, speaker)
 		right = options["spikeright"] or true,
 		bottom = options["spikebottom"] or true
 	}
-	
+	self.x_add = options["xadd"] or 0
+	self.y_add = options["yadd"] or 35
+	self.adjust_height = options["adjheight"] ~= false
 	self.draw_alpha = options["alpha"] or 0.7
 	self.framethreshold = options["frames"] or 3
 	self.tail_bug = options["tailbug"] or false
+	self.tail_bugged_y = options["tailbugy"] or 0
 	self.framecount = self.framethreshold
 	self.siner = 0
 	self.remcamerax = xx
@@ -44,9 +47,6 @@ function SpeechSpikeBubble:init(text, x, y, options, speaker)
 		yy = Game.world.camera.y - SCREEN_HEIGHT / 2
 	end
     self:updateSize()
-	if self.centered then
-		self.x = self.x + (self.text_width + 20) / 2
-	end
 	self.remcamerax = xx
 	self.remcameray = yy
 end
@@ -62,20 +62,32 @@ function SpeechSpikeBubble:updateSize()
 
         self.text_width = w
         self.text_height = h
+		
+		local x_add = self.x_add or 0
+		local y_add = self.y_add or 35
+		self.width = w + x_add
+		self.height = h + y_add
 
-        self.width = w + 20
-        self.height = h + 20
 		local scaled = self.scaled or 2
-		self.w = (self.text_width + 20) / scaled
-		self.h = (self.text_height + 35) / scaled
+		self.w = ((self.text_width / scaled) + x_add)
+		if self.adjust_height then
+			self.h = ((self.text_height / scaled) + y_add)
+			self.text.y = (4 * scaled)
+		else
+			self.text.y = (-(self.text_height * 0.25) * scaled) + (4 * scaled)
+		end
+		if self.centered then
+			local text_width = ((w / 2) + x_add) * 0.75
+			self.text.x = -((text_width / 2) * scaled) + (x_add * scaled)
+		else		
+			self.text.x = -(self.w * scaled) + (x_add * scaled)
+		end
     end
 end
 
 function SpeechSpikeBubble:draw()
 	self.framecount = self.framecount + DTMULT
 	local xx, yy = 0, 0
-	xx = Game.world.camera.x - SCREEN_WIDTH / 2
-	yy = Game.world.camera.y - SCREEN_HEIGHT / 2
 	if Game.state == "BATTLE" then
 		xx = Game.battle.camera.x - SCREEN_WIDTH / 2
 		yy = Game.battle.camera.y - SCREEN_HEIGHT / 2
@@ -94,8 +106,9 @@ function SpeechSpikeBubble:draw()
 	end
 	if surfaceupdate then
 		self.siner = self.siner + r
-		local x = self.x - (self.centered and self.w * self.scaled or self.w * self.scaled)
-		local y = self.y - ((self.text_height * 0.25) + 4 * (self.scaled == 2 and 1 or 2)) * 2
+		local text_width = ((self.text:getTextWidth() / 2) + self.x_add) * 0.75
+		local x = self.x - (self.centered and (text_width / 2) * self.scaled or self.w * self.scaled) + (self.x_add * self.scaled)
+		local y = self.y
 		local x1 = ((x - xx) / self.scaled) + (MathUtils.random(-1, 2) * r) + (math.sin(self.siner / 3) * 3)
 		local x2 = (((x + (self.w * self.scaled)) - xx) / self.scaled) + (MathUtils.random(-1, 2) * r) + (math.sin(self.siner / 3) * 3)
 		local y1 = ((y - yy) / self.scaled) + (MathUtils.random(-1, 2) * r) + (math.cos(self.siner / 3) * 3)
@@ -126,7 +139,7 @@ function SpeechSpikeBubble:draw()
 		love.graphics.polygon("fill", {x2, y1, x2 - (self.w / 3), y2, x2 + (MathUtils.random(7) * r), y2 + 7 + (MathUtils.random(4) * r)})
 		local tailx = self.tailx / self.scaled
 		local taily = self.taily / self.scaled
-		local yyfix = self.tail_bug and 0 or yy / self.scaled
+		local yyfix = self.tail_bug and self.tail_bugged_y / self.scaled or yy / self.scaled
 		local t2x01 = x1 + (self.w / 3)
 		local t2y01 = y1
 		local t2x02 = x1 + ((self.w / 3) * 2)
@@ -150,7 +163,7 @@ function SpeechSpikeBubble:draw()
 			t2y4 = t2y2
 		end	
 		if self.tail_direction == "left" or self.tail_direction == "right" then
-			yyfix = self.tail_bug and 0 or xx / self.scaled
+			yyfix = self.tail_bug and self.tail_bugged_y / self.scaled or xx / self.scaled
 			t2x01 = x1
 			t2y01 = y1 + (self.h / 3)
 			t2x02 = x1

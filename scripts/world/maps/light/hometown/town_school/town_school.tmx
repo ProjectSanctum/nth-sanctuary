@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="29" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="20" nextobjectid="19">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="29" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="19">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -189,7 +189,7 @@
   <object id="9" x="922" y="232" width="90" height="40"/>
   <object id="10" x="440" y="200" width="66" height="40"/>
  </objectgroup>
- <objectgroup color="#ff00ff" id="12" name="objects">
+ <objectgroup color="#ff00ff" id="12" name="objects_party">
   <object id="12" name="transition" x="-40" y="380" width="40" height="220">
    <properties>
     <property name="facing" value="left"/>
@@ -233,10 +233,17 @@
 150,151,152,150,151,152,150,151,152,150,151,152,150,151,152,150,151,152,150,151,152,150,151,150,151,152,0,0,0
 </data>
  </layer>
- <objectgroup color="#00aa00" id="19" name="controllers">
+ <objectgroup id="20" name="objects_time_overlay">
   <object id="17" name="hometowndaynight" x="0" y="-20">
+   <properties>
+    <property name="toplayers" type="list">
+     <item value="tree3"/>
+    </property>
+   </properties>
    <point/>
   </object>
+ </objectgroup>
+ <objectgroup color="#00aa00" id="19" name="controllers">
   <object id="18" name="lwraineffect" x="20" y="-20">
    <point/>
   </object>
