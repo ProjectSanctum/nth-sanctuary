@@ -39,6 +39,13 @@ end
 
 function VaporBridge:onPostLoad()
 	super.onPostLoad(self)
+	for _, chara in ipairs(Game.stage:getObjects(Character)) do
+		chara.floored_log_index = 0
+		chara.ceiled_log_index = 0
+		chara.log_index = nil
+		chara.no_bridge_sprite_y = chara.sprite.y
+		chara.bridge_sprite_y = chara.sprite.y
+	end
 	if Kristal.Config["simplifyVFX"] and not self.always_enabled then
 		if Game.world.map.simple_bridge_layer and not Game.world.map.simple_bridge_layer.visible then
 			Game.world.map.simple_bridge_layer.visible = true
@@ -47,13 +54,6 @@ function VaporBridge:onPostLoad()
 	else
 		if Game.world.map.simple_bridge_layer and Game.world.map.simple_bridge_layer.visible then
 			Game.world.map.simple_bridge_layer.visible = false
-		end
-		for _, chara in ipairs(Game.stage:getObjects(Character)) do
-			chara.floored_log_index = 0
-			chara.ceiled_log_index = 0
-			chara.log_index = nil
-			chara.no_bridge_sprite_y = chara.sprite.y
-			chara.bridge_sprite_y = chara.sprite.y
 		end
 		self.enabled = true
 	end
