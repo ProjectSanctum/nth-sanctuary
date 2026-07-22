@@ -62,7 +62,7 @@ function map:update()
 			table.insert(stars, event)
 		end
 	end
-	if Game:getFlag("funni_tower_shenanigans") == true then
+	if Game:getFlag("funni_tower_shenanigans") == true and not Kristal.Config["simplifyVFX"] then
 		for _, event in ipairs(self.events) do
 			if event.layer == self.layers["objects_parallax"] then
 				event:setOrigin(0.5, 0.5)
