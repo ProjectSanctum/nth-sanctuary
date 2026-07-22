@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="40" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="43">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="40" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="43">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="border" value="church_vapor"/>
   <property name="music" value="vapor_sanct_wip"/>
  </properties>
  <tileset firstgid="1" source="../../../tilesets/vapor_assets.tsx"/>
@@ -15,8 +16,11 @@
  <objectgroup id="14" name="objects_starfield" visible="0" parallaxx="0.01" parallaxy="0.01">
   <object id="40" gid="3" x="-630" y="200" width="1280" height="720"/>
  </objectgroup>
- <objectgroup id="9" name="objects_bottom" visible="0">
+ <objectgroup id="9" name="objects_bottom">
   <object id="14" name="glowy" x="0" y="0">
+   <properties>
+    <property name="border" value="church_vapor"/>
+   </properties>
    <point/>
   </object>
  </objectgroup>

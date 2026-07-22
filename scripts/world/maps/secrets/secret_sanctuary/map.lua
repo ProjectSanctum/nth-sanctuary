@@ -48,7 +48,7 @@ function map:update()
 		Game:setFlag("funni_tower_shenanigans", false)
 	end
 
-	if self.rand >= 9 and self.rand <= 15 then	
+	if (9 <= self.rand) and (self.rand <= 15) then	
 		Game:setFlag("spire_watcher", true)
 	else
 		Game:setFlag("spire_watcher", false)

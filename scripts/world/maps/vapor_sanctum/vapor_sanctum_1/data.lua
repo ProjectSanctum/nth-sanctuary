@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -12,6 +12,7 @@ return {
   nextlayerid = 17,
   nextobjectid = 43,
   properties = {
+    ["border"] = "church_vapor",
     ["music"] = "vapor_sanct_wip"
   },
   tilesets = {
@@ -102,7 +103,7 @@ return {
       id = 9,
       name = "objects_bottom",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -122,7 +123,9 @@ return {
           rotation = 0,
           opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["border"] = "church_vapor"
+          }
         }
       }
     },

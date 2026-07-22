@@ -12,6 +12,7 @@ return {
   nextlayerid = 16,
   nextobjectid = 59,
   properties = {
+    ["border"] = "church_vapor",
     ["music"] = "vapor_sanct_wip"
   },
   tilesets = {

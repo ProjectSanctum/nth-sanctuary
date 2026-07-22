@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="2">
+<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="2">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
+ <properties>
+  <property name="border" value="none"/>
+ </properties>
  <tileset firstgid="1" source="../../../tilesets/vapor_assets.tsx"/>
  <layer id="1" name="tiles" width="16" height="12">
   <data encoding="csv">
