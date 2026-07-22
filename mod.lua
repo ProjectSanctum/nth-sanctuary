@@ -462,9 +462,24 @@ function Mod:onTextSound(sound, node)
     elseif sound == "jack" then
         if self.sound_timer == 0 then
             local snd = Assets.stopAndPlaySound("voice/jack")
-            snd:setPitch(0.9 + MathUtils.random(0.15))
-            self.sound_timer = 4
+            snd:setPitch(0.75 + MathUtils.random(0.5))
+            self.sound_timer = 3
         end
+        return true
+    elseif sound == "sans" then
+        if self.sound_timer == 0 then
+			Assets.stopAndPlaySound("voice/sans")
+            self.sound_timer = 2
+        end
+        return true
+    elseif sound == "spam" then
+        if self.sound_timer == 0 then
+			Assets.stopAndPlaySound("voice/spam", 0.8, 1.2)
+            self.sound_timer = 2
+        end
+        return true
+    elseif sound == "ddelta" then
+		Assets.stopAndPlaySound("voice/ddelta")
         return true
     end
 end
