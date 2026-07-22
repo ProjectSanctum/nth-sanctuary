@@ -165,11 +165,11 @@ function VaporBridge:draw()
 			local loglen = math.max(self.log_length - 2, 0) 
 			Draw.drawPart(self.horz_log_tex[(_log.index % 2) + 1], 0, _log.x + _log.y, 0, 0, 10, 16, 0, 2, 2)
 			if loglen > 0 then
-				for i = 0, loglen do
+				for i = 0, loglen + 1 do
 					Draw.drawPart(self.horz_log_tex[(_log.index % 2) + 1], 20 + (i * 40), _log.x + _log.y, 10, 0, 20, 16, 0, 2, 2)
 				end
 			end
-			Draw.drawPart(self.horz_log_tex[(_log.index % 2) + 1], 60 + (loglen * 40), _log.x + _log.y, 30, 0, 10, 16, 0, 2, 2)
+			Draw.drawPart(self.horz_log_tex[(_log.index % 2) + 1], 20 + (loglen * 40), _log.x + _log.y, 30, 0, 10, 16, 0, 2, 2)
 		end
 	else
 		for i = 1, self.log_amount do
@@ -177,11 +177,11 @@ function VaporBridge:draw()
 			local loglen = math.max(self.log_length - 2, 0)
 			Draw.drawPart(self.vert_log_tex[(_log.index % 2) + 1], _log.x - 2, _log.y, 0, 0, 11, 10, 0, 2, 2)
 			if loglen > 0 then
-				for i = 0, loglen do
+				for i = 0, loglen + 1 do
 					Draw.drawPart(self.vert_log_tex[(_log.index % 2) + 1], _log.x - 2, 20 + (i * 40) + _log.y, 0, 10, 11, 20, 0, 2, 2)
 				end
 			end
-			Draw.drawPart(self.vert_log_tex[(_log.index % 2) + 1], _log.x - 2, 60 + (loglen * 40) + _log.y, 0, 30, 11, 16, 0, 2, 2)
+			Draw.drawPart(self.vert_log_tex[(_log.index % 2) + 1], _log.x - 2, 20 + (loglen * 40) + _log.y, 0, 30, 11, 16, 0, 2, 2)
 		end
 	end
 	super.draw(self)
