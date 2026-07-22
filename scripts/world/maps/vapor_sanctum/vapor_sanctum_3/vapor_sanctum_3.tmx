@@ -107,6 +107,7 @@
   <object id="43" name="vaporbridge" x="240" y="1040" width="560" height="120">
    <properties>
     <property name="dir" value="vert"/>
+    <property name="droopmax" type="int" value="45"/>
    </properties>
   </object>
  </objectgroup>

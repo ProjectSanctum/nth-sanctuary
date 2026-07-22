@@ -7,6 +7,7 @@ function VaporBridge:init(data)
     local properties = data.properties or {}
 	self.always_enabled = properties["always"] or false
 	self.log_dir = properties["dir"] or "horz"
+	self.bend_angle_max = properties["droopmax"] or 90
 	self.log_amount = 0
 	self.log_amount_half = 0
 	self.log_length = 0
@@ -118,13 +119,9 @@ function VaporBridge:update()
 		end
 	end
 	if apply_bend then
-		if self.bend_angle < 90 then
-			self.bend_angle = self.bend_angle + 5.625 * DTMULT
-		end
+		self.bend_angle = MathUtils.approach(self.bend_angle, self.bend_angle_max, 5.625 * DTMULT)
 	else
-		if self.bend_angle > 0 then
-			self.bend_angle = self.bend_angle - 5.625 * DTMULT
-		end	
+		self.bend_angle = MathUtils.approach(self.bend_angle, 0, 5.625 * DTMULT)
 	end
 	for i = 1, self.log_amount do
 		local distance = math.abs(i - self.max_bend_log_no)

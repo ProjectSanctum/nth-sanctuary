@@ -342,7 +342,8 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["dir"] = "vert"
+            ["dir"] = "vert",
+            ["droopmax"] = 45
           }
         }
       }
