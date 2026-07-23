@@ -1,7 +1,7 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.12.1",
+  tiledversion = "1.12.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 18,
-  nextobjectid = 51,
+  nextobjectid = 54,
   properties = {
     ["border"] = "church_vapor",
     ["music"] = "vapor_sanct_wip"
@@ -926,12 +926,12 @@ return {
           }
         },
         {
-          id = 39,
+          id = 51,
           name = "interactable",
           type = "",
           shape = "rectangle",
-          x = 80,
-          y = 1080,
+          x = -237,
+          y = 1107,
           width = 80,
           height = 80,
           rotation = 0,
@@ -940,6 +940,22 @@ return {
           properties = {
             ["cutscene"] = "events2.cupadd"
           }
+        },
+        {
+          id = 53,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -243.5,
+          y = 1044,
+          width = 83,
+          height = 48,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          text = "Keep this for later",
+          wrap = true,
+          properties = {}
         }
       }
     },

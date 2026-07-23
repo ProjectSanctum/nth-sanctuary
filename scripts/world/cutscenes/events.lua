@@ -569,7 +569,7 @@ return {
 	jamm_book = function (cutscene, event)
 		Game:setFlag("jamm_has_glasses", true)
 		cutscene:text("* Hey Kris, [wait:5]take a look at this.", "neutral", "jamm")
-		cutscene:text("[wait:20][face:look_left][wait:20][face:neutral][wait:20][face:look_left][wait:20]", "neutral", "jamm", {auto = true})
+		cutscene:text("* It says something [face:neutral]about a [color:yellow]TRAVEL [color:white][face:look_left]button in the menu.", "look_left", "jamm")
 		cutscene:text("* ...You got any ideas on what that means?", "neutral", "jamm")
 		Game:setFlag("jamm_has_glasses", false)
 	end,

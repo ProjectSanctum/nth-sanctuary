@@ -531,24 +531,7 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {
-        {
-          id = 79,
-          name = "toggle",
-          type = "toggle",
-          shape = "point",
-          x = 420,
-          y = 170,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["flag"] = "spire_watcher",
-            ["target"] = "77"
-          }
-        }
-      }
+      objects = {}
     },
     {
       type = "objectgroup",
@@ -660,7 +643,7 @@ return {
           visible = true,
           properties = {
             ["actor"] = "wafer",
-            ["flagcheck"] = "spire_watcher",
+            ["cond"] = "Game.world.map.rand >= 9 and Game.world.map.rand <= 15 ",
             ["text1"] = "* You seem to be lost.[wait:5]\n* How did you find this place?",
             ["text2"] = "* .[wait:1].[wait:1].",
             ["text3"] = "* The scarlet spires, shifting in and out of view... [wait:5]\n* Isn't it mesmerizing?",

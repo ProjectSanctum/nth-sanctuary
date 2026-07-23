@@ -3,14 +3,19 @@ local map, super = Class(Map, "secrets/secret_sanctuary")
 function map:init(...)
     super.init(self, ...)
 	self.siner = 0
+		self.rand = love.math.random(1,100)
 	self.d = {love.math.random(5, 20), love.math.random(10, 20)}
-	self.rand = love.math.random(1,100)
 end
 
 function map:onEnter()
 	local flag = Game:getFlag("passed_savepoint")
 	local c = Game:getFlag("secret_sanctuary_calc", 0)
 	local proph = Game.world.map:getEvent(93)
+
+	if self.rand == 5 then	
+		Game:setFlag("funni_tower_shenanigans", true)
+	end
+	
 	if proph then
 		local text = tostring(c)
 		proph.text = text
@@ -26,16 +31,6 @@ function map:onEnter()
 
 	if flag == true then
 		Game.world.map:getEvent(70):remove()
-	end
-	
-	if self.rand == 5 then	
-		Game:setFlag("funni_tower_shenanigans", true)
-	end
-
-	if self.rand >= 9 and self.rand <= 15 then	
-		Game:setFlag("spire_watcher", true)
-	else
-		Game:setFlag("spire_watcher", false)
 	end
 
 	local angles = {math.rad(45), math.rad(90), math.rad(135), math.rad(180), math.rad(225), math.rad(270), math.rad(315), math.rad(360)}
@@ -55,18 +50,6 @@ function map:update()
 	self.siner = self.siner + (DTMULT/30)
 	local events = {}
 	local stars = {}
-
-	if self.rand == 5 then	
-		Game:setFlag("funni_tower_shenanigans", true)
-	else
-		Game:setFlag("funni_tower_shenanigans", false)
-	end
-
-	if (9 <= self.rand) and (self.rand <= 15) then	
-		Game:setFlag("spire_watcher", true)
-	else
-		Game:setFlag("spire_watcher", false)
-	end
 
 	for _, event in ipairs(self.events) do
 		if event.layer == self.layers["objects_parallax"] then

@@ -1,28 +1,25 @@
-local item, super = Class(Item, "empty_all")
+local item, super = Class(Item, "vaporizer")
 
 function item:init()
     super.init(self)
 
     -- Display name
-    self.name = "(Nothing)"
+    self.name = "Vaporizer"
 
     -- Item type (item, key, weapon, armor)
-    self.type = "weapon"
+    self.type = "armor"
     -- Item icon (for equipment)
-    self.icon = "ui/menu/icon/none"
+    self.icon = "ui/menu/icon/armor"
 
     -- Battle description
     self.effect = ""
     -- Shop description
-    self.shop = ""
+    self.shop = "Glowing\nBracelet"
     -- Menu description
-    self.description = ""
+    self.description = "A light beaded bracelet that shines with the glow of a sunset."
 
-
-    
-    
     -- Default shop price (sell price is halved)
-    self.price = 0
+    self.price = 100
     -- Whether the item can be sold
     self.can_sell = true
 
@@ -35,19 +32,30 @@ function item:init()
     -- Will this item be instantly consumed in battles?
     self.instant = false
 
+    self.bonus_name = "Pinkness UP"
+    self.bonus_icon = "ui/menu/icon/upb"
+
     -- Equip bonuses (for weapons and armor)
     self.bonuses = {
-        attack = 0  }
+        defense = 2,
+        magic = 2
+    }
     -- Bonus name and icon (displayed in equip menu)
-    self.bonus_name = nil
-    self.bonus_icon = nil
 
     -- Equippable characters (default true for armors, false for weapons)
-    self.can_equip = true
+    self.can_equip = {
+        susie = false
+    }
 
     -- Character reactions
     self.reactions = {
+        susie = "Smells weird.",
+        ralsei = "I-It's like pearls!",
+        noelle = "(What if I gave this to Susie...)",
+        jamm = "Marcy would like this.",
     }
+
+    -- Character reactions to wearing two
 end
 
 return item

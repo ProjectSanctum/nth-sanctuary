@@ -38,7 +38,8 @@ function MouseHole:init()
     self.shopkeeper.sprite:setPosition(0, 8)
     self.shopkeeper.slide = true
 
-    self:registerItem("tensionbit")
+    self:registerItem("vaporizer", {stock = 1})
+
     for _, party in ipairs(Game.party) do
         self:registerItem("brews/"..party.id)
     end
