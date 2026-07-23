@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.12.2",
   name = "church_objects",
@@ -23,7 +23,7 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 101,
+  tilecount = 102,
   tiles = {
     {
       id = 0,
@@ -806,6 +806,12 @@ return {
       image = "../../../assets/sprites/world/objects/warning_dogmarriage.png",
       width = 120,
       height = 80
+    },
+    {
+      id = 108,
+      image = "../../../assets/sprites/world/objects/churchb_door_closed.png",
+      width = 40,
+      height = 60
     }
   }
 }

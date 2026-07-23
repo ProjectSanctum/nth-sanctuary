@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="306">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="24" height="30" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="307">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -10,7 +10,7 @@
  </properties>
  <tileset firstgid="1" source="../../../tilesets/bg_dw_church_tileset_new.tsx"/>
  <tileset firstgid="583" source="../../../tilesets/church_objects.tsx"/>
- <tileset firstgid="686" source="../../../tilesets/libraryexcerpt.tsx"/>
+ <tileset firstgid="692" source="../../../tilesets/libraryexcerpt.tsx"/>
  <imagelayer id="2" name="bg">
   <image source="../../../../../assets/sprites/backgrounds/gerson_study_base.png" width="960" height="1200"/>
  </imagelayer>
@@ -33,15 +33,15 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-74,74,359,360,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-354,378,74,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
-86,86,86,86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,716,716,716,716,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+74,74,359,360,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+354,378,74,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
+86,86,86,86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,722,722,722,722,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -167,8 +167,13 @@
    </properties>
    <point/>
   </object>
+  <object id="306" name="interactable" x="340" y="250" width="40" height="40">
+   <properties>
+    <property name="cutscene" value="study.unlock4th"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup color="#0000ff" id="3" name="collision">
+ <objectgroup color="#0000ff" id="3" name="collision" locked="1">
   <object id="28" x="160" y="800" width="80" height="110"/>
   <object id="56" x="360" y="988" width="240" height="67"/>
   <object id="58" x="334" y="1054" width="42" height="20"/>

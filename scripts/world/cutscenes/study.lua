@@ -88,6 +88,13 @@ return {
         end
 		Game:setFlag("enteredGersonStudy", true)
     end,
+	unlock4th = function(cutscene, event)
+		Game:setFlag("4th_unlocked", true)
+		Game.world.camera:shake(4, 4)
+		cutscene:text("* [sound:locker]...!")
+		cutscene:text("* There is a hidden switch inbetween the books.")
+		cutscene:text("* Sounds like something opened up nearby...")
+	end,
     fountain = function(cutscene, event)
 		if not Game:getFlag("interactedWithFountain", false) then
 			cutscene:text("* (It's a pool of water. ...[wait:5] huh?)")
