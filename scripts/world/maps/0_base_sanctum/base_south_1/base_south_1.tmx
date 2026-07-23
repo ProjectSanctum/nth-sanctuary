@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="43" height="41" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="101">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="43" height="41" tilewidth="40" tileheight="40" infinite="0" nextlayerid="21" nextobjectid="132">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -71,7 +71,6 @@
   <object id="64" name="tile_oscillate" x="0" y="1240" width="560" height="80"/>
   <object id="65" name="tile_oscillate" x="720" y="1080" width="240" height="80"/>
   <object id="66" name="tile_oscillate" x="1120" y="920" width="360" height="80"/>
-  <object id="67" name="tile_oscillate" x="1400" y="760" width="80" height="160"/>
   <object id="68" name="tile_oscillate" x="960" y="600" width="280" height="80"/>
   <object id="69" name="tile_oscillate" x="520" y="440" width="280" height="80"/>
   <object id="70" name="tile_oscillate" x="80" y="280" width="240" height="80"/>
@@ -286,16 +285,53 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="7" name="collision" visible="0" locked="1">
-  <object id="58" x="400" y="720">
-   <polygon points="-400,-720 -400,520 -160,520 -160,440 -120,440 -120,500 -110,510 -90,520 -80,520 -80,300 -120,300 -120,240 -40,240 -40,300 -80,300 -80,520 -70,520 -50,510 -40,500 -40,440 0,440 0,520 160,520 320,360 560,360 720,200 880,200 880,120 720,-40 480,-40 320,-200 80,-200 -80,-360 -320,-360 -320,-720"/>
-  </object>
-  <object id="59" x="560" y="720">
-   <polygon points="-400,-720 -400,-440 -240,-440 -80,-280 160,-280 320,-120 560,-120 720,40 800,40 800,280 560,280 400,440 320,440 320,920 1160,920 1160,-720"/>
-  </object>
+ <objectgroup color="#ff0000" id="7" name="collision">
   <object id="63" x="455" y="1523">
    <polygon points="105,-203 265,-363 345,-363 345,117 -455,117 -455,-203"/>
   </object>
+  <object id="101" x="0" y="0" width="80" height="520"/>
+  <object id="103" x="80" y="360" width="280" height="200"/>
+  <object id="105" x="480" y="520" width="320" height="160"/>
+  <object id="107" x="520" y="280" width="280" height="160"/>
+  <object id="109" x="360" y="360">
+   <polygon points="0,0 160,160 0,160"/>
+  </object>
+  <object id="110" x="360" y="280">
+   <polygon points="0,0 160,160 160,0"/>
+  </object>
+  <object id="111" x="800" y="440">
+   <polygon points="0,0 0,-40 160,-40 160,160"/>
+  </object>
+  <object id="112" x="800" y="680">
+   <polygon points="0,0 0,-160 160,0"/>
+  </object>
+  <object id="113" x="880" y="680" width="360" height="80"/>
+  <object id="114" x="960" y="400" width="280" height="200"/>
+  <object id="115" x="1400" y="680" width="320" height="80"/>
+  <object id="116" x="1480" y="760" width="240" height="400"/>
+  <object id="118" x="1120" y="1000" width="360" height="160"/>
+  <object id="119" x="1120" y="840" width="280" height="80"/>
+  <object id="120" x="1400" y="840">
+   <polygon points="0,0 -160,-160 -160,0"/>
+  </object>
+  <object id="121" x="1400" y="760">
+   <polygon points="0,0 0,-160 -160,-160"/>
+  </object>
+  <object id="122" x="880" y="1160" width="80" height="480"/>
+  <object id="124" x="720" y="960" width="240" height="120"/>
+  <object id="125" x="400" y="1120" width="160" height="120"/>
+  <object id="126" x="240" y="1120" width="160" height="40"/>
+  <object id="127" x="0" y="1120" width="240" height="120"/>
+  <object id="128" x="560" y="1240">
+   <polygon points="0,0 0,-200 160,-200 160,-160"/>
+  </object>
+  <object id="129" x="960" y="1080">
+   <polygon points="0,0 160,-160 160,-240 0,-120"/>
+  </object>
+  <object id="130" x="960" y="1160">
+   <polygon points="0,0 160,-160 160,0"/>
+  </object>
+  <object id="131" x="160" y="0" width="360" height="280"/>
  </objectgroup>
  <objectgroup id="15" name="objects_magicglass">
   <object id="54" name="churchmagicglass" x="800" y="1160" width="80" height="480">
