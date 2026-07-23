@@ -354,8 +354,8 @@
             "fileName": "debug_rooms/lantern_test/lantern_test.tmx",
             "height": 1200,
             "width": 1680,
-            "x": -7640,
-            "y": -5920
+            "x": -5440,
+            "y": -5880
         },
         {
             "fileName": "debug_rooms/lighting_test/lighting_test.tmx",
@@ -389,29 +389,29 @@
             "fileName": "debug_rooms/room_1/room_1.tmx",
             "height": 1480,
             "width": 1560,
-            "x": -9200,
-            "y": -6200
+            "x": -7000,
+            "y": -6160
         },
         {
             "fileName": "debug_rooms/room_2/room_2.tmx",
             "height": 600,
             "width": 880,
-            "x": -8800,
-            "y": -6800
+            "x": -6600,
+            "y": -6760
         },
         {
             "fileName": "debug_rooms/tower_1/tower_1.tmx",
             "height": 600,
             "width": 880,
-            "x": -8800,
-            "y": -7480
+            "x": -6600,
+            "y": -7440
         },
         {
             "fileName": "debug_rooms/tower_2/tower_2.tmx",
             "height": 600,
             "width": 400,
-            "x": -8560,
-            "y": -8160
+            "x": -6400,
+            "y": -8120
         },
         {
             "fileName": "secrets/prism_room/prism_room.tmx",
@@ -527,10 +527,10 @@
         },
         {
             "fileName": "debug_rooms/piano_move_test/piano_move_test.tmx",
-            "height": 6400,
-            "width": 6400,
-            "x": -11960,
-            "y": -1800
+            "height": 2400,
+            "width": 2000,
+            "x": -10120,
+            "y": -5760
         },
         {
             "fileName": "0_base_sanctum/gerson_study/gerson_study.tmx",

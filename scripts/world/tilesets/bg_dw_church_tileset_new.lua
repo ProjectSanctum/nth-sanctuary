@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.11.2",
+  tiledversion = "1.12.2",
   name = "bg_dw_church_tileset_new",
   class = "",
   tilewidth = 40,
@@ -27,15 +27,15 @@ return {
   properties = {},
   wangsets = {
     {
-      name = "BrickWallTerrain",
+      name = "BrickWall",
       class = "",
       tile = -1,
       wangsettype = "corner",
       properties = {},
       colors = {
         {
-          color = { 255, 0, 0 },
-          name = "BrightBricks",
+          color = { 255, 0, 4 },
+          name = "BrickWall",
           class = "",
           probability = 1,
           tile = -1,
@@ -44,39 +44,39 @@ return {
       },
       wangtiles = {
         {
-          wangid = { 0, 0, 0, 1, 0, 0, 0, 0 },
+          wangid = { 0, 0, 1, 1, 1, 0, 0, 0 },
           tileid = 528
         },
         {
-          wangid = { 0, 0, 0, 1, 1, 1, 0, 0 },
+          wangid = { 0, 0, 1, 1, 0, 1, 1, 0 },
           tileid = 529
         },
         {
-          wangid = { 0, 0, 0, 0, 0, 1, 0, 0 },
+          wangid = { 0, 0, 0, 0, 1, 1, 1, 0 },
           tileid = 530
         },
         {
-          wangid = { 0, 1, 1, 1, 0, 0, 0, 0 },
+          wangid = { 1, 1, 0, 1, 1, 0, 0, 0 },
           tileid = 534
         },
         {
-          wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+          wangid = { 0, 1, 0, 1, 0, 1, 0, 1 },
           tileid = 535
         },
         {
-          wangid = { 0, 0, 0, 0, 0, 1, 1, 1 },
+          wangid = { 1, 0, 0, 0, 1, 1, 0, 1 },
           tileid = 536
         },
         {
-          wangid = { 0, 1, 0, 0, 0, 0, 0, 0 },
+          wangid = { 1, 1, 1, 0, 0, 0, 0, 0 },
           tileid = 540
         },
         {
-          wangid = { 1, 1, 0, 0, 0, 0, 0, 1 },
+          wangid = { 0, 1, 1, 0, 0, 0, 1, 1 },
           tileid = 541
         },
         {
-          wangid = { 0, 0, 0, 0, 0, 0, 0, 1 },
+          wangid = { 1, 0, 0, 0, 0, 0, 1, 1 },
           tileid = 542
         }
       }
