@@ -225,8 +225,8 @@ function PathingEnemy:update()
 					domove = true
 					Object.startCache()
 					self.pathing_collider = Hitbox(self, 20, 20, 40, 40)
-					for _, event in ipairs(self.world.stage:getObjects(Event)) do
-						if event.pathender and event:collidesWith(self.pathing_collider) then
+					for _, event in ipairs(self.world.map:getEvents("pathenemyturner")) do
+						if event:collidesWith(self.pathing_collider) then
 							self.doom = true
 						end
 					end
@@ -236,12 +236,10 @@ function PathingEnemy:update()
 				if self.influenceable then
 					Object.startCache()
 					local pathturner
-					for _, event in ipairs(self.world.stage:getObjects(Event)) do
+					for _, event in ipairs(self.world.map:getEvents("pathenemyturner")) do
 						self.pathing_collider = Hitbox(self, 20, 20, 40, 40)
-						if (event.pathturner) and event:collidesWith(self.pathing_collider) then
-							if event.pathturner then
-								pathturner = event
-							end
+						if event:collidesWith(self.pathing_collider) then
+							pathturner = event
 						end
 					end
 					Object.endCache()

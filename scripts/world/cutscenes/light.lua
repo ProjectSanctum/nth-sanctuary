@@ -594,7 +594,9 @@ return {
 		local bubble_x = ((Game.world.camera.x - SCREEN_WIDTH/2) + 408) - 80
 		local bubble_y = 324
 		spikeBubbleText("...\nKris...", true, bubble_x, bubble_y, {adjheight = false, center = true, tailbug = true, xadd = 20, tailbugy = -220, tailx = bubble_x + 70, taily = bubble_y - 60, taildir = "top", spiketop = false})
+		cutscene:wait(5/30)
 		spikeBubbleText("...\ndon't\nforget,\nKris...", true, bubble_x, bubble_y, {adjheight = false, center = true, tailbug = true, xadd = 20, tailbugy = -220, tailx = bubble_x + 70, taily = bubble_y - 60, taildir = "top", spiketop = false})
+		cutscene:wait(5/30)
 		local bubble = spikeBubbleText("...\nyou promised.", false, bubble_x, bubble_y, {adjheight = false, center = true, tailbug = true, xadd = 20, tailbugy = -220, tailx = bubble_x + 70, taily = bubble_y - 60, taildir = "top", spiketop = false})
 		cutscene:wait(1)
 		Assets.playSound("wing")
